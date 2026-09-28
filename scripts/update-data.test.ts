@@ -1,5 +1,6 @@
 /// <reference types="bun" />
 import { describe, expect, test } from 'bun:test';
+import { readFile } from 'node:fs/promises';
 import { deflateRawSync } from 'node:zlib';
 import {
   buildPages, createRequestGate, fundPasses, historySheetRows, historyStartDate, formatFrequencyPlaceholder,
@@ -223,7 +224,7 @@ describe('configuration, pacing, paging and display normalization', () => {
   });
 
   test('reads conservative defaults and applies data filters to published values', () => {
-    const config = readConfig({ TICKERS: 'fdn, ftsm fjan', TER: ':0.6', PERFORMANCE_1Y: '10:' });
+    const config = readConfig({ TICKERS: 'fdn, ftsm;fjan', TER: ':0.6', PERFORMANCE_1Y: '10:' });
     expect(config).toMatchObject({ requestSleep: 1, concurrency: 2, maxRetries: 2, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', edgarFallback: true, skipYahoo: false });
     expect([...config.tickers]).toEqual(['FDN', 'FTSM', 'FJAN']);
     const base = { ticker: 'X', name: 'X', category: 'Income', navValue: 1, aumValue: 1e9, dividendYield: null, secYield: null };
@@ -258,5 +259,104 @@ describe('configuration, pacing, paging and display normalization', () => {
     expect(formatFrequencyPlaceholder('unknown')).toBe('00 - Unknown');
     expect(formatFrequencyPlaceholder('Monthly')).toBe('01 - Monthly');
     expect(formatFrequencyPlaceholder('Semi-annually')).toBe('06 - Semi-annually');
+  });
+});
+
+const appSource = await readFile(new URL('../app.tsx', import.meta.url), 'utf8');
+function extractAppFunction(name: string): (...args: any[]) => any {
+  const text = appSource;
+  const match = new RegExp(`\\nfunction ${name}\\(([^)]*)\\)[^{]*\\{([\\s\\S]*?)\\n\\}`).exec(text);
+  if (!match) throw new Error(`${name} was not found in app.tsx`);
+  const parameters = match[1].split(',').map(part => part.split(':')[0].split('=')[0].trim()).filter(Boolean).join(', ');
+  const js = new Bun.Transpiler({ loader: 'ts' }).transformSync(`function ${name}(${parameters}) {${match[2]}\n}`);
+  return new Function(`${js}; return ${name};`)();
+}
+
+describe('UI parity regression guards', () => {
+  test('the copied app formats missing/dash frequencies as None and preserves explicit Unknown', () => {
+    const format = extractAppFunction('formatDividendFrequency');
+    for (const value of [null, undefined, '', '  ', '-', '‐', '‑', '‒', '–', '—', ' — ']) expect(format(value)).toBe('00 - None');
+    expect(format('None')).toBe('00 - None');
+    expect(format('Unknown')).toBe('00 - Unknown');
+    expect(format('Monthly')).toBe('01 - Monthly');
+  });
+
+  test('header summary moves the rich detail nodes and shows alphabetized selected tickers, including all-selected', async () => {
+    const text = await readFile(new URL('../app.tsx', import.meta.url), 'utf8');
+    const match = /^([ \t]*)function renderHeaderSummary\(/m.exec(text);
+    expect(match).not.toBeNull();
+    const tail = text.slice(match!.index);
+    const end = new RegExp('^' + match![1] + '}', 'm').exec(tail);
+    expect(end).not.toBeNull();
+    const js = new Bun.Transpiler({ loader: 'ts' }).transformSync(tail.slice(0, end!.index + end![0].length));
+    const node = (value = ''): any => ({ textContent: value, childNodes: [], dataset: {}, listeners: {}, replaceChildren(...items: any[]) { this.childNodes = items; }, append(...items: any[]) { this.childNodes.push(...items); }, addEventListener(type: string, listener: any) { this.listeners[type] = listener; } });
+    const panel = node(), subtitle = node(), details = node('rich source links');
+    subtitle.append(details);
+    const document = { getElementById: () => panel, createTextNode: node, createElement: () => node() };
+    const render = new Function('document', js + '; return renderHeaderSummary;')(document);
+    render(subtitle, new Set(['ZZZ', 'AAA']), 'AAA', () => {});
+    expect(subtitle.childNodes.map((item: any) => item.textContent).join('')).toBe('2 selected: AAA, ZZZ');
+    expect(panel.childNodes[0]).toBe(details);
+    render(subtitle, new Set(['CCC', 'AAA', 'BBB']), 'BBB', () => {});
+    expect(subtitle.childNodes.map((item: any) => item.textContent).join('')).toBe('3 selected: AAA, BBB, CCC');
+    render(subtitle, new Set(), null, () => {});
+    expect(subtitle.childNodes).toEqual([]);
+  });
+
+  test('hidden source panel retains mouse, keyboard, touch, Escape and viewport-safe behaviors', async () => {
+    const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+    expect(html).toContain('id="app-summary" role="region" aria-label="ETF catalog information" hidden');
+    expect(html).toContain("trigger.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') show(); })");
+    expect(html).toContain("trigger.addEventListener('focus', show)");
+    expect(html).toContain("event.key !== 'Escape'");
+    expect(html).toContain('innerWidth - panel.offsetWidth - 16');
+    expect(html).toContain('innerHeight - panel.offsetHeight - 16');
+    expect(html).toContain("trigger.addEventListener('click'");
+    expect(html).toContain('official First Trust ETF list and fund pages (ftportfolios.com)');
+    expect(html).toContain('SEC EDGAR N-PORT-P (First Trust ETF trusts — holdings fallback only)');
+    expect(html).toContain('Yahoo Finance (market-price history fallback only)');
+    expect(html).not.toMatch(/jpmorgan|victoryshares/i);
+    expect(appSource).not.toMatch(/jpmorgan|victoryshares/i);
+    expect(appSource).toContain("const INDEX_URL = './api/firsttrust/index.json';");
+  });
+});
+
+describe('README and automation documentation guards', () => {
+  test('keeps the pinned sibling README structure and reports the verified published site', async () => {
+    const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
+    const headings = [...readme.matchAll(/^#{2,3} .+$/gm)].map(match => match[0]);
+    expect(headings).toEqual([
+      '## Using Bun', '## Updating the static First Trust data', '### Data sources', '### Update controls', '### Examples',
+      '## TypeScript', '## Brands table', '## Sibling applications', '## License',
+    ]);
+    expect(readme).toContain('bunx degit daggerok/First-Trust#main ./12345 && cd $_');
+    expect(readme).toContain('bun test scripts/update-data.test.ts');
+    expect(readme).toContain('The published application is available at <https://daggerok.github.io/First-Trust/>.');
+    expect(readme).not.toContain('deployment has not been verified');
+    expect(readme).not.toContain('initial checked-in seed');
+    const brandRows = [...readme.matchAll(/^\| \*\*(.+?)\*\* \|/gm)].map(match => match[1]);
+    expect(brandRows.indexOf('First Trust')).toBe(brandRows.indexOf('Fidelity') + 1);
+    expect(brandRows.indexOf('Franklin Templeton')).toBe(brandRows.indexOf('First Trust') + 1);
+    expect(readme).toContain('| First Trust | ftportfolios.com official ETF list');
+  });
+
+  test('documents every updater environment variable and exposes a matching manual workflow input', async () => {
+    const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
+    const workflow = await readFile(new URL('../.github/workflows/update-data.yml', import.meta.url), 'utf8');
+    const envVars = [
+      'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'MAX_RETRIES', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE',
+      'TICKERS', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'PERFORMANCE_YTD', 'PERFORMANCE_1Y', 'PERFORMANCE_3Y',
+      'PERFORMANCE_5Y', 'PERFORMANCE_10Y', 'TOTAL_RETURN_YTD', 'TOTAL_RETURN_1Y', 'TOTAL_RETURN_3Y', 'TOTAL_RETURN_5Y',
+      'TOTAL_RETURN_10Y', 'EDGAR_FALLBACK', 'SEC_UA', 'SKIP_YAHOO', 'VERBOSE',
+    ];
+    for (const variable of envVars) expect(readme).toContain(`\`${variable}\``);
+    const inputs = [...workflow.matchAll(/^      ([a-z][a-z0-9_]*):$/gm)].map(match => match[1]);
+    for (const variable of envVars) {
+      expect(inputs).toContain(variable.toLowerCase());
+      expect(workflow).toMatch(new RegExp(`^      ${variable}: \\$\\{\\{ inputs\\.${variable.toLowerCase()} \\|\\| `, 'm'));
+    }
+    expect(workflow).toContain("cron: '0 0 * * 0'");
+    expect(workflow).toContain('bun test scripts/update-data.test.ts');
+    expect(workflow).not.toContain('bunx tsc');
   });
 });

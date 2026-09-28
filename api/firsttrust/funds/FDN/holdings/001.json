@@ -1,0 +1,392 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Meta Platforms, Inc. (Class A)",
+   "Ticker": "META",
+   "Identifier": "30303M102",
+   "Weight": "11.36",
+   "Market Value": "602910995.96",
+   "Shares Held": "802106",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Amazon.com, Inc.",
+   "Ticker": "AMZN",
+   "Identifier": "023135106",
+   "Weight": "9.77",
+   "Market Value": "518657966.58",
+   "Shares Held": "2077374",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Cisco Systems, Inc.",
+   "Ticker": "CSCO",
+   "Identifier": "17275R102",
+   "Weight": "8.38",
+   "Market Value": "445120816.8",
+   "Shares Held": "4171704",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Netflix, Inc.",
+   "Ticker": "NFLX",
+   "Identifier": "64110L106",
+   "Weight": "5.82",
+   "Market Value": "308782319.57",
+   "Shares Held": "4340183",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Alphabet Inc. (Class A)",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K305",
+   "Weight": "5.69",
+   "Market Value": "302235176.4",
+   "Shares Held": "878795",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Arista Networks, Inc.",
+   "Ticker": "ANET",
+   "Identifier": "040413205",
+   "Weight": "4.76",
+   "Market Value": "252604866.6",
+   "Shares Held": "1222972",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Alphabet Inc. (Class C)",
+   "Ticker": "GOOG",
+   "Identifier": "02079K107",
+   "Weight": "4.57",
+   "Market Value": "242795751.52",
+   "Shares Held": "711844",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Salesforce, Inc.",
+   "Ticker": "CRM",
+   "Identifier": "79466L302",
+   "Weight": "4.26",
+   "Market Value": "226149205.34",
+   "Shares Held": "966367",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Booking Holdings Inc.",
+   "Ticker": "BKNG",
+   "Identifier": "09857L108",
+   "Weight": "4.15",
+   "Market Value": "220581936.9",
+   "Shares Held": "1345422",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Snowflake Inc. (Class A)",
+   "Ticker": "SNOW",
+   "Identifier": "833445109",
+   "Weight": "3.92",
+   "Market Value": "208236776.22",
+   "Shares Held": "619863",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Cloudflare, Inc. (Class A)",
+   "Ticker": "NET",
+   "Identifier": "18915M107",
+   "Weight": "3.78",
+   "Market Value": "200762935.38",
+   "Shares Held": "575219",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Oracle Corporation",
+   "Ticker": "ORCL",
+   "Identifier": "68389X105",
+   "Weight": "3.77",
+   "Market Value": "200139265.5",
+   "Shares Held": "1459805",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Datadog, Inc. (Class A)",
+   "Ticker": "DDOG",
+   "Identifier": "23804L103",
+   "Weight": "3.04",
+   "Market Value": "161219061.36",
+   "Shares Held": "601272",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "DoorDash, Inc. (Class A)",
+   "Ticker": "DASH",
+   "Identifier": "25809K105",
+   "Weight": "2.45",
+   "Market Value": "130141528.08",
+   "Shares Held": "673053",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Airbnb, Inc. (Class A)",
+   "Ticker": "ABNB",
+   "Identifier": "009066101",
+   "Weight": "2.23",
+   "Market Value": "118267843.5",
+   "Shares Held": "751050",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Ciena Corporation",
+   "Ticker": "CIEN",
+   "Identifier": "171779309",
+   "Weight": "1.71",
+   "Market Value": "90997059.78",
+   "Shares Held": "254958",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Carvana Co. (Class A)",
+   "Ticker": "CVNA",
+   "Identifier": "146869102",
+   "Weight": "1.58",
+   "Market Value": "83790904.12",
+   "Shares Held": "1287902",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "PayPal Holdings, Inc.",
+   "Ticker": "PYPL",
+   "Identifier": "70450Y103",
+   "Weight": "1.58",
+   "Market Value": "83997864.96",
+   "Shares Held": "1526124",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "eBay Inc.",
+   "Ticker": "EBAY",
+   "Identifier": "278642103",
+   "Weight": "1.45",
+   "Market Value": "76923852.2",
+   "Shares Held": "712918",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Veeva Systems Inc. (Class A)",
+   "Ticker": "VEEV",
+   "Identifier": "922475108",
+   "Weight": "1.41",
+   "Market Value": "74622707.52",
+   "Shares Held": "265864",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Workday, Inc. (Class A)",
+   "Ticker": "WDAY",
+   "Identifier": "98138H101",
+   "Weight": "1.28",
+   "Market Value": "68112200.7",
+   "Shares Held": "359526",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "CoreWeave, Inc. (Class A)",
+   "Ticker": "CRWV",
+   "Identifier": "21873S108",
+   "Weight": "1.13",
+   "Market Value": "60111440.38",
+   "Shares Held": "686282",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Okta, Inc.",
+   "Ticker": "OKTA",
+   "Identifier": "679295105",
+   "Weight": "1.1",
+   "Market Value": "58233374.98",
+   "Shares Held": "298342",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Roblox Corporation (Class A)",
+   "Ticker": "RBLX",
+   "Identifier": "771049103",
+   "Weight": "1.05",
+   "Market Value": "55602194.04",
+   "Shares Held": "1197291",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Atlassian Corporation (Class A)",
+   "Ticker": "TEAM",
+   "Identifier": "049468101",
+   "Weight": "1.01",
+   "Market Value": "53642574.72",
+   "Shares Held": "285728",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "F5, Inc.",
+   "Ticker": "FFIV",
+   "Identifier": "315616102",
+   "Weight": "0.85",
+   "Market Value": "44918751.98",
+   "Shares Held": "101383",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Zoom Communications, Inc. (Class A)",
+   "Ticker": "ZM",
+   "Identifier": "98980L101",
+   "Weight": "0.8",
+   "Market Value": "42500471.34",
+   "Shares Held": "473754",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Copart, Inc.",
+   "Ticker": "CPRT",
+   "Identifier": "217204106",
+   "Weight": "0.79",
+   "Market Value": "41688683.13",
+   "Shares Held": "1511007",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "VeriSign, Inc.",
+   "Ticker": "VRSN",
+   "Identifier": "92343E102",
+   "Weight": "0.79",
+   "Market Value": "41906328",
+   "Shares Held": "145888",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Reddit, Inc. (Class A)",
+   "Ticker": "RDDT",
+   "Identifier": "75734B100",
+   "Weight": "0.74",
+   "Market Value": "39082467.52",
+   "Shares Held": "260828",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Nutanix, Inc. (Class A)",
+   "Ticker": "NTNX",
+   "Identifier": "67059N108",
+   "Weight": "0.62",
+   "Market Value": "32974209.03",
+   "Shares Held": "484701",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Circle Internet Group, Inc. (Class A)",
+   "Ticker": "CRCL",
+   "Identifier": "172573107",
+   "Weight": "0.61",
+   "Market Value": "32161040",
+   "Shares Held": "361360",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Akamai Technologies, Inc.",
+   "Ticker": "AKAM",
+   "Identifier": "00971T101",
+   "Weight": "0.55",
+   "Market Value": "29301266.16",
+   "Shares Held": "257164",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Samsara Inc. (Class A)",
+   "Ticker": "IOT",
+   "Identifier": "79589L106",
+   "Weight": "0.48",
+   "Market Value": "25304667.44",
+   "Shares Held": "666614",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "DocuSign, Inc.",
+   "Ticker": "DOCU",
+   "Identifier": "256163106",
+   "Weight": "0.43",
+   "Market Value": "23053950",
+   "Shares Held": "341540",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "GoDaddy Inc. (Class A)",
+   "Ticker": "GDDY",
+   "Identifier": "380237107",
+   "Weight": "0.41",
+   "Market Value": "21966171.06",
+   "Shares Held": "226129",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Flutter Entertainment Plc",
+   "Ticker": "FLUT",
+   "Identifier": "G3643J108",
+   "Weight": "0.39",
+   "Market Value": "20918778.51",
+   "Shares Held": "251337",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "DraftKings Inc.",
+   "Ticker": "DKNG",
+   "Identifier": "26142V105",
+   "Weight": "0.36",
+   "Market Value": "19282847.94",
+   "Shares Held": "875697",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "HubSpot, Inc.",
+   "Ticker": "HUBS",
+   "Identifier": "443573100",
+   "Weight": "0.36",
+   "Market Value": "19111134.62",
+   "Shares Held": "89413",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Paycom Software, Inc.",
+   "Ticker": "PAYC",
+   "Identifier": "70432V102",
+   "Weight": "0.29",
+   "Market Value": "15202701.14",
+   "Shares Held": "68959",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Duolingo, Inc.",
+   "Ticker": "DUOL",
+   "Identifier": "26603R106",
+   "Weight": "0.19",
+   "Market Value": "10350371.73",
+   "Shares Held": "72123",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.08",
+   "Market Value": "4479159.67",
+   "Shares Held": "4479160",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

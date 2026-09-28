@@ -255,7 +255,7 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     performance[period] = parseRange(env[`PERFORMANCE_${period}`], `PERFORMANCE_${period}`);
     totalReturn[period] = parseRange(env[`TOTAL_RETURN_${period}`], `TOTAL_RETURN_${period}`);
   }
-  const tickers = new Set((env.TICKERS ?? '').split(/[\s,]+/).map(tickerClean).filter(Boolean));
+  const tickers = new Set((env.TICKERS ?? '').split(/[\s,;]+/).map(tickerClean).filter(Boolean));
   const range = (key: string): Range => parseRange(env[key], key);
   return {
     maxFetches: parsePositiveInt(env.MAX_FETCHES, 0), requestSleep: parseDecimal(env.REQUEST_SLEEP, DEFAULTS.requestSleep),
@@ -896,7 +896,7 @@ async function fetchRetry(url: string, label: string, init: RequestInit, config:
       const response = await fetch(url, { redirect: 'follow', ...init });
       if (response.ok) return response;
       last = new Error(`HTTP ${response.status} ${response.statusText}`);
-      if (response.status < 500 && response.status !== 429) break;
+      if (response.status < 500 && ![408, 425, 429].includes(response.status)) break;
     } catch (error) { last = error; }
     if (attempt < retries) {
       const wait = Math.min(15000, 750 * (2 ** attempt));
@@ -1152,7 +1152,7 @@ Usage: bun scripts/update-data.ts
 
 Environment:
   MAX_FETCHES=0             Funds per run (0 = all eligible; resumes after saved ticker cursor)
-  TICKERS="FDN FTSM FJAN"   Only process the named tickers
+  TICKERS="FDN FTSM FJAN"   Only process the named tickers (space, comma or semicolon separated)
   REQUEST_SLEEP=1           Minimum seconds between request starts per worker lane
   CONCURRENCY=2             Parallel fund workers (default conservative)
   MAX_RETRIES=2             Retries after initial request
