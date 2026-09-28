@@ -5,6 +5,7 @@
  "source": {
   "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FTSM",
   "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
   "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
   "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=FTSM",
   "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=FTSM",
@@ -62,10 +63,10 @@
   "dividendYieldText": "4.10%",
   "dividendYieldKind": "First Trust published 12-month distribution rate as of Sep 21 2026",
   "distributionRate": 4.1,
-  "distributionPerShare": 0.204,
+  "distributionPerShare": null,
   "secYield": 4.26,
   "secYieldText": "4.26%",
-  "secYieldKind": "First Trust 30-day SEC yield as of Sep 21 2026",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Sep 21 2026",
   "unsubsidizedSecYield": null
  },
  "returns": {
