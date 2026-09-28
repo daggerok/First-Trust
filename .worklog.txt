@@ -5,13 +5,13 @@
 - Acceptance: verified issuer data paths; bounded updater and offline tests; isolated live acceptance with repeat-run/hash check; sibling-parity UI (8 enumerated substitutions + shared header rule); CI/Dependabot; accurate README. Do not claim completion until all code, data, documentation and publication checks are verified.
 - Hard constraints: Bun-only, zero runtime dependencies, no `tsconfig.json`/TypeScript dependency/`bunx tsc`; copy UI only with enumerated brand/source substitutions; preserve existing changes; never store credentials; no force push, overwrites, bypasses, or merge without explicit authorization.
 - Authorization: the user supplied the target repository and a GitHub PAT for this work -> feature-branch commits/pushes to `daggerok/First-Trust` are authorized (token used at runtime only, never written to files/git config). PR creation, PR merge, sibling-repository README PRs and repository About/settings edits are NOT yet explicitly authorized -> ask the user before doing them.
-- Repository: `https://github.com/daggerok/First-Trust`; default `main` at `342bf386d6ca72cb1a856b315565002f73f6c521` (Initial commit: LICENSE + placeholder README). Feature branch: `init-first-trust`. No PRs existed at start (GitHub REST, state=all -> []).
-- Completed: initial inspection; worklog; source discovery; updater (verbatim JPMorgan@71c98f7 layers + Neos@c8e9c2e HTML helpers + NAV performance catalog view); tests 21/21; live acceptance x2 (identical hashes); 4-ticker seed; UI check; README; push d6a67d9; PR #1 opened; repo About/homepage/topics set; 19 sibling README PRs opened (branch docs/add-first-trust).
-- Active: nothing in progress; waiting for the owner to review/merge PR #1 and the 19 sibling README PRs.
-- Remaining: owner: merge PR #1 (then the weekly Actions workflow fills the full 332-fund catalog; can be run manually via workflow_dispatch) and the sibling README PRs; optional: set the SEC_UA secret/variable to enable the EDGAR fallback.
-- Blockers: none (new token valid: daggerok, admin/push).
-- Last confirmed pushed SHA: `d6a67d99eb8f5e685b44302c839a3e0f2a7f3be2` on init-first-trust (confirmed via git ls-remote); this worklog commit is pushed next.
-- Exact next action: none for the agent; wait for PR merges / new user instructions.
+- Repository: `https://github.com/daggerok/First-Trust`; `main` = `cbd4409` (squash merge of PR #1 by the owner, 2026-09-28 07:55Z; includes the owner's full data commit c8175ce: 332 funds, 1473 files). Branch `init-first-trust` deleted on the remote after merge. Current fix branch: `fix/workflow-dispatch-inputs` -> PR #2.
+- Completed: everything in PR #1 (app, updater, tests 21/21, live acceptance x2, seed, README, workflow, dependabot) — merged into main; repo About/homepage/topics set; 19 sibling README PRs merged (squash, branches deleted); cause of the red update-data.yml runs found (26 workflow_dispatch inputs > GitHub's limit of 25) and fixed in PR #2.
+- Active: PR #2 fix(ci): merge under the user's 'merge all prs' authorization, then check that the workflow is registered by name without a failed push run.
+- Remaining: optional for the owner: set the `SEC_UA` repository variable (Settings -> Secrets and variables -> Actions -> Variables) to enable the EDGAR fallback in Actions; manual run of the workflow via workflow_dispatch.
+- Blockers: none.
+- Last confirmed pushed SHA: main `cbd4409f9d6de5624aadde55bbe215610a08002b` (confirmed via API/fetch); the `fix/workflow-dispatch-inputs` branch is pushed next.
+- Exact next action: push fix/workflow-dispatch-inputs, open PR #2 -> main, squash merge, check the Actions runs list.
 
 ## User-provided scope and precedence (sanitized)
 - Brand: First-Trust (UI/README brand "First Trust"; repository `First-Trust`).
@@ -152,6 +152,13 @@
 - README в 19 соседних репозиториях: строка First Trust добавлена между Fidelity и Franklin в таблицы Brands и Sibling applications. Строки скопированы из README.md:88 и :113. Предварительно проверено: First Trust ещё не было ни в одном из них; диф в каждом — ровно +2 строки. Ветка `docs/add-first-trust`, коммит `docs(readme): add First Trust to brands and sibling tables`, PR не сливались:
   aberdeen#6, Amplify#50, Capital-Group#3, Fidelity#25, Franklin#24, Global-X#11, Goldman-Sachs#20, Invesco#26, iShares#51, JPMorgan#23, Neos#21, Northern-Trust#4, ProShares#23, Schwab#19, SPDR#36, VanEck#22, Vanguard#32, VictoryShares#4, WisdomTree#32.
 - Замечания для владельца: (1) в JPMorgan `parseNonNegativeFloat('')` возвращает 0, поэтому при пустом REQUEST_SLEEP паузы нет (в First Trust исправлено); (2) метка «Dividend Yield (indicated)» взята дословно из JPM, а по смыслу у First Trust это 12-month distribution rate; (3) SEC-фоллбэк включается только при заданном FIRSTTRUST_SEC_UA (или SEC_UA).
+
+### 2026-09-28 — "merge all prs": sibling PR merges, CI fix
+- The user wrote "merge all prs". Check: First-Trust PR #1 had already been merged by the owner (squash, cbd4409, 07:55Z; head c8175ce is the owner's commit with the full 332-fund dataset on top of 9a17c13). Code/README/worklog in main are identical to 9a17c13, apart from the +x bit on scripts/update-data.ts.
+- 19 sibling README PRs: all mergeable/clean, no required checks; merged with squash (like PR #1), title `docs(readme): add First Trust to brands and sibling tables (#N)`, `docs/add-first-trust` branches deleted (HTTP 204):
+  aberdeen#6 10a6be3, Amplify#50 09aeb9a, Capital-Group#3 fdff0a2, Fidelity#25 a46abdc, Franklin#24 205f817, Global-X#11 47aab78, Goldman-Sachs#20 fe8f72e, Invesco#26 e157142, iShares#51 98a31ff, JPMorgan#23 128b02d, Neos#21 f11e1ba, Northern-Trust#4 babe5de, ProShares#23 b2c99e4, Schwab#19 c74a7ec, SPDR#36 5a9f4b1, VanEck#22 2d652fd, Vanguard#32 3a63e0b, VictoryShares#4 f3458f7, WisdomTree#32 ebde848.
+- Problem found: every push produced a red run `.github/workflows/update-data.yml` (event push, 0 jobs) — GitHub rejected the workflow file. Cause: workflow_dispatch had 26 inputs; GitHub's maximum is 25 (JPMorgan has exactly 25). actionlint 1.7.12: the old file reports "maximum number of inputs ... is 25 but 26"; the fixed file and JPMorgan's pass. (actionlint 1.7.7 still has the outdated limit of 10 — do not use it.)
+- Fix (branch fix/workflow-dispatch-inputs from main cbd4409): removed the `sec_ua` input; `SEC_UA: ${{ vars.SEC_UA || '' }}` (repository variable — also reaches the weekly scheduled run, which never receives inputs). README: rows 25 and 59 updated. Files: .github/workflows/update-data.yml, README.md.
 
 ### Full source-plan snapshots
 #### BEGIN `00-generic.txt` (full text; see provenance note above)
