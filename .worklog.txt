@@ -7,11 +7,11 @@
 - Authorization: the user supplied the target repository and a GitHub PAT for this work -> feature-branch commits/pushes to `daggerok/First-Trust` are authorized (token used at runtime only, never written to files/git config). PR creation, PR merge, sibling-repository README PRs and repository About/settings edits are NOT yet explicitly authorized -> ask the user before doing them.
 - Repository: `https://github.com/daggerok/First-Trust`; default `main` at `342bf386d6ca72cb1a856b315565002f73f6c521` (Initial commit: LICENSE + placeholder README). Feature branch: `init-first-trust`. No PRs existed at start (GitHub REST, state=all -> []).
 - Completed: initial inspection; worklog; source discovery; updater; tests 19/19; UI copy (headless-verified); workflow/dependabot/package/README; final isolated live acceptance (idempotent) + seed data — all as LOCAL commits after 1cc072c (push pending: token unavailable in this context).
-- Active: publication: push local commits (token needed), then ask the user about PR / About+topics / sibling README PRs.
+- Active: rework after reading 06-first-trust.txt (R1-R7 in the journal entry of 2026-09-28 'Recovery').
 - Remaining: push; with authorization: PR -> merge, About description/topics/homepage, sibling README rows (First Trust between Fidelity and Franklin Templeton).
-- Blockers: attachment `06-first-trust.txt` was NOT delivered to the workspace (only the message text arrived); its PART 2 (brand-specific quick look) is therefore not embedded. PART 1 of every brand plan is the generic text, embedded below verbatim. Continue with the user's message facts; embed 06-first-trust.txt verbatim if the user re-supplies it.
-- Last confirmed pushed SHA: `1cc072c0f368b10d20614528906dce374feedb80` (source discovery journal).
-- Exact next action: obtain a GitHub token from the user, push init-first-trust (fast-forward), verify with ls-remote, then ask for authorization for PR creation/merge, repo About/topics/homepage and sibling README PRs.
+- Blockers: GitHub PAT from the latest user message is rejected (HTTP 401) -> cannot push; need a valid token (contents write on daggerok/First-Trust; PR/About need more scopes).
+- Last confirmed pushed SHA: `a90ff9df3150509183e82622aab4e9d1c4820dcd` (user commit on remote; last agent-pushed commit 1cc072c).
+- Exact next action: R1: rebuild scripts/update-data.ts on the verbatim JPMorgan prelude/fetch/SEC/Yahoo layers + Neos HTML helpers + PerformanceNav catalog enrichment; update tests; bun build; acceptance.
 
 ## User-provided scope and precedence (sanitized)
 - Brand: First-Trust (UI/README brand "First Trust"; repository `First-Trust`).
@@ -107,6 +107,25 @@
 - Updater tweaks: TICKERS also split on `;`; HTTP 408/425 retried like 429/5xx (as documented). Benchmark = first "Index Performance" row (FDN Dow Jones Internet Composite Index, FJAN S&P 500 Index; active FTSM lists Bloomberg US Aggregate Bond Index first — First Trust's own ordering).
 - Tests: UI parity guards (frequency None/Unknown, header summary, hidden source panel, no JPMorgan/VictoryShares tokens), README structure and env/workflow guards -> `bun test scripts/update-data.test.ts` 19 pass / 0 fail; `git diff --check` clean.
 - Final mandatory live acceptance in isolated `/tmp/ft-acc`: `TICKERS="FDN FTSM FJAN"` run 1 -> 3 updated / 0 failures (FJAN 1429 history / 5 holdings / 0 divs; FDN 5099 / 42 / 5; FTSM 3053 / 723 / 146), catalog 332; run 2 -> 3 unchanged, index unchanged, sha256 of all 21 files identical. That output is committed as the initial seed `api/firsttrust/` (332-fund index; the weekly workflow fills the rest).
+
+### 2026-09-28 — Recovery: user commits bb0222c/a90ff9d reconciled; gap analysis vs 06-first-trust.txt (rework started)
+- Remote `init-first-trust` had moved to `a90ff9d` (user): `bb0222c` embeds the full `06-first-trust.txt` in this worklog (section below, lines ~807-1620) and `a90ff9d` adds `.gitignore` (`.DS_Store`, `.idea/`). The 4 local commits were rebased on top (no force push needed); `.gitignore` add/add conflict resolved as the union (`node_modules/`, `.DS_Store`, `.idea/`).
+- Verified: PART 1 of 06-first-trust.txt is byte-identical (ignoring trailing spaces) to the embedded 00-generic.txt except its title lines; PART 2 is the new brand-specific input.
+- Publication blocker: the PAT supplied in the latest user message returns HTTP 401 "Bad credentials" on api.github.com (Bearer, token and Basic schemes) and git fetch -> nothing can be pushed; all commits after a90ff9d stay LOCAL until a valid token is supplied (safe continuation: fast-forward `git push origin init-first-trust`).
+- New facts from PART 2 checks (live, 2026-09-28):
+  - `etflist.aspx` without `Type=` already lists all 332 ETFs. The page links 81 `Type=` values (ActivelyManaged*, AlphaDEX*, Alternative, Dividend, DorseyWright, EquityIncome, FixedIncomeTaxable/Taxfree, HybridIncome, International*, Sector*, Specialty, Strength, Style*, TargetOutcomeIncome, Thematic*); all 81 were fetched: union = the same 332 tickers, 0 extra, 0 missing -> no Type= enumeration is needed (report-back item).
+  - `etflist.aspx?DisplayType=PerformanceNav` (one request, 332 rows): Inception, Total (gross) Expense Ratio, Net Expense Ratio (N/A unless waived), 3 Month, YTD, 1/3/5/10 Year, Since Inception, As Of Date (month-end) for every fund -> can enrich all catalog rows and drive TER/performance filters without per-fund summary prefetch.
+  - RDVY (plan's starting example) is in the list.
+  - SEC: First Trust uses multiple trusts (FT Exchange-Traded Fund 0001329377, AlphaDEX Fund 0001383496, AlphaDEX Fund II 0001510337, ETF V 0001549548, ETF VII 0001561785, Series Fund 0001497778, ...) -> per-ticker resolution (report-back item; already the design).
+- Gap analysis (what is missing vs the full plan) and rework list:
+  - R1 Updater shape (generic §4): the prelude/N-PORT helpers came from VictoryShares, not verbatim JPMorgan. Rework: JPMorgan main @71c98f7 prelude lines 1-125 verbatim (outputConfigEntries/outputPrintConfig(brand, config)/outputScalar/reporter with before()), envValue(env, name, aliases) with `FIRSTTRUST_` prefix, paceRequests/HttpError/fetchWithRetry, SEC layer verbatim (parseFundTickerMap, parseCompanyTickerMap, edgarSeriesFilingsUrl, parseEdgarAtomFilings, parseNportAccessions, parseNport, eftsSearchUrl, pickEftsCik, loadFundTickerMap, loadCompanyTickerMap, fillNportTickers, resolveRegistrantCik, resolveNportFiling + normalizeHoldingName helpers), Yahoo `parseChart` + `chartUrl` verbatim. BUG found: the current Yahoo fallback uses `range=max`, which JPMorgan documents as silently downgrading to monthly bars -> fixed by chartUrl period1/period2.
+  - R2 Brand plan: HTML-table helpers from daggerok/Neos (@c8e9c2e: decodeHtmlEntities, splitRowCells tolerant of missing </td>, parseHtmlTables); control flow catalog -> per-fund 4 pages as ProShares (@a4f4b73) — already the flow. Catalog enrichment from DisplayType=PerformanceNav.
+  - R3 Type-safety review (§5): numeric-only tenor slot type, tests for every tenor, reordered headers, zero/negative/missing/unknown; remove avoidable type assertions.
+  - R4 `bun build --target=bun scripts/update-data.ts --outfile=/dev/null` (§12.4) not yet run.
+  - R5 README reference (§10 default = JPMorgan): compare headings/intro/commands with JPMorgan README @71c98f7 and record the diff (VictoryShares README was used).
+  - R6 Live acceptance evidence (§12.5): rerun with `VERBOSE=1`, record revision, effective config, timestamp, exit code, logs and per-fund counts.
+  - R7 UI: confirm rows toggle only via the Use checkbox (no `tr` click handler).
+  - R8 Remaining with authorization + valid token: push, PR, About/topics/homepage, sibling README PRs.
 
 ### Full source-plan snapshots
 #### BEGIN `00-generic.txt` (full text; see provenance note above)
