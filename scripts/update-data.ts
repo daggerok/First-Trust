@@ -32,7 +32,7 @@ type FundSnapshot = { digest: string; meta: JsonRecord };
 type ReturnRow = { asOfDate: string | null; mo3: number | null; ytd: number | null; yr1: number | null; yr3: number | null; yr5: number | null; yr10: number | null; sinceInception: number | null };
 type SummaryPair = { value: string; asOf: string | null };
 type Summary = {
-  name: string | null; pairs: Record<string, SummaryPair>; navAsOf: string | null;
+  name: string | null; pairs: Record<string, SummaryPair>; navAsOf: string | null; expenseAsOf: string | null;
   monthEnd: ReturnRow; quarterEnd: ReturnRow;
 };
 type Distributions = { headers: string[]; rows: string[][]; years: number[]; selectedYear: number | null };
@@ -372,8 +372,9 @@ export function parseSummaryHtml(html: string): Summary {
   const headingName = /<title>([\s\S]*?)<\/title>/i.exec(body)?.[1];
   const name = headingName ? htmlText(headingName).replace(/\s*\([A-Z0-9]+\)\s*$/, '').trim() || null : null;
   const navHeader = /fundControlHeaderBar">\s*Current Fund Data\s*\(as of (\d{1,2}\/\d{1,2}\/\d{4})\)/i.exec(body);
+  const expenseDate = /divExpenseRatioDate"[^>]*>\s*\*\s*As of (\d{1,2}\/\d{1,2}\/\d{4})/i.exec(body);
   return {
-    name, pairs, navAsOf: navHeader ? toIsoDate(navHeader[1]) : null,
+    name, pairs, navAsOf: navHeader ? toIsoDate(navHeader[1]) : null, expenseAsOf: expenseDate ? toIsoDate(expenseDate[1]) : null,
     monthEnd: parseReturnBlock(body, 'Month End'), quarterEnd: parseReturnBlock(body, 'Quarter End'),
   };
 }
@@ -568,11 +569,12 @@ export function historySheetRows(days: PriceDay[]): SheetRow[] {
   }));
 }
 export function historyStartDate(range: string, minDate: string, maxDate: string): string {
-  const years: Record<string, number> = { '10y': 10, '5y': 5, '2y': 2, '1y': 1, '6mo': 0.5, '3mo': 0.25 };
+  const months: Record<string, number> = { '10y': 120, '5y': 60, '2y': 24, '1y': 12, '6mo': 6, '3mo': 3 };
   const min = toIsoDate(minDate), max = toIsoDate(maxDate);
-  if (!(range in years) || !/^\d{4}-\d{2}-\d{2}$/.test(max)) return min;
+  if (!(range in months) || !/^\d{4}-\d{2}-\d{2}$/.test(max)) return min;
   const end = new Date(`${max}T00:00:00Z`);
-  const start = new Date(end.getTime() - Math.round(years[range] * 365.25 * 86400000)).toISOString().slice(0, 10);
+  end.setUTCMonth(end.getUTCMonth() - months[range]);
+  const start = end.toISOString().slice(0, 10);
   return /^\d{4}-\d{2}-\d{2}$/.test(min) && min > start ? min : start;
 }
 function usDate(iso: string): string {
@@ -1091,7 +1093,7 @@ async function createMeta(fund: Fund, config: Config): Promise<JsonRecord> {
     fundType: pair('Fund Type')?.value || null,
     identifiers: { cusip: pair('CUSIP')?.value || null, isin: pair('ISIN')?.value || null, iopv: pair('Intraday NAV')?.value || null },
     inception: { fundInceptionDate: toIsoDate(pair('Inception')?.value) || fund.inceptionListed || null, exchange: pair('Exchange')?.value || null },
-    expenseRatio: { display: formatPercent(ter), value: ter, gross, net, asOfDate: pair('Total Expense Ratio')?.asOf ?? null },
+    expenseRatio: { display: formatPercent(ter), value: ter, gross, net, asOfDate: summary.expenseAsOf ?? pair('Total Expense Ratio')?.asOf ?? null },
     nav: { display: nav === null ? null : `$${nav.toFixed(2)}`, value: nav, asOfDate: navAsOf ? displayDate(navAsOf) : null },
     marketPrice: { display: market === null ? null : `$${market.toFixed(2)}`, value: market, asOfDate: navAsOf ? displayDate(navAsOf) : null },
     premiumDiscount: { display: formatPercent(premium), value: premium, basis: 'First Trust published bid/ask premium' },
