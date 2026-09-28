@@ -1,0 +1,142 @@
+{
+ "ticker": "MMSC",
+ "name": "First Trust Multi-Manager Small Cap Opportunities ETF",
+ "category": "Size/Style",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=MMSC",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=MMSC",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=MMSC",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=MMSC",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/MMSC",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Small Cap Equity",
+ "identifiers": {
+  "cusip": "33740U794",
+  "isin": "US33740U7946",
+  "iopv": "MMSCIV",
+  "indexTicker": "Russell 2000 Growth Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2021-10-13",
+  "exchange": "NYSE Arca"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": 0.95,
+  "net": null,
+  "asOfDate": "2026-01-02"
+ },
+ "nav": {
+  "display": "$26.93",
+  "value": 26.93,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$26.92",
+  "value": 26.92,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$52.52M",
+  "value": 52515226,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 1950002
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": null,
+  "dividendYieldKind": null,
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": null,
+  "secYieldText": null,
+  "secYieldKind": null,
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": -1.45,
+   "ytd": 16.46,
+   "yr1": 26.11,
+   "yr3": 19.52,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 6.92
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 24.72,
+   "ytd": 23.57,
+   "yr1": 43.2,
+   "yr3": 22.48,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 8.53
+  }
+ },
+ "distributions": {
+  "frequency": null,
+  "latestAmount": 0.0854,
+  "latestExDate": "2024-12-13",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2024-12-13",
+    "2024-12-13",
+    "2024-12-31",
+    "0.085400",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 205,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1242,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 205,
+ "historyCount": 1242,
+ "distributionCount": 1,
+ "netAssets": 52515226,
+ "dividendYield": null,
+ "secYield": null
+}

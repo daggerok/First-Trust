@@ -1,0 +1,680 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Lam Research Corporation",
+   "Ticker": "LRCX",
+   "Identifier": "512807306",
+   "Weight": "2.53",
+   "Market Value": "94315875.36",
+   "Shares Held": "299216",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Applied Materials, Inc.",
+   "Ticker": "AMAT",
+   "Identifier": "038222105",
+   "Weight": "2.52",
+   "Market Value": "93815490",
+   "Shares Held": "193434",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Micron Technology, Inc.",
+   "Ticker": "MU",
+   "Identifier": "595112103",
+   "Weight": "2.33",
+   "Market Value": "86883273.84",
+   "Shares Held": "80278",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Meta Platforms, Inc. (Class A)",
+   "Ticker": "META",
+   "Identifier": "30303M102",
+   "Weight": "2.31",
+   "Market Value": "85921502.94",
+   "Shares Held": "114309",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "KLA Corporation",
+   "Ticker": "KLAC",
+   "Identifier": "482480100",
+   "Weight": "2.3",
+   "Market Value": "85740191.28",
+   "Shares Held": "456259",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "GE Vernova Inc.",
+   "Ticker": "GEV",
+   "Identifier": "36828A101",
+   "Weight": "2.24",
+   "Market Value": "83500547.85",
+   "Shares Held": "87195",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The Travelers Companies, Inc.",
+   "Ticker": "TRV",
+   "Identifier": "89417E109",
+   "Weight": "2.21",
+   "Market Value": "82351630.56",
+   "Shares Held": "226839",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "NVIDIA Corporation",
+   "Ticker": "NVDA",
+   "Identifier": "67066G104",
+   "Weight": "2.19",
+   "Market Value": "81684204.96",
+   "Shares Held": "362928",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "The Bank of New York Mellon Corporation",
+   "Ticker": "BNY",
+   "Identifier": "064058100",
+   "Weight": "2.18",
+   "Market Value": "81131750.7",
+   "Shares Held": "540338",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Microsoft Corporation",
+   "Ticker": "MSFT",
+   "Identifier": "594918104",
+   "Weight": "2.15",
+   "Market Value": "80260821.81",
+   "Shares Held": "155493",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Ross Stores, Inc.",
+   "Ticker": "ROST",
+   "Identifier": "778296103",
+   "Weight": "2.15",
+   "Market Value": "80105362.84",
+   "Shares Held": "339257",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Automatic Data Processing, Inc.",
+   "Ticker": "ADP",
+   "Identifier": "053015103",
+   "Weight": "2.08",
+   "Market Value": "77501050.44",
+   "Shares Held": "293932",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "JPMorgan Chase & Co.",
+   "Ticker": "JPM",
+   "Identifier": "46625H100",
+   "Weight": "2.07",
+   "Market Value": "77068085.94",
+   "Shares Held": "224649",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "U.S. Bancorp",
+   "Ticker": "USB",
+   "Identifier": "902973304",
+   "Weight": "2.06",
+   "Market Value": "76759196.11",
+   "Shares Held": "1293767",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Visa Inc. (Class A)",
+   "Ticker": "V",
+   "Identifier": "92826C839",
+   "Weight": "2.06",
+   "Market Value": "76911370.38",
+   "Shares Held": "209351",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Expedia Group, Inc.",
+   "Ticker": "EXPE",
+   "Identifier": "30212P303",
+   "Weight": "2.02",
+   "Market Value": "75372456.06",
+   "Shares Held": "285318",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Bank of America Corporation",
+   "Ticker": "BAC",
+   "Identifier": "060505104",
+   "Weight": "2",
+   "Market Value": "74549840.4",
+   "Shares Held": "1314812",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Chubb Limited",
+   "Ticker": "CB",
+   "Identifier": "H1467J104",
+   "Weight": "1.98",
+   "Market Value": "73748111.4",
+   "Shares Held": "221220",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Veralto Corporation",
+   "Ticker": "VLTO",
+   "Identifier": "92338C103",
+   "Weight": "1.97",
+   "Market Value": "73461542.16",
+   "Shares Held": "756244",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The Allstate Corporation",
+   "Ticker": "ALL",
+   "Identifier": "020002101",
+   "Weight": "1.96",
+   "Market Value": "72916212",
+   "Shares Held": "320370",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Alphabet Inc. (Class A)",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K305",
+   "Weight": "1.95",
+   "Market Value": "72513812.4",
+   "Shares Held": "210845",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Regions Financial Corporation",
+   "Ticker": "RF",
+   "Identifier": "7591EP100",
+   "Weight": "1.9",
+   "Market Value": "70633565.08",
+   "Shares Held": "2557334",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Snap-on Incorporated",
+   "Ticker": "SNA",
+   "Identifier": "833034101",
+   "Weight": "1.9",
+   "Market Value": "70820313.2",
+   "Shares Held": "191821",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Synchrony Financial",
+   "Ticker": "SYF",
+   "Identifier": "87165B103",
+   "Weight": "1.89",
+   "Market Value": "70441586.18",
+   "Shares Held": "965747",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Cincinnati Financial Corporation",
+   "Ticker": "CINF",
+   "Identifier": "172062101",
+   "Weight": "1.88",
+   "Market Value": "70209315.54",
+   "Shares Held": "431951",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Costco Wholesale Corporation",
+   "Ticker": "COST",
+   "Identifier": "22160K105",
+   "Weight": "1.84",
+   "Market Value": "68683244.88",
+   "Shares Held": "74432",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Baker Hughes Company (Class A)",
+   "Ticker": "BKR",
+   "Identifier": "05722G100",
+   "Weight": "1.83",
+   "Market Value": "68136983.07",
+   "Shares Held": "1178229",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "American Express Company",
+   "Ticker": "AXP",
+   "Identifier": "025816109",
+   "Weight": "1.79",
+   "Market Value": "66874376.11",
+   "Shares Held": "216499",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The Hartford Insurance Group, Inc.",
+   "Ticker": "HIG",
+   "Identifier": "416515104",
+   "Weight": "1.75",
+   "Market Value": "65292430.71",
+   "Shares Held": "525577",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Apple Inc.",
+   "Ticker": "AAPL",
+   "Identifier": "037833100",
+   "Weight": "1.69",
+   "Market Value": "62893308",
+   "Shares Held": "184400",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "PayPal Holdings, Inc.",
+   "Ticker": "PYPL",
+   "Identifier": "70450Y103",
+   "Weight": "1.69",
+   "Market Value": "63143264",
+   "Shares Held": "1147225",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Accenture plc",
+   "Ticker": "ACN",
+   "Identifier": "G1151C101",
+   "Weight": "1.64",
+   "Market Value": "61137290.94",
+   "Shares Held": "347154",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Williams-Sonoma, Inc.",
+   "Ticker": "WSM",
+   "Identifier": "969904101",
+   "Weight": "1.64",
+   "Market Value": "61287691.5",
+   "Shares Held": "264285",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Regeneron Pharmaceuticals, Inc.",
+   "Ticker": "REGN",
+   "Identifier": "75886F107",
+   "Weight": "1.61",
+   "Market Value": "59877643.32",
+   "Shares Held": "75983",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Salesforce, Inc.",
+   "Ticker": "CRM",
+   "Identifier": "79466L302",
+   "Weight": "1.6",
+   "Market Value": "59669483.52",
+   "Shares Held": "254976",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "The Charles Schwab Corporation",
+   "Ticker": "SCHW",
+   "Identifier": "808513105",
+   "Weight": "1.5",
+   "Market Value": "56041572.15",
+   "Shares Held": "565905",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Wells Fargo & Company",
+   "Ticker": "WFC",
+   "Identifier": "949746101",
+   "Weight": "1.49",
+   "Market Value": "55621428.6",
+   "Shares Held": "670380",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Aflac Incorporated",
+   "Ticker": "AFL",
+   "Identifier": "001055102",
+   "Weight": "1.47",
+   "Market Value": "54744694.28",
+   "Shares Held": "481399",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "ResMed Inc.",
+   "Ticker": "RMD",
+   "Identifier": "761152107",
+   "Weight": "1.44",
+   "Market Value": "53601456",
+   "Shares Held": "241448",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "GE Aerospace",
+   "Ticker": "GE",
+   "Identifier": "369604301",
+   "Weight": "1.42",
+   "Market Value": "52842697.86",
+   "Shares Held": "161554",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Mueller Industries, Inc.",
+   "Ticker": "MLI",
+   "Identifier": "624756102",
+   "Weight": "1.42",
+   "Market Value": "52844793.08",
+   "Shares Held": "873179",
+   "Asset Category": "Basic Materials"
+  },
+  {
+   "Name": "Ameriprise Financial, Inc.",
+   "Ticker": "AMP",
+   "Identifier": "03076C106",
+   "Weight": "1.41",
+   "Market Value": "52554293",
+   "Shares Held": "106601",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Cognizant Technology Solutions Corporation",
+   "Ticker": "CTSH",
+   "Identifier": "192446102",
+   "Weight": "1.38",
+   "Market Value": "51264314.01",
+   "Shares Held": "894197",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Booking Holdings Inc.",
+   "Ticker": "BKNG",
+   "Identifier": "09857L108",
+   "Weight": "1.23",
+   "Market Value": "45822549.45",
+   "Shares Held": "279491",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Everest Group, Ltd.",
+   "Ticker": "EG",
+   "Identifier": "G3223R108",
+   "Weight": "1.08",
+   "Market Value": "40275742.61",
+   "Shares Held": "108727",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Southwest Airlines Co.",
+   "Ticker": "LUV",
+   "Identifier": "844741108",
+   "Weight": "1.07",
+   "Market Value": "39786509.4",
+   "Shares Held": "932205",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "The PNC Financial Services Group, Inc.",
+   "Ticker": "PNC",
+   "Identifier": "693475105",
+   "Weight": "1",
+   "Market Value": "37294456.12",
+   "Shares Held": "165283",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Mastercard Incorporated",
+   "Ticker": "MA",
+   "Identifier": "57636Q104",
+   "Weight": "0.95",
+   "Market Value": "35407168.75",
+   "Shares Held": "62375",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Western Digital Corporation",
+   "Ticker": "WDC",
+   "Identifier": "958102105",
+   "Weight": "0.95",
+   "Market Value": "35493680.19",
+   "Shares Held": "77699",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Ralph Lauren Corporation",
+   "Ticker": "RL",
+   "Identifier": "751212101",
+   "Weight": "0.91",
+   "Market Value": "34100550.3",
+   "Shares Held": "95493",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "PulteGroup, Inc.",
+   "Ticker": "PHM",
+   "Identifier": "745867101",
+   "Weight": "0.81",
+   "Market Value": "30164087.7",
+   "Shares Held": "251682",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "State Street Corporation",
+   "Ticker": "STT",
+   "Identifier": "857477103",
+   "Weight": "0.67",
+   "Market Value": "24854641.74",
+   "Shares Held": "137061",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Monolithic Power Systems, Inc.",
+   "Ticker": "MPWR",
+   "Identifier": "609839105",
+   "Weight": "0.64",
+   "Market Value": "24035317.11",
+   "Shares Held": "17577",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "QUALCOMM Incorporated",
+   "Ticker": "QCOM",
+   "Identifier": "747525103",
+   "Weight": "0.61",
+   "Market Value": "22795747.99",
+   "Shares Held": "112867",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Elevance Health Inc.",
+   "Ticker": "ELV",
+   "Identifier": "036752103",
+   "Weight": "0.56",
+   "Market Value": "20960686.71",
+   "Shares Held": "52919",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Comfort Systems USA, Inc.",
+   "Ticker": "FIX",
+   "Identifier": "199908104",
+   "Weight": "0.55",
+   "Market Value": "20655088.41",
+   "Shares Held": "12451",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Citigroup Inc.",
+   "Ticker": "C",
+   "Identifier": "172967424",
+   "Weight": "0.53",
+   "Market Value": "19827113.4",
+   "Shares Held": "147655",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Garmin Ltd.",
+   "Ticker": "GRMN",
+   "Identifier": "H2906T109",
+   "Weight": "0.53",
+   "Market Value": "19921219.78",
+   "Shares Held": "67727",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Amphenol Corporation",
+   "Ticker": "APH",
+   "Identifier": "032095101",
+   "Weight": "0.52",
+   "Market Value": "19498957.38",
+   "Shares Held": "231882",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "East West Bancorp, Inc.",
+   "Ticker": "EWBC",
+   "Identifier": "27579R104",
+   "Weight": "0.52",
+   "Market Value": "19451685.78",
+   "Shares Held": "152886",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Coca-Cola Consolidated, Inc.",
+   "Ticker": "COKE",
+   "Identifier": "191098102",
+   "Weight": "0.51",
+   "Market Value": "19049931.9",
+   "Shares Held": "100110",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Vertiv Holdings Co (Class A)",
+   "Ticker": "VRT",
+   "Identifier": "92537N108",
+   "Weight": "0.51",
+   "Market Value": "18836433.6",
+   "Shares Held": "74370",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Cisco Systems, Inc.",
+   "Ticker": "CSCO",
+   "Identifier": "17275R102",
+   "Weight": "0.5",
+   "Market Value": "18581271.5",
+   "Shares Held": "174145",
+   "Asset Category": "Telecommunications"
+  },
+  {
+   "Name": "eBay Inc.",
+   "Ticker": "EBAY",
+   "Identifier": "278642103",
+   "Weight": "0.49",
+   "Market Value": "18356379.6",
+   "Shares Held": "170124",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "CF Industries Holdings, Inc.",
+   "Ticker": "CF",
+   "Identifier": "125269100",
+   "Weight": "0.46",
+   "Market Value": "16968293.25",
+   "Shares Held": "147975",
+   "Asset Category": "Basic Materials"
+  },
+  {
+   "Name": "PACCAR Inc",
+   "Ticker": "PCAR",
+   "Identifier": "693718108",
+   "Weight": "0.46",
+   "Market Value": "17224554.64",
+   "Shares Held": "154744",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Dover Corporation",
+   "Ticker": "DOV",
+   "Identifier": "260003108",
+   "Weight": "0.45",
+   "Market Value": "16893498.96",
+   "Shares Held": "88042",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Howmet Aerospace Inc.",
+   "Ticker": "HWM",
+   "Identifier": "443201108",
+   "Weight": "0.45",
+   "Market Value": "16734375.36",
+   "Shares Held": "71982",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Allison Transmission Holdings, Inc.",
+   "Ticker": "ALSN",
+   "Identifier": "01973R101",
+   "Weight": "0.41",
+   "Market Value": "15388065.14",
+   "Shares Held": "135149",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Intuit Inc.",
+   "Ticker": "INTU",
+   "Identifier": "461202103",
+   "Weight": "0.4",
+   "Market Value": "14768554.5",
+   "Shares Held": "53550",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "The Progressive Corporation",
+   "Ticker": "PGR",
+   "Identifier": "743315103",
+   "Weight": "0.39",
+   "Market Value": "14652355.5",
+   "Shares Held": "71301",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Abbott Laboratories",
+   "Ticker": "ABT",
+   "Identifier": "002824100",
+   "Weight": "0.34",
+   "Market Value": "12818755.95",
+   "Shares Held": "126555",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.18",
+   "Market Value": "6583600.95",
+   "Shares Held": "6583601",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "2026-10-02 S&P 500 Index - Price Return C 7,750",
+   "Ticker": "-",
+   "Identifier": "SPXW 261002C07750000",
+   "Weight": "-0.14",
+   "Market Value": "-5239560",
+   "Shares Held": "-1128",
+   "Asset Category": "N/A"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

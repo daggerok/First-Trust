@@ -1,0 +1,141 @@
+{
+ "ticker": "RND",
+ "name": "First Trust Bloomberg R&D Leaders ETF",
+ "category": "Specialty",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=RND",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=RND",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=RND",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=RND",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/RND",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Large Cap Growth",
+ "identifiers": {
+  "cusip": "33738R621",
+  "isin": "US33738R6210",
+  "iopv": "RNDIV",
+  "indexTicker": "Bloomberg R&D Leaders Select Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2024-04-30",
+  "exchange": "NYSE Arca"
+ },
+ "expenseRatio": {
+  "display": "0.60%",
+  "value": 0.6,
+  "gross": 0.6,
+  "net": null,
+  "asOfDate": "2026-08-03"
+ },
+ "nav": {
+  "display": "$33.83",
+  "value": 33.83,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$33.82",
+  "value": 33.82,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$10.15M",
+  "value": 10150163,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 300002
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": null,
+  "dividendYieldKind": null,
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": null,
+  "secYieldText": null,
+  "secYieldKind": null,
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 1.07,
+   "ytd": 8.46,
+   "yr1": 17.67,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 24.88
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 16.72,
+   "ytd": 5.2,
+   "yr1": 19.29,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 25.3
+  }
+ },
+ "distributions": {
+  "frequency": null,
+  "latestAmount": 0.011,
+  "latestExDate": "2024-12-13",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2024-12-13",
+    "2024-12-13",
+    "2024-12-31",
+    "0.011000",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 50,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 603,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 50,
+ "historyCount": 603,
+ "distributionCount": 1,
+ "netAssets": 10150163,
+ "dividendYield": null,
+ "secYield": null
+}

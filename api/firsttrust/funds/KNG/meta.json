@@ -1,0 +1,584 @@
+{
+ "ticker": "KNG",
+ "name": "FT Vest S&P 500 Dividend Aristocrats Target Income ETF",
+ "category": "Income",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=KNG",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=KNG",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=KNG",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=KNG",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/KNG",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Target Income Strategies",
+ "identifiers": {
+  "cusip": "33739Q705",
+  "isin": "US33739Q7051",
+  "iopv": "KNGIV",
+  "indexTicker": "Cboe S&P 500 Dividend Aristocrats Target Income Index Monthly Series"
+ },
+ "inception": {
+  "fundInceptionDate": "2018-03-26",
+  "exchange": "Cboe BZX"
+ },
+ "expenseRatio": {
+  "display": "0.74%",
+  "value": 0.74,
+  "gross": 0.74,
+  "net": null,
+  "asOfDate": "2026-03-02"
+ },
+ "nav": {
+  "display": "$48.69",
+  "value": 48.69,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$48.71",
+  "value": 48.71,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.00%",
+  "value": 0,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$3.25B",
+  "value": 3253560776,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 66825000
+ },
+ "yields": {
+  "dividendYield": 6.88,
+  "dividendYieldText": "6.88%",
+  "dividendYieldKind": "First Trust published 12-month distribution rate as of Aug 31 2026",
+  "distributionRate": 8.49,
+  "distributionPerShare": null,
+  "secYield": 1.76,
+  "secYieldText": "1.76%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Aug 31 2026",
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 7.77,
+   "ytd": 10.14,
+   "yr1": 11.01,
+   "yr3": 8.07,
+   "yr5": 5.51,
+   "yr10": null,
+   "sinceInception": 9.03
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 5.76,
+   "ytd": 7.09,
+   "yr1": 11.81,
+   "yr3": 7.21,
+   "yr5": 5.72,
+   "yr10": null,
+   "sinceInception": 8.86
+  }
+ },
+ "distributions": {
+  "frequency": "Monthly",
+  "latestAmount": 0.3447,
+  "latestExDate": "2026-09-24",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2026-09-24",
+    "2026-09-24",
+    "2026-09-30",
+    "0.344700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-08-21",
+    "2026-08-21",
+    "2026-08-31",
+    "0.362100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-07-21",
+    "2026-07-21",
+    "2026-07-31",
+    "0.360400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-06-25",
+    "2026-06-25",
+    "2026-06-30",
+    "0.347000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-05-21",
+    "2026-05-21",
+    "2026-05-29",
+    "0.340200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-04-21",
+    "2026-04-21",
+    "2026-04-30",
+    "0.347500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-03-26",
+    "2026-03-26",
+    "2026-03-31",
+    "0.344500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-02-20",
+    "2026-02-20",
+    "2026-02-27",
+    "0.369900",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-01-21",
+    "2026-01-21",
+    "2026-01-30",
+    "0.362000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-12-12",
+    "2025-12-12",
+    "2025-12-31",
+    "0.343500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-11-21",
+    "2025-11-21",
+    "2025-11-28",
+    "0.343900",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-10-21",
+    "2025-10-21",
+    "2025-10-31",
+    "0.343500",
+    "Long Term Capital Gains"
+   ],
+   [
+    "2025-09-25",
+    "2025-09-25",
+    "2025-09-30",
+    "0.347500",
+    "Long Term Capital Gains"
+   ],
+   [
+    "2025-08-21",
+    "2025-08-21",
+    "2025-08-29",
+    "0.355700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-07-22",
+    "2025-07-22",
+    "2025-07-31",
+    "0.355300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-06-26",
+    "2025-06-26",
+    "2025-06-30",
+    "0.350100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-05-21",
+    "2025-05-21",
+    "2025-05-30",
+    "0.359800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-04-22",
+    "2025-04-22",
+    "2025-04-30",
+    "0.346300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-03-27",
+    "2025-03-27",
+    "2025-03-31",
+    "0.362700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-02-21",
+    "2025-02-21",
+    "2025-02-28",
+    "0.362200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-01-22",
+    "2025-01-22",
+    "2025-01-31",
+    "0.362800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-12-13",
+    "2024-12-13",
+    "2024-12-31",
+    "0.378000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-11-21",
+    "2024-11-21",
+    "2024-11-29",
+    "0.382200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-10-22",
+    "2024-10-22",
+    "2024-10-31",
+    "0.392800",
+    "Long Term Capital Gains"
+   ],
+   [
+    "2024-09-26",
+    "2024-09-26",
+    "2024-09-30",
+    "0.391300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-08-21",
+    "2024-08-21",
+    "2024-08-30",
+    "0.380200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-07-23",
+    "2024-07-23",
+    "2024-07-31",
+    "0.375700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-06-27",
+    "2024-06-27",
+    "2024-06-28",
+    "0.373000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-05-21",
+    "2024-05-22",
+    "2024-05-31",
+    "0.382900",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-04-23",
+    "2024-04-24",
+    "2024-04-30",
+    "0.374100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-03-21",
+    "2024-03-22",
+    "2024-03-28",
+    "0.382100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-02-21",
+    "2024-02-22",
+    "2024-02-29",
+    "0.373500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-01-23",
+    "2024-01-24",
+    "2024-01-31",
+    "0.373300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-12-22",
+    "2023-12-26",
+    "2023-12-29",
+    "0.379700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-11-21",
+    "2023-11-22",
+    "2023-11-30",
+    "0.364800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-10-24",
+    "2023-10-25",
+    "2023-10-31",
+    "0.357800",
+    "Long Term Capital Gains"
+   ],
+   [
+    "2023-09-22",
+    "2023-09-25",
+    "2023-09-29",
+    "0.381200",
+    "Long Term Capital Gains"
+   ],
+   [
+    "2023-08-22",
+    "2023-08-23",
+    "2023-08-31",
+    "0.554900",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-06-27",
+    "2023-06-28",
+    "2023-06-30",
+    "0.507000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-03-24",
+    "2023-03-27",
+    "2023-03-31",
+    "0.509700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-12-23",
+    "2022-12-27",
+    "2022-12-30",
+    "0.528600",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-09-23",
+    "2022-09-26",
+    "2022-09-30",
+    "0.501900",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-06-24",
+    "2022-06-27",
+    "2022-06-30",
+    "0.499500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-03-25",
+    "2022-03-28",
+    "2022-03-31",
+    "0.515500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-12-23",
+    "2021-12-27",
+    "2021-12-31",
+    "0.506300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-09-23",
+    "2021-09-24",
+    "2021-09-30",
+    "0.491000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-06-24",
+    "2021-06-25",
+    "2021-06-30",
+    "0.496500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-03-25",
+    "2021-03-26",
+    "2021-03-31",
+    "0.480400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-12-29",
+    "2020-12-30",
+    "2020-12-31",
+    "0.106210",
+    "Short Term Capital Gains"
+   ],
+   [
+    "2020-12-29",
+    "2020-12-30",
+    "2020-12-31",
+    "0.355800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-09-23",
+    "2020-09-24",
+    "2020-09-25",
+    "0.000001",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-09-23",
+    "2020-09-24",
+    "2020-09-25",
+    "0.440720",
+    "Long Term Capital Gains"
+   ],
+   [
+    "2020-06-24",
+    "2020-06-25",
+    "2020-06-26",
+    "0.049520",
+    "Long Term Capital Gains"
+   ],
+   [
+    "2020-06-24",
+    "2020-06-25",
+    "2020-06-26",
+    "0.377649",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-03-25",
+    "2020-03-26",
+    "2020-03-27",
+    "0.394100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-12-27",
+    "2019-12-30",
+    "2019-12-31",
+    "0.490200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-09-25",
+    "2019-09-26",
+    "2019-09-27",
+    "0.089800",
+    "Long Term Capital Gains"
+   ],
+   [
+    "2019-09-25",
+    "2019-09-26",
+    "2019-09-27",
+    "0.386300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-06-19",
+    "2019-06-20",
+    "2019-06-21",
+    "0.466100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-03-20",
+    "2019-03-21",
+    "2019-03-22",
+    "0.462200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2018-12-27",
+    "2018-12-28",
+    "2018-12-31",
+    "0.163780",
+    "Ordinary Distributions"
+   ],
+   [
+    "2018-12-27",
+    "2018-12-28",
+    "2018-12-31",
+    "0.287630",
+    "Short Term Capital Gains"
+   ],
+   [
+    "2018-09-26",
+    "2018-09-27",
+    "2018-09-28",
+    "0.463910",
+    "Short Term Capital Gains"
+   ],
+   [
+    "2018-06-27",
+    "2018-06-28",
+    "2018-06-29",
+    "0.404500",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 139,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 2137,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 139,
+ "historyCount": 2137,
+ "distributionCount": 64,
+ "netAssets": 3253560776,
+ "dividendYield": 6.88,
+ "secYield": 1.76
+}

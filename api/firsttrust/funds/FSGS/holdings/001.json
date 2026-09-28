@@ -1,0 +1,923 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Halozyme Therapeutics, Inc.",
+   "Ticker": "HALO",
+   "Identifier": "40637H109",
+   "Weight": "1.47",
+   "Market Value": "446374.1",
+   "Shares Held": "3919",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Veeva Systems Inc. (Class A)",
+   "Ticker": "VEEV",
+   "Identifier": "922475108",
+   "Weight": "1.44",
+   "Market Value": "438141.48",
+   "Shares Held": "1561",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Abercrombie & Fitch Co. (Class A)",
+   "Ticker": "ANF",
+   "Identifier": "002896207",
+   "Weight": "1.43",
+   "Market Value": "434543.42",
+   "Shares Held": "3202",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Elastic N.V.",
+   "Ticker": "ESTC",
+   "Identifier": "N14506104",
+   "Weight": "1.43",
+   "Market Value": "436370.24",
+   "Shares Held": "4952",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Inspire Medical Systems, Inc.",
+   "Ticker": "INSP",
+   "Identifier": "457730109",
+   "Weight": "1.4",
+   "Market Value": "424903.5",
+   "Shares Held": "6027",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Nutex Health Inc.",
+   "Ticker": "NUTX",
+   "Identifier": "67079U306",
+   "Weight": "1.35",
+   "Market Value": "411825.81",
+   "Shares Held": "1871",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "DocuSign, Inc.",
+   "Ticker": "DOCU",
+   "Identifier": "256163106",
+   "Weight": "1.28",
+   "Market Value": "390352.5",
+   "Shares Held": "5783",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "InterDigital, Inc.",
+   "Ticker": "IDCC",
+   "Identifier": "45867G101",
+   "Weight": "1.28",
+   "Market Value": "391359.91",
+   "Shares Held": "1171",
+   "Asset Category": "Telecommunications"
+  },
+  {
+   "Name": "Manhattan Associates, Inc.",
+   "Ticker": "MANH",
+   "Identifier": "562750109",
+   "Weight": "1.26",
+   "Market Value": "385070.07",
+   "Shares Held": "1869",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Doximity, Inc. (Class A)",
+   "Ticker": "DOCS",
+   "Identifier": "26622P107",
+   "Weight": "1.23",
+   "Market Value": "373432.2",
+   "Shares Held": "14172",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Heritage Insurance Holdings, Inc.",
+   "Ticker": "HRTG",
+   "Identifier": "42727J102",
+   "Weight": "1.23",
+   "Market Value": "375252.33",
+   "Shares Held": "11279",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Harmony Biosciences Holdings, Inc.",
+   "Ticker": "HRMY",
+   "Identifier": "413197104",
+   "Weight": "1.22",
+   "Market Value": "372619.06",
+   "Shares Held": "9031",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Cactus, Inc. (Class A)",
+   "Ticker": "WHD",
+   "Identifier": "127203107",
+   "Weight": "1.18",
+   "Market Value": "359822.8",
+   "Shares Held": "5596",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "DigitalOcean Holdings, Inc.",
+   "Ticker": "DOCN",
+   "Identifier": "25402D102",
+   "Weight": "1.18",
+   "Market Value": "358458.75",
+   "Shares Held": "2565",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Gold.com Inc.",
+   "Ticker": "GOLD",
+   "Identifier": "00181T107",
+   "Weight": "1.15",
+   "Market Value": "349885.95",
+   "Shares Held": "7961",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Medpace Holdings, Inc.",
+   "Ticker": "MEDP",
+   "Identifier": "58506Q109",
+   "Weight": "1.15",
+   "Market Value": "350904.96",
+   "Shares Held": "567",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Acadian Asset Management Inc.",
+   "Ticker": "AAMI",
+   "Identifier": "10948W103",
+   "Weight": "1.14",
+   "Market Value": "345853.92",
+   "Shares Held": "3684",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "AppFolio, Inc. (Class A)",
+   "Ticker": "APPF",
+   "Identifier": "03783C100",
+   "Weight": "1.14",
+   "Market Value": "346561.34",
+   "Shares Held": "1697",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Paylocity Holding Corporation",
+   "Ticker": "PCTY",
+   "Identifier": "70438V106",
+   "Weight": "1.14",
+   "Market Value": "346907",
+   "Shares Held": "2420",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Sanmina Corporation",
+   "Ticker": "SANM",
+   "Identifier": "801056102",
+   "Weight": "1.14",
+   "Market Value": "347494.42",
+   "Shares Held": "1546",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "DexCom, Inc.",
+   "Ticker": "DXCM",
+   "Identifier": "252131107",
+   "Weight": "1.13",
+   "Market Value": "344660.98",
+   "Shares Held": "3979",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Tidewater Inc.",
+   "Ticker": "TDW",
+   "Identifier": "88642R109",
+   "Weight": "1.12",
+   "Market Value": "340824.28",
+   "Shares Held": "4022",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "PTC Inc.",
+   "Ticker": "PTC",
+   "Identifier": "69370C100",
+   "Weight": "1.11",
+   "Market Value": "338670.24",
+   "Shares Held": "2452",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Encompass Health Corporation",
+   "Ticker": "EHC",
+   "Identifier": "29261A100",
+   "Weight": "1.1",
+   "Market Value": "335591.46",
+   "Shares Held": "2718",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Five Below, Inc.",
+   "Ticker": "FIVE",
+   "Identifier": "33829M101",
+   "Weight": "1.1",
+   "Market Value": "335013",
+   "Shares Held": "1505",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Liquidity Services, Inc.",
+   "Ticker": "LQDT",
+   "Identifier": "53635B107",
+   "Weight": "1.1",
+   "Market Value": "336538.37",
+   "Shares Held": "7717",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Oceaneering International, Inc.",
+   "Ticker": "OII",
+   "Identifier": "675232102",
+   "Weight": "1.1",
+   "Market Value": "333673.38",
+   "Shares Held": "7213",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Broadridge Financial Solutions, Inc.",
+   "Ticker": "BR",
+   "Identifier": "11133T103",
+   "Weight": "1.09",
+   "Market Value": "333108.18",
+   "Shares Held": "2034",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "The St. Joe Company",
+   "Ticker": "JOE",
+   "Identifier": "790148100",
+   "Weight": "1.08",
+   "Market Value": "328916.1",
+   "Shares Held": "5037",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "Duolingo, Inc.",
+   "Ticker": "DUOL",
+   "Identifier": "26603R106",
+   "Weight": "1.07",
+   "Market Value": "326915.78",
+   "Shares Held": "2278",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "ITT Inc.",
+   "Ticker": "ITT",
+   "Identifier": "45073V108",
+   "Weight": "1.07",
+   "Market Value": "326715.84",
+   "Shares Held": "1584",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Tetra Tech, Inc.",
+   "Ticker": "TTEK",
+   "Identifier": "88162G103",
+   "Weight": "1.07",
+   "Market Value": "327367.14",
+   "Shares Held": "9654",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "IES Holdings, Inc.",
+   "Ticker": "IESC",
+   "Identifier": "44951W106",
+   "Weight": "1.06",
+   "Market Value": "322185.22",
+   "Shares Held": "994",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Incyte Corporation",
+   "Ticker": "INCY",
+   "Identifier": "45337C102",
+   "Weight": "1.06",
+   "Market Value": "322237.89",
+   "Shares Held": "2601",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Pegasystems Inc.",
+   "Ticker": "PEGA",
+   "Identifier": "705573103",
+   "Weight": "1.05",
+   "Market Value": "320003.82",
+   "Shares Held": "9483",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Exelixis, Inc.",
+   "Ticker": "EXEL",
+   "Identifier": "30161Q104",
+   "Weight": "1.04",
+   "Market Value": "317204.64",
+   "Shares Held": "5454",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Rambus Inc.",
+   "Ticker": "RMBS",
+   "Identifier": "750917106",
+   "Weight": "1.04",
+   "Market Value": "316110.96",
+   "Shares Held": "3006",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "EMCOR Group, Inc.",
+   "Ticker": "EME",
+   "Identifier": "29084Q100",
+   "Weight": "1.03",
+   "Market Value": "312506.1",
+   "Shares Held": "410",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Laureate Education, Inc. (Class A)",
+   "Ticker": "LAUR",
+   "Identifier": "518613203",
+   "Weight": "1.03",
+   "Market Value": "312925.8",
+   "Shares Held": "8367",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "UiPath, Inc. (Class A)",
+   "Ticker": "PATH",
+   "Identifier": "90364P105",
+   "Weight": "1.03",
+   "Market Value": "312758.46",
+   "Shares Held": "25101",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Covista Inc.",
+   "Ticker": "CVSA",
+   "Identifier": "00737L103",
+   "Weight": "1.02",
+   "Market Value": "312138.75",
+   "Shares Held": "2585",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Q2 Holdings, Inc.",
+   "Ticker": "QTWO",
+   "Identifier": "74736L109",
+   "Weight": "1.02",
+   "Market Value": "312026.67",
+   "Shares Held": "5559",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "The Ensign Group, Inc.",
+   "Ticker": "ENSG",
+   "Identifier": "29358P101",
+   "Weight": "1.02",
+   "Market Value": "311995.58",
+   "Shares Held": "1781",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Hamilton Lane Incorporated (Class A)",
+   "Ticker": "HLNE",
+   "Identifier": "407497106",
+   "Weight": "1.01",
+   "Market Value": "306217.92",
+   "Shares Held": "3552",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Paymentus Holdings, Inc. (Class A)",
+   "Ticker": "PAY",
+   "Identifier": "70439P108",
+   "Weight": "1.01",
+   "Market Value": "308970.97",
+   "Shares Held": "10241",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Payoneer Global Inc.",
+   "Ticker": "PAYO",
+   "Identifier": "70451X104",
+   "Weight": "1.01",
+   "Market Value": "307119.78",
+   "Shares Held": "42834",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "RenaissanceRe Holdings Ltd.",
+   "Ticker": "RNR",
+   "Identifier": "G7496G103",
+   "Weight": "1.01",
+   "Market Value": "307366.4",
+   "Shares Held": "944",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Tradeweb Markets Inc. (Class A)",
+   "Ticker": "TW",
+   "Identifier": "892672106",
+   "Weight": "1.01",
+   "Market Value": "308933.07",
+   "Shares Held": "3053",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Alarm.com Holdings, Inc.",
+   "Ticker": "ALRM",
+   "Identifier": "011642105",
+   "Weight": "1",
+   "Market Value": "306027.54",
+   "Shares Held": "5733",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "National HealthCare Corporation",
+   "Ticker": "NHC",
+   "Identifier": "635906100",
+   "Weight": "1",
+   "Market Value": "303980.32",
+   "Shares Held": "1337",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Interactive Brokers Group, Inc. (Class A)",
+   "Ticker": "IBKR",
+   "Identifier": "45841N107",
+   "Weight": "0.99",
+   "Market Value": "300649.56",
+   "Shares Held": "3369",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "AvePoint, Inc.",
+   "Ticker": "AVPT",
+   "Identifier": "053604104",
+   "Weight": "0.98",
+   "Market Value": "299897",
+   "Shares Held": "23069",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Erie Indemnity Company",
+   "Ticker": "ERIE",
+   "Identifier": "29530P102",
+   "Weight": "0.98",
+   "Market Value": "299078.12",
+   "Shares Held": "1342",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Frontdoor, Inc.",
+   "Ticker": "FTDR",
+   "Identifier": "35905A109",
+   "Weight": "0.98",
+   "Market Value": "298105.71",
+   "Shares Held": "4029",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "HCI Group, Inc.",
+   "Ticker": "HCI",
+   "Identifier": "40416E103",
+   "Weight": "0.98",
+   "Market Value": "299847.16",
+   "Shares Held": "1714",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Bentley Systems, Inc. (Class B)",
+   "Ticker": "BSY",
+   "Identifier": "08265T208",
+   "Weight": "0.97",
+   "Market Value": "296479.2",
+   "Shares Held": "9430",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Celsius Holdings, Inc.",
+   "Ticker": "CELH",
+   "Identifier": "15118V207",
+   "Weight": "0.97",
+   "Market Value": "294454.8",
+   "Shares Held": "10520",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Globus Medical, Inc. (Class A)",
+   "Ticker": "GMED",
+   "Identifier": "379577208",
+   "Weight": "0.97",
+   "Market Value": "295173.72",
+   "Shares Held": "3961",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Jones Lang LaSalle Incorporated",
+   "Ticker": "JLL",
+   "Identifier": "48020Q107",
+   "Weight": "0.97",
+   "Market Value": "296801.02",
+   "Shares Held": "922",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "Kinsale Capital Group, Inc.",
+   "Ticker": "KNSL",
+   "Identifier": "49714P108",
+   "Weight": "0.96",
+   "Market Value": "293144.63",
+   "Shares Held": "887",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Steris Plc",
+   "Ticker": "STE",
+   "Identifier": "G8473T100",
+   "Weight": "0.96",
+   "Market Value": "292502",
+   "Shares Held": "1400",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Northern Trust Corporation",
+   "Ticker": "NTRS",
+   "Identifier": "665859104",
+   "Weight": "0.95",
+   "Market Value": "290130.23",
+   "Shares Held": "1651",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Agilysys, Inc.",
+   "Ticker": "AGYS",
+   "Identifier": "00847J105",
+   "Weight": "0.94",
+   "Market Value": "284870.76",
+   "Shares Held": "2859",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "Mercury General Corporation",
+   "Ticker": "MCY",
+   "Identifier": "589400100",
+   "Weight": "0.94",
+   "Market Value": "285306.7",
+   "Shares Held": "2870",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Ralph Lauren Corporation",
+   "Ticker": "RL",
+   "Identifier": "751212101",
+   "Weight": "0.94",
+   "Market Value": "286394.2",
+   "Shares Held": "802",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Gentex Corporation",
+   "Ticker": "GNTX",
+   "Identifier": "371901109",
+   "Weight": "0.93",
+   "Market Value": "282814.5",
+   "Shares Held": "12525",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "UMB Financial Corporation",
+   "Ticker": "UMBF",
+   "Identifier": "902788108",
+   "Weight": "0.93",
+   "Market Value": "283727.98",
+   "Shares Held": "2089",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Houlihan Lokey, Inc.",
+   "Ticker": "HLI",
+   "Identifier": "441593100",
+   "Weight": "0.92",
+   "Market Value": "281114.46",
+   "Shares Held": "2178",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "PJT Partners Inc. (Class A)",
+   "Ticker": "PJT",
+   "Identifier": "69343T107",
+   "Weight": "0.91",
+   "Market Value": "277739.1",
+   "Shares Held": "1830",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Texas Capital Bancshares, Inc.",
+   "Ticker": "TCBI",
+   "Identifier": "88224Q107",
+   "Weight": "0.91",
+   "Market Value": "278165.46",
+   "Shares Held": "2903",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Cincinnati Financial Corporation",
+   "Ticker": "CINF",
+   "Identifier": "172062101",
+   "Weight": "0.9",
+   "Market Value": "274204.98",
+   "Shares Held": "1687",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "HealthEquity, Inc.",
+   "Ticker": "HQY",
+   "Identifier": "42226A107",
+   "Weight": "0.9",
+   "Market Value": "275604.75",
+   "Shares Held": "3123",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "United Therapeutics Corporation",
+   "Ticker": "UTHR",
+   "Identifier": "91307C102",
+   "Weight": "0.89",
+   "Market Value": "270531.05",
+   "Shares Held": "569",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Live Oak Bancshares, Inc.",
+   "Ticker": "LOB",
+   "Identifier": "53803X105",
+   "Weight": "0.88",
+   "Market Value": "269068.92",
+   "Shares Held": "7179",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Badger Meter, Inc.",
+   "Ticker": "BMI",
+   "Identifier": "056525108",
+   "Weight": "0.87",
+   "Market Value": "264139.2",
+   "Shares Held": "2040",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Moelis & Company (Class A)",
+   "Ticker": "MC",
+   "Identifier": "60786M105",
+   "Weight": "0.87",
+   "Market Value": "265328.58",
+   "Shares Held": "4517",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "AGNC Investment Corp.",
+   "Ticker": "AGNC",
+   "Identifier": "00123Q104",
+   "Weight": "0.86",
+   "Market Value": "261481.22",
+   "Shares Held": "27181",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Equifax Inc.",
+   "Ticker": "EFX",
+   "Identifier": "294429105",
+   "Weight": "0.84",
+   "Market Value": "255045.42",
+   "Shares Held": "1722",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The New York Times Company (Class A)",
+   "Ticker": "NYT",
+   "Identifier": "650111107",
+   "Weight": "0.84",
+   "Market Value": "256405.11",
+   "Shares Held": "4017",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Woodward, Inc.",
+   "Ticker": "WWD",
+   "Identifier": "980745103",
+   "Weight": "0.84",
+   "Market Value": "256320.56",
+   "Shares Held": "776",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "FTI Consulting, Inc.",
+   "Ticker": "FCN",
+   "Identifier": "302941109",
+   "Weight": "0.83",
+   "Market Value": "251928.04",
+   "Shares Held": "1876",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Insulet Corporation",
+   "Ticker": "PODD",
+   "Identifier": "45784P101",
+   "Weight": "0.83",
+   "Market Value": "253065.67",
+   "Shares Held": "1859",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Powell Industries, Inc.",
+   "Ticker": "POWL",
+   "Identifier": "739128106",
+   "Weight": "0.82",
+   "Market Value": "248284.3",
+   "Shares Held": "1310",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "BWX Technologies, Inc.",
+   "Ticker": "BWXT",
+   "Identifier": "05605H100",
+   "Weight": "0.81",
+   "Market Value": "246753.54",
+   "Shares Held": "1782",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Neurocrine Biosciences, Inc.",
+   "Ticker": "NBIX",
+   "Identifier": "64125C109",
+   "Weight": "0.81",
+   "Market Value": "247044",
+   "Shares Held": "1785",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Tapestry, Inc.",
+   "Ticker": "TPR",
+   "Identifier": "876030107",
+   "Weight": "0.81",
+   "Market Value": "245525.28",
+   "Shares Held": "2156",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Texas Roadhouse, Inc.",
+   "Ticker": "TXRH",
+   "Identifier": "882681109",
+   "Weight": "0.81",
+   "Market Value": "247293",
+   "Shares Held": "1548",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "XPO, Inc.",
+   "Ticker": "XPO",
+   "Identifier": "983793100",
+   "Weight": "0.81",
+   "Market Value": "245555.06",
+   "Shares Held": "1418",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "LeMaitre Vascular, Inc.",
+   "Ticker": "LMAT",
+   "Identifier": "525558201",
+   "Weight": "0.8",
+   "Market Value": "244641.52",
+   "Shares Held": "3001",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Sterling Infrastructure, Inc.",
+   "Ticker": "STRL",
+   "Identifier": "859241101",
+   "Weight": "0.8",
+   "Market Value": "244874.62",
+   "Shares Held": "478",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The Vita Coco Company, Inc.",
+   "Ticker": "COCO",
+   "Identifier": "92846Q107",
+   "Weight": "0.8",
+   "Market Value": "244144.53",
+   "Shares Held": "4167",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Evercore Inc.",
+   "Ticker": "EVR",
+   "Identifier": "29977A105",
+   "Weight": "0.77",
+   "Market Value": "234778.63",
+   "Shares Held": "893",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Curtiss-Wright Corporation",
+   "Ticker": "CW",
+   "Identifier": "231561101",
+   "Weight": "0.76",
+   "Market Value": "232623.63",
+   "Shares Held": "431",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Blue Bird Corporation",
+   "Ticker": "BLBD",
+   "Identifier": "095306106",
+   "Weight": "0.74",
+   "Market Value": "226261.16",
+   "Shares Held": "3893",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Burlington Stores, Inc.",
+   "Ticker": "BURL",
+   "Identifier": "122017106",
+   "Weight": "0.74",
+   "Market Value": "224891.27",
+   "Shares Held": "883",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Deckers Outdoor Corporation",
+   "Ticker": "DECK",
+   "Identifier": "243537107",
+   "Weight": "0.74",
+   "Market Value": "225310.88",
+   "Shares Held": "2864",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Clear Secure, Inc. (Class A)",
+   "Ticker": "YOU",
+   "Identifier": "18467V109",
+   "Weight": "0.71",
+   "Market Value": "215542.8",
+   "Shares Held": "5443",
+   "Asset Category": "Technology"
+  },
+  {
+   "Name": "The Trade Desk, Inc. (Class A)",
+   "Ticker": "TTD",
+   "Identifier": "88339J105",
+   "Weight": "0.68",
+   "Market Value": "206703",
+   "Shares Held": "16405",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Argan, Inc.",
+   "Ticker": "AGX",
+   "Identifier": "04010E109",
+   "Weight": "0.66",
+   "Market Value": "201452.37",
+   "Shares Held": "553",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Alignment Healthcare, Inc.",
+   "Ticker": "ALHC",
+   "Identifier": "01625V104",
+   "Weight": "0.4",
+   "Market Value": "121549.05",
+   "Shares Held": "14805",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.23",
+   "Market Value": "70182.57",
+   "Shares Held": "70183",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

@@ -1,0 +1,149 @@
+{
+ "ticker": "AFGR",
+ "name": "First Trust Active Factor Large Cap Growth ETF",
+ "category": "Size/Style",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=AFGR",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=AFGR",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=AFGR",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=AFGR",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/AFGR",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Large Cap Growth",
+ "identifiers": {
+  "cusip": "33740F789",
+  "isin": "US33740F7895",
+  "iopv": "AFGRIV",
+  "indexTicker": "Russell 1000 Growth Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2020-07-21",
+  "exchange": "NYSE Arca"
+ },
+ "expenseRatio": {
+  "display": "0.65%",
+  "value": 0.65,
+  "gross": 0.65,
+  "net": null,
+  "asOfDate": "2026-06-08"
+ },
+ "nav": {
+  "display": "$38.01",
+  "value": 38.01,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$37.99",
+  "value": 37.99,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$91.22M",
+  "value": 91219797,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 2400002
+ },
+ "yields": {
+  "dividendYield": 0.01,
+  "dividendYieldText": "0.01%",
+  "dividendYieldKind": "Indicated from the latest ordinary distribution per share x inferred payments per year / market price",
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": null,
+  "secYieldText": null,
+  "secYieldKind": null,
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": -0.59,
+   "ytd": 5.05,
+   "yr1": 7.11,
+   "yr3": 19.6,
+   "yr5": 5.65,
+   "yr10": null,
+   "sinceInception": 10.88
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 16.61,
+   "ytd": 3.27,
+   "yr1": 8.67,
+   "yr3": 19.14,
+   "yr5": 6.68,
+   "yr10": null,
+   "sinceInception": 10.89
+  }
+ },
+ "distributions": {
+  "frequency": "Annually",
+  "latestAmount": 0.0052,
+  "latestExDate": "2026-09-24",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2026-09-24",
+    "2026-09-24",
+    "2026-09-30",
+    "0.005200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-12-24",
+    "2020-12-28",
+    "2020-12-31",
+    "0.060600",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 91,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1553,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 91,
+ "historyCount": 1553,
+ "distributionCount": 2,
+ "netAssets": 91219797,
+ "dividendYield": 0.01,
+ "secYield": null
+}

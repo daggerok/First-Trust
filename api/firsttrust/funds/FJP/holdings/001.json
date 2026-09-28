@@ -1,0 +1,932 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Nippon Yusen K.K.",
+   "Ticker": "9101.JP",
+   "Identifier": "J56515232",
+   "Weight": "2.35",
+   "Market Value": "6338153.55",
+   "Shares Held": "135300",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Kawasaki Kisen Kaisha, Ltd.",
+   "Ticker": "9107.JP",
+   "Identifier": "J31588148",
+   "Weight": "2.31",
+   "Market Value": "6229447.89",
+   "Shares Held": "283800",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Mitsui O.S.K. Lines, Ltd.",
+   "Ticker": "9104.JP",
+   "Identifier": "J45013133",
+   "Weight": "2.27",
+   "Market Value": "6119783.74",
+   "Shares Held": "135400",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The Kansai Electric Power Company, Incorporated",
+   "Ticker": "9503.JP",
+   "Identifier": "J30169106",
+   "Weight": "2.01",
+   "Market Value": "5417478.68",
+   "Shares Held": "308600",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "INPEX Corporation",
+   "Ticker": "1605.JP",
+   "Identifier": "J2467E101",
+   "Weight": "1.97",
+   "Market Value": "5296567.26",
+   "Shares Held": "215900",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Idemitsu Kosan Co., Ltd.",
+   "Ticker": "5019.JP",
+   "Identifier": "J2388K103",
+   "Weight": "1.85",
+   "Market Value": "4980961.08",
+   "Shares Held": "470900",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Central Japan Railway Company",
+   "Ticker": "9022.JP",
+   "Identifier": "J05523105",
+   "Weight": "1.81",
+   "Market Value": "4882900.39",
+   "Shares Held": "203200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Japan Airlines Co., Ltd.",
+   "Ticker": "9201.JP",
+   "Identifier": "J25979121",
+   "Weight": "1.81",
+   "Market Value": "4873807.39",
+   "Shares Held": "247500",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Daiichi Life Group, Inc.",
+   "Ticker": "8750.JP",
+   "Identifier": "J09748112",
+   "Weight": "1.79",
+   "Market Value": "4809346.77",
+   "Shares Held": "396500",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Brother Industries, Ltd.",
+   "Ticker": "6448.JP",
+   "Identifier": "114813108",
+   "Weight": "1.72",
+   "Market Value": "4623045.4",
+   "Shares Held": "153600",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Aisin Corporation",
+   "Ticker": "7259.JP",
+   "Identifier": "J00714105",
+   "Weight": "1.7",
+   "Market Value": "4590104.28",
+   "Shares Held": "322600",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Tokyo Gas Co., Ltd.",
+   "Ticker": "9531.JP",
+   "Identifier": "J87000113",
+   "Weight": "1.7",
+   "Market Value": "4565944.54",
+   "Shares Held": "115300",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Suzuki Motor Corporation",
+   "Ticker": "7269.JP",
+   "Identifier": "J78529138",
+   "Weight": "1.69",
+   "Market Value": "4563119.83",
+   "Shares Held": "360600",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Nippon Express Holdings Co., Ltd.",
+   "Ticker": "9147.JP",
+   "Identifier": "J53377107",
+   "Weight": "1.53",
+   "Market Value": "4119433.92",
+   "Shares Held": "111800",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Bridgestone Corporation",
+   "Ticker": "5108.JP",
+   "Identifier": "J04578126",
+   "Weight": "1.5",
+   "Market Value": "4041181.14",
+   "Shares Held": "165500",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Fuji Corporation",
+   "Ticker": "6134.JP",
+   "Identifier": "J1R541101",
+   "Weight": "1.48",
+   "Market Value": "3977805.61",
+   "Shares Held": "83900",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Advantest Corporation",
+   "Ticker": "6857.JP",
+   "Identifier": "J00210104",
+   "Weight": "1.41",
+   "Market Value": "3784505.78",
+   "Shares Held": "17500",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "TDK Corporation",
+   "Ticker": "6762.JP",
+   "Identifier": "J82141136",
+   "Weight": "1.39",
+   "Market Value": "3742862.23",
+   "Shares Held": "197600",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "ANA Holdings Inc.",
+   "Ticker": "9202.JP",
+   "Identifier": "J0156Q112",
+   "Weight": "1.37",
+   "Market Value": "3683748.89",
+   "Shares Held": "190200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Daiwa House Industry Co., Ltd.",
+   "Ticker": "1925.JP",
+   "Identifier": "J11508124",
+   "Weight": "1.37",
+   "Market Value": "3699388.12",
+   "Shares Held": "127800",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "DENSO Corporation",
+   "Ticker": "6902.JP",
+   "Identifier": "J12075107",
+   "Weight": "1.37",
+   "Market Value": "3681078.74",
+   "Shares Held": "300800",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Isuzu Motors Ltd.",
+   "Ticker": "7202.JP",
+   "Identifier": "J24994113",
+   "Weight": "1.36",
+   "Market Value": "3658445.51",
+   "Shares Held": "262400",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Furukawa Electric Co., Ltd.",
+   "Ticker": "5801.JP",
+   "Identifier": "J16464117",
+   "Weight": "1.35",
+   "Market Value": "3630830.69",
+   "Shares Held": "149200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "JX Advanced Metals Corporation",
+   "Ticker": "5016.JP",
+   "Identifier": "J2969E104",
+   "Weight": "1.35",
+   "Market Value": "3624643.81",
+   "Shares Held": "160300",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "ORIX Corporation",
+   "Ticker": "8591.JP",
+   "Identifier": "J61933123",
+   "Weight": "1.34",
+   "Market Value": "3599292.06",
+   "Shares Held": "91700",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Sekisui House, Ltd.",
+   "Ticker": "1928.JP",
+   "Identifier": "J70746136",
+   "Weight": "1.33",
+   "Market Value": "3574285.74",
+   "Shares Held": "166800",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Hokuhoku Financial Group, Inc.",
+   "Ticker": "8377.JP",
+   "Identifier": "J21903109",
+   "Weight": "1.32",
+   "Market Value": "3549100",
+   "Shares Held": "63300",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "MISUMI Group Inc.",
+   "Ticker": "9962.JP",
+   "Identifier": "J43293109",
+   "Weight": "1.31",
+   "Market Value": "3519671.8",
+   "Shares Held": "141200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Ibiden Co., Ltd.",
+   "Ticker": "4062.JP",
+   "Identifier": "J23059116",
+   "Weight": "1.3",
+   "Market Value": "3504274.28",
+   "Shares Held": "23600",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Meiko Electronics Co., Ltd.",
+   "Ticker": "6787.JP",
+   "Identifier": "J4187E106",
+   "Weight": "1.28",
+   "Market Value": "3446438.11",
+   "Shares Held": "22700",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Sumitomo Metal Mining Co., Ltd.",
+   "Ticker": "5713.JP",
+   "Identifier": "J77712180",
+   "Weight": "1.28",
+   "Market Value": "3451368.79",
+   "Shares Held": "56600",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "The Yokohama Rubber Company, Ltd.",
+   "Ticker": "5101.JP",
+   "Identifier": "J97536171",
+   "Weight": "1.28",
+   "Market Value": "3457008.06",
+   "Shares Held": "77800",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Minebea Mitsumi Inc.",
+   "Ticker": "6479.JP",
+   "Identifier": "J42884130",
+   "Weight": "1.26",
+   "Market Value": "3388748.25",
+   "Shares Held": "148200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Sumitomo Electric Industries, Ltd.",
+   "Ticker": "5802.JP",
+   "Identifier": "J77411114",
+   "Weight": "1.26",
+   "Market Value": "3389206.21",
+   "Shares Held": "241000",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "NGK Corp.",
+   "Ticker": "5333.JP",
+   "Identifier": "J49076110",
+   "Weight": "1.2",
+   "Market Value": "3227232.55",
+   "Shares Held": "93700",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Ricoh Company, Ltd.",
+   "Ticker": "7752.JP",
+   "Identifier": "J64683105",
+   "Weight": "1.2",
+   "Market Value": "3222128.21",
+   "Shares Held": "301000",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Sumitomo Forestry Co., Ltd.",
+   "Ticker": "1911.JP",
+   "Identifier": "J77454122",
+   "Weight": "1.2",
+   "Market Value": "3244160.7",
+   "Shares Held": "417900",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "JFE Holdings, Inc.",
+   "Ticker": "5411.JP",
+   "Identifier": "J2817M100",
+   "Weight": "1.18",
+   "Market Value": "3183434.71",
+   "Shares Held": "271200",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Amada Co., Ltd.",
+   "Ticker": "6113.JP",
+   "Identifier": "J01218106",
+   "Weight": "1.13",
+   "Market Value": "3045190.19",
+   "Shares Held": "191200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Subaru Corporation",
+   "Ticker": "7270.JP",
+   "Identifier": "J7676H100",
+   "Weight": "1.11",
+   "Market Value": "2996349.03",
+   "Shares Held": "177100",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "West Japan Railway Company",
+   "Ticker": "9021.JP",
+   "Identifier": "J95094108",
+   "Weight": "1.11",
+   "Market Value": "3001843.29",
+   "Shares Held": "155400",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Toyota Motor Corporation",
+   "Ticker": "7203.JP",
+   "Identifier": "J92676113",
+   "Weight": "1.1",
+   "Market Value": "2954893.15",
+   "Shares Held": "155400",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Fujikura Ltd.",
+   "Ticker": "5803.JP",
+   "Identifier": "J14784128",
+   "Weight": "1.06",
+   "Market Value": "2866902.42",
+   "Shares Held": "90400",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Kyocera Corporation",
+   "Ticker": "6971.JP",
+   "Identifier": "J37479110",
+   "Weight": "1.06",
+   "Market Value": "2844187.77",
+   "Shares Held": "118800",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Shionogi & Co., Ltd.",
+   "Ticker": "4507.JP",
+   "Identifier": "J74229105",
+   "Weight": "1.05",
+   "Market Value": "2834846.71",
+   "Shares Held": "151700",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Asahi Group Holdings, Ltd.",
+   "Ticker": "2502.JP",
+   "Identifier": "J02100113",
+   "Weight": "1.04",
+   "Market Value": "2806688.73",
+   "Shares Held": "273400",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "T&D Holdings, Inc.",
+   "Ticker": "8795.JP",
+   "Identifier": "J86796109",
+   "Weight": "1.04",
+   "Market Value": "2797883.86",
+   "Shares Held": "88100",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Kioxia Holdings Corporation",
+   "Ticker": "285A.JP",
+   "Identifier": "J3343A107",
+   "Weight": "1.03",
+   "Market Value": "2767357.85",
+   "Shares Held": "7800",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "SoftBank Group Corp.",
+   "Ticker": "9984.JP",
+   "Identifier": "J7596P109",
+   "Weight": "1.03",
+   "Market Value": "2773406.7",
+   "Shares Held": "70900",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Dai Nippon Printing Co., Ltd.",
+   "Ticker": "7912.JP",
+   "Identifier": "J10584142",
+   "Weight": "1.02",
+   "Market Value": "2747049.99",
+   "Shares Held": "143200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Tokyo Ohka Kogyo Co., Ltd.",
+   "Ticker": "4186.JP",
+   "Identifier": "J87430104",
+   "Weight": "0.98",
+   "Market Value": "2647426.54",
+   "Shares Held": "49800",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Ebara Corporation",
+   "Ticker": "6361.JP",
+   "Identifier": "J12600128",
+   "Weight": "0.95",
+   "Market Value": "2547309.49",
+   "Shares Held": "90200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Niterra Co. Ltd.",
+   "Ticker": "5334.JP",
+   "Identifier": "J49119100",
+   "Weight": "0.95",
+   "Market Value": "2559399.59",
+   "Shares Held": "52800",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Chubu Electric Power Company, Incorporated",
+   "Ticker": "9502.JP",
+   "Identifier": "J06510101",
+   "Weight": "0.93",
+   "Market Value": "2497352.14",
+   "Shares Held": "138300",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "NHK Spring Co., Ltd.",
+   "Ticker": "5991.JP",
+   "Identifier": "J49162126",
+   "Weight": "0.89",
+   "Market Value": "2393951.16",
+   "Shares Held": "109000",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Rohm Co. Ltd.",
+   "Ticker": "6963.JP",
+   "Identifier": "J65328122",
+   "Weight": "0.89",
+   "Market Value": "2392647.24",
+   "Shares Held": "78500",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Horiba, Ltd.",
+   "Ticker": "6856.JP",
+   "Identifier": "J22428106",
+   "Weight": "0.87",
+   "Market Value": "2336642.92",
+   "Shares Held": "15400",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "SBI Holdings, Inc.",
+   "Ticker": "8473.JP",
+   "Identifier": "J6991H100",
+   "Weight": "0.83",
+   "Market Value": "2240340.9",
+   "Shares Held": "106800",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Mebuki Financial Group Inc.",
+   "Ticker": "7167.JP",
+   "Identifier": "J4248A101",
+   "Weight": "0.82",
+   "Market Value": "2197901.68",
+   "Shares Held": "199800",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "ENEOS Holdings, Inc.",
+   "Ticker": "5020.JP",
+   "Identifier": "J29699105",
+   "Weight": "0.8",
+   "Market Value": "2151899.24",
+   "Shares Held": "235600",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Hachijuni Nagano Bank Ltd.",
+   "Ticker": "8359.JP",
+   "Identifier": "J17976101",
+   "Weight": "0.79",
+   "Market Value": "2133341.81",
+   "Shares Held": "118100",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Japan Post Holdings Co., Ltd.",
+   "Ticker": "6178.JP",
+   "Identifier": "J2800D109",
+   "Weight": "0.79",
+   "Market Value": "2134129.87",
+   "Shares Held": "130100",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Daifuku Co., Ltd.",
+   "Ticker": "6383.JP",
+   "Identifier": "J08988107",
+   "Weight": "0.78",
+   "Market Value": "2100022.26",
+   "Shares Held": "59500",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Sumitomo Chemical Co., Ltd.",
+   "Ticker": "4005.JP",
+   "Identifier": "J77153120",
+   "Weight": "0.76",
+   "Market Value": "2048829.03",
+   "Shares Held": "549500",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Japan Post Bank Company, Ltd.",
+   "Ticker": "7182.JP",
+   "Identifier": "J2800C101",
+   "Weight": "0.73",
+   "Market Value": "1959725.22",
+   "Shares Held": "92000",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Osaka Gas Co., Ltd.",
+   "Ticker": "9532.JP",
+   "Identifier": "J62320130",
+   "Weight": "0.71",
+   "Market Value": "1924251.37",
+   "Shares Held": "51600",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Mitsubishi HC Capital Inc.",
+   "Ticker": "8593.JP",
+   "Identifier": "J4706D100",
+   "Weight": "0.7",
+   "Market Value": "1882482.82",
+   "Shares Held": "214700",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "TOTO Ltd.",
+   "Ticker": "5332.JP",
+   "Identifier": "J90268103",
+   "Weight": "0.69",
+   "Market Value": "1847574.1",
+   "Shares Held": "49100",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "ARCHION Corporation",
+   "Ticker": "543A.JP",
+   "Identifier": "J01945104",
+   "Weight": "0.68",
+   "Market Value": "1825298.3",
+   "Shares Held": "976100",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Panasonic Holdings Corporation",
+   "Ticker": "6752.JP",
+   "Identifier": "J6354Y104",
+   "Weight": "0.68",
+   "Market Value": "1826795.55",
+   "Shares Held": "62600",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Suntory Beverage & Food Limited",
+   "Ticker": "2587.JP",
+   "Identifier": "J78186103",
+   "Weight": "0.67",
+   "Market Value": "1811368.79",
+   "Shares Held": "62700",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Nissan Chemical Industries, Ltd.",
+   "Ticker": "4021.JP",
+   "Identifier": "J56988108",
+   "Weight": "0.66",
+   "Market Value": "1766666.44",
+   "Shares Held": "33300",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Sekisui Chemical Co., Ltd.",
+   "Ticker": "4204.JP",
+   "Identifier": "J70703137",
+   "Weight": "0.65",
+   "Market Value": "1748966.43",
+   "Shares Held": "108900",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Open House Group Co., Ltd.",
+   "Ticker": "3288.JP",
+   "Identifier": "J3072G101",
+   "Weight": "0.6",
+   "Market Value": "1622215.37",
+   "Shares Held": "33300",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Tokyo Seimitsu Co., Ltd.",
+   "Ticker": "7729.JP",
+   "Identifier": "J87903100",
+   "Weight": "0.58",
+   "Market Value": "1573909.18",
+   "Shares Held": "14000",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Hirose Electric Co., Ltd.",
+   "Ticker": "6806.JP",
+   "Identifier": "J19782101",
+   "Weight": "0.57",
+   "Market Value": "1544275.54",
+   "Shares Held": "9700",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Kandenko Co., Ltd.",
+   "Ticker": "1942.JP",
+   "Identifier": "J29653102",
+   "Weight": "0.56",
+   "Market Value": "1509884.21",
+   "Shares Held": "42000",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "AGC Inc.",
+   "Ticker": "5201.JP",
+   "Identifier": "J0025W100",
+   "Weight": "0.55",
+   "Market Value": "1470900.65",
+   "Shares Held": "40500",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Mitsui Kinzoku Company, Ltd.",
+   "Ticker": "5706.JP",
+   "Identifier": "J44948131",
+   "Weight": "0.54",
+   "Market Value": "1446714.78",
+   "Shares Held": "9900",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Murata Manufacturing Co. Ltd.",
+   "Ticker": "6981.JP",
+   "Identifier": "J46840104",
+   "Weight": "0.47",
+   "Market Value": "1265396.26",
+   "Shares Held": "24800",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Nippon Steel Corporation",
+   "Ticker": "5401.JP",
+   "Identifier": "J55678106",
+   "Weight": "0.43",
+   "Market Value": "1147150.8",
+   "Shares Held": "263100",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Nitori Holdings Co., Ltd.",
+   "Ticker": "9843.JP",
+   "Identifier": "J58214131",
+   "Weight": "0.42",
+   "Market Value": "1140265.23",
+   "Shares Held": "58300",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Toyota Tsusho Corporation",
+   "Ticker": "8015.JP",
+   "Identifier": "J92719111",
+   "Weight": "0.41",
+   "Market Value": "1113417.51",
+   "Shares Held": "23500",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Seiko Epson Corporation",
+   "Ticker": "6724.JP",
+   "Identifier": "J7030F105",
+   "Weight": "0.4",
+   "Market Value": "1090527.93",
+   "Shares Held": "52400",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Fukuoka Financial Group, Inc.",
+   "Ticker": "8354.JP",
+   "Identifier": "J17129107",
+   "Weight": "0.39",
+   "Market Value": "1049260.91",
+   "Shares Held": "20600",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "The Chiba Bank, Ltd.",
+   "Ticker": "8331.JP",
+   "Identifier": "J05670104",
+   "Weight": "0.38",
+   "Market Value": "1029448.86",
+   "Shares Held": "57100",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Astellas Pharma Inc.",
+   "Ticker": "4503.JP",
+   "Identifier": "J03393105",
+   "Weight": "0.37",
+   "Market Value": "988774.97",
+   "Shares Held": "64800",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Hikari Tsushin, Inc.",
+   "Ticker": "9435.JP",
+   "Identifier": "J1949F108",
+   "Weight": "0.37",
+   "Market Value": "990707.28",
+   "Shares Held": "4100",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Sojitz Corporation",
+   "Ticker": "2768.JP",
+   "Identifier": "J7608R119",
+   "Weight": "0.37",
+   "Market Value": "999483.53",
+   "Shares Held": "27300",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Tokyo Century Corporation",
+   "Ticker": "8439.JP",
+   "Identifier": "J8671Q103",
+   "Weight": "0.37",
+   "Market Value": "986593.94",
+   "Shares Held": "56600",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Yokohama Financial Group Inc.",
+   "Ticker": "7186.JP",
+   "Identifier": "J08613101",
+   "Weight": "0.37",
+   "Market Value": "1000736.24",
+   "Shares Held": "81500",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Fuji Electric Co., Ltd.",
+   "Ticker": "6504.JP",
+   "Identifier": "J14112106",
+   "Weight": "0.34",
+   "Market Value": "909283.18",
+   "Shares Held": "10500",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "FUJIFILM Holdings Corporation",
+   "Ticker": "4901.JP",
+   "Identifier": "J14208102",
+   "Weight": "0.33",
+   "Market Value": "888465.21",
+   "Shares Held": "40500",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Tokyu Corporation",
+   "Ticker": "9005.JP",
+   "Identifier": "J88720149",
+   "Weight": "0.33",
+   "Market Value": "888218.41",
+   "Shares Held": "84200",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Tokyu Fudosan Holdings Corporation",
+   "Ticker": "3289.JP",
+   "Identifier": "J88764105",
+   "Weight": "0.33",
+   "Market Value": "888212.7",
+   "Shares Held": "108800",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "Asahi Kasei Corporation",
+   "Ticker": "3407.JP",
+   "Identifier": "J0242P110",
+   "Weight": "0.31",
+   "Market Value": "823691.97",
+   "Shares Held": "78700",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Showa Denko K.K.",
+   "Ticker": "4004.JP",
+   "Identifier": "J75046136",
+   "Weight": "0.28",
+   "Market Value": "751710.98",
+   "Shares Held": "7900",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "SUMCO Corporation",
+   "Ticker": "3436.JP",
+   "Identifier": "J76896109",
+   "Weight": "0.26",
+   "Market Value": "693900.26",
+   "Shares Held": "35000",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Renesas Electronics Corporation",
+   "Ticker": "6723.JP",
+   "Identifier": "J4881V107",
+   "Weight": "0.24",
+   "Market Value": "648170.73",
+   "Shares Held": "29300",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Taiyo Yuden Co., Ltd.",
+   "Ticker": "6976.JP",
+   "Identifier": "J80206113",
+   "Weight": "0.15",
+   "Market Value": "407836.15",
+   "Shares Held": "7000",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.12",
+   "Market Value": "319276.91",
+   "Shares Held": "319277",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Japanese Yen",
+   "Ticker": "-",
+   "Identifier": "$JPY",
+   "Weight": "0.03",
+   "Market Value": "67720.55",
+   "Shares Held": "10653120",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

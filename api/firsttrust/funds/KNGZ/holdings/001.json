@@ -1,0 +1,905 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Accenture plc",
+   "Ticker": "ACN",
+   "Identifier": "G1151C101",
+   "Weight": "4.9",
+   "Market Value": "3223517.44",
+   "Shares Held": "18304",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "HP Inc.",
+   "Ticker": "HPQ",
+   "Identifier": "40434L105",
+   "Weight": "4.86",
+   "Market Value": "3197608",
+   "Shares Held": "102160",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "QUALCOMM Incorporated",
+   "Ticker": "QCOM",
+   "Identifier": "747525103",
+   "Weight": "4.37",
+   "Market Value": "2871811.43",
+   "Shares Held": "14219",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "International Business Machines Corporation",
+   "Ticker": "IBM",
+   "Identifier": "459200101",
+   "Weight": "4.27",
+   "Market Value": "2810305.62",
+   "Shares Held": "12462",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Verizon Communications Inc.",
+   "Ticker": "VZ",
+   "Identifier": "92343V104",
+   "Weight": "3.66",
+   "Market Value": "2405223.04",
+   "Shares Held": "51088",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Microchip Technology Incorporated",
+   "Ticker": "MCHP",
+   "Identifier": "595017104",
+   "Weight": "3.52",
+   "Market Value": "2317577.88",
+   "Shares Held": "29452",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Texas Instruments Incorporated",
+   "Ticker": "TXN",
+   "Identifier": "882508104",
+   "Weight": "3.39",
+   "Market Value": "2230121.4",
+   "Shares Held": "8020",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "TE Connectivity Plc",
+   "Ticker": "TEL",
+   "Identifier": "G87052109",
+   "Weight": "3.01",
+   "Market Value": "1979988.22",
+   "Shares Held": "9058",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Hewlett Packard Enterprise Company",
+   "Ticker": "HPE",
+   "Identifier": "42824C109",
+   "Weight": "2.81",
+   "Market Value": "1850750.7",
+   "Shares Held": "29405",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Comcast Corporation (Class A)",
+   "Ticker": "CMCSA",
+   "Identifier": "20030N101",
+   "Weight": "2.58",
+   "Market Value": "1695571.08",
+   "Shares Held": "77388",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Oracle Corporation",
+   "Ticker": "ORCL",
+   "Identifier": "68389X105",
+   "Weight": "2.57",
+   "Market Value": "1692910.8",
+   "Shares Held": "12348",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Omnicom Group Inc.",
+   "Ticker": "OMC",
+   "Identifier": "681919106",
+   "Weight": "2.17",
+   "Market Value": "1426898.7",
+   "Shares Held": "18738",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Microsoft Corporation",
+   "Ticker": "MSFT",
+   "Identifier": "594918104",
+   "Weight": "2.09",
+   "Market Value": "1377141.56",
+   "Shares Held": "2668",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Pfizer Inc.",
+   "Ticker": "PFE",
+   "Identifier": "717081103",
+   "Weight": "1.93",
+   "Market Value": "1272259.92",
+   "Shares Held": "44376",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Roper Technologies, Inc.",
+   "Ticker": "ROP",
+   "Identifier": "776696106",
+   "Weight": "1.89",
+   "Market Value": "1243486.08",
+   "Shares Held": "3468",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Analog Devices, Inc.",
+   "Ticker": "ADI",
+   "Identifier": "032654105",
+   "Weight": "1.87",
+   "Market Value": "1230393.6",
+   "Shares Held": "3126",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Best Buy Co., Inc.",
+   "Ticker": "BBY",
+   "Identifier": "086516101",
+   "Weight": "1.68",
+   "Market Value": "1107118.32",
+   "Shares Held": "12232",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Genuine Parts Company",
+   "Ticker": "GPC",
+   "Identifier": "372460105",
+   "Weight": "1.24",
+   "Market Value": "816672.61",
+   "Shares Held": "6301",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Prudential Financial, Inc.",
+   "Ticker": "PRU",
+   "Identifier": "744320102",
+   "Weight": "1.17",
+   "Market Value": "767227.35",
+   "Shares Held": "6423",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "NIKE, Inc. (Class B)",
+   "Ticker": "NKE",
+   "Identifier": "654106103",
+   "Weight": "1.08",
+   "Market Value": "712461.75",
+   "Shares Held": "19929",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Hasbro, Inc.",
+   "Ticker": "HAS",
+   "Identifier": "418056107",
+   "Weight": "1.07",
+   "Market Value": "706217.53",
+   "Shares Held": "8017",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Bristol-Myers Squibb Company",
+   "Ticker": "BMY",
+   "Identifier": "110122108",
+   "Weight": "1.06",
+   "Market Value": "697683.14",
+   "Shares Held": "11099",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "General Mills, Inc.",
+   "Ticker": "GIS",
+   "Identifier": "370334104",
+   "Weight": "1.04",
+   "Market Value": "681008.16",
+   "Shares Held": "20244",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "United Parcel Service, Inc. (Class B)",
+   "Ticker": "UPS",
+   "Identifier": "911312106",
+   "Weight": "0.95",
+   "Market Value": "626243.4",
+   "Shares Held": "6665",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Broadcom Inc.",
+   "Ticker": "AVGO",
+   "Identifier": "11135F101",
+   "Weight": "0.94",
+   "Market Value": "620592.79",
+   "Shares Held": "1759",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Medtronic Plc",
+   "Ticker": "MDT",
+   "Identifier": "G5960L103",
+   "Weight": "0.93",
+   "Market Value": "614452.48",
+   "Shares Held": "6932",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "T. Rowe Price Group, Inc.",
+   "Ticker": "TROW",
+   "Identifier": "74144T108",
+   "Weight": "0.93",
+   "Market Value": "611958",
+   "Shares Held": "5800",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Altria Group, Inc.",
+   "Ticker": "MO",
+   "Identifier": "02209S103",
+   "Weight": "0.91",
+   "Market Value": "598871.64",
+   "Shares Held": "8702",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Franklin Templeton, Inc.",
+   "Ticker": "BEN",
+   "Identifier": "354613101",
+   "Weight": "0.9",
+   "Market Value": "595218.52",
+   "Shares Held": "18026",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "ONEOK, Inc.",
+   "Ticker": "OKE",
+   "Identifier": "30609A109",
+   "Weight": "0.9",
+   "Market Value": "590630.32",
+   "Shares Held": "6664",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Chevron Corporation",
+   "Ticker": "CVX",
+   "Identifier": "166764100",
+   "Weight": "0.86",
+   "Market Value": "565099.8",
+   "Shares Held": "2764",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Truist Financial Corporation",
+   "Ticker": "TFC",
+   "Identifier": "89832Q109",
+   "Weight": "0.86",
+   "Market Value": "565867.18",
+   "Shares Held": "11873",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Paychex, Inc.",
+   "Ticker": "PAYX",
+   "Identifier": "704326107",
+   "Weight": "0.85",
+   "Market Value": "560677.47",
+   "Shares Held": "5531",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Regions Financial Corporation",
+   "Ticker": "RF",
+   "Identifier": "7591EP100",
+   "Weight": "0.8",
+   "Market Value": "523205.66",
+   "Shares Held": "18943",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "McDonald's Corporation",
+   "Ticker": "MCD",
+   "Identifier": "580135101",
+   "Weight": "0.79",
+   "Market Value": "520063.5",
+   "Shares Held": "2199",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Becton, Dickinson and Company",
+   "Ticker": "BDX",
+   "Identifier": "075887109",
+   "Weight": "0.78",
+   "Market Value": "513593.08",
+   "Shares Held": "2794",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Honeywell International Inc.",
+   "Ticker": "HON",
+   "Identifier": "438516205",
+   "Weight": "0.75",
+   "Market Value": "490777.97",
+   "Shares Held": "2309",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The Home Depot, Inc.",
+   "Ticker": "HD",
+   "Identifier": "437076102",
+   "Weight": "0.75",
+   "Market Value": "492282.8",
+   "Shares Held": "1679",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "The Clorox Company",
+   "Ticker": "CLX",
+   "Identifier": "189054109",
+   "Weight": "0.74",
+   "Market Value": "484699.2",
+   "Shares Held": "5784",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Merck & Co., Inc.",
+   "Ticker": "MRK",
+   "Identifier": "58933Y105",
+   "Weight": "0.72",
+   "Market Value": "476244.78",
+   "Shares Held": "3201",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Principal Financial Group, Inc.",
+   "Ticker": "PFG",
+   "Identifier": "74251V102",
+   "Weight": "0.72",
+   "Market Value": "474688.72",
+   "Shares Held": "4136",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "KeyCorp",
+   "Ticker": "KEY",
+   "Identifier": "493267108",
+   "Weight": "0.71",
+   "Market Value": "466754.67",
+   "Shares Held": "22647",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Lennar Corporation",
+   "Ticker": "LEN",
+   "Identifier": "526057104",
+   "Weight": "0.71",
+   "Market Value": "465379.75",
+   "Shares Held": "5665",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Starbucks Corporation",
+   "Ticker": "SBUX",
+   "Identifier": "855244109",
+   "Weight": "0.71",
+   "Market Value": "466142.04",
+   "Shares Held": "4914",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "U.S. Bancorp",
+   "Ticker": "USB",
+   "Identifier": "902973304",
+   "Weight": "0.71",
+   "Market Value": "466215.14",
+   "Shares Held": "7858",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Amcor plc",
+   "Ticker": "AMCR",
+   "Identifier": "G0250X149",
+   "Weight": "0.69",
+   "Market Value": "455154.55",
+   "Shares Held": "10707",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Stanley Black & Decker, Inc.",
+   "Ticker": "SWK",
+   "Identifier": "854502101",
+   "Weight": "0.69",
+   "Market Value": "457000",
+   "Shares Held": "5000",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Kimberly-Clark Corporation",
+   "Ticker": "KMB",
+   "Identifier": "494368103",
+   "Weight": "0.68",
+   "Market Value": "449332.95",
+   "Shares Held": "4565",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "AbbVie Inc.",
+   "Ticker": "ABBV",
+   "Identifier": "00287Y109",
+   "Weight": "0.67",
+   "Market Value": "442505.16",
+   "Shares Held": "1674",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Huntington Bancshares Incorporated",
+   "Ticker": "HBAN",
+   "Identifier": "446150104",
+   "Weight": "0.67",
+   "Market Value": "440391.12",
+   "Shares Held": "28158",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Lowe's Companies, Inc.",
+   "Ticker": "LOW",
+   "Identifier": "548661107",
+   "Weight": "0.67",
+   "Market Value": "442347.36",
+   "Shares Held": "2337",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Abbott Laboratories",
+   "Ticker": "ABT",
+   "Identifier": "002824100",
+   "Weight": "0.66",
+   "Market Value": "431292.82",
+   "Shares Held": "4258",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Corning Incorporated",
+   "Ticker": "GLW",
+   "Identifier": "219350105",
+   "Weight": "0.66",
+   "Market Value": "431975.44",
+   "Shares Held": "2756",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "MetLife, Inc.",
+   "Ticker": "MET",
+   "Identifier": "59156R108",
+   "Weight": "0.66",
+   "Market Value": "431638.6",
+   "Shares Held": "4418",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "The PNC Financial Services Group, Inc.",
+   "Ticker": "PNC",
+   "Identifier": "693475105",
+   "Weight": "0.65",
+   "Market Value": "427136.52",
+   "Shares Held": "1893",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Automatic Data Processing, Inc.",
+   "Ticker": "ADP",
+   "Identifier": "053015103",
+   "Weight": "0.63",
+   "Market Value": "416598.6",
+   "Shares Held": "1580",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Broadridge Financial Solutions, Inc.",
+   "Ticker": "BR",
+   "Identifier": "11133T103",
+   "Weight": "0.62",
+   "Market Value": "409425",
+   "Shares Held": "2500",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Fox Corporation (Class A)",
+   "Ticker": "FOXA",
+   "Identifier": "35137L105",
+   "Weight": "0.62",
+   "Market Value": "406044.66",
+   "Shares Held": "6438",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Hormel Foods Corporation",
+   "Ticker": "HRL",
+   "Identifier": "440452100",
+   "Weight": "0.6",
+   "Market Value": "392761.17",
+   "Shares Held": "19927",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "ExxonMobil Holdings Corp.",
+   "Ticker": "XOM",
+   "Identifier": "30233Q108",
+   "Weight": "0.59",
+   "Market Value": "389109.57",
+   "Shares Held": "2423",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "EOG Resources, Inc.",
+   "Ticker": "EOG",
+   "Identifier": "26875P101",
+   "Weight": "0.58",
+   "Market Value": "380629.2",
+   "Shares Held": "2712",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Fifth Third Bancorp",
+   "Ticker": "FITB",
+   "Identifier": "316773100",
+   "Weight": "0.57",
+   "Market Value": "377256.1",
+   "Shares Held": "7241",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Lockheed Martin Corporation",
+   "Ticker": "LMT",
+   "Identifier": "539830109",
+   "Weight": "0.53",
+   "Market Value": "346026.96",
+   "Shares Held": "666",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Johnson & Johnson",
+   "Ticker": "JNJ",
+   "Identifier": "478160104",
+   "Weight": "0.52",
+   "Market Value": "345263.06",
+   "Shares Held": "1273",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "The Cigna Group",
+   "Ticker": "CI",
+   "Identifier": "125523100",
+   "Weight": "0.51",
+   "Market Value": "333212.25",
+   "Shares Held": "1225",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "CVS Health Corporation",
+   "Ticker": "CVS",
+   "Identifier": "126650100",
+   "Weight": "0.5",
+   "Market Value": "326928.84",
+   "Shares Held": "3668",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Everest Group, Ltd.",
+   "Ticker": "EG",
+   "Identifier": "G3223R108",
+   "Weight": "0.5",
+   "Market Value": "327089.69",
+   "Shares Held": "883",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "M&T Bank Corporation",
+   "Ticker": "MTB",
+   "Identifier": "55261F104",
+   "Weight": "0.5",
+   "Market Value": "327140.01",
+   "Shares Held": "1479",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "State Street Corporation",
+   "Ticker": "STT",
+   "Identifier": "857477103",
+   "Weight": "0.48",
+   "Market Value": "312448.82",
+   "Shares Held": "1723",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Fastenal Company",
+   "Ticker": "FAST",
+   "Identifier": "311900104",
+   "Weight": "0.46",
+   "Market Value": "304798.92",
+   "Shares Held": "6044",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Illinois Tool Works Inc.",
+   "Ticker": "ITW",
+   "Identifier": "452308109",
+   "Weight": "0.46",
+   "Market Value": "301752",
+   "Shares Held": "1100",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "UnitedHealth Group Incorporated",
+   "Ticker": "UNH",
+   "Identifier": "91324P102",
+   "Weight": "0.46",
+   "Market Value": "300518.82",
+   "Shares Held": "798",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "A.O. Smith Corporation",
+   "Ticker": "AOS",
+   "Identifier": "831865209",
+   "Weight": "0.44",
+   "Market Value": "287033.1",
+   "Shares Held": "4894",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "News Corporation (Class A)",
+   "Ticker": "NWSA",
+   "Identifier": "65249B109",
+   "Weight": "0.43",
+   "Market Value": "284130.77",
+   "Shares Held": "9973",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Quest Diagnostics Incorporated",
+   "Ticker": "DGX",
+   "Identifier": "74834L100",
+   "Weight": "0.43",
+   "Market Value": "281929.76",
+   "Shares Held": "1193",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Snap-on Incorporated",
+   "Ticker": "SNA",
+   "Identifier": "833034101",
+   "Weight": "0.42",
+   "Market Value": "279115.2",
+   "Shares Held": "756",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Union Pacific Corporation",
+   "Ticker": "UNP",
+   "Identifier": "907818108",
+   "Weight": "0.37",
+   "Market Value": "240387.62",
+   "Shares Held": "878",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Eversource Energy",
+   "Ticker": "ES",
+   "Identifier": "30040W108",
+   "Weight": "0.36",
+   "Market Value": "236597.72",
+   "Shares Held": "3716",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "General Dynamics Corporation",
+   "Ticker": "GD",
+   "Identifier": "369550108",
+   "Weight": "0.31",
+   "Market Value": "205062.48",
+   "Shares Held": "609",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Norfolk Southern Corporation",
+   "Ticker": "NSC",
+   "Identifier": "655844108",
+   "Weight": "0.31",
+   "Market Value": "205328",
+   "Shares Held": "656",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Realty Income Corporation",
+   "Ticker": "O",
+   "Identifier": "756109104",
+   "Weight": "0.31",
+   "Market Value": "202721",
+   "Shares Held": "3650",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "Edison International",
+   "Ticker": "EIX",
+   "Identifier": "281020107",
+   "Weight": "0.3",
+   "Market Value": "196015.95",
+   "Shares Held": "3723",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Duke Energy Corporation",
+   "Ticker": "DUK",
+   "Identifier": "26441C204",
+   "Weight": "0.29",
+   "Market Value": "192808.35",
+   "Shares Held": "1701",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Evergy, Inc.",
+   "Ticker": "EVRG",
+   "Identifier": "30034W106",
+   "Weight": "0.28",
+   "Market Value": "184096.36",
+   "Shares Held": "2359",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Extra Space Storage Inc.",
+   "Ticker": "EXR",
+   "Identifier": "30225T102",
+   "Weight": "0.28",
+   "Market Value": "185489.85",
+   "Shares Held": "1391",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "Pinnacle West Capital Corporation",
+   "Ticker": "PNW",
+   "Identifier": "723484101",
+   "Weight": "0.28",
+   "Market Value": "186323.94",
+   "Shares Held": "2031",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Air Products and Chemicals, Inc.",
+   "Ticker": "APD",
+   "Identifier": "009158106",
+   "Weight": "0.27",
+   "Market Value": "180608.16",
+   "Shares Held": "641",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "FedEx Corporation",
+   "Ticker": "FDX",
+   "Identifier": "31428X106",
+   "Weight": "0.27",
+   "Market Value": "175511.9",
+   "Shares Held": "614",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Masco Corporation",
+   "Ticker": "MAS",
+   "Identifier": "574599106",
+   "Weight": "0.27",
+   "Market Value": "175636.35",
+   "Shares Held": "2551",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Mid-America Apartment Communities, Inc.",
+   "Ticker": "MAA",
+   "Identifier": "59522J103",
+   "Weight": "0.27",
+   "Market Value": "179181.9",
+   "Shares Held": "1514",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "Packaging Corporation of America",
+   "Ticker": "PKG",
+   "Identifier": "695156109",
+   "Weight": "0.26",
+   "Market Value": "168160.62",
+   "Shares Held": "709",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "PPG Industries, Inc.",
+   "Ticker": "PPG",
+   "Identifier": "693506107",
+   "Weight": "0.26",
+   "Market Value": "172462.08",
+   "Shares Held": "1604",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "UDR, Inc.",
+   "Ticker": "UDR",
+   "Identifier": "902653104",
+   "Weight": "0.26",
+   "Market Value": "168726.24",
+   "Shares Held": "4986",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.25",
+   "Market Value": "164642.78",
+   "Shares Held": "164643",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "DTE Energy Company",
+   "Ticker": "DTE",
+   "Identifier": "233331107",
+   "Weight": "0.24",
+   "Market Value": "158722.08",
+   "Shares Held": "1307",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Public Storage",
+   "Ticker": "PSA",
+   "Identifier": "74460D109",
+   "Weight": "0.24",
+   "Market Value": "157519.59",
+   "Shares Held": "547",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "CF Industries Holdings, Inc.",
+   "Ticker": "CF",
+   "Identifier": "125269100",
+   "Weight": "0.23",
+   "Market Value": "154001.81",
+   "Shares Held": "1343",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Federal Realty Investment Trust",
+   "Ticker": "FRT",
+   "Identifier": "313745101",
+   "Weight": "0.22",
+   "Market Value": "146328.48",
+   "Shares Held": "1324",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "Honeywell Aerospace Inc.",
+   "Ticker": "HONA",
+   "Identifier": "43849R105",
+   "Weight": "0.15",
+   "Market Value": "96061.9",
+   "Shares Held": "605",
+   "Asset Category": "Industrials"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

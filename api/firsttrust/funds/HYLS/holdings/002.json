@@ -1,0 +1,932 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "HUB INTERNATIONAL LTD 7.25%, due 06/15/2030",
+   "Ticker": "-",
+   "Identifier": "44332PAH4",
+   "Weight": "0.13",
+   "Market Value": "2007235.89",
+   "Shares Held": "1988000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "LIFE TIME INC 6%, due 11/15/2031",
+   "Ticker": "-",
+   "Identifier": "53190FAE5",
+   "Weight": "0.13",
+   "Market Value": "1998515.37",
+   "Shares Held": "2031000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MERIDIAN ARC HOLDCO LLC 6.25%, due 04/30/2031",
+   "Ticker": "-",
+   "Identifier": "58990CAA1",
+   "Weight": "0.13",
+   "Market Value": "2000978.85",
+   "Shares Held": "2128000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "OPTION CARE HEALTH INC 4.375%, due 10/31/2029",
+   "Ticker": "-",
+   "Identifier": "68404LAA0",
+   "Weight": "0.13",
+   "Market Value": "2042361.6",
+   "Shares Held": "2155000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SHEA HOMES LP/FNDG CP 6.625%, due 04/01/2032",
+   "Ticker": "-",
+   "Identifier": "82088KAM0",
+   "Weight": "0.13",
+   "Market Value": "2080458.32",
+   "Shares Held": "2090000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SWORD PURCHASER LLC SEE TL B 1L USD",
+   "Ticker": "LX287532",
+   "Identifier": "-",
+   "Weight": "0.13",
+   "Market Value": "2116512.23",
+   "Shares Held": "2115000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TALEN ENERGY SUPPLY LLC 6.50%, due 02/01/2036",
+   "Ticker": "-",
+   "Identifier": "87422VAN8",
+   "Weight": "0.13",
+   "Market Value": "2128863.26",
+   "Shares Held": "2231000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VENTURE GLOBAL LNG INC 9.875%, due 02/01/2032",
+   "Ticker": "-",
+   "Identifier": "92332YAD3",
+   "Weight": "0.13",
+   "Market Value": "2137745.9",
+   "Shares Held": "2020000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "WHITE CAP SUPPLY HOLDING 7.375%, due 11/15/2030",
+   "Ticker": "-",
+   "Identifier": "96467GAC2",
+   "Weight": "0.13",
+   "Market Value": "2124312.15",
+   "Shares Held": "2129000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ACRISURE LLC ACRISU TL B6 1L USD",
+   "Ticker": "LX256061",
+   "Identifier": "-",
+   "Weight": "0.12",
+   "Market Value": "1944674.39",
+   "Shares Held": "2335945",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BLACKSTONE MORTGAGE TRUST 6.25%, due 06/01/2031",
+   "Ticker": "-",
+   "Identifier": "09257WAG5",
+   "Weight": "0.12",
+   "Market Value": "1895791.9",
+   "Shares Held": "2037000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BURFORD CAPITAL GLBL FIN LLC 8%, due 10/15/2029",
+   "Ticker": "-",
+   "Identifier": "12116LAK5",
+   "Weight": "0.12",
+   "Market Value": "1964500.21",
+   "Shares Held": "1938000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NEXSTAR MEDIA INC 7.25%, due 04/15/2034",
+   "Ticker": "-",
+   "Identifier": "65346UAA7",
+   "Weight": "0.12",
+   "Market Value": "1884219.18",
+   "Shares Held": "1939000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NRG ENERGY INC 5.875%, due 05/15/2034",
+   "Ticker": "-",
+   "Identifier": "629377DF6",
+   "Weight": "0.12",
+   "Market Value": "1888521.4",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NRG ENERGY INC 6.125%, due 05/15/2036",
+   "Ticker": "-",
+   "Identifier": "629377DG4",
+   "Weight": "0.12",
+   "Market Value": "1886351.2",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "RB GLOBAL HOLDINGS INC 6.75%, due 03/15/2028",
+   "Ticker": "-",
+   "Identifier": "76774LAB3",
+   "Weight": "0.12",
+   "Market Value": "1956598.03",
+   "Shares Held": "1945000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ROCKET COS INC 6.50%, due 06/15/2034",
+   "Ticker": "-",
+   "Identifier": "77311WAF8",
+   "Weight": "0.12",
+   "Market Value": "1950227",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VENTURE GLOBAL LNG INC 6.625%, due 06/15/2036",
+   "Ticker": "-",
+   "Identifier": "92332YAH4",
+   "Weight": "0.12",
+   "Market Value": "1935807.8",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "WESCO DISTRIBUTION INC 5.50%, due 04/15/2034",
+   "Ticker": "-",
+   "Identifier": "95081QAU8",
+   "Weight": "0.12",
+   "Market Value": "1883039.4",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ACUSHNET CO 5.625%, due 12/01/2033",
+   "Ticker": "-",
+   "Identifier": "005095AB0",
+   "Weight": "0.11",
+   "Market Value": "1667880.76",
+   "Shares Held": "1750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "C&S WHOLESALE GROCERS INC CSWHOL TL B 1L USD",
+   "Ticker": "LX267078",
+   "Identifier": "-",
+   "Weight": "0.11",
+   "Market Value": "1687400.8",
+   "Shares Held": "1853645",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "IMPRIVATA INC IMPR TL B 1L USD",
+   "Ticker": "LX292611",
+   "Identifier": "-",
+   "Weight": "0.11",
+   "Market Value": "1715595.7",
+   "Shares Held": "1694809",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "KNOWBE4 INC KNBE TL 1L USD",
+   "Ticker": "LX266122",
+   "Identifier": "-",
+   "Weight": "0.11",
+   "Market Value": "1776647.47",
+   "Shares Held": "2443521",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NRG ENERGY INC 5.75%, due 01/15/2034",
+   "Ticker": "-",
+   "Identifier": "629377DC3",
+   "Weight": "0.11",
+   "Market Value": "1801155.79",
+   "Shares Held": "1922000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "RHP HOTEL PPTY/RHP FINAN 6.25%, due 02/15/2035",
+   "Ticker": "-",
+   "Identifier": "74984CAB4",
+   "Weight": "0.11",
+   "Market Value": "1696314.45",
+   "Shares Held": "1754000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SIX FLAGS ENTERTAINMENT 7.25%, due 05/15/2031",
+   "Ticker": "-",
+   "Identifier": "83001AAD4",
+   "Weight": "0.11",
+   "Market Value": "1712694.97",
+   "Shares Held": "1852000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ATHENAHEALTH GROUP INC ATHENA TL B 1L USD",
+   "Ticker": "LX290634",
+   "Identifier": "-",
+   "Weight": "0.1",
+   "Market Value": "1655329.69",
+   "Shares Held": "1652619",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CEMEX SAB DE CV Variable rate",
+   "Ticker": "-",
+   "Identifier": "151290CC5",
+   "Weight": "0.1",
+   "Market Value": "1528125",
+   "Shares Held": "1500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CHOBANI LLC/FINANCE CORP 7.625%, due 07/01/2029",
+   "Ticker": "-",
+   "Identifier": "17027NAC6",
+   "Weight": "0.1",
+   "Market Value": "1619425.6",
+   "Shares Held": "1600000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CLARIVATE SCIENCE HOLDINGS CORP 3.875%, due 07/01/2028",
+   "Ticker": "-",
+   "Identifier": "18064PAC3",
+   "Weight": "0.1",
+   "Market Value": "1529936.85",
+   "Shares Held": "1582000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "DAVITA INC 4.625%, due 06/01/2030",
+   "Ticker": "-",
+   "Identifier": "23918KAS7",
+   "Weight": "0.1",
+   "Market Value": "1650743.85",
+   "Shares Held": "1750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "DIRECTV FINANCING LLC 8.875%, due 02/01/2030",
+   "Ticker": "-",
+   "Identifier": "25461LAB8",
+   "Weight": "0.1",
+   "Market Value": "1600679.09",
+   "Shares Held": "1591000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FERTITTA ENTERTAINMENT 4.625%, due 01/15/2029",
+   "Ticker": "-",
+   "Identifier": "31556TAA7",
+   "Weight": "0.1",
+   "Market Value": "1641579.16",
+   "Shares Held": "1700000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "LEVEL 3 FINANCING INC 8.50%, due 01/15/2036",
+   "Ticker": "-",
+   "Identifier": "527298CQ4",
+   "Weight": "0.1",
+   "Market Value": "1552014.49",
+   "Shares Held": "1550000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MIWD HLDCO II/MIWD FIN 5.50%, due 02/01/2030",
+   "Ticker": "-",
+   "Identifier": "55337PAA0",
+   "Weight": "0.1",
+   "Market Value": "1565899.78",
+   "Shares Held": "1736000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NEPTUNE BIDCO US INC 9.50%, due 02/15/2033",
+   "Ticker": "-",
+   "Identifier": "640695AD4",
+   "Weight": "0.1",
+   "Market Value": "1594755.41",
+   "Shares Held": "1594000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TENET HEALTHCARE CORP 5.50%, due 11/15/2032",
+   "Ticker": "-",
+   "Identifier": "88033GDW7",
+   "Weight": "0.1",
+   "Market Value": "1629209.36",
+   "Shares Held": "1706000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TRANSDIGM INC 6%, due 12/15/2033",
+   "Ticker": "-",
+   "Identifier": "893647BW6",
+   "Weight": "0.1",
+   "Market Value": "1615029.8",
+   "Shares Held": "1663000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CAMELOT US ACQUISITION LLC CCC TL B 1L USD",
+   "Ticker": "LX225722",
+   "Identifier": "-",
+   "Weight": "0.09",
+   "Market Value": "1495383.8",
+   "Shares Held": "1559048",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CLEAR CHANNEL OUTDOOR HOLDINGS 7.125%, due 02/15/2031",
+   "Ticker": "-",
+   "Identifier": "18453HAG1",
+   "Weight": "0.09",
+   "Market Value": "1394329.92",
+   "Shares Held": "1380000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "EZCORP INC 7.375%, due 04/01/2032",
+   "Ticker": "-",
+   "Identifier": "302301AJ5",
+   "Weight": "0.09",
+   "Market Value": "1424157.63",
+   "Shares Held": "1381000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FREEDOM MORTGAGE HOLDINGS 9.25%, due 02/01/2029",
+   "Ticker": "-",
+   "Identifier": "35641AAA6",
+   "Weight": "0.09",
+   "Market Value": "1405965.26",
+   "Shares Held": "1382000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GRAPHIC PACKAGING INTERNATIONAL N/C, 3.50%, due 03/15/2028",
+   "Ticker": "-",
+   "Identifier": "38869AAB3",
+   "Weight": "0.09",
+   "Market Value": "1379744.6",
+   "Shares Held": "1432000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "OAK-EAGLE ACQUIRECO INC 8.75%, due 07/01/2034",
+   "Ticker": "-",
+   "Identifier": "67124CAB9",
+   "Weight": "0.09",
+   "Market Value": "1451785.35",
+   "Shares Held": "1410000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PENNYMAC FIN SVCS INC 6.875%, due 02/15/2033",
+   "Ticker": "-",
+   "Identifier": "70932MAF4",
+   "Weight": "0.09",
+   "Market Value": "1370284.67",
+   "Shares Held": "1526000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SOLARIS OILFIELD INFRASTRUCTURE 6.375%, due 05/15/2031",
+   "Ticker": "-",
+   "Identifier": "83419YAA4",
+   "Weight": "0.09",
+   "Market Value": "1376482.3",
+   "Shares Held": "1404000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "STANDARD INDUSTRIES INC 4.75%, due 01/15/2028",
+   "Ticker": "-",
+   "Identifier": "853496AD9",
+   "Weight": "0.09",
+   "Market Value": "1407815.79",
+   "Shares Held": "1426000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "STATION CASINOS LLC 4.625%, due 12/01/2031",
+   "Ticker": "-",
+   "Identifier": "857691AH2",
+   "Weight": "0.09",
+   "Market Value": "1449607.06",
+   "Shares Held": "1592000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SWORD PURCHASER LLC 8.25%, due 04/15/2033",
+   "Ticker": "-",
+   "Identifier": "87110CAB3",
+   "Weight": "0.09",
+   "Market Value": "1440973.05",
+   "Shares Held": "1411000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TELEFLEX INC 5.875%, due 01/15/2032",
+   "Ticker": "-",
+   "Identifier": "879369AH9",
+   "Weight": "0.09",
+   "Market Value": "1377397.41",
+   "Shares Held": "1418000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "UNDER ARMOUR INC 7.25%, due 07/15/2030",
+   "Ticker": "-",
+   "Identifier": "904311AD9",
+   "Weight": "0.09",
+   "Market Value": "1349841.26",
+   "Shares Held": "1378000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US FOODS INC 4.75%, due 02/15/2029",
+   "Ticker": "-",
+   "Identifier": "90290MAD3",
+   "Weight": "0.09",
+   "Market Value": "1356269.49",
+   "Shares Held": "1397000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VISTRA OPERATIONS CO LLC 7.75%, due 10/15/2031",
+   "Ticker": "-",
+   "Identifier": "92840VAP7",
+   "Weight": "0.09",
+   "Market Value": "1408474.4",
+   "Shares Held": "1359000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "WINDSTREAM SERVICES/ESCROW 8.25%, due 10/01/2031",
+   "Ticker": "-",
+   "Identifier": "97381AAA0",
+   "Weight": "0.09",
+   "Market Value": "1425308.6",
+   "Shares Held": "1406000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "APLD COMPUTECO 3 LLC 7%, due 06/15/2031",
+   "Ticker": "-",
+   "Identifier": "03790NAA5",
+   "Weight": "0.08",
+   "Market Value": "1319861.07",
+   "Shares Held": "1405000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CCO HLDGS LLC/CAP CORP 4.75%, due 03/01/2030",
+   "Ticker": "-",
+   "Identifier": "1248EPCD3",
+   "Weight": "0.08",
+   "Market Value": "1314309.68",
+   "Shares Held": "1431000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CLEAN HARBORS INC 5.75%, due 10/15/2033",
+   "Ticker": "-",
+   "Identifier": "184496AR8",
+   "Weight": "0.08",
+   "Market Value": "1327943.87",
+   "Shares Held": "1376000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "KB HOME 4%, due 06/15/2031",
+   "Ticker": "-",
+   "Identifier": "48666KAZ2",
+   "Weight": "0.08",
+   "Market Value": "1237834.04",
+   "Shares Held": "1382000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PENNYMAC FIN SVCS INC 6.875%, due 05/15/2032",
+   "Ticker": "-",
+   "Identifier": "70932MAG2",
+   "Weight": "0.08",
+   "Market Value": "1211360.03",
+   "Shares Held": "1325000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PROTECTIVE IND PROD PROINP TL B 1L USD",
+   "Ticker": "LX293801",
+   "Identifier": "-",
+   "Weight": "0.08",
+   "Market Value": "1233046.22",
+   "Shares Held": "1227480",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "RHP HOTEL PPTY/RHP FINAN 5.75%, due 03/15/2034",
+   "Ticker": "-",
+   "Identifier": "74984CAA6",
+   "Weight": "0.08",
+   "Market Value": "1345673.88",
+   "Shares Held": "1419000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ABC SUPPLY CO INC 4%, due 01/15/2028",
+   "Ticker": "-",
+   "Identifier": "024747AF4",
+   "Weight": "0.07",
+   "Market Value": "1183392.83",
+   "Shares Held": "1210000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "AXON ENTERPRISE INC 6.125%, due 03/15/2030",
+   "Ticker": "-",
+   "Identifier": "05464CAC5",
+   "Weight": "0.07",
+   "Market Value": "1032915.41",
+   "Shares Held": "1035000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GARDA WORLD SECURITY 8.25%, due 08/01/2032",
+   "Ticker": "-",
+   "Identifier": "36485MAN9",
+   "Weight": "0.07",
+   "Market Value": "1048192.95",
+   "Shares Held": "1053000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SS&C TECHNOLOGIES INC 5.50%, due 09/30/2027",
+   "Ticker": "-",
+   "Identifier": "78466CAC0",
+   "Weight": "0.07",
+   "Market Value": "1097690.11",
+   "Shares Held": "1100000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "STAR PARENT INC 9%, due 10/01/2030",
+   "Ticker": "-",
+   "Identifier": "855170AA4",
+   "Weight": "0.07",
+   "Market Value": "1051201.35",
+   "Shares Held": "1016000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ABC SUPPLY CO INC 3.875%, due 11/15/2029",
+   "Ticker": "-",
+   "Identifier": "024747AG2",
+   "Weight": "0.06",
+   "Market Value": "933227.4",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FIRSTCASH INC 4.625%, due 09/01/2028",
+   "Ticker": "-",
+   "Identifier": "33767DAB1",
+   "Weight": "0.06",
+   "Market Value": "972261.2",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GRAPHIC PACKAGING INTERNATIONAL 3.50%, due 03/01/2029",
+   "Ticker": "-",
+   "Identifier": "38869AAC1",
+   "Weight": "0.06",
+   "Market Value": "931477.1",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GROUP 1 AUTOMOTIVE INC 6.625%, due 02/01/2035",
+   "Ticker": "-",
+   "Identifier": "398905AT6",
+   "Weight": "0.06",
+   "Market Value": "950152.95",
+   "Shares Held": "969000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ISOTOPE FINCO 2 LLC 7.125%, due 10/15/2033",
+   "Ticker": "-",
+   "Identifier": "46501MAA6",
+   "Weight": "0.06",
+   "Market Value": "1000000",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NORDSTROM INC 4%, due 03/15/2027",
+   "Ticker": "-",
+   "Identifier": "655664AS9",
+   "Weight": "0.06",
+   "Market Value": "991799.6",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SIX FLAGS ENT/SIX FLAG 6.625%, due 05/01/2032",
+   "Ticker": "-",
+   "Identifier": "83002YAA7",
+   "Weight": "0.06",
+   "Market Value": "973597.1",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VERITIV OPERATING CO VRTV TL B 1L USD",
+   "Ticker": "LX219615",
+   "Identifier": "-",
+   "Weight": "0.06",
+   "Market Value": "873412.66",
+   "Shares Held": "877718",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CCO HLDGS LLC/CAP CORP 4.50%, due 05/01/2032",
+   "Ticker": "-",
+   "Identifier": "1248EPCJ0",
+   "Weight": "0.05",
+   "Market Value": "835619.54",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VISTA MANAGEMENT HOLDING VSTJET TL B 1L USD",
+   "Ticker": "LX260516",
+   "Identifier": "-",
+   "Weight": "0.05",
+   "Market Value": "716289.3",
+   "Shares Held": "712651",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "1011778 BC / NEW RED FIN 6.125%, due 06/15/2029",
+   "Ticker": "-",
+   "Identifier": "68245XAR0",
+   "Weight": "0.04",
+   "Market Value": "653299.09",
+   "Shares Held": "656000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "AMENTUM HOLDINGS INC 7.25%, due 08/01/2032",
+   "Ticker": "-",
+   "Identifier": "02352BAA3",
+   "Weight": "0.04",
+   "Market Value": "689991.16",
+   "Shares Held": "684000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "AXON ENTERPRISE INC 6.25%, due 03/15/2033",
+   "Ticker": "-",
+   "Identifier": "05464CAD3",
+   "Weight": "0.04",
+   "Market Value": "679758.4",
+   "Shares Held": "690000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BOND US BIDCO 1/2/3/G1/2 7.125%, due 06/15/2033",
+   "Ticker": "-",
+   "Identifier": "097947AA3",
+   "Weight": "0.04",
+   "Market Value": "692118.65",
+   "Shares Held": "702000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GAINWELL ACQUISITION CORP 9%, due 09/01/2031",
+   "Ticker": "-",
+   "Identifier": "36312LAC4",
+   "Weight": "0.04",
+   "Market Value": "680788.87",
+   "Shares Held": "662000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MOOG INC 5.50%, due 10/15/2034",
+   "Ticker": "-",
+   "Identifier": "615394AP8",
+   "Weight": "0.04",
+   "Market Value": "674196.43",
+   "Shares Held": "714000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PAPA JOHN'S INTERNATIONAL 3.875%, due 09/15/2029",
+   "Ticker": "-",
+   "Identifier": "698813AA0",
+   "Weight": "0.04",
+   "Market Value": "634233.83",
+   "Shares Held": "708000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "RHP HOTEL PPTY/RHP FINAN 6.50%, due 06/15/2033",
+   "Ticker": "-",
+   "Identifier": "749571AL9",
+   "Weight": "0.04",
+   "Market Value": "683970.25",
+   "Shares Held": "688000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SCIENCE APPLICATIONS INT 5.875%, due 11/01/2033",
+   "Ticker": "-",
+   "Identifier": "808625AB3",
+   "Weight": "0.04",
+   "Market Value": "658333.09",
+   "Shares Held": "689000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SEAWORLD PARKS & ENTERTAINMENT 5.25%, due 08/15/2029",
+   "Ticker": "-",
+   "Identifier": "81282UAG7",
+   "Weight": "0.04",
+   "Market Value": "679327.6",
+   "Shares Held": "717000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SENSATA TECHNOLOGIES INC 3.75%, due 02/15/2031",
+   "Ticker": "-",
+   "Identifier": "81728UAB0",
+   "Weight": "0.04",
+   "Market Value": "602408.25",
+   "Shares Held": "667000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "STARWOOD PROPERTY TRUST 6.125%, due 06/01/2031",
+   "Ticker": "-",
+   "Identifier": "85571BBH7",
+   "Weight": "0.04",
+   "Market Value": "679034.43",
+   "Shares Held": "705000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SYNERGY INFRASTRUCTURE HOLDINGS 7%, due 07/15/2034",
+   "Ticker": "-",
+   "Identifier": "87191JAB0",
+   "Weight": "0.04",
+   "Market Value": "684465.45",
+   "Shares Held": "703000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SYNERGY INFRASTRUCTURE HOLDINGS 7.875%, due 12/01/2030",
+   "Ticker": "-",
+   "Identifier": "87191JAA2",
+   "Weight": "0.04",
+   "Market Value": "712983.52",
+   "Shares Held": "692000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TENET HEALTHCARE CORP 6%, due 11/15/2033",
+   "Ticker": "-",
+   "Identifier": "88033GDV9",
+   "Weight": "0.04",
+   "Market Value": "670255.31",
+   "Shares Held": "692000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VIKING CRUISES LTD 5.875%, due 10/15/2033",
+   "Ticker": "-",
+   "Identifier": "92676XAH0",
+   "Weight": "0.04",
+   "Market Value": "657375.12",
+   "Shares Held": "687000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "WAYFAIR LLC 6.75%, due 11/15/2032",
+   "Ticker": "-",
+   "Identifier": "94419NAC1",
+   "Weight": "0.04",
+   "Market Value": "690005.04",
+   "Shares Held": "690000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "WILLIAMS SCOTSMAN INC 6.625%, due 04/15/2030",
+   "Ticker": "-",
+   "Identifier": "96949VAN3",
+   "Weight": "0.04",
+   "Market Value": "696955.04",
+   "Shares Held": "697000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "IDERA INC IDERA TL 1L USD",
+   "Ticker": "LX234473",
+   "Identifier": "-",
+   "Weight": "0.03",
+   "Market Value": "458353.91",
+   "Shares Held": "520366",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "HERC HOLDINGS INC 5.75%, due 03/15/2031",
+   "Ticker": "-",
+   "Identifier": "42704LAH7",
+   "Weight": "0.02",
+   "Market Value": "337135.31",
+   "Shares Held": "347000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "HERC HOLDINGS INC 6%, due 03/15/2034",
+   "Ticker": "-",
+   "Identifier": "42704LAK0",
+   "Weight": "0.02",
+   "Market Value": "330426.56",
+   "Shares Held": "347000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VENTURE GLOBAL PLAQUEMINES LNG LLC 7.50%, due 05/01/2033",
+   "Ticker": "-",
+   "Identifier": "922966AA4",
+   "Weight": "0.02",
+   "Market Value": "359882.12",
+   "Shares Held": "343000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BUILDERS FIRSTSOURCE INC 4.25%, due 02/01/2032",
+   "Ticker": "-",
+   "Identifier": "12008RAP2",
+   "Weight": "0.01",
+   "Market Value": "88730.55",
+   "Shares Held": "100000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GRANITE CONSTRUCTION INC 6.375%, due 06/15/2034",
+   "Ticker": "-",
+   "Identifier": "387328AG2",
+   "Weight": "0.01",
+   "Market Value": "136298.34",
+   "Shares Held": "140000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "KASEYA INC Variable rate, due 03/20/2033",
+   "Ticker": "LX259601",
+   "Identifier": "-",
+   "Weight": "0.01",
+   "Market Value": "185501.74",
+   "Shares Held": "329989",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "-0.44",
+   "Market Value": "-6990176.41",
+   "Shares Held": "-6990176",
+   "Asset Category": "-"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

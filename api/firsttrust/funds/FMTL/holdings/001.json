@@ -1,0 +1,491 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "BHP Group Limited",
+   "Ticker": "BHP.AU",
+   "Identifier": "Q1498M100",
+   "Weight": "8.88",
+   "Market Value": "2671598.8",
+   "Shares Held": "62618",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Freeport-McMoRan Inc.",
+   "Ticker": "FCX",
+   "Identifier": "35671D857",
+   "Weight": "8.73",
+   "Market Value": "2624780.69",
+   "Shares Held": "36299",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Glencore Plc",
+   "Ticker": "GLEN.LN",
+   "Identifier": "G39420107",
+   "Weight": "7.93",
+   "Market Value": "2384825.44",
+   "Shares Held": "320789",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Anglo American Plc",
+   "Ticker": "AAL.LN",
+   "Identifier": "G03764142",
+   "Weight": "6.83",
+   "Market Value": "2054712.29",
+   "Shares Held": "38367",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Sumitomo Corporation",
+   "Ticker": "8053.JP",
+   "Identifier": "J77282119",
+   "Weight": "5.27",
+   "Market Value": "1583868.5",
+   "Shares Held": "138496",
+   "Asset Category": "Trading Companies & Distributors"
+  },
+  {
+   "Name": "Grupo Mexico, S.A.B. de C.V. (Class B)",
+   "Ticker": "GMEXICOB.MM",
+   "Identifier": "P49538112",
+   "Weight": "4.77",
+   "Market Value": "1434377.88",
+   "Shares Held": "113057",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Newmont Corporation",
+   "Ticker": "NEM",
+   "Identifier": "651639106",
+   "Weight": "4.6",
+   "Market Value": "1384423.43",
+   "Shares Held": "11401",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Cameco Corporation",
+   "Ticker": "CCJ",
+   "Identifier": "13321L108",
+   "Weight": "4.58",
+   "Market Value": "1378295.5",
+   "Shares Held": "15650",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Wheaton Precious Metals Corp.",
+   "Ticker": "WPM",
+   "Identifier": "962879102",
+   "Weight": "4.58",
+   "Market Value": "1376462.52",
+   "Shares Held": "9631",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Barrick Mining Corporation",
+   "Ticker": "B",
+   "Identifier": "06849F108",
+   "Weight": "4.56",
+   "Market Value": "1371173.76",
+   "Shares Held": "31977",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "AngloGold Ashanti plc",
+   "Ticker": "AU",
+   "Identifier": "G0378L100",
+   "Weight": "4.11",
+   "Market Value": "1237775.97",
+   "Shares Held": "12499",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Teck Resources Limited (Class B)",
+   "Ticker": "TECK",
+   "Identifier": "878742204",
+   "Weight": "3.69",
+   "Market Value": "1110630.75",
+   "Shares Held": "16815",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Valterra Platinum Limited",
+   "Ticker": "VALT.LN",
+   "Identifier": "S9122P108",
+   "Weight": "2.55",
+   "Market Value": "768385.87",
+   "Shares Held": "9515",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Southern Copper Corporation",
+   "Ticker": "SCCO",
+   "Identifier": "84265V105",
+   "Weight": "2.1",
+   "Market Value": "631132.4",
+   "Shares Held": "3095",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Antofagasta Plc",
+   "Ticker": "ANTO.LN",
+   "Identifier": "G0398N128",
+   "Weight": "1.88",
+   "Market Value": "566950.11",
+   "Shares Held": "11472",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "South32 Limited",
+   "Ticker": "S32.AU",
+   "Identifier": "Q86668102",
+   "Weight": "1.86",
+   "Market Value": "560297.72",
+   "Shares Held": "160767",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "NAC Kazatomprom JSC (GDR)",
+   "Ticker": "KAP.LI",
+   "Identifier": "63253R201",
+   "Weight": "1.84",
+   "Market Value": "554445",
+   "Shares Held": "8214",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Hindalco Industries Limited",
+   "Ticker": "HNDL.IS",
+   "Identifier": "Y3196V185",
+   "Weight": "1.73",
+   "Market Value": "520645.23",
+   "Shares Held": "51064",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Boliden AB",
+   "Ticker": "BOL.SS",
+   "Identifier": "W17218210",
+   "Weight": "1.71",
+   "Market Value": "513433.41",
+   "Shares Held": "9761",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Sumitomo Metal Mining Co., Ltd.",
+   "Ticker": "5713.JP",
+   "Identifier": "J77712180",
+   "Weight": "1.7",
+   "Market Value": "512156.27",
+   "Shares Held": "8399",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "JX Advanced Metals Corporation",
+   "Ticker": "5016.JP",
+   "Identifier": "J2969E104",
+   "Weight": "1.44",
+   "Market Value": "434120.6",
+   "Shares Held": "19199",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "KGHM Polska Miedz S.A.",
+   "Ticker": "KGH.PW",
+   "Identifier": "X45213109",
+   "Weight": "1.41",
+   "Market Value": "423205.41",
+   "Shares Held": "4912",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Alcoa Corporation",
+   "Ticker": "AA",
+   "Identifier": "013872106",
+   "Weight": "1.35",
+   "Market Value": "405575.25",
+   "Shares Held": "9465",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Norsk Hydro ASA",
+   "Ticker": "NHY.NO",
+   "Identifier": "R61115102",
+   "Weight": "1.34",
+   "Market Value": "401628.16",
+   "Shares Held": "46304",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Sociedad Quimica y Minera de Chile S.A. (ADR)",
+   "Ticker": "SQM",
+   "Identifier": "833635105",
+   "Weight": "1.14",
+   "Market Value": "342744.36",
+   "Shares Held": "5124",
+   "Asset Category": "Chemicals"
+  },
+  {
+   "Name": "Compania de Minas Buenaventura S.A.A. (ADR)",
+   "Ticker": "BVN",
+   "Identifier": "204448104",
+   "Weight": "1.01",
+   "Market Value": "303273.31",
+   "Shares Held": "9143",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Mitsui Kinzoku Company, Ltd.",
+   "Ticker": "5706.JP",
+   "Identifier": "J44948131",
+   "Weight": "0.97",
+   "Market Value": "292119.47",
+   "Shares Held": "1999",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Sibanye Stillwater Ltd. (ADR)",
+   "Ticker": "SBSW",
+   "Identifier": "82575P107",
+   "Weight": "0.9",
+   "Market Value": "270618.66",
+   "Shares Held": "25506",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Vedanta Aluminium Metal Limited",
+   "Ticker": "VAML.IS",
+   "Identifier": "Y936VB109",
+   "Weight": "0.87",
+   "Market Value": "260830.88",
+   "Shares Held": "58567",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "SSR Mining Inc.",
+   "Ticker": "SSRM",
+   "Identifier": "784730103",
+   "Weight": "0.86",
+   "Market Value": "258002.08",
+   "Shares Held": "7231",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Capstone Copper Corp.",
+   "Ticker": "CS.CN",
+   "Identifier": "14071L108",
+   "Weight": "0.8",
+   "Market Value": "241108.32",
+   "Shares Held": "23455",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "OceanaGold Corporation",
+   "Ticker": "OGC.CT",
+   "Identifier": "675222400",
+   "Weight": "0.76",
+   "Market Value": "227192.91",
+   "Shares Held": "8058",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.73",
+   "Market Value": "218452.08",
+   "Shares Held": "218452",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Centerra Gold Inc.",
+   "Ticker": "CG.CN",
+   "Identifier": "152006102",
+   "Weight": "0.54",
+   "Market Value": "161067.68",
+   "Shares Held": "7144",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Vedanta Limited",
+   "Ticker": "VEDL.IS",
+   "Identifier": "Y9364D105",
+   "Weight": "0.54",
+   "Market Value": "162793.92",
+   "Shares Held": "58567",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "USA Rare Earth, Inc. (Class A)",
+   "Ticker": "USAR",
+   "Identifier": "91733P107",
+   "Weight": "0.36",
+   "Market Value": "108263.76",
+   "Shares Held": "7132",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Energy Fuels Inc.",
+   "Ticker": "UUUU",
+   "Identifier": "292671708",
+   "Weight": "0.32",
+   "Market Value": "96940.35",
+   "Shares Held": "8541",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Iluka Resources Limited",
+   "Ticker": "ILU.AU",
+   "Identifier": "Q4875J104",
+   "Weight": "0.21",
+   "Market Value": "63097.62",
+   "Shares Held": "15298",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Elkem ASA",
+   "Ticker": "ELK.NO",
+   "Identifier": "R2R86R113",
+   "Weight": "0.11",
+   "Market Value": "34241.09",
+   "Shares Held": "9565",
+   "Asset Category": "Chemicals"
+  },
+  {
+   "Name": "Nexa Resources SA",
+   "Ticker": "NEXA",
+   "Identifier": "L67359106",
+   "Weight": "0.07",
+   "Market Value": "19916.44",
+   "Shares Held": "1601",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Vedanta Oil and Gas Limited",
+   "Ticker": "VOGL.IS",
+   "Identifier": "Y5S07Z115",
+   "Weight": "0.07",
+   "Market Value": "19917",
+   "Shares Held": "55528",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Ferroglobe Plc",
+   "Ticker": "GSM",
+   "Identifier": "G33856108",
+   "Weight": "0.06",
+   "Market Value": "17183.54",
+   "Shares Held": "4222",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Vedanta Iron and Steel Limited",
+   "Ticker": "VISL.IS",
+   "Identifier": "Y936VK109",
+   "Weight": "0.06",
+   "Market Value": "18995.62",
+   "Shares Held": "55528",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Vedanta Power Limited",
+   "Ticker": "VEDPOWER.IS",
+   "Identifier": "Y8T61K106",
+   "Weight": "0.06",
+   "Market Value": "19094.13",
+   "Shares Held": "55528",
+   "Asset Category": "Independent Power and Renewable Electricity Producers"
+  },
+  {
+   "Name": "Eramet",
+   "Ticker": "ERA.FP",
+   "Identifier": "F3145H130",
+   "Weight": "0.05",
+   "Market Value": "16196.03",
+   "Shares Held": "323",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Intrepid Potash, Inc.",
+   "Ticker": "IPI",
+   "Identifier": "46121Y201",
+   "Weight": "0.04",
+   "Market Value": "13241.56",
+   "Shares Held": "389",
+   "Asset Category": "Chemicals"
+  },
+  {
+   "Name": "enCore Energy Corp.",
+   "Ticker": "EU",
+   "Identifier": "29259W700",
+   "Weight": "0.03",
+   "Market Value": "8466.72",
+   "Shares Held": "6828",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Australian Dollar",
+   "Ticker": "-",
+   "Identifier": "$AUD",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "0",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Canadian Dollar",
+   "Ticker": "-",
+   "Identifier": "$CAD",
+   "Weight": "0",
+   "Market Value": "1263.33",
+   "Shares Held": "1787",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Indian Rupee",
+   "Ticker": "-",
+   "Identifier": "$INR",
+   "Weight": "0",
+   "Market Value": "887.07",
+   "Shares Held": "85000",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Norwegian Krone",
+   "Ticker": "-",
+   "Identifier": "$NOK",
+   "Weight": "0",
+   "Market Value": "2.17",
+   "Shares Held": "21",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Verdera Energy Corp.",
+   "Ticker": "V.CN",
+   "Identifier": "92339J107",
+   "Weight": "0",
+   "Market Value": "321.49",
+   "Shares Held": "1229",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Zloty",
+   "Ticker": "-",
+   "Identifier": "$PLN",
+   "Weight": "0",
+   "Market Value": "1.48",
+   "Shares Held": "6",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

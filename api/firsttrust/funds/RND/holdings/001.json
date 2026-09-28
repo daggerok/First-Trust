@@ -1,0 +1,464 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Microsoft Corporation",
+   "Ticker": "MSFT",
+   "Identifier": "594918104",
+   "Weight": "10.47",
+   "Market Value": "1062794.03",
+   "Shares Held": "2059",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Apple Inc.",
+   "Ticker": "AAPL",
+   "Identifier": "037833100",
+   "Weight": "8.91",
+   "Market Value": "905199.78",
+   "Shares Held": "2654",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "NVIDIA Corporation",
+   "Ticker": "NVDA",
+   "Identifier": "67066G104",
+   "Weight": "8.51",
+   "Market Value": "863818.66",
+   "Shares Held": "3838",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Amazon.com, Inc.",
+   "Ticker": "AMZN",
+   "Identifier": "023135106",
+   "Weight": "7.92",
+   "Market Value": "804436.74",
+   "Shares Held": "3222",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Alphabet Inc. (Class A)",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K305",
+   "Weight": "7.28",
+   "Market Value": "739084.08",
+   "Shares Held": "2149",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Meta Platforms, Inc. (Class A)",
+   "Ticker": "META",
+   "Identifier": "30303M102",
+   "Weight": "5.05",
+   "Market Value": "512632.12",
+   "Shares Held": "682",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Advanced Micro Devices, Inc.",
+   "Ticker": "AMD",
+   "Identifier": "007903107",
+   "Weight": "4.11",
+   "Market Value": "416846.43",
+   "Shares Held": "661",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Amgen Inc.",
+   "Ticker": "AMGN",
+   "Identifier": "031162100",
+   "Weight": "3.84",
+   "Market Value": "389733.4",
+   "Shares Held": "940",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Eli Lilly and Company",
+   "Ticker": "LLY",
+   "Identifier": "532457108",
+   "Weight": "3.73",
+   "Market Value": "378707.2",
+   "Shares Held": "320",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Broadcom Inc.",
+   "Ticker": "AVGO",
+   "Identifier": "11135F101",
+   "Weight": "3.54",
+   "Market Value": "359160.58",
+   "Shares Held": "1018",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Amphenol Corporation",
+   "Ticker": "APH",
+   "Identifier": "032095101",
+   "Weight": "3.53",
+   "Market Value": "358391.58",
+   "Shares Held": "4262",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Tesla, Inc.",
+   "Ticker": "TSLA",
+   "Identifier": "88160R101",
+   "Weight": "3.35",
+   "Market Value": "339736.43",
+   "Shares Held": "913",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Deere & Company",
+   "Ticker": "DE",
+   "Identifier": "244199105",
+   "Weight": "2.96",
+   "Market Value": "301040.56",
+   "Shares Held": "436",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Eaton Corporation Plc",
+   "Ticker": "ETN",
+   "Identifier": "G29183103",
+   "Weight": "2.93",
+   "Market Value": "297426.48",
+   "Shares Held": "676",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Intuitive Surgical, Inc.",
+   "Ticker": "ISRG",
+   "Identifier": "46120E602",
+   "Weight": "2.44",
+   "Market Value": "247970.16",
+   "Shares Held": "612",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Vertex Pharmaceuticals Incorporated",
+   "Ticker": "VRTX",
+   "Identifier": "92532F100",
+   "Weight": "2.29",
+   "Market Value": "232575.98",
+   "Shares Held": "442",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Booking Holdings Inc.",
+   "Ticker": "BKNG",
+   "Identifier": "09857L108",
+   "Weight": "2.17",
+   "Market Value": "220512.75",
+   "Shares Held": "1345",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Trane Technologies plc",
+   "Ticker": "TT",
+   "Identifier": "G8994E103",
+   "Weight": "1.72",
+   "Market Value": "174504.96",
+   "Shares Held": "384",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Regeneron Pharmaceuticals, Inc.",
+   "Ticker": "REGN",
+   "Identifier": "75886F107",
+   "Weight": "1.37",
+   "Market Value": "138695.04",
+   "Shares Held": "176",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Illinois Tool Works Inc.",
+   "Ticker": "ITW",
+   "Identifier": "452308109",
+   "Weight": "1.3",
+   "Market Value": "131673.6",
+   "Shares Held": "480",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "DoorDash, Inc. (Class A)",
+   "Ticker": "DASH",
+   "Identifier": "25809K105",
+   "Weight": "1.19",
+   "Market Value": "120850",
+   "Shares Held": "625",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Colgate-Palmolive Company",
+   "Ticker": "CL",
+   "Identifier": "194162103",
+   "Weight": "1.18",
+   "Market Value": "120139.76",
+   "Shares Held": "1396",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Boston Scientific Corporation",
+   "Ticker": "BSX",
+   "Identifier": "101137107",
+   "Weight": "1.12",
+   "Market Value": "113533.2",
+   "Shares Held": "2585",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Aon Plc (Class A)",
+   "Ticker": "AON",
+   "Identifier": "G0403H108",
+   "Weight": "0.99",
+   "Market Value": "100632.38",
+   "Shares Held": "362",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Corteva Inc.",
+   "Ticker": "CTVA",
+   "Identifier": "22052L104",
+   "Weight": "0.9",
+   "Market Value": "91397.28",
+   "Shares Held": "1164",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Palantir Technologies Inc. (Class A)",
+   "Ticker": "PLTR",
+   "Identifier": "69608A108",
+   "Weight": "0.62",
+   "Market Value": "63349.78",
+   "Shares Held": "334",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Lam Research Corporation",
+   "Ticker": "LRCX",
+   "Identifier": "512807306",
+   "Weight": "0.58",
+   "Market Value": "59259.48",
+   "Shares Held": "188",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Applied Materials, Inc.",
+   "Ticker": "AMAT",
+   "Identifier": "038222105",
+   "Weight": "0.57",
+   "Market Value": "57715",
+   "Shares Held": "119",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Cisco Systems, Inc.",
+   "Ticker": "CSCO",
+   "Identifier": "17275R102",
+   "Weight": "0.57",
+   "Market Value": "57404.6",
+   "Shares Held": "538",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Palo Alto Networks, Inc.",
+   "Ticker": "PANW",
+   "Identifier": "697435105",
+   "Weight": "0.45",
+   "Market Value": "45718.28",
+   "Shares Held": "122",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Texas Instruments Incorporated",
+   "Ticker": "TXN",
+   "Identifier": "882508104",
+   "Weight": "0.38",
+   "Market Value": "38095.59",
+   "Shares Held": "137",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "CrowdStrike Holdings, Inc. (Class A)",
+   "Ticker": "CRWD",
+   "Identifier": "22788C105",
+   "Weight": "0.37",
+   "Market Value": "37315.24",
+   "Shares Held": "148",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "KLA Corporation",
+   "Ticker": "KLAC",
+   "Identifier": "482480100",
+   "Weight": "0.36",
+   "Market Value": "37020.24",
+   "Shares Held": "197",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Oracle Corporation",
+   "Ticker": "ORCL",
+   "Identifier": "68389X105",
+   "Weight": "0.35",
+   "Market Value": "35371.8",
+   "Shares Held": "258",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Marvell Technology, Inc.",
+   "Ticker": "MRVL",
+   "Identifier": "573874104",
+   "Weight": "0.34",
+   "Market Value": "34313.5",
+   "Shares Held": "131",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Arista Networks, Inc.",
+   "Ticker": "ANET",
+   "Identifier": "040413205",
+   "Weight": "0.32",
+   "Market Value": "32428.35",
+   "Shares Held": "157",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "International Business Machines Corporation",
+   "Ticker": "IBM",
+   "Identifier": "459200101",
+   "Weight": "0.32",
+   "Market Value": "32022.42",
+   "Shares Held": "142",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "QUALCOMM Incorporated",
+   "Ticker": "QCOM",
+   "Identifier": "747525103",
+   "Weight": "0.32",
+   "Market Value": "32517.17",
+   "Shares Held": "161",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Dell Technologies Inc. (Class C)",
+   "Ticker": "DELL",
+   "Identifier": "24703L202",
+   "Weight": "0.25",
+   "Market Value": "25892.94",
+   "Shares Held": "46",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "ServiceNow, Inc.",
+   "Ticker": "NOW",
+   "Identifier": "81762P102",
+   "Weight": "0.21",
+   "Market Value": "21021.1",
+   "Shares Held": "155",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Corning Incorporated",
+   "Ticker": "GLW",
+   "Identifier": "219350105",
+   "Weight": "0.18",
+   "Market Value": "18652.06",
+   "Shares Held": "119",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Cloudflare, Inc. (Class A)",
+   "Ticker": "NET",
+   "Identifier": "18915M107",
+   "Weight": "0.16",
+   "Market Value": "16403.94",
+   "Shares Held": "47",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Adobe Incorporated",
+   "Ticker": "ADBE",
+   "Identifier": "00724F101",
+   "Weight": "0.14",
+   "Market Value": "14363.67",
+   "Shares Held": "61",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Cadence Design Systems, Inc.",
+   "Ticker": "CDNS",
+   "Identifier": "127387108",
+   "Weight": "0.13",
+   "Market Value": "13371.33",
+   "Shares Held": "41",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Synopsys, Inc.",
+   "Ticker": "SNPS",
+   "Identifier": "871607107",
+   "Weight": "0.12",
+   "Market Value": "12347.04",
+   "Shares Held": "29",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Intuit Inc.",
+   "Ticker": "INTU",
+   "Identifier": "461202103",
+   "Weight": "0.11",
+   "Market Value": "11307.39",
+   "Shares Held": "41",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Motorola Solutions, Inc.",
+   "Ticker": "MSI",
+   "Identifier": "620076307",
+   "Weight": "0.11",
+   "Market Value": "11422",
+   "Shares Held": "25",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.11",
+   "Market Value": "11197.03",
+   "Shares Held": "11197",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Ciena Corporation",
+   "Ticker": "CIEN",
+   "Identifier": "171779309",
+   "Weight": "0.08",
+   "Market Value": "7852.02",
+   "Shares Held": "22",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Autodesk, Inc.",
+   "Ticker": "ADSK",
+   "Identifier": "052769106",
+   "Weight": "0.07",
+   "Market Value": "6700.8",
+   "Shares Held": "32",
+   "Asset Category": "Information Technology"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

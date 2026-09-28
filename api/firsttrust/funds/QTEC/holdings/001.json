@@ -1,0 +1,446 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Intel Corporation",
+   "Ticker": "INTC",
+   "Identifier": "458140100",
+   "Weight": "2.83",
+   "Market Value": "120437049",
+   "Shares Held": "979163",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Advanced Micro Devices, Inc.",
+   "Ticker": "AMD",
+   "Identifier": "007903107",
+   "Weight": "2.76",
+   "Market Value": "117410693.4",
+   "Shares Held": "186180",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Meta Platforms, Inc. (Class A)",
+   "Ticker": "META",
+   "Identifier": "30303M102",
+   "Weight": "2.71",
+   "Market Value": "115100192.48",
+   "Shares Held": "153128",
+   "Asset Category": "Consumer Digital Services"
+  },
+  {
+   "Name": "Arm Holdings Plc",
+   "Ticker": "ARM",
+   "Identifier": "042068205",
+   "Weight": "2.64",
+   "Market Value": "112426763.76",
+   "Shares Held": "362293",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Marvell Technology, Inc.",
+   "Ticker": "MRVL",
+   "Identifier": "573874104",
+   "Weight": "2.55",
+   "Market Value": "108465450",
+   "Shares Held": "414093",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Astera Labs, Inc.",
+   "Ticker": "ALAB",
+   "Identifier": "04626A103",
+   "Weight": "2.53",
+   "Market Value": "107611759.08",
+   "Shares Held": "295134",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Strategy Incorporated (Class A)",
+   "Ticker": "MSTR",
+   "Identifier": "594972408",
+   "Weight": "2.46",
+   "Market Value": "104570621.34",
+   "Shares Held": "659294",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "QUALCOMM Incorporated",
+   "Ticker": "QCOM",
+   "Identifier": "747525103",
+   "Weight": "2.44",
+   "Market Value": "103837624.28",
+   "Shares Held": "514124",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Nebius Group N.V.",
+   "Ticker": "NBIS",
+   "Identifier": "N97284108",
+   "Weight": "2.37",
+   "Market Value": "100817309.34",
+   "Shares Held": "424798",
+   "Asset Category": "Consumer Digital Services"
+  },
+  {
+   "Name": "Teradyne, Inc.",
+   "Ticker": "TER",
+   "Identifier": "880770102",
+   "Weight": "2.35",
+   "Market Value": "99805743.02",
+   "Shares Held": "250529",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Sandisk Corporation",
+   "Ticker": "SNDK",
+   "Identifier": "80004C200",
+   "Weight": "2.34",
+   "Market Value": "99430576.2",
+   "Shares Held": "55929",
+   "Asset Category": "Computer Hardware"
+  },
+  {
+   "Name": "Datadog, Inc. (Class A)",
+   "Ticker": "DDOG",
+   "Identifier": "23804L103",
+   "Weight": "2.33",
+   "Market Value": "99137045.55",
+   "Shares Held": "369735",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Micron Technology, Inc.",
+   "Ticker": "MU",
+   "Identifier": "595112103",
+   "Weight": "2.33",
+   "Market Value": "98926885.68",
+   "Shares Held": "91406",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Seagate Technology Holdings Plc",
+   "Ticker": "STX",
+   "Identifier": "G7997R103",
+   "Weight": "2.28",
+   "Market Value": "96991445.7",
+   "Shares Held": "105790",
+   "Asset Category": "Computer Hardware"
+  },
+  {
+   "Name": "CrowdStrike Holdings, Inc. (Class A)",
+   "Ticker": "CRWD",
+   "Identifier": "22788C105",
+   "Weight": "2.25",
+   "Market Value": "95665181.64",
+   "Shares Held": "379428",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Analog Devices, Inc.",
+   "Ticker": "ADI",
+   "Identifier": "032654105",
+   "Weight": "2.24",
+   "Market Value": "95253955.2",
+   "Shares Held": "242007",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Apple Inc.",
+   "Ticker": "AAPL",
+   "Identifier": "037833100",
+   "Weight": "2.22",
+   "Market Value": "94348829.82",
+   "Shares Held": "276626",
+   "Asset Category": "Computer Hardware"
+  },
+  {
+   "Name": "Monolithic Power Systems, Inc.",
+   "Ticker": "MPWR",
+   "Identifier": "609839105",
+   "Weight": "2.22",
+   "Market Value": "94534538.19",
+   "Shares Held": "69133",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "KLA Corporation",
+   "Ticker": "KLAC",
+   "Identifier": "482480100",
+   "Weight": "2.21",
+   "Market Value": "93872241.36",
+   "Shares Held": "499533",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Microchip Technology Incorporated",
+   "Ticker": "MCHP",
+   "Identifier": "595017104",
+   "Weight": "2.21",
+   "Market Value": "93897629.4",
+   "Shares Held": "1193260",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Texas Instruments Incorporated",
+   "Ticker": "TXN",
+   "Identifier": "882508104",
+   "Weight": "2.2",
+   "Market Value": "93410108.61",
+   "Shares Held": "335923",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Applied Materials, Inc.",
+   "Ticker": "AMAT",
+   "Identifier": "038222105",
+   "Weight": "2.18",
+   "Market Value": "92732485",
+   "Shares Held": "191201",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "NXP Semiconductors N.V.",
+   "Ticker": "NXPI",
+   "Identifier": "N6596X109",
+   "Weight": "2.18",
+   "Market Value": "92889768.96",
+   "Shares Held": "390162",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Lam Research Corporation",
+   "Ticker": "LRCX",
+   "Identifier": "512807306",
+   "Weight": "2.15",
+   "Market Value": "91635329.52",
+   "Shares Held": "290712",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "CoreWeave, Inc. (Class A)",
+   "Ticker": "CRWV",
+   "Identifier": "21873S108",
+   "Weight": "2.13",
+   "Market Value": "90433696.94",
+   "Shares Held": "1032466",
+   "Asset Category": "Computer Services"
+  },
+  {
+   "Name": "ASML Holding N.V. (New York Registry Shares)",
+   "Ticker": "ASML",
+   "Identifier": "N07059210",
+   "Weight": "2.12",
+   "Market Value": "90126819.2",
+   "Shares Held": "51680",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Microsoft Corporation",
+   "Ticker": "MSFT",
+   "Identifier": "594918104",
+   "Weight": "2.1",
+   "Market Value": "89184884.94",
+   "Shares Held": "172782",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "NVIDIA Corporation",
+   "Ticker": "NVDA",
+   "Identifier": "67066G104",
+   "Weight": "2.1",
+   "Market Value": "89344912.55",
+   "Shares Held": "396965",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Palantir Technologies Inc. (Class A)",
+   "Ticker": "PLTR",
+   "Identifier": "69608A108",
+   "Weight": "2.1",
+   "Market Value": "89190041.46",
+   "Shares Held": "470238",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Fortinet, Inc.",
+   "Ticker": "FTNT",
+   "Identifier": "34959E109",
+   "Weight": "2.09",
+   "Market Value": "88943176.14",
+   "Shares Held": "512759",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Western Digital Corporation",
+   "Ticker": "WDC",
+   "Identifier": "958102105",
+   "Weight": "2.09",
+   "Market Value": "88860965.25",
+   "Shares Held": "194525",
+   "Asset Category": "Computer Hardware"
+  },
+  {
+   "Name": "Applovin Corp. (Class A)",
+   "Ticker": "APP",
+   "Identifier": "03831W108",
+   "Weight": "2.05",
+   "Market Value": "87274759",
+   "Shares Held": "280852",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Palo Alto Networks, Inc.",
+   "Ticker": "PANW",
+   "Identifier": "697435105",
+   "Weight": "2.02",
+   "Market Value": "85956736.98",
+   "Shares Held": "229377",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Synopsys, Inc.",
+   "Ticker": "SNPS",
+   "Identifier": "871607107",
+   "Weight": "2",
+   "Market Value": "84884196.96",
+   "Shares Held": "199371",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Shopify Inc. (Class A)",
+   "Ticker": "SHOP",
+   "Identifier": "82509L107",
+   "Weight": "1.99",
+   "Market Value": "84600484.75",
+   "Shares Held": "594731",
+   "Asset Category": "Consumer Digital Services"
+  },
+  {
+   "Name": "Cadence Design Systems, Inc.",
+   "Ticker": "CDNS",
+   "Identifier": "127387108",
+   "Weight": "1.98",
+   "Market Value": "84367548.09",
+   "Shares Held": "258693",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Workday, Inc. (Class A)",
+   "Ticker": "WDAY",
+   "Identifier": "98138H101",
+   "Weight": "1.98",
+   "Market Value": "84095149.95",
+   "Shares Held": "443891",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Broadcom Inc.",
+   "Ticker": "AVGO",
+   "Identifier": "11135F101",
+   "Weight": "1.96",
+   "Market Value": "83494250.55",
+   "Shares Held": "236655",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "PDD Holdings Inc. (ADR)",
+   "Ticker": "PDD",
+   "Identifier": "722304102",
+   "Weight": "1.9",
+   "Market Value": "80935529.59",
+   "Shares Held": "1043387",
+   "Asset Category": "Consumer Digital Services"
+  },
+  {
+   "Name": "Thomson Reuters Corporation",
+   "Ticker": "TRI",
+   "Identifier": "884903881",
+   "Weight": "1.9",
+   "Market Value": "80840876.45",
+   "Shares Held": "816657",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Roper Technologies, Inc.",
+   "Ticker": "ROP",
+   "Identifier": "776696106",
+   "Weight": "1.74",
+   "Market Value": "74007859.68",
+   "Shares Held": "206403",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "DoorDash, Inc. (Class A)",
+   "Ticker": "DASH",
+   "Identifier": "25809K105",
+   "Weight": "1.72",
+   "Market Value": "73126238.32",
+   "Shares Held": "378187",
+   "Asset Category": "Consumer Digital Services"
+  },
+  {
+   "Name": "Autodesk, Inc.",
+   "Ticker": "ADSK",
+   "Identifier": "052769106",
+   "Weight": "1.67",
+   "Market Value": "70990159.8",
+   "Shares Held": "339017",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Adobe Incorporated",
+   "Ticker": "ADBE",
+   "Identifier": "00724F101",
+   "Weight": "1.66",
+   "Market Value": "70484176.98",
+   "Shares Held": "299334",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Intuit Inc.",
+   "Ticker": "INTU",
+   "Identifier": "461202103",
+   "Weight": "1.58",
+   "Market Value": "67275936.81",
+   "Shares Held": "243939",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Alphabet Inc. (Class C)",
+   "Ticker": "GOOG",
+   "Identifier": "02079K107",
+   "Weight": "1.05",
+   "Market Value": "44568582.52",
+   "Shares Held": "130669",
+   "Asset Category": "Consumer Digital Services"
+  },
+  {
+   "Name": "Alphabet Inc. (Class A)",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K305",
+   "Weight": "1.04",
+   "Market Value": "44419331.52",
+   "Shares Held": "129156",
+   "Asset Category": "Consumer Digital Services"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.07",
+   "Market Value": "3132772.13",
+   "Shares Held": "3132772",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

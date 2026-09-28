@@ -1,0 +1,545 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Advantest Corporation",
+   "Ticker": "6857.JP",
+   "Identifier": "J00210104",
+   "Weight": "8.51",
+   "Market Value": "24069456.8",
+   "Shares Held": "111300",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Contemporary Amperex Technology Co., Ltd. (Class H)",
+   "Ticker": "3750.HK",
+   "Identifier": "Y1R48E113",
+   "Weight": "5.48",
+   "Market Value": "15488505.87",
+   "Shares Held": "248256",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Kioxia Holdings Corporation",
+   "Ticker": "285A.JP",
+   "Identifier": "J3343A107",
+   "Weight": "5.23",
+   "Market Value": "14794720.77",
+   "Shares Held": "41700",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Far EasTone Telecommunications Co., Ltd.",
+   "Ticker": "4904.TT",
+   "Identifier": "Y7540C108",
+   "Weight": "4.92",
+   "Market Value": "13901005.27",
+   "Shares Held": "4193953",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "The Chiba Bank, Ltd.",
+   "Ticker": "8331.JP",
+   "Identifier": "J05670104",
+   "Weight": "4.86",
+   "Market Value": "13752427.17",
+   "Shares Held": "762800",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Arm Holdings Plc",
+   "Ticker": "ARM",
+   "Identifier": "042068205",
+   "Weight": "4.19",
+   "Market Value": "11854844.64",
+   "Shares Held": "38202",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "WuXi AppTec Co., Ltd. (Class H)",
+   "Ticker": "2359.HK",
+   "Identifier": "Y971B1118",
+   "Weight": "3.82",
+   "Market Value": "10792223.65",
+   "Shares Held": "403900",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Sichuan Kelun-Biotech Biopharmaceutical Co., Ltd. (Class H)",
+   "Ticker": "6990.HK",
+   "Identifier": "Y793HA102",
+   "Weight": "3.72",
+   "Market Value": "10529899.54",
+   "Shares Held": "176873",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Rio Tinto plc (ADR)",
+   "Ticker": "RIO",
+   "Identifier": "767204100",
+   "Weight": "3.65",
+   "Market Value": "10318103.52",
+   "Shares Held": "109117",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Lottomatica Group SpA",
+   "Ticker": "LTMC.IM",
+   "Identifier": "T64384109",
+   "Weight": "3.61",
+   "Market Value": "10208386.68",
+   "Shares Held": "337523",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Caixa Seguridade Participacoes SA",
+   "Ticker": "CXSE3.BZ",
+   "Identifier": "P1S73N102",
+   "Weight": "3.39",
+   "Market Value": "9589592.75",
+   "Shares Held": "2414421",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "BAWAG Group AG",
+   "Ticker": "BG.AV",
+   "Identifier": "A0997C107",
+   "Weight": "3.01",
+   "Market Value": "8512124.77",
+   "Shares Held": "41313",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Whitecap Resources Inc.",
+   "Ticker": "WCP.CN",
+   "Identifier": "96467A200",
+   "Weight": "2.47",
+   "Market Value": "6971020.74",
+   "Shares Held": "543559",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Sandoz Group AG",
+   "Ticker": "SDZ.SW",
+   "Identifier": "H7140B103",
+   "Weight": "2.39",
+   "Market Value": "6759684.6",
+   "Shares Held": "78692",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Ipsen SA",
+   "Ticker": "IPN.FP",
+   "Identifier": "F5362H107",
+   "Weight": "2.16",
+   "Market Value": "6119848.29",
+   "Shares Held": "37475",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Woolworths Limited",
+   "Ticker": "WOW.AU",
+   "Identifier": "Q98418108",
+   "Weight": "2.09",
+   "Market Value": "5905683.72",
+   "Shares Held": "218478",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Technoprobe SpA",
+   "Ticker": "TPRO.IM",
+   "Identifier": "T9200M109",
+   "Weight": "1.95",
+   "Market Value": "5517766.02",
+   "Shares Held": "160645",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Noble Corp Plc",
+   "Ticker": "NE",
+   "Identifier": "G65431127",
+   "Weight": "1.73",
+   "Market Value": "4890258.1",
+   "Shares Held": "114205",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "GigaDevice Semiconductor Inc. (Class H)",
+   "Ticker": "3986.HK",
+   "Identifier": "Y270MV109",
+   "Weight": "1.71",
+   "Market Value": "4846316.92",
+   "Shares Held": "78708",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Keyera Corp.",
+   "Ticker": "KEY.CN",
+   "Identifier": "493271100",
+   "Weight": "1.71",
+   "Market Value": "4828997.93",
+   "Shares Held": "131202",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Mitsubishi Chemical Group Corporation",
+   "Ticker": "4188.JP",
+   "Identifier": "J44046100",
+   "Weight": "1.7",
+   "Market Value": "4798290.61",
+   "Shares Held": "644500",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "APR Corporation",
+   "Ticker": "278470.KS",
+   "Identifier": "Y0R9CJ118",
+   "Weight": "1.61",
+   "Market Value": "4538033.12",
+   "Shares Held": "16739",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Z AI Co., Ltd. (Class H)",
+   "Ticker": "2513.HK",
+   "Identifier": "Y615F6108",
+   "Weight": "1.49",
+   "Market Value": "4200370.8",
+   "Shares Held": "52011",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "The Magnum Ice Cream Company N.V.",
+   "Ticker": "MICC",
+   "Identifier": "N5505D105",
+   "Weight": "1.47",
+   "Market Value": "4156620",
+   "Shares Held": "219000",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "CSL Limited",
+   "Ticker": "CSL.AU",
+   "Identifier": "Q3018U109",
+   "Weight": "1.42",
+   "Market Value": "4001698.53",
+   "Shares Held": "32185",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Hachijuni Nagano Bank Ltd.",
+   "Ticker": "8359.JP",
+   "Identifier": "J17976101",
+   "Weight": "1.41",
+   "Market Value": "3988500.2",
+   "Shares Held": "220800",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "1.35",
+   "Market Value": "3821427.56",
+   "Shares Held": "3821428",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "SharkNinja Inc.",
+   "Ticker": "SN",
+   "Identifier": "G8068L108",
+   "Weight": "1.27",
+   "Market Value": "3582349.7",
+   "Shares Held": "20155",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "DPM Metals Inc.",
+   "Ticker": "DPM.CT",
+   "Identifier": "26139R109",
+   "Weight": "1.24",
+   "Market Value": "3511788.64",
+   "Shares Held": "78422",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "BASF SE",
+   "Ticker": "BAS.GY",
+   "Identifier": "D06216317",
+   "Weight": "1.22",
+   "Market Value": "3439419.27",
+   "Shares Held": "59859",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Yageo Corporation",
+   "Ticker": "2327.TT",
+   "Identifier": "Y9723R100",
+   "Weight": "1.19",
+   "Market Value": "3354650.25",
+   "Shares Held": "184098",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "South Bow Corporation",
+   "Ticker": "SOBO",
+   "Identifier": "83671M105",
+   "Weight": "1.12",
+   "Market Value": "3170009.37",
+   "Shares Held": "93263",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Chaozhou Three-Circle (Group) Co., Ltd. (Class H)",
+   "Ticker": "6951.HK",
+   "Identifier": "Y1R99A119",
+   "Weight": "1.05",
+   "Market Value": "2957579.39",
+   "Shares Held": "178600",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Valterra Platinum Limited",
+   "Ticker": "VALT.LN",
+   "Identifier": "S9122P108",
+   "Weight": "1.02",
+   "Market Value": "2873674.31",
+   "Shares Held": "35585",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Nordnet AB (publ)",
+   "Ticker": "SAVE.SS",
+   "Identifier": "W6S819112",
+   "Weight": "0.92",
+   "Market Value": "2587436.61",
+   "Shares Held": "77992",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Asahi Kasei Corporation",
+   "Ticker": "3407.JP",
+   "Identifier": "J0242P110",
+   "Weight": "0.9",
+   "Market Value": "2556898.93",
+   "Shares Held": "244300",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "TFI International Inc.",
+   "Ticker": "TFII",
+   "Identifier": "87241L109",
+   "Weight": "0.79",
+   "Market Value": "2225212.5",
+   "Shares Held": "18375",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "James Hardie Industries plc",
+   "Ticker": "JHX",
+   "Identifier": "G4253H101",
+   "Weight": "0.72",
+   "Market Value": "2036034.9",
+   "Shares Held": "78009",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "LY Corp.",
+   "Ticker": "4689.JP",
+   "Identifier": "J9894K105",
+   "Weight": "0.71",
+   "Market Value": "2006578.93",
+   "Shares Held": "615800",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "ADNOC Logistics & Services",
+   "Ticker": "ADNOCLS.UH",
+   "Identifier": "M0R824109",
+   "Weight": "0.69",
+   "Market Value": "1953446.4",
+   "Shares Held": "992394",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Talabat Holding Plc",
+   "Ticker": "TALABAT.UH",
+   "Identifier": "M8765Z106",
+   "Weight": "0.69",
+   "Market Value": "1939058.99",
+   "Shares Held": "6247512",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Geely Automobile Holdings Limited",
+   "Ticker": "175.HK",
+   "Identifier": "G3777B103",
+   "Weight": "0.68",
+   "Market Value": "1917111.79",
+   "Shares Held": "964000",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "CK Asset Holdings Limited",
+   "Ticker": "1113.HK",
+   "Identifier": "G2177B101",
+   "Weight": "0.65",
+   "Market Value": "1835472.89",
+   "Shares Held": "313000",
+   "Asset Category": "Real Estate"
+  },
+  {
+   "Name": "Var Energi ASA",
+   "Ticker": "VAR.NO",
+   "Identifier": "R9796N109",
+   "Weight": "0.64",
+   "Market Value": "1801607.7",
+   "Shares Held": "334854",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Allegro.eu SA",
+   "Ticker": "ALE.PW",
+   "Identifier": "L0R67D109",
+   "Weight": "0.62",
+   "Market Value": "1763930.64",
+   "Shares Held": "136544",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "WuXi XDC Cayman Inc.",
+   "Ticker": "2268.HK",
+   "Identifier": "G9808A105",
+   "Weight": "0.62",
+   "Market Value": "1755414.76",
+   "Shares Held": "170000",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "PayPay Corporation (ADR)",
+   "Ticker": "PAYP",
+   "Identifier": "70450C101",
+   "Weight": "0.53",
+   "Market Value": "1499157.53",
+   "Shares Held": "90803",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "JFrog Ltd.",
+   "Ticker": "FROG",
+   "Identifier": "M6191J100",
+   "Weight": "0.52",
+   "Market Value": "1474948.02",
+   "Shares Held": "16539",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "ENEVA S.A.",
+   "Ticker": "ENEV3.BZ",
+   "Identifier": "P3719N116",
+   "Weight": "0.49",
+   "Market Value": "1378480.49",
+   "Shares Held": "260807",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Ampol Limited",
+   "Ticker": "ALD.AU",
+   "Identifier": "Q03608124",
+   "Weight": "0.35",
+   "Market Value": "998808.26",
+   "Shares Held": "31965",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "BBB Foods Inc. (Class A)",
+   "Ticker": "TBBB",
+   "Identifier": "G0896C103",
+   "Weight": "0.31",
+   "Market Value": "870617.8",
+   "Shares Held": "16255",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "United Arab Emirates Dirham",
+   "Ticker": "-",
+   "Identifier": "$AED",
+   "Weight": "0.02",
+   "Market Value": "45244.71",
+   "Shares Held": "166184",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Australian Dollar",
+   "Ticker": "-",
+   "Identifier": "$AUD",
+   "Weight": "0.01",
+   "Market Value": "23106.9",
+   "Shares Held": "32888",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Canadian Dollar",
+   "Ticker": "-",
+   "Identifier": "$CAD",
+   "Weight": "0.01",
+   "Market Value": "26695.82",
+   "Shares Held": "37753",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Brazilian Real",
+   "Ticker": "-",
+   "Identifier": "$BRL",
+   "Weight": "0",
+   "Market Value": "3.78",
+   "Shares Held": "20",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Euro",
+   "Ticker": "-",
+   "Identifier": "$EUR",
+   "Weight": "0",
+   "Market Value": "46.89",
+   "Shares Held": "41",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Mexican Peso",
+   "Ticker": "-",
+   "Identifier": "$MXN",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "0",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Pound Sterling",
+   "Ticker": "-",
+   "Identifier": "$GBP",
+   "Weight": "0",
+   "Market Value": "63.54",
+   "Shares Held": "48",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Saudi Riyal",
+   "Ticker": "-",
+   "Identifier": "$SAR",
+   "Weight": "0",
+   "Market Value": "1.1",
+   "Shares Held": "4",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

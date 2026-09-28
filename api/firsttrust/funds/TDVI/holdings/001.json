@@ -1,0 +1,824 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Texas Instruments Incorporated",
+   "Ticker": "TXN",
+   "Identifier": "882508104",
+   "Weight": "8.59",
+   "Market Value": "53250961.14",
+   "Shares Held": "191502",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Microsoft Corporation",
+   "Ticker": "MSFT",
+   "Identifier": "594918104",
+   "Weight": "8.2",
+   "Market Value": "50840164.15",
+   "Shares Held": "98495",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "International Business Machines Corporation",
+   "Ticker": "IBM",
+   "Identifier": "459200101",
+   "Weight": "7.78",
+   "Market Value": "48178858.44",
+   "Shares Held": "213644",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Broadcom Inc.",
+   "Ticker": "AVGO",
+   "Identifier": "11135F101",
+   "Weight": "7.68",
+   "Market Value": "47600066.77",
+   "Shares Held": "134917",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Oracle Corporation",
+   "Ticker": "ORCL",
+   "Identifier": "68389X105",
+   "Weight": "7.41",
+   "Market Value": "45937548.6",
+   "Shares Held": "335066",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "QUALCOMM Incorporated",
+   "Ticker": "QCOM",
+   "Identifier": "747525103",
+   "Weight": "4.78",
+   "Market Value": "29597087.74",
+   "Shares Held": "146542",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
+   "Ticker": "TSM",
+   "Identifier": "874039100",
+   "Weight": "4.37",
+   "Market Value": "27105543.33",
+   "Shares Held": "60153",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Analog Devices, Inc.",
+   "Ticker": "ADI",
+   "Identifier": "032654105",
+   "Weight": "3.35",
+   "Market Value": "20767123.2",
+   "Shares Held": "52762",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Thomson Reuters Corporation",
+   "Ticker": "TRI",
+   "Identifier": "884903881",
+   "Weight": "2.41",
+   "Market Value": "14944322.31",
+   "Shares Held": "150968",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Vistance Networks Inc.",
+   "Ticker": "VISN",
+   "Identifier": "20337X109",
+   "Weight": "1.99",
+   "Market Value": "12313056.02",
+   "Shares Held": "1979591",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "AT&T Inc.",
+   "Ticker": "T",
+   "Identifier": "00206R102",
+   "Weight": "1.98",
+   "Market Value": "12245190.12",
+   "Shares Held": "482474",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Cisco Systems, Inc.",
+   "Ticker": "CSCO",
+   "Identifier": "17275R102",
+   "Weight": "1.95",
+   "Market Value": "12062755.1",
+   "Shares Held": "113053",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Salesforce, Inc.",
+   "Ticker": "CRM",
+   "Identifier": "79466L302",
+   "Weight": "1.95",
+   "Market Value": "12077538.18",
+   "Shares Held": "51609",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Verizon Communications Inc.",
+   "Ticker": "VZ",
+   "Identifier": "92343V104",
+   "Weight": "1.9",
+   "Market Value": "11757005.92",
+   "Shares Held": "249724",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "T-Mobile US, Inc.",
+   "Ticker": "TMUS",
+   "Identifier": "872590104",
+   "Weight": "1.85",
+   "Market Value": "11452057.18",
+   "Shares Held": "69226",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Amphenol Corporation",
+   "Ticker": "APH",
+   "Identifier": "032095101",
+   "Weight": "1.82",
+   "Market Value": "11288998.41",
+   "Shares Held": "134249",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TELUS Corporation",
+   "Ticker": "TU",
+   "Identifier": "87971M103",
+   "Weight": "1.77",
+   "Market Value": "10942719.2",
+   "Shares Held": "1290415",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "HP Inc.",
+   "Ticker": "HPQ",
+   "Identifier": "40434L105",
+   "Weight": "1.7",
+   "Market Value": "10549602.4",
+   "Shares Held": "337048",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Comcast Corporation (Class A)",
+   "Ticker": "CMCSA",
+   "Identifier": "20030N101",
+   "Weight": "1.66",
+   "Market Value": "10281070.31",
+   "Shares Held": "469241",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NXP Semiconductors N.V.",
+   "Ticker": "NXPI",
+   "Identifier": "N6596X109",
+   "Weight": "1.65",
+   "Market Value": "10225297.92",
+   "Shares Held": "42949",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Microchip Technology Incorporated",
+   "Ticker": "MCHP",
+   "Identifier": "595017104",
+   "Weight": "1.61",
+   "Market Value": "9987964.32",
+   "Shares Held": "126928",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Corning Incorporated",
+   "Ticker": "GLW",
+   "Identifier": "219350105",
+   "Weight": "1.55",
+   "Market Value": "9591077.34",
+   "Shares Held": "61191",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Intuit Inc.",
+   "Ticker": "INTU",
+   "Identifier": "461202103",
+   "Weight": "1.53",
+   "Market Value": "9507032.88",
+   "Shares Held": "34472",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Motorola Solutions, Inc.",
+   "Ticker": "MSI",
+   "Identifier": "620076307",
+   "Weight": "1.44",
+   "Market Value": "8926978.32",
+   "Shares Held": "19539",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Dell Technologies Inc. (Class C)",
+   "Ticker": "DELL",
+   "Identifier": "24703L202",
+   "Weight": "1.41",
+   "Market Value": "8738867.25",
+   "Shares Held": "15525",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TE Connectivity Plc",
+   "Ticker": "TEL",
+   "Identifier": "G87052109",
+   "Weight": "1.37",
+   "Market Value": "8464023.39",
+   "Shares Held": "38721",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Hewlett Packard Enterprise Company",
+   "Ticker": "HPE",
+   "Identifier": "42824C109",
+   "Weight": "1.35",
+   "Market Value": "8390594.34",
+   "Shares Held": "133311",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ASML Holding N.V. (New York Registry Shares)",
+   "Ticker": "ASML",
+   "Identifier": "N07059210",
+   "Weight": "1.34",
+   "Market Value": "8278483.18",
+   "Shares Held": "4747",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Rogers Communications Inc. (Class B)",
+   "Ticker": "RCI",
+   "Identifier": "775109200",
+   "Weight": "1.05",
+   "Market Value": "6532487.56",
+   "Shares Held": "204716",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Millicom International Cellular S.A.",
+   "Ticker": "TIGO",
+   "Identifier": "L6388F110",
+   "Weight": "0.97",
+   "Market Value": "6027897.25",
+   "Shares Held": "65075",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Cognizant Technology Solutions Corporation",
+   "Ticker": "CTSH",
+   "Identifier": "192446102",
+   "Weight": "0.78",
+   "Market Value": "4828447.26",
+   "Shares Held": "84222",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NetApp, Inc.",
+   "Ticker": "NTAP",
+   "Identifier": "64110D104",
+   "Weight": "0.67",
+   "Market Value": "4179793.39",
+   "Shares Held": "20780",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Roper Technologies, Inc.",
+   "Ticker": "ROP",
+   "Identifier": "776696106",
+   "Weight": "0.45",
+   "Market Value": "2801070.72",
+   "Shares Held": "7812",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Nokia Corporation (ADR)",
+   "Ticker": "NOK",
+   "Identifier": "654902204",
+   "Weight": "0.44",
+   "Market Value": "2712112.09",
+   "Shares Held": "261031",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CDW Corporation",
+   "Ticker": "CDW",
+   "Identifier": "12514G108",
+   "Weight": "0.43",
+   "Market Value": "2650094.24",
+   "Shares Held": "19568",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VeriSign, Inc.",
+   "Ticker": "VRSN",
+   "Identifier": "92343E102",
+   "Weight": "0.43",
+   "Market Value": "2682053.25",
+   "Shares Held": "9337",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "JOYY Inc. (ADR)",
+   "Ticker": "JOYY",
+   "Identifier": "46591M109",
+   "Weight": "0.4",
+   "Market Value": "2457793.47",
+   "Shares Held": "30811",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Open Text Corporation",
+   "Ticker": "OTEX",
+   "Identifier": "683715106",
+   "Weight": "0.37",
+   "Market Value": "2268580.31",
+   "Shares Held": "100781",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SS&C Technologies Holdings, Inc.",
+   "Ticker": "SSNC",
+   "Identifier": "78467J100",
+   "Weight": "0.37",
+   "Market Value": "2265068.54",
+   "Shares Held": "28814",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Ubiquiti Inc.",
+   "Ticker": "UI",
+   "Identifier": "90353W103",
+   "Weight": "0.36",
+   "Market Value": "2234269.95",
+   "Shares Held": "3985",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Logitech International S.A.",
+   "Ticker": "LOGI",
+   "Identifier": "H50430232",
+   "Weight": "0.35",
+   "Market Value": "2198505.32",
+   "Shares Held": "21748",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Amdocs Limited",
+   "Ticker": "DOX",
+   "Identifier": "G02602103",
+   "Weight": "0.32",
+   "Market Value": "1975932.69",
+   "Shares Held": "34239",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Gen Digital Inc.",
+   "Ticker": "GEN",
+   "Identifier": "668771108",
+   "Weight": "0.32",
+   "Market Value": "1969063.12",
+   "Shares Held": "91076",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Infosys Limited (ADR)",
+   "Ticker": "INFY",
+   "Identifier": "456788108",
+   "Weight": "0.32",
+   "Market Value": "1966303.5",
+   "Shares Held": "187267",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Vodafone Group Public Limited Company (ADR)",
+   "Ticker": "VOD",
+   "Identifier": "92857W308",
+   "Weight": "0.3",
+   "Market Value": "1857102.18",
+   "Shares Held": "111739",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Leidos Holdings, Inc.",
+   "Ticker": "LDOS",
+   "Identifier": "525327102",
+   "Weight": "0.28",
+   "Market Value": "1763914.7",
+   "Shares Held": "14270",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Match Group Inc.",
+   "Ticker": "MTCH",
+   "Identifier": "57667L107",
+   "Weight": "0.27",
+   "Market Value": "1684893.05",
+   "Shares Held": "41551",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SAP SE (ADR)",
+   "Ticker": "SAP",
+   "Identifier": "803054204",
+   "Weight": "0.27",
+   "Market Value": "1650256.44",
+   "Shares Held": "7833",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "KT Corporation (ADR)",
+   "Ticker": "KT",
+   "Identifier": "48268K101",
+   "Weight": "0.26",
+   "Market Value": "1615774.3",
+   "Shares Held": "82019",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "America Movil, S.A.B. de C.V. (ADR)",
+   "Ticker": "AMX",
+   "Identifier": "02390A101",
+   "Weight": "0.24",
+   "Market Value": "1507094.33",
+   "Shares Held": "68411",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Autohome Inc. (ADR)",
+   "Ticker": "ATHM",
+   "Identifier": "05278C107",
+   "Weight": "0.24",
+   "Market Value": "1517800.14",
+   "Shares Held": "71158",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TD SYNNEX Corporation",
+   "Ticker": "SNX",
+   "Identifier": "87162W100",
+   "Weight": "0.24",
+   "Market Value": "1475072.24",
+   "Shares Held": "5608",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Avnet, Inc.",
+   "Ticker": "AVT",
+   "Identifier": "053807103",
+   "Weight": "0.2",
+   "Market Value": "1247414.04",
+   "Shares Held": "12102",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Tencent Music Entertainment Group (Class A) (ADR)",
+   "Ticker": "TME",
+   "Identifier": "88034P109",
+   "Weight": "0.2",
+   "Market Value": "1226987.16",
+   "Shares Held": "146244",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Telefonaktiebolaget LM Ericsson (ADR)",
+   "Ticker": "ERIC",
+   "Identifier": "294821608",
+   "Weight": "0.17",
+   "Market Value": "1079644.17",
+   "Shares Held": "113289",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.15",
+   "Market Value": "929891.91",
+   "Shares Held": "929892",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Amkor Technology, Inc.",
+   "Ticker": "AMKR",
+   "Identifier": "031652100",
+   "Weight": "0.14",
+   "Market Value": "885208.32",
+   "Shares Held": "16512",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "InterDigital, Inc.",
+   "Ticker": "IDCC",
+   "Identifier": "45867G101",
+   "Weight": "0.14",
+   "Market Value": "875295.99",
+   "Shares Held": "2619",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Iridium Communications Inc.",
+   "Ticker": "IRDM",
+   "Identifier": "46269C102",
+   "Weight": "0.13",
+   "Market Value": "800962.5",
+   "Shares Held": "16430",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Telefonica Brasil, S.A. (ADR)",
+   "Ticker": "VIV",
+   "Identifier": "87936R205",
+   "Weight": "0.13",
+   "Market Value": "774914.8",
+   "Shares Held": "66803",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CGI Inc.",
+   "Ticker": "GIB",
+   "Identifier": "12532H104",
+   "Weight": "0.12",
+   "Market Value": "741268.26",
+   "Shares Held": "10938",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Concentrix Corporation",
+   "Ticker": "CNXC",
+   "Identifier": "20602D101",
+   "Weight": "0.12",
+   "Market Value": "745729.04",
+   "Shares Held": "27538",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Dolby Laboratories, Inc.",
+   "Ticker": "DLB",
+   "Identifier": "25659T107",
+   "Weight": "0.12",
+   "Market Value": "751793.28",
+   "Shares Held": "12838",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Ituran Location and Control Ltd.",
+   "Ticker": "ITRN",
+   "Identifier": "M6158M104",
+   "Weight": "0.12",
+   "Market Value": "730638.15",
+   "Shares Held": "14135",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Karooooo Ltd.",
+   "Ticker": "KARO",
+   "Identifier": "Y4600W108",
+   "Weight": "0.12",
+   "Market Value": "742579.87",
+   "Shares Held": "12049",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "KBR, Inc.",
+   "Ticker": "KBR",
+   "Identifier": "48242W106",
+   "Weight": "0.12",
+   "Market Value": "722922.2",
+   "Shares Held": "20930",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Silicon Motion Technology Corporation (ADR)",
+   "Ticker": "SIMO",
+   "Identifier": "82706C108",
+   "Weight": "0.12",
+   "Market Value": "714330.78",
+   "Shares Held": "2586",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Universal Display Corporation",
+   "Ticker": "OLED",
+   "Identifier": "91347P105",
+   "Weight": "0.12",
+   "Market Value": "766625.34",
+   "Shares Held": "9906",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ASE Technology Holding Co., Ltd.",
+   "Ticker": "ASX",
+   "Identifier": "00215W100",
+   "Weight": "0.11",
+   "Market Value": "688754.64",
+   "Shares Held": "15544",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Bentley Systems, Inc. (Class B)",
+   "Ticker": "BSY",
+   "Identifier": "08265T208",
+   "Weight": "0.11",
+   "Market Value": "656592.96",
+   "Shares Held": "20884",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Ingram Micro Holding Corporation",
+   "Ticker": "INGM",
+   "Identifier": "457152106",
+   "Weight": "0.11",
+   "Market Value": "675228.46",
+   "Shares Held": "25027",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "STMicroelectronics N.V.",
+   "Ticker": "STM",
+   "Identifier": "861012102",
+   "Weight": "0.11",
+   "Market Value": "669637.35",
+   "Shares Held": "12895",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "RELX Plc (ADR)",
+   "Ticker": "RELX",
+   "Identifier": "759530108",
+   "Weight": "0.1",
+   "Market Value": "648109.2",
+   "Shares Held": "19335",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Science Applications International Corporation",
+   "Ticker": "SAIC",
+   "Identifier": "808625107",
+   "Weight": "0.1",
+   "Market Value": "604834.21",
+   "Shares Held": "4561",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Paycom Software, Inc.",
+   "Ticker": "PAYC",
+   "Identifier": "70432V102",
+   "Weight": "0.09",
+   "Market Value": "578046.12",
+   "Shares Held": "2622",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Vishay Intertechnology, Inc.",
+   "Ticker": "VSH",
+   "Identifier": "928298108",
+   "Weight": "0.09",
+   "Market Value": "570243.45",
+   "Shares Held": "17519",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Clear Secure, Inc. (Class A)",
+   "Ticker": "YOU",
+   "Identifier": "18467V109",
+   "Weight": "0.08",
+   "Market Value": "478882.8",
+   "Shares Held": "12093",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Kulicke and Soffa Industries, Inc.",
+   "Ticker": "KLIC",
+   "Identifier": "501242101",
+   "Weight": "0.07",
+   "Market Value": "461097.26",
+   "Shares Held": "5057",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Power Integrations, Inc.",
+   "Ticker": "POWI",
+   "Identifier": "739276103",
+   "Weight": "0.07",
+   "Market Value": "455358.4",
+   "Shares Held": "8720",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Benchmark Electronics, Inc.",
+   "Ticker": "BHE",
+   "Identifier": "08160H101",
+   "Weight": "0.04",
+   "Market Value": "270500.56",
+   "Shares Held": "3278",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Canadian Dollar",
+   "Ticker": "-",
+   "Identifier": "$CAD",
+   "Weight": "0.04",
+   "Market Value": "220549.02",
+   "Shares Held": "311900",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ePlus inc.",
+   "Ticker": "PLUS",
+   "Identifier": "294268107",
+   "Weight": "0.04",
+   "Market Value": "258225.03",
+   "Shares Held": "2853",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Opera Limited (ADR)",
+   "Ticker": "OPRA",
+   "Identifier": "68373M107",
+   "Weight": "0.04",
+   "Market Value": "252236.15",
+   "Shares Held": "14291",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "A10 Networks, Inc.",
+   "Ticker": "ATEN",
+   "Identifier": "002121101",
+   "Weight": "0.03",
+   "Market Value": "166576.02",
+   "Shares Held": "6474",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Adeia Inc.",
+   "Ticker": "ADEA",
+   "Identifier": "00676P107",
+   "Weight": "0.03",
+   "Market Value": "210133.56",
+   "Shares Held": "8247",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NVE Corporation",
+   "Ticker": "NVEC",
+   "Identifier": "629445206",
+   "Weight": "0.03",
+   "Market Value": "199053.12",
+   "Shares Held": "1824",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "OneSpan Inc.",
+   "Ticker": "OSPN",
+   "Identifier": "68287N100",
+   "Weight": "0.03",
+   "Market Value": "187379.01",
+   "Shares Held": "10521",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PC Connection, Inc.",
+   "Ticker": "CNXN",
+   "Identifier": "69318J100",
+   "Weight": "0.03",
+   "Market Value": "186321.52",
+   "Shares Held": "2086",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Shenandoah Telecommunications Company",
+   "Ticker": "SHEN",
+   "Identifier": "82312B106",
+   "Weight": "0.01",
+   "Market Value": "70289.52",
+   "Shares Held": "5977",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "2026-10-02 S&P 500 Index - Price Return C 7,750",
+   "Ticker": "-",
+   "Identifier": "SPXW 261002C07750000",
+   "Weight": "-0.12",
+   "Market Value": "-733910",
+   "Shares Held": "-158",
+   "Asset Category": "-"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

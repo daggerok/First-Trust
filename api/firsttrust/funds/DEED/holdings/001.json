@@ -1,0 +1,914 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "U.S. Treasury Bill, 0%, due 09/29/2026",
+   "Ticker": "-",
+   "Identifier": "912797VE4",
+   "Weight": "6.76",
+   "Market Value": "0",
+   "Shares Held": "4000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "U.S. Treasury Bill, 0%, due 10/08/2026",
+   "Ticker": "-",
+   "Identifier": "912797UJ4",
+   "Weight": "6.75",
+   "Market Value": "0",
+   "Shares Held": "4000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae or Freddie Mac TBA, 6%, due 05/01/2056",
+   "Ticker": "-",
+   "Identifier": "01F0606A8",
+   "Weight": "5.85",
+   "Market Value": "0",
+   "Shares Held": "3500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddiemac Strip Series 470, Class JA, 4.80%, due 08/25/2031",
+   "Ticker": "-",
+   "Identifier": "3133QBAH6",
+   "Weight": "3.25",
+   "Market Value": "0",
+   "Shares Held": "1960189",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Gracie Point International Funding Series 2025-1A, Class D, Variable rate, due 08/15/2028",
+   "Ticker": "-",
+   "Identifier": "38411WAD4",
+   "Weight": "2.47",
+   "Market Value": "0",
+   "Shares Held": "1460000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae or Freddie Mac TBA, 5.50%, due 04/01/2056",
+   "Ticker": "-",
+   "Identifier": "01F0526A5",
+   "Weight": "2.46",
+   "Market Value": "0",
+   "Shares Held": "1512000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddiemac Strip Series 459, Class GH, 4.80%, due 07/25/2031",
+   "Ticker": "-",
+   "Identifier": "3133Q4C80",
+   "Weight": "2.42",
+   "Market Value": "0",
+   "Shares Held": "1464403",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac Series 4639, Class HZ, Variable rate, due 04/15/2053",
+   "Ticker": "-",
+   "Identifier": "3137BTEH0",
+   "Weight": "2.19",
+   "Market Value": "0",
+   "Shares Held": "1662199",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac - SLST Series 2025-1, Class YF, Variable rate, due 05/25/2035",
+   "Ticker": "-",
+   "Identifier": "35564CWZ6",
+   "Weight": "2.15",
+   "Market Value": "0",
+   "Shares Held": "1251095",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2025-49, Class FA, Variable rate, due 06/25/2055",
+   "Ticker": "-",
+   "Identifier": "3136BWAF3",
+   "Weight": "2.05",
+   "Market Value": "0",
+   "Shares Held": "1237750",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2015-32, Class PB, 3%, due 05/25/2045",
+   "Ticker": "-",
+   "Identifier": "3136ANQB6",
+   "Weight": "2.02",
+   "Market Value": "0",
+   "Shares Held": "1475000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac FR SL1523, 3.50%, due 07/01/2050",
+   "Ticker": "-",
+   "Identifier": "31427NVR7",
+   "Weight": "2",
+   "Market Value": "0",
+   "Shares Held": "1358484",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA G2 MA7366, 2%, due 05/20/2051",
+   "Ticker": "-",
+   "Identifier": "36179WFF0",
+   "Weight": "2",
+   "Market Value": "0",
+   "Shares Held": "1522910",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae FN AL9394, 3%, due 11/01/2046",
+   "Ticker": "-",
+   "Identifier": "3138ERNL0",
+   "Weight": "1.99",
+   "Market Value": "0",
+   "Shares Held": "1390639",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac FR SL1390, 4%, due 07/01/2050",
+   "Ticker": "-",
+   "Identifier": "31427NRL5",
+   "Weight": "1.96",
+   "Market Value": "0",
+   "Shares Held": "1277504",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae FN FA1348, 4.50%, due 09/01/2052",
+   "Ticker": "-",
+   "Identifier": "3140W1QA4",
+   "Weight": "1.9",
+   "Market Value": "0",
+   "Shares Held": "1192279",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae FN BM4963, 3%, due 05/01/2048",
+   "Ticker": "-",
+   "Identifier": "3140J9QR5",
+   "Weight": "1.85",
+   "Market Value": "0",
+   "Shares Held": "1291918",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2024-84, Class FD, Variable rate, due 11/25/2054",
+   "Ticker": "-",
+   "Identifier": "3136BTTR4",
+   "Weight": "1.75",
+   "Market Value": "0",
+   "Shares Held": "1046644",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac - SLST Series 2025-1, Class A2, 3%, due 05/25/2035",
+   "Ticker": "-",
+   "Identifier": "35564CUE5",
+   "Weight": "1.74",
+   "Market Value": "0",
+   "Shares Held": "1250000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Pretium Mortgage Credit Partners LLC Series 2025-NPL6, Class A2, Variable rate, due 06/25/2055",
+   "Ticker": "-",
+   "Identifier": "740936AB5",
+   "Weight": "1.69",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PRP Advisors, LLC Series 2025-3, Class A2, Variable rate, due 05/25/2030",
+   "Ticker": "-",
+   "Identifier": "74449DAB1",
+   "Weight": "1.69",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2022-65, Class FB, Variable rate, due 09/25/2052",
+   "Ticker": "-",
+   "Identifier": "3136BPCQ2",
+   "Weight": "1.68",
+   "Market Value": "0",
+   "Shares Held": "1012602",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Madison Park Funding Ltd Series 2019-35A, Class D2R2, Variable rate, due 02/13/2039",
+   "Ticker": "-",
+   "Identifier": "55819MBN5",
+   "Weight": "1.68",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Mill City Mortgage Trust Series 2019-GS2, Class B2, Variable rate, due 08/25/2059",
+   "Ticker": "-",
+   "Identifier": "59981TAS4",
+   "Weight": "1.68",
+   "Market Value": "0",
+   "Shares Held": "1350000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PRP Advisors, LLC Series 2025-6, Class M1, Variable rate, due 08/25/2030",
+   "Ticker": "-",
+   "Identifier": "69395KAC7",
+   "Weight": "1.68",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "COLT Funding LLC Series 2021-HX1, Class B3A, Variable rate, due 10/25/2066",
+   "Ticker": "-",
+   "Identifier": "19688KAG9",
+   "Weight": "1.6",
+   "Market Value": "0",
+   "Shares Held": "1350000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Farmer Mac Agricultural Real Estate Trust Series 2025-1, Class B, Variable rate, due 08/01/2055",
+   "Ticker": "-",
+   "Identifier": "30768CAE2",
+   "Weight": "1.48",
+   "Market Value": "0",
+   "Shares Held": "1025588",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Variable rate, due 09/25/2052",
+   "Ticker": "-",
+   "Identifier": "3136BN3L8",
+   "Weight": "1.47",
+   "Market Value": "0",
+   "Shares Held": "889957",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Credit Suisse Mortgage Trust Series 2021-RBL4, Class A1, 1.79561%",
+   "Ticker": "-",
+   "Identifier": "12662GAC2",
+   "Weight": "1.42",
+   "Market Value": "0",
+   "Shares Held": "860677",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac FR RE6055, 2.50%, due 08/01/2050",
+   "Ticker": "-",
+   "Identifier": "3133N3WQ3",
+   "Weight": "1.41",
+   "Market Value": "0",
+   "Shares Held": "1065397",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2022-66, Class CF, Variable rate, due 10/25/2052",
+   "Ticker": "-",
+   "Identifier": "3136BN6P6",
+   "Weight": "1.39",
+   "Market Value": "0",
+   "Shares Held": "842780",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Credit Suisse Mortgage Trust Series 2020-SPT1, Class M1, Variable rate, due 04/25/2065",
+   "Ticker": "-",
+   "Identifier": "12659LAD4",
+   "Weight": "1.38",
+   "Market Value": "0",
+   "Shares Held": "837000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2025-206, Class IO, Variable rate, due 04/16/2064",
+   "Ticker": "-",
+   "Identifier": "38383JCS2",
+   "Weight": "1.34",
+   "Market Value": "0",
+   "Shares Held": "13448394",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2021-31, Class IO, Variable rate, due 01/16/2061",
+   "Ticker": "-",
+   "Identifier": "38380RVN7",
+   "Weight": "1.28",
+   "Market Value": "0",
+   "Shares Held": "11376622",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Research-Driven Pagaya Motor Asset Trust I Series 2025-6A, Class C, 5.534%, due 08/25/2034",
+   "Ticker": "-",
+   "Identifier": "76100JAE7",
+   "Weight": "1.28",
+   "Market Value": "0",
+   "Shares Held": "775000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Gracie Point International Funding Series 2025-1A, Class A, Variable rate, due 08/15/2028",
+   "Ticker": "-",
+   "Identifier": "38411WAA0",
+   "Weight": "1.26",
+   "Market Value": "0",
+   "Shares Held": "744000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2025-21, Class IO, Variable rate, due 04/16/2065",
+   "Ticker": "-",
+   "Identifier": "38381L5V0",
+   "Weight": "1.24",
+   "Market Value": "0",
+   "Shares Held": "10659691",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2024-47, Class AI, 0.75%, due 06/16/2064",
+   "Ticker": "-",
+   "Identifier": "38381LAV4",
+   "Weight": "1.17",
+   "Market Value": "0",
+   "Shares Held": "13807027",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GS Mortgage-Backed Securities Trust Series 2020-NQM1, Class B1, Variable rate, due 09/27/2060",
+   "Ticker": "-",
+   "Identifier": "36259WAE1",
+   "Weight": "1.17",
+   "Market Value": "0",
+   "Shares Held": "755000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "REMIC FUNDING TRUST 98-1 Series 2026-2, Class A, 6.259%, due 11/27/2056",
+   "Ticker": "-",
+   "Identifier": "75805CAA0",
+   "Weight": "1.14",
+   "Market Value": "0",
+   "Shares Held": "679875",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac Series 5435, Class BS, Variable rate, due 07/25/2054",
+   "Ticker": "-",
+   "Identifier": "3137HDTC4",
+   "Weight": "1.12",
+   "Market Value": "0",
+   "Shares Held": "833761",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac Series 4765, Class PZ, 3%, due 01/15/2048",
+   "Ticker": "-",
+   "Identifier": "3137FEQ29",
+   "Weight": "1.04",
+   "Market Value": "0",
+   "Shares Held": "808298",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2053-153, Class IO, Variable rate, due 09/16/2067",
+   "Ticker": "-",
+   "Identifier": "38383JCQ6",
+   "Weight": "1",
+   "Market Value": "0",
+   "Shares Held": "8217541",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2017-38, Class Z, 4%, due 03/20/2047",
+   "Ticker": "-",
+   "Identifier": "38376MVF1",
+   "Weight": "0.97",
+   "Market Value": "0",
+   "Shares Held": "698530",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Farmer Mac Agricultural Real Estate Trust Serues 2021-1, Class B, Variable rate, due 07/25/2051",
+   "Ticker": "-",
+   "Identifier": "30768WAC2",
+   "Weight": "0.91",
+   "Market Value": "0",
+   "Shares Held": "697372",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "REMIC FUNDING TRUST 98-1 Series 2025-3, Class A, 6.231%, due 12/27/2056",
+   "Ticker": "-",
+   "Identifier": "75806GAA0",
+   "Weight": "0.9",
+   "Market Value": "0",
+   "Shares Held": "530387",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SFO Commerical Mortgage Trust Series 2021-555, Class D, Variable rate, due 05/15/2038",
+   "Ticker": "-",
+   "Identifier": "78432WAG8",
+   "Weight": "0.84",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SG Capital Partners Series 2022-1, Class A1, Variable rate, due 03/27/2062",
+   "Ticker": "-",
+   "Identifier": "78433QAA3",
+   "Weight": "0.8",
+   "Market Value": "0",
+   "Shares Held": "526096",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FHLMC Multifamily Structured Pass Through Certs. Series K-1510, Class X1, Variable rate, due 01/25/2034",
+   "Ticker": "-",
+   "Identifier": "3137FL2N3",
+   "Weight": "0.79",
+   "Market Value": "0",
+   "Shares Held": "19431175",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae FN BV9960, 4%, due 06/01/2052",
+   "Ticker": "-",
+   "Identifier": "3140MQB65",
+   "Weight": "0.73",
+   "Market Value": "0",
+   "Shares Held": "482331",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BX Trust Series 2025-DELC, Class E, Variable rate, due 12/15/2030",
+   "Ticker": "-",
+   "Identifier": "05594MAJ1",
+   "Weight": "0.68",
+   "Market Value": "0",
+   "Shares Held": "400000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MSWF Commercial Mortgage Trust Series 2023-1, Class XA, Variable rate, due 05/15/2056",
+   "Ticker": "-",
+   "Identifier": "55376CAP8",
+   "Weight": "0.68",
+   "Market Value": "0",
+   "Shares Held": "9447771",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NRTH PARK Mortgage Trust Series 2025-PARK, Class A, Variable rate, due 10/15/2040",
+   "Ticker": "-",
+   "Identifier": "669985AA1",
+   "Weight": "0.68",
+   "Market Value": "0",
+   "Shares Held": "400000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "First Trust AAA CMBS ETF",
+   "Ticker": "CAAA",
+   "Identifier": "33738D762",
+   "Weight": "0.67",
+   "Market Value": "0",
+   "Shares Held": "20000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PRP Advisors, LLC Series 2025-RCF6, Class M1, Variable rate, due 12/25/2055",
+   "Ticker": "-",
+   "Identifier": "69393BAD7",
+   "Weight": "0.65",
+   "Market Value": "0",
+   "Shares Held": "400000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Ellington Financial Mortgage Trust Series 2024-INV1, Class B2, Variable rate, due 03/25/2069",
+   "Ticker": "-",
+   "Identifier": "268434AF4",
+   "Weight": "0.64",
+   "Market Value": "0",
+   "Shares Held": "380000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BINOM Securitization Trust Series 2021-INV1, Class B1, Variable rate, due 06/25/2056",
+   "Ticker": "-",
+   "Identifier": "05552UAE4",
+   "Weight": "0.63",
+   "Market Value": "0",
+   "Shares Held": "522000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Research-Driven Pagaya Motor Asset Trust I Series 2025-5A, Class C, 5.473%, due 06/26/2034",
+   "Ticker": "-",
+   "Identifier": "76089KAE9",
+   "Weight": "0.63",
+   "Market Value": "0",
+   "Shares Held": "375000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Research-Driven Pagaya Motor Asset Trust I Series 2025-5A, Class D, 6.012%, due 06/26/2034",
+   "Ticker": "-",
+   "Identifier": "76089KAF6",
+   "Weight": "0.62",
+   "Market Value": "0",
+   "Shares Held": "375000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2015-103, Class ZA, 3.50%, due 07/20/2045",
+   "Ticker": "-",
+   "Identifier": "38379MDA9",
+   "Weight": "0.6",
+   "Market Value": "0",
+   "Shares Held": "443211",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac Series 4292, Class PB, 3.50%, due 01/15/2044",
+   "Ticker": "-",
+   "Identifier": "3137B75V7",
+   "Weight": "0.59",
+   "Market Value": "0",
+   "Shares Held": "404775",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac Series 4753, Class HL, 3%, due 02/15/2048",
+   "Ticker": "-",
+   "Identifier": "3137FDW99",
+   "Weight": "0.59",
+   "Market Value": "0",
+   "Shares Held": "415000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2031-39, Class DP, 2.50%, due 03/20/2043",
+   "Ticker": "-",
+   "Identifier": "38378JUG5",
+   "Weight": "0.59",
+   "Market Value": "0",
+   "Shares Held": "460000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "REMIC FUNDING TRUST 98-1 Series 2025-3, Class B, 7.749%, due 12/27/2056",
+   "Ticker": "-",
+   "Identifier": "75806GAB8",
+   "Weight": "0.58",
+   "Market Value": "0",
+   "Shares Held": "344000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae or Freddie Mac TBA, 4.50%, due 04/01/2056",
+   "Ticker": "-",
+   "Identifier": "01F0426A6",
+   "Weight": "0.54",
+   "Market Value": "0",
+   "Shares Held": "350000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2023-18, Class AZ, 4.75%, due 02/20/2053",
+   "Ticker": "-",
+   "Identifier": "38383VT40",
+   "Weight": "0.54",
+   "Market Value": "0",
+   "Shares Held": "385175",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac FR SD1382, 4%, due 08/01/2052",
+   "Ticker": "-",
+   "Identifier": "3132DNRB1",
+   "Weight": "0.53",
+   "Market Value": "0",
+   "Shares Held": "351583",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2021-125, Class EL, 1.50%, due 07/20/2051",
+   "Ticker": "-",
+   "Identifier": "38382WHB6",
+   "Weight": "0.48",
+   "Market Value": "0",
+   "Shares Held": "483595",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2024-73, Class FB, Variable rate, due 10/25/2054",
+   "Ticker": "-",
+   "Identifier": "3136BTBD4",
+   "Weight": "0.45",
+   "Market Value": "0",
+   "Shares Held": "268164",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2015-39, Class ZA, 3.50%, due 03/20/2045",
+   "Ticker": "-",
+   "Identifier": "38379LEA0",
+   "Weight": "0.45",
+   "Market Value": "0",
+   "Shares Held": "298936",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Pretium Mortgage Credit Partners LLC Series 2025-NPL9, Class A2, Variable rate, due 08/25/2055",
+   "Ticker": "-",
+   "Identifier": "740937AB3",
+   "Weight": "0.42",
+   "Market Value": "0",
+   "Shares Held": "250000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "First Trust Structured Credit Income Opportunities ETF",
+   "Ticker": "SCIO",
+   "Identifier": "33738D770",
+   "Weight": "0.41",
+   "Market Value": "0",
+   "Shares Held": "12000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Research-Driven Pagaya Motor Asset Trust I Series 2025-3A, Class E, 11.089%, due 02/27/2034",
+   "Ticker": "-",
+   "Identifier": "76091FAA4",
+   "Weight": "0.39",
+   "Market Value": "0",
+   "Shares Held": "229884",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FHLMC Multifamily Structured Pass Through Certs. Series K546, Class X1, Variable rate, due 05/25/2030",
+   "Ticker": "-",
+   "Identifier": "3137HN4T2",
+   "Weight": "0.18",
+   "Market Value": "0",
+   "Shares Held": "3814228",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac FG G67706, 3.50%, due 12/01/2047",
+   "Ticker": "-",
+   "Identifier": "3132XCR31",
+   "Weight": "0.14",
+   "Market Value": "0",
+   "Shares Held": "90726",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac FG G61748, 3.50%, due 11/01/2048",
+   "Ticker": "-",
+   "Identifier": "31335B5H5",
+   "Weight": "0.12",
+   "Market Value": "0",
+   "Shares Held": "78350",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac FR SD0499, 3%, due 08/01/2050",
+   "Ticker": "-",
+   "Identifier": "3132DMRU1",
+   "Weight": "0.12",
+   "Market Value": "0",
+   "Shares Held": "82301",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac FG G60659, 3.50%, due 08/01/2046",
+   "Ticker": "-",
+   "Identifier": "31335AWU8",
+   "Weight": "0.1",
+   "Market Value": "0",
+   "Shares Held": "66377",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2006-56, Class FE, Variable rate, due 07/25/2036",
+   "Ticker": "-",
+   "Identifier": "31395NXU6",
+   "Weight": "0.09",
+   "Market Value": "0",
+   "Shares Held": "55858",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae FN CA0995, 3.50%, due 01/01/2048",
+   "Ticker": "-",
+   "Identifier": "3140Q8C94",
+   "Weight": "0.06",
+   "Market Value": "0",
+   "Shares Held": "38629",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Colony American Finance Ltd Series 2021-2, Class XA, Variable rate, due 07/15/2054",
+   "Ticker": "-",
+   "Identifier": "21873BAC9",
+   "Weight": "0.03",
+   "Market Value": "0",
+   "Shares Held": "641883",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "COMM Mortgage Trust Series 2012-CR4, Class XA, Variable rate, due 10/15/2045",
+   "Ticker": "-",
+   "Identifier": "12624QAS2",
+   "Weight": "0.03",
+   "Market Value": "0",
+   "Shares Held": "938014",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae FN BE3619, 4%, due 05/01/2047",
+   "Ticker": "-",
+   "Identifier": "3140FPAV1",
+   "Weight": "0.03",
+   "Market Value": "0",
+   "Shares Held": "19008",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Wells Fargo Commercial Mortgage Trust Series 2016-C37, Class XEF, Variable rate, due 12/15/2049",
+   "Ticker": "-",
+   "Identifier": "95000PAP9",
+   "Weight": "0.03",
+   "Market Value": "0",
+   "Shares Held": "5823000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Gracechurch Mortgage Finance Plc Series 2020-GRCE, Class X, 0.30091%, due 12/10/2040",
+   "Ticker": "-",
+   "Identifier": "38406JAC2",
+   "Weight": "0.02",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "JP Morgan Chase Commercial Mortgage Sec Trust Series 2017-JP5, Class XA, Variable rate, due 03/15/2050",
+   "Ticker": "-",
+   "Identifier": "46647TAU2",
+   "Weight": "0.02",
+   "Market Value": "0",
+   "Shares Held": "8384222",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SMRT Series 2022-MINI, Class XCP, Variable rate, due 01/15/2039",
+   "Ticker": "-",
+   "Identifier": "78457JAC6",
+   "Weight": "0.02",
+   "Market Value": "0",
+   "Shares Held": "105000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Citigroup Commercial Mortgage Trust Series 2016-P3, Class XA, Variable rate, due 04/15/2049",
+   "Ticker": "-",
+   "Identifier": "29429CAJ4",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "244643",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "COMM Mortgage Trust Series 2014-UBS3, Class XB, Variable rate, due 06/10/2047",
+   "Ticker": "-",
+   "Identifier": "12591YAA3",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "9857044",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "COMM Mortgage Trust Series 2015-LC21 Class XE, Variable rate, due 07/10/2048",
+   "Ticker": "-",
+   "Identifier": "12593FAG9",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "7000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "JPMBB Commercial Mortgage Securities Trust Series 2015-C32, Class XA, Variable rate, due 11/15/2048",
+   "Ticker": "-",
+   "Identifier": "46590JAY3",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "243519",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "JPMDB Commercial Mortgage Securities Trust Series 2016-C2, Class XA, Variable rate, due 06/15/2049",
+   "Ticker": "-",
+   "Identifier": "46590LAV4",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "1416936",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US 10YR NOTE (CBT)Dec26",
+   "Ticker": "TYZ6",
+   "Identifier": "-",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "8",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US 10yr Ultra Fut Dec26",
+   "Ticker": "UXYZ6",
+   "Identifier": "-",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "26",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US 2YR NOTE (CBT) Dec26",
+   "Ticker": "TUZ6",
+   "Identifier": "-",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "25",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US 5YR NOTE (CBT) Dec26",
+   "Ticker": "FVZ6",
+   "Identifier": "-",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "74",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US LONG BOND(CBT) Dec26",
+   "Ticker": "USZ6",
+   "Identifier": "-",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "41",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US ULTRA BOND CBT Dec26",
+   "Ticker": "WNZ6",
+   "Identifier": "-",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "19",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "WF-RBS COMMERCIAL MORTGAGE TRUST Series 2014-C22, Class XA, Variable rate, due 09/15/2057",
+   "Ticker": "-",
+   "Identifier": "92890KBD6",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "4092",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "-6.79",
+   "Market Value": "0",
+   "Shares Held": "-4020154",
+   "Asset Category": "-"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

@@ -1,0 +1,446 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Nintendo Co., Ltd.",
+   "Ticker": "7974.JP",
+   "Identifier": "J51699106",
+   "Weight": "5.6",
+   "Market Value": "262237.63",
+   "Shares Held": "5090",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Warner Bros. Discovery, Inc.",
+   "Ticker": "WBD",
+   "Identifier": "934423104",
+   "Weight": "5.51",
+   "Market Value": "257927.88",
+   "Shares Held": "8358",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Sony Corporation",
+   "Ticker": "6758.JP",
+   "Identifier": "J76379106",
+   "Weight": "5.35",
+   "Market Value": "250487.54",
+   "Shares Held": "10615",
+   "Asset Category": "Household Durables"
+  },
+  {
+   "Name": "The Walt Disney Company",
+   "Ticker": "DIS",
+   "Identifier": "254687106",
+   "Weight": "5.24",
+   "Market Value": "245631.1",
+   "Shares Held": "2314",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Roku, Inc.",
+   "Ticker": "ROKU",
+   "Identifier": "77543R102",
+   "Weight": "5.17",
+   "Market Value": "242303.16",
+   "Shares Held": "1587",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Spotify Technology S.A.",
+   "Ticker": "SPOT",
+   "Identifier": "L8681T102",
+   "Weight": "4.99",
+   "Market Value": "233584.58",
+   "Shares Held": "458",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Aristocrat Leisure Limited",
+   "Ticker": "ALL.AU",
+   "Identifier": "Q0521T108",
+   "Weight": "4.5",
+   "Market Value": "210919.28",
+   "Shares Held": "5140",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Netflix, Inc.",
+   "Ticker": "NFLX",
+   "Identifier": "64110L106",
+   "Weight": "4.48",
+   "Market Value": "209806.62",
+   "Shares Held": "2949",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Tencent Holdings Limited",
+   "Ticker": "700.HK",
+   "Identifier": "G87572163",
+   "Weight": "4.45",
+   "Market Value": "208495.8",
+   "Shares Held": "3746",
+   "Asset Category": "Interactive Media & Services"
+  },
+  {
+   "Name": "NetEase, Inc.",
+   "Ticker": "9999.HK",
+   "Identifier": "G6427A102",
+   "Weight": "4.06",
+   "Market Value": "190002.31",
+   "Shares Held": "8239",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Unity Software Inc.",
+   "Ticker": "U",
+   "Identifier": "91332U101",
+   "Weight": "3.94",
+   "Market Value": "184398.9",
+   "Shares Held": "4438",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Roblox Corporation (Class A)",
+   "Ticker": "RBLX",
+   "Identifier": "771049103",
+   "Weight": "3.91",
+   "Market Value": "183159.36",
+   "Shares Held": "3944",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Take-Two Interactive Software, Inc.",
+   "Ticker": "TTWO",
+   "Identifier": "874054109",
+   "Weight": "3.89",
+   "Market Value": "182101.76",
+   "Shares Held": "904",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Konami Group Corporation",
+   "Ticker": "9766.JP",
+   "Identifier": "J3600L101",
+   "Weight": "3.47",
+   "Market Value": "162345.76",
+   "Shares Held": "1200",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Flutter Entertainment Plc",
+   "Ticker": "FLUT",
+   "Identifier": "G3643J108",
+   "Weight": "3.12",
+   "Market Value": "145902.19",
+   "Shares Held": "1753",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Kuaishou Technology",
+   "Ticker": "1024.HK",
+   "Identifier": "G53263102",
+   "Weight": "2.89",
+   "Market Value": "135287.65",
+   "Shares Held": "35351",
+   "Asset Category": "Interactive Media & Services"
+  },
+  {
+   "Name": "DraftKings Inc.",
+   "Ticker": "DKNG",
+   "Identifier": "26142V105",
+   "Weight": "2.79",
+   "Market Value": "130468.5",
+   "Shares Held": "5925",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "GameStop Corp. (Class A)",
+   "Ticker": "GME",
+   "Identifier": "36467W109",
+   "Weight": "2.54",
+   "Market Value": "118961.54",
+   "Shares Held": "5086",
+   "Asset Category": "Specialty Retail"
+  },
+  {
+   "Name": "Evolution AB",
+   "Ticker": "EVO.SS",
+   "Identifier": "W3287P115",
+   "Weight": "2.45",
+   "Market Value": "114595.99",
+   "Shares Held": "1391",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Lottomatica Group SpA",
+   "Ticker": "LTMC.IM",
+   "Identifier": "T64384109",
+   "Weight": "1.99",
+   "Market Value": "92973.16",
+   "Shares Held": "3074",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Capcom Co., Ltd.",
+   "Ticker": "9697.JP",
+   "Identifier": "J05187109",
+   "Weight": "1.98",
+   "Market Value": "92669.5",
+   "Shares Held": "3300",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Nexon Co., Ltd.",
+   "Ticker": "3659.JP",
+   "Identifier": "J4914X104",
+   "Weight": "1.72",
+   "Market Value": "80486.41",
+   "Shares Held": "4061",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Light & Wonder Inc. (CDI)",
+   "Ticker": "LNW.AU",
+   "Identifier": "U80679100",
+   "Weight": "1.61",
+   "Market Value": "75313.75",
+   "Shares Held": "970",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "MGM Resorts International",
+   "Ticker": "MGM",
+   "Identifier": "552953101",
+   "Weight": "1.61",
+   "Market Value": "75194.64",
+   "Shares Held": "2308",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Tencent Music Entertainment Group (Class A) (ADR)",
+   "Ticker": "TME",
+   "Identifier": "88034P109",
+   "Weight": "1.35",
+   "Market Value": "63151.53",
+   "Shares Held": "7527",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "CD Projekt S.A.",
+   "Ticker": "CDR.PW",
+   "Identifier": "X0957E106",
+   "Weight": "1.1",
+   "Market Value": "51521.59",
+   "Shares Held": "808",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Krafton, Inc.",
+   "Ticker": "259960.KS",
+   "Identifier": "Y0929C104",
+   "Weight": "1.07",
+   "Market Value": "50255.66",
+   "Shares Held": "345",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Entain Plc",
+   "Ticker": "ENT.LN",
+   "Identifier": "G3167C109",
+   "Weight": "1.01",
+   "Market Value": "47315.96",
+   "Shares Held": "7943",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "RUM Group Inc. (Class A)",
+   "Ticker": "RUM",
+   "Identifier": "78137L105",
+   "Weight": "0.69",
+   "Market Value": "32403.36",
+   "Shares Held": "3876",
+   "Asset Category": "Interactive Media & Services"
+  },
+  {
+   "Name": "JOYY Inc. (ADR)",
+   "Ticker": "JOYY",
+   "Identifier": "46591M109",
+   "Weight": "0.59",
+   "Market Value": "27520.65",
+   "Shares Held": "345",
+   "Asset Category": "Interactive Media & Services"
+  },
+  {
+   "Name": "Tabcorp Holdings Limited",
+   "Ticker": "TAH.AU",
+   "Identifier": "Q8815D101",
+   "Weight": "0.59",
+   "Market Value": "27791.45",
+   "Shares Held": "43464",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Playtech Plc",
+   "Ticker": "PTEC.LN",
+   "Identifier": "G7132V100",
+   "Weight": "0.56",
+   "Market Value": "26021.65",
+   "Shares Held": "5054",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "FuboTV Inc.",
+   "Ticker": "FUBO",
+   "Identifier": "35953D401",
+   "Weight": "0.53",
+   "Market Value": "25044.72",
+   "Shares Held": "2598",
+   "Asset Category": "Interactive Media & Services"
+  },
+  {
+   "Name": "Kingsoft Corporation Ltd.",
+   "Ticker": "3888.HK",
+   "Identifier": "G5264Y108",
+   "Weight": "0.53",
+   "Market Value": "25006.7",
+   "Shares Held": "8000",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Rush Street Interactive, Inc.",
+   "Ticker": "RSI",
+   "Identifier": "782011100",
+   "Weight": "0.53",
+   "Market Value": "24797.76",
+   "Shares Held": "1248",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "China Ruyi Holdings Ltd.",
+   "Ticker": "136.HK",
+   "Identifier": "G4404N114",
+   "Weight": "0.51",
+   "Market Value": "24039.12",
+   "Shares Held": "122847",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Allwyn AG",
+   "Ticker": "ALWN.GA",
+   "Identifier": "L017BQ101",
+   "Weight": "0.47",
+   "Market Value": "21858.45",
+   "Shares Held": "1620",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "iQIYI, Inc. (ADR)",
+   "Ticker": "IQ",
+   "Identifier": "46267X108",
+   "Weight": "0.47",
+   "Market Value": "22125.84",
+   "Shares Held": "21692",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Sportradar Group AG (Class A)",
+   "Ticker": "SRAD",
+   "Identifier": "H8088L103",
+   "Weight": "0.45",
+   "Market Value": "21197.24",
+   "Shares Held": "1601",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Hello Group Inc. (ADR)",
+   "Ticker": "MOMO",
+   "Identifier": "423403104",
+   "Weight": "0.43",
+   "Market Value": "20294.33",
+   "Shares Held": "4067",
+   "Asset Category": "Interactive Media & Services"
+  },
+  {
+   "Name": "Super Group (SGHC) Limited",
+   "Ticker": "SGHC",
+   "Identifier": "G8588X103",
+   "Weight": "0.43",
+   "Market Value": "20013.84",
+   "Shares Held": "1672",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Penn Entertainment Inc.",
+   "Ticker": "PENN",
+   "Identifier": "707569109",
+   "Weight": "0.4",
+   "Market Value": "18701.75",
+   "Shares Held": "1195",
+   "Asset Category": "Hotels, Restaurants & Leisure"
+  },
+  {
+   "Name": "Starz Entertainment Corp.",
+   "Ticker": "STRZ",
+   "Identifier": "855919106",
+   "Weight": "0.4",
+   "Market Value": "18604.81",
+   "Shares Held": "883",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "NetEase Cloud Music Inc.",
+   "Ticker": "9899.HK",
+   "Identifier": "G2215N109",
+   "Weight": "0.37",
+   "Market Value": "17500.88",
+   "Shares Held": "1659",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.25",
+   "Market Value": "11936.87",
+   "Shares Held": "11937",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Pound Sterling",
+   "Ticker": "-",
+   "Identifier": "$GBP",
+   "Weight": "0.02",
+   "Market Value": "1083.7",
+   "Shares Held": "818",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Australian Dollar",
+   "Ticker": "-",
+   "Identifier": "$AUD",
+   "Weight": "0",
+   "Market Value": "68.71",
+   "Shares Held": "98",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Euro",
+   "Ticker": "-",
+   "Identifier": "$EUR",
+   "Weight": "0",
+   "Market Value": "168.19",
+   "Shares Held": "148",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

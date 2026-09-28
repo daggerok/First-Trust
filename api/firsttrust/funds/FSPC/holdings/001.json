@@ -1,0 +1,491 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Mitsubishi Heavy Industries, Ltd.",
+   "Ticker": "7011.JP",
+   "Identifier": "J44002178",
+   "Weight": "5.27",
+   "Market Value": "99023.76",
+   "Shares Held": "3995",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Palantir Technologies Inc. (Class A)",
+   "Ticker": "PLTR",
+   "Identifier": "69608A108",
+   "Weight": "4.86",
+   "Market Value": "91420.94",
+   "Shares Held": "482",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Thales S.A.",
+   "Ticker": "HO.FP",
+   "Identifier": "F9156M108",
+   "Weight": "4.77",
+   "Market Value": "89668.58",
+   "Shares Held": "343",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Safran S.A.",
+   "Ticker": "SAF.FP",
+   "Identifier": "F4035A557",
+   "Weight": "4.67",
+   "Market Value": "87763.75",
+   "Shares Held": "229",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Northrop Grumman Corporation",
+   "Ticker": "NOC",
+   "Identifier": "666807102",
+   "Weight": "4.64",
+   "Market Value": "87298.92",
+   "Shares Held": "171",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Space Exploration Technologies Corp. (Class A)",
+   "Ticker": "SPCX",
+   "Identifier": "84615Q103",
+   "Weight": "4.57",
+   "Market Value": "85937.04",
+   "Shares Held": "578",
+   "Asset Category": "Diversified Telecommunication Services"
+  },
+  {
+   "Name": "EchoStar Corporation (Class A)",
+   "Ticker": "ECHO",
+   "Identifier": "278768106",
+   "Weight": "4.42",
+   "Market Value": "83081.42",
+   "Shares Held": "922",
+   "Asset Category": "Media"
+  },
+  {
+   "Name": "ViaSat, Inc.",
+   "Ticker": "VSAT",
+   "Identifier": "92552V100",
+   "Weight": "4.38",
+   "Market Value": "82293.54",
+   "Shares Held": "1127",
+   "Asset Category": "Communications Equipment"
+  },
+  {
+   "Name": "L3Harris Technologies, Inc.",
+   "Ticker": "LHX",
+   "Identifier": "502431109",
+   "Weight": "3.92",
+   "Market Value": "73683.9",
+   "Shares Held": "310",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Rocket Lab Corporation",
+   "Ticker": "RKLB",
+   "Identifier": "773121108",
+   "Weight": "3.67",
+   "Market Value": "68921.4",
+   "Shares Held": "932",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "AST SpaceMobile, Inc.",
+   "Ticker": "ASTS",
+   "Identifier": "00217D100",
+   "Weight": "3.62",
+   "Market Value": "67991",
+   "Shares Held": "1100",
+   "Asset Category": "Diversified Telecommunication Services"
+  },
+  {
+   "Name": "Lockheed Martin Corporation",
+   "Ticker": "LMT",
+   "Identifier": "539830109",
+   "Weight": "3.15",
+   "Market Value": "59229.84",
+   "Shares Held": "114",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Airbus SE",
+   "Ticker": "AIR.FP",
+   "Identifier": "N0280G100",
+   "Weight": "3.09",
+   "Market Value": "58103.69",
+   "Shares Held": "265",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Honeywell International Inc.",
+   "Ticker": "HON",
+   "Identifier": "438516205",
+   "Weight": "3.08",
+   "Market Value": "57813.6",
+   "Shares Held": "272",
+   "Asset Category": "Industrial Conglomerates"
+  },
+  {
+   "Name": "Indra Sistemas, S.A.",
+   "Ticker": "IDR.SM",
+   "Identifier": "E6271Z155",
+   "Weight": "3.06",
+   "Market Value": "57605.33",
+   "Shares Held": "819",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Rheinmetall AG",
+   "Ticker": "RHM.GY",
+   "Identifier": "D65111102",
+   "Weight": "2.98",
+   "Market Value": "55977.2",
+   "Shares Held": "50",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "The Boeing Company",
+   "Ticker": "BA",
+   "Identifier": "097023105",
+   "Weight": "2.91",
+   "Market Value": "54667.32",
+   "Shares Held": "276",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Planet Labs PBC (Class A)",
+   "Ticker": "PL",
+   "Identifier": "72703X106",
+   "Weight": "2.56",
+   "Market Value": "48193.95",
+   "Shares Held": "2765",
+   "Asset Category": "Professional Services"
+  },
+  {
+   "Name": "Hanwha Aerospace Co., Ltd.",
+   "Ticker": "012450.KS",
+   "Identifier": "Y7470L102",
+   "Weight": "2.44",
+   "Market Value": "45820.13",
+   "Shares Held": "61",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Leonardo SpA",
+   "Ticker": "LDO.IM",
+   "Identifier": "T6S996112",
+   "Weight": "2.44",
+   "Market Value": "45877.45",
+   "Shares Held": "822",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Globalstar, Inc.",
+   "Ticker": "GSAT",
+   "Identifier": "378973507",
+   "Weight": "2.3",
+   "Market Value": "43263.36",
+   "Shares Held": "522",
+   "Asset Category": "Diversified Telecommunication Services"
+  },
+  {
+   "Name": "MDA Space Ltd.",
+   "Ticker": "MDA.CT",
+   "Identifier": "55293N109",
+   "Weight": "2.3",
+   "Market Value": "43179.04",
+   "Shares Held": "1370",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "IHI Corporation",
+   "Ticker": "7013.JP",
+   "Identifier": "J2398N113",
+   "Weight": "1.9",
+   "Market Value": "35651.88",
+   "Shares Held": "2004",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "AeroVironment, Inc.",
+   "Ticker": "AVAV",
+   "Identifier": "008073108",
+   "Weight": "1.57",
+   "Market Value": "29497.7",
+   "Shares Held": "194",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "QinetiQ Group Plc",
+   "Ticker": "QQ/.LN",
+   "Identifier": "G7303P106",
+   "Weight": "1.56",
+   "Market Value": "29374.68",
+   "Shares Held": "4532",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "ST Engineering Ltd.",
+   "Ticker": "STE.SP",
+   "Identifier": "Y7996W103",
+   "Weight": "1.41",
+   "Market Value": "26575.09",
+   "Shares Held": "3123",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Intuitive Machines, Inc. (Class A)",
+   "Ticker": "LUNR",
+   "Identifier": "46125A100",
+   "Weight": "1.24",
+   "Market Value": "23290.12",
+   "Shares Held": "1492",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Redwire Corporation",
+   "Ticker": "RDW",
+   "Identifier": "75776W103",
+   "Weight": "1.19",
+   "Market Value": "22449.84",
+   "Shares Held": "1932",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Crane Company",
+   "Ticker": "CR",
+   "Identifier": "224408104",
+   "Weight": "1.1",
+   "Market Value": "20683",
+   "Shares Held": "100",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Huber + Suhner AG (Registered)",
+   "Ticker": "HUBN.SW",
+   "Identifier": "H44229187",
+   "Weight": "1.04",
+   "Market Value": "19576.05",
+   "Shares Held": "87",
+   "Asset Category": "Electrical Equipment"
+  },
+  {
+   "Name": "Hindustan Aeronautics Limited",
+   "Ticker": "HNAL.IS",
+   "Identifier": "Y3199R124",
+   "Weight": "0.92",
+   "Market Value": "17231.86",
+   "Shares Held": "344",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Firefly Aerospace Inc.",
+   "Ticker": "FLY",
+   "Identifier": "31816X106",
+   "Weight": "0.91",
+   "Market Value": "17149.44",
+   "Shares Held": "704",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Kratos Defense & Security Solutions, Inc.",
+   "Ticker": "KTOS",
+   "Identifier": "50077B207",
+   "Weight": "0.91",
+   "Market Value": "17061.88",
+   "Shares Held": "374",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Hexcel Corporation",
+   "Ticker": "HXL",
+   "Identifier": "428291108",
+   "Weight": "0.69",
+   "Market Value": "13041.6",
+   "Shares Held": "152",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Avio SpA",
+   "Ticker": "AVIO.IM",
+   "Identifier": "T0R27R125",
+   "Weight": "0.64",
+   "Market Value": "12087.38",
+   "Shares Held": "366",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Korea Aerospace Industries Ltd.",
+   "Ticker": "047810.KS",
+   "Identifier": "Y4838Q105",
+   "Weight": "0.63",
+   "Market Value": "11819.02",
+   "Shares Held": "126",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Hyundai Rotem Company Ltd.",
+   "Ticker": "064350.KS",
+   "Identifier": "Y3R36Z108",
+   "Weight": "0.59",
+   "Market Value": "11084.78",
+   "Shares Held": "130",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Astronics Corporation",
+   "Ticker": "ATRO",
+   "Identifier": "046433108",
+   "Weight": "0.58",
+   "Market Value": "10936.76",
+   "Shares Held": "158",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "SKY Perfect JSAT Corporation",
+   "Ticker": "9412.JP",
+   "Identifier": "J75606103",
+   "Weight": "0.49",
+   "Market Value": "9194.71",
+   "Shares Held": "696",
+   "Asset Category": "Media"
+  },
+  {
+   "Name": "Iridium Communications Inc.",
+   "Ticker": "IRDM",
+   "Identifier": "46269C102",
+   "Weight": "0.48",
+   "Market Value": "9067.5",
+   "Shares Held": "186",
+   "Asset Category": "Diversified Telecommunication Services"
+  },
+  {
+   "Name": "Voyager Technologies, Inc. (Class A)",
+   "Ticker": "VOYG",
+   "Identifier": "92892B103",
+   "Weight": "0.43",
+   "Market Value": "8025.6",
+   "Shares Held": "256",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "BlackSky Technology Inc. (Class A)",
+   "Ticker": "BKSY",
+   "Identifier": "09263B207",
+   "Weight": "0.39",
+   "Market Value": "7347",
+   "Shares Held": "316",
+   "Asset Category": "Professional Services"
+  },
+  {
+   "Name": "Gilat Satellite Networks Ltd.",
+   "Ticker": "GILT.IT",
+   "Identifier": "M51474118",
+   "Weight": "0.39",
+   "Market Value": "7367.3",
+   "Shares Held": "752",
+   "Asset Category": "Communications Equipment"
+  },
+  {
+   "Name": "Astroscale Holdings Inc.",
+   "Ticker": "186A.JP",
+   "Identifier": "J0339L105",
+   "Weight": "0.34",
+   "Market Value": "6428.23",
+   "Shares Held": "819",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Filtronic Plc",
+   "Ticker": "FTC.LN",
+   "Identifier": "G3430A104",
+   "Weight": "0.32",
+   "Market Value": "5952.7",
+   "Shares Held": "1872",
+   "Asset Category": "Communications Equipment"
+  },
+  {
+   "Name": "Ducommun Incorporated",
+   "Ticker": "DCO",
+   "Identifier": "264147109",
+   "Weight": "0.26",
+   "Market Value": "4820.2",
+   "Shares Held": "28",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "QPS Holdings Inc.",
+   "Ticker": "464A.JP",
+   "Identifier": "J6466B109",
+   "Weight": "0.25",
+   "Market Value": "4638.93",
+   "Shares Held": "417",
+   "Asset Category": "Aerospace & Defense"
+  },
+  {
+   "Name": "Spire Global, Inc.",
+   "Ticker": "SPIR",
+   "Identifier": "848560306",
+   "Weight": "0.21",
+   "Market Value": "3938.08",
+   "Shares Held": "326",
+   "Asset Category": "Professional Services"
+  },
+  {
+   "Name": "Eutelsat Communications S.A.",
+   "Ticker": "ETL.FP",
+   "Identifier": "F3692M128",
+   "Weight": "0.2",
+   "Market Value": "3739.96",
+   "Shares Held": "1922",
+   "Asset Category": "Media"
+  },
+  {
+   "Name": "Stratasys Ltd.",
+   "Ticker": "SSYS",
+   "Identifier": "M85548101",
+   "Weight": "0.14",
+   "Market Value": "2610.16",
+   "Shares Held": "316",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.13",
+   "Market Value": "2512.71",
+   "Shares Held": "2513",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Euro",
+   "Ticker": "-",
+   "Identifier": "$EUR",
+   "Weight": "0",
+   "Market Value": "16.94",
+   "Shares Held": "15",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Indian Rupee",
+   "Ticker": "-",
+   "Identifier": "$INR",
+   "Weight": "0",
+   "Market Value": "20.87",
+   "Shares Held": "2000",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}
