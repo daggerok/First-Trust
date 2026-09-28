@@ -1,0 +1,401 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Tesla, Inc.",
+   "Ticker": "TSLA",
+   "Identifier": "88160R101",
+   "Weight": "8.27",
+   "Market Value": "85831264.71",
+   "Shares Held": "230661",
+   "Asset Category": "Automobiles"
+  },
+  {
+   "Name": "General Motors Company",
+   "Ticker": "GM",
+   "Identifier": "37045V100",
+   "Weight": "7.83",
+   "Market Value": "81243964.38",
+   "Shares Held": "983226",
+   "Asset Category": "Automobiles"
+  },
+  {
+   "Name": "Ford Motor Company",
+   "Ticker": "F",
+   "Identifier": "345370860",
+   "Weight": "7.46",
+   "Market Value": "77384008.85",
+   "Shares Held": "6088435",
+   "Asset Category": "Automobiles"
+  },
+  {
+   "Name": "Union Pacific Corporation",
+   "Ticker": "UNP",
+   "Identifier": "907818108",
+   "Weight": "7.45",
+   "Market Value": "77285714.99",
+   "Shares Held": "282281",
+   "Asset Category": "Railroads"
+  },
+  {
+   "Name": "FedEx Corporation",
+   "Ticker": "FDX",
+   "Identifier": "31428X106",
+   "Weight": "6.55",
+   "Market Value": "67963124.3",
+   "Shares Held": "237758",
+   "Asset Category": "Delivery Services"
+  },
+  {
+   "Name": "Delta Air Lines, Inc.",
+   "Ticker": "DAL",
+   "Identifier": "247361702",
+   "Weight": "4.45",
+   "Market Value": "46213050.98",
+   "Shares Held": "544067",
+   "Asset Category": "Airlines"
+  },
+  {
+   "Name": "United Airlines Holdings, Inc.",
+   "Ticker": "UAL",
+   "Identifier": "910047109",
+   "Weight": "4.32",
+   "Market Value": "44795334.24",
+   "Shares Held": "392976",
+   "Asset Category": "Airlines"
+  },
+  {
+   "Name": "American Airlines Group Inc.",
+   "Ticker": "AAL",
+   "Identifier": "02376R102",
+   "Weight": "4.22",
+   "Market Value": "43826883.71",
+   "Shares Held": "3159833",
+   "Asset Category": "Airlines"
+  },
+  {
+   "Name": "United Rentals, Inc.",
+   "Ticker": "URI",
+   "Identifier": "911363109",
+   "Weight": "4.12",
+   "Market Value": "42798577.5",
+   "Shares Held": "40875",
+   "Asset Category": "Commercial Vehicle-Equipment Leasing"
+  },
+  {
+   "Name": "CSX Corporation",
+   "Ticker": "CSX",
+   "Identifier": "126408103",
+   "Weight": "3.79",
+   "Market Value": "39302029.88",
+   "Shares Held": "840146",
+   "Asset Category": "Railroads"
+  },
+  {
+   "Name": "United Parcel Service, Inc. (Class B)",
+   "Ticker": "UPS",
+   "Identifier": "911312106",
+   "Weight": "3.69",
+   "Market Value": "38254592.52",
+   "Shares Held": "407137",
+   "Asset Category": "Delivery Services"
+  },
+  {
+   "Name": "PACCAR Inc",
+   "Ticker": "PCAR",
+   "Identifier": "693718108",
+   "Weight": "3.67",
+   "Market Value": "38054106.25",
+   "Shares Held": "341875",
+   "Asset Category": "Commercial Vehicles and Parts"
+  },
+  {
+   "Name": "Southwest Airlines Co.",
+   "Ticker": "LUV",
+   "Identifier": "844741108",
+   "Weight": "3.42",
+   "Market Value": "35437289.36",
+   "Shares Held": "830302",
+   "Asset Category": "Airlines"
+  },
+  {
+   "Name": "Ryder System, Inc.",
+   "Ticker": "R",
+   "Identifier": "783549108",
+   "Weight": "2.85",
+   "Market Value": "29548722.95",
+   "Shares Held": "125435",
+   "Asset Category": "Commercial Vehicle-Equipment Leasing"
+  },
+  {
+   "Name": "Wabtec Corporation",
+   "Ticker": "WAB",
+   "Identifier": "929740108",
+   "Weight": "2.36",
+   "Market Value": "24492096",
+   "Shares Held": "85042",
+   "Asset Category": "Railroad Equipment"
+  },
+  {
+   "Name": "BorgWarner Inc.",
+   "Ticker": "BWA",
+   "Identifier": "099724106",
+   "Weight": "2.01",
+   "Market Value": "20863823.4",
+   "Shares Held": "340245",
+   "Asset Category": "Auto Parts"
+  },
+  {
+   "Name": "Lear Corporation",
+   "Ticker": "LEA",
+   "Identifier": "521865204",
+   "Weight": "1.71",
+   "Market Value": "17712329.53",
+   "Shares Held": "144343",
+   "Asset Category": "Auto Parts"
+  },
+  {
+   "Name": "J.B. Hunt Transport Services, Inc.",
+   "Ticker": "JBHT",
+   "Identifier": "445658107",
+   "Weight": "1.61",
+   "Market Value": "16700498.58",
+   "Shares Held": "74073",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "Knight-Swift Transportation Holdings Inc.",
+   "Ticker": "KNX",
+   "Identifier": "499049104",
+   "Weight": "1.55",
+   "Market Value": "16078457.76",
+   "Shares Held": "252528",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "Old Dominion Freight Line, Inc.",
+   "Ticker": "ODFL",
+   "Identifier": "679580100",
+   "Weight": "1.46",
+   "Market Value": "15162017",
+   "Shares Held": "87490",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "Herc Holdings, Inc.",
+   "Ticker": "HRI",
+   "Identifier": "42704L104",
+   "Weight": "1.35",
+   "Market Value": "13968610.56",
+   "Shares Held": "103196",
+   "Asset Category": "Commercial Vehicle-Equipment Leasing"
+  },
+  {
+   "Name": "Genuine Parts Company",
+   "Ticker": "GPC",
+   "Identifier": "372460105",
+   "Weight": "1.33",
+   "Market Value": "13834571.4",
+   "Shares Held": "106740",
+   "Asset Category": "Auto Parts"
+  },
+  {
+   "Name": "Oshkosh Corporation",
+   "Ticker": "OSK",
+   "Identifier": "688239201",
+   "Weight": "1.33",
+   "Market Value": "13798698.75",
+   "Shares Held": "103945",
+   "Asset Category": "Commercial Vehicles and Parts"
+  },
+  {
+   "Name": "XPO, Inc.",
+   "Ticker": "XPO",
+   "Identifier": "983793100",
+   "Weight": "1.12",
+   "Market Value": "11636331.32",
+   "Shares Held": "67196",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "Expeditors International of Washington, Inc.",
+   "Ticker": "EXPD",
+   "Identifier": "302130109",
+   "Weight": "1.1",
+   "Market Value": "11421937.8",
+   "Shares Held": "60930",
+   "Asset Category": "Transportation Services"
+  },
+  {
+   "Name": "Allison Transmission Holdings, Inc.",
+   "Ticker": "ALSN",
+   "Identifier": "01973R101",
+   "Weight": "0.98",
+   "Market Value": "10192519.48",
+   "Shares Held": "89518",
+   "Asset Category": "Commercial Vehicles and Parts"
+  },
+  {
+   "Name": "LKQ Corporation",
+   "Ticker": "LKQ",
+   "Identifier": "501889208",
+   "Weight": "0.9",
+   "Market Value": "9361159.31",
+   "Shares Held": "401939",
+   "Asset Category": "Auto Parts"
+  },
+  {
+   "Name": "International Seaways, Inc.",
+   "Ticker": "INSW",
+   "Identifier": "Y41053102",
+   "Weight": "0.82",
+   "Market Value": "8500111.32",
+   "Shares Held": "80463",
+   "Asset Category": "Marine Transportation"
+  },
+  {
+   "Name": "Kirby Corporation",
+   "Ticker": "KEX",
+   "Identifier": "497266106",
+   "Weight": "0.77",
+   "Market Value": "7981280.64",
+   "Shares Held": "61928",
+   "Asset Category": "Marine Transportation"
+  },
+  {
+   "Name": "C.H. Robinson Worldwide, Inc.",
+   "Ticker": "CHRW",
+   "Identifier": "12541W209",
+   "Weight": "0.74",
+   "Market Value": "7651259.4",
+   "Shares Held": "52014",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "Matson, Inc.",
+   "Ticker": "MATX",
+   "Identifier": "57686G105",
+   "Weight": "0.71",
+   "Market Value": "7360760.24",
+   "Shares Held": "32764",
+   "Asset Category": "Marine Transportation"
+  },
+  {
+   "Name": "Gentex Corporation",
+   "Ticker": "GNTX",
+   "Identifier": "371901109",
+   "Weight": "0.69",
+   "Market Value": "7123990",
+   "Shares Held": "315500",
+   "Asset Category": "Auto Parts"
+  },
+  {
+   "Name": "Schneider National, Inc. (Class B)",
+   "Ticker": "SNDR",
+   "Identifier": "80689H102",
+   "Weight": "0.69",
+   "Market Value": "7122812.5",
+   "Shares Held": "227930",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "Saia, Inc.",
+   "Ticker": "SAIA",
+   "Identifier": "78709Y105",
+   "Weight": "0.67",
+   "Market Value": "7001206.68",
+   "Shares Held": "21594",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "Federal Signal Corporation",
+   "Ticker": "FSS",
+   "Identifier": "313855108",
+   "Weight": "0.51",
+   "Market Value": "5323137.75",
+   "Shares Held": "46389",
+   "Asset Category": "Commercial Vehicles and Parts"
+  },
+  {
+   "Name": "Atmus Filtration Technologies Inc.",
+   "Ticker": "ATMU",
+   "Identifier": "04956D107",
+   "Weight": "0.5",
+   "Market Value": "5138743.85",
+   "Shares Held": "114935",
+   "Asset Category": "Auto Parts"
+  },
+  {
+   "Name": "Dorman Products, Inc.",
+   "Ticker": "DORM",
+   "Identifier": "258278100",
+   "Weight": "0.5",
+   "Market Value": "5226078.78",
+   "Shares Held": "42139",
+   "Asset Category": "Auto Parts"
+  },
+  {
+   "Name": "Garrett Motion Inc.",
+   "Ticker": "GTX",
+   "Identifier": "366505105",
+   "Weight": "0.5",
+   "Market Value": "5180728.16",
+   "Shares Held": "201428",
+   "Asset Category": "Auto Parts"
+  },
+  {
+   "Name": "RXO, Inc.",
+   "Ticker": "RXO",
+   "Identifier": "74982T103",
+   "Weight": "0.49",
+   "Market Value": "5055731.51",
+   "Shares Held": "255469",
+   "Asset Category": "Transportation Services"
+  },
+  {
+   "Name": "FTAI Aviation Ltd.",
+   "Ticker": "FTAI",
+   "Identifier": "G3730V105",
+   "Weight": "0.48",
+   "Market Value": "4996912.64",
+   "Shares Held": "28544",
+   "Asset Category": "Commercial Vehicle-Equipment Leasing"
+  },
+  {
+   "Name": "ArcBest Corporation",
+   "Ticker": "ARCB",
+   "Identifier": "03937C105",
+   "Weight": "0.47",
+   "Market Value": "4924044.72",
+   "Shares Held": "39342",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "Landstar System, Inc.",
+   "Ticker": "LSTR",
+   "Identifier": "515098101",
+   "Weight": "0.47",
+   "Market Value": "4919814.57",
+   "Shares Held": "30041",
+   "Asset Category": "Trucking"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.1",
+   "Market Value": "1004450.66",
+   "Shares Held": "1004451",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

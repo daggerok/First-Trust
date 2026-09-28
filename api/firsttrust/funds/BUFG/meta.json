@@ -1,0 +1,134 @@
+{
+ "ticker": "BUFG",
+ "name": "FT Vest Buffered Allocation Growth ETF",
+ "category": "Specialty",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=BUFG",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=BUFG",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=BUFG",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=BUFG",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/BUFG",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Target Outcome Strategies",
+ "identifiers": {
+  "cusip": "33740U778",
+  "isin": "US33740U7789",
+  "iopv": "BUFGIV",
+  "indexTicker": "S&P 500 Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2021-10-26",
+  "exchange": "Cboe BZX"
+ },
+ "expenseRatio": {
+  "display": "1.13%",
+  "value": 1.13,
+  "gross": 1.13,
+  "net": null,
+  "asOfDate": null
+ },
+ "nav": {
+  "display": "$30.07",
+  "value": 30.07,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$30.10",
+  "value": 30.1,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.00%",
+  "value": 0,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$335.32M",
+  "value": 335322165,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 11150002
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": null,
+  "dividendYieldKind": null,
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": null,
+  "secYieldText": null,
+  "secYieldKind": null,
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 2.05,
+   "ytd": 8.64,
+   "yr1": 13.5,
+   "yr3": 13.65,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 8.66
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 9.12,
+   "ytd": 6.39,
+   "yr1": 14.63,
+   "yr3": 13.17,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 8.5
+  }
+ },
+ "distributions": {
+  "frequency": null,
+  "latestAmount": null,
+  "latestExDate": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 8,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1233,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 8,
+ "historyCount": 1233,
+ "distributionCount": 0,
+ "netAssets": 335322165,
+ "dividendYield": null,
+ "secYield": null
+}

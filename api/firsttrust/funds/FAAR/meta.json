@@ -1,0 +1,311 @@
+{
+ "ticker": "FAAR",
+ "name": "First Trust Alternative Absolute Return Strategy ETF",
+ "category": "Alternative",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FAAR",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=FAAR",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=FAAR",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=FAAR",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FAAR",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Alternative Investments",
+ "identifiers": {
+  "cusip": "33740Y101",
+  "isin": "US33740Y1010",
+  "iopv": "FAARIV",
+  "indexTicker": "Bloomberg Commodity Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2016-05-18",
+  "exchange": "Nasdaq"
+ },
+ "expenseRatio": {
+  "display": "0.98%",
+  "value": 0.98,
+  "gross": 0.98,
+  "net": null,
+  "asOfDate": "2026-05-01"
+ },
+ "nav": {
+  "display": "$32.15",
+  "value": 32.15,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$32.25",
+  "value": 32.25,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.11%",
+  "value": 0.11,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$229.85M",
+  "value": 229845654,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 7150002
+ },
+ "yields": {
+  "dividendYield": 9.96,
+  "dividendYieldText": "9.96%",
+  "dividendYieldKind": "First Trust published 12-month distribution rate as of Aug 31 2026",
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": 1.97,
+  "secYieldText": "1.97%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Aug 31 2026",
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": -8.33,
+   "ytd": 14.88,
+   "yr1": 15.58,
+   "yr3": 8.11,
+   "yr5": 7.14,
+   "yr10": 4.44,
+   "sinceInception": 4.02
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": -6.12,
+   "ytd": 17.37,
+   "yr1": 26.69,
+   "yr3": 9.89,
+   "yr5": 7.1,
+   "yr10": 4.44,
+   "sinceInception": 4.31
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "latestAmount": 0.1372,
+  "latestExDate": "2026-09-24",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2026-09-24",
+    "2026-09-24",
+    "2026-09-30",
+    "0.137200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-06-25",
+    "2026-06-25",
+    "2026-06-30",
+    "0.144000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-03-26",
+    "2026-03-26",
+    "2026-03-31",
+    "0.108700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-12-16",
+    "2025-12-16",
+    "2025-12-31",
+    "2.648500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-09-25",
+    "2025-09-25",
+    "2025-09-30",
+    "0.175900",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-06-26",
+    "2025-06-26",
+    "2025-06-30",
+    "0.175300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-03-27",
+    "2025-03-27",
+    "2025-03-31",
+    "0.153300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-12-17",
+    "2024-12-17",
+    "2024-12-31",
+    "0.326400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-09-26",
+    "2024-09-26",
+    "2024-09-30",
+    "0.201000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-06-27",
+    "2024-06-27",
+    "2024-06-28",
+    "0.235200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-03-21",
+    "2024-03-22",
+    "2024-03-28",
+    "0.203200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-12-15",
+    "2023-12-18",
+    "2023-12-29",
+    "0.256600",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-09-22",
+    "2023-09-25",
+    "2023-09-29",
+    "0.229700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-06-27",
+    "2023-06-28",
+    "2023-06-30",
+    "0.229300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-03-24",
+    "2023-03-27",
+    "2023-03-31",
+    "0.158800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-12-15",
+    "2022-12-16",
+    "2022-12-30",
+    "1.736100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-06-24",
+    "2022-06-27",
+    "2022-06-30",
+    "0.002800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-12-23",
+    "2021-12-27",
+    "2021-12-31",
+    "1.861400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-06-24",
+    "2021-06-25",
+    "2021-06-30",
+    "0.005400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-12-24",
+    "2020-12-28",
+    "2020-12-31",
+    "0.821400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-06-25",
+    "2020-06-26",
+    "2020-06-30",
+    "0.009200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-12-13",
+    "2019-12-16",
+    "2019-12-31",
+    "0.264700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2018-12-18",
+    "2018-12-19",
+    "2018-12-31",
+    "0.140700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2018-03-22",
+    "2018-03-23",
+    "2018-03-29",
+    "0.011800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2017-12-21",
+    "2017-12-22",
+    "2017-12-29",
+    "0.829800",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 31,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 2603,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 31,
+ "historyCount": 2603,
+ "distributionCount": 25,
+ "netAssets": 229845654,
+ "dividendYield": 9.96,
+ "secYield": 1.97
+}

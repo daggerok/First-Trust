@@ -1,0 +1,491 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Lenovo Group Limited",
+   "Ticker": "992.HK",
+   "Identifier": "Y5257Y107",
+   "Weight": "5.35",
+   "Market Value": "1596042.44",
+   "Shares Held": "336917",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Cosco Shipping Holdings Company, Ltd. (Class H)",
+   "Ticker": "1919.HK",
+   "Identifier": "Y1839M109",
+   "Weight": "4.24",
+   "Market Value": "1264154.5",
+   "Shares Held": "597734",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "ENN Energy Holdings Limited",
+   "Ticker": "2688.HK",
+   "Identifier": "G3066L101",
+   "Weight": "4",
+   "Market Value": "1194269.72",
+   "Shares Held": "192129",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "PetroChina Company Limited (Class H)",
+   "Ticker": "857.HK",
+   "Identifier": "Y6883Q104",
+   "Weight": "3.69",
+   "Market Value": "1099796.66",
+   "Shares Held": "916805",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "China Life Insurance Co., Limited (Class H)",
+   "Ticker": "2628.HK",
+   "Identifier": "Y1477R204",
+   "Weight": "3.57",
+   "Market Value": "1063372.89",
+   "Shares Held": "291862",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "China Tower Corporation Limited (Class H)",
+   "Ticker": "788.HK",
+   "Identifier": "Y15076121",
+   "Weight": "3.35",
+   "Market Value": "998287.32",
+   "Shares Held": "882351",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "3SBio, Inc.",
+   "Ticker": "1530.HK",
+   "Identifier": "G8875G102",
+   "Weight": "3.15",
+   "Market Value": "938021.09",
+   "Shares Held": "460458",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "China Oilfield Services Limited (Class H)",
+   "Ticker": "2883.HK",
+   "Identifier": "Y15002101",
+   "Weight": "3.15",
+   "Market Value": "938516.7",
+   "Shares Held": "994194",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Sinotruk (Hong Kong) Limited",
+   "Ticker": "3808.HK",
+   "Identifier": "Y8014Z102",
+   "Weight": "3.04",
+   "Market Value": "906766.7",
+   "Shares Held": "201500",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "China Reinsurance (Group) Corporation (Class H)",
+   "Ticker": "1508.HK",
+   "Identifier": "Y1R0AJ109",
+   "Weight": "2.89",
+   "Market Value": "860767.99",
+   "Shares Held": "5603421",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "China Hongqiao Group Ltd.",
+   "Ticker": "1378.HK",
+   "Identifier": "G21150100",
+   "Weight": "2.75",
+   "Market Value": "818789.06",
+   "Shares Held": "309982",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Weichai Power Co., Ltd. (Class H)",
+   "Ticker": "2338.HK",
+   "Identifier": "Y9531A109",
+   "Weight": "2.72",
+   "Market Value": "811500.58",
+   "Shares Held": "227833",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "WuXi AppTec Co., Ltd. (Class H)",
+   "Ticker": "2359.HK",
+   "Identifier": "Y971B1118",
+   "Weight": "2.72",
+   "Market Value": "810846.3",
+   "Shares Held": "30346",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Anhui Conch Cement Company Limited (Class H)",
+   "Ticker": "914.HK",
+   "Identifier": "Y01373102",
+   "Weight": "2.49",
+   "Market Value": "742070.22",
+   "Shares Held": "371002",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "AAC Technologies Holdings Inc.",
+   "Ticker": "2018.HK",
+   "Identifier": "G2953R114",
+   "Weight": "2.46",
+   "Market Value": "733407.7",
+   "Shares Held": "145500",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "BOE Technology Group Co., Ltd. (Class B)",
+   "Ticker": "200725.CH",
+   "Identifier": "Y0920M119",
+   "Weight": "2.27",
+   "Market Value": "678489.26",
+   "Shares Held": "1043583",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "JD Logistics, Inc.",
+   "Ticker": "2618.HK",
+   "Identifier": "G5074S101",
+   "Weight": "2.27",
+   "Market Value": "677555.05",
+   "Shares Held": "529377",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "China Petroleum & Chemical Corporation (Sinopec) (Class H)",
+   "Ticker": "386.HK",
+   "Identifier": "Y15010104",
+   "Weight": "2.21",
+   "Market Value": "658260.72",
+   "Shares Held": "1166914",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "BYD Electronic International Co., Ltd.",
+   "Ticker": "285.HK",
+   "Identifier": "Y1045N107",
+   "Weight": "2.16",
+   "Market Value": "644306.28",
+   "Shares Held": "223042",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Huadian Power International Corp. Ltd. (Class H)",
+   "Ticker": "1071.HK",
+   "Identifier": "Y3738Y101",
+   "Weight": "2.12",
+   "Market Value": "633011.62",
+   "Shares Held": "1250764",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "China Coal Energy Company Limited (Class H)",
+   "Ticker": "1898.HK",
+   "Identifier": "Y1434L100",
+   "Weight": "2.11",
+   "Market Value": "629524.29",
+   "Shares Held": "473459",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "WuXi Biologics (Cayman) Inc.",
+   "Ticker": "2269.HK",
+   "Identifier": "G97008117",
+   "Weight": "2.04",
+   "Market Value": "607942.96",
+   "Shares Held": "89979",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "China National Building Material Company Ltd. (Class H)",
+   "Ticker": "3323.HK",
+   "Identifier": "Y15045100",
+   "Weight": "1.96",
+   "Market Value": "583082.97",
+   "Shares Held": "1456649",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "NIO Inc. (Class A)",
+   "Ticker": "9866.HK",
+   "Identifier": "G6525F102",
+   "Weight": "1.93",
+   "Market Value": "574313.72",
+   "Shares Held": "160552",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Sinopharm Group Co. Ltd. (Class H)",
+   "Ticker": "1099.HK",
+   "Identifier": "Y8008N107",
+   "Weight": "1.87",
+   "Market Value": "556500.95",
+   "Shares Held": "293371",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Contemporary Amperex Technology Co., Ltd. (Class H)",
+   "Ticker": "3750.HK",
+   "Identifier": "Y1R48E113",
+   "Weight": "1.86",
+   "Market Value": "555513.89",
+   "Shares Held": "8904",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "CITIC Securities Co., Ltd. (Class H)",
+   "Ticker": "6030.HK",
+   "Identifier": "Y1639N117",
+   "Weight": "1.78",
+   "Market Value": "531255.72",
+   "Shares Held": "171354",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Hisense Home Appliances Group Co., Ltd. (Class H)",
+   "Ticker": "921.HK",
+   "Identifier": "Y3226R105",
+   "Weight": "1.72",
+   "Market Value": "512064.66",
+   "Shares Held": "191458",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "China Merchants Securities Company, Ltd (Class H)",
+   "Ticker": "6099.HK",
+   "Identifier": "Y14904117",
+   "Weight": "1.67",
+   "Market Value": "497284.71",
+   "Shares Held": "270142",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "The People's Insurance Company (Group) of China Limited (Class H)",
+   "Ticker": "1339.HK",
+   "Identifier": "Y6800A109",
+   "Weight": "1.61",
+   "Market Value": "479004.24",
+   "Shares Held": "663275",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "PICC Property and Casualty Company Limited (Class H)",
+   "Ticker": "2328.HK",
+   "Identifier": "Y6975Z103",
+   "Weight": "1.52",
+   "Market Value": "454068.91",
+   "Shares Held": "216526",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "China CITIC Financial Asset Management Co. Ltd.",
+   "Ticker": "2799.HK",
+   "Identifier": "Y149A8109",
+   "Weight": "1.49",
+   "Market Value": "443324.35",
+   "Shares Held": "5654584",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Yangtze Optical Fibre and Cable Joint Stock Limited Company (Class H)",
+   "Ticker": "6869.HK",
+   "Identifier": "Y9737F100",
+   "Weight": "1.47",
+   "Market Value": "438106.07",
+   "Shares Held": "18427",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "China Pacific Insurance (Group) Co., Ltd. (Class H)",
+   "Ticker": "2601.HK",
+   "Identifier": "Y1505Z103",
+   "Weight": "1.4",
+   "Market Value": "418561.76",
+   "Shares Held": "115610",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Hua Hong Grace Semiconductor Limited (Class H)",
+   "Ticker": "1347.HK",
+   "Identifier": "Y372A7109",
+   "Weight": "1.35",
+   "Market Value": "404033.91",
+   "Shares Held": "28708",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "New China Life Insurance Company Ltd. (Class H)",
+   "Ticker": "1336.HK",
+   "Identifier": "Y625A4115",
+   "Weight": "1.32",
+   "Market Value": "394402.6",
+   "Shares Held": "67580",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "China Everbright Bank Co. Ltd. (Class H)",
+   "Ticker": "6818.HK",
+   "Identifier": "Y1477U124",
+   "Weight": "1.26",
+   "Market Value": "375569.37",
+   "Shares Held": "1061650",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Shanghai Pharmaceuticals Holding Co., Ltd. (Class H)",
+   "Ticker": "2607.HK",
+   "Identifier": "Y7685S108",
+   "Weight": "1.26",
+   "Market Value": "376629.08",
+   "Shares Held": "272797",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Shenzhou International Group Holdings Limited",
+   "Ticker": "2313.HK",
+   "Identifier": "G8087W101",
+   "Weight": "1.15",
+   "Market Value": "343093.93",
+   "Shares Held": "78971",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "CALB Group Co., Ltd. (Class H)",
+   "Ticker": "3931.HK",
+   "Identifier": "G2168A104",
+   "Weight": "0.98",
+   "Market Value": "290913.15",
+   "Shares Held": "132675",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "WuXi XDC Cayman Inc.",
+   "Ticker": "2268.HK",
+   "Identifier": "G9808A105",
+   "Weight": "0.94",
+   "Market Value": "281816.35",
+   "Shares Held": "27292",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Inner Mongolia Yitai Coal Co., Ltd. (Class B)",
+   "Ticker": "900948.CH",
+   "Identifier": "Y40848106",
+   "Weight": "0.92",
+   "Market Value": "273115.73",
+   "Shares Held": "75135",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Midea Group Co., Ltd. (Class H)",
+   "Ticker": "300.HK",
+   "Identifier": "Y6S40V111",
+   "Weight": "0.77",
+   "Market Value": "229225.08",
+   "Shares Held": "18858",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "China Minsheng Banking Corp., Ltd. (Class H)",
+   "Ticker": "1988.HK",
+   "Identifier": "Y1495M112",
+   "Weight": "0.72",
+   "Market Value": "216127.41",
+   "Shares Held": "494998",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Datang International Power Generation Company Limited (Class H)",
+   "Ticker": "991.HK",
+   "Identifier": "Y20020106",
+   "Weight": "0.7",
+   "Market Value": "208701.86",
+   "Shares Held": "647083",
+   "Asset Category": "Utilities"
+  },
+  {
+   "Name": "Sunshine Insurance Group Company Limited (Class H)",
+   "Ticker": "6963.HK",
+   "Identifier": "-",
+   "Weight": "0.68",
+   "Market Value": "203450.67",
+   "Shares Held": "457286",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Yuan Renminbi",
+   "Ticker": "-",
+   "Identifier": "$CNY",
+   "Weight": "0.66",
+   "Market Value": "196781.02",
+   "Shares Held": "1321050",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "China International Capital Corporation Ltd. (Class H)",
+   "Ticker": "3908.HK",
+   "Identifier": "Y1R99Y109",
+   "Weight": "0.63",
+   "Market Value": "187003.94",
+   "Shares Held": "73900",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "CSC Financial Co., Ltd. (Class H)",
+   "Ticker": "6066.HK",
+   "Identifier": "Y1818Y108",
+   "Weight": "0.63",
+   "Market Value": "186653.31",
+   "Shares Held": "129229",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Kuaishou Technology",
+   "Ticker": "1024.HK",
+   "Identifier": "G53263102",
+   "Weight": "0.48",
+   "Market Value": "142872.74",
+   "Shares Held": "37333",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "InnoScience (Suzhou) Technology Holding Co., Ltd. (Class H)",
+   "Ticker": "2577.HK",
+   "Identifier": "Y408LP109",
+   "Weight": "0.4",
+   "Market Value": "120602.3",
+   "Shares Held": "23999",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Hong Kong Dollar",
+   "Ticker": "-",
+   "Identifier": "$HKD",
+   "Weight": "0.11",
+   "Market Value": "31364.58",
+   "Shares Held": "246030",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.04",
+   "Market Value": "13298.84",
+   "Shares Held": "13299",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

@@ -1,0 +1,536 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Bloom Energy Corporation (Class A)",
+   "Ticker": "BE",
+   "Identifier": "093712107",
+   "Weight": "11.08",
+   "Market Value": "62294242.5",
+   "Shares Held": "215775",
+   "Asset Category": "Machinery: Specialty"
+  },
+  {
+   "Name": "Monolithic Power Systems, Inc.",
+   "Ticker": "MPWR",
+   "Identifier": "609839105",
+   "Weight": "8.54",
+   "Market Value": "48013202.16",
+   "Shares Held": "35112",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "ON Semiconductor Corporation",
+   "Ticker": "ON",
+   "Identifier": "682189105",
+   "Weight": "8.25",
+   "Market Value": "46382995.2",
+   "Shares Held": "600816",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Tesla, Inc.",
+   "Ticker": "TSLA",
+   "Identifier": "88160R101",
+   "Weight": "8.01",
+   "Market Value": "45017867.8",
+   "Shares Held": "120980",
+   "Asset Category": "Automobiles"
+  },
+  {
+   "Name": "Rivian Automotive, Inc. (Class A)",
+   "Ticker": "RIVN",
+   "Identifier": "76954A103",
+   "Weight": "6.9",
+   "Market Value": "38764323.78",
+   "Shares Held": "2505774",
+   "Asset Category": "Automobiles"
+  },
+  {
+   "Name": "Nextpower Inc. (Class A)",
+   "Ticker": "NXT",
+   "Identifier": "65290E101",
+   "Weight": "3.9",
+   "Market Value": "21937030.5",
+   "Shares Held": "271330",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Advanced Energy Industries, Inc.",
+   "Ticker": "AEIS",
+   "Identifier": "007973100",
+   "Weight": "3.73",
+   "Market Value": "20995018.24",
+   "Shares Held": "75068",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "First Solar, Inc.",
+   "Ticker": "FSLR",
+   "Identifier": "336433107",
+   "Weight": "3.49",
+   "Market Value": "19590572.69",
+   "Shares Held": "110239",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Enlight Renewable Energy Ltd.",
+   "Ticker": "ENLT",
+   "Identifier": "M4056D110",
+   "Weight": "3.24",
+   "Market Value": "18204544.03",
+   "Shares Held": "262049",
+   "Asset Category": "Alternative Electricity"
+  },
+  {
+   "Name": "Vicor Corporation",
+   "Ticker": "VICR",
+   "Identifier": "925815102",
+   "Weight": "3.23",
+   "Market Value": "18174295.72",
+   "Shares Held": "64457",
+   "Asset Category": "Electrical Components"
+  },
+  {
+   "Name": "Albemarle Corporation",
+   "Ticker": "ALB",
+   "Identifier": "012653101",
+   "Weight": "3.22",
+   "Market Value": "18095025.65",
+   "Shares Held": "164905",
+   "Asset Category": "Chemicals: Diversified"
+  },
+  {
+   "Name": "Acuity Inc.",
+   "Ticker": "AYI",
+   "Identifier": "00508Y102",
+   "Weight": "3.19",
+   "Market Value": "17922336.78",
+   "Shares Held": "56109",
+   "Asset Category": "Building Materials: Other"
+  },
+  {
+   "Name": "MP Materials Corp.",
+   "Ticker": "MP",
+   "Identifier": "553368101",
+   "Weight": "2.9",
+   "Market Value": "16300577.09",
+   "Shares Held": "333823",
+   "Asset Category": "General Mining"
+  },
+  {
+   "Name": "Brookfield Renewable Partners LP",
+   "Ticker": "BEP",
+   "Identifier": "G16258108",
+   "Weight": "2.84",
+   "Market Value": "15947215.21",
+   "Shares Held": "562512",
+   "Asset Category": "Alternative Electricity"
+  },
+  {
+   "Name": "Allegro Microsystems, Inc.",
+   "Ticker": "ALGM",
+   "Identifier": "01749D105",
+   "Weight": "2.28",
+   "Market Value": "12843245.56",
+   "Shares Held": "349381",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "EnerSys",
+   "Ticker": "ENS",
+   "Identifier": "29275Y102",
+   "Weight": "2.15",
+   "Market Value": "12092785.11",
+   "Shares Held": "67599",
+   "Asset Category": "Electrical Components"
+  },
+  {
+   "Name": "Ormat Technologies, Inc.",
+   "Ticker": "ORA",
+   "Identifier": "686688102",
+   "Weight": "1.92",
+   "Market Value": "10792355.58",
+   "Shares Held": "115266",
+   "Asset Category": "Alternative Electricity"
+  },
+  {
+   "Name": "HA Sustainable Infrastructure Capital, Inc.",
+   "Ticker": "HASI",
+   "Identifier": "41068X100",
+   "Weight": "1.56",
+   "Market Value": "8776391.8",
+   "Shares Held": "240845",
+   "Asset Category": "Real Estate Holding and Development"
+  },
+  {
+   "Name": "Enphase Energy, Inc.",
+   "Ticker": "ENPH",
+   "Identifier": "29355A107",
+   "Weight": "1.43",
+   "Market Value": "8024961.6",
+   "Shares Held": "247684",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Itron, Inc.",
+   "Ticker": "ITRI",
+   "Identifier": "465741106",
+   "Weight": "1.31",
+   "Market Value": "7365872.25",
+   "Shares Held": "82071",
+   "Asset Category": "Electronic Equipment: Gauges and Meters"
+  },
+  {
+   "Name": "Clearway Energy, Inc. (Class C)",
+   "Ticker": "CWEN",
+   "Identifier": "18539C204",
+   "Weight": "1.2",
+   "Market Value": "6761451.71",
+   "Shares Held": "227123",
+   "Asset Category": "Alternative Electricity"
+  },
+  {
+   "Name": "Universal Display Corporation",
+   "Ticker": "OLED",
+   "Identifier": "91347P105",
+   "Weight": "1.19",
+   "Market Value": "6667767.62",
+   "Shares Held": "86158",
+   "Asset Category": "Electronic Components"
+  },
+  {
+   "Name": "Navitas Semiconductor Corp. (Class A)",
+   "Ticker": "NVTS",
+   "Identifier": "63942X106",
+   "Weight": "1.06",
+   "Market Value": "5970423.8",
+   "Shares Held": "489379",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Sociedad Quimica y Minera de Chile S.A. (ADR)",
+   "Ticker": "SQM",
+   "Identifier": "833635105",
+   "Weight": "1.06",
+   "Market Value": "5971404.08",
+   "Shares Held": "89272",
+   "Asset Category": "Chemicals: Diversified"
+  },
+  {
+   "Name": "SOLV Energy, Inc. (Class A)",
+   "Ticker": "MWH",
+   "Identifier": "78475V103",
+   "Weight": "1.04",
+   "Market Value": "5844913.2",
+   "Shares Held": "231941",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Power Integrations, Inc.",
+   "Ticker": "POWI",
+   "Identifier": "739276103",
+   "Weight": "0.97",
+   "Market Value": "5468791.72",
+   "Shares Held": "104726",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Plug Power Inc.",
+   "Ticker": "PLUG",
+   "Identifier": "72919P202",
+   "Weight": "0.92",
+   "Market Value": "5185269.54",
+   "Shares Held": "2618823",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "SolarEdge Technologies, Inc.",
+   "Ticker": "SEDG",
+   "Identifier": "83417M104",
+   "Weight": "0.67",
+   "Market Value": "3768657.6",
+   "Shares Held": "115320",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Sunrun Inc.",
+   "Ticker": "RUN",
+   "Identifier": "86771W105",
+   "Weight": "0.65",
+   "Market Value": "3661097.3",
+   "Shares Held": "451430",
+   "Asset Category": "Alternative Electricity"
+  },
+  {
+   "Name": "Renew Energy Global Plc (Class A)",
+   "Ticker": "RNW",
+   "Identifier": "G7500M104",
+   "Weight": "0.56",
+   "Market Value": "3156372.72",
+   "Shares Held": "461458",
+   "Asset Category": "Alternative Electricity"
+  },
+  {
+   "Name": "Lucid Group, Inc. (Class A)",
+   "Ticker": "LCID",
+   "Identifier": "549498202",
+   "Weight": "0.53",
+   "Market Value": "3006195.62",
+   "Shares Held": "738623",
+   "Asset Category": "Automobiles"
+  },
+  {
+   "Name": "Wolfspeed, Inc.",
+   "Ticker": "WOLF",
+   "Identifier": "97785W106",
+   "Weight": "0.49",
+   "Market Value": "2738583.24",
+   "Shares Held": "99332",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "American Superconductor Corporation",
+   "Ticker": "AMSC",
+   "Identifier": "030111207",
+   "Weight": "0.48",
+   "Market Value": "2724817.97",
+   "Shares Held": "90797",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Amprius Technologies, Inc.",
+   "Ticker": "AMPX",
+   "Identifier": "03214Q108",
+   "Weight": "0.47",
+   "Market Value": "2669598.75",
+   "Shares Held": "273805",
+   "Asset Category": "Electrical Components"
+  },
+  {
+   "Name": "FuelCell Energy, Inc.",
+   "Ticker": "FCEL",
+   "Identifier": "35952H700",
+   "Weight": "0.44",
+   "Market Value": "2471224.38",
+   "Shares Held": "149862",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Shoals Technologies Group, Inc. (Class A)",
+   "Ticker": "SHLS",
+   "Identifier": "82489W107",
+   "Weight": "0.42",
+   "Market Value": "2356426.44",
+   "Shares Held": "315452",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Willdan Group, Inc.",
+   "Ticker": "WLDN",
+   "Identifier": "96924N100",
+   "Weight": "0.4",
+   "Market Value": "2252595",
+   "Shares Held": "28550",
+   "Asset Category": "Engineering and Contracting Services"
+  },
+  {
+   "Name": "Eos Energy Enterprises, Inc.",
+   "Ticker": "EOSE",
+   "Identifier": "29415C101",
+   "Weight": "0.38",
+   "Market Value": "2160349.91",
+   "Shares Held": "682575",
+   "Asset Category": "Electronic Equipment: Other"
+  },
+  {
+   "Name": "Fluence Energy, Inc. (Class A)",
+   "Ticker": "FLNC",
+   "Identifier": "34379V103",
+   "Weight": "0.37",
+   "Market Value": "2106453.3",
+   "Shares Held": "268338",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "T1 Energy Inc.",
+   "Ticker": "TE",
+   "Identifier": "35834F104",
+   "Weight": "0.37",
+   "Market Value": "2086371",
+   "Shares Held": "551950",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Sigma Lithium Corporation",
+   "Ticker": "SGML",
+   "Identifier": "826599102",
+   "Weight": "0.36",
+   "Market Value": "2021303.36",
+   "Shares Held": "210992",
+   "Asset Category": "General Mining"
+  },
+  {
+   "Name": "XPLR Infrastructure LP",
+   "Ticker": "XIFR",
+   "Identifier": "65341B106",
+   "Weight": "0.33",
+   "Market Value": "1864185",
+   "Shares Held": "176700",
+   "Asset Category": "Alternative Electricity"
+  },
+  {
+   "Name": "Energy Vault Holdings, Inc.",
+   "Ticker": "NRGV",
+   "Identifier": "29280W109",
+   "Weight": "0.27",
+   "Market Value": "1499652",
+   "Shares Held": "340830",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "LSI Industries Inc.",
+   "Ticker": "LYTS",
+   "Identifier": "50216C108",
+   "Weight": "0.26",
+   "Market Value": "1451245.08",
+   "Shares Held": "68812",
+   "Asset Category": "Building Materials: Other"
+  },
+  {
+   "Name": "Ameresco, Inc. (Class A)",
+   "Ticker": "AMRC",
+   "Identifier": "02361E108",
+   "Weight": "0.25",
+   "Market Value": "1411794.48",
+   "Shares Held": "65726",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Array Technologies, Inc.",
+   "Ticker": "ARRY",
+   "Identifier": "04271T100",
+   "Weight": "0.21",
+   "Market Value": "1163311.89",
+   "Shares Held": "288663",
+   "Asset Category": "Renewable Energy Equipment"
+  },
+  {
+   "Name": "Ballard Power Systems Inc.",
+   "Ticker": "BLDP",
+   "Identifier": "058586108",
+   "Weight": "0.21",
+   "Market Value": "1203720.51",
+   "Shares Held": "565127",
+   "Asset Category": "Alternative Fuels"
+  },
+  {
+   "Name": "Enovix Corporation",
+   "Ticker": "ENVX",
+   "Identifier": "293594107",
+   "Weight": "0.21",
+   "Market Value": "1180494.14",
+   "Shares Held": "411322",
+   "Asset Category": "Electrical Components"
+  },
+  {
+   "Name": "Polestar Automotive Holding UK Plc (Class A) (ADR)",
+   "Ticker": "PSNY",
+   "Identifier": "731105409",
+   "Weight": "0.15",
+   "Market Value": "842092.02",
+   "Shares Held": "121514",
+   "Asset Category": "Automobiles"
+  },
+  {
+   "Name": "Aspen Aerogels, Inc.",
+   "Ticker": "ASPN",
+   "Identifier": "04523Y105",
+   "Weight": "0.14",
+   "Market Value": "811965.78",
+   "Shares Held": "155549",
+   "Asset Category": "Building Materials: Other"
+  },
+  {
+   "Name": "Montauk Renewables, Inc.",
+   "Ticker": "MNTK",
+   "Identifier": "61218C103",
+   "Weight": "0.14",
+   "Market Value": "781712.28",
+   "Shares Held": "266796",
+   "Asset Category": "Alternative Fuels"
+  },
+  {
+   "Name": "Clean Energy Fuels Corp.",
+   "Ticker": "CLNE",
+   "Identifier": "184499101",
+   "Weight": "0.12",
+   "Market Value": "661104",
+   "Shares Held": "413190",
+   "Asset Category": "Specialty Retailers"
+  },
+  {
+   "Name": "Gevo, Inc.",
+   "Ticker": "GEVO",
+   "Identifier": "374396406",
+   "Weight": "0.12",
+   "Market Value": "648769.8",
+   "Shares Held": "463407",
+   "Asset Category": "Alternative Fuels"
+  },
+  {
+   "Name": "Electrovaya Inc.",
+   "Ticker": "ELVA",
+   "Identifier": "28617B606",
+   "Weight": "0.1",
+   "Market Value": "589241.9",
+   "Shares Held": "92794",
+   "Asset Category": "Electrical Components"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.1",
+   "Market Value": "557378.85",
+   "Shares Held": "557379",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "EVgo Inc.",
+   "Ticker": "EVGO",
+   "Identifier": "30052F100",
+   "Weight": "0.07",
+   "Market Value": "366561.12",
+   "Shares Held": "265624",
+   "Asset Category": "Alternative Fuels"
+  },
+  {
+   "Name": "Elevra Lithium Limited (ADR)",
+   "Ticker": "ELVR",
+   "Identifier": "805700101",
+   "Weight": "0.05",
+   "Market Value": "289057.11",
+   "Shares Held": "6977",
+   "Asset Category": "Nonferrous Metals"
+  },
+  {
+   "Name": "NeoVolta, Inc.",
+   "Ticker": "NEOV",
+   "Identifier": "640655106",
+   "Weight": "0.04",
+   "Market Value": "232359",
+   "Shares Held": "106100",
+   "Asset Category": "Electrical Components"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

@@ -1,0 +1,608 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Everpure, Inc. (Class A)",
+   "Ticker": "P",
+   "Identifier": "74624M102",
+   "Weight": "4.69",
+   "Market Value": "157148460",
+   "Shares Held": "1247210",
+   "Asset Category": "Technology Hardware, Storage & Peripherals"
+  },
+  {
+   "Name": "DigitalOcean Holdings, Inc.",
+   "Ticker": "DOCN",
+   "Identifier": "25402D102",
+   "Weight": "4.37",
+   "Market Value": "146363389.25",
+   "Shares Held": "1047323",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Arista Networks, Inc.",
+   "Ticker": "ANET",
+   "Identifier": "040413205",
+   "Weight": "3.65",
+   "Market Value": "122361459.3",
+   "Shares Held": "592406",
+   "Asset Category": "Communications Equipment"
+  },
+  {
+   "Name": "Microsoft Corporation",
+   "Ticker": "MSFT",
+   "Identifier": "594918104",
+   "Weight": "3.52",
+   "Market Value": "117957749.25",
+   "Shares Held": "228525",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Alphabet Inc. (Class A)",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K305",
+   "Weight": "3.5",
+   "Market Value": "117489606.48",
+   "Shares Held": "341619",
+   "Asset Category": "Interactive Media & Services"
+  },
+  {
+   "Name": "Nutanix, Inc. (Class A)",
+   "Ticker": "NTNX",
+   "Identifier": "67059N108",
+   "Weight": "3.43",
+   "Market Value": "115015191.62",
+   "Shares Held": "1690654",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "International Business Machines Corporation",
+   "Ticker": "IBM",
+   "Identifier": "459200101",
+   "Weight": "3.33",
+   "Market Value": "111783953.94",
+   "Shares Held": "495694",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Amazon.com, Inc.",
+   "Ticker": "AMZN",
+   "Identifier": "023135106",
+   "Weight": "3.32",
+   "Market Value": "111420979.91",
+   "Shares Held": "446273",
+   "Asset Category": "Broadline Retail"
+  },
+  {
+   "Name": "Oracle Corporation",
+   "Ticker": "ORCL",
+   "Identifier": "68389X105",
+   "Weight": "3.18",
+   "Market Value": "106583596.5",
+   "Shares Held": "777415",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "CoreWeave, Inc. (Class A)",
+   "Ticker": "CRWV",
+   "Identifier": "21873S108",
+   "Weight": "2.97",
+   "Market Value": "99679434.57",
+   "Shares Held": "1138023",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Cloudflare, Inc. (Class A)",
+   "Ticker": "NET",
+   "Identifier": "18915M107",
+   "Weight": "2.64",
+   "Market Value": "88407813.06",
+   "Shares Held": "253303",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Lumen Technologies, Inc.",
+   "Ticker": "LUMN",
+   "Identifier": "550241103",
+   "Weight": "2.63",
+   "Market Value": "88259949.64",
+   "Shares Held": "15457084",
+   "Asset Category": "Diversified Telecommunication Services"
+  },
+  {
+   "Name": "MongoDB, Inc.",
+   "Ticker": "MDB",
+   "Identifier": "60937P106",
+   "Weight": "2.61",
+   "Market Value": "87458607.4",
+   "Shares Held": "213085",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Akamai Technologies, Inc.",
+   "Ticker": "AKAM",
+   "Identifier": "00971T101",
+   "Weight": "2.42",
+   "Market Value": "81070816.68",
+   "Shares Held": "711522",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Cisco Systems, Inc.",
+   "Ticker": "CSCO",
+   "Identifier": "17275R102",
+   "Weight": "2.23",
+   "Market Value": "74634302.6",
+   "Shares Held": "699478",
+   "Asset Category": "Communications Equipment"
+  },
+  {
+   "Name": "Dell Technologies Inc. (Class C)",
+   "Ticker": "DELL",
+   "Identifier": "24703L202",
+   "Weight": "2.13",
+   "Market Value": "71550073.68",
+   "Shares Held": "127112",
+   "Asset Category": "Technology Hardware, Storage & Peripherals"
+  },
+  {
+   "Name": "Hewlett Packard Enterprise Company",
+   "Ticker": "HPE",
+   "Identifier": "42824C109",
+   "Weight": "2.08",
+   "Market Value": "69836524.62",
+   "Shares Held": "1109573",
+   "Asset Category": "Technology Hardware, Storage & Peripherals"
+  },
+  {
+   "Name": "Rubrik, Inc. (Class A)",
+   "Ticker": "RBRK",
+   "Identifier": "781154109",
+   "Weight": "2.04",
+   "Market Value": "68249759.55",
+   "Shares Held": "623001",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Twilio Inc. (Class A)",
+   "Ticker": "TWLO",
+   "Identifier": "90138F102",
+   "Weight": "2.02",
+   "Market Value": "67845696.8",
+   "Shares Held": "245996",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Netskope, Inc. (Class A)",
+   "Ticker": "NTSK",
+   "Identifier": "64119N608",
+   "Weight": "2",
+   "Market Value": "66899097.09",
+   "Shares Held": "3786027",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Fastly, Inc. (Class A)",
+   "Ticker": "FSLY",
+   "Identifier": "31188V100",
+   "Weight": "1.89",
+   "Market Value": "63483264",
+   "Shares Held": "2543400",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "RingCentral, Inc. (Class A)",
+   "Ticker": "RNG",
+   "Identifier": "76680R206",
+   "Weight": "1.89",
+   "Market Value": "63409140.48",
+   "Shares Held": "832578",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "NetApp, Inc.",
+   "Ticker": "NTAP",
+   "Identifier": "64110D104",
+   "Weight": "1.88",
+   "Market Value": "62923788.25",
+   "Shares Held": "312828",
+   "Asset Category": "Technology Hardware, Storage & Peripherals"
+  },
+  {
+   "Name": "SentinelOne, Inc. (Class A)",
+   "Ticker": "S",
+   "Identifier": "81730H109",
+   "Weight": "1.75",
+   "Market Value": "58698443.04",
+   "Shares Held": "2622808",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "GitLab Inc. (Class A)",
+   "Ticker": "GTLB",
+   "Identifier": "37637K108",
+   "Weight": "1.74",
+   "Market Value": "58343948.59",
+   "Shares Held": "1245468",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Applovin Corp. (Class A)",
+   "Ticker": "APP",
+   "Identifier": "03831W108",
+   "Weight": "1.72",
+   "Market Value": "57720880.25",
+   "Shares Held": "185747",
+   "Asset Category": "Media"
+  },
+  {
+   "Name": "Atlassian Corporation (Class A)",
+   "Ticker": "TEAM",
+   "Identifier": "049468101",
+   "Weight": "1.67",
+   "Market Value": "56044520.28",
+   "Shares Held": "298522",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Shopify Inc. (Class A)",
+   "Ticker": "SHOP",
+   "Identifier": "82509L107",
+   "Weight": "1.67",
+   "Market Value": "55950339",
+   "Shares Held": "393324",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "ServiceNow, Inc.",
+   "Ticker": "NOW",
+   "Identifier": "81762P102",
+   "Weight": "1.58",
+   "Market Value": "53119099.12",
+   "Shares Held": "391676",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Salesforce, Inc.",
+   "Ticker": "CRM",
+   "Identifier": "79466L302",
+   "Weight": "1.57",
+   "Market Value": "52670647.38",
+   "Shares Held": "225069",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Five9, Inc.",
+   "Ticker": "FIVN",
+   "Identifier": "338307101",
+   "Weight": "1.54",
+   "Market Value": "51526112.68",
+   "Shares Held": "1440484",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Workiva Inc.",
+   "Ticker": "WK",
+   "Identifier": "98139A105",
+   "Weight": "1.5",
+   "Market Value": "50457731.64",
+   "Shares Held": "724551",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "HubSpot, Inc.",
+   "Ticker": "HUBS",
+   "Identifier": "443573100",
+   "Weight": "1.41",
+   "Market Value": "47403043.46",
+   "Shares Held": "221779",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Adobe Incorporated",
+   "Ticker": "ADBE",
+   "Identifier": "00724F101",
+   "Weight": "1.39",
+   "Market Value": "46616466.84",
+   "Shares Held": "197972",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "SAP SE (ADR)",
+   "Ticker": "SAP",
+   "Identifier": "803054204",
+   "Weight": "1.1",
+   "Market Value": "36856569.88",
+   "Shares Held": "174941",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "ServiceTitan, Inc. (Class A)",
+   "Ticker": "TTAN",
+   "Identifier": "81764X103",
+   "Weight": "1.02",
+   "Market Value": "34320785.4",
+   "Shares Held": "591228",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Wix.com Ltd.",
+   "Ticker": "WIX",
+   "Identifier": "M98068105",
+   "Weight": "0.96",
+   "Market Value": "32310943.83",
+   "Shares Held": "437877",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Appian Corporation",
+   "Ticker": "APPN",
+   "Identifier": "03782L101",
+   "Weight": "0.78",
+   "Market Value": "26057700.24",
+   "Shares Held": "723624",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Datadog, Inc. (Class A)",
+   "Ticker": "DDOG",
+   "Identifier": "23804L103",
+   "Weight": "0.65",
+   "Market Value": "21855544.43",
+   "Shares Held": "81511",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "CrowdStrike Holdings, Inc. (Class A)",
+   "Ticker": "CRWD",
+   "Identifier": "22788C105",
+   "Weight": "0.63",
+   "Market Value": "21088657.46",
+   "Shares Held": "83642",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "DocuSign, Inc.",
+   "Ticker": "DOCU",
+   "Identifier": "256163106",
+   "Weight": "0.59",
+   "Market Value": "19679962.5",
+   "Shares Held": "291555",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Zscaler, Inc.",
+   "Ticker": "ZS",
+   "Identifier": "98980G102",
+   "Weight": "0.59",
+   "Market Value": "19799787.15",
+   "Shares Held": "102563",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Snowflake Inc. (Class A)",
+   "Ticker": "SNOW",
+   "Identifier": "833445109",
+   "Weight": "0.58",
+   "Market Value": "19584294.18",
+   "Shares Held": "58297",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Palo Alto Networks, Inc.",
+   "Ticker": "PANW",
+   "Identifier": "697435105",
+   "Weight": "0.57",
+   "Market Value": "18947978.62",
+   "Shares Held": "50563",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Veeva Systems Inc. (Class A)",
+   "Ticker": "VEEV",
+   "Identifier": "922475108",
+   "Weight": "0.57",
+   "Market Value": "18982669.08",
+   "Shares Held": "67631",
+   "Asset Category": "Health Care Technology"
+  },
+  {
+   "Name": "Workday, Inc. (Class A)",
+   "Ticker": "WDAY",
+   "Identifier": "98138H101",
+   "Weight": "0.55",
+   "Market Value": "18538629.75",
+   "Shares Held": "97855",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Dropbox, Inc. (Class A)",
+   "Ticker": "DBX",
+   "Identifier": "26210C104",
+   "Weight": "0.53",
+   "Market Value": "17745554.56",
+   "Shares Held": "549058",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Paycom Software, Inc.",
+   "Ticker": "PAYC",
+   "Identifier": "70432V102",
+   "Weight": "0.53",
+   "Market Value": "17815152.14",
+   "Shares Held": "80809",
+   "Asset Category": "Professional Services"
+  },
+  {
+   "Name": "Qualys, Inc.",
+   "Ticker": "QLYS",
+   "Identifier": "74758T303",
+   "Weight": "0.53",
+   "Market Value": "17898234",
+   "Shares Held": "103800",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "The Trade Desk, Inc. (Class A)",
+   "Ticker": "TTD",
+   "Identifier": "88339J105",
+   "Weight": "0.53",
+   "Market Value": "17744101.2",
+   "Shares Held": "1408262",
+   "Asset Category": "Media"
+  },
+  {
+   "Name": "Zoom Communications, Inc. (Class A)",
+   "Ticker": "ZM",
+   "Identifier": "98980L101",
+   "Weight": "0.53",
+   "Market Value": "17928453.79",
+   "Shares Held": "199849",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Blackbaud, Inc.",
+   "Ticker": "BLKB",
+   "Identifier": "09227Q100",
+   "Weight": "0.52",
+   "Market Value": "17363459.75",
+   "Shares Held": "402025",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Elastic N.V.",
+   "Ticker": "ESTC",
+   "Identifier": "N14506104",
+   "Weight": "0.52",
+   "Market Value": "17453575.92",
+   "Shares Held": "198066",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Open Text Corporation",
+   "Ticker": "OTEX",
+   "Identifier": "683715106",
+   "Weight": "0.52",
+   "Market Value": "17445812.75",
+   "Shares Held": "775025",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Paylocity Holding Corporation",
+   "Ticker": "PCTY",
+   "Identifier": "70438V106",
+   "Weight": "0.52",
+   "Market Value": "17287006.55",
+   "Shares Held": "120593",
+   "Asset Category": "Professional Services"
+  },
+  {
+   "Name": "Toast, Inc. (Class A)",
+   "Ticker": "TOST",
+   "Identifier": "888787108",
+   "Weight": "0.52",
+   "Market Value": "17343315",
+   "Shares Held": "566775",
+   "Asset Category": "Financial Services"
+  },
+  {
+   "Name": "Asana, Inc. (Class A)",
+   "Ticker": "ASAN",
+   "Identifier": "04342Y104",
+   "Weight": "0.51",
+   "Market Value": "16986220.46",
+   "Shares Held": "1883173",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Box, Inc. (Class A)",
+   "Ticker": "BOX",
+   "Identifier": "10316T104",
+   "Weight": "0.51",
+   "Market Value": "16950725.56",
+   "Shares Held": "540004",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "AppFolio, Inc. (Class A)",
+   "Ticker": "APPF",
+   "Identifier": "03783C100",
+   "Weight": "0.5",
+   "Market Value": "16847333.12",
+   "Shares Held": "82496",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Q2 Holdings, Inc.",
+   "Ticker": "QTWO",
+   "Identifier": "74736L109",
+   "Weight": "0.5",
+   "Market Value": "16674482.97",
+   "Shares Held": "297069",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "BlackLine, Inc.",
+   "Ticker": "BL",
+   "Identifier": "09239B109",
+   "Weight": "0.49",
+   "Market Value": "16279515.81",
+   "Shares Held": "581619",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Figma, Inc. (Class A)",
+   "Ticker": "FIG",
+   "Identifier": "316841105",
+   "Weight": "0.44",
+   "Market Value": "14654422.5",
+   "Shares Held": "702850",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Intuit Inc.",
+   "Ticker": "INTU",
+   "Identifier": "461202103",
+   "Weight": "0.44",
+   "Market Value": "14830607.25",
+   "Shares Held": "53775",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Klaviyo, Inc. (Class A)",
+   "Ticker": "KVYO",
+   "Identifier": "49845K101",
+   "Weight": "0.44",
+   "Market Value": "14833687.8",
+   "Shares Held": "938841",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Rackspace Technology, Inc.",
+   "Ticker": "RXT",
+   "Identifier": "750102105",
+   "Weight": "0.35",
+   "Market Value": "11799840.44",
+   "Shares Held": "2972252",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.02",
+   "Market Value": "560362.18",
+   "Shares Held": "560362",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

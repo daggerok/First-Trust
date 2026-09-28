@@ -1,0 +1,142 @@
+{
+ "ticker": "MDEV",
+ "name": "First Trust Indxx Medical Devices ETF",
+ "category": "Thematic",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=MDEV",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=MDEV",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=MDEV",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=MDEV",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/MDEV",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Health Care",
+ "identifiers": {
+  "cusip": "33738R639",
+  "isin": "US33738R6392",
+  "iopv": "MDEVIV",
+  "indexTicker": "Indxx Medical Devices Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2021-06-22",
+  "exchange": "Cboe BZX"
+ },
+ "expenseRatio": {
+  "display": "0.70%",
+  "value": 0.7,
+  "gross": 0.7,
+  "net": null,
+  "asOfDate": "2026-08-03"
+ },
+ "nav": {
+  "display": "$20.92",
+  "value": 20.92,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$20.82",
+  "value": 20.82,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$3.14M",
+  "value": 3138507,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 150002
+ },
+ "yields": {
+  "dividendYield": 0.1,
+  "dividendYieldText": "0.10%",
+  "dividendYieldKind": "First Trust published 12-month distribution rate as of Aug 31 2026",
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": 0.27,
+  "secYieldText": "0.27%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Aug 31 2026",
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 12.73,
+   "ytd": 1.59,
+   "yr1": 4.26,
+   "yr3": 3.02,
+   "yr5": -4.68,
+   "yr10": null,
+   "sinceInception": -3.1
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 0.74,
+   "ytd": -8.74,
+   "yr1": -6.65,
+   "yr3": -2.86,
+   "yr5": -5.39,
+   "yr10": null,
+   "sinceInception": -5.25
+  }
+ },
+ "distributions": {
+  "frequency": "Annually",
+  "latestAmount": 0.0217,
+  "latestExDate": "2026-06-25",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2026-06-25",
+    "2026-06-25",
+    "2026-06-30",
+    "0.021700",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 54,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1321,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 54,
+ "historyCount": 1321,
+ "distributionCount": 1,
+ "netAssets": 3138507,
+ "dividendYield": 0.1,
+ "secYield": 0.27
+}

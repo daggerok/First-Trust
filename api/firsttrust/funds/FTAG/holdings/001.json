@@ -1,0 +1,536 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Deere & Company",
+   "Ticker": "DE",
+   "Identifier": "244199105",
+   "Weight": "10.63",
+   "Market Value": "1539725.8",
+   "Shares Held": "2230",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Bayer AG",
+   "Ticker": "BAYN.GY",
+   "Identifier": "D0712D163",
+   "Weight": "10.18",
+   "Market Value": "1474948.55",
+   "Shares Held": "25875",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Corteva Inc.",
+   "Ticker": "CTVA",
+   "Identifier": "22052L104",
+   "Weight": "9.52",
+   "Market Value": "1379203.8",
+   "Shares Held": "17565",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "BASF SE",
+   "Ticker": "BAS.GY",
+   "Identifier": "D06216317",
+   "Weight": "9.34",
+   "Market Value": "1352692.29",
+   "Shares Held": "23542",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Mahindra & Mahindra Ltd.",
+   "Ticker": "MM.IS",
+   "Identifier": "Y54164150",
+   "Weight": "4.53",
+   "Market Value": "656425.95",
+   "Shares Held": "20725",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Nutrien Ltd.",
+   "Ticker": "NTR.CN",
+   "Identifier": "67077M108",
+   "Weight": "4.23",
+   "Market Value": "613017.18",
+   "Shares Held": "8485",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Bunge Global S.A.",
+   "Ticker": "BG",
+   "Identifier": "H11356104",
+   "Weight": "4.18",
+   "Market Value": "605931",
+   "Shares Held": "5559",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Kubota Corporation",
+   "Ticker": "6326.JP",
+   "Identifier": "J36662138",
+   "Weight": "4.03",
+   "Market Value": "583933.32",
+   "Shares Held": "33000",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Wilmar International Limited",
+   "Ticker": "WIL.SP",
+   "Identifier": "Y9586L109",
+   "Weight": "3.69",
+   "Market Value": "534686.08",
+   "Shares Held": "185600",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "CF Industries Holdings, Inc.",
+   "Ticker": "CF",
+   "Identifier": "125269100",
+   "Weight": "3.47",
+   "Market Value": "503057.29",
+   "Shares Held": "4387",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Industries Qatar Q.S.C.",
+   "Ticker": "IQCD.QD",
+   "Identifier": "M56303106",
+   "Weight": "3.25",
+   "Market Value": "470524.96",
+   "Shares Held": "175441",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "CNH Industrial N.V.",
+   "Ticker": "CNH",
+   "Identifier": "N20944109",
+   "Weight": "3.24",
+   "Market Value": "469708.47",
+   "Shares Held": "35883",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Evonik Industries AG",
+   "Ticker": "EVK.GY",
+   "Identifier": "D2R90Y117",
+   "Weight": "2.06",
+   "Market Value": "298331.07",
+   "Shares Held": "13515",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Sociedad Quimica y Minera de Chile S.A. (ADR)",
+   "Ticker": "SQM",
+   "Identifier": "833635105",
+   "Weight": "1.91",
+   "Market Value": "276924.6",
+   "Shares Held": "4140",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "The Toro Company",
+   "Ticker": "TTC",
+   "Identifier": "891092108",
+   "Weight": "1.84",
+   "Market Value": "266579.6",
+   "Shares Held": "2744",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "PETRONAS Chemicals Group Bhd",
+   "Ticker": "PCHEM.MK",
+   "Identifier": "Y6811G103",
+   "Weight": "1.76",
+   "Market Value": "255580.64",
+   "Shares Held": "231901",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "AGCO Corporation",
+   "Ticker": "AGCO",
+   "Identifier": "001084102",
+   "Weight": "1.65",
+   "Market Value": "239580.6",
+   "Shares Held": "2030",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The Mosaic Company",
+   "Ticker": "MOS",
+   "Identifier": "61945C103",
+   "Weight": "1.46",
+   "Market Value": "212060.16",
+   "Shares Held": "9216",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Nissan Chemical Industries, Ltd.",
+   "Ticker": "4021.JP",
+   "Identifier": "J56988108",
+   "Weight": "1.43",
+   "Market Value": "206906.88",
+   "Shares Held": "3900",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "ICL Group Ltd.",
+   "Ticker": "ICL.IT",
+   "Identifier": "M53213100",
+   "Weight": "1.36",
+   "Market Value": "196292.52",
+   "Shares Held": "37461",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Sumitomo Chemical Co., Ltd.",
+   "Ticker": "4005.JP",
+   "Identifier": "J77153120",
+   "Weight": "1.24",
+   "Market Value": "179715.3",
+   "Shares Held": "48200",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Coromandel International Ltd.",
+   "Ticker": "CRIN.IS",
+   "Identifier": "Y1754W140",
+   "Weight": "1.21",
+   "Market Value": "175274.84",
+   "Shares Held": "8552",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Mitsui Chemicals, Inc.",
+   "Ticker": "4183.JP",
+   "Identifier": "J4466L136",
+   "Weight": "1.03",
+   "Market Value": "149781.54",
+   "Shares Held": "11100",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "UPL Ltd.",
+   "Ticker": "UPLL.IS",
+   "Identifier": "Y9305P100",
+   "Weight": "0.97",
+   "Market Value": "140470.89",
+   "Shares Held": "24471",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Dyno Nobel Limited",
+   "Ticker": "DNL.AU",
+   "Identifier": "Q3311A123",
+   "Weight": "0.95",
+   "Market Value": "138310.13",
+   "Shares Held": "50732",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "SiteOne Landscape Supply, Inc.",
+   "Ticker": "SITE",
+   "Identifier": "82982L103",
+   "Weight": "0.8",
+   "Market Value": "115598.46",
+   "Shares Held": "1266",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Bucher Industries AG (Registered)",
+   "Ticker": "BUCN.SW",
+   "Identifier": "H10914176",
+   "Weight": "0.78",
+   "Market Value": "112722.08",
+   "Shares Held": "286",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "PI Industries Limited",
+   "Ticker": "PI.IS",
+   "Identifier": "Y6978D141",
+   "Weight": "0.76",
+   "Market Value": "110153.67",
+   "Shares Held": "4398",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Escorts Kubota Limited",
+   "Ticker": "ESCORTS.IS",
+   "Identifier": "Y2296W127",
+   "Weight": "0.67",
+   "Market Value": "96647.81",
+   "Shares Held": "3243",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "K+S AG",
+   "Ticker": "SDF.GR",
+   "Identifier": "D48164129",
+   "Weight": "0.64",
+   "Market Value": "92692.9",
+   "Shares Held": "5194",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Gubre Fabrikalari T.A.S.",
+   "Ticker": "GUBRF.TI",
+   "Identifier": "M5246E108",
+   "Weight": "0.63",
+   "Market Value": "90572.03",
+   "Shares Held": "9683",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "The Scotts Miracle-Gro Company",
+   "Ticker": "SMG",
+   "Identifier": "810186106",
+   "Weight": "0.59",
+   "Market Value": "85902.32",
+   "Shares Held": "1688",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "KWS Saat SE & Co. KGaA",
+   "Ticker": "KWS.GY",
+   "Identifier": "D39062100",
+   "Weight": "0.53",
+   "Market Value": "77105.29",
+   "Shares Held": "957",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Sumitomo Chemical India Limited",
+   "Ticker": "SUMICHEM.IS",
+   "Identifier": "Y81880109",
+   "Weight": "0.47",
+   "Market Value": "67397.93",
+   "Shares Held": "14469",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Orbia Advance Corporacion, S.A.B. de C.V.",
+   "Ticker": "-",
+   "Identifier": "P7S81Y105",
+   "Weight": "0.44",
+   "Market Value": "63633.05",
+   "Shares Held": "57005",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Alamo Group Inc.",
+   "Ticker": "ALG",
+   "Identifier": "011311107",
+   "Weight": "0.39",
+   "Market Value": "56285.85",
+   "Shares Held": "353",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Chambal Fertilisers and Chemicals Limited",
+   "Ticker": "CHMB.IS",
+   "Identifier": "Y12916139",
+   "Weight": "0.35",
+   "Market Value": "50656.91",
+   "Shares Held": "11614",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "China XLX Fertiliser Ltd.",
+   "Ticker": "1866.HK",
+   "Identifier": "Y1564X106",
+   "Weight": "0.34",
+   "Market Value": "48582.92",
+   "Shares Held": "37658",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Paradeep Phosphates Limited",
+   "Ticker": "PARADEEP.IS",
+   "Identifier": "Y6S94E114",
+   "Weight": "0.34",
+   "Market Value": "48849.39",
+   "Shares Held": "30104",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Tata Chemicals Limited",
+   "Ticker": "TTCH.IS",
+   "Identifier": "Y85478116",
+   "Weight": "0.34",
+   "Market Value": "49613.55",
+   "Shares Held": "7385",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "BASF India Limited",
+   "Ticker": "BASF.IS",
+   "Identifier": "Y0710H114",
+   "Weight": "0.32",
+   "Market Value": "46361.23",
+   "Shares Held": "1255",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Nippon Soda Co., Ltd.",
+   "Ticker": "4041.JP",
+   "Identifier": "J55870109",
+   "Weight": "0.27",
+   "Market Value": "39435.19",
+   "Shares Held": "1600",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Yamabiko Corporation",
+   "Ticker": "6250.JP",
+   "Identifier": "J95558102",
+   "Weight": "0.26",
+   "Market Value": "37291.69",
+   "Shares Held": "1300",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Sakata Seed Corporation",
+   "Ticker": "1377.JP",
+   "Identifier": "J66704107",
+   "Weight": "0.25",
+   "Market Value": "36299.46",
+   "Shares Held": "1300",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Taiwan Fertilizer Co., Ltd.",
+   "Ticker": "1722.TT",
+   "Identifier": "Y84171100",
+   "Weight": "0.25",
+   "Market Value": "36865.65",
+   "Shares Held": "28412",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "FMC Corporation",
+   "Ticker": "FMC",
+   "Identifier": "302491303",
+   "Weight": "0.24",
+   "Market Value": "34775.4",
+   "Shares Held": "3630",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Lindsay Corporation",
+   "Ticker": "LNN",
+   "Identifier": "535555106",
+   "Weight": "0.23",
+   "Market Value": "33703.75",
+   "Shares Held": "295",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Zoomlion Heavy Industry Science and Technology Co., Ltd. (Class H)",
+   "Ticker": "1157.HK",
+   "Identifier": "Y9895V103",
+   "Weight": "0.22",
+   "Market Value": "32236.39",
+   "Shares Held": "44955",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Sinofert Holdings Limited",
+   "Ticker": "297.HK",
+   "Identifier": "G8403G103",
+   "Weight": "0.21",
+   "Market Value": "31022.87",
+   "Shares Held": "204498",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Tres Tentos Agroindustrial S.A.",
+   "Ticker": "TTEN3.BZ",
+   "Identifier": "P9368F106",
+   "Weight": "0.2",
+   "Market Value": "28469.58",
+   "Shares Held": "14555",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Turk Traktor ve Ziraat Makineleri A.S.",
+   "Ticker": "TTRAK.TI",
+   "Identifier": "M9044T101",
+   "Weight": "0.17",
+   "Market Value": "24119.75",
+   "Shares Held": "2902",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "First Tractor Company Limited (Class H)",
+   "Ticker": "38.HK",
+   "Identifier": "Y25714109",
+   "Weight": "0.09",
+   "Market Value": "13496.41",
+   "Shares Held": "12148",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.02",
+   "Market Value": "3416.56",
+   "Shares Held": "3417",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Indian Rupee",
+   "Ticker": "-",
+   "Identifier": "$INR",
+   "Weight": "0.01",
+   "Market Value": "2137.89",
+   "Shares Held": "204855",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Mexican Peso",
+   "Ticker": "-",
+   "Identifier": "$MXN",
+   "Weight": "0",
+   "Market Value": "0.07",
+   "Shares Held": "1",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "New Turkish Lira",
+   "Ticker": "-",
+   "Identifier": "$TRY",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "0",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "PhosAgro PJSC",
+   "Ticker": "PHOR.RX",
+   "Identifier": "X65078101",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "1918",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Singapore Dollar",
+   "Ticker": "-",
+   "Identifier": "$SGD",
+   "Weight": "0",
+   "Market Value": "0.63",
+   "Shares Held": "1",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

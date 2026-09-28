@@ -1,0 +1,169 @@
+{
+ "ticker": "ACYN",
+ "name": "FT Vest Laddered Autocallable Barrier & Income ETF",
+ "category": "Income",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=ACYN",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=ACYN",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=ACYN",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=ACYN",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/ACYN",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Target Outcome Strategies",
+ "identifiers": {
+  "cusip": "33733E690",
+  "isin": "US33733E6905",
+  "iopv": null,
+  "indexTicker": "S&P 500 Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2026-02-24",
+  "exchange": "NYSE Arca"
+ },
+ "expenseRatio": {
+  "display": "0.75%",
+  "value": 0.75,
+  "gross": 0.75,
+  "net": null,
+  "asOfDate": "2026-05-01"
+ },
+ "nav": {
+  "display": "$20.73",
+  "value": 20.73,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$20.83",
+  "value": 20.83,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.48%",
+  "value": 0.48,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$2.19B",
+  "value": 2187264924,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 105500002
+ },
+ "yields": {
+  "dividendYield": 9.95,
+  "dividendYieldText": "9.95%",
+  "dividendYieldKind": "Indicated from the latest ordinary distribution per share x inferred payments per year / market price",
+  "distributionRate": 10.01,
+  "distributionPerShare": null,
+  "secYield": 2.88,
+  "secYieldText": "2.88%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Aug 31 2026",
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 2.72,
+   "ytd": null,
+   "yr1": null,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 7.35
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 4.15,
+   "ytd": null,
+   "yr1": null,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 5.09
+  }
+ },
+ "distributions": {
+  "frequency": "Monthly",
+  "latestAmount": 0.1728,
+  "latestExDate": "2026-09-01",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2026-09-01",
+    "2026-09-01",
+    "2026-09-02",
+    "0.172800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-08-03",
+    "2026-08-03",
+    "2026-08-04",
+    "0.188000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-07-01",
+    "2026-07-01",
+    "2026-07-02",
+    "0.179200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-06-01",
+    "2026-06-01",
+    "2026-06-02",
+    "0.186100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-05-01",
+    "2026-05-01",
+    "2026-05-04",
+    "0.178300",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 8,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 148,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 8,
+ "historyCount": 148,
+ "distributionCount": 5,
+ "netAssets": 2187264924,
+ "dividendYield": 9.95,
+ "secYield": 2.88
+}

@@ -1,0 +1,253 @@
+{
+ "ticker": "DFII",
+ "name": "FT Vest Bitcoin Strategy & Target Income ETF",
+ "category": "Income",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=DFII",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=DFII",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=DFII",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=DFII",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/DFII",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Target Income Strategies",
+ "identifiers": {
+  "cusip": "33733E724",
+  "isin": "US33733E7242",
+  "iopv": null,
+  "indexTicker": "Bloomberg Bitcoin Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2025-04-02",
+  "exchange": "NYSE Arca"
+ },
+ "expenseRatio": {
+  "display": "0.85%",
+  "value": 0.85,
+  "gross": 0.85,
+  "net": null,
+  "asOfDate": "2026-05-01"
+ },
+ "nav": {
+  "display": "$14.34",
+  "value": 14.34,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$14.35",
+  "value": 14.35,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.07%",
+  "value": 0.07,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$21.51M",
+  "value": 21511804,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 1500002
+ },
+ "yields": {
+  "dividendYield": 20.72,
+  "dividendYieldText": "20.72%",
+  "dividendYieldKind": "First Trust published 12-month distribution rate as of Aug 31 2026",
+  "distributionRate": 17.63,
+  "distributionPerShare": null,
+  "secYield": -0.73,
+  "secYieldText": "-0.73%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Aug 31 2026",
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 3.22,
+   "ytd": -12.63,
+   "yr1": -29.11,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": -9.51
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": -12.85,
+   "ytd": -31.72,
+   "yr1": -44.36,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": -26.79
+  }
+ },
+ "distributions": {
+  "frequency": "Monthly",
+  "latestAmount": 0.202,
+  "latestExDate": "2026-09-01",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2026-09-01",
+    "2026-09-01",
+    "2026-09-02",
+    "0.202000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-08-03",
+    "2026-08-03",
+    "2026-08-04",
+    "0.178300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-07-01",
+    "2026-07-01",
+    "2026-07-02",
+    "0.168600",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-06-01",
+    "2026-06-01",
+    "2026-06-02",
+    "0.207700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-05-01",
+    "2026-05-01",
+    "2026-05-04",
+    "0.213900",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-04-01",
+    "2026-04-01",
+    "2026-04-02",
+    "0.194200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-03-02",
+    "2026-03-02",
+    "2026-03-03",
+    "0.199500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-02-02",
+    "2026-02-02",
+    "2026-02-03",
+    "0.249400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-01-02",
+    "2026-01-02",
+    "2026-01-05",
+    "0.263200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-12-01",
+    "2025-12-01",
+    "2025-12-02",
+    "0.275800",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-11-03",
+    "2025-11-03",
+    "2025-11-04",
+    "0.329600",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-10-01",
+    "2025-10-01",
+    "2025-10-02",
+    "0.366400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-09-02",
+    "2025-09-02",
+    "2025-09-03",
+    "0.372400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-08-01",
+    "2025-08-01",
+    "2025-08-04",
+    "0.389200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-07-01",
+    "2025-07-01",
+    "2025-07-02",
+    "0.360300",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-06-02",
+    "2025-06-02",
+    "2025-06-03",
+    "0.366200",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-05-01",
+    "2025-05-01",
+    "2025-05-02",
+    "0.309300",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 8,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 372,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 8,
+ "historyCount": 372,
+ "distributionCount": 17,
+ "netAssets": 21511804,
+ "dividendYield": 20.72,
+ "secYield": -0.73
+}

@@ -1,0 +1,986 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Taiwan Semiconductor Manufacturing Company Ltd.",
+   "Ticker": "2330.TT",
+   "Identifier": "Y84629107",
+   "Weight": "11.99",
+   "Market Value": "4850469.67",
+   "Shares Held": "62379",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Samsung Electronics Co., Ltd.",
+   "Ticker": "005930.KS",
+   "Identifier": "Y74718100",
+   "Weight": "11.81",
+   "Market Value": "4776572.01",
+   "Shares Held": "22741",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SK Hynix Inc.",
+   "Ticker": "000660.KS",
+   "Identifier": "Y8085F100",
+   "Weight": "6.92",
+   "Market Value": "2797280.86",
+   "Shares Held": "2042",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Grupo Mexico, S.A.B. de C.V. (Class B)",
+   "Ticker": "GMEXICOB.MM",
+   "Identifier": "P49538112",
+   "Weight": "4.13",
+   "Market Value": "1668786.75",
+   "Shares Held": "131533",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Petroleo Brasileiro S.A. (Petrobras) (Preference Shares)",
+   "Ticker": "PETR4.BZ",
+   "Identifier": "P78331140",
+   "Weight": "2.56",
+   "Market Value": "1033533.91",
+   "Shares Held": "111646",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "AngloGold Ashanti Plc",
+   "Ticker": "ANG.SJ",
+   "Identifier": "G0378L100",
+   "Weight": "2.3",
+   "Market Value": "929838.76",
+   "Shares Held": "9491",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "OTB Bank Plc",
+   "Ticker": "OTP.HB",
+   "Identifier": "X60746181",
+   "Weight": "2.1",
+   "Market Value": "849980.58",
+   "Shares Held": "5935",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Powszechna Kasa Oszczednosci Bank Polski S.A.",
+   "Ticker": "PKO.PW",
+   "Identifier": "X6919X108",
+   "Weight": "2.02",
+   "Market Value": "818600.52",
+   "Shares Held": "25214",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Gold Fields Limited",
+   "Ticker": "GFI.SJ",
+   "Identifier": "S31755101",
+   "Weight": "1.7",
+   "Market Value": "686617.75",
+   "Shares Held": "17037",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "HDFC Bank Limited",
+   "Ticker": "HDFCB.IS",
+   "Identifier": "Y3119P190",
+   "Weight": "1.68",
+   "Market Value": "678450.84",
+   "Shares Held": "88378",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Naspers Limited (Class N)",
+   "Ticker": "NPN.SJ",
+   "Identifier": "S53435129",
+   "Weight": "1.66",
+   "Market Value": "671639.15",
+   "Shares Held": "15447",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ORLEN SA",
+   "Ticker": "PKN.PW",
+   "Identifier": "X6922W204",
+   "Weight": "1.64",
+   "Market Value": "663494.28",
+   "Shares Held": "17100",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Grupo Financiero Banorte, S.A.B. de C.V.",
+   "Ticker": "GFNORTEO.MM",
+   "Identifier": "P49501201",
+   "Weight": "1.6",
+   "Market Value": "647976.05",
+   "Shares Held": "58501",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Vale S.A.",
+   "Ticker": "VALE3.BZ",
+   "Identifier": "P9661Q155",
+   "Weight": "1.59",
+   "Market Value": "642439.03",
+   "Shares Held": "47060",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Itau Unibanco Holding S.A. (Preference Shares)",
+   "Ticker": "ITUB4.BZ",
+   "Identifier": "P5968U113",
+   "Weight": "1.52",
+   "Market Value": "614024.18",
+   "Shares Held": "75555",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "America Movil, S.A.B. de C.V. (Class B)",
+   "Ticker": "AMXB.MM",
+   "Identifier": "P0280A192",
+   "Weight": "1.5",
+   "Market Value": "604772.27",
+   "Shares Held": "548999",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MediaTek Inc.",
+   "Ticker": "2454.TT",
+   "Identifier": "Y5945U103",
+   "Weight": "1.5",
+   "Market Value": "605551.29",
+   "Shares Held": "3647",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ICICI Bank Limited",
+   "Ticker": "ICICIBC.IS",
+   "Identifier": "Y3860Z132",
+   "Weight": "1.44",
+   "Market Value": "582214.9",
+   "Shares Held": "42048",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FirstRand Limited",
+   "Ticker": "FSR.SJ",
+   "Identifier": "S5202Z131",
+   "Weight": "1.37",
+   "Market Value": "555287.63",
+   "Shares Held": "98548",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Falabella SA",
+   "Ticker": "FALAB.CI",
+   "Identifier": "P3880F108",
+   "Weight": "1.31",
+   "Market Value": "527983.14",
+   "Shares Held": "78710",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "National Bank of Greece S.A.",
+   "Ticker": "ETE.GA",
+   "Identifier": "X56533189",
+   "Weight": "1.25",
+   "Market Value": "507333.6",
+   "Shares Held": "25534",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fomento Economico Mexicano, S.A.B. de C.V. (FEMSA)",
+   "Ticker": "FEMSAUBD.MM",
+   "Identifier": "P4182H115",
+   "Weight": "1.23",
+   "Market Value": "499384.4",
+   "Shares Held": "41907",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Reliance Insurance PLC",
+   "Ticker": "RELIANCE.IS",
+   "Identifier": "Y72596102",
+   "Weight": "1.21",
+   "Market Value": "489184.53",
+   "Shares Held": "38234",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Credicorp Ltd.",
+   "Ticker": "BAP",
+   "Identifier": "G2519Y108",
+   "Weight": "1.2",
+   "Market Value": "485789.28",
+   "Shares Held": "1258",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Capitec Limited",
+   "Ticker": "CPI.SJ",
+   "Identifier": "S15445109",
+   "Weight": "1.18",
+   "Market Value": "476159.91",
+   "Shares Held": "1735",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Standard Bank Group Limited",
+   "Ticker": "SBK.SJ",
+   "Identifier": "S80605140",
+   "Weight": "1.15",
+   "Market Value": "464360.32",
+   "Shares Held": "25193",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Bank Pekao S.A.",
+   "Ticker": "PEO.PW",
+   "Identifier": "X0R77T117",
+   "Weight": "1.12",
+   "Market Value": "451066.69",
+   "Shares Held": "6173",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Southern Copper Corporation",
+   "Ticker": "SCCO",
+   "Identifier": "84265V105",
+   "Weight": "1.11",
+   "Market Value": "448624",
+   "Shares Held": "2200",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Grupo Cibest S.A. (Preference)",
+   "Ticker": "PFCIBEST.CB",
+   "Identifier": "P49500112",
+   "Weight": "1.05",
+   "Market Value": "424776.72",
+   "Shares Held": "18209",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Valterra Platinum Limited",
+   "Ticker": "VAL.SJ",
+   "Identifier": "S9122P108",
+   "Weight": "1.02",
+   "Market Value": "412145.46",
+   "Shares Held": "5105",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MTN Group Limited",
+   "Ticker": "MTN.SJ",
+   "Identifier": "S8039R108",
+   "Weight": "0.97",
+   "Market Value": "393188.48",
+   "Shares Held": "33000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Bharti Airtel Ltd.",
+   "Ticker": "BHARTI.IS",
+   "Identifier": "Y0885K108",
+   "Weight": "0.76",
+   "Market Value": "307639.03",
+   "Shares Held": "16511",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CEMEX, S.A.B. de C.V. (Unit)",
+   "Ticker": "CEMEXCPO.MM",
+   "Identifier": "P2253T133",
+   "Weight": "0.76",
+   "Market Value": "307670.02",
+   "Shares Held": "314793",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Banco Bradesco S.A. (Preference Shares)",
+   "Ticker": "BBDC4.BZ",
+   "Identifier": "P1808G117",
+   "Weight": "0.72",
+   "Market Value": "292544.15",
+   "Shares Held": "84819",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Banco Santander (Brasil) S.A. (Unit)",
+   "Ticker": "SANB11.BZ",
+   "Identifier": "P1505Z160",
+   "Weight": "0.7",
+   "Market Value": "282105.82",
+   "Shares Held": "49158",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Delta Electronics Inc.",
+   "Ticker": "2308.TT",
+   "Identifier": "Y20263102",
+   "Weight": "0.7",
+   "Market Value": "281613.89",
+   "Shares Held": "4693",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Banco BTG Pactual SA (Unit)",
+   "Ticker": "BPAC11.BZ",
+   "Identifier": "P1R8ZJ253",
+   "Weight": "0.68",
+   "Market Value": "275773.32",
+   "Shares Held": "22801",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "AXIA Energia SA",
+   "Ticker": "AXIA3.BZ",
+   "Identifier": "P22835113",
+   "Weight": "0.67",
+   "Market Value": "269906.27",
+   "Shares Held": "25650",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Walmart de Mexico, S.A.B. de C.V.",
+   "Ticker": "-",
+   "Identifier": "P98180188",
+   "Weight": "0.67",
+   "Market Value": "272566.15",
+   "Shares Held": "103569",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "WEG S.A.",
+   "Ticker": "WEGE3.BZ",
+   "Identifier": "P9832B129",
+   "Weight": "0.63",
+   "Market Value": "256007.56",
+   "Shares Held": "25987",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SK Square Co., Ltd.",
+   "Ticker": "402340.KS",
+   "Identifier": "Y8T6X4107",
+   "Weight": "0.62",
+   "Market Value": "249512.58",
+   "Shares Held": "285",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Larsen & Toubro Ltd.",
+   "Ticker": "LT.IS",
+   "Identifier": "Y5217N159",
+   "Weight": "0.61",
+   "Market Value": "248293.64",
+   "Shares Held": "6138",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Hon Hai Precision Industry Co., Ltd. (Foxconn)",
+   "Ticker": "2317.TT",
+   "Identifier": "Y36861105",
+   "Weight": "0.59",
+   "Market Value": "240328.18",
+   "Shares Held": "30537",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Banco do Brasil S.A.",
+   "Ticker": "BBAS3.BZ",
+   "Identifier": "P11427112",
+   "Weight": "0.58",
+   "Market Value": "234193.43",
+   "Shares Held": "56233",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "B3 S.A. - Brasil, Bolsa, Balcao",
+   "Ticker": "B3SA3.BZ",
+   "Identifier": "P1909G107",
+   "Weight": "0.57",
+   "Market Value": "228561.67",
+   "Shares Held": "65973",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Samsung Electro-Mechanics Co., Ltd.",
+   "Ticker": "009150.KS",
+   "Identifier": "Y7470U102",
+   "Weight": "0.55",
+   "Market Value": "221739.95",
+   "Shares Held": "200",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Itausa S.A. (Preference Shares)",
+   "Ticker": "ITSA4.BZ",
+   "Identifier": "P5887P427",
+   "Weight": "0.54",
+   "Market Value": "219482.18",
+   "Shares Held": "81330",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "State Bank of India",
+   "Ticker": "SBIN.IS",
+   "Identifier": "Y8155P103",
+   "Weight": "0.54",
+   "Market Value": "216814.49",
+   "Shares Held": "21135",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Axis Bank Limited",
+   "Ticker": "AXSB.IS",
+   "Identifier": "Y0487S137",
+   "Weight": "0.53",
+   "Market Value": "212900.27",
+   "Shares Held": "16689",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Impala Platinum Holdings Limited",
+   "Ticker": "IMP.SJ",
+   "Identifier": "S37840113",
+   "Weight": "0.53",
+   "Market Value": "213993.78",
+   "Shares Held": "17318",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Infosys Limited",
+   "Ticker": "INFO.IS",
+   "Identifier": "Y4082C133",
+   "Weight": "0.51",
+   "Market Value": "205932.28",
+   "Shares Held": "19729",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ASE Technology Holding Co., Ltd.",
+   "Ticker": "3711.TT",
+   "Identifier": "Y0249T100",
+   "Weight": "0.47",
+   "Market Value": "189323.7",
+   "Shares Held": "8621",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Kotak Mahindra Bank Limited",
+   "Ticker": "KMB.IS",
+   "Identifier": "Y4S3A3127",
+   "Weight": "0.45",
+   "Market Value": "180909.86",
+   "Shares Held": "42909",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Mahindra & Mahindra Ltd.",
+   "Ticker": "MM.IS",
+   "Identifier": "Y54164150",
+   "Weight": "0.44",
+   "Market Value": "176831.15",
+   "Shares Held": "5583",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Bajaj Finance Ltd",
+   "Ticker": "BAF.IS",
+   "Identifier": "Y0547D153",
+   "Weight": "0.42",
+   "Market Value": "168809",
+   "Shares Held": "16226",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "KB Financial Group, Inc.",
+   "Ticker": "105560.KS",
+   "Identifier": "Y46007103",
+   "Weight": "0.42",
+   "Market Value": "171256.79",
+   "Shares Held": "1344",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Ambev S.A.",
+   "Ticker": "ABEV3.BZ",
+   "Identifier": "P0273U106",
+   "Weight": "0.41",
+   "Market Value": "164389.91",
+   "Shares Held": "55627",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Eternal Limited",
+   "Ticker": "ETERNAL.IS",
+   "Identifier": "Y9899X105",
+   "Weight": "0.41",
+   "Market Value": "165142.81",
+   "Shares Held": "47237",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Hyundai Motor Company",
+   "Ticker": "005380.KS",
+   "Identifier": "Y38472109",
+   "Weight": "0.4",
+   "Market Value": "161243.36",
+   "Shares Held": "620",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Cia. de Saneamento Basico do Estado de Sao Paulo - SABESP",
+   "Ticker": "SBSP3.BZ",
+   "Identifier": "P2R268136",
+   "Weight": "0.39",
+   "Market Value": "159687.54",
+   "Shares Held": "30740",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "United Microelectronics Corporation",
+   "Ticker": "2303.TT",
+   "Identifier": "Y92370108",
+   "Weight": "0.37",
+   "Market Value": "148099.7",
+   "Shares Held": "30610",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Shinhan Financial Group Co., Ltd.",
+   "Ticker": "055550.KS",
+   "Identifier": "Y7749X101",
+   "Weight": "0.34",
+   "Market Value": "139112.75",
+   "Shares Held": "1730",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ITC Limited",
+   "Ticker": "ITC.IS",
+   "Identifier": "Y4211T171",
+   "Weight": "0.32",
+   "Market Value": "127761.84",
+   "Shares Held": "45511",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Elite Material Co., Ltd.",
+   "Ticker": "2383.TT",
+   "Identifier": "Y2290G102",
+   "Weight": "0.31",
+   "Market Value": "123911.77",
+   "Shares Held": "781",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Unimicron Technology Corporation",
+   "Ticker": "3037.TT",
+   "Identifier": "Y90668107",
+   "Weight": "0.31",
+   "Market Value": "125761.62",
+   "Shares Held": "3378",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Sun Pharmaceutical Industries Limited",
+   "Ticker": "SUNP.IS",
+   "Identifier": "Y8523Y158",
+   "Weight": "0.3",
+   "Market Value": "120345.4",
+   "Shares Held": "6226",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Tata Consultancy Services Limited",
+   "Ticker": "TCS.IS",
+   "Identifier": "Y85279100",
+   "Weight": "0.28",
+   "Market Value": "115265.29",
+   "Shares Held": "5305",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Titan Company Limited",
+   "Ticker": "TTAN.IS",
+   "Identifier": "Y88425148",
+   "Weight": "0.28",
+   "Market Value": "114986.62",
+   "Shares Held": "2256",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Doosan Enerbility Co., Ltd.",
+   "Ticker": "034020.KS",
+   "Identifier": "Y2102C109",
+   "Weight": "0.25",
+   "Market Value": "99115.9",
+   "Shares Held": "1649",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CTBC Financial Holding Co., Ltd.",
+   "Ticker": "2891.TT",
+   "Identifier": "Y15093100",
+   "Weight": "0.24",
+   "Market Value": "96362.23",
+   "Shares Held": "44776",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Hana Financial Group Inc.",
+   "Ticker": "086790.KS",
+   "Identifier": "Y29975102",
+   "Weight": "0.24",
+   "Market Value": "98998.78",
+   "Shares Held": "1011",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Hanwha Aerospace Co., Ltd.",
+   "Ticker": "012450.KS",
+   "Identifier": "Y7470L102",
+   "Weight": "0.24",
+   "Market Value": "96898.31",
+   "Shares Held": "129",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Hindustan Unilever Limited",
+   "Ticker": "HUVR.IS",
+   "Identifier": "Y3222L102",
+   "Weight": "0.24",
+   "Market Value": "95520.41",
+   "Shares Held": "4711",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fubon Financial Holding Co., Ltd.",
+   "Ticker": "2881.TT",
+   "Identifier": "Y26528102",
+   "Weight": "0.23",
+   "Market Value": "93941.17",
+   "Shares Held": "19934",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Maruti Suzuki India Limited",
+   "Ticker": "MSIL.IS",
+   "Identifier": "Y7565Y100",
+   "Weight": "0.23",
+   "Market Value": "94684.29",
+   "Shares Held": "752",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Tata Steel Limited",
+   "Ticker": "TATA.IS",
+   "Identifier": "Y8547N220",
+   "Weight": "0.23",
+   "Market Value": "93654.94",
+   "Shares Held": "47743",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Bharat Electronics Ltd.",
+   "Ticker": "BHE.IS",
+   "Identifier": "Y0881Q141",
+   "Weight": "0.22",
+   "Market Value": "89616.31",
+   "Shares Held": "21820",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Samsung SDI Co., Ltd.",
+   "Ticker": "006400.KS",
+   "Identifier": "Y74866107",
+   "Weight": "0.22",
+   "Market Value": "87392.33",
+   "Shares Held": "228",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Shriram Finance Limited",
+   "Ticker": "SHFL.IS",
+   "Identifier": "Y7758E119",
+   "Weight": "0.22",
+   "Market Value": "87798.44",
+   "Shares Held": "8463",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Hindalco Industries Limited",
+   "Ticker": "HNDL.IS",
+   "Identifier": "Y3196V185",
+   "Weight": "0.21",
+   "Market Value": "84636.46",
+   "Shares Held": "8301",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NTPC Limited",
+   "Ticker": "NTPC.IS",
+   "Identifier": "Y6421X116",
+   "Weight": "0.21",
+   "Market Value": "83958.78",
+   "Shares Held": "24633",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "UltraTech Cement Limited",
+   "Ticker": "UTCEM.IS",
+   "Identifier": "Y9046E109",
+   "Weight": "0.21",
+   "Market Value": "83933.88",
+   "Shares Held": "721",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Asia Vital Components Co., Ltd.",
+   "Ticker": "3017.TT",
+   "Identifier": "Y0392D100",
+   "Weight": "0.2",
+   "Market Value": "81197.81",
+   "Shares Held": "727",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TS Financial Holding Co., Ltd.",
+   "Ticker": "2887.TT",
+   "Identifier": "Y84086100",
+   "Weight": "0.2",
+   "Market Value": "82326.92",
+   "Shares Held": "61657",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Yageo Corporation",
+   "Ticker": "2327.TT",
+   "Identifier": "Y9723R100",
+   "Weight": "0.2",
+   "Market Value": "79648.75",
+   "Shares Held": "4371",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Cathay Financial Holding Co., Ltd.",
+   "Ticker": "2882.TT",
+   "Identifier": "Y11654103",
+   "Weight": "0.19",
+   "Market Value": "78076.89",
+   "Shares Held": "22490",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Celltrion, Inc.",
+   "Ticker": "068270.KS",
+   "Identifier": "Y1242A106",
+   "Weight": "0.19",
+   "Market Value": "75828.16",
+   "Shares Held": "581",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NAVER Corporation",
+   "Ticker": "035420.KS",
+   "Identifier": "Y62579100",
+   "Weight": "0.19",
+   "Market Value": "77206.76",
+   "Shares Held": "539",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Accton Technology Corp.",
+   "Ticker": "2345.TT",
+   "Identifier": "Y0002S109",
+   "Weight": "0.18",
+   "Market Value": "73169.71",
+   "Shares Held": "1229",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Kia Corporation",
+   "Ticker": "000270.KS",
+   "Identifier": "Y47601102",
+   "Weight": "0.18",
+   "Market Value": "72928.9",
+   "Shares Held": "859",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Power Grid Corporation of India Limited",
+   "Ticker": "PWGR.IS",
+   "Identifier": "Y7028N105",
+   "Weight": "0.18",
+   "Market Value": "71996.96",
+   "Shares Held": "25599",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Quanta Computer Inc.",
+   "Ticker": "2382.TT",
+   "Identifier": "Y7174J106",
+   "Weight": "0.18",
+   "Market Value": "73454.57",
+   "Shares Held": "6907",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Yuanta Financial Holding Co., Ltd.",
+   "Ticker": "2885.TT",
+   "Identifier": "Y2169H108",
+   "Weight": "0.18",
+   "Market Value": "73086.2",
+   "Shares Held": "33617",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Woori Financial Group Inc.",
+   "Ticker": "316140.KS",
+   "Identifier": "Y972JZ105",
+   "Weight": "0.17",
+   "Market Value": "68242.32",
+   "Shares Held": "2624",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Chroma ATE Inc.",
+   "Ticker": "2360.TT",
+   "Identifier": "Y1604M102",
+   "Weight": "0.16",
+   "Market Value": "65469.46",
+   "Shares Held": "908",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "POSCO Holdings Inc.",
+   "Ticker": "005490.KS",
+   "Identifier": "Y70750115",
+   "Weight": "0.15",
+   "Market Value": "61876.03",
+   "Shares Held": "270",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Hyundai Mobis Co., Ltd.",
+   "Ticker": "012330.KS",
+   "Identifier": "Y3849A109",
+   "Weight": "0.14",
+   "Market Value": "56777.68",
+   "Shares Held": "210",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "E.SUN Financial Holding Co., Ltd.",
+   "Ticker": "2884.TT",
+   "Identifier": "Y23469102",
+   "Weight": "0.13",
+   "Market Value": "51955.92",
+   "Shares Held": "36266",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Chunghwa Telecom Co., Ltd.",
+   "Ticker": "2412.TT",
+   "Identifier": "Y1613J108",
+   "Weight": "0.12",
+   "Market Value": "49318.07",
+   "Shares Held": "10826",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Mega Financial Holding Co., Ltd.",
+   "Ticker": "2886.TT",
+   "Identifier": "Y59456106",
+   "Weight": "0.11",
+   "Market Value": "45102.04",
+   "Shares Held": "28943",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Brazilian Real",
+   "Ticker": "-",
+   "Identifier": "$BRL",
+   "Weight": "0.08",
+   "Market Value": "31404.27",
+   "Shares Held": "162693",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "South Korean Won",
+   "Ticker": "-",
+   "Identifier": "$KRW",
+   "Weight": "0.07",
+   "Market Value": "27421.76",
+   "Shares Held": "37182540",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "South African Rand",
+   "Ticker": "-",
+   "Identifier": "$ZAR",
+   "Weight": "0.06",
+   "Market Value": "25552.11",
+   "Shares Held": "416760",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "New Taiwan Dollar",
+   "Ticker": "-",
+   "Identifier": "$TWD",
+   "Weight": "0.03",
+   "Market Value": "10977.86",
+   "Shares Held": "348602",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Colombian Peso",
+   "Ticker": "-",
+   "Identifier": "$COP",
+   "Weight": "0.01",
+   "Market Value": "3723.24",
+   "Shares Held": "12323851",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Indian Rupee",
+   "Ticker": "-",
+   "Identifier": "$INR",
+   "Weight": "0.01",
+   "Market Value": "5154.45",
+   "Shares Held": "493906",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Forint",
+   "Ticker": "-",
+   "Identifier": "$HUF",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "1",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "-0.06",
+   "Market Value": "-25936.62",
+   "Shares Held": "-25937",
+   "Asset Category": "-"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

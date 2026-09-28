@@ -1,0 +1,184 @@
+{
+ "ticker": "ARVR",
+ "name": "First Trust Indxx Metaverse ETF",
+ "category": "Thematic",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=ARVR",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=ARVR",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=ARVR",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=ARVR",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/ARVR",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Technology",
+ "identifiers": {
+  "cusip": "33734X762",
+  "isin": "US33734X7628",
+  "iopv": "ARVRIV",
+  "indexTicker": "Indxx Metaverse Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2022-04-19",
+  "exchange": "Nasdaq"
+ },
+ "expenseRatio": {
+  "display": "0.70%",
+  "value": 0.7,
+  "gross": 0.7,
+  "net": null,
+  "asOfDate": "2026-02-02"
+ },
+ "nav": {
+  "display": "$57.97",
+  "value": 57.97,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$58.49",
+  "value": 58.49,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.85%",
+  "value": 0.85,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$8.70M",
+  "value": 8696016,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 150002
+ },
+ "yields": {
+  "dividendYield": 0.65,
+  "dividendYieldText": "0.65%",
+  "dividendYieldKind": "First Trust published 12-month distribution rate as of Aug 31 2026",
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": 0.27,
+  "secYieldText": "0.27%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Aug 31 2026",
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": -0.2,
+   "ytd": 16.62,
+   "yr1": 19.92,
+   "yr3": 23.46,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 16.02
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 27.98,
+   "ytd": 15.9,
+   "yr1": 20.83,
+   "yr3": 22.2,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 16.55
+  }
+ },
+ "distributions": {
+  "frequency": "Semi-annually",
+  "latestAmount": 0.1065,
+  "latestExDate": "2026-06-25",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2026-06-25",
+    "2026-06-25",
+    "2026-06-30",
+    "0.106500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-12-12",
+    "2025-12-12",
+    "2025-12-31",
+    "0.260000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-12-13",
+    "2024-12-13",
+    "2024-12-31",
+    "0.284400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-06-27",
+    "2024-06-27",
+    "2024-06-28",
+    "0.024100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-12-22",
+    "2023-12-26",
+    "2023-12-29",
+    "0.026000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-06-27",
+    "2023-06-28",
+    "2023-06-30",
+    "0.013400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-12-23",
+    "2022-12-27",
+    "2022-12-30",
+    "0.065400",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 44,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1113,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 44,
+ "historyCount": 1113,
+ "distributionCount": 7,
+ "netAssets": 8696016,
+ "dividendYield": 0.65,
+ "secYield": 0.27
+}

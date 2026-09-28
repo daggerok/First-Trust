@@ -1,0 +1,134 @@
+{
+ "ticker": "EKG",
+ "name": "First Trust Nasdaq Lux Digital Health Solutions ETF",
+ "category": "Thematic",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=EKG",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=EKG",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=EKG",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=EKG",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/EKG",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Health Care",
+ "identifiers": {
+  "cusip": "33719L106",
+  "isin": "US33719L1061",
+  "iopv": "EKGIV",
+  "indexTicker": "Nasdaq Lux Health Tech Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2022-03-22",
+  "exchange": "Nasdaq"
+ },
+ "expenseRatio": {
+  "display": "0.65%",
+  "value": 0.65,
+  "gross": 0.65,
+  "net": null,
+  "asOfDate": "2026-02-02"
+ },
+ "nav": {
+  "display": "$23.63",
+  "value": 23.63,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$23.65",
+  "value": 23.65,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.08%",
+  "value": 0.08,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$4.73M",
+  "value": 4725296,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 200002
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": null,
+  "dividendYieldKind": null,
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": null,
+  "secYieldText": null,
+  "secYieldKind": null,
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 27.75,
+   "ytd": 16.32,
+   "yr1": 26.94,
+   "yr3": 11,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 1.77
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 15.58,
+   "ytd": -1.21,
+   "yr1": 5.21,
+   "yr3": 1.14,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": -1.97
+  }
+ },
+ "distributions": {
+  "frequency": null,
+  "latestAmount": null,
+  "latestExDate": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 52,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1132,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 52,
+ "historyCount": 1132,
+ "distributionCount": 0,
+ "netAssets": 4725296,
+ "dividendYield": null,
+ "secYield": null
+}

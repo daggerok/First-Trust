@@ -1,0 +1,133 @@
+{
+ "ticker": "RSJN",
+ "name": "FT Vest U.S. Equity Equal Weight Buffer ETF - June",
+ "category": "Target Outcome",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=RSJN",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=RSJN",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=RSJN",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=RSJN",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/RSJN",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Target Outcome Strategies",
+ "identifiers": {
+  "cusip": "33740F227",
+  "isin": "US33740F2276",
+  "iopv": "RSJNIV",
+  "indexTicker": "S&P 500 Equal Weight Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2024-06-21",
+  "exchange": "NYSE Arca"
+ },
+ "expenseRatio": {
+  "display": "0.85%",
+  "value": 0.85,
+  "gross": 0.85,
+  "net": null,
+  "asOfDate": "2026-06-22"
+ },
+ "nav": {
+  "display": "$37.22",
+  "value": 37.22,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$37.35",
+  "value": 37.35,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.35%",
+  "value": 0.35,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$83.75M",
+  "value": 83753620,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 2250002
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": null,
+  "dividendYieldKind": null,
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": null,
+  "secYieldText": null,
+  "secYieldKind": null,
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 3.57,
+   "ytd": 10.6,
+   "yr1": 13.34,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 11.1
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 7.83,
+   "ytd": 8.27,
+   "yr1": 13.81,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 10.91
+  }
+ },
+ "distributions": {
+  "frequency": null,
+  "latestAmount": null,
+  "latestExDate": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 5,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 567,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 5,
+ "historyCount": 567,
+ "distributionCount": 0,
+ "netAssets": 83753620,
+ "dividendYield": null,
+ "secYield": null
+}

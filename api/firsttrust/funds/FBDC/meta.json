@@ -1,0 +1,747 @@
+{
+ "ticker": "FBDC",
+ "name": "FT Confluence BDC & Specialty Finance Income ETF",
+ "category": "Sector & Industry",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FBDC",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=FBDC",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=FBDC",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=FBDC",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBDC",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Financials",
+ "identifiers": {
+  "cusip": "33744U303",
+  "isin": "US33744U3032",
+  "iopv": "FBDCIV",
+  "indexTicker": "Blended Benchmark"
+ },
+ "inception": {
+  "fundInceptionDate": "2007-05-25",
+  "exchange": "NYSE Arca"
+ },
+ "expenseRatio": {
+  "display": "12.44%",
+  "value": 12.44,
+  "gross": 12.44,
+  "net": null,
+  "asOfDate": null
+ },
+ "nav": {
+  "display": "$16.97",
+  "value": 16.97,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$16.95",
+  "value": 16.95,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$35.87M",
+  "value": 35865004,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 2113500
+ },
+ "yields": {
+  "dividendYield": 11.47,
+  "dividendYieldText": "11.47%",
+  "dividendYieldKind": "First Trust published 12-month distribution rate as of Aug 31 2026",
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": 8.93,
+  "secYieldText": "8.93%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Aug 31 2026",
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 7.86,
+   "ytd": -0.45,
+   "yr1": -6.21,
+   "yr3": 6.76,
+   "yr5": 6.3,
+   "yr10": 3.62,
+   "sinceInception": 1.69
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 2.75,
+   "ytd": -7.35,
+   "yr1": -10.05,
+   "yr3": 7.01,
+   "yr5": 5.2,
+   "yr10": 3.83,
+   "sinceInception": 1.32
+  }
+ },
+ "distributions": {
+  "frequency": "Monthly",
+  "latestAmount": 0.15,
+  "latestExDate": "2026-09-24",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2026-09-24",
+    "2026-09-24",
+    "2026-09-30",
+    "0.150000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-08-21",
+    "2026-08-21",
+    "2026-08-31",
+    "0.150000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-07-21",
+    "2026-07-21",
+    "2026-07-31",
+    "0.150000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-06-25",
+    "2026-06-25",
+    "2026-06-30",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-05-21",
+    "2026-05-21",
+    "2026-05-29",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-04-21",
+    "2026-04-21",
+    "2026-04-30",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-03-26",
+    "2026-03-26",
+    "2026-03-31",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-02-20",
+    "2026-02-20",
+    "2026-02-27",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2026-01-21",
+    "2026-01-21",
+    "2026-01-30",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-12-12",
+    "2025-12-12",
+    "2025-12-31",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-11-21",
+    "2025-11-21",
+    "2025-12-01",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-10-21",
+    "2025-10-21",
+    "2025-10-31",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-09-25",
+    "2025-09-25",
+    "2025-09-30",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-08-21",
+    "2025-08-21",
+    "2025-08-29",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-07-22",
+    "2025-07-22",
+    "2025-07-31",
+    "0.175000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-05-22",
+    "2025-05-22",
+    "2025-05-30",
+    "0.500000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2025-02-24",
+    "2025-02-24",
+    "2025-02-28",
+    "0.500000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-11-22",
+    "2024-11-22",
+    "2024-12-02",
+    "0.500000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-08-22",
+    "2024-08-22",
+    "2024-08-30",
+    "0.500000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-05-22",
+    "2024-05-23",
+    "2024-05-31",
+    "0.500000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2024-02-22",
+    "2024-02-23",
+    "2024-02-29",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-11-22",
+    "2023-11-24",
+    "2023-12-01",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-08-22",
+    "2023-08-23",
+    "2023-08-31",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-05-22",
+    "2023-05-23",
+    "2023-05-31",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2023-02-22",
+    "2023-02-23",
+    "2023-02-28",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-11-22",
+    "2022-11-23",
+    "2022-12-01",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-08-22",
+    "2022-08-23",
+    "2022-08-31",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-05-20",
+    "2022-05-23",
+    "2022-05-31",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2022-02-22",
+    "2022-02-23",
+    "2022-02-28",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-11-22",
+    "2021-11-23",
+    "2021-12-01",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-08-20",
+    "2021-08-23",
+    "2021-08-31",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-05-21",
+    "2021-05-24",
+    "2021-05-28",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2021-02-22",
+    "2021-02-23",
+    "2021-02-26",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-11-20",
+    "2020-11-23",
+    "2020-12-01",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-08-21",
+    "2020-08-24",
+    "2020-08-31",
+    "0.412500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-05-22",
+    "2020-05-26",
+    "2020-05-29",
+    "0.675000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2020-02-21",
+    "2020-02-24",
+    "2020-02-28",
+    "0.675000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-11-22",
+    "2019-11-25",
+    "2019-11-29",
+    "0.675000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-08-22",
+    "2019-08-23",
+    "2019-08-30",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-05-22",
+    "2019-05-23",
+    "2019-05-31",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2019-02-22",
+    "2019-02-25",
+    "2019-02-28",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2018-11-21",
+    "2018-11-23",
+    "2018-12-03",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2018-08-22",
+    "2018-08-23",
+    "2018-08-31",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2018-05-22",
+    "2018-05-23",
+    "2018-05-31",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2018-02-22",
+    "2018-02-23",
+    "2018-02-28",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2017-11-22",
+    "2017-11-24",
+    "2017-12-01",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2017-08-22",
+    "2017-08-24",
+    "2017-08-31",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2017-05-22",
+    "2017-05-24",
+    "2017-05-31",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2017-02-22",
+    "2017-02-24",
+    "2017-02-28",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2016-11-21",
+    "2016-11-23",
+    "2016-12-01",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2016-08-22",
+    "2016-08-24",
+    "2016-08-31",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2016-05-20",
+    "2016-05-24",
+    "2016-05-31",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2016-02-22",
+    "2016-02-24",
+    "2016-02-29",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2015-11-20",
+    "2015-11-24",
+    "2015-12-01",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2015-08-21",
+    "2015-08-25",
+    "2015-08-31",
+    "0.875000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2015-05-21",
+    "2015-05-26",
+    "2015-05-29",
+    "0.862500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2015-02-20",
+    "2015-02-24",
+    "2015-02-27",
+    "0.862500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2014-11-21",
+    "2014-11-25",
+    "2014-12-01",
+    "0.862500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2014-08-22",
+    "2014-08-26",
+    "2014-08-29",
+    "0.862500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2014-05-22",
+    "2014-05-27",
+    "2014-05-30",
+    "0.850000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2014-02-21",
+    "2014-02-25",
+    "2014-02-28",
+    "0.850000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2013-11-20",
+    "2013-11-22",
+    "2013-12-02",
+    "0.850000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2013-08-21",
+    "2013-08-23",
+    "2013-08-30",
+    "0.850000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2013-05-22",
+    "2013-05-24",
+    "2013-05-31",
+    "0.825000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2013-02-20",
+    "2013-02-22",
+    "2013-02-28",
+    "0.825000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2012-11-21",
+    "2012-11-26",
+    "2012-12-03",
+    "0.825000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2012-08-22",
+    "2012-08-24",
+    "2012-08-31",
+    "0.825000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2012-05-22",
+    "2012-05-24",
+    "2012-05-31",
+    "0.800000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2012-02-22",
+    "2012-02-24",
+    "2012-02-29",
+    "0.800000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2011-11-18",
+    "2011-11-22",
+    "2011-12-01",
+    "0.800000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2011-08-23",
+    "2011-08-25",
+    "2011-08-31",
+    "0.800000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2011-05-20",
+    "2011-05-24",
+    "2011-05-31",
+    "0.775000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2011-02-18",
+    "2011-02-23",
+    "2011-02-28",
+    "0.775000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2010-11-18",
+    "2010-11-22",
+    "2010-12-01",
+    "0.775000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2010-08-18",
+    "2010-08-20",
+    "2010-08-31",
+    "0.775000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2010-05-19",
+    "2010-05-21",
+    "2010-05-28",
+    "0.750000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2010-02-18",
+    "2010-02-22",
+    "2010-02-26",
+    "0.725000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2009-11-18",
+    "2009-11-20",
+    "2009-12-01",
+    "0.700000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2009-08-18",
+    "2009-08-20",
+    "2009-08-31",
+    "0.700000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2009-05-11",
+    "2009-05-21",
+    "2009-05-29",
+    "0.700000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2009-02-18",
+    "2009-02-20",
+    "2009-02-27",
+    "0.925000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2008-11-19",
+    "2008-11-21",
+    "2008-12-01",
+    "1.250000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2008-08-20",
+    "2008-08-22",
+    "2008-08-29",
+    "1.850000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2008-05-20",
+    "2008-05-22",
+    "2008-05-30",
+    "1.850000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2008-02-21",
+    "2008-02-25",
+    "2008-02-29",
+    "1.850000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2007-11-21",
+    "2007-11-26",
+    "2007-12-03",
+    "1.800000",
+    "Ordinary Distributions"
+   ],
+   [
+    "2007-08-22",
+    "2007-08-24",
+    "2007-08-31",
+    "1.750000",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 21,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json",
+   "history/005.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 4864,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 21,
+ "historyCount": 4864,
+ "distributionCount": 87,
+ "netAssets": 35865004,
+ "dividendYield": 11.47,
+ "secYield": 8.93
+}

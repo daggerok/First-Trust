@@ -1,0 +1,680 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Natera, Inc.",
+   "Ticker": "NTRA",
+   "Identifier": "632307104",
+   "Weight": "3.32",
+   "Market Value": "38186553.6",
+   "Shares Held": "92560",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Regeneron Pharmaceuticals, Inc.",
+   "Ticker": "REGN",
+   "Identifier": "75886F107",
+   "Weight": "2.76",
+   "Market Value": "31754071.8",
+   "Shares Held": "40295",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Universal Health Services, Inc. (Class B)",
+   "Ticker": "UHS",
+   "Identifier": "913903100",
+   "Weight": "2.62",
+   "Market Value": "30223583.94",
+   "Shares Held": "168979",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Pfizer Inc.",
+   "Ticker": "PFE",
+   "Identifier": "717081103",
+   "Weight": "2.6",
+   "Market Value": "29914679.38",
+   "Shares Held": "1043414",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Guardant Health, Inc.",
+   "Ticker": "GH",
+   "Identifier": "40131M109",
+   "Weight": "2.58",
+   "Market Value": "29683880.25",
+   "Shares Held": "167469",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Solventum Corporation",
+   "Ticker": "SOLV",
+   "Identifier": "83444M101",
+   "Weight": "2.53",
+   "Market Value": "29147465",
+   "Shares Held": "325670",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Halozyme Therapeutics, Inc.",
+   "Ticker": "HALO",
+   "Identifier": "40637H109",
+   "Weight": "2.37",
+   "Market Value": "27300349.3",
+   "Shares Held": "239687",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Zimmer Biomet Holdings, Inc.",
+   "Ticker": "ZBH",
+   "Identifier": "98956P102",
+   "Weight": "2.31",
+   "Market Value": "26570115.04",
+   "Shares Held": "291851",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Tenet Healthcare Corporation",
+   "Ticker": "THC",
+   "Identifier": "88033G407",
+   "Weight": "2.26",
+   "Market Value": "26043718.8",
+   "Shares Held": "100280",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Boston Scientific Corporation",
+   "Ticker": "BSX",
+   "Identifier": "101137107",
+   "Weight": "2.24",
+   "Market Value": "25855396.56",
+   "Shares Held": "588693",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Corcept Therapeutics Inc.",
+   "Ticker": "CORT",
+   "Identifier": "218352102",
+   "Weight": "2.18",
+   "Market Value": "25049736",
+   "Shares Held": "215760",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "The Cigna Group",
+   "Ticker": "CI",
+   "Identifier": "125523100",
+   "Weight": "2.15",
+   "Market Value": "24790991.4",
+   "Shares Held": "91140",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Centene Corporation",
+   "Ticker": "CNC",
+   "Identifier": "15135B101",
+   "Weight": "2.1",
+   "Market Value": "24197769.86",
+   "Shares Held": "391423",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Globus Medical, Inc. (Class A)",
+   "Ticker": "GMED",
+   "Identifier": "379577208",
+   "Weight": "2.06",
+   "Market Value": "23697583.56",
+   "Shares Held": "318003",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Encompass Health Corporation",
+   "Ticker": "EHC",
+   "Identifier": "29261A100",
+   "Weight": "1.99",
+   "Market Value": "22954925.05",
+   "Shares Held": "185915",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Medline Inc. (Class A)",
+   "Ticker": "MDLN",
+   "Identifier": "58507V107",
+   "Weight": "1.92",
+   "Market Value": "22144394.9",
+   "Shares Held": "638167",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "ResMed Inc.",
+   "Ticker": "RMD",
+   "Identifier": "761152107",
+   "Weight": "1.86",
+   "Market Value": "21408126",
+   "Shares Held": "96433",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Medtronic Plc",
+   "Ticker": "MDT",
+   "Identifier": "G5960L103",
+   "Weight": "1.85",
+   "Market Value": "21294075.84",
+   "Shares Held": "240231",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "QIAGEN N.V.",
+   "Ticker": "QGEN",
+   "Identifier": "N72482156",
+   "Weight": "1.84",
+   "Market Value": "21234233.41",
+   "Shares Held": "480630",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Incyte Corporation",
+   "Ticker": "INCY",
+   "Identifier": "45337C102",
+   "Weight": "1.78",
+   "Market Value": "20537988.64",
+   "Shares Held": "165776",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "DaVita Inc.",
+   "Ticker": "DVA",
+   "Identifier": "23918K108",
+   "Weight": "1.75",
+   "Market Value": "20189061.81",
+   "Shares Held": "113123",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Axsome Therapeutics, Inc.",
+   "Ticker": "AXSM",
+   "Identifier": "05464T104",
+   "Weight": "1.74",
+   "Market Value": "20061885.06",
+   "Shares Held": "102834",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Doximity, Inc. (Class A)",
+   "Ticker": "DOCS",
+   "Identifier": "26622P107",
+   "Weight": "1.67",
+   "Market Value": "19186383.6",
+   "Shares Held": "728136",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Elevance Health Inc.",
+   "Ticker": "ELV",
+   "Identifier": "036752103",
+   "Weight": "1.67",
+   "Market Value": "19249577.91",
+   "Shares Held": "48599",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Eli Lilly and Company",
+   "Ticker": "LLY",
+   "Identifier": "532457108",
+   "Weight": "1.61",
+   "Market Value": "18550735.5",
+   "Shares Held": "15675",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Zoetis Inc.",
+   "Ticker": "ZTS",
+   "Identifier": "98978V103",
+   "Weight": "1.61",
+   "Market Value": "18580640.75",
+   "Shares Held": "261515",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Becton, Dickinson and Company",
+   "Ticker": "BDX",
+   "Identifier": "075887109",
+   "Weight": "1.59",
+   "Market Value": "18343030.16",
+   "Shares Held": "99788",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Gilead Sciences, Inc.",
+   "Ticker": "GILD",
+   "Identifier": "375558103",
+   "Weight": "1.57",
+   "Market Value": "18040662.9",
+   "Shares Held": "119530",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Medpace Holdings, Inc.",
+   "Ticker": "MEDP",
+   "Identifier": "58506Q109",
+   "Weight": "1.53",
+   "Market Value": "17647982.08",
+   "Shares Held": "28516",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Viatris Inc.",
+   "Ticker": "VTRS",
+   "Identifier": "92556V106",
+   "Weight": "1.47",
+   "Market Value": "16955812.93",
+   "Shares Held": "950971",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Quest Diagnostics Incorporated",
+   "Ticker": "DGX",
+   "Identifier": "74834L100",
+   "Weight": "1.46",
+   "Market Value": "16837327.36",
+   "Shares Held": "71248",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Labcorp Holdings Inc.",
+   "Ticker": "LH",
+   "Identifier": "504922105",
+   "Weight": "1.45",
+   "Market Value": "16699194.84",
+   "Shares Held": "53931",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Revolution Medicines, Inc.",
+   "Ticker": "RVMD",
+   "Identifier": "76155X100",
+   "Weight": "1.44",
+   "Market Value": "16528575.83",
+   "Shares Held": "80639",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Bristol-Myers Squibb Company",
+   "Ticker": "BMY",
+   "Identifier": "110122108",
+   "Weight": "1.43",
+   "Market Value": "16475103.12",
+   "Shares Held": "262092",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "United Therapeutics Corporation",
+   "Ticker": "UTHR",
+   "Identifier": "91307C102",
+   "Weight": "1.43",
+   "Market Value": "16489081.45",
+   "Shares Held": "34681",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Exelixis, Inc.",
+   "Ticker": "EXEL",
+   "Identifier": "30161Q104",
+   "Weight": "1.4",
+   "Market Value": "16142249.84",
+   "Shares Held": "277549",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Ascendis Pharma A/S",
+   "Ticker": "ASND",
+   "Identifier": "K08588103",
+   "Weight": "1.38",
+   "Market Value": "15896904",
+   "Shares Held": "70465",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Biogen Inc.",
+   "Ticker": "BIIB",
+   "Identifier": "09062X103",
+   "Weight": "1.38",
+   "Market Value": "15906736.4",
+   "Shares Held": "69889",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "GE HealthCare Technologies Inc.",
+   "Ticker": "GEHC",
+   "Identifier": "36266G107",
+   "Weight": "1.36",
+   "Market Value": "15719482.86",
+   "Shares Held": "235922",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Neurocrine Biosciences, Inc.",
+   "Ticker": "NBIX",
+   "Identifier": "64125C109",
+   "Weight": "1.34",
+   "Market Value": "15432292",
+   "Shares Held": "111505",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Arrowhead Pharmaceuticals, Inc.",
+   "Ticker": "ARWR",
+   "Identifier": "04280A100",
+   "Weight": "1.32",
+   "Market Value": "15198053.76",
+   "Shares Held": "230553",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Steris Plc",
+   "Ticker": "STE",
+   "Identifier": "G8473T100",
+   "Weight": "1.3",
+   "Market Value": "14984459.6",
+   "Shares Held": "71720",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Veeva Systems Inc. (Class A)",
+   "Ticker": "VEEV",
+   "Identifier": "922475108",
+   "Weight": "1.29",
+   "Market Value": "14862848.04",
+   "Shares Held": "52953",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Tempus AI, Inc. (Class A)",
+   "Ticker": "TEM",
+   "Identifier": "88023B103",
+   "Weight": "1.2",
+   "Market Value": "13789132.06",
+   "Shares Held": "162206",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "IQVIA Holdings Inc.",
+   "Ticker": "IQV",
+   "Identifier": "46266C105",
+   "Weight": "1.14",
+   "Market Value": "13148904.21",
+   "Shares Held": "48633",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Thermo Fisher Scientific Inc.",
+   "Ticker": "TMO",
+   "Identifier": "883556102",
+   "Weight": "1.1",
+   "Market Value": "12650175",
+   "Shares Held": "18741",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Agilent Technologies, Inc.",
+   "Ticker": "A",
+   "Identifier": "00846U101",
+   "Weight": "1.06",
+   "Market Value": "12222646.23",
+   "Shares Held": "70737",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Abbott Laboratories",
+   "Ticker": "ABT",
+   "Identifier": "002824100",
+   "Weight": "0.91",
+   "Market Value": "10489389.82",
+   "Shares Held": "103558",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "HCA Healthcare, Inc.",
+   "Ticker": "HCA",
+   "Identifier": "40412C101",
+   "Weight": "0.91",
+   "Market Value": "10500379.05",
+   "Shares Held": "24105",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Chemed Corporation",
+   "Ticker": "CHE",
+   "Identifier": "16359R103",
+   "Weight": "0.9",
+   "Market Value": "10330779.36",
+   "Shares Held": "20171",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "AbbVie Inc.",
+   "Ticker": "ABBV",
+   "Identifier": "00287Y109",
+   "Weight": "0.86",
+   "Market Value": "9869133.9",
+   "Shares Held": "37335",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Vertex Pharmaceuticals Incorporated",
+   "Ticker": "VRTX",
+   "Identifier": "92532F100",
+   "Weight": "0.86",
+   "Market Value": "9952883.85",
+   "Shares Held": "18915",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Henry Schein, Inc.",
+   "Ticker": "HSIC",
+   "Identifier": "806407102",
+   "Weight": "0.84",
+   "Market Value": "9717229.59",
+   "Shares Held": "112507",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Organon & Co.",
+   "Ticker": "OGN",
+   "Identifier": "68622V106",
+   "Weight": "0.83",
+   "Market Value": "9528400.32",
+   "Shares Held": "693984",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Madrigal Pharmaceuticals, Inc.",
+   "Ticker": "MDGL",
+   "Identifier": "558868105",
+   "Weight": "0.78",
+   "Market Value": "9039800",
+   "Shares Held": "17500",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Ionis Pharmaceuticals, Inc.",
+   "Ticker": "IONS",
+   "Identifier": "462222100",
+   "Weight": "0.74",
+   "Market Value": "8475203",
+   "Shares Held": "190454",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "BridgeBio Pharma, Inc.",
+   "Ticker": "BBIO",
+   "Identifier": "10806X102",
+   "Weight": "0.72",
+   "Market Value": "8272442.34",
+   "Shares Held": "126162",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Align Technology, Inc.",
+   "Ticker": "ALGN",
+   "Identifier": "016255101",
+   "Weight": "0.71",
+   "Market Value": "8176673.46",
+   "Shares Held": "55707",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Illumina, Inc.",
+   "Ticker": "ILMN",
+   "Identifier": "452327109",
+   "Weight": "0.63",
+   "Market Value": "7215750",
+   "Shares Held": "26725",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Revvity, Inc.",
+   "Ticker": "RVTY",
+   "Identifier": "714046109",
+   "Weight": "0.55",
+   "Market Value": "6380317.53",
+   "Shares Held": "42223",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Bio-Rad Laboratories, Inc. (Class A)",
+   "Ticker": "BIO",
+   "Identifier": "090572207",
+   "Weight": "0.53",
+   "Market Value": "6094095",
+   "Shares Held": "15995",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "DexCom, Inc.",
+   "Ticker": "DXCM",
+   "Identifier": "252131107",
+   "Weight": "0.52",
+   "Market Value": "6042957.68",
+   "Shares Held": "69764",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Danaher Corporation",
+   "Ticker": "DHR",
+   "Identifier": "235851102",
+   "Weight": "0.48",
+   "Market Value": "5537270.34",
+   "Shares Held": "24666",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Amgen Inc.",
+   "Ticker": "AMGN",
+   "Identifier": "031162100",
+   "Weight": "0.47",
+   "Market Value": "5378320.92",
+   "Shares Held": "12972",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "Merck & Co., Inc.",
+   "Ticker": "MRK",
+   "Identifier": "58933Y105",
+   "Weight": "0.47",
+   "Market Value": "5439843.14",
+   "Shares Held": "36563",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "The Ensign Group, Inc.",
+   "Ticker": "ENSG",
+   "Identifier": "29358P101",
+   "Weight": "0.45",
+   "Market Value": "5133124.36",
+   "Shares Held": "29302",
+   "Asset Category": "Health Care Providers"
+  },
+  {
+   "Name": "Johnson & Johnson",
+   "Ticker": "JNJ",
+   "Identifier": "478160104",
+   "Weight": "0.44",
+   "Market Value": "5018654.88",
+   "Shares Held": "18504",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "BioMarin Pharmaceutical Inc.",
+   "Ticker": "BMRN",
+   "Identifier": "09061G101",
+   "Weight": "0.43",
+   "Market Value": "4947647.3",
+   "Shares Held": "82105",
+   "Asset Category": "Pharmaceuticals and Biotechnology"
+  },
+  {
+   "Name": "West Pharmaceutical Services, Inc.",
+   "Ticker": "WST",
+   "Identifier": "955306105",
+   "Weight": "0.42",
+   "Market Value": "4849059.6",
+   "Shares Held": "13090",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "IDEXX Laboratories, Inc.",
+   "Ticker": "IDXX",
+   "Identifier": "45168D104",
+   "Weight": "0.4",
+   "Market Value": "4634395.5",
+   "Shares Held": "8925",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Envista Holdings Corporation",
+   "Ticker": "NVST",
+   "Identifier": "29415F104",
+   "Weight": "0.37",
+   "Market Value": "4270356.85",
+   "Shares Held": "178303",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "Stryker Corporation",
+   "Ticker": "SYK",
+   "Identifier": "863667101",
+   "Weight": "0.35",
+   "Market Value": "4063066.48",
+   "Shares Held": "14918",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "The Cooper Companies, Inc.",
+   "Ticker": "COO",
+   "Identifier": "216648501",
+   "Weight": "0.32",
+   "Market Value": "3627999.18",
+   "Shares Held": "65511",
+   "Asset Category": "Medical Equipment and Services"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.08",
+   "Market Value": "931823.76",
+   "Shares Held": "931824",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

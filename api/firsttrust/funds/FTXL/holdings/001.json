@@ -1,0 +1,356 @@
+{
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Intel Corporation",
+   "Ticker": "INTC",
+   "Identifier": "458140100",
+   "Weight": "9.52",
+   "Market Value": "131063880",
+   "Shares Held": "1065560",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "QUALCOMM Incorporated",
+   "Ticker": "QCOM",
+   "Identifier": "747525103",
+   "Weight": "8.21",
+   "Market Value": "112995953.93",
+   "Shares Held": "559469",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Micron Technology, Inc.",
+   "Ticker": "MU",
+   "Identifier": "595112103",
+   "Weight": "7.82",
+   "Market Value": "107669543.52",
+   "Shares Held": "99484",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "NVIDIA Corporation",
+   "Ticker": "NVDA",
+   "Identifier": "67066G104",
+   "Weight": "7.07",
+   "Market Value": "97231590.42",
+   "Shares Held": "432006",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Broadcom Inc.",
+   "Ticker": "AVGO",
+   "Identifier": "11135F101",
+   "Weight": "6.6",
+   "Market Value": "90864098.64",
+   "Shares Held": "257544",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Advanced Micro Devices, Inc.",
+   "Ticker": "AMD",
+   "Identifier": "007903107",
+   "Weight": "4.64",
+   "Market Value": "63889755.93",
+   "Shares Held": "101311",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Marvell Technology, Inc.",
+   "Ticker": "MRVL",
+   "Identifier": "573874104",
+   "Weight": "4.29",
+   "Market Value": "59016574.89",
+   "Shares Held": "225310",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Analog Devices, Inc.",
+   "Ticker": "ADI",
+   "Identifier": "032654105",
+   "Weight": "3.77",
+   "Market Value": "51831609.6",
+   "Shares Held": "131686",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "KLA Corporation",
+   "Ticker": "KLAC",
+   "Identifier": "482480100",
+   "Weight": "3.71",
+   "Market Value": "51078723.12",
+   "Shares Held": "271811",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Texas Instruments Incorporated",
+   "Ticker": "TXN",
+   "Identifier": "882508104",
+   "Weight": "3.69",
+   "Market Value": "50825356.53",
+   "Shares Held": "182779",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Applied Materials, Inc.",
+   "Ticker": "AMAT",
+   "Identifier": "038222105",
+   "Weight": "3.67",
+   "Market Value": "50456975",
+   "Shares Held": "104035",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "NXP Semiconductors N.V.",
+   "Ticker": "NXPI",
+   "Identifier": "N6596X109",
+   "Weight": "3.67",
+   "Market Value": "50542717.44",
+   "Shares Held": "212293",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Amkor Technology, Inc.",
+   "Ticker": "AMKR",
+   "Identifier": "031652100",
+   "Weight": "3.66",
+   "Market Value": "50356409.1",
+   "Shares Held": "939310",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Lam Research Corporation",
+   "Ticker": "LRCX",
+   "Identifier": "512807306",
+   "Weight": "3.62",
+   "Market Value": "49859602.59",
+   "Shares Held": "158179",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "ON Semiconductor Corporation",
+   "Ticker": "ON",
+   "Identifier": "682189105",
+   "Weight": "3.61",
+   "Market Value": "49691015.2",
+   "Shares Held": "643666",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Teradyne, Inc.",
+   "Ticker": "TER",
+   "Identifier": "880770102",
+   "Weight": "3.18",
+   "Market Value": "43773197.64",
+   "Shares Held": "109878",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Microchip Technology Incorporated",
+   "Ticker": "MCHP",
+   "Identifier": "595017104",
+   "Weight": "2.88",
+   "Market Value": "39640402.26",
+   "Shares Held": "503754",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Entegris, Inc.",
+   "Ticker": "ENTG",
+   "Identifier": "29362U104",
+   "Weight": "2.23",
+   "Market Value": "30723397.86",
+   "Shares Held": "202274",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Monolithic Power Systems, Inc.",
+   "Ticker": "MPWR",
+   "Identifier": "609839105",
+   "Weight": "1.83",
+   "Market Value": "25156609.71",
+   "Shares Held": "18397",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Cirrus Logic, Inc.",
+   "Ticker": "CRUS",
+   "Identifier": "172755100",
+   "Weight": "1.61",
+   "Market Value": "22123561.12",
+   "Shares Held": "184486",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Rambus Inc.",
+   "Ticker": "RMBS",
+   "Identifier": "750917106",
+   "Weight": "0.96",
+   "Market Value": "13235647.92",
+   "Shares Held": "125862",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Vishay Intertechnology, Inc.",
+   "Ticker": "VSH",
+   "Identifier": "928298108",
+   "Weight": "0.95",
+   "Market Value": "13019544.3",
+   "Shares Held": "399986",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Credo Technology Group Holding Ltd",
+   "Ticker": "CRDO",
+   "Identifier": "G25457105",
+   "Weight": "0.82",
+   "Market Value": "11289215.67",
+   "Shares Held": "53511",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Onto Innovation Inc.",
+   "Ticker": "ONTO",
+   "Identifier": "683344105",
+   "Weight": "0.73",
+   "Market Value": "10030294.44",
+   "Shares Held": "34871",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Diodes Incorporated",
+   "Ticker": "DIOD",
+   "Identifier": "254543101",
+   "Weight": "0.65",
+   "Market Value": "8959410.72",
+   "Shares Held": "93483",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Astera Labs, Inc.",
+   "Ticker": "ALAB",
+   "Identifier": "04626A103",
+   "Weight": "0.61",
+   "Market Value": "8435119.08",
+   "Shares Held": "23134",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "MACOM Technology Solutions Holdings, Inc.",
+   "Ticker": "MTSI",
+   "Identifier": "55405Y100",
+   "Weight": "0.61",
+   "Market Value": "8386905.33",
+   "Shares Held": "29369",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Semtech Corporation",
+   "Ticker": "SMTC",
+   "Identifier": "816850101",
+   "Weight": "0.61",
+   "Market Value": "8409499",
+   "Shares Held": "46130",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "AXT, Inc.",
+   "Ticker": "AXTI",
+   "Identifier": "00246W103",
+   "Weight": "0.58",
+   "Market Value": "7988412.24",
+   "Shares Held": "101196",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "FormFactor, Inc.",
+   "Ticker": "FORM",
+   "Identifier": "346375108",
+   "Weight": "0.57",
+   "Market Value": "7906161.78",
+   "Shares Held": "60962",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Advanced Energy Industries, Inc.",
+   "Ticker": "AEIS",
+   "Identifier": "007973100",
+   "Weight": "0.52",
+   "Market Value": "7103032.96",
+   "Shares Held": "25397",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Avnet, Inc.",
+   "Ticker": "AVT",
+   "Identifier": "053807103",
+   "Weight": "0.51",
+   "Market Value": "7059091.39",
+   "Shares Held": "68485",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Ultra Clean Holdings, Inc.",
+   "Ticker": "UCTT",
+   "Identifier": "90385V107",
+   "Weight": "0.51",
+   "Market Value": "7025040.56",
+   "Shares Held": "90424",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Lattice Semiconductor Corporation",
+   "Ticker": "LSCC",
+   "Identifier": "518415104",
+   "Weight": "0.49",
+   "Market Value": "6809186.8",
+   "Shares Held": "53176",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "ACM Research, Inc. (Class A)",
+   "Ticker": "ACMR",
+   "Identifier": "00108J109",
+   "Weight": "0.47",
+   "Market Value": "6510901.7",
+   "Shares Held": "84229",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Coherent Corp.",
+   "Ticker": "COHR",
+   "Identifier": "19247G107",
+   "Weight": "0.47",
+   "Market Value": "6530447.25",
+   "Shares Held": "22075",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "Adeia Inc.",
+   "Ticker": "ADEA",
+   "Identifier": "00676P107",
+   "Weight": "0.45",
+   "Market Value": "6194289.92",
+   "Shares Held": "243104",
+   "Asset Category": "Production Technology Equipment"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.17",
+   "Market Value": "2316069.01",
+   "Shares Held": "2316069",
+   "Asset Category": "Other"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

@@ -1,0 +1,936 @@
+{
+ "headers": [
+  "Date",
+  "NAV",
+  "Market Price",
+  "Premium/Discount",
+  "Total Net Assets"
+ ],
+ "rows": [
+  {
+   "Date": "2026-03-19",
+   "NAV": "16.87",
+   "Market Price": "16.86",
+   "Premium/Discount": "-0.0593%",
+   "Total Net Assets": "2530248"
+  },
+  {
+   "Date": "2026-03-20",
+   "NAV": "16.6",
+   "Market Price": "16.59",
+   "Premium/Discount": "-0.0602%",
+   "Total Net Assets": "2490214"
+  },
+  {
+   "Date": "2026-03-23",
+   "NAV": "16.73",
+   "Market Price": "16.72",
+   "Premium/Discount": "-0.0598%",
+   "Total Net Assets": "2509268"
+  },
+  {
+   "Date": "2026-03-24",
+   "NAV": "16.58",
+   "Market Price": "16.57",
+   "Premium/Discount": "-0.0603%",
+   "Total Net Assets": "2486917"
+  },
+  {
+   "Date": "2026-03-25",
+   "NAV": "16.55",
+   "Market Price": "16.55",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2483211"
+  },
+  {
+   "Date": "2026-03-26",
+   "NAV": "16.46",
+   "Market Price": "16.45",
+   "Premium/Discount": "-0.0608%",
+   "Total Net Assets": "2468394"
+  },
+  {
+   "Date": "2026-03-27",
+   "NAV": "15.74",
+   "Market Price": "15.74",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2361358"
+  },
+  {
+   "Date": "2026-03-30",
+   "NAV": "15.76",
+   "Market Price": "15.75",
+   "Premium/Discount": "-0.0635%",
+   "Total Net Assets": "2364675"
+  },
+  {
+   "Date": "2026-03-31",
+   "NAV": "16.24",
+   "Market Price": "16.22",
+   "Premium/Discount": "-0.1232%",
+   "Total Net Assets": "2435480"
+  },
+  {
+   "Date": "2026-04-01",
+   "NAV": "16.33",
+   "Market Price": "16.33",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2448852"
+  },
+  {
+   "Date": "2026-04-02",
+   "NAV": "16.35",
+   "Market Price": "16.34",
+   "Premium/Discount": "-0.0612%",
+   "Total Net Assets": "2452662"
+  },
+  {
+   "Date": "2026-04-06",
+   "NAV": "16.38",
+   "Market Price": "16.37",
+   "Premium/Discount": "-0.0611%",
+   "Total Net Assets": "2457265"
+  },
+  {
+   "Date": "2026-04-07",
+   "NAV": "16.35",
+   "Market Price": "16.33",
+   "Premium/Discount": "-0.1223%",
+   "Total Net Assets": "2452567"
+  },
+  {
+   "Date": "2026-04-08",
+   "NAV": "16.64",
+   "Market Price": "16.63",
+   "Premium/Discount": "-0.0601%",
+   "Total Net Assets": "2495753"
+  },
+  {
+   "Date": "2026-04-09",
+   "NAV": "16.25",
+   "Market Price": "16.24",
+   "Premium/Discount": "-0.0615%",
+   "Total Net Assets": "2437429"
+  },
+  {
+   "Date": "2026-04-10",
+   "NAV": "15.93",
+   "Market Price": "15.92",
+   "Premium/Discount": "-0.0628%",
+   "Total Net Assets": "2389471"
+  },
+  {
+   "Date": "2026-04-13",
+   "NAV": "16.44",
+   "Market Price": "16.43",
+   "Premium/Discount": "-0.0608%",
+   "Total Net Assets": "2466441"
+  },
+  {
+   "Date": "2026-04-14",
+   "NAV": "16.81",
+   "Market Price": "16.79",
+   "Premium/Discount": "-0.1190%",
+   "Total Net Assets": "2521854"
+  },
+  {
+   "Date": "2026-04-15",
+   "NAV": "17.07",
+   "Market Price": "17.07",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2561203"
+  },
+  {
+   "Date": "2026-04-16",
+   "NAV": "16.86",
+   "Market Price": "16.86",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2529358"
+  },
+  {
+   "Date": "2026-04-17",
+   "NAV": "17.32",
+   "Market Price": "17.31",
+   "Premium/Discount": "-0.0577%",
+   "Total Net Assets": "2597691"
+  },
+  {
+   "Date": "2026-04-20",
+   "NAV": "17.4",
+   "Market Price": "17.4",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2610777"
+  },
+  {
+   "Date": "2026-04-21",
+   "NAV": "17.04",
+   "Market Price": "17.04",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2555993"
+  },
+  {
+   "Date": "2026-04-22",
+   "NAV": "17.18",
+   "Market Price": "17.16",
+   "Premium/Discount": "-0.1164%",
+   "Total Net Assets": "2576602"
+  },
+  {
+   "Date": "2026-04-23",
+   "NAV": "16.65",
+   "Market Price": "16.64",
+   "Premium/Discount": "-0.0601%",
+   "Total Net Assets": "2498053"
+  },
+  {
+   "Date": "2026-04-24",
+   "NAV": "16.85",
+   "Market Price": "16.85",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2527975"
+  },
+  {
+   "Date": "2026-04-27",
+   "NAV": "16.83",
+   "Market Price": "16.81",
+   "Premium/Discount": "-0.1188%",
+   "Total Net Assets": "2523829"
+  },
+  {
+   "Date": "2026-04-28",
+   "NAV": "16.39",
+   "Market Price": "16.39",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2459275"
+  },
+  {
+   "Date": "2026-04-29",
+   "NAV": "15.97",
+   "Market Price": "15.97",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2396271"
+  },
+  {
+   "Date": "2026-04-30",
+   "NAV": "16.4",
+   "Market Price": "16.39",
+   "Premium/Discount": "-0.0610%",
+   "Total Net Assets": "2460749"
+  },
+  {
+   "Date": "2026-05-01",
+   "NAV": "16.6",
+   "Market Price": "16.59",
+   "Premium/Discount": "-0.0602%",
+   "Total Net Assets": "2489519"
+  },
+  {
+   "Date": "2026-05-04",
+   "NAV": "16.59",
+   "Market Price": "16.58",
+   "Premium/Discount": "-0.0603%",
+   "Total Net Assets": "2488653"
+  },
+  {
+   "Date": "2026-05-05",
+   "NAV": "16.57",
+   "Market Price": "16.56",
+   "Premium/Discount": "-0.0604%",
+   "Total Net Assets": "2486019"
+  },
+  {
+   "Date": "2026-05-06",
+   "NAV": "16.64",
+   "Market Price": "16.64",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2495616"
+  },
+  {
+   "Date": "2026-05-07",
+   "NAV": "16.66",
+   "Market Price": "16.65",
+   "Premium/Discount": "-0.0600%",
+   "Total Net Assets": "2499019"
+  },
+  {
+   "Date": "2026-05-08",
+   "NAV": "16.45",
+   "Market Price": "16.43",
+   "Premium/Discount": "-0.1216%",
+   "Total Net Assets": "2466831"
+  },
+  {
+   "Date": "2026-05-11",
+   "NAV": "16.11",
+   "Market Price": "16.11",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2416681"
+  },
+  {
+   "Date": "2026-05-12",
+   "NAV": "16.31",
+   "Market Price": "16.3",
+   "Premium/Discount": "-0.0613%",
+   "Total Net Assets": "2446903"
+  },
+  {
+   "Date": "2026-05-13",
+   "NAV": "15.94",
+   "Market Price": "15.94",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2391559"
+  },
+  {
+   "Date": "2026-05-14",
+   "NAV": "15.86",
+   "Market Price": "15.84",
+   "Premium/Discount": "-0.1261%",
+   "Total Net Assets": "2378458"
+  },
+  {
+   "Date": "2026-05-15",
+   "NAV": "15.72",
+   "Market Price": "15.71",
+   "Premium/Discount": "-0.0636%",
+   "Total Net Assets": "2357646"
+  },
+  {
+   "Date": "2026-05-18",
+   "NAV": "16.05",
+   "Market Price": "16.04",
+   "Premium/Discount": "-0.0623%",
+   "Total Net Assets": "2407483"
+  },
+  {
+   "Date": "2026-05-19",
+   "NAV": "16.19",
+   "Market Price": "16.19",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2428587"
+  },
+  {
+   "Date": "2026-05-20",
+   "NAV": "16.68",
+   "Market Price": "16.67",
+   "Premium/Discount": "-0.0600%",
+   "Total Net Assets": "2502343"
+  },
+  {
+   "Date": "2026-05-21",
+   "NAV": "16.65",
+   "Market Price": "16.65",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2497759"
+  },
+  {
+   "Date": "2026-05-22",
+   "NAV": "16.67",
+   "Market Price": "16.67",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2500855"
+  },
+  {
+   "Date": "2026-05-26",
+   "NAV": "16.58",
+   "Market Price": "16.57",
+   "Premium/Discount": "-0.0603%",
+   "Total Net Assets": "2487459"
+  },
+  {
+   "Date": "2026-05-27",
+   "NAV": "16.6",
+   "Market Price": "16.61",
+   "Premium/Discount": "0.0602%",
+   "Total Net Assets": "2490151"
+  },
+  {
+   "Date": "2026-05-28",
+   "NAV": "17.24",
+   "Market Price": "17.23",
+   "Premium/Discount": "-0.0580%",
+   "Total Net Assets": "2585360"
+  },
+  {
+   "Date": "2026-05-29",
+   "NAV": "17.3",
+   "Market Price": "17.28",
+   "Premium/Discount": "-0.1156%",
+   "Total Net Assets": "2594394"
+  },
+  {
+   "Date": "2026-06-01",
+   "NAV": "17.52",
+   "Market Price": "17.52",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2628294"
+  },
+  {
+   "Date": "2026-06-02",
+   "NAV": "17.12",
+   "Market Price": "17.11",
+   "Premium/Discount": "-0.0584%",
+   "Total Net Assets": "2568052"
+  },
+  {
+   "Date": "2026-06-03",
+   "NAV": "17.08",
+   "Market Price": "17.08",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2562076"
+  },
+  {
+   "Date": "2026-06-04",
+   "NAV": "17.66",
+   "Market Price": "17.64",
+   "Premium/Discount": "-0.1133%",
+   "Total Net Assets": "2648370"
+  },
+  {
+   "Date": "2026-06-05",
+   "NAV": "17.31",
+   "Market Price": "17.31",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2596721"
+  },
+  {
+   "Date": "2026-06-08",
+   "NAV": "17.35",
+   "Market Price": "17.35",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2603088"
+  },
+  {
+   "Date": "2026-06-09",
+   "NAV": "17.78",
+   "Market Price": "17.77",
+   "Premium/Discount": "-0.0562%",
+   "Total Net Assets": "2666309"
+  },
+  {
+   "Date": "2026-06-10",
+   "NAV": "17.47",
+   "Market Price": "17.48",
+   "Premium/Discount": "0.0572%",
+   "Total Net Assets": "2620858"
+  },
+  {
+   "Date": "2026-06-11",
+   "NAV": "17.65",
+   "Market Price": "17.65",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2647702"
+  },
+  {
+   "Date": "2026-06-12",
+   "NAV": "17.52",
+   "Market Price": "17.5",
+   "Premium/Discount": "-0.1142%",
+   "Total Net Assets": "2628042"
+  },
+  {
+   "Date": "2026-06-15",
+   "NAV": "17.73",
+   "Market Price": "17.7",
+   "Premium/Discount": "-0.1692%",
+   "Total Net Assets": "2658939"
+  },
+  {
+   "Date": "2026-06-16",
+   "NAV": "17.69",
+   "Market Price": "17.67",
+   "Premium/Discount": "-0.1131%",
+   "Total Net Assets": "2653011"
+  },
+  {
+   "Date": "2026-06-17",
+   "NAV": "17.29",
+   "Market Price": "17.28",
+   "Premium/Discount": "-0.0578%",
+   "Total Net Assets": "2593471"
+  },
+  {
+   "Date": "2026-06-18",
+   "NAV": "17.68",
+   "Market Price": "17.68",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2652752"
+  },
+  {
+   "Date": "2026-06-22",
+   "NAV": "17.35",
+   "Market Price": "17.35",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2602602"
+  },
+  {
+   "Date": "2026-06-23",
+   "NAV": "17.59",
+   "Market Price": "17.6",
+   "Premium/Discount": "0.0569%",
+   "Total Net Assets": "2639224"
+  },
+  {
+   "Date": "2026-06-24",
+   "NAV": "18.21",
+   "Market Price": "18.2",
+   "Premium/Discount": "-0.0549%",
+   "Total Net Assets": "2731693"
+  },
+  {
+   "Date": "2026-06-25",
+   "NAV": "18.43",
+   "Market Price": "18.42",
+   "Premium/Discount": "-0.0543%",
+   "Total Net Assets": "2765016"
+  },
+  {
+   "Date": "2026-06-26",
+   "NAV": "18.91",
+   "Market Price": "18.9",
+   "Premium/Discount": "-0.0529%",
+   "Total Net Assets": "2836787"
+  },
+  {
+   "Date": "2026-06-29",
+   "NAV": "19.05",
+   "Market Price": "19.03",
+   "Premium/Discount": "-0.1050%",
+   "Total Net Assets": "2857193"
+  },
+  {
+   "Date": "2026-06-30",
+   "NAV": "18.77",
+   "Market Price": "18.77",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2815656"
+  },
+  {
+   "Date": "2026-07-01",
+   "NAV": "19.6",
+   "Market Price": "19.58",
+   "Premium/Discount": "-0.1020%",
+   "Total Net Assets": "2940105"
+  },
+  {
+   "Date": "2026-07-02",
+   "NAV": "19.88",
+   "Market Price": "19.85",
+   "Premium/Discount": "-0.1509%",
+   "Total Net Assets": "2982195"
+  },
+  {
+   "Date": "2026-07-06",
+   "NAV": "20.08",
+   "Market Price": "20.08",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "3011420"
+  },
+  {
+   "Date": "2026-07-07",
+   "NAV": "19.88",
+   "Market Price": "19.88",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2981588"
+  },
+  {
+   "Date": "2026-07-08",
+   "NAV": "19.38",
+   "Market Price": "19.38",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2907381"
+  },
+  {
+   "Date": "2026-07-09",
+   "NAV": "19.83",
+   "Market Price": "19.82",
+   "Premium/Discount": "-0.0504%",
+   "Total Net Assets": "2974478"
+  },
+  {
+   "Date": "2026-07-10",
+   "NAV": "19.59",
+   "Market Price": "19.58",
+   "Premium/Discount": "-0.0510%",
+   "Total Net Assets": "2937926"
+  },
+  {
+   "Date": "2026-07-13",
+   "NAV": "19.7",
+   "Market Price": "19.7",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2955257"
+  },
+  {
+   "Date": "2026-07-14",
+   "NAV": "19.49",
+   "Market Price": "19.48",
+   "Premium/Discount": "-0.0513%",
+   "Total Net Assets": "2922939"
+  },
+  {
+   "Date": "2026-07-15",
+   "NAV": "19.66",
+   "Market Price": "19.66",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2948823"
+  },
+  {
+   "Date": "2026-07-16",
+   "NAV": "19.65",
+   "Market Price": "19.63",
+   "Premium/Discount": "-0.1018%",
+   "Total Net Assets": "2947989"
+  },
+  {
+   "Date": "2026-07-17",
+   "NAV": "19.28",
+   "Market Price": "19.28",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "3856529"
+  },
+  {
+   "Date": "2026-07-20",
+   "NAV": "19.06",
+   "Market Price": "19.06",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "3811334"
+  },
+  {
+   "Date": "2026-07-21",
+   "NAV": "19.14",
+   "Market Price": "19.13",
+   "Premium/Discount": "-0.0522%",
+   "Total Net Assets": "2870682"
+  },
+  {
+   "Date": "2026-07-22",
+   "NAV": "18.67",
+   "Market Price": "18.67",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "2800474"
+  },
+  {
+   "Date": "2026-07-23",
+   "NAV": "18.67",
+   "Market Price": "18.65",
+   "Premium/Discount": "-0.1071%",
+   "Total Net Assets": "3733102"
+  },
+  {
+   "Date": "2026-07-24",
+   "NAV": "18.58",
+   "Market Price": "18.57",
+   "Premium/Discount": "-0.0538%",
+   "Total Net Assets": "3716138"
+  },
+  {
+   "Date": "2026-07-27",
+   "NAV": "18.86",
+   "Market Price": "18.85",
+   "Premium/Discount": "-0.0530%",
+   "Total Net Assets": "3772287"
+  },
+  {
+   "Date": "2026-07-28",
+   "NAV": "19.43",
+   "Market Price": "19.45",
+   "Premium/Discount": "0.1029%",
+   "Total Net Assets": "3886694"
+  },
+  {
+   "Date": "2026-07-29",
+   "NAV": "19.48",
+   "Market Price": "19.48",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "3896400"
+  },
+  {
+   "Date": "2026-07-30",
+   "NAV": "19.54",
+   "Market Price": "19.55",
+   "Premium/Discount": "0.0512%",
+   "Total Net Assets": "3907711"
+  },
+  {
+   "Date": "2026-07-31",
+   "NAV": "19.62",
+   "Market Price": "19.63",
+   "Premium/Discount": "0.0510%",
+   "Total Net Assets": "3923130"
+  },
+  {
+   "Date": "2026-08-03",
+   "NAV": "20.02",
+   "Market Price": "20.04",
+   "Premium/Discount": "0.0999%",
+   "Total Net Assets": "4003159"
+  },
+  {
+   "Date": "2026-08-04",
+   "NAV": "20.21",
+   "Market Price": "20.19",
+   "Premium/Discount": "-0.0990%",
+   "Total Net Assets": "4041303"
+  },
+  {
+   "Date": "2026-08-05",
+   "NAV": "20.11",
+   "Market Price": "20.12",
+   "Premium/Discount": "0.0497%",
+   "Total Net Assets": "4022702"
+  },
+  {
+   "Date": "2026-08-06",
+   "NAV": "19.79",
+   "Market Price": "19.78",
+   "Premium/Discount": "-0.0505%",
+   "Total Net Assets": "3957191"
+  },
+  {
+   "Date": "2026-08-07",
+   "NAV": "20.66",
+   "Market Price": "20.64",
+   "Premium/Discount": "-0.0968%",
+   "Total Net Assets": "4132644"
+  },
+  {
+   "Date": "2026-08-10",
+   "NAV": "21.09",
+   "Market Price": "21.1",
+   "Premium/Discount": "0.0474%",
+   "Total Net Assets": "4218016"
+  },
+  {
+   "Date": "2026-08-11",
+   "NAV": "21.1",
+   "Market Price": "21.1",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "4219128"
+  },
+  {
+   "Date": "2026-08-12",
+   "NAV": "21.16",
+   "Market Price": "21.14",
+   "Premium/Discount": "-0.0945%",
+   "Total Net Assets": "4232443"
+  },
+  {
+   "Date": "2026-08-13",
+   "NAV": "21.26",
+   "Market Price": "21.26",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "4251611"
+  },
+  {
+   "Date": "2026-08-14",
+   "NAV": "21.1",
+   "Market Price": "21.08",
+   "Premium/Discount": "-0.0948%",
+   "Total Net Assets": "4219477"
+  },
+  {
+   "Date": "2026-08-17",
+   "NAV": "20.98",
+   "Market Price": "21.01",
+   "Premium/Discount": "0.1430%",
+   "Total Net Assets": "4196750"
+  },
+  {
+   "Date": "2026-08-18",
+   "NAV": "20.9",
+   "Market Price": "20.91",
+   "Premium/Discount": "0.0478%",
+   "Total Net Assets": "4179782"
+  },
+  {
+   "Date": "2026-08-19",
+   "NAV": "21.86",
+   "Market Price": "21.85",
+   "Premium/Discount": "-0.0457%",
+   "Total Net Assets": "4371934"
+  },
+  {
+   "Date": "2026-08-20",
+   "NAV": "21.91",
+   "Market Price": "21.9",
+   "Premium/Discount": "-0.0456%",
+   "Total Net Assets": "4382649"
+  },
+  {
+   "Date": "2026-08-21",
+   "NAV": "22.33",
+   "Market Price": "22.32",
+   "Premium/Discount": "-0.0448%",
+   "Total Net Assets": "4466404"
+  },
+  {
+   "Date": "2026-08-24",
+   "NAV": "21.97",
+   "Market Price": "21.96",
+   "Premium/Discount": "-0.0455%",
+   "Total Net Assets": "4393933"
+  },
+  {
+   "Date": "2026-08-25",
+   "NAV": "22.1",
+   "Market Price": "22.09",
+   "Premium/Discount": "-0.0452%",
+   "Total Net Assets": "4419992"
+  },
+  {
+   "Date": "2026-08-26",
+   "NAV": "22.07",
+   "Market Price": "22.06",
+   "Premium/Discount": "-0.0453%",
+   "Total Net Assets": "4413799"
+  },
+  {
+   "Date": "2026-08-27",
+   "NAV": "22.44",
+   "Market Price": "22.43",
+   "Premium/Discount": "-0.0446%",
+   "Total Net Assets": "4488063"
+  },
+  {
+   "Date": "2026-08-28",
+   "NAV": "22.06",
+   "Market Price": "22.05",
+   "Premium/Discount": "-0.0453%",
+   "Total Net Assets": "4411815"
+  },
+  {
+   "Date": "2026-08-31",
+   "NAV": "22.1",
+   "Market Price": "22.1",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "4420651"
+  },
+  {
+   "Date": "2026-09-01",
+   "NAV": "21.8",
+   "Market Price": "21.79",
+   "Premium/Discount": "-0.0459%",
+   "Total Net Assets": "4360068"
+  },
+  {
+   "Date": "2026-09-02",
+   "NAV": "22",
+   "Market Price": "21.98",
+   "Premium/Discount": "-0.0909%",
+   "Total Net Assets": "4399556"
+  },
+  {
+   "Date": "2026-09-03",
+   "NAV": "22.18",
+   "Market Price": "22.15",
+   "Premium/Discount": "-0.1353%",
+   "Total Net Assets": "4436157"
+  },
+  {
+   "Date": "2026-09-04",
+   "NAV": "21.94",
+   "Market Price": "21.92",
+   "Premium/Discount": "-0.0912%",
+   "Total Net Assets": "4387764"
+  },
+  {
+   "Date": "2026-09-08",
+   "NAV": "21.52",
+   "Market Price": "21.51",
+   "Premium/Discount": "-0.0465%",
+   "Total Net Assets": "4303181"
+  },
+  {
+   "Date": "2026-09-09",
+   "NAV": "21.32",
+   "Market Price": "21.33",
+   "Premium/Discount": "0.0469%",
+   "Total Net Assets": "4264335"
+  },
+  {
+   "Date": "2026-09-10",
+   "NAV": "21.17",
+   "Market Price": "21.17",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "4234333"
+  },
+  {
+   "Date": "2026-09-11",
+   "NAV": "21.33",
+   "Market Price": "21.35",
+   "Premium/Discount": "0.0938%",
+   "Total Net Assets": "4266613"
+  },
+  {
+   "Date": "2026-09-14",
+   "NAV": "21.91",
+   "Market Price": "21.9",
+   "Premium/Discount": "-0.0456%",
+   "Total Net Assets": "4382212"
+  },
+  {
+   "Date": "2026-09-15",
+   "NAV": "22.28",
+   "Market Price": "22.26",
+   "Premium/Discount": "-0.0898%",
+   "Total Net Assets": "4455078"
+  },
+  {
+   "Date": "2026-09-16",
+   "NAV": "22.34",
+   "Market Price": "22.32",
+   "Premium/Discount": "-0.0895%",
+   "Total Net Assets": "4467243"
+  },
+  {
+   "Date": "2026-09-17",
+   "NAV": "22.88",
+   "Market Price": "22.88",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "4576041"
+  },
+  {
+   "Date": "2026-09-18",
+   "NAV": "22.77",
+   "Market Price": "22.79",
+   "Premium/Discount": "0.0878%",
+   "Total Net Assets": "4554498"
+  },
+  {
+   "Date": "2026-09-21",
+   "NAV": "22.94",
+   "Market Price": "22.94",
+   "Premium/Discount": "0.0000%",
+   "Total Net Assets": "4587589"
+  },
+  {
+   "Date": "2026-09-22",
+   "NAV": "23.19",
+   "Market Price": "23.21",
+   "Premium/Discount": "0.0862%",
+   "Total Net Assets": "4638824"
+  },
+  {
+   "Date": "2026-09-23",
+   "NAV": "22.95",
+   "Market Price": "22.96",
+   "Premium/Discount": "0.0436%",
+   "Total Net Assets": "4589890"
+  },
+  {
+   "Date": "2026-09-24",
+   "NAV": "23.53",
+   "Market Price": "23.54",
+   "Premium/Discount": "0.0425%",
+   "Total Net Assets": "4705304"
+  },
+  {
+   "Date": "2026-09-25",
+   "NAV": "23.63",
+   "Market Price": "23.65",
+   "Premium/Discount": "0.0846%",
+   "Total Net Assets": "4725296"
+  }
+ ],
+ "asOfDate": "2026-09-25"
+}

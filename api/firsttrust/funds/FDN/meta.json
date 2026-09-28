@@ -1,0 +1,174 @@
+{
+ "ticker": "FDN",
+ "name": "First Trust Dow Jones Internet Index Fund",
+ "category": "Thematic",
+ "source": {
+  "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FDN",
+  "catalog": "https://www.ftportfolios.com/Retail/etf/etflist.aspx",
+  "catalogPerformance": "https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav",
+  "issuerHome": "https://www.ftportfolios.com/retail/etf/home.aspx",
+  "holdingsPage": "https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker=FDN",
+  "historyPage": "https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker=FDN",
+  "distributionPage": "https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker=FDN",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDN",
+  "holdingsSource": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)",
+  "historySource": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)",
+  "distributionSource": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)",
+  "provider": "First Trust Portfolios L.P. / First Trust Advisors L.P. official ftportfolios.com pages + Yahoo Finance chart (history fallback) + SEC EDGAR N-PORT-P (holdings fallback only)"
+ },
+ "fundType": "Internet",
+ "identifiers": {
+  "cusip": "33733E302",
+  "isin": "US33733E3027",
+  "iopv": "FDNIV",
+  "indexTicker": "Dow Jones Internet Composite Index"
+ },
+ "inception": {
+  "fundInceptionDate": "2006-06-19",
+  "exchange": "NYSE Arca"
+ },
+ "expenseRatio": {
+  "display": "0.49%",
+  "value": 0.49,
+  "gross": 0.49,
+  "net": 0.49,
+  "asOfDate": "2026-05-01"
+ },
+ "nav": {
+  "display": "$291.54",
+  "value": 291.54,
+  "asOfDate": "Sep 25 2026"
+ },
+ "marketPrice": {
+  "display": "$291.61",
+  "value": 291.61,
+  "asOfDate": "Sep 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.00%",
+  "value": 0,
+  "basis": "First Trust published bid/ask premium"
+ },
+ "aum": {
+  "display": "$5.31B",
+  "value": 5306019723,
+  "asOfDate": "Sep 25 2026",
+  "source": "First Trust fund summary (Total Net Assets)"
+ },
+ "shares": {
+  "outstanding": 18200002
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": null,
+  "dividendYieldKind": null,
+  "distributionRate": null,
+  "distributionPerShare": null,
+  "secYield": null,
+  "secYieldText": null,
+  "secYieldKind": null,
+  "unsubsidizedSecYield": null
+ },
+ "returns": {
+  "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
+  "monthEnd": {
+   "asOfDate": "2026-08-31",
+   "mo3": 3.24,
+   "ytd": 8.64,
+   "yr1": 5.78,
+   "yr3": 19.92,
+   "yr5": 3.23,
+   "yr10": 13.97,
+   "sinceInception": 14.23
+  },
+  "quarterEnd": {
+   "asOfDate": "2026-06-30",
+   "mo3": 13.11,
+   "ytd": -1.68,
+   "yr1": -1.71,
+   "yr3": 17.54,
+   "yr5": 1.57,
+   "yr10": 13.89,
+   "sinceInception": 13.79
+  }
+ },
+ "distributions": {
+  "frequency": null,
+  "latestAmount": 0.0111,
+  "latestExDate": "2011-12-21",
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Distribution Amount",
+   "Distribution Type"
+  ],
+  "rows": [
+   [
+    "2011-12-21",
+    "2011-12-23",
+    "2011-12-30",
+    "0.011100",
+    "Ordinary Distributions"
+   ],
+   [
+    "2011-06-21",
+    "2011-06-23",
+    "2011-06-30",
+    "0.011400",
+    "Ordinary Distributions"
+   ],
+   [
+    "2010-12-21",
+    "2010-12-23",
+    "2010-12-31",
+    "0.038700",
+    "Ordinary Distributions"
+   ],
+   [
+    "2008-12-23",
+    "2008-12-26",
+    "2008-12-31",
+    "0.012500",
+    "Ordinary Distributions"
+   ],
+   [
+    "2008-06-23",
+    "2008-06-25",
+    "2008-06-30",
+    "0.036600",
+    "Ordinary Distributions"
+   ]
+  ],
+  "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 42,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json",
+   "history/005.json",
+   "history/006.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 5099,
+  "asOfDate": "2026-09-25",
+  "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
+ },
+ "holdingsCount": 42,
+ "historyCount": 5099,
+ "distributionCount": 5,
+ "netAssets": 5306019723,
+ "dividendYield": null,
+ "secYield": null
+}
