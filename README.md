@@ -22,7 +22,7 @@ bun test scripts/update-data.test.ts
 bun scripts/update-data.ts
 ```
 
-Run `bun scripts/update-data.ts --help` to print every configuration variable with its usage examples. The **Update First Trust ETF data** GitHub Actions workflow exposes the same settings as manual inputs. All supplied filters use **AND** logic.
+Run `bun scripts/update-data.ts --help` to print every configuration variable with its usage examples. The **Update First Trust ETF data** GitHub Actions workflow exposes the same settings as manual inputs, except `SEC_UA`, which it reads from the `SEC_UA` repository variable (GitHub allows at most 25 manual inputs, and a variable also reaches the weekly scheduled run). All supplied filters use **AND** logic.
 
 ### Data sources
 
@@ -56,7 +56,7 @@ The updater uses issuer-published NAV performance values for month-end and quart
 | `HISTORY_RANGE` | `max` | History window for the official export (and the Yahoo fallback): `max` or a whole number of years or months such as `10y`, `5y`, `1y` or `6mo`. |
 | `MAX_RETRIES` | `2` | Retries after the initial request. Network errors and HTTP 403/408/425/429/5xx responses are retried with bounded exponential backoff. |
 | `EDGAR_FALLBACK` | on | Use SEC N-PORT-P holdings when official First Trust holdings are unavailable. |
-| `SEC_UA` | not configured | SEC User-Agent with a valid organizational contact. Required only if the EDGAR fallback is used. |
+| `SEC_UA` | not configured | SEC User-Agent with a valid organizational contact. Required only if the EDGAR fallback is used. In GitHub Actions, set it as the `SEC_UA` repository variable. |
 | `SKIP_YAHOO` | off | Do not call Yahoo when the official history export fails; retain existing history when available. |
 | `VERBOSE` | off | Show per-request retries and fallback details. |
 
