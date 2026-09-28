@@ -6,12 +6,12 @@
 - Hard constraints: Bun-only, zero runtime dependencies, no `tsconfig.json`/TypeScript dependency/`bunx tsc`; copy UI only with enumerated brand/source substitutions; preserve existing changes; never store credentials; no force push, overwrites, bypasses, or merge without explicit authorization.
 - Authorization: the user supplied the target repository and a GitHub PAT for this work -> feature-branch commits/pushes to `daggerok/First-Trust` are authorized (token used at runtime only, never written to files/git config). PR creation, PR merge, sibling-repository README PRs and repository About/settings edits are NOT yet explicitly authorized -> ask the user before doing them.
 - Repository: `https://github.com/daggerok/First-Trust`; default `main` at `342bf386d6ca72cb1a856b315565002f73f6c521` (Initial commit: LICENSE + placeholder README). Feature branch: `init-first-trust`. No PRs existed at start (GitHub REST, state=all -> []).
-- Completed: initial inspection; worklog; source discovery; updater (reworked on verbatim JPMorgan@71c98f7 layers + Neos@c8e9c2e HTML helpers + NAV performance catalog view); tests 21/21; bun build OK; UI copy (headless-verified, 0 console errors); workflow/dependabot/package/README (headings pinned to JPMorgan README @71c98f7); isolated live acceptance x2 on FDN FTSM FJAN RDVY (idempotent, 28 identical hashes) + 4-ticker seed — all LOCAL commits 3d4f5a0..048e69d+ (unpushed: token 401).
-- Active: rework R1-R7 finished locally; waiting for a valid GitHub token to publish.
-- Remaining: push; with authorization: PR -> merge, About description/topics/homepage, sibling README rows (First Trust between Fidelity and Franklin Templeton).
-- Blockers: GitHub PAT from the latest user message returns HTTP 401 Bad credentials (re-checked after the rework) -> nothing pushed; need a new token with contents:write on daggerok/First-Trust (PR/About need pull-requests and administration scopes).
-- Last confirmed pushed SHA: `a90ff9df3150509183e82622aab4e9d1c4820dcd` (user commit on remote; last agent-pushed commit 1cc072c).
-- Exact next action: With a valid token: git push https://x-access-token:$T@github.com/daggerok/First-Trust.git init-first-trust (fast-forward over a90ff9d), verify with git ls-remote; then, only if authorized, open the PR to main and set About/topics/homepage.
+- Completed: initial inspection; worklog; source discovery; updater (verbatim JPMorgan@71c98f7 layers + Neos@c8e9c2e HTML helpers + NAV performance catalog view); tests 21/21; live acceptance x2 (identical hashes); 4-ticker seed; UI check; README; push d6a67d9; PR #1 opened; repo About/homepage/topics set; 19 sibling README PRs opened (branch docs/add-first-trust).
+- Active: nothing in progress; waiting for the owner to review/merge PR #1 and the 19 sibling README PRs.
+- Remaining: owner: merge PR #1 (then the weekly Actions workflow fills the full 332-fund catalog; can be run manually via workflow_dispatch) and the sibling README PRs; optional: set the SEC_UA secret/variable to enable the EDGAR fallback.
+- Blockers: none (new token valid: daggerok, admin/push).
+- Last confirmed pushed SHA: `d6a67d99eb8f5e685b44302c839a3e0f2a7f3be2` on init-first-trust (confirmed via git ls-remote); this worklog commit is pushed next.
+- Exact next action: none for the agent; wait for PR merges / new user instructions.
 
 ## User-provided scope and precedence (sanitized)
 - Brand: First-Trust (UI/README brand "First Trust"; repository `First-Trust`).
@@ -141,6 +141,17 @@
   - Seed refreshed from run 2 output (commit 41ba01c): 4 funds, 28 files.
 - R7 UI: `grep -c '<tr[^>]*onClick' app.tsx` = 0 (rows toggle only via the Use checkbox). Headless Chromium (python http.server + /tmp/shot3.py): catalog 332, RDVY Overview 43 rows, Holdings 73, History 1000 (page 1), Distributions 52, Watchlist 251 rows for FDN/FJAN/FTSM/RDVY, 0 console errors. Note: the verbatim JPMorgan UI labels the yield row "Dividend Yield (indicated)" even when the value is First Trust's published 12-month rate; the "Dividend Yield Basis" row states the real basis (left as is: UI verbatim rule).
 - Publication: the PAT from the latest user message still returns HTTP 401 on api.github.com/user (re-checked); remote init-first-trust still a90ff9d. Local unpushed commits: 3d4f5a0, 40ac54a, 11206fa, 606056a, e76d435, ca724a2, 41ba01c + this worklog commit.
+
+### 2026-09-28 — публикация, PR #1, About/topics, PR в соседние репозитории
+- Новый токен проверен (login daggerok, admin/push на First-Trust); в файлы репозитория и git config не записан.
+- Перед push: `bun test` — 21 pass; `git diff --check` — чисто; a90ff9d — предок HEAD.
+- Push `HEAD:refs/heads/init-first-trust`: fast-forward a90ff9d..d6a67d9, подтверждён через `git ls-remote`.
+- Открыт PR https://github.com/daggerok/First-Trust/pull/1 (init-first-trust → main). Не слит: слияние выполняет владелец.
+- PATCH /repos/daggerok/First-Trust: задан description по шаблону соседних репозиториев, homepage https://daggerok.github.io/First-Trust/ (HTTP 200; Pages собирается из main /).
+- PUT /topics: стандартные 18 тем (как у VictoryShares/JPMorgan/Neos) + first-trust, first-trust-etfs. Ответ API подтвердил все 20.
+- README в 19 соседних репозиториях: строка First Trust добавлена между Fidelity и Franklin в таблицы Brands и Sibling applications. Строки скопированы из README.md:88 и :113. Предварительно проверено: First Trust ещё не было ни в одном из них; диф в каждом — ровно +2 строки. Ветка `docs/add-first-trust`, коммит `docs(readme): add First Trust to brands and sibling tables`, PR не сливались:
+  aberdeen#6, Amplify#50, Capital-Group#3, Fidelity#25, Franklin#24, Global-X#11, Goldman-Sachs#20, Invesco#26, iShares#51, JPMorgan#23, Neos#21, Northern-Trust#4, ProShares#23, Schwab#19, SPDR#36, VanEck#22, Vanguard#32, VictoryShares#4, WisdomTree#32.
+- Замечания для владельца: (1) в JPMorgan `parseNonNegativeFloat('')` возвращает 0, поэтому при пустом REQUEST_SLEEP паузы нет (в First Trust исправлено); (2) метка «Dividend Yield (indicated)» взята дословно из JPM, а по смыслу у First Trust это 12-month distribution rate; (3) SEC-фоллбэк включается только при заданном FIRSTTRUST_SEC_UA (или SEC_UA).
 
 ### Full source-plan snapshots
 #### BEGIN `00-generic.txt` (full text; see provenance note above)
