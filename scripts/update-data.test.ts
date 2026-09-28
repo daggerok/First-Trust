@@ -3,22 +3,35 @@ import { describe, expect, test } from 'bun:test';
 import { readFile } from 'node:fs/promises';
 import { deflateRawSync } from 'node:zlib';
 import {
-  buildPages, createRequestGate, fundPasses, historySheetRows, historyStartDate, formatFrequencyPlaceholder,
-  indexEntryFromMeta, mergeDistributionRows, metricsFromReturns, outputContentKey, pageBasenames, parseAtomFilings,
-  parseAumRange, parseCatalogHtml, parseDistributionHtml, parseFundTickerRefs, parseHiddenInputs, parseHoldingsHtml,
-  parseNportHoldings, parsePriceHistoryRows, parseRange, parseSummaryHtml, parseYahooChart, readConfig, readXlsxRows,
-  summarizeDistributions, summaryValue,
+  applyCatalogPerformance, buildPages, catalogOnlyEntry, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
+  formatFrequencyPlaceholder, fundPasses, historySheetRows, historyStartDate, indexEntryFromMeta, mapReturnRow,
+  mergeDistributionRows, metricsFromReturns, normalizeHistoryRange, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
+  parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
+  parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
+  returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
+  type Fund,
 } from './update-data';
 
 // Fixtures below are trimmed verbatim fragments of the official ftportfolios.com pages (captured 2026-09-28).
 const catalogHtml = `
 <span id="ContentPlaceHolder1_etfsearch_ctl00_lblETFSectionTitle" style="color:White;font-size:10pt;">Alternative Funds</span></B></TD></TR></TABLE>
-<table><!-- <tr><td><a href='/Retail/Etf/EtfSummary.aspx?Ticker=JUNK'>template</a></td></tr> -->
-<tr style='background-color: WhiteSmoke;'> <td> <a href='/Retail/Etf/EtfSummary.aspx?Ticker=FTHI'>First Trust BuyWrite Income ETF</a> </td> <td align="center"> FTHI </td> <td align="center"> 01/06/14 </td> <td align="right"> $23.72 </td> <td align="right"> 0.66% </td> <td align="right"> ------- </td> <td align="right"> 8.86% </td> <td align="right"> 08/31/26 </td> <td align="center"> <a target='_blank' href='/Common/ContentFileLoader.aspx?ContentGUID=x'><img alt='Fact Sheet'></a> </td> </tr>
+<table cellpadding="0" cellspacing="0" class="searchResults small" width="100%" border="0"> <tr> <th width="410" class="sortableColumn" onclick="sortFunds_ContentPlaceHolder1_etfsearch_ctl00('Name')" align="left">Fund Name <img src='/Common/Images/ig_tblSortAsc.gif' alt='Ascending sort' /></th> <th width="60" class="sortableColumn">Ticker<br />Symbol </th> <th width="60" class="sortableColumn">Inception<br />Date </th> <th width="45" class="sortableColumn" align="right">Close<br />NAV </th> <th width="70" class="sortableColumn">30-Day<br />SEC Yield<sup>1</sup> </th> <th width="70" class="sortableColumn">Unsubsidized<br />30-Day<br />SEC Yield<sup>2</sup> </th> <th width="70" class="sortableColumn">12-Month<br />Trailing Distribution<br />Rate<sup>3</sup> </th> <th width="50" class="sortableColumn">Yield<br />As Of<br />Date </th> <th width="35">Fact<br />Sheet</th> <th width="40">Summary<br />Prospectus</th> </tr>
+<!-- <tr><td><a href='/Retail/Etf/EtfSummary.aspx?Ticker=JUNK'>template</a></td></tr> -->
+<tr style='background-color: WhiteSmoke;'> <td> <a href='/Retail/Etf/EtfSummary.aspx?Ticker=FTHI'>First Trust BuyWrite Income ETF</a> </td> <td align="center"> FTHI </td> <td align="center"> 01/06/14 </td> <td align="right" style="padding-right: 2px;"> $23.72 </td> <td align="right" style="padding-right: 20px;"> 0.66% </td> <td align="right" style="padding-right: 20px;"> ------- </td> <!-- <td align="right" style="padding-right: 10px;"> <'%# GetSecurityYieldForDisplay(CType(Container.DataItem, ExchangeTradedFundSecurity).IndexYield)%> </td> --> <td align="right" style="padding-right: 10px;"> 8.86% </td> <td align="right" style="padding-right: 10px;"> 08/31/26 </td> <td align="center"> <a target='_blank' href='/Common/ContentFileLoader.aspx?ContentGUID=x'><img border='0' alt='Click here to download a Fact Sheet'></a> </td> </tr>
 </table>
 <span id="ContentPlaceHolder1_etfsearch_ctl05_lblETFSectionTitle" style="color:White;font-size:10pt;">Thematic Funds</span></B></TD></TR></TABLE>
-<table>
-<tr> <td> <a href='/Retail/Etf/EtfSummary.aspx?Ticker=FDN'>First Trust Dow Jones Internet Index Fund</a> </td> <td align="center"> FDN </td> <td align="center"> 06/19/06 </td> <td align="right"> $291.54 </td> <td align="right"> ------- </td> <td align="right"> ------- </td> <td align="right"> ------- </td> <td align="right"> 08/31/26 </td> </tr>
+<table cellpadding="0" cellspacing="0" class="searchResults small" width="100%" border="0"> <tr> <th width="410" class="sortableColumn" onclick="sortFunds_ContentPlaceHolder1_etfsearch_ctl00('Name')" align="left">Fund Name <img src='/Common/Images/ig_tblSortAsc.gif' alt='Ascending sort' /></th> <th width="60" class="sortableColumn">Ticker<br />Symbol </th> <th width="60" class="sortableColumn">Inception<br />Date </th> <th width="45" class="sortableColumn" align="right">Close<br />NAV </th> <th width="70" class="sortableColumn">30-Day<br />SEC Yield<sup>1</sup> </th> <th width="70" class="sortableColumn">Unsubsidized<br />30-Day<br />SEC Yield<sup>2</sup> </th> <th width="70" class="sortableColumn">12-Month<br />Trailing Distribution<br />Rate<sup>3</sup> </th> <th width="50" class="sortableColumn">Yield<br />As Of<br />Date </th> <th width="35">Fact<br />Sheet</th> <th width="40">Summary<br />Prospectus</th> </tr>
+<tr style='background-color: WhiteSmoke;'> <td> <a href='/Retail/Etf/EtfSummary.aspx?Ticker=FDN'>First Trust Dow Jones Internet Index Fund</a> </td> <td align="center"> FDN </td> <td align="center"> 06/19/06 </td> <td align="right" style="padding-right: 2px;"> $291.54 </td> <td align="right" style="padding-right: 20px;"> ------- </td> <td align="right" style="padding-right: 20px;"> ------- </td> <!-- <td align="right"> <'%# GetSecurityYieldForDisplay()%> </td> --> <td align="right" style="padding-right: 10px;"> ------- </td> <td align="right" style="padding-right: 10px;"> ------- </td> </tr>
+</table>`;
+// etflist.aspx?DisplayType=PerformanceNav (net expense ratio of BFEW changed to exercise a waiver).
+const performanceNavHtml = `
+<span id="ContentPlaceHolder1_etfsearch_ctl00_lblETFSectionTitle" style="color:White;font-size:10pt;">Alternative Funds</span></B></TD></TR></TABLE>
+<table cellpadding="0" cellspacing="0" class="searchResults small" width="100%" border="0"> <tr> <th width="250" class="sortableColumn" align="left">Fund Name <img src='/Common/Images/ig_tblSortAsc.gif' alt='Ascending sort' /></th> <th width="20" class="sortableColumn">Ticker<br />Symbol </th> <th width="45" class="sortableColumn">Inception<br />Date </th> <th width="45" class="sortableColumn">Total<br />Expense<br />Ratio </th> <th width="45" class="sortableColumn">Net<br />Expense<br />Ratio </th> <th width="40" class="sortableColumn">3<br />Month</th> <th width="40" class="sortableColumn">YTD</th> <th width="40" class="sortableColumn">1<br />Year</th> <th width="40" class="sortableColumn">3<br />Year</th> <th width="40" class="sortableColumn">5<br />Year</th> <th width="40" class="sortableColumn">10<br />Year</th> <th width="40" class="sortableColumn">Since<br />Inception</th> <th width="30" class="sortableColumn">As<br />Of<br />Date</th> <th width="30">Fact<br />Sheet</th> </tr>
+<tr style='background-color: WhiteSmoke;'> <td> <a href='/Retail/Etf/EtfSummary.aspx?Ticker=FTHI'>First Trust BuyWrite Income ETF</a> </td> <td align="center"> FTHI </td> <td align="center"> 1/6/2014 </td> <td align="right"> 0.75% </td> <td align="right"> N/A </td> <td align="right"> 2.21% </td> <td align="right"> 6.87% </td> <td align="right"> 12.02% </td> <td align="right"> 13.80% </td> <td align="right"> 10.83% </td> <td align="right"> 8.36% </td> <td align="right"> 7.74% </td> <td align="center"> 8/31/2026 </td> <td align="center"> <a target='_blank' href='/Common/ContentFileLoader.aspx?ContentGUID=x'><img border='0' alt='Fact Sheet'></a> </td> </tr>
+</table>
+<span id="ContentPlaceHolder1_etfsearch_ctl07_lblETFSectionTitle" style="color:White;font-size:10pt;">Target Outcome Funds</span></B></TD></TR></TABLE>
+<table cellpadding="0" cellspacing="0" class="searchResults small" width="100%" border="0"> <tr> <th width="250" class="sortableColumn" align="left">Fund Name <img src='/Common/Images/ig_tblSortAsc.gif' alt='Ascending sort' /></th> <th width="20" class="sortableColumn">Ticker<br />Symbol </th> <th width="45" class="sortableColumn">Inception<br />Date </th> <th width="45" class="sortableColumn">Total<br />Expense<br />Ratio </th> <th width="45" class="sortableColumn">Net<br />Expense<br />Ratio </th> <th width="40" class="sortableColumn">3<br />Month</th> <th width="40" class="sortableColumn">YTD</th> <th width="40" class="sortableColumn">1<br />Year</th> <th width="40" class="sortableColumn">3<br />Year</th> <th width="40" class="sortableColumn">5<br />Year</th> <th width="40" class="sortableColumn">10<br />Year</th> <th width="40" class="sortableColumn">Since<br />Inception</th> <th width="30" class="sortableColumn">As<br />Of<br />Date</th> <th width="30">Fact<br />Sheet</th> </tr>
+<tr> <td> <a href='/Retail/Etf/EtfSummary.aspx?Ticker=BFEW'>FT Vest Laddered U.S. Equity Equal Weight Buffer ETF</a> </td> <td align="center"> BFEW </td> <td align="center"> 4/7/2026 </td> <td align="right"> 0.95% </td> <td align="right"> 0.85% </td> <td align="right"> 4.00% </td> <td align="right"> N/A </td> <td align="right"> N/A </td> <td align="right"> N/A </td> <td align="right"> N/A </td> <td align="right"> N/A </td> <td align="right"> 9.21% </td> <td align="center"> 8/31/2026 </td> <td></td> </tr>
 </table>`;
 
 const summaryHtml = `<html><head><title>
@@ -107,11 +120,48 @@ const priceXlsx = zip({
 });
 
 describe('First Trust official source parsers', () => {
-  test('reads the official ETF list sections, ignores commented template rows and keeps list yields', () => {
+  test('reads the official ETF list sections by header label, ignores commented template rows and keeps list yields', () => {
     const funds = parseCatalogHtml(catalogHtml);
     expect(funds.map(fund => fund.ticker)).toEqual(['FDN', 'FTHI']);
     expect(funds[1]).toMatchObject({ name: 'First Trust BuyWrite Income ETF', category: 'Alternative', navValue: 23.72, secYield: 0.66, dividendYield: 8.86, unsubsidizedSecYield: null, inceptionListed: '2014-01-06', yieldAsOf: '2026-08-31' });
-    expect(funds[0]).toMatchObject({ category: 'Thematic', dividendYield: null, secYield: null, aumValue: null, terValue: null });
+    expect(funds[0]).toMatchObject({ category: 'Thematic', dividendYield: null, secYield: null, aumValue: null, terValue: null, returns: null });
+    expect(firstTrustIsoDate('08/31/26')).toBe('2026-08-31');
+    expect(firstTrustIsoDate('12/21/99')).toBe('1999-12-21');
+    expect(firstTrustIsoDate('9/25/2026')).toBe('2026-09-25');
+  });
+
+  test('enriches every catalog fund with gross/net TER and month-end NAV returns from the NAV performance view', () => {
+    const performance = parsePerformanceNavHtml(performanceNavHtml);
+    expect([...performance.keys()]).toEqual(['FTHI', 'BFEW']);
+    expect(performance.get('FTHI')).toEqual({
+      inception: '2014-01-06', grossExpenseRatio: 0.75, netExpenseRatio: null,
+      monthEnd: { asOfDate: '2026-08-31', mo3: 2.21, ytd: 6.87, yr1: 12.02, yr3: 13.8, yr5: 10.83, yr10: 8.36, sinceInception: 7.74 },
+    });
+    expect(performance.get('BFEW')).toMatchObject({ grossExpenseRatio: 0.95, netExpenseRatio: 0.85, monthEnd: { mo3: 4, ytd: null, yr1: null, yr10: null, sinceInception: 9.21 } });
+    const [fdn, fthi] = parseCatalogHtml(catalogHtml);
+    applyCatalogPerformance(fthi, performance.get('FTHI'));
+    applyCatalogPerformance(fdn, performance.get('FDN'));
+    expect(fthi).toMatchObject({ terValue: 0.75, netExpenseRatio: null, returns: { monthEnd: { yr1: 12.02 }, quarterEnd: null } });
+    expect(fdn).toMatchObject({ terValue: null, returns: null });
+    const entry = catalogOnlyEntry(fthi);
+    expect(entry).toMatchObject({ ter: '0.75%', terValue: 0.75, inceptionDate: 'Jan 06 2014', holdings: 0, history: 0 });
+    expect(entry.returns.monthEnd).toMatchObject({ asOfDate: 'Aug 31 2026', ytd: 6.87 });
+    expect(entry.metrics).toMatchObject({ tr1y: 12.02, tr3y: 47.38, cagr5y: 10.83, dividendYield: 8.86, secYieldText: '0.66%' });
+  });
+
+  test('maps every return tenor by header label, whatever the column order', () => {
+    const header = ['', '3 Month', 'YTD', '1 Year', '3 Year', '5 Year', '10 Year', 'Since Fund Inception'];
+    expect(mapReturnRow(header, ['Net Asset Value (NAV)', '1%', '2%', '3%', '4%', '5%', '6%', '7%'], '2026-08-31'))
+      .toEqual({ asOfDate: '2026-08-31', mo3: 1, ytd: 2, yr1: 3, yr3: 4, yr5: 5, yr10: 6, sinceInception: 7 });
+    const reordered = ['Since Inception', '10 Year', 'Fund Name', '1 Year', 'YTD', '5 Year', '3 Year', '3 Month', 'As Of Date'];
+    expect(mapReturnRow(reordered, ['7.5%', '-6.25%', 'Some Fund', '0.00%', '(1.10)', 'N/A', '', '—', '8/31/2026'], null))
+      .toEqual({ asOfDate: null, mo3: null, ytd: -1.1, yr1: 0, yr3: null, yr5: null, yr10: -6.25, sinceInception: 7.5 });
+    expect(mapReturnRow(['Unknown', 'Benchmark', 'YTD'], ['12%', 'S&P 500', '3%'], null)).toEqual({ ...emptyReturns(), ytd: 3 });
+    expect(mapReturnRow(['YTD', '1 Year'], ['4%'], null)).toMatchObject({ ytd: 4, yr1: null });
+    expect(['3 Month', 'YTD', '1 Year', '3 Year', '5 Year', '10 Year', 'Since Inception', 'Fund Name', 'As Of Date', 'Total Expense Ratio'].map(returnSlot))
+      .toEqual(['mo3', 'ytd', 'yr1', 'yr3', 'yr5', 'yr10', 'sinceInception', null, null, null]);
+    expect([toNumber('(5,630,772.60)'), toNumber('$1,234.5'), toNumber('0'), toNumber('-0.38%'), toNumber('-------'), toNumber('N/A'), toNumber(null)])
+      .toEqual([-5630772.6, 1234.5, 0, -0.38, null, null, null]);
   });
 
   test('parses summary name/value pairs, as-of dates, gross TER date and month/quarter-end NAV returns', () => {
@@ -178,25 +228,34 @@ describe('First Trust official source parsers', () => {
     expect(historyStartDate('10y', '1/5/2021', '9/25/2026')).toBe('2021-01-05');
   });
 
-  test('parses Yahoo fallback history and rounds prices to cents', () => {
-    const days = parseYahooChart({ chart: { result: [{ timestamp: [1758758400, 1758672000], indicators: { quote: [{ close: [23.745, 23.7] }], adjclose: [{ adjclose: [23.7449, 23.69] }] }, events: { dividends: { 1758672000: { amount: 0.179 } } } }] } });
-    expect(days).toEqual([
-      { date: '2025-09-24', close: 23.7, adjClose: 23.69, dividend: 0.179 },
-      { date: '2025-09-25', close: 23.75, adjClose: 23.74, dividend: null },
+  test('parses the Yahoo fallback chart with the shared JPMorgan helper and requests explicit daily periods', async () => {
+    const chart = parseChart({ chart: { result: [{ meta: { longName: 'FT', regularMarketPrice: 23.7 }, timestamp: [1758672000, 1758758400], indicators: { quote: [{ close: [23.7000004, 23.745], volume: [100, null] }], adjclose: [{ adjclose: [23.6912, 23.7449] }] }, events: { dividends: { 1758672000: { date: 1758672000, amount: 0.179 } } } }] } });
+    expect(chart.days).toEqual([
+      { date: '2025-09-24', close: 23.7, adjClose: 23.69, volume: 100 },
+      { date: '2025-09-25', close: 23.745, adjClose: 23.74, volume: 0 },
     ]);
+    expect(chart.dividends).toEqual([{ epoch: 1758672000, amount: 0.179 }]);
+    const source = await readFile(new URL('./update-data.ts', import.meta.url), 'utf8');
+    expect(source).toContain('period1=${period1}&period2=${period2}&interval=1d&events=div%7Csplit');
+    expect(source).not.toMatch(/[?&]range=|\{ range: /);
   });
 
   test('maps SEC fund symbols and N-PORT-P fallback positions without inventing exchange tickers', () => {
-    const refs = parseFundTickerRefs({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 'S000012345', 'C000033333', 'FDN']] });
-    expect(refs.get('FDN')).toEqual({ cik: '0001329377', seriesId: 'S000012345' });
-    expect(parseAtomFilings('<entry><filing-type>NPORT-P</filing-type><accession-number>0001445546-26-001234</accession-number><filing-href>https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/</filing-href></entry>')).toEqual([{ cik: '1329377', accession: '0001445546-26-001234' }]);
-    expect(parseNportHoldings('<invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><balance>802106</balance><valUSD>602910995.96</valUSD><pctVal>11.36</pctVal><assetCat>EC</assetCat></invstOrSec>')).toEqual([
+    const refs = parseFundTickerMap({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 's000012345', 'C000033333', 'fdn'], [1383496, 'S000099999', 'C000011111', 'FXL']] });
+    expect(refs.get('FDN')).toEqual({ cik: '0001329377', seriesId: 'S000012345', classId: 'C000033333' });
+    expect(refs.get('FXL')?.cik).toBe('0001383496');
+    expect(parseEdgarAtomFilings('<entry><filing-type>NPORT-P</filing-type><accession-number>0001445546-26-001234</accession-number><filing-date>2026-08-28</filing-date><period>2026-06-30</period><filing-href>https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/</filing-href></entry><entry><filing-type>N-CSR</filing-type><accession-number>x</accession-number></entry>')).toEqual([
+      { accession: '0001445546-26-001234', filed: '2026-08-28', reportDate: '2026-06-30', url: 'https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/primary_doc.xml' },
+    ]);
+    const nport = parseNport('<genInfo><regName>First Trust Exchange-Traded Fund</regName><regCik>0001329377</regCik><seriesId>S000012345</seriesId><repPdDate>2026-06-30</repPdDate></genInfo><fundInfo><netAssets>5306019723</netAssets></fundInfo><invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><balance>802106</balance><valUSD>602910995.96</valUSD><pctVal>11.36</pctVal><assetCat>EC</assetCat></invstOrSec>');
+    expect(nport).toMatchObject({ regCik: '0001329377', seriesId: 'S000012345', repPdDate: '2026-06-30', netAssets: 5306019723 });
+    expect(nport.holdings).toEqual([
       { Name: 'Meta Platforms Inc', Ticker: '-', Identifier: '30303M102', Weight: '11.36', 'Market Value': '602910995.96', 'Shares Held': '802106', 'Asset Category': 'EC' },
     ]);
   });
 
   test('builds index entries in the shared sibling schema', () => {
-    const fund = { ticker: 'FTHI', name: 'First Trust BuyWrite Income ETF', category: 'Alternative', navValue: 23.72, aumValue: null, terValue: null, dividendYield: 8.86, secYield: 0.66 };
+    const fund = { ...parseCatalogHtml(catalogHtml)[1] };
     const summary = parseSummaryHtml(summaryHtml);
     const entry = indexEntryFromMeta(fund, {
       nav: { value: 23.72, asOfDate: 'Sep 25 2026' }, marketPrice: { value: 23.74 }, aum: { value: 2537507391 }, expenseRatio: { value: 0.75 },
@@ -215,42 +274,70 @@ describe('First Trust official source parsers', () => {
 });
 
 describe('configuration, pacing, paging and display normalization', () => {
-  test('supports inclusive ranges, K/M/B/T AUM bounds and presets', () => {
-    expect(parseRange('0.2:2').min).toBe(0.2);
+  test('supports strict min:max ranges, K/M/B/T AUM bounds and presets', () => {
+    expect(parseRange('0.2:2', 'TER')).toEqual({ min: 0.2, max: 2 });
+    expect(parseRange(':', 'TER')).toBeUndefined();
+    expect(parseRange('', 'TER')).toBeUndefined();
     expect(parseAumRange('10M:2B')).toMatchObject({ min: 10000000, max: 2000000000 });
     expect(parseAumRange('small')).toMatchObject({ min: 300000000, max: 2000000000 });
-    expect(() => parseRange('1')).toThrow('colon required');
-    expect(() => parseRange('5:1')).toThrow('exceeds');
+    expect(() => parseRange('1', 'TER')).toThrow('a colon is required');
+    expect(() => parseRange('5:1', 'TER')).toThrow('must not exceed');
+    expect(() => parseRange('a:1', 'TER')).toThrow('is not a number');
+    expect(['max', '10y', '6mo', 'MAX', 'forever', ''].map(normalizeHistoryRange)).toEqual(['max', '10y', '6mo', 'max', 'max', 'max']);
   });
 
   test('reads conservative defaults and applies data filters to published values', () => {
-    const config = readConfig({ TICKERS: 'fdn, ftsm;fjan', TER: ':0.6', PERFORMANCE_1Y: '10:' });
-    expect(config).toMatchObject({ requestSleep: 1, concurrency: 2, maxRetries: 2, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', edgarFallback: true, skipYahoo: false });
-    expect([...config.tickers]).toEqual(['FDN', 'FTSM', 'FJAN']);
-    const base = { ticker: 'X', name: 'X', category: 'Income', navValue: 1, aumValue: 1e9, dividendYield: null, secYield: null };
-    expect(fundPasses({ ...base, terValue: 0.5, returns: { monthEnd: { yr1: 12 } } }, config)).toBe(true);
-    expect(fundPasses({ ...base, terValue: 0.75, returns: { monthEnd: { yr1: 12 } } }, config)).toBe(false);
-    expect(fundPasses({ ...base, terValue: 0.5, returns: { monthEnd: { yr1: 5 } } }, config)).toBe(false);
-    expect(fundPasses({ ...base, terValue: null, returns: { monthEnd: { yr1: 12 } } }, config)).toBe(false);
+    const config = readConfig({ TICKERS: 'fdn, ftsm;fjan', TER: ':0.6', FIRSTTRUST_PERFORMANCE_1Y: '10:', TOTAL_RETURN_3Y: '30:' });
+    expect(config).toMatchObject({ requestSleep: 1, concurrency: 2, maxRetries: 2, maxFetches: 0, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', edgarFallback: true, skipYahoo: false, secUa: '' });
+    expect(config.tickers).toEqual(['FDN', 'FTSM', 'FJAN']);
+    expect(readConfig({ REQUEST_SLEEP: '', CONCURRENCY: '0', MAX_FETCHES: '0' })).toMatchObject({ requestSleep: 1, concurrency: 2, maxFetches: 0 });
+    expect(readConfig({ REQUEST_SLEEP: '0' }).requestSleep).toBe(0);
+    const base: Fund = { ...parseCatalogHtml(catalogHtml)[1], aumValue: 1e9 };
+    const withReturns = (terValue: number | null, yr1: number | null, yr3: number | null): Fund => ({ ...base, terValue, returns: { monthEnd: { ...emptyReturns(), yr1, yr3 }, quarterEnd: null } });
+    expect(fundPasses(withReturns(0.5, 12, 10), config)).toBe(true);
+    expect(fundPasses(withReturns(0.75, 12, 10), config)).toBe(false);
+    expect(fundPasses(withReturns(0.5, 5, 10), config)).toBe(false);
+    expect(fundPasses(withReturns(0.5, 12, 8), config)).toBe(false);
+    expect(fundPasses(withReturns(null, 12, 10), config)).toBe(false);
+    expect(returnForFilter({ ...emptyReturns(), yr3: 10 }, '3Y', true)).toBe(33.1);
+    expect(returnForFilter({ ...emptyReturns(), yr1: -4 }, '1Y', true)).toBe(-4);
+    expect(returnForFilter(null, 'YTD', false)).toBeNull();
   });
 
-  test('paces each worker lane independently', async () => {
-    let clock = 0;
-    const waits: number[] = [];
-    const pace = createRequestGate(2, 1000, () => clock, async ms => { waits.push(ms); clock += ms; });
-    expect(await pace()).toBe(0);
-    expect(await pace()).toBe(1);
-    expect(waits).toEqual([]);
-    await pace();
-    expect(waits).toEqual([1000]);
+  test('paces each worker lane independently and retries only transient HTTP statuses', async () => {
+    const originalFetch = globalThis.fetch;
+    const starts: number[] = [];
+    const statuses = [200, 404];
+    globalThis.fetch = (async () => { starts.push(Date.now()); return new Response('ok', { status: statuses.shift() ?? 200 }); }) as unknown as typeof fetch;
+    try {
+      configureRequestLanes(2, 0.3);
+      const t0 = Date.now();
+      await Promise.all([fetchWithRetry('https://example.test/a', 'a', {}, 0), fetchWithRetry('https://example.test/b', 'b', {}, 0).catch(() => null)]);
+      expect(starts.length).toBe(2);
+      expect(starts[1] - t0).toBeLessThan(150);
+      statuses.splice(0, statuses.length, 200);
+      await fetchWithRetry('https://example.test/c', 'c', {}, 0);
+      expect(starts[2] - t0).toBeGreaterThanOrEqual(280);
+      configureRequestLanes(1, 0);
+      statuses.splice(0, statuses.length, 503, 200);
+      expect((await fetchWithRetry('https://example.test/d', 'd', {}, 1)).status).toBe(200);
+      statuses.splice(0, statuses.length, 404, 200);
+      await expect(fetchWithRetry('https://example.test/e', 'e', {}, 2)).rejects.toThrow('HTTP 404');
+      expect(statuses).toEqual([200]);
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
   });
 
-  test('paginates deterministic row sets and ignores timestamps when comparing published JSON', () => {
+  test('paginates deterministic row sets and ignores run timestamps recursively when comparing published JSON', () => {
     expect(buildPages([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]]);
     expect(buildPages([], 2)).toEqual([]);
     expect(() => buildPages([1], 0)).toThrow('positive integer');
     expect([...pageBasenames(['holdings/001.json', 'holdings/002.json'])]).toEqual(['001.json', '002.json']);
-    expect(outputContentKey({ b: 1, generatedAt: 'x', a: { generatedAt: 'y', c: 2 } })).toBe(outputContentKey({ a: { c: 2 }, b: 1, generatedAt: 'z' }));
+    expect(withoutRunTimestamps({ b: 1, generatedAt: 'x', a: [{ savedAt: 'y', c: 2 }] })).toEqual({ b: 1, a: [{ c: 2 }] });
+    expect(samePublishedContent(JSON.stringify({ generatedAt: 'x', funds: [{ t: 1, savedAt: 'a' }] }), { generatedAt: 'z', funds: [{ t: 1, savedAt: 'b' }] })).toBe(true);
+    expect(samePublishedContent(JSON.stringify({ generatedAt: 'x', funds: [{ t: 1 }] }), { generatedAt: 'x', funds: [{ t: 2 }] })).toBe(false);
+    expect(splitRowCells('<td>A<td>B</td><th>C')).toEqual(['A', 'B', 'C']);
   });
 
   test('uses the requested None presentation placeholder and preserves Unknown', () => {

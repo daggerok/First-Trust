@@ -28,7 +28,7 @@ Run `bun scripts/update-data.ts --help` to print every configuration variable wi
 
 | Block | Source |
 | --- | --- |
-| Catalog (all listed First Trust ETFs) | The [official First Trust ETF list](https://www.ftportfolios.com/Retail/etf/etflist.aspx) (server-rendered page; its sections — Alternative, Income, Sector & Industry, Size/Style, Global/International, Thematic, Specialty, Target Outcome — become the category tabs), linked from the [First Trust ETF home page](https://www.ftportfolios.com/retail/etf/home.aspx). The list also supplies closing NAV, 30-day SEC yield and the 12-month trailing distribution rate. |
+| Catalog (all listed First Trust ETFs) | The [official First Trust ETF list](https://www.ftportfolios.com/Retail/etf/etflist.aspx) (server-rendered page; its sections — Alternative, Income, Sector & Industry, Size/Style, Global/International, Thematic, Specialty, Target Outcome — become the category tabs), linked from the [First Trust ETF home page](https://www.ftportfolios.com/retail/etf/home.aspx). The list also supplies closing NAV, 30-day SEC yield and the 12-month trailing distribution rate; its [NAV performance view](https://www.ftportfolios.com/Retail/etf/etflist.aspx?DisplayType=PerformanceNav) adds the gross and net expense ratio and the month-end NAV returns of every fund in the same single request. |
 | Fund details | `https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker={TICKER}` (for example, [FDN](https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FDN)): CUSIP, ISIN, exchange, inception, gross and net expense ratio, closing NAV and market price, bid/ask premium, total net assets, SEC yield, distribution rates and month-end / quarter-end NAV performance. |
 | Holdings per fund | `https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker={TICKER}` — the full published holdings table (equities, bonds, FLEX options and cash). |
 | Distributions | `https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker={TICKER}` — every year listed by the page (ex, record and payable dates, amount and type). Later runs refresh the newest published years and keep older rows. |
@@ -42,7 +42,7 @@ The updater uses issuer-published NAV performance values for month-end and quart
 | Environment variable | Default | Meaning |
 | --- | --: | --- |
 | `MAX_FETCHES` | `0` (all) | Funds per batch. With a positive value, processing resumes after the saved ticker cursor; `0` processes all eligible funds. |
-| `REQUEST_SLEEP` | `1` | Minimum delay in seconds between request starts per worker lane. |
+| `REQUEST_SLEEP` | `1` | Minimum delay in seconds between request starts per worker lane (each fund needs about six requests). |
 | `CONCURRENCY` | `2` | Number of parallel fund workers. |
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
 | `TER` | `:` | Gross expense-ratio range in percent (`min:max`). |
@@ -53,14 +53,14 @@ The updater uses issuer-published NAV performance values for month-end and quart
 | `TICKERS` | all | Space-, comma- or semicolon-separated ticker allowlist, e.g. `FDN FTSM FJAN`. |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page. |
-| `HISTORY_RANGE` | `max` | History window for the official export (and the Yahoo fallback): `max`, `10y`, `5y`, `2y`, `1y`, `6mo` or `3mo`. |
-| `MAX_RETRIES` | `2` | Retries after the initial request. Network errors and HTTP 408/425/429/5xx responses are retried. |
+| `HISTORY_RANGE` | `max` | History window for the official export (and the Yahoo fallback): `max` or a whole number of years or months such as `10y`, `5y`, `1y` or `6mo`. |
+| `MAX_RETRIES` | `2` | Retries after the initial request. Network errors and HTTP 403/408/425/429/5xx responses are retried with bounded exponential backoff. |
 | `EDGAR_FALLBACK` | on | Use SEC N-PORT-P holdings when official First Trust holdings are unavailable. |
 | `SEC_UA` | not configured | SEC User-Agent with a valid organizational contact. Required only if the EDGAR fallback is used. |
 | `SKIP_YAHOO` | off | Do not call Yahoo when the official history export fails; retain existing history when available. |
 | `VERBOSE` | off | Show per-request retries and fallback details. |
 
-`TICKERS` combines with AUM, TER, yield and return filters using AND logic. Filters use the previously published values; missing values are read from the fund summary page first. Unselected funds retain their previously published entries and data files. The updater preserves the existing full catalog when a limited ticker run is requested.
+`TICKERS` combines with AUM, TER, yield and return filters using AND logic. TER, yield and return filters use the freshly downloaded ETF list values (previously published values fill any gap); an AUM filter reads each candidate's fund summary page first. Every variable also accepts a `FIRSTTRUST_` prefix (for example `FIRSTTRUST_TICKERS`). Unselected funds retain their previously published entries and data files. The updater preserves the existing full catalog when a limited ticker run is requested.
 
 ### Examples
 
