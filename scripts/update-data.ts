@@ -32,7 +32,7 @@ type FundSnapshot = { digest: string; meta: JsonRecord };
 type ReturnRow = { asOfDate: string | null; mo3: number | null; ytd: number | null; yr1: number | null; yr3: number | null; yr5: number | null; yr10: number | null; sinceInception: number | null };
 type SummaryPair = { value: string; asOf: string | null };
 type Summary = {
-  name: string | null; pairs: Record<string, SummaryPair>; navAsOf: string | null; expenseAsOf: string | null;
+  name: string | null; pairs: Record<string, SummaryPair>; navAsOf: string | null; expenseAsOf: string | null; benchmark: string | null;
   monthEnd: ReturnRow; quarterEnd: ReturnRow;
 };
 type Distributions = { headers: string[]; rows: string[][]; years: number[]; selectedYear: number | null };
@@ -373,7 +373,9 @@ export function parseSummaryHtml(html: string): Summary {
   const name = headingName ? htmlText(headingName).replace(/\s*\([A-Z0-9]+\)\s*$/, '').trim() || null : null;
   const navHeader = /fundControlHeaderBar">\s*Current Fund Data\s*\(as of (\d{1,2}\/\d{1,2}\/\d{4})\)/i.exec(body);
   const expenseDate = /divExpenseRatioDate"[^>]*>\s*\*\s*As of (\d{1,2}\/\d{1,2}\/\d{4})/i.exec(body);
+  const benchmark = /Index Performance[\s\S]{0,400}?<\/tr>\s*<tr>\s*<td\b[^>]*class="CEFPagesBody"[^>]*>([\s\S]*?)<\/td>/i.exec(body);
   return {
+    benchmark: benchmark ? htmlText(benchmark[1]) || null : null,
     name, pairs, navAsOf: navHeader ? toIsoDate(navHeader[1]) : null, expenseAsOf: expenseDate ? toIsoDate(expenseDate[1]) : null,
     monthEnd: parseReturnBlock(body, 'Month End'), quarterEnd: parseReturnBlock(body, 'Quarter End'),
   };
@@ -1091,7 +1093,7 @@ async function createMeta(fund: Fund, config: Config): Promise<JsonRecord> {
       provider: PROVIDER,
     },
     fundType: pair('Fund Type')?.value || null,
-    identifiers: { cusip: pair('CUSIP')?.value || null, isin: pair('ISIN')?.value || null, iopv: pair('Intraday NAV')?.value || null },
+    identifiers: { cusip: pair('CUSIP')?.value || null, isin: pair('ISIN')?.value || null, iopv: pair('Intraday NAV')?.value || null, indexTicker: summary.benchmark },
     inception: { fundInceptionDate: toIsoDate(pair('Inception')?.value) || fund.inceptionListed || null, exchange: pair('Exchange')?.value || null },
     expenseRatio: { display: formatPercent(ter), value: ter, gross, net, asOfDate: summary.expenseAsOf ?? pair('Total Expense Ratio')?.asOf ?? null },
     nav: { display: nav === null ? null : `$${nav.toFixed(2)}`, value: nav, asOfDate: navAsOf ? displayDate(navAsOf) : null },
