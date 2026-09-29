@@ -1,6 +1,12 @@
 name: Update First Trust ETF data
 
 on:
+  pull_request:
+    paths:
+      - '.github/workflows/update-data.yml'
+      - 'scripts/update-data.ts'
+      - 'scripts/update-data.config.json'
+      - 'scripts/update-data.test.ts'
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
@@ -185,10 +191,25 @@ jobs:
       - name: Run updater unit tests
         run: bun test scripts/update-data.test.ts
 
+      - name: Verify JSON defaults and environment override
+        env:
+          CONCURRENCY: "15"
+        run: |
+          bun --eval '
+            import { readConfig } from "./scripts/update-data.ts";
+            const config = readConfig();
+            if (config.concurrency !== 15) throw new Error(`CONCURRENCY override failed: ${config.concurrency}`);
+            if (process.env.REQUEST_SLEEP !== "1") throw new Error(`JSON default failed: REQUEST_SLEEP=${process.env.REQUEST_SLEEP}`);
+            if (process.env.HISTORY_RANGE !== "max") throw new Error(`JSON default failed: HISTORY_RANGE=${process.env.HISTORY_RANGE}`);
+            console.log("JSON defaults and explicit environment override verified");
+          '
+
       - name: Generate api/firsttrust static data
+        if: ${{ github.event_name != 'pull_request' }}
         run: bun ./scripts/update-data.ts
 
       - name: Commit updated data
+        if: ${{ github.event_name != 'pull_request' }}
         run: |
           if git diff --quiet -- api/firsttrust; then
             echo "api/firsttrust is already up to date"
