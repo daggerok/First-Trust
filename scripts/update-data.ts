@@ -1,3 +1,4 @@
+import './load-update-data-config'; // Load file defaults before readConfig(); nonblank process.env values win.
 #!/usr/bin/env bun
 // Bun provides Node-compatible fs/promises and process globals for this script.
 /// <reference types="bun" />
