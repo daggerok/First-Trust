@@ -438,10 +438,12 @@ describe('README and automation documentation guards', () => {
     ];
     for (const variable of envVars) expect(readme).toContain(`\`${variable}\``);
     const inputs = [...workflow.matchAll(/^      ([a-z][a-z0-9_]*):$/gm)].map(match => match[1]);
-    for (const variable of envVars) {
+    for (const variable of envVars.filter(value => value !== 'SEC_UA')) {
       expect(inputs).toContain(variable.toLowerCase());
-      expect(workflow).toMatch(new RegExp(`^      ${variable}: \\$\\{\\{ inputs\\.${variable.toLowerCase()} \\|\\| `, 'm'));
+      expect(workflow).toMatch(new RegExp(`^      ${variable}: \\${\\{ inputs\\.${variable.toLowerCase()} \\|\\| `, 'm'));
     }
+    // The workflow input cap is 25; SEC_UA is intentionally sourced from a repo variable.
+    expect(workflow).toMatch(/^      SEC_UA: \\${\\{ vars\\.SEC_UA/m);
     expect(workflow).toContain("cron: '0 0 * * 0'");
     expect(workflow).toContain('bun test scripts/update-data.test.ts');
     expect(workflow).not.toContain('bunx tsc');
