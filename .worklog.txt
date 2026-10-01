@@ -1722,3 +1722,8 @@ multiple separate EDGAR trusts (this affects the N-PORT fallback design).
 - User explicitly authorized creating PRs and merging to `main`. Created and squash-merged: Invesco PR #27 -> `3a9b34d47e115f99b1b14e759232ea8fc5691f23`; Northern-Trust PR #5 -> `72b7ced2304780cb4123c560ae6eb8ed8979a863`; VictoryShares PR #5 -> `6ad0f3a812dd1106c75d12a071ea289866ddf183`. Authenticated API confirmed each PR is closed/merged and each merge commit is the current `main` tip.
 - GitHub Actions API confirms each `Update <brand> ETF data` workflow is registered and `active` on main. No update-data run was triggered by these merges; their changes will be exercised on the normal schedule or manual run. Existing historical zero-job failures remain in run history.
 - Revoke the exposed PAT and rotate it; it was used transiently and was not saved to files or git config. Repo README documents optional variables: Invesco `STORE_RAW_DOWNLOADS` / `INVESCO_AUDIENCE_TYPE`; Northern-Trust `STORE_RAW_DOWNLOADS`; VictoryShares `SEC_UA`.
+
+### 2026-10-01 - Config standardization (chore/standardize-config)
+- Replaced the import-time JSON->env loader with exported `CONTROL_NAMES`, `resolveControls(file, advanced, inputs, env)` and `runtimeControls(env)` (precedence file < advanced < nonblank inputs < env, `FIRSTTRUST_` alias kept); CLI and workflow share the resolver.
+- Workflow regenerated: 23 individual inputs + `advanced` (HOLDINGS_PAGE_SIZE and HISTORY_PAGE_SIZE only via `advanced`/config); protected `vars.SEC_UA` wins when nonblank; output fixed to `api/firsttrust`.
+- README restructured (Metrics and caveats, controls table in sync with config), new `scripts/config-docs.test.ts`; no provider logic or api/ data changed.
