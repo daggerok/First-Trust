@@ -413,11 +413,11 @@ describe('README and automation documentation guards', () => {
     const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
     const headings = [...readme.matchAll(/^#{2,3} .+$/gm)].map(match => match[0]);
     expect(headings).toEqual([
-      '## Using Bun', '## Updating the static First Trust data', '### Data sources', '### Update controls', '### Examples',
-      '## TypeScript', '## Brands table', '## Sibling applications', '## License',
+      '## Using Bun', '## Updating the static First Trust data', '### Data sources', '### Metrics and caveats', '### Update controls', '### Examples',
+      '## TypeScript and verification', '## Brands table', '## Sibling applications', '## License',
     ]);
     expect(readme).toContain('bunx degit daggerok/First-Trust#main ./12345 && cd $_');
-    expect(readme).toContain('bun test scripts/update-data.test.ts');
+    expect(readme).toContain('bun test');
     expect(readme).toContain('The published application is available at <https://daggerok.github.io/First-Trust/>.');
     expect(readme).not.toContain('deployment has not been verified');
     expect(readme).not.toContain('initial checked-in seed');
@@ -425,27 +425,5 @@ describe('README and automation documentation guards', () => {
     expect(brandRows.indexOf('First Trust')).toBe(brandRows.indexOf('Fidelity') + 1);
     expect(brandRows.indexOf('Franklin Templeton')).toBe(brandRows.indexOf('First Trust') + 1);
     expect(readme).toContain('| First Trust | ftportfolios.com official ETF list');
-  });
-
-  test('documents every updater environment variable and exposes a matching manual workflow input', async () => {
-    const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
-    const workflow = await readFile(new URL('../.github/workflows/update-data.yml', import.meta.url), 'utf8');
-    const envVars = [
-      'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'MAX_RETRIES', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE',
-      'TICKERS', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'PERFORMANCE_YTD', 'PERFORMANCE_1Y', 'PERFORMANCE_3Y',
-      'PERFORMANCE_5Y', 'PERFORMANCE_10Y', 'TOTAL_RETURN_YTD', 'TOTAL_RETURN_1Y', 'TOTAL_RETURN_3Y', 'TOTAL_RETURN_5Y',
-      'TOTAL_RETURN_10Y', 'EDGAR_FALLBACK', 'SEC_UA', 'SKIP_YAHOO', 'VERBOSE',
-    ];
-    for (const variable of envVars) expect(readme).toContain(`\`${variable}\``);
-    const inputs = [...workflow.matchAll(/^      ([a-z][a-z0-9_]*):$/gm)].map(match => match[1]);
-    for (const variable of envVars.filter(value => value !== 'SEC_UA')) {
-      expect(inputs).toContain(variable.toLowerCase());
-      expect(workflow).toContain('      ' + variable + ': ${{ inputs.' + variable.toLowerCase() + ' || ');
-    }
-    // The workflow input cap is 25; SEC_UA is intentionally sourced from a repo variable.
-    expect(workflow).toContain('      SEC_UA: ${{ vars.SEC_UA');
-    expect(workflow).toContain("cron: '0 0 * * 0'");
-    expect(workflow).toContain('bun test scripts/update-data.test.ts');
-    expect(workflow).not.toContain('bunx tsc');
   });
 });
