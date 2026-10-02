@@ -72,6 +72,7 @@ Every row below has a matching key in `scripts/update-data.config.json` (all val
 | `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | SEC User-Agent with a contact; redacted in config logs. The `SEC_UA` repository Actions variable (or env) overrides it. |
 | `SKIP_YAHOO` | `false` | Do not call Yahoo when the official history export fails; retain existing history when available. |
 | `VERBOSE` | `false` | Show per-request retries and fallback details. |
+| `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 
 `TICKERS` combines with AUM, TER, yield and return filters using AND logic. TER, yield and return filters use the freshly downloaded ETF list values (previously published values fill any gap); an AUM filter reads each candidate's fund summary page first
 
