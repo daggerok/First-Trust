@@ -24,7 +24,7 @@ bun scripts/update-data.ts
 
 Defaults for every control live in `scripts/update-data.config.json`. Precedence: file defaults < advanced JSON < nonblank inputs < protected Actions variable/env. Environment variables (with an optional `FIRSTTRUST_` prefix, for example `FIRSTTRUST_TICKERS`) override the file for local runs. Run `bun scripts/update-data.ts --help` to print every control with usage examples. All supplied filters use **AND** logic.
 
-The **Update First Trust ETF data** GitHub Actions workflow exposes the most used controls as manual inputs plus an `advanced` input: a JSON object of other supported controls, for example `{"HOLDINGS_PAGE_SIZE":"500","HISTORY_PAGE_SIZE":"2000"}`. Blank inputs inherit the file value, and scheduled runs use the file defaults as-is. Unknown keys, non-scalar values and multiline values are rejected before any request. `SEC_UA` is not a manual input: the workflow reads it from the `SEC_UA` repository Actions variable and it wins over the file value when nonblank. The workflow resolves controls with the same `resolveControls` function as the CLI and writes only `api/firsttrust`.
+The **Update First Trust ETF data** GitHub Actions workflow exposes the most used controls as manual inputs plus an `advanced` input: a JSON object of other supported controls, for example `{"HOLDINGS_PAGE_SIZE":"500","HISTORY_PAGE_SIZE":"2000"}`. Blank inputs inherit the file value, and scheduled runs use the file defaults as-is. Unknown keys, non-scalar values and multiline values are rejected before any request. `SEC_UA` is not a manual input: the workflow reads it from the `SEC_UA` repository Actions variable and it wins over everything when nonblank. The workflow resolves controls with the same `resolveControls` function as the CLI and writes only `api/firsttrust`.
 
 ### Data sources
 
@@ -35,7 +35,7 @@ The **Update First Trust ETF data** GitHub Actions workflow exposes the most use
 | Holdings per fund | `https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker={TICKER}` - the full published holdings table (equities, bonds, FLEX options and cash). |
 | Distributions | `https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker={TICKER}` - every year listed by the page (ex, record and payable dates, amount and type). Later runs refresh the newest published years and keep older rows. |
 | Daily history | The official "Export Prices to Excel" download on `https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker={TICKER}` - daily NAV, market price and net assets since inception, read by a zero-dependency XLSX reader. Premium/discount is computed from that day's market price and NAV. The [Yahoo Finance chart API](https://query1.finance.yahoo.com/v8/finance/chart/{TICKER}) is used only if the export fails (market price only; the NAV column stays blank). |
-| Holdings fallback | SEC EDGAR Form N-PORT-P for the First Trust ETF trusts (for example First Trust Exchange-Traded Fund, CIK `0001329377`; First Trust Exchange-Traded AlphaDEX Fund, CIK `0001383496`), resolved per ticker from SEC's fund ticker table, only when ftportfolios.com provides no holdings. Configure `SEC_UA` with an organizational contact before using SEC requests. An N-PORT snapshot may be less current than the issuer's daily holdings. |
+| Holdings fallback | SEC EDGAR Form N-PORT-P for the First Trust ETF trusts (for example First Trust Exchange-Traded Fund, CIK `0001329377`; First Trust Exchange-Traded AlphaDEX Fund, CIK `0001383496`), resolved per ticker from SEC's fund ticker table, only when ftportfolios.com provides no holdings. SEC requests declare the `SEC_UA` contact. An N-PORT snapshot may be less current than the issuer's daily holdings. |
 
 ### Metrics and caveats
 
@@ -57,7 +57,7 @@ Every row below has a matching key in `scripts/update-data.config.json` (all val
 | `MAX_FETCHES` | `0` (all) | Funds per batch. With a positive value, processing resumes after the saved ticker cursor; `0` processes all eligible funds. |
 | `REQUEST_SLEEP` | `1` | Minimum delay in seconds between request starts per worker lane (each fund needs about six requests). |
 | `CONCURRENCY` | `2` | Number of parallel fund workers. |
-| `MAX_RETRIES` | `2` | Retries after the initial request (minimum 1). Network errors and HTTP 403/408/425/429/5xx responses are retried with bounded exponential backoff. |
+| `MAX_RETRIES` | `2` | Retries after the initial request (integer >= 1). Network errors and HTTP 403/408/425/429/5xx responses are retried with bounded exponential backoff. |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page (`advanced` only). |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page (`advanced` only). |
 | `HISTORY_RANGE` | `max` | History window for the official export (and the Yahoo fallback): `max` or a whole number of years or months such as `10y`, `5y`, `1y` or `6mo`. |
@@ -69,7 +69,7 @@ Every row below has a matching key in `scripts/update-data.config.json` (all val
 | `PERFORMANCE_YTD`, `PERFORMANCE_1Y`, `PERFORMANCE_3Y`, `PERFORMANCE_5Y`, `PERFORMANCE_10Y` | `:` | Published NAV return ranges in percent; multi-year performance filters use First Trust's annualized values. |
 | `TOTAL_RETURN_YTD`, `TOTAL_RETURN_1Y`, `TOTAL_RETURN_3Y`, `TOTAL_RETURN_5Y`, `TOTAL_RETURN_10Y` | `:` | Total Return ranges in percent; multi-year values are derived from First Trust annualized NAV returns as described above. |
 | `EDGAR_FALLBACK` | `true` | Use SEC N-PORT-P holdings when official First Trust holdings are unavailable. |
-| `SEC_UA` | repo descriptor | SEC User-Agent. The default is a non-personal descriptor; set the `SEC_UA` repository Actions variable (or env) to a real organizational contact for SEC requests. |
+| `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | SEC User-Agent with a contact; redacted in config logs. The `SEC_UA` repository Actions variable (or env) overrides it. |
 | `SKIP_YAHOO` | `false` | Do not call Yahoo when the official history export fails; retain existing history when available. |
 | `VERBOSE` | `false` | Show per-request retries and fallback details. |
 
@@ -97,7 +97,7 @@ bun build --target=bun scripts/update-data.ts --outfile=/dev/null
 git diff --check
 ```
 
-`bun test` also covers the README controls table, the config file and the workflow (`scripts/config-docs.test.ts`).
+`bun test` also covers the README controls table, the config file and the workflow.
 
 ## Brands table
 
@@ -122,7 +122,7 @@ git diff --check
 | **ProShares** | [proshares.com](https://www.proshares.com/our-etfs/find-proshares-etfs) \| [ProShares](https://daggerok.github.io/ProShares/) |
 | **Schwab** | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) \| [Schwab](https://daggerok.github.io/Schwab/) |
 | **SPDR** | [ssga.com](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) \| [SPDR](https://daggerok.github.io/SPDR/) |
-| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) (deployment pending) |
+| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) |
 | **Tema ETFs** | [temaetfs.com](https://temaetfs.com/funds) \| [Tema](https://daggerok.github.io/Tema/) |
 | **Themes ETFs** | [themesetfs.com/etfs](https://themesetfs.com/etfs) \| [Themes](https://daggerok.github.io/Themes/) |
 | **VanEck** | [vaneck.com](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) \| [VanEck](https://daggerok.github.io/VanEck/) |
