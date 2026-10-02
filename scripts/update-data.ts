@@ -42,7 +42,7 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
 }
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
   const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
-  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE|SEC_UA/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
@@ -193,9 +193,9 @@ const EDGAR_BROWSE_URL = 'https://www.sec.gov/cgi-bin/browse-edgar';
 // registrant CIK + series/class ids, and operating company name -> ticker.
 const SEC_FUND_TICKERS_URL = 'https://www.sec.gov/files/company_tickers_mf.json';
 const SEC_COMPANY_TICKERS_URL = 'https://www.sec.gov/files/company_tickers.json';
-// SEC policy requires a declared, real organizational contact: no default is
-// invented here, so the EDGAR fallback stays off until SEC_UA is configured.
-const SEC_UA_DEFAULT = '';
+// SEC policy requires a declared contact; the repository Actions variable
+// SEC_UA (or env SEC_UA) overrides this default.
+const SEC_UA_DEFAULT = 'daggerok ETF feed daggerok@gmail.com';
 
 const API_ROOT = new URL('../api/firsttrust/', import.meta.url);
 const INDEX_FILE = new URL('index.json', API_ROOT);
@@ -584,7 +584,7 @@ FIRSTTRUST_ prefix, which wins over the plain name):
                        distribution years).
   CONCURRENCY          Parallel fund workers (default 2), each with its own
                        paced request lane.
-  MAX_RETRIES          Retries after the initial request (default 2). Only
+  MAX_RETRIES          Retries after the initial request (integer >= 1, default 2). Only
                        network errors and HTTP 403/408/425/429/5xx responses
                        are retried with bounded exponential backoff.
   TICKERS              Space-, comma- or semicolon-separated ticker allowlist,
@@ -605,10 +605,10 @@ FIRSTTRUST_ prefix, which wins over the plain name):
                        Yahoo fallback).
   EDGAR_FALLBACK       0/false to skip the SEC EDGAR Form N-PORT-P fallback for
                        funds whose official holdings table is empty (default
-                       on; needs SEC_UA).
-  SEC_UA               Declared SEC User-Agent with a real organizational
-                       contact (SEC policy). Not configured by default, so the
-                       EDGAR fallback is not attempted until it is set.
+                       on).
+  SEC_UA               Declared SEC User-Agent with a contact (SEC policy).
+                       Default "daggerok ETF feed daggerok@gmail.com"; the
+                       SEC_UA repository Actions variable overrides it.
   SKIP_YAHOO           1/true to never call the Yahoo chart API, even when the
                        official history export is unavailable for a fund
                        (previously published history rows are kept instead).
