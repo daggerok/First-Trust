@@ -9,7 +9,7 @@ import {
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
-  CONTROL_NAMES, resolveControls, runtimeControls,
+  CONTROL_NAMES, resolveControls, runtimeControls, isCertError, installSystemCa,
   type Fund,
 } from './update-data';
 
@@ -469,4 +469,55 @@ test('workflow never writes outside api/firsttrust and keeps the hardened templa
   expect(workflow).toContain('timeout-minutes: 30');
   expect(workflow).toContain('persist-credentials: false');
   expect(workflow.match(/^permissions:\n  contents: write$/m)).not.toBeNull();
+});
+
+describe('system CA support', () => {
+  test('USE_SYSTEM_CA resolver accepts auto/true/false case-insensitively and rejects others', () => {
+    expect(file.USE_SYSTEM_CA).toBe('auto');
+    expect(resolveControls(file).USE_SYSTEM_CA).toBe('auto');
+    for (const mode of ['auto', 'true', 'false']) expect(resolveControls(file, {}, {}, { USE_SYSTEM_CA: mode.toUpperCase() }).USE_SYSTEM_CA).toBe(mode);
+    expect(() => resolveControls(file, {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow('USE_SYSTEM_CA');
+  });
+
+  test('isCertError detects untrusted-certificate errors, also via cause', () => {
+    expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
+    expect(isCertError(new Error('unable to get local issuer certificate'))).toBe(true);
+    expect(isCertError(new Error('fetch failed', { cause: new Error('unable to get local issuer certificate') }))).toBe(true);
+    expect(isCertError({ code: 'ECONNRESET' })).toBe(false);
+    expect(isCertError(new Error('HTTP 403 Forbidden'))).toBe(false);
+  });
+
+  test('installSystemCa honors the mode and only restarts on certificate errors', async () => {
+    const original = globalThis.fetch;
+    let reexecs = 0;
+    const reexec = (() => { reexecs++; return new Response('restarted') as never; }) as () => never;
+    try {
+      installSystemCa('false', reexec, false);
+      expect(globalThis.fetch).toBe(original);
+      installSystemCa('auto', reexec, true);
+      expect(globalThis.fetch).toBe(original);
+      installSystemCa('true', reexec, false);
+      expect(reexecs).toBe(1);
+
+      reexecs = 0;
+      globalThis.fetch = (async () => new Response('ok')) as unknown as typeof fetch;
+      const ok = globalThis.fetch;
+      installSystemCa('auto', reexec, false);
+      expect(globalThis.fetch).not.toBe(ok);
+      expect(await (await fetch('https://example.test/')).text()).toBe('ok');
+      expect(reexecs).toBe(0);
+
+      globalThis.fetch = (async () => { throw Object.assign(new Error('fetch failed'), { code: 'SELF_SIGNED_CERT_IN_CHAIN' }); }) as unknown as typeof fetch;
+      installSystemCa('auto', reexec, false);
+      await fetch('https://example.test/');
+      expect(reexecs).toBe(1);
+
+      globalThis.fetch = (async () => { throw Object.assign(new Error('socket closed'), { code: 'ECONNRESET' }); }) as unknown as typeof fetch;
+      installSystemCa('auto', reexec, false);
+      await expect(fetch('https://example.test/')).rejects.toThrow('socket closed');
+      expect(reexecs).toBe(1);
+    } finally {
+      globalThis.fetch = original;
+    }
+  });
 });
