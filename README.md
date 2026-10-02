@@ -41,6 +41,8 @@ The **Update First Trust ETF data** GitHub Actions workflow exposes the most use
 
 The updater uses issuer-published NAV performance values for month-end and quarter-end. The catalog's cumulative 3-, 5- and 10-year Total Return columns are derived from the corresponding published annualized NAV returns using `(1 + annualized return)^years - 1`; 1-year and YTD use the published period return. Missing tenors stay unavailable. Dividend Yield is First Trust's published 12-month distribution rate; payment frequency is inferred from the ordinary distributions of the latest year (funds without a distribution in the last ~13 months show `00 - None`).
 
+- `metrics.returnsBasis` is always a non-empty label of how returns are computed: official First Trust NAV total returns from the month-end performance table, with cumulative 3-, 5- and 10-year values derived from the published annualized ones
+- `metrics.performanceAsOf` is the ISO date (`YYYY-MM-DD`) of that performance table, not the NAV date; it is `null` only for funds without a published performance table yet (for example newly launched funds)
 - Net assets, expense ratios, SEC yield, distribution rates and NAV returns are issuer-published values; NAV and market price come from the official daily export
 - Yahoo Finance history (used only if the official export fails) carries market price only, so it is an estimate and the NAV and premium/discount columns stay blank
 - SEC N-PORT-P holdings are a periodic snapshot and may be less current than the issuer's daily holdings

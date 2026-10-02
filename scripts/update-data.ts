@@ -1752,6 +1752,14 @@ export function metricsFromReturns(monthEnd: ReturnRow): JsonRecord {
   };
 }
 
+export const RETURNS_BASIS = 'official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)';
+
+/** Mandatory metrics provenance: the basis label and the performance table date (never the NAV date). */
+export function returnsProvenance(monthEnd: ReturnRow): JsonRecord {
+  const asOf = firstTrustIsoDate(monthEnd.asOfDate);
+  return { returnsBasis: RETURNS_BASIS, performanceAsOf: /^\d{4}-\d{2}-\d{2}$/.test(asOf) ? asOf : null };
+}
+
 const PERIOD_SLOTS: Record<ReturnPeriod, ReturnSlot> = { YTD: 'ytd', '1Y': 'yr1', '3Y': 'yr3', '5Y': 'yr5', '10Y': 'yr10' };
 
 /** Month-end NAV return for a filter period: annualized as published, or cumulative (total=true). */
@@ -1888,6 +1896,7 @@ export function indexEntryFromMeta(fund: Fund, meta: JsonRecord): JsonRecord {
       dividendYieldText: dividendYield === null ? null : formatPercent(dividendYield),
       secYield,
       secYieldText: secYield === null ? null : formatPercent(secYield),
+      ...returnsProvenance(monthEnd),
     },
     holdings,
     history,
@@ -1927,6 +1936,7 @@ export function catalogOnlyEntry(fund: Fund): JsonRecord {
       dividendYieldText: fund.dividendYield === null ? null : formatPercent(fund.dividendYield),
       secYield: fund.secYield,
       secYieldText: fund.secYield === null ? null : formatPercent(fund.secYield),
+      ...returnsProvenance(monthEnd),
     },
     holdings: 0,
     history: 0,
