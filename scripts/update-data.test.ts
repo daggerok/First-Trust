@@ -5,7 +5,7 @@ import { deflateRawSync } from 'node:zlib';
 import {
   applyCatalogPerformance, buildPages, catalogOnlyEntry, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, historyStartDate, indexEntryFromMeta, mapReturnRow,
-  mergeDistributionRows, metricsFromReturns, normalizeHistoryRange, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
+  mergeDistributionRows, metricsFromReturns, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
@@ -148,6 +148,8 @@ describe('First Trust official source parsers', () => {
     expect(entry).toMatchObject({ ter: '0.75%', terValue: 0.75, inceptionDate: 'Jan 06 2014', holdings: 0, history: 0 });
     expect(entry.returns.monthEnd).toMatchObject({ asOfDate: 'Aug 31 2026', ytd: 6.87 });
     expect(entry.metrics).toMatchObject({ tr1y: 12.02, tr3y: 47.38, cagr5y: 10.83, dividendYield: 8.86, secYieldText: '0.66%' });
+    expect(Object.keys(entry.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+    expect(entry.metrics).toMatchObject({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
   });
 
   test('maps every return tenor by header label, whatever the column order', () => {
@@ -181,6 +183,13 @@ describe('First Trust official source parsers', () => {
   test('derives cumulative total returns from official annualized return tenors', () => {
     const metrics = metricsFromReturns({ asOfDate: null, mo3: 1, ytd: 2, yr1: 10, yr3: 10, yr5: 10, yr10: null, sinceInception: 8 });
     expect(metrics).toMatchObject({ tr1y: 10, tr3y: 33.1, tr5y: 61.05, tr10y: null, cagr3y: 10, siAnn: 8 });
+  });
+
+  test('returns provenance is a non-empty basis plus an ISO date or null', () => {
+    expect(RETURNS_BASIS).toMatch(/official First Trust NAV/);
+    expect(returnsProvenance({ ...emptyReturns('2026-08-31') })).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
+    expect(returnsProvenance(emptyReturns('Aug 31 2026'))).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
+    expect(returnsProvenance(emptyReturns())).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
   });
 
   test('maps equity, international, cash, options and bond holdings to the shared Watchlist columns', () => {
@@ -271,6 +280,9 @@ describe('First Trust official source parsers', () => {
     });
     expect(entry.returns).toMatchObject({ monthEnd: { asOfDate: 'Aug 31 2026', ytd: 6.87, sinceInception: 7.74 } });
     expect(entry.metrics).toMatchObject({ tr1y: 12.02, cagr5y: 10.83, dividendYield: 8.86, dividendYieldText: '8.86%', secYieldText: '0.66%' });
+    // performanceAsOf is the performance table date (Aug 31), never the NAV date (Sep 25)
+    expect(Object.keys(entry.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+    expect(entry.metrics).toMatchObject({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
   });
 });
 
