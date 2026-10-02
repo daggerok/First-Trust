@@ -1,15 +1,4 @@
 #!/usr/bin/env bun
-// Checked-in JSON is the runtime default; any nonblank environment value wins.
-import { readFileSync as readUpdaterConfig } from 'node:fs';
-try {
-  const updaterDefaults = JSON.parse(readUpdaterConfig(new URL('./update-data.config.json', import.meta.url), 'utf8')) as Record<string, unknown>;
-  for (const [key, value] of Object.entries(updaterDefaults)) {
-    const current = process.env[key];
-    if ((current === undefined || current.trim() === '') && value !== null && value !== undefined) process.env[key] = String(value);
-  }
-} catch (error) {
-  if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-}
 // Bun provides Node-compatible fs/promises and process globals for this script.
 /// <reference types="bun" />
 import { readFile as outputReadFile, readdir as outputReadDir } from 'node:fs/promises';
@@ -53,7 +42,7 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
 }
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
   const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
-  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE|SEC_UA/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
@@ -204,9 +193,9 @@ const EDGAR_BROWSE_URL = 'https://www.sec.gov/cgi-bin/browse-edgar';
 // registrant CIK + series/class ids, and operating company name -> ticker.
 const SEC_FUND_TICKERS_URL = 'https://www.sec.gov/files/company_tickers_mf.json';
 const SEC_COMPANY_TICKERS_URL = 'https://www.sec.gov/files/company_tickers.json';
-// SEC policy requires a declared, real organizational contact: no default is
-// invented here, so the EDGAR fallback stays off until SEC_UA is configured.
-const SEC_UA_DEFAULT = '';
+// SEC policy requires a declared contact; the repository Actions variable
+// SEC_UA (or env SEC_UA) overrides this default.
+const SEC_UA_DEFAULT = 'daggerok ETF feed daggerok@gmail.com';
 
 const API_ROOT = new URL('../api/firsttrust/', import.meta.url);
 const INDEX_FILE = new URL('index.json', API_ROOT);
@@ -513,14 +502,77 @@ export function normalizeHistoryRange(raw: string): string {
   return /^(max|\d+y|\d+mo)$/.test(text) ? text : 'max';
 }
 
+// File defaults and explicit overrides: allowlisted scalar controls only, so
+// GitHub Actions can resolve them without interpolating user input into bash.
+// Precedence: config file < advanced JSON < nonblank inputs < environment
+// (`FIRSTTRUST_<KEY>` alias wins over `<KEY>`).
+export const CONTROL_NAMES = [
+  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'MAX_RETRIES', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE',
+  'TICKERS', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD',
+  ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap((prefix) => ['YTD', '1Y', '3Y', '5Y', '10Y'].map((period) => `${prefix}_${period}`)),
+  'EDGAR_FALLBACK', 'SEC_UA', 'SKIP_YAHOO', 'VERBOSE',
+] as const;
+export type ControlName = (typeof CONTROL_NAMES)[number];
+export const CONFIG_FILE_URL = new URL('./update-data.config.json', import.meta.url);
+
+export function resolveControls(
+  file: unknown = {},
+  advanced: unknown = {},
+  inputs: unknown = {},
+  env: Record<string, string | undefined> = {},
+): Record<string, string> {
+  const result: Record<string, string> = {};
+  const known = new Set<string>(CONTROL_NAMES);
+  const apply = (value: unknown, skipEmpty = false): void => {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Configuration must be a JSON object');
+    for (const [key, raw] of Object.entries(value)) {
+      if (!known.has(key)) throw new Error(`Unknown updater control: ${key}`);
+      if (skipEmpty && (raw === '' || raw === undefined || raw === null)) continue;
+      if (!['string', 'number', 'boolean'].includes(typeof raw)) throw new Error(`${key}: expected string, number or boolean`);
+      const text = String(raw);
+      if (/[\r\n\0]/.test(text)) throw new Error(`${key}: multiline/control characters are not allowed`);
+      result[key] = text;
+    }
+  };
+  apply(file);
+  apply(advanced);
+  apply(inputs, true);
+  for (const key of CONTROL_NAMES) {
+    const value = env[`FIRSTTRUST_${key}`] ?? env[key];
+    if (value !== undefined) apply({ [key]: value });
+  }
+  for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'MAX_RETRIES', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE']) {
+    const v = result[key];
+    if (v === undefined || v.trim() === '') continue;
+    const min = key === 'MAX_FETCHES' ? 0 : 1;
+    if (!/^\d+$/.test(v.trim()) || !Number.isSafeInteger(Number(v)) || Number(v) < min) throw new Error(`${key}: expected integer >= ${min}`);
+  }
+  if (result.REQUEST_SLEEP?.trim() && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
+  for (const key of ['SKIP_YAHOO', 'EDGAR_FALLBACK', 'VERBOSE']) {
+    if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
+  }
+  if (result.HISTORY_RANGE?.trim() && !/^(max|\d+y|\d+mo)$/i.test(result.HISTORY_RANGE.trim())) throw new Error('HISTORY_RANGE: expected max, Ny or Nmo');
+  readConfig(result); // validate every min:max filter before any request or write
+  return result;
+}
+
+export async function runtimeControls(env: Record<string, string | undefined> = process.env): Promise<Record<string, string>> {
+  let file: unknown = {};
+  try { file = JSON.parse(await readFile(CONFIG_FILE_URL, 'utf8')); }
+  catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
+  return resolveControls(file, {}, {}, env);
+}
+
 const USAGE = `
 First Trust ETF static data updater (Bun, no dependencies).
 
   bun ./scripts/update-data.ts            update ./api/firsttrust from ftportfolios.com (+ SEC / Yahoo fallbacks)
   ./scripts/update-data.ts -h | --help    print this help
 
-Environment variables (all optional; strict "min:max" ranges; AND logic;
-every name also accepts a FIRSTTRUST_ prefix):
+Controls (all optional; strict "min:max" ranges; AND logic). Defaults live in
+scripts/update-data.config.json; precedence is file defaults < advanced JSON <
+nonblank workflow inputs < environment variables (every name also accepts a
+FIRSTTRUST_ prefix, which wins over the plain name):
 
   MAX_FETCHES          Batch size: continue after the ticker cursor saved in
                        api/firsttrust/update-state.json. Empty or 0 (the
@@ -532,7 +584,7 @@ every name also accepts a FIRSTTRUST_ prefix):
                        distribution years).
   CONCURRENCY          Parallel fund workers (default 2), each with its own
                        paced request lane.
-  MAX_RETRIES          Retries after the initial request (default 2). Only
+  MAX_RETRIES          Retries after the initial request (integer >= 1, default 2). Only
                        network errors and HTTP 403/408/425/429/5xx responses
                        are retried with bounded exponential backoff.
   TICKERS              Space-, comma- or semicolon-separated ticker allowlist,
@@ -553,10 +605,10 @@ every name also accepts a FIRSTTRUST_ prefix):
                        Yahoo fallback).
   EDGAR_FALLBACK       0/false to skip the SEC EDGAR Form N-PORT-P fallback for
                        funds whose official holdings table is empty (default
-                       on; needs SEC_UA).
-  SEC_UA               Declared SEC User-Agent with a real organizational
-                       contact (SEC policy). Not configured by default, so the
-                       EDGAR fallback is not attempted until it is set.
+                       on).
+  SEC_UA               Declared SEC User-Agent with a contact (SEC policy).
+                       Default "daggerok ETF feed daggerok@gmail.com"; the
+                       SEC_UA repository Actions variable overrides it.
   SKIP_YAHOO           1/true to never call the Yahoo chart API, even when the
                        official history export is unavailable for a fund
                        (previously published history rows are kept instead).
@@ -2336,7 +2388,9 @@ async function resolveNportFiling(
 // ---------------------------------------------------------------------------
 
 async function main(): Promise<void> {
-  const config = readConfig();
+  const controls = await runtimeControls();
+  if (controls.VERBOSE !== undefined) process.env.VERBOSE = controls.VERBOSE;
+  const config = readConfig(controls);
   configureRequestLanes(config.concurrency, config.requestSleep);
 
   outputPrintConfig('First Trust', config);
