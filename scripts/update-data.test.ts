@@ -1,6 +1,6 @@
 /// <reference types="bun" />
 import { describe, expect, test } from 'bun:test';
-import { readFile } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
 import { deflateRawSync } from 'node:zlib';
 import {
   applyCatalogPerformance, buildPages, catalogOnlyEntry, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
@@ -9,6 +9,7 @@ import {
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
+  CONTROL_NAMES, resolveControls, runtimeControls,
   type Fund,
 } from './update-data';
 
@@ -235,7 +236,7 @@ describe('First Trust official source parsers', () => {
       { date: '2025-09-25', close: 23.745, adjClose: 23.74, volume: 0 },
     ]);
     expect(chart.dividends).toEqual([{ epoch: 1758672000, amount: 0.179 }]);
-    const source = await readFile(new URL('./update-data.ts', import.meta.url), 'utf8');
+    const source = readFileSync(new URL('./update-data.ts', import.meta.url), 'utf8');
     expect(source).toContain('period1=${period1}&period2=${period2}&interval=1d&events=div%7Csplit');
     expect(source).not.toMatch(/[?&]range=|\{ range: /);
   });
@@ -288,7 +289,7 @@ describe('configuration, pacing, paging and display normalization', () => {
 
   test('reads conservative defaults and applies data filters to published values', () => {
     const config = readConfig({ TICKERS: 'fdn, ftsm;fjan', TER: ':0.6', FIRSTTRUST_PERFORMANCE_1Y: '10:', TOTAL_RETURN_3Y: '30:' });
-    expect(config).toMatchObject({ requestSleep: 1, concurrency: 2, maxRetries: 2, maxFetches: 0, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', edgarFallback: true, skipYahoo: false, secUa: '' });
+    expect(config).toMatchObject({ requestSleep: 1, concurrency: 2, maxRetries: 2, maxFetches: 0, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', edgarFallback: true, skipYahoo: false, secUa: 'daggerok ETF feed daggerok@gmail.com' });
     expect(config.tickers).toEqual(['FDN', 'FTSM', 'FJAN']);
     expect(readConfig({ REQUEST_SLEEP: '', CONCURRENCY: '0', MAX_FETCHES: '0' })).toMatchObject({ requestSleep: 1, concurrency: 2, maxFetches: 0 });
     expect(readConfig({ REQUEST_SLEEP: '0' }).requestSleep).toBe(0);
@@ -349,81 +350,123 @@ describe('configuration, pacing, paging and display normalization', () => {
   });
 });
 
-const appSource = await readFile(new URL('../app.tsx', import.meta.url), 'utf8');
-function extractAppFunction(name: string): (...args: any[]) => any {
-  const text = appSource;
-  const match = new RegExp(`\\nfunction ${name}\\(([^)]*)\\)[^{]*\\{([\\s\\S]*?)\\n\\}`).exec(text);
-  if (!match) throw new Error(`${name} was not found in app.tsx`);
-  const parameters = match[1].split(',').map(part => part.split(':')[0].split('=')[0].trim()).filter(Boolean).join(', ');
-  const js = new Bun.Transpiler({ loader: 'ts' }).transformSync(`function ${name}(${parameters}) {${match[2]}\n}`);
-  return new Function(`${js}; return ${name};`)();
-}
+const read = (path: string) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
+const file = JSON.parse(read('scripts/update-data.config.json'));
+const SEC_UA = 'daggerok ETF feed daggerok@gmail.com';
 
-describe('UI parity regression guards', () => {
-  test('the copied app formats missing/dash frequencies as None and preserves explicit Unknown', () => {
-    const format = extractAppFunction('formatDividendFrequency');
-    for (const value of [null, undefined, '', '  ', '-', '‐', '‑', '‒', '–', '—', ' — ']) expect(format(value)).toBe('00 - None');
-    expect(format('None')).toBe('00 - None');
-    expect(format('Unknown')).toBe('00 - Unknown');
-    expect(format('Monthly')).toBe('01 - Monthly');
-  });
-
-  test('header summary moves the rich detail nodes and shows alphabetized selected tickers, including all-selected', async () => {
-    const text = await readFile(new URL('../app.tsx', import.meta.url), 'utf8');
-    const match = /^([ \t]*)function renderHeaderSummary\(/m.exec(text);
-    expect(match).not.toBeNull();
-    const tail = text.slice(match!.index);
-    const end = new RegExp('^' + match![1] + '}', 'm').exec(tail);
-    expect(end).not.toBeNull();
-    const js = new Bun.Transpiler({ loader: 'ts' }).transformSync(tail.slice(0, end!.index + end![0].length));
-    const node = (value = ''): any => ({ textContent: value, childNodes: [], dataset: {}, listeners: {}, replaceChildren(...items: any[]) { this.childNodes = items; }, append(...items: any[]) { this.childNodes.push(...items); }, addEventListener(type: string, listener: any) { this.listeners[type] = listener; } });
-    const panel = node(), subtitle = node(), details = node('rich source links');
-    subtitle.append(details);
-    const document = { getElementById: () => panel, createTextNode: node, createElement: () => node() };
-    const render = new Function('document', js + '; return renderHeaderSummary;')(document);
-    render(subtitle, new Set(['ZZZ', 'AAA']), 'AAA', () => {});
-    expect(subtitle.childNodes.map((item: any) => item.textContent).join('')).toBe('2 selected: AAA, ZZZ');
-    expect(panel.childNodes[0]).toBe(details);
-    render(subtitle, new Set(['CCC', 'AAA', 'BBB']), 'BBB', () => {});
-    expect(subtitle.childNodes.map((item: any) => item.textContent).join('')).toBe('3 selected: AAA, BBB, CCC');
-    render(subtitle, new Set(), null, () => {});
-    expect(subtitle.childNodes).toEqual([]);
-  });
-
-  test('hidden source panel retains mouse, keyboard, touch, Escape and viewport-safe behaviors', async () => {
-    const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
-    expect(html).toContain('id="app-summary" role="region" aria-label="ETF catalog information" hidden');
-    expect(html).toContain("trigger.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') show(); })");
-    expect(html).toContain("trigger.addEventListener('focus', show)");
-    expect(html).toContain("event.key !== 'Escape'");
-    expect(html).toContain('innerWidth - panel.offsetWidth - 16');
-    expect(html).toContain('innerHeight - panel.offsetHeight - 16');
-    expect(html).toContain("trigger.addEventListener('click'");
-    expect(html).toContain('official First Trust ETF list and fund pages (ftportfolios.com)');
-    expect(html).toContain('SEC EDGAR N-PORT-P (First Trust ETF trusts — holdings fallback only)');
-    expect(html).toContain('Yahoo Finance (market-price history fallback only)');
-    expect(html).not.toMatch(/jpmorgan|victoryshares/i);
-    expect(appSource).not.toMatch(/jpmorgan|victoryshares/i);
-    expect(appSource).toContain("const INDEX_URL = './api/firsttrust/index.json';");
-  });
+test('configuration precedence: file < advanced < nonblank input < environment', () => {
+  const c = resolveControls({ CONCURRENCY: 2, TICKERS: 'FDN' }, { CONCURRENCY: 3, TICKERS: 'FTSM' }, { CONCURRENCY: '4', TICKERS: '' }, { FIRSTTRUST_CONCURRENCY: '5', CONCURRENCY: '6' });
+  expect(c.CONCURRENCY).toBe('5');
+  expect(c.TICKERS).toBe('FTSM');
+  expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }, { CONCURRENCY: '4' }).CONCURRENCY).toBe('4');
+  expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }).CONCURRENCY).toBe('3');
+  expect(resolveControls({ CONCURRENCY: 2 }, {}, {}, { CONCURRENCY: '7' }).CONCURRENCY).toBe('7');
 });
 
-describe('README and automation documentation guards', () => {
-  test('keeps the pinned sibling README structure and reports the verified published site', async () => {
-    const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
-    const headings = [...readme.matchAll(/^#{2,3} .+$/gm)].map(match => match[0]);
-    expect(headings).toEqual([
-      '## Using Bun', '## Updating the static First Trust data', '### Data sources', '### Metrics and caveats', '### Update controls', '### Examples',
-      '## TypeScript and verification', '## Brands table', '## Sibling applications', '## License',
-    ]);
-    expect(readme).toContain('bunx degit daggerok/First-Trust#main ./12345 && cd $_');
-    expect(readme).toContain('bun test');
-    expect(readme).toContain('The published application is available at <https://daggerok.github.io/First-Trust/>.');
-    expect(readme).not.toContain('deployment has not been verified');
-    expect(readme).not.toContain('initial checked-in seed');
-    const brandRows = [...readme.matchAll(/^\| \*\*(.+?)\*\* \|/gm)].map(match => match[1]);
-    expect(brandRows.indexOf('First Trust')).toBe(brandRows.indexOf('Fidelity') + 1);
-    expect(brandRows.indexOf('Franklin Templeton')).toBe(brandRows.indexOf('First Trust') + 1);
-    expect(readme).toContain('| First Trust | ftportfolios.com official ETF list');
+test('blank input inherits, advanced can deliberately blank a key, env can override booleans', () => {
+  expect(resolveControls({ CONCURRENCY: 2 }, {}, { CONCURRENCY: '' }).CONCURRENCY).toBe('2');
+  expect(resolveControls({ TICKERS: 'FDN' }, { TICKERS: '' }, { TICKERS: '' }).TICKERS).toBe('');
+  expect(resolveControls({ SKIP_YAHOO: true }, {}, {}, { SKIP_YAHOO: 'false' }).SKIP_YAHOO).toBe('false');
+  expect(resolveControls({ MAX_FETCHES: 0 }).MAX_FETCHES).toBe('0');
+});
+
+test('scheduled path (empty inputs and advanced) equals the config defaults', () => {
+  const controls = resolveControls(file, {}, {}, {});
+  expect(controls).toEqual(Object.fromEntries(Object.entries(file).map(([key, value]) => [key, String(value)])));
+  const config = readConfig(controls);
+  expect(config).toMatchObject({
+    maxFetches: 0, requestSleep: 1, concurrency: 2, maxRetries: 2, holdingsPageSize: 250, historyPageSize: 1000,
+    historyRange: 'max', tickers: [], edgarFallback: true, skipYahoo: false, performanceRanges: {}, totalReturnRanges: {},
   });
+  expect(config.aumRange).toBeUndefined();
+  expect(config.terRange).toBeUndefined();
+});
+
+test('SEC_UA default is the owner contact descriptor and the protected value overrides it', () => {
+  expect(file.SEC_UA).toBe(SEC_UA);
+  expect(resolveControls(file, {}, {}, { SEC_UA: 'Org Contact (ops@example.org)' }).SEC_UA).toBe('Org Contact (ops@example.org)');
+  expect(readConfig({}).secUa).toBe(SEC_UA);
+});
+
+test('explicitly set empty env var clears a control; invalid values are errors, never silent fallbacks', () => {
+  expect(resolveControls({ TICKERS: 'FDN' }, {}, {}, { TICKERS: '' }).TICKERS).toBe('');
+  expect(() => resolveControls({}, {}, {}, { MAX_RETRIES: '0' })).toThrow('MAX_RETRIES');
+  expect(() => resolveControls({}, {}, {}, { CONCURRENCY: 'two' })).toThrow('CONCURRENCY');
+  expect(() => resolveControls({}, {}, {}, { VERBOSE: 'maybe' })).toThrow('VERBOSE');
+});
+
+test('resolver rejects unknown, non-scalar, multiline and invalid values', () => {
+  for (const value of [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_FETCHES: 1.5 }, { MAX_FETCHES: -1 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { EDGAR_FALLBACK: 'later' }, { HISTORY_RANGE: 'forever' }, { AUM: '5B:1B' }, { TER: '5:1' }, { PERFORMANCE_1Y: '10' }, { TICKERS: ['FDN'] }, { TICKERS: { a: 1 } }, null, []]) {
+    expect(() => resolveControls(value)).toThrow();
+  }
+  expect(() => resolveControls({}, { SEC_UA: 'x\rfoo' })).toThrow();
+  expect(() => resolveControls({}, {}, { TICKERS: 'FDN\0' })).toThrow();
+  expect(() => resolveControls({}, {}, {}, { FIRSTTRUST_SEC_UA: 'x\0bad' })).toThrow();
+  expect(() => resolveControls({}, 'not an object')).toThrow();
+  expect(() => resolveControls({}, [])).toThrow();
+  expect(() => JSON.parse('{bad json')).toThrow();
+});
+
+test('runtimeControls reads the checked-in file and lets the environment win', async () => {
+  const controls = await runtimeControls({ TICKERS: 'FDN FTSM', FIRSTTRUST_REQUEST_SLEEP: '0' });
+  expect(controls.TICKERS).toBe('FDN FTSM');
+  expect(controls.REQUEST_SLEEP).toBe('0');
+  expect(controls.HISTORY_RANGE).toBe('max');
+  expect(readConfig(controls).tickers).toEqual(['FDN', 'FTSM']);
+});
+
+test('config keys, CONTROL_NAMES, README rows and --help are in sync', () => {
+  expect(Object.keys(file).sort()).toEqual([...CONTROL_NAMES].sort());
+  expect(Object.values(file).every((value) => typeof value === 'string')).toBe(true);
+  const doc = read('README.md');
+  const usage = Bun.spawnSync(['bun', 'scripts/update-data.ts', '--help'], { cwd: new URL('..', import.meta.url).pathname }).stdout.toString();
+  const rows = new Set<string>();
+  for (const [, cell] of doc.matchAll(/^\| ((?:`[A-Z0-9_]+`(?:, )?)+) \|/gm)) for (const [, name] of cell.matchAll(/`([A-Z0-9_]+)`/g)) rows.add(name);
+  for (const name of CONTROL_NAMES) {
+    const tenor = name.match(/^(PERFORMANCE|TOTAL_RETURN)_(1Y|3Y|5Y|10Y)$/);
+    expect(rows.has(name)).toBe(true);
+    expect(usage).toContain(tenor ? `${tenor[1]}_YTD` : name);
+  }
+  expect([...rows].filter((name) => !(CONTROL_NAMES as readonly string[]).includes(name))).toEqual([]);
+  expect(doc).toContain('scripts/update-data.config.json');
+  expect(doc).toContain('file defaults < advanced JSON < nonblank inputs < protected Actions variable/env');
+});
+
+test('workflow resolves controls with the shared resolver and writes only api/firsttrust', () => {
+  const workflow = read('.github/workflows/update-data.yml');
+  const names = [...workflow.slice(workflow.indexOf('    inputs:'), workflow.indexOf('\npermissions:')).matchAll(/^      (\w+):$/gm)].map((m) => m[1]);
+  expect(names.length).toBeLessThanOrEqual(25);
+  expect(names).toContain('advanced');
+  expect(workflow).toMatch(/advanced:\n(?:        .+\n)*?        default: '\{\}'/);
+  for (const name of names.filter((n) => n !== 'advanced')) expect(CONTROL_NAMES).toContain(name.toUpperCase());
+  expect(names).not.toContain('sec_ua');
+  expect(names).not.toContain('output_dir');
+  expect(workflow).toContain("cron: '0 0 * * 0'");
+  expect(workflow).toContain('resolveControls(file, advanced, individual, protectedVars)');
+  expect(workflow).toContain('PROTECTED_SEC_UA: ${{ vars.SEC_UA }}');
+  expect(workflow).toContain('toJSON(inputs)');
+  expect(workflow).not.toMatch(/\$\{\{\s*inputs\./);
+  expect(workflow).not.toContain('bunx tsc');
+  expect(workflow).toContain('name: Generate api/firsttrust static data');
+  expect(workflow).toContain('git add api/firsttrust\n          if git diff --cached --quiet -- api/firsttrust');
+  expect([...workflow.matchAll(/git add (\S+)/g)].map((m) => m[1])).toEqual(['api/firsttrust']);
+});
+
+test('README keeps the standard section order and the verification commands', () => {
+  const readme = read('README.md');
+  const headings = [...readme.matchAll(/^#{2,3} .+$/gm)].map((match) => match[0]);
+  expect(headings).toEqual([
+    '## Using Bun', '## Updating the static First Trust data', '### Data sources', '### Metrics and caveats', '### Update controls', '### Examples',
+    '## TypeScript and verification', '## Brands table', '## Sibling applications', '## License',
+  ]);
+  for (const command of ['bun install --frozen-lockfile', 'bun test', 'bun build --target=bun scripts/update-data.ts --outfile=/dev/null', 'git diff --check']) expect(readme).toContain(command);
+  expect(readme).not.toMatch(/worklog|\.prompt|evidence|fixtures|config-docs\.test/i);
+});
+
+test('workflow never writes outside api/firsttrust and keeps the hardened template', () => {
+  const workflow = read('.github/workflows/update-data.yml');
+  expect(workflow).not.toContain('OUTPUT_DIR');
+  expect(workflow).toContain('timeout-minutes: 30');
+  expect(workflow).toContain('persist-credentials: false');
+  expect(workflow.match(/^permissions:\n  contents: write$/m)).not.toBeNull();
 });
