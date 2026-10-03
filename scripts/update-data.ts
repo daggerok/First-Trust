@@ -2225,15 +2225,22 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
   } catch (error) {
     outputNote(`[ holdings ] ${fund.ticker}: ${errorMessage(error)}`);
   }
+  const incomplete: string[] = [];
+  const priorHoldingsAsOf = isRecord(prior.holdings) && typeof prior.holdings.asOfDate === 'string' ? firstTrustIsoDate(prior.holdings.asOfDate) || prior.holdings.asOfDate : '';
   if (!holdRows.length) {
     const sec = await fetchEdgarHoldings(fund, config);
-    if (sec) {
+    // F: an N-PORT fallback never replaces fresher published holdings.
+    const secAsOf = sec?.asOfDate ? firstTrustIsoDate(sec.asOfDate) || sec.asOfDate : '';
+    if (sec && priorHoldingsAsOf && secAsOf && secAsOf < priorHoldingsAsOf) {
+      outputNote(`[ edgar    ] ${fund.ticker}: N-PORT ${secAsOf} is older than the published holdings ${priorHoldingsAsOf}; not used`);
+    } else if (sec) {
       holdRows = sec.rows;
       holdingsAsOf = sec.asOfDate;
       holdingSource = `SEC EDGAR N-PORT-P (CIK ${sec.cik}; ${sec.asOfDate ?? 'report date unavailable'})`;
     }
   }
   if (!holdRows.length) {
+    incomplete.push('holdings');
     const previous = await previousRows(fund.ticker, 'holdings');
     if (previous.length) {
       holdRows = previous;
@@ -2273,6 +2280,7 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
     }
   }
   if (!historyRowsOut.length) {
+    incomplete.push('history');
     historyRowsOut = await previousRows(fund.ticker, 'history');
     historyAsOf = historyRowsOut.at(-1)?.Date ?? null;
     historySource = historyRowsOut.length
@@ -2290,9 +2298,16 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
     distRows = await fetchDistributions(fund.ticker, priorDist, config);
     distributionSource = 'First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)';
   } catch (error) {
+    incomplete.push('distributions');
     outputNote(`[ history  ] ${fund.ticker} distributions: ${errorMessage(error)}`);
   }
   const distSummary = summarizeDistributions(distRows);
+
+  // C: a fund is either fully updated or fully kept. When a required source failed and the fund already has a published state,
+  // nothing is written (no new returns next to stale holdings, history or distributions); the previous state stays as it is.
+  if (incomplete.length && Object.keys(prior).length) {
+    throw new Error(`kept previous published state: ${incomplete.join(', ')} unavailable in this run`);
+  }
 
   const hManifest = await writePages(fund.ticker, 'holdings', HOLDINGS_HEADERS, holdRows, config.holdingsPageSize, holdingsAsOf, holdingSource);
   const yManifest = await writePages(fund.ticker, 'history', HISTORY_HEADERS, historyRowsOut, config.historyPageSize, historyAsOf, historySource);
@@ -2498,10 +2513,21 @@ async function resolveNportFiling(
 // Main
 // ---------------------------------------------------------------------------
 
-async function main(): Promise<void> {
-  const controls = await runtimeControls();
+export type RunSummary = { updated: number; kept: number; failures: number; stoppedAtDeadline: boolean; newFunds: string[] };
+
+let softDeadlineMs = 25 * 60_000;
+
+/** The run stops taking new funds after this many ms (the workflow limit is 30 min) and still writes the index. */
+export function configureSoftDeadline(ms: number): void {
+  softDeadlineMs = ms;
+}
+
+export async function main(env: Record<string, string | undefined> = process.env): Promise<RunSummary> {
+  const startedAt = Date.now();
+  summaryCache.clear();
+  const controls = await runtimeControls(env);
   installSystemCa(controls.USE_SYSTEM_CA ?? 'auto');
-  if (controls.VERBOSE !== undefined) process.env.VERBOSE = controls.VERBOSE;
+  if (controls.VERBOSE !== undefined && env === process.env) process.env.VERBOSE = controls.VERBOSE;
   const config = readConfig(controls);
   configureRequestLanes(config.concurrency, config.requestSleep);
 
@@ -2539,6 +2565,13 @@ async function main(): Promise<void> {
   for (const fund of catalog) mergePrevious(fund, previousIndex.get(fund.ticker));
   console.log(`[ catalog  ] ${catalog.length} First Trust ETFs (${catalogSource})`);
 
+  // M: funds the live catalog lists that were never published before.
+  const publishedBefore = await publishedFundTickers();
+  const newFunds = live && previousIndex.size
+    ? catalog.filter((fund) => !previousIndex.has(fund.ticker) && !publishedBefore.has(fund.ticker)).map((fund) => fund.ticker)
+    : [];
+  if (newFunds.length) console.log(`NEW FUNDS: ${newFunds.join(', ')}`);
+
   // 2) Filters: TICKERS allowlist, then the data filters on catalog values.
   const requested = new Set(config.tickers);
   if (requested.size) {
@@ -2562,8 +2595,10 @@ async function main(): Promise<void> {
   }
 
   // 3) Bounded, resumable batch run (JPMorgan/iShares cursor semantics).
-  const state = await readUpdateState();
-  const cursor = config.maxFetches > 0 ? state?.cursor || null : null;
+  // K: a TICKERS run never reads, writes or deletes the cursor; the cursor is scoped to the (already filtered) universe and wraps around.
+  const useCursor = requested.size === 0;
+  const state = useCursor ? await readUpdateState() : null;
+  const cursor = state?.cursor || null;
   const cursorIndex = cursor ? universe.findIndex((fund) => fund.ticker === cursor) : -1;
   const ordered = cursorIndex >= 0 ? universe.slice(cursorIndex + 1).concat(universe.slice(0, cursorIndex + 1)) : universe.slice();
   const queue = ordered.slice();
@@ -2571,10 +2606,15 @@ async function main(): Promise<void> {
   let processed = 0;
   let lastProcessedTicker: string | null = cursor;
   let failures = 0;
+  let stoppedAtDeadline = false;
 
   const output = outputCreateReporter(API_ROOT, config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length);
   async function worker(): Promise<void> {
     for (;;) {
+      if (Date.now() - startedAt >= softDeadlineMs) {
+        stoppedAtDeadline = true;
+        return;
+      }
       const fund = queue.shift();
       if (!fund) return;
       if (config.maxFetches > 0 && processed >= config.maxFetches) return;
@@ -2650,21 +2690,23 @@ async function main(): Promise<void> {
     funds,
   });
 
-  // Full passes reset the cursor: the next run starts from the top again.
-  await writeUpdateState(config.maxFetches > 0 ? lastProcessedTicker : null);
+  // Bounded runs and runs cut short by the soft deadline resume after the last processed fund; a completed full pass resets the cursor.
+  if (useCursor) await writeUpdateState(config.maxFetches > 0 || stoppedAtDeadline ? lastProcessedTicker : null);
+  if (stoppedAtDeadline) console.log(`[ deadline ] soft deadline of ${Math.round(softDeadlineMs / 1000)} s reached: remaining funds keep their published state, the next run continues after ${lastProcessedTicker ?? 'the start'}`);
 
   console.log('');
   console.log(`[ done     ] ${results.size} funds updated, ${keptFromPrevious} kept from previous runs, ${failures} failures`);
   console.log(`[ done     ] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
-  console.log(`[ cursor   ] ${config.maxFetches > 0 && lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)'}`);
+  console.log(`[ cursor   ] ${useCursor ? ((config.maxFetches > 0 || stoppedAtDeadline) && lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)') : 'TICKERS run: cursor untouched'}`);
 
-  if (process.env.GITHUB_STEP_SUMMARY) {
+  if (env.GITHUB_STEP_SUMMARY) {
     await appendFile(
-      process.env.GITHUB_STEP_SUMMARY,
-      `### First Trust data update\n\n- updated: ${results.size}\n- kept from previous runs: ${keptFromPrevious}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n`,
+      env.GITHUB_STEP_SUMMARY,
+      `### First Trust data update\n\n${newFunds.length ? `- NEW FUNDS: ${newFunds.join(', ')}\n` : ''}- updated: ${results.size}\n- kept from previous runs: ${keptFromPrevious}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n`,
       'utf8',
     );
   }
+  return { updated: results.size, kept: keptFromPrevious, failures, stoppedAtDeadline, newFunds };
 }
 
 // Exported deterministic normalization for tests (mirrors the app's Frequency display rule).
@@ -2690,9 +2732,14 @@ if ((import.meta as { main?: boolean }).main) {
   if (process.argv.includes('-h') || process.argv.includes('--help')) {
     console.log(USAGE.trim());
   } else {
-    await main().catch((error) => {
-      console.error(error instanceof Error ? error.stack : String(error));
-      process.exitCode = 1;
-    });
+    await main()
+      .then((summary) => {
+        // Every fund failed: the job must not look green.
+        if (summary.failures > 0 && summary.updated === 0) process.exitCode = 1;
+      })
+      .catch((error) => {
+        console.error(error instanceof Error ? error.stack : String(error));
+        process.exitCode = 1;
+      });
   }
 }
