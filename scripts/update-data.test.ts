@@ -1,11 +1,14 @@
 /// <reference types="bun" />
 import { describe, expect, test } from 'bun:test';
-import { readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { deflateRawSync } from 'node:zlib';
 import {
-  applyCatalogPerformance, buildPages, catalogOnlyEntry, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
+  applyCatalogPerformance, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, historyStartDate, indexEntryFromMeta, mapReturnRow,
-  mergeDistributionRows, metricsFromReturns, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
+  mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
@@ -150,6 +153,15 @@ describe('First Trust official source parsers', () => {
     expect(entry.metrics).toMatchObject({ tr1y: 12.02, tr3y: 47.38, cagr5y: 10.83, dividendYield: 8.86, secYieldText: '0.66%' });
     expect(Object.keys(entry.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
     expect(entry.metrics).toMatchObject({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
+    // No meta.json exists for a catalog-only row: the hub must see dataFile null, not a dead link.
+    expect(entry.dataFile).toBeNull();
+    // Same metrics key set as the sibling feeds, ytd included.
+    expect(Object.keys(entry.metrics)).toEqual(['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf']);
+    expect(entry.metrics.ytd).toBe(6.87);
+    // A previously published row without ytd (old shape) is brought to the current key set and keeps a real dataFile only when meta.json exists.
+    const old = { ...entry, dataFile: './funds/FTHI/meta.json', metrics: { tr1y: 12.02, dividendYield: 8.86 } };
+    expect(normalizePreviousRow(old, true)).toMatchObject({ dataFile: './funds/FTHI/meta.json', metrics: { ytd: 6.87, tr1y: 12.02, cagr5y: 10.83 } });
+    expect(normalizePreviousRow(old, false).dataFile).toBeNull();
   });
 
   test('maps every return tenor by header label, whatever the column order', () => {
@@ -296,7 +308,22 @@ describe('configuration, pacing, paging and display normalization', () => {
     expect(() => parseRange('1', 'TER')).toThrow('a colon is required');
     expect(() => parseRange('5:1', 'TER')).toThrow('must not exceed');
     expect(() => parseRange('a:1', 'TER')).toThrow('is not a number');
-    expect(['max', '10y', '6mo', 'MAX', 'forever', ''].map(normalizeHistoryRange)).toEqual(['max', '10y', '6mo', 'max', 'max', 'max']);
+    expect(['max', '10y', 'MAX', ''].map(normalizeHistoryRange)).toEqual(['max', '10y', 'max', 'max']);
+    for (const bad of ['6mo', 'forever', '0y', '-1y', '1.5y', '10']) expect(() => normalizeHistoryRange(bad)).toThrow('HISTORY_RANGE');
+    expect(() => readConfig({ HISTORY_RANGE: '6mo' })).toThrow('HISTORY_RANGE');
+    expect(() => resolveControls({}, {}, { HISTORY_RANGE: '6mo' }, {})).toThrow('HISTORY_RANGE');
+  });
+
+  test('HISTORY_RANGE shrinks the Yahoo request through explicit period1/period2', () => {
+    const now = Date.UTC(2026, 9, 2);
+    const period2 = Math.floor(now / 1000);
+    const query = (range: string): URLSearchParams => new URL(chartUrl('FDN', { ...readConfig({}), historyRange: range }, now)).searchParams;
+    expect(query('max').get('period1')).toBe('0');
+    expect(query('max').get('range')).toBeNull();
+    expect(query('5y').get('period2')).toBe(String(period2));
+    expect(Number(query('5y').get('period1'))).toBe(Math.floor(period2 - 5 * 365.25 * 86_400));
+    expect(query('5y').get('range')).toBeNull();
+    expect(historyStartDate('2y', '2010-01-01', '2026-09-25')).toBe('2024-09-25');
   });
 
   test('reads conservative defaults and applies data filters to published values', () => {
@@ -339,6 +366,78 @@ describe('configuration, pacing, paging and display normalization', () => {
       expect(statuses).toEqual([200]);
     } finally {
       globalThis.fetch = originalFetch;
+    }
+  });
+
+  test('reserves the lane slot synchronously so callers never wake on the same slot', async () => {
+    const originalFetch = globalThis.fetch;
+    try {
+      // Spacing: 4 callers on 2 lanes at 0.2 s start at 0, 0, 0.2, 0.2 - never two on the same slot.
+      const starts: number[] = [];
+      globalThis.fetch = (async () => { starts.push(Date.now()); return new Response('ok'); }) as unknown as typeof fetch;
+      configureRequestLanes(2, 0.2);
+      const t0 = Date.now();
+      await Promise.all(Array.from({ length: 4 }, (_, i) => fetchWithRetry(`https://example.test/s${i}`, `s${i}`, {}, 0)));
+      const offsets = starts.map((value) => value - t0).sort((a, b) => a - b);
+      expect(offsets[1]).toBeLessThan(120);
+      expect(offsets[2]).toBeGreaterThanOrEqual(170);
+      expect(offsets[3]).toBeGreaterThanOrEqual(170);
+      expect(offsets[3] - offsets[2]).toBeLessThan(120);
+      // One lane, three callers at 0.2 s: slots 0, 0.2 and 0.4 s (an unreserved gate wakes all three together).
+      starts.length = 0;
+      configureRequestLanes(1, 0.2);
+      const t1 = Date.now();
+      await Promise.all(Array.from({ length: 3 }, (_, i) => fetchWithRetry(`https://example.test/o${i}`, `o${i}`, {}, 0)));
+      const single = starts.map((value) => value - t1).sort((a, b) => a - b);
+      expect(single[1]).toBeGreaterThanOrEqual(170);
+      expect(single[2]).toBeGreaterThanOrEqual(370);
+    } finally {
+      globalThis.fetch = originalFetch;
+      configureRequestLanes(1, 0);
+    }
+  });
+
+  test('aborts stalled requests and stalled bodies after the timeout and retries them', async () => {
+    const originalFetch = globalThis.fetch;
+    let calls = 0;
+    const stalled = (signal: AbortSignal | undefined): Promise<never> => new Promise((_, reject) => signal?.addEventListener('abort', () => reject(signal.reason)));
+    globalThis.fetch = (async (_url: unknown, init?: RequestInit) => {
+      calls += 1;
+      if (calls === 1) return stalled(init?.signal ?? undefined); // headers never arrive
+      if (calls === 2) {
+        const body = new ReadableStream({ start(controller) { init?.signal?.addEventListener('abort', () => controller.error(init.signal?.reason)); } });
+        return new Response(body); // headers arrive, body never does
+      }
+      return new Response('done');
+    }) as unknown as typeof fetch;
+    try {
+      configureRequestLanes(1, 0);
+      configureRequestTimeout(60);
+      const response = await fetchWithRetry('https://example.test/slow', 'slow', {}, 3);
+      expect(await response.text()).toBe('done');
+      expect(calls).toBe(3);
+      calls = 0;
+      await expect(fetchWithRetry('https://example.test/slow', 'slow', {}, 0)).rejects.toThrow('network error');
+    } finally {
+      configureRequestTimeout(45_000);
+      globalThis.fetch = originalFetch;
+    }
+  });
+
+  test('writes JSON through a temp file and removes stale pages only after the new meta exists', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'ft-atomic-'));
+    try {
+      setApiRoot(pathToFileURL(`${root}/`));
+      const file = pathToFileURL(`${root}/funds/FDN/meta.json`);
+      await writeFileAtomic(file, '{"a":1}\n');
+      expect(readFileSync(file, 'utf8')).toBe('{"a":1}\n');
+      expect(readdirSync(`${root}/funds/FDN`)).toEqual(['meta.json']);
+      mkdirSync(`${root}/funds/FDN/holdings`, { recursive: true });
+      for (const name of ['001.json', '002.json', '003.json']) writeFileSync(`${root}/funds/FDN/holdings/${name}`, '{}');
+      await pruneStalePages('FDN', 'holdings', ['holdings/001.json']);
+      expect(readdirSync(`${root}/funds/FDN/holdings`)).toEqual(['001.json']);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
     }
   });
 
@@ -531,5 +630,171 @@ describe('system CA support', () => {
     } finally {
       globalThis.fetch = original;
     }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// End-to-end runs against a mocked network in a temp feed directory
+// ---------------------------------------------------------------------------
+
+type MockOptions = { catalog?: string; failFor?: { summary?: string[]; holdings?: string[]; history?: string[] }; delayMs?: number; failAll?: boolean };
+
+function chartJson(close: number): string {
+  const timestamps = [1790208000, 1790294400, 1790380800]; // 2026-09-24 .. 2026-09-26
+  return JSON.stringify({ chart: { result: [{ meta: { regularMarketPrice: close, regularMarketTime: timestamps[2], firstTradeDate: 1389000000 }, timestamp: timestamps,
+    indicators: { quote: [{ close: [close - 2, close - 1, close], volume: [10, 20, 30] }], adjclose: [{ adjclose: [close - 2, close - 1, close] }] } }] } });
+}
+
+function installMockNetwork(options: MockOptions = {}): { stats: { peak: number; calls: number }; restore: () => void } {
+  const original = globalThis.fetch;
+  const stats = { peak: 0, calls: 0 };
+  let inFlight = 0;
+  globalThis.fetch = (async (input: unknown) => {
+    const url = String(input);
+    const ticker = /Ticker=([A-Z]+)/.exec(url)?.[1] ?? /chart\/([A-Z]+)/.exec(url)?.[1] ?? '';
+    stats.calls += 1; inFlight += 1; stats.peak = Math.max(stats.peak, inFlight);
+    try {
+      if (options.delayMs) await new Promise((resolve) => setTimeout(resolve, options.delayMs));
+      if (options.failAll) return new Response('down', { status: 404 });
+      if (url.includes('DisplayType=PerformanceNav')) return new Response(performanceNavHtml);
+      if (url.includes('etflist.aspx')) return new Response(options.catalog ?? catalogHtml);
+      if (url.includes('EtfSummary')) return options.failFor?.summary?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(summaryHtml);
+      if (url.includes('EtfHoldings')) return options.failFor?.holdings?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(equityHoldingsHtml);
+      if (url.includes('EtfDividHistory')) return new Response(distributionHtml);
+      if (url.includes('EtfPriceHistory')) return new Response('no export', { status: 404 });
+      if (url.includes('finance.yahoo.com')) return options.failFor?.history?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(chartJson(ticker === 'FDN' ? 291.5 : 23.7));
+      return new Response('unexpected', { status: 404 });
+    } finally {
+      inFlight -= 1;
+    }
+  }) as unknown as typeof fetch;
+  return { stats, restore: () => { globalThis.fetch = original; } };
+}
+
+function snapshotTree(dir: string, prefix = ''): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const name of readdirSync(dir).sort()) {
+    const full = `${dir}/${name}`;
+    if (statSync(full).isDirectory()) Object.assign(out, snapshotTree(full, `${prefix}${name}/`));
+    else out[`${prefix}${name}`] = readFileSync(full, 'utf8');
+  }
+  return out;
+}
+
+describe('pipeline runs (mocked network, temp feed directory)', () => {
+  const baseEnv = { USE_SYSTEM_CA: 'false', REQUEST_SLEEP: '0', MAX_RETRIES: '1', CONCURRENCY: '2', EDGAR_FALLBACK: 'false', TICKERS: '', MAX_FETCHES: '0' };
+  const withFeed = async (work: (root: string) => Promise<void>): Promise<void> => {
+    const root = mkdtempSync(join(tmpdir(), 'ft-run-'));
+    const quiet = console.log;
+    console.log = () => undefined;
+    try {
+      setApiRoot(pathToFileURL(`${root}/`));
+      await work(root);
+    } finally {
+      console.log = quiet;
+      configureSoftDeadline(25 * 60_000);
+      rmSync(root, { recursive: true, force: true });
+    }
+  };
+  const readIndex = (root: string): any => JSON.parse(readFileSync(`${root}/index.json`, 'utf8'));
+
+  test('an unchanged rerun writes nothing, and CONCURRENCY decides how many funds run in parallel', async () => {
+    await withFeed(async (root) => {
+      const net = installMockNetwork({ delayMs: 15 });
+      try {
+        const first = await main({ ...baseEnv, CONCURRENCY: '2' });
+        expect(first).toMatchObject({ updated: 2, failures: 0 });
+        expect(net.stats.peak).toBe(2);
+        const index = readIndex(root);
+        expect(index.funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI']);
+        expect(index.funds.every((fund: any) => fund.dataFile === `./funds/${fund.ticker}/meta.json` && 'ytd' in fund.metrics)).toBe(true);
+        expect(readdirSync(`${root}/funds/FTHI`).sort()).toEqual(['history', 'holdings', 'meta.json']);
+        const before = snapshotTree(root);
+        net.stats.peak = 0;
+        await main({ ...baseEnv, CONCURRENCY: '1' });
+        expect(net.stats.peak).toBe(1);
+        expect(snapshotTree(root)).toEqual(before);
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('a one-ticker run keeps every row, every fund file and the cursor state, and lists catalog-only funds with dataFile null', async () => {
+    await withFeed(async (root) => {
+      let net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const before = snapshotTree(root);
+        const withNew = catalogHtml.replaceAll('FDN', 'NEWT');
+        net.restore();
+        net = installMockNetwork({ catalog: withNew });
+        const run = await main({ ...baseEnv, TICKERS: 'FTHI', MAX_FETCHES: '1' });
+        expect(run.newFunds).toEqual(['NEWT']);
+        const index = readIndex(root);
+        expect(index.funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI', 'NEWT']);
+        expect(index.funds.find((fund: any) => fund.ticker === 'FDN').dataFile).toBe('./funds/FDN/meta.json');
+        const fresh = index.funds.find((fund: any) => fund.ticker === 'NEWT');
+        expect(fresh.dataFile).toBeNull();
+        expect(Object.keys(fresh.metrics)).toContain('ytd');
+        expect(existsSync(`${root}/funds/NEWT`)).toBe(false);
+        const after = snapshotTree(root);
+        for (const path of Object.keys(before).filter((name) => name.startsWith('funds/FDN/'))) expect(after[path]).toBe(before[path]);
+        expect(after['update-state.json']).toBe(before['update-state.json']);
+        // The cursor file of a bounded run is not touched by a later TICKERS run.
+        await main({ ...baseEnv, MAX_FETCHES: '1' });
+        const state = readFileSync(`${root}/update-state.json`, 'utf8');
+        expect(JSON.parse(state).cursor).not.toBeNull();
+        await main({ ...baseEnv, TICKERS: 'FTHI' });
+        expect(readFileSync(`${root}/update-state.json`, 'utf8')).toBe(state);
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('a fund whose sources failed keeps its complete previous state; all funds failing reports zero updated', async () => {
+    await withFeed(async (root) => {
+      let net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const before = snapshotTree(root);
+        net.restore();
+        net = installMockNetwork({ failFor: { holdings: ['FTHI'], history: ['FDN'] } });
+        const run = await main(baseEnv);
+        expect(run).toMatchObject({ updated: 0, failures: 2 });
+        expect(snapshotTree(root)).toEqual(before);
+        net.restore();
+        net = installMockNetwork({ failFor: { summary: ['FDN'] } });
+        expect(await main(baseEnv)).toMatchObject({ updated: 1, failures: 1 });
+        net.restore();
+        net = installMockNetwork({ failAll: true });
+        expect(await main(baseEnv)).toMatchObject({ updated: 0, failures: 2 });
+        expect(snapshotTree(root)['funds/FDN/meta.json']).toBe(before['funds/FDN/meta.json']);
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('stops taking new funds at the soft deadline, still writes the index and resumes after the last fund', async () => {
+    await withFeed(async (root) => {
+      const net = installMockNetwork({ delayMs: 20 });
+      try {
+        configureSoftDeadline(60);
+        const run = await main({ ...baseEnv, CONCURRENCY: '1' });
+        expect(run.stoppedAtDeadline).toBe(true);
+        expect(run.updated).toBe(1);
+        const index = readIndex(root);
+        expect(index.funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI']);
+        expect(JSON.parse(readFileSync(`${root}/update-state.json`, 'utf8')).cursor).toBe('FDN');
+        configureSoftDeadline(25 * 60_000);
+        const next = await main({ ...baseEnv, CONCURRENCY: '1' });
+        expect(next).toMatchObject({ updated: 2, stoppedAtDeadline: false });
+        expect(JSON.parse(readFileSync(`${root}/update-state.json`, 'utf8')).cursor).toBeNull();
+      } finally {
+        net.restore();
+      }
+    });
   });
 });

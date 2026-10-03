@@ -49,6 +49,13 @@ The updater uses issuer-published NAV performance values for month-end and quart
 - Each fund stores an as-of date and a source label for its holdings and history
 - Unavailable values are shown as unavailable, never as `0`
 - Unselected funds keep their previously published entries and data files, and a limited ticker run preserves the full catalog
+- `metrics` always carries the same keys (`ytd`, `tr1y`, `tr3y`, `tr5y`, `tr10y`, `cagr3y`, `cagr5y`, `cagr10y`, `siAnn`, `dividendYield`, `dividendYieldText`, `secYield`, `secYieldText`, `returnsBasis`, `performanceAsOf`)
+- A fund that is in the catalog but has no `funds/<TICKER>/meta.json` yet is listed with `dataFile: null` and all-null metrics; every fund that has a `meta.json` stays listed
+- Every fund is either fully updated or fully kept: when its summary page, holdings, history or distributions cannot be read in a run, nothing is written for it and its previous published state stays untouched (a first publication of a new fund writes what is available)
+- An SEC N-PORT-P fallback never replaces holdings that are newer than the filing
+- Files are written through a temp file and a rename; a fund's pages are written first, then `meta.json`, and stale pages are removed afterwards; an identical rerun produces no diff (timestamps move only when content moved)
+- Every request has a 45 s timeout (headers and body) and is retried per `MAX_RETRIES`; the run stops taking new funds after 25 minutes, still writes the index, and the next run continues after the last processed fund
+- New funds in the catalog are printed as `NEW FUNDS: A, B` and added to the GitHub step summary; the run exits non-zero when every fund failed
 
 ### Update controls
 
@@ -56,13 +63,13 @@ Every row below has a matching key in `scripts/update-data.config.json` (all val
 
 | Control | Default | Meaning |
 | --- | --: | --- |
-| `MAX_FETCHES` | `0` (all) | Funds per batch. With a positive value, processing resumes after the saved ticker cursor; `0` processes all eligible funds. |
+| `MAX_FETCHES` | `0` (all) | Funds per batch. With a positive value, processing resumes after the saved ticker cursor and wraps around; `0` processes all eligible funds. Only funds that pass the filters count. A `TICKERS` run never reads or changes the cursor. |
 | `REQUEST_SLEEP` | `1` | Minimum delay in seconds between request starts per worker lane (each fund needs about six requests). |
 | `CONCURRENCY` | `2` | Number of parallel fund workers. |
 | `MAX_RETRIES` | `2` | Retries after the initial request (integer >= 1). Network errors and HTTP 403/408/425/429/5xx responses are retried with bounded exponential backoff. |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page (`advanced` only). |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page (`advanced` only). |
-| `HISTORY_RANGE` | `max` | History window for the official export (and the Yahoo fallback): `max` or a whole number of years or months such as `10y`, `5y`, `1y` or `6mo`. |
+| `HISTORY_RANGE` | `max` | History window for the official export and the Yahoo fallback: `max` or a whole number of years such as `10y`, `5y` or `1y`. The Yahoo request carries explicit `period1`/`period2`. Any other value (for example `6mo`) is an error, never a silent `max`. |
 | `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `FDN FTSM FJAN`. |
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
 | `TER` | `:` | Gross expense-ratio range in percent (`min:max`). |
@@ -72,7 +79,7 @@ Every row below has a matching key in `scripts/update-data.config.json` (all val
 | `TOTAL_RETURN_YTD`, `TOTAL_RETURN_1Y`, `TOTAL_RETURN_3Y`, `TOTAL_RETURN_5Y`, `TOTAL_RETURN_10Y` | `:` | Total Return ranges in percent; multi-year values are derived from First Trust annualized NAV returns as described above. |
 | `EDGAR_FALLBACK` | `true` | Use SEC N-PORT-P holdings when official First Trust holdings are unavailable. |
 | `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | SEC User-Agent with a contact; redacted in config logs. The `SEC_UA` repository Actions variable (or env) overrides it. |
-| `SKIP_YAHOO` | `false` | Do not call Yahoo when the official history export fails; retain existing history when available. |
+| `SKIP_YAHOO` | `false` | Do not call Yahoo when the official history export fails; a fund with a published state and no history this run is then kept entirely as it was. |
 | `VERBOSE` | `false` | Show per-request retries and fallback details. |
 | `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 
