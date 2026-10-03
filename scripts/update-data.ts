@@ -496,10 +496,12 @@ export function readConfig(env: Record<string, string | undefined> = process.env
   };
 }
 
-/** "max" or a whole number of years/months ("10y", "6mo"); anything else means "max". */
+/** "max" (also the unset default) or a whole number of years ("10y"); anything else is an error, never a silent "max". */
 export function normalizeHistoryRange(raw: string): string {
   const text = String(raw ?? '').trim().toLowerCase();
-  return /^(max|\d+y|\d+mo)$/.test(text) ? text : 'max';
+  if (text === '') return 'max';
+  if (!/^(max|[1-9]\d*y)$/.test(text)) throw new Error('HISTORY_RANGE: expected "max" or "<N>y" (for example 10y)');
+  return text;
 }
 
 // File defaults and explicit overrides: allowlisted scalar controls only, so
@@ -556,7 +558,7 @@ export function resolveControls(
     if (!['auto', 'true', 'false'].includes(mode)) throw new Error('USE_SYSTEM_CA: expected auto, true or false');
     result.USE_SYSTEM_CA = mode;
   }
-  if (result.HISTORY_RANGE?.trim() && !/^(max|\d+y|\d+mo)$/i.test(result.HISTORY_RANGE.trim())) throw new Error('HISTORY_RANGE: expected max, Ny or Nmo');
+  if (result.HISTORY_RANGE?.trim()) normalizeHistoryRange(result.HISTORY_RANGE);
   readConfig(result); // validate every min:max filter before any request or write
   return result;
 }
@@ -642,8 +644,9 @@ FIRSTTRUST_ prefix, which wins over the plain name):
   HOLDINGS_PAGE_SIZE   Rows per generated current-holdings JSON page (default 250).
   HISTORY_PAGE_SIZE    Rows per generated price-history JSON page (default 1000).
   HISTORY_RANGE        History window: max (default) or a whole number of
-                       years/months such as 10y or 6mo (official export and
-                       Yahoo fallback).
+                       years such as 10y (official export and Yahoo fallback;
+                       the Yahoo request uses explicit period1/period2).
+                       Anything else is an error.
   EDGAR_FALLBACK       0/false to skip the SEC EDGAR Form N-PORT-P fallback for
                        funds whose official holdings table is empty (default
                        on).
@@ -1296,10 +1299,10 @@ export function historySheetRows(days: PriceDay[]): SheetRow[] {
 /** First export date for HISTORY_RANGE ("max", "10y", "6mo"), never before the fund's first price. */
 export function historyStartDate(range: string, minDate: string, maxDate: string): string {
   const min = firstTrustIsoDate(minDate), max = firstTrustIsoDate(maxDate);
-  const match = /^(\d+)(y|mo)$/.exec(normalizeHistoryRange(range));
+  const match = /^(\d+)(y)$/.exec(normalizeHistoryRange(range));
   if (!match || !/^\d{4}-\d{2}-\d{2}$/.test(max)) return min;
   const end = new Date(`${max}T00:00:00Z`);
-  end.setUTCMonth(end.getUTCMonth() - Number(match[1]) * (match[2] === 'y' ? 12 : 1));
+  end.setUTCMonth(end.getUTCMonth() - Number(match[1]) * 12);
   const start = end.toISOString().slice(0, 10);
   return /^\d{4}-\d{2}-\d{2}$/.test(min) && min > start ? min : start;
 }
@@ -1701,9 +1704,9 @@ export function parseChart(payload: JsonRecord): ParsedChart {
   };
 }
 
-function chartUrl(ticker: string, config: UpdaterConfig): string {
+export function chartUrl(ticker: string, config: UpdaterConfig, nowMs: number = Date.now()): string {
   // Explicit period1/period2: `range=max` silently downgrades to monthly bars.
-  const period2 = Math.floor(Date.now() / 1000);
+  const period2 = Math.floor(nowMs / 1000);
   let period1 = 0; // "max"
   const yearsMatch = /^(\d+)y$/i.exec(config.historyRange);
   if (yearsMatch) period1 = Math.floor(period2 - Number(yearsMatch[1]) * 365.25 * 86_400);

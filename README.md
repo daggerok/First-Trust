@@ -62,7 +62,7 @@ Every row below has a matching key in `scripts/update-data.config.json` (all val
 | `MAX_RETRIES` | `2` | Retries after the initial request (integer >= 1). Network errors and HTTP 403/408/425/429/5xx responses are retried with bounded exponential backoff. |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page (`advanced` only). |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page (`advanced` only). |
-| `HISTORY_RANGE` | `max` | History window for the official export (and the Yahoo fallback): `max` or a whole number of years or months such as `10y`, `5y`, `1y` or `6mo`. |
+| `HISTORY_RANGE` | `max` | History window for the official export and the Yahoo fallback: `max` or a whole number of years such as `10y`, `5y` or `1y`. The Yahoo request carries explicit `period1`/`period2`. Any other value (for example `6mo`) is an error, never a silent `max`. |
 | `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `FDN FTSM FJAN`. |
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
 | `TER` | `:` | Gross expense-ratio range in percent (`min:max`). |

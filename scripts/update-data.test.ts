@@ -3,7 +3,7 @@ import { describe, expect, test } from 'bun:test';
 import { readFileSync } from 'node:fs';
 import { deflateRawSync } from 'node:zlib';
 import {
-  applyCatalogPerformance, buildPages, catalogOnlyEntry, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
+  applyCatalogPerformance, buildPages, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
@@ -296,7 +296,22 @@ describe('configuration, pacing, paging and display normalization', () => {
     expect(() => parseRange('1', 'TER')).toThrow('a colon is required');
     expect(() => parseRange('5:1', 'TER')).toThrow('must not exceed');
     expect(() => parseRange('a:1', 'TER')).toThrow('is not a number');
-    expect(['max', '10y', '6mo', 'MAX', 'forever', ''].map(normalizeHistoryRange)).toEqual(['max', '10y', '6mo', 'max', 'max', 'max']);
+    expect(['max', '10y', 'MAX', ''].map(normalizeHistoryRange)).toEqual(['max', '10y', 'max', 'max']);
+    for (const bad of ['6mo', 'forever', '0y', '-1y', '1.5y', '10']) expect(() => normalizeHistoryRange(bad)).toThrow('HISTORY_RANGE');
+    expect(() => readConfig({ HISTORY_RANGE: '6mo' })).toThrow('HISTORY_RANGE');
+    expect(() => resolveControls({}, {}, { HISTORY_RANGE: '6mo' }, {})).toThrow('HISTORY_RANGE');
+  });
+
+  test('HISTORY_RANGE shrinks the Yahoo request through explicit period1/period2', () => {
+    const now = Date.UTC(2026, 9, 2);
+    const period2 = Math.floor(now / 1000);
+    const query = (range: string): URLSearchParams => new URL(chartUrl('FDN', { ...readConfig({}), historyRange: range }, now)).searchParams;
+    expect(query('max').get('period1')).toBe('0');
+    expect(query('max').get('range')).toBeNull();
+    expect(query('5y').get('period2')).toBe(String(period2));
+    expect(Number(query('5y').get('period1'))).toBe(Math.floor(period2 - 5 * 365.25 * 86_400));
+    expect(query('5y').get('range')).toBeNull();
+    expect(historyStartDate('2y', '2010-01-01', '2026-09-25')).toBe('2024-09-25');
   });
 
   test('reads conservative defaults and applies data filters to published values', () => {
