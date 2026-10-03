@@ -1744,6 +1744,7 @@ export function indicatedYield(
 }
 export function metricsFromReturns(monthEnd: ReturnRow): JsonRecord {
   return {
+    ytd: monthEnd.ytd,
     tr1y: monthEnd.yr1,
     tr3y: annualizedToTotal(monthEnd.yr3, 3),
     tr5y: annualizedToTotal(monthEnd.yr5, 5),
@@ -1906,7 +1907,19 @@ export function indexEntryFromMeta(fund: Fund, meta: JsonRecord): JsonRecord {
   };
 }
 
-/** Catalog-only entry (ETF list + NAV performance view) for funds that have never been fetched. */
+/** A previously published index row kept as is, with the current metrics key set and a dataFile that matches reality. */
+export function normalizePreviousRow(row: JsonRecord, hasMeta: boolean): JsonRecord {
+  const returns = isRecord(row.returns) ? row.returns : {};
+  const metrics = isRecord(row.metrics) ? row.metrics : {};
+  const monthEnd = returnRowFrom(returns.monthEnd);
+  return {
+    ...row,
+    dataFile: hasMeta ? row.dataFile ?? `./funds/${row.ticker}/meta.json` : null,
+    metrics: { ...metricsFromReturns(monthEnd), ...metrics, ytd: 'ytd' in metrics ? metrics.ytd : monthEnd.ytd },
+  };
+}
+
+/** Catalog-only entry (ETF list + NAV performance view) for funds that have never been fetched: no meta.json exists, so dataFile is null. */
 export function catalogOnlyEntry(fund: Fund): JsonRecord {
   const nav = fund.navValue;
   const monthEnd = fund.returns?.monthEnd ?? emptyReturns();
@@ -1917,7 +1930,7 @@ export function catalogOnlyEntry(fund: Fund): JsonRecord {
     name: fund.name,
     category: fund.category,
     fundPage: fundPageUrl(fund.ticker),
-    dataFile: `./funds/${fund.ticker}/meta.json`,
+    dataFile: null,
     ter: formatPercent(fund.terValue),
     terValue: fund.terValue,
     nav: nav === null ? '—' : `$${nav.toFixed(2)}`,
@@ -2547,19 +2560,34 @@ async function main(): Promise<void> {
   }
   await Promise.all(Array.from({ length: Math.max(1, config.concurrency) }, () => worker()));
 
-  // 4) Index: fresh rows, previously published rows, catalog-only rows for never-fetched funds.
+  // 4) Index: fresh rows, previously published rows, rows rebuilt from published meta.json, catalog-only rows (dataFile null) for never-fetched funds.
   const published = await publishedFundTickers();
   let keptFromPrevious = 0;
   const funds: JsonRecord[] = [];
+  const listed = new Set<string>();
   for (const fund of catalog) {
     const fresh = results.get(fund.ticker);
     const previous = previousIndex.get(fund.ticker);
+    listed.add(fund.ticker);
     if (fresh) funds.push(fresh);
     else if (previous && (published.has(fund.ticker) || !live)) {
-      funds.push(previous);
+      funds.push(normalizePreviousRow(previous, published.has(fund.ticker)));
+      keptFromPrevious += 1;
+    } else if (published.has(fund.ticker)) {
+      const meta = await readJson(new URL(`funds/${fund.ticker}/meta.json`, API_ROOT));
+      funds.push(isRecord(meta) ? indexEntryFromMeta(fund, meta) : catalogOnlyEntry(fund));
       keptFromPrevious += 1;
     } else funds.push(catalogOnlyEntry(fund));
   }
+  // Every fund that has a funds/<T>/meta.json stays listed, even when the live catalog and the previous index lost it.
+  for (const ticker of [...published].sort()) {
+    if (listed.has(ticker)) continue;
+    const meta = await readJson(new URL(`funds/${ticker}/meta.json`, API_ROOT));
+    if (!isRecord(meta)) continue;
+    funds.push(indexEntryFromMeta(emptyFund(ticker, String(meta.name ?? ''), String(meta.category ?? '')), meta));
+    keptFromPrevious += 1;
+  }
+  funds.sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
   const counts = {
     funds: funds.length,
     holdings: funds.reduce((sum, fund) => sum + (numberOrNull(fund.holdings) || 0), 0),

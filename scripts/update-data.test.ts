@@ -5,7 +5,7 @@ import { deflateRawSync } from 'node:zlib';
 import {
   applyCatalogPerformance, buildPages, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, historyStartDate, indexEntryFromMeta, mapReturnRow,
-  mergeDistributionRows, metricsFromReturns, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
+  mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
@@ -150,6 +150,15 @@ describe('First Trust official source parsers', () => {
     expect(entry.metrics).toMatchObject({ tr1y: 12.02, tr3y: 47.38, cagr5y: 10.83, dividendYield: 8.86, secYieldText: '0.66%' });
     expect(Object.keys(entry.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
     expect(entry.metrics).toMatchObject({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
+    // No meta.json exists for a catalog-only row: the hub must see dataFile null, not a dead link.
+    expect(entry.dataFile).toBeNull();
+    // Same metrics key set as the sibling feeds, ytd included.
+    expect(Object.keys(entry.metrics)).toEqual(['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf']);
+    expect(entry.metrics.ytd).toBe(6.87);
+    // A previously published row without ytd (old shape) is brought to the current key set and keeps a real dataFile only when meta.json exists.
+    const old = { ...entry, dataFile: './funds/FTHI/meta.json', metrics: { tr1y: 12.02, dividendYield: 8.86 } };
+    expect(normalizePreviousRow(old, true)).toMatchObject({ dataFile: './funds/FTHI/meta.json', metrics: { ytd: 6.87, tr1y: 12.02, cagr5y: 10.83 } });
+    expect(normalizePreviousRow(old, false).dataFile).toBeNull();
   });
 
   test('maps every return tenor by header label, whatever the column order', () => {
