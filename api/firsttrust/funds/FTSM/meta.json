@@ -35,38 +35,38 @@
   "asOfDate": "2026-03-02"
  },
  "nav": {
-  "display": "$59.71",
-  "value": 59.71,
-  "asOfDate": "Sep 25 2026"
+  "display": "$59.54",
+  "value": 59.54,
+  "asOfDate": "Oct 02 2026"
  },
  "marketPrice": {
-  "display": "$59.72",
-  "value": 59.72,
-  "asOfDate": "Sep 25 2026"
+  "display": "$59.54",
+  "value": 59.54,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
-  "display": "0.03%",
-  "value": 0.03,
+  "display": "—",
+  "value": null,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$6.63B",
-  "value": 6625051871,
-  "asOfDate": "Sep 25 2026",
+  "display": "$6.67B",
+  "value": 6665813383,
+  "asOfDate": "Oct 02 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 110949724
+  "outstanding": 111949724
  },
  "yields": {
   "dividendYield": 4.1,
   "dividendYieldText": "4.10%",
-  "dividendYieldKind": "First Trust published 12-month distribution rate as of Sep 21 2026",
-  "distributionRate": 4.1,
+  "dividendYieldKind": "First Trust published 12-month distribution rate as of Sep 30 2026",
+  "distributionRate": 4.13,
   "distributionPerShare": null,
-  "secYield": 4.26,
-  "secYieldText": "4.26%",
-  "secYieldKind": "First Trust published 30-day SEC yield as of Sep 21 2026",
+  "secYield": 4.31,
+  "secYieldText": "4.31%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Sep 30 2026",
   "unsubsidizedSecYield": null
  },
  "returns": {
@@ -94,8 +94,8 @@
  },
  "distributions": {
   "frequency": "Monthly",
-  "latestAmount": 0.204,
-  "latestExDate": "2026-08-31",
+  "latestAmount": 0.205,
+  "latestExDate": "2026-09-30",
   "headers": [
    "Ex-Date",
    "Record Date",
@@ -104,6 +104,13 @@
    "Distribution Type"
   ],
   "rows": [
+   [
+    "2026-09-30",
+    "2026-09-30",
+    "2026-10-02",
+    "0.205000",
+    "Ordinary Distributions"
+   ],
    [
     "2026-08-31",
     "2026-08-31",
@@ -1136,8 +1143,8 @@
    "holdings/003.json"
   ],
   "pageSize": 250,
-  "totalRows": 723,
-  "asOfDate": "2026-09-25",
+  "totalRows": 730,
+  "asOfDate": "2026-10-01",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -1148,14 +1155,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3053,
-  "asOfDate": "2026-09-25",
+  "totalRows": 3058,
+  "asOfDate": "2026-10-02",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 723,
- "historyCount": 3053,
- "distributionCount": 146,
- "netAssets": 6625051871,
+ "holdingsCount": 730,
+ "historyCount": 3058,
+ "distributionCount": 147,
+ "netAssets": 6665813383,
  "dividendYield": 4.1,
- "secYield": 4.26
+ "secYield": 4.31
 }

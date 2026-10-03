@@ -10,10 +10,19 @@
  ],
  "rows": [
   {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "1.37",
+   "Market Value": "0",
+   "Shares Held": "13608759",
+   "Asset Category": "-"
+  },
+  {
    "Name": "NEW YORK CITY NY MUNI WTR FIN AUTH Variable rate, due 06/15/2041",
    "Ticker": "-",
    "Identifier": "64972GU28",
-   "Weight": "0.89",
+   "Weight": "0.87",
    "Market Value": "0",
    "Shares Held": "8700000",
    "Asset Category": "-"
@@ -22,7 +31,7 @@
    "Name": "LOUISVILLE & JEFFERSON CNTY KY REGL ARPT AUTH Variable rate, due 01/01/2029",
    "Ticker": "-",
    "Identifier": "546598AA1",
-   "Weight": "0.83",
+   "Weight": "0.81",
    "Market Value": "0",
    "Shares Held": "8100000",
    "Asset Category": "-"
@@ -31,25 +40,16 @@
    "Name": "CHICAGO IL O'HARE INTL ARPT REV 5.50%, due 01/01/2048",
    "Ticker": "-",
    "Identifier": "167591AD8",
-   "Weight": "0.57",
+   "Weight": "0.55",
    "Market Value": "0",
    "Shares Held": "5500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PUERTO RICO CMWLTH AQUEDUCT & SWR AUTH 5%, due 07/01/2047",
-   "Ticker": "-",
-   "Identifier": "745160SJ1",
-   "Weight": "0.57",
-   "Market Value": "0",
-   "Shares Held": "5750000",
    "Asset Category": "-"
   },
   {
    "Name": "PUERTO RICO SALES TAX FING CORP 4.329%, due 07/01/2040",
    "Ticker": "-",
    "Identifier": "74529JRJ6",
-   "Weight": "0.56",
+   "Weight": "0.55",
    "Market Value": "0",
    "Shares Held": "5866000",
    "Asset Category": "-"
@@ -58,25 +58,43 @@
    "Name": "ATLANTA GA ARPT REVENUE 5.50%, due 07/01/2051",
    "Ticker": "-",
    "Identifier": "04780M7F0",
-   "Weight": "0.55",
+   "Weight": "0.54",
    "Market Value": "0",
    "Shares Held": "5415000",
    "Asset Category": "-"
   },
   {
-   "Name": "MOBILE CNTY AL INDL DEV AUTH 4.75%, due 12/01/2054",
+   "Name": "PUERTO RICO CMWLTH AQUEDUCT & SWR AUTH 5%, due 07/01/2047",
    "Ticker": "-",
-   "Identifier": "60733UAB7",
-   "Weight": "0.54",
+   "Identifier": "745160SJ1",
+   "Weight": "0.53",
    "Market Value": "0",
-   "Shares Held": "6000000",
+   "Shares Held": "5750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PENNSYLVANIA ST ECON DEV FING AUTH 5.25%, due 06/30/2053",
+   "Ticker": "-",
+   "Identifier": "70868YAW9",
+   "Weight": "0.51",
+   "Market Value": "0",
+   "Shares Held": "5550000",
    "Asset Category": "-"
   },
   {
    "Name": "MOBILE AL INDL DEV BRD POLL CONTROL Variable rate, due 06/01/2034",
    "Ticker": "-",
    "Identifier": "607167DY6",
-   "Weight": "0.51",
+   "Weight": "0.5",
+   "Market Value": "0",
+   "Shares Held": "5000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MOBILE CNTY AL INDL DEV AUTH SOL WST DISP 5%, due 06/01/2054",
+   "Ticker": "-",
+   "Identifier": "60733UAA9",
+   "Weight": "0.45",
    "Market Value": "0",
    "Shares Held": "5000000",
    "Asset Category": "-"
@@ -85,7 +103,7 @@
    "Name": "SAINT LOUIS CNTY MO INDL DEV AUTH 5%, due 09/01/2048",
    "Ticker": "-",
    "Identifier": "791524CE9",
-   "Weight": "0.42",
+   "Weight": "0.41",
    "Market Value": "0",
    "Shares Held": "4450000",
    "Asset Category": "-"
@@ -94,7 +112,7 @@
    "Name": "EFFINGHAM CNTY GA INDL DEV AUTH Variable rate, due 02/01/2038",
    "Ticker": "-",
    "Identifier": "28209RAC4",
-   "Weight": "0.41",
+   "Weight": "0.4",
    "Market Value": "0",
    "Shares Held": "4000000",
    "Asset Category": "-"
@@ -103,7 +121,7 @@
    "Name": "SPRING VLY ID CMNTY INFRASTRUCTURE DIST 1 6.25%, due 09/01/2053",
    "Ticker": "-",
    "Identifier": "850072AB5",
-   "Weight": "0.4",
+   "Weight": "0.39",
    "Market Value": "0",
    "Shares Held": "4000000",
    "Asset Category": "-"
@@ -112,45 +130,9 @@
    "Name": "ARKANSAS DEV FIN AUTH ENVIRONMENTAL REV 5.45%, due 09/01/2052",
    "Ticker": "-",
    "Identifier": "04110FAA3",
-   "Weight": "0.39",
+   "Weight": "0.38",
    "Market Value": "0",
    "Shares Held": "4000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PUERTO RICO CMWLTH 4%, due 07/01/2041",
-   "Ticker": "-",
-   "Identifier": "74514L3N5",
-   "Weight": "0.39",
-   "Market Value": "0",
-   "Shares Held": "4358267",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "COLORADO INTERNATIONAL CENTER CO MET DIST 14 5.375%, due 12/01/2051",
-   "Ticker": "-",
-   "Identifier": "196502AX6",
-   "Weight": "0.38",
-   "Market Value": "0",
-   "Shares Held": "3750000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "COLUMBUS OH REGL ARPT AUTH REV 5.50%, due 01/01/2050",
-   "Ticker": "-",
-   "Identifier": "199546DC3",
-   "Weight": "0.38",
-   "Market Value": "0",
-   "Shares Held": "3750000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "MAIN STREET NATURAL GAS INC GA Variable rate, due 09/01/2053",
-   "Ticker": "-",
-   "Identifier": "56035DFK3",
-   "Weight": "0.38",
-   "Market Value": "0",
-   "Shares Held": "3660000",
    "Asset Category": "-"
   },
   {
@@ -163,30 +145,48 @@
    "Asset Category": "-"
   },
   {
+   "Name": "PUERTO RICO CMWLTH 4%, due 07/01/2041",
+   "Ticker": "-",
+   "Identifier": "74514L3N5",
+   "Weight": "0.38",
+   "Market Value": "0",
+   "Shares Held": "4358267",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "COLORADO INTERNATIONAL CENTER CO MET DIST 14 5.375%, due 12/01/2051",
+   "Ticker": "-",
+   "Identifier": "196502AX6",
+   "Weight": "0.37",
+   "Market Value": "0",
+   "Shares Held": "3750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "COLUMBUS OH REGL ARPT AUTH REV 5.50%, due 01/01/2050",
+   "Ticker": "-",
+   "Identifier": "199546DC3",
+   "Weight": "0.37",
+   "Market Value": "0",
+   "Shares Held": "3750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MAIN STREET NATURAL GAS INC GA Variable rate, due 09/01/2053",
+   "Ticker": "-",
+   "Identifier": "56035DFK3",
+   "Weight": "0.37",
+   "Market Value": "0",
+   "Shares Held": "3660000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "HARRIS CNTY TX CULTURAL EDU FACS FIN CORP Variable rate, due 07/01/2056",
    "Ticker": "-",
    "Identifier": "414009UT5",
-   "Weight": "0.37",
-   "Market Value": "0",
-   "Shares Held": "3590000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "MEADE CNTY KY INDL BLDG REVENUE Variable rate, due 08/01/2061",
-   "Ticker": "-",
-   "Identifier": "583022AE8",
-   "Weight": "0.37",
-   "Market Value": "0",
-   "Shares Held": "3600000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CHARLOTTE CNTY FL INDL DEV AUTH 4%, due 10/01/2051",
-   "Ticker": "-",
-   "Identifier": "16080TAG0",
    "Weight": "0.36",
    "Market Value": "0",
-   "Shares Held": "4750000",
+   "Shares Held": "3590000",
    "Asset Category": "-"
   },
   {
@@ -199,10 +199,28 @@
    "Asset Category": "-"
   },
   {
+   "Name": "MEADE CNTY KY INDL BLDG REVENUE Variable rate, due 08/01/2061",
+   "Ticker": "-",
+   "Identifier": "583022AE8",
+   "Weight": "0.36",
+   "Market Value": "0",
+   "Shares Held": "3600000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CHARLOTTE CNTY FL INDL DEV AUTH 4%, due 10/01/2051",
+   "Ticker": "-",
+   "Identifier": "16080TAG0",
+   "Weight": "0.35",
+   "Market Value": "0",
+   "Shares Held": "4750000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "NEW HAMPSHIRE ST HLTH & EDU FACS AUTH 5.50%, due 08/01/2050",
    "Ticker": "-",
    "Identifier": "64461XME2",
-   "Weight": "0.36",
+   "Weight": "0.35",
    "Market Value": "0",
    "Shares Held": "3500000",
    "Asset Category": "-"
@@ -211,54 +229,18 @@
    "Name": "FIELDS ESTATES PUBLIC INFRASTRCTURE DIST UT 6.125%, due 03/01/2055",
    "Ticker": "-",
    "Identifier": "316576AA5",
-   "Weight": "0.34",
+   "Weight": "0.33",
    "Market Value": "0",
    "Shares Held": "3450000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PENNSYLVANIA ST ECON DEV FING AUTH 5.25%, due 06/30/2053",
-   "Ticker": "-",
-   "Identifier": "70868YAW9",
-   "Weight": "0.34",
-   "Market Value": "0",
-   "Shares Held": "3550000",
    "Asset Category": "-"
   },
   {
    "Name": "MARICOPA CNTY INDL DEV AUTH 4%, due 10/15/2047",
    "Ticker": "-",
    "Identifier": "56678TAA7",
-   "Weight": "0.33",
+   "Weight": "0.32",
    "Market Value": "0",
    "Shares Held": "4000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "RED BARN MET DIST CO 5.50%, due 12/01/2055",
-   "Ticker": "-",
-   "Identifier": "75633SAB1",
-   "Weight": "0.33",
-   "Market Value": "0",
-   "Shares Held": "3550000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "AEROTROPOLIS REGL TRANPRTN AUTH CO 5.50%, due 12/01/2044",
-   "Ticker": "-",
-   "Identifier": "008051AD6",
-   "Weight": "0.32",
-   "Market Value": "0",
-   "Shares Held": "3250000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "BUCKEYE OH TOBACCO SETTLEMENT FING AUTH 5%, due 06/01/2055",
-   "Ticker": "-",
-   "Identifier": "118217CZ9",
-   "Weight": "0.32",
-   "Market Value": "0",
-   "Shares Held": "4250000",
    "Asset Category": "-"
   },
   {
@@ -271,39 +253,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "BURKE CNTY GA DEV AUTH POLL CTRL REV Variable rate, due 11/01/2052",
+   "Name": "RED BARN MET DIST CO 5.50%, due 12/01/2055",
    "Ticker": "-",
-   "Identifier": "121342PQ6",
-   "Weight": "0.31",
+   "Identifier": "75633SAB1",
+   "Weight": "0.32",
    "Market Value": "0",
-   "Shares Held": "3000000",
+   "Shares Held": "3550000",
    "Asset Category": "-"
   },
   {
-   "Name": "IOWA ST FIN AUTH MIDWSTRN DISASTER AREA REV 4.75%, due 08/01/2042",
+   "Name": "AEROTROPOLIS REGL TRANPRTN AUTH CO 5.50%, due 12/01/2044",
    "Ticker": "-",
-   "Identifier": "46246SAE5",
+   "Identifier": "008051AD6",
    "Weight": "0.31",
    "Market Value": "0",
-   "Shares Held": "3000000",
+   "Shares Held": "3250000",
    "Asset Category": "-"
   },
   {
-   "Name": "NORTH CAROLINA ST MED CARE COMMN 5.25%, due 12/01/2054",
+   "Name": "MISSION TX ECON DEV CORP REVENUE Variable rate, due 08/01/2046",
    "Ticker": "-",
-   "Identifier": "65820YTG1",
+   "Identifier": "605156AD0",
    "Weight": "0.31",
    "Market Value": "0",
-   "Shares Held": "3200000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "ARKANSAS ST DEV FIN AUTH CHRT SCH REV 5%, due 07/01/2036",
-   "Ticker": "-",
-   "Identifier": "04110DBH2",
-   "Weight": "0.3",
-   "Market Value": "0",
-   "Shares Held": "3000000",
+   "Shares Held": "3250000",
    "Asset Category": "-"
   },
   {
@@ -316,10 +289,46 @@
    "Asset Category": "-"
   },
   {
+   "Name": "BUCKEYE OH TOBACCO SETTLEMENT FING AUTH 5%, due 06/01/2055",
+   "Ticker": "-",
+   "Identifier": "118217CZ9",
+   "Weight": "0.3",
+   "Market Value": "0",
+   "Shares Held": "4250000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BURKE CNTY GA DEV AUTH POLL CTRL REV Variable rate, due 11/01/2052",
+   "Ticker": "-",
+   "Identifier": "121342PQ6",
+   "Weight": "0.3",
+   "Market Value": "0",
+   "Shares Held": "3000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "IOWA ST FIN AUTH MIDWSTRN DISASTER AREA REV 4.75%, due 08/01/2042",
+   "Ticker": "-",
+   "Identifier": "46246SAE5",
+   "Weight": "0.3",
+   "Market Value": "0",
+   "Shares Held": "3000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ARKANSAS ST DEV FIN AUTH CHRT SCH REV 5%, due 07/01/2036",
+   "Ticker": "-",
+   "Identifier": "04110DBH2",
+   "Weight": "0.29",
+   "Market Value": "0",
+   "Shares Held": "3000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CLACKAMAS CNTY OR HOSP FAC AUTH 5.375%, due 11/15/2055",
    "Ticker": "-",
    "Identifier": "179027YN1",
-   "Weight": "0.3",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3250000",
    "Asset Category": "-"
@@ -328,7 +337,7 @@
    "Name": "DELAWARE ST HLTH FACS AUTH REV 5%, due 06/01/2048",
    "Ticker": "-",
    "Identifier": "246388UQ3",
-   "Weight": "0.3",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3140000",
    "Asset Category": "-"
@@ -337,7 +346,7 @@
    "Name": "KANSAS CITY MO INDL DEV AUTH 6%, due 01/01/2048",
    "Ticker": "-",
    "Identifier": "48503SGS2",
-   "Weight": "0.3",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3000000",
    "Asset Category": "-"
@@ -346,7 +355,7 @@
    "Name": "MARYLAND ST HLTH & HGR EDUCTNL FACS AUTH 5.25%, due 08/15/2051",
    "Ticker": "-",
    "Identifier": "57421CNQ3",
-   "Weight": "0.3",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3000000",
    "Asset Category": "-"
@@ -355,7 +364,7 @@
    "Name": "MET WASHINGTON DC ARPTS AUTH 5.25%, due 10/01/2049",
    "Ticker": "-",
    "Identifier": "592647NF4",
-   "Weight": "0.3",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3000000",
    "Asset Category": "-"
@@ -364,7 +373,7 @@
    "Name": "MISSOURI ST HLTH & EDUCTNL FACS AUTH 5.25%, due 02/01/2048",
    "Ticker": "-",
    "Identifier": "60635H4B2",
-   "Weight": "0.3",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3045000",
    "Asset Category": "-"
@@ -373,7 +382,7 @@
    "Name": "MISSOURI ST HLTH & EDUCTNL FACS AUTH Variable rate, due 06/01/2036",
    "Ticker": "-",
    "Identifier": "60637AMU3",
-   "Weight": "0.3",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "2900000",
    "Asset Category": "-"
@@ -382,16 +391,34 @@
    "Name": "NORTH CAROLINA ST MED CARE COMMN 4%, due 03/01/2041",
    "Ticker": "-",
    "Identifier": "65821DYF2",
-   "Weight": "0.3",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3300000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NORTH CAROLINA ST MED CARE COMMN 5.25%, due 12/01/2054",
+   "Ticker": "-",
+   "Identifier": "65820YTG1",
+   "Weight": "0.29",
+   "Market Value": "0",
+   "Shares Held": "3200000",
    "Asset Category": "-"
   },
   {
    "Name": "OHIO ST HSG FIN AGY MF HSG REV 6.30%, due 01/01/2045",
    "Ticker": "-",
    "Identifier": "676900YF4",
-   "Weight": "0.3",
+   "Weight": "0.29",
+   "Market Value": "0",
+   "Shares Held": "3000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SCHAUMBURG COOK & DUPAGE CNTYS IL CTFS PARTN 6.125%, due 12/30/2038",
+   "Ticker": "-",
+   "Identifier": "806345AA2",
+   "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3000000",
    "Asset Category": "-"
@@ -400,69 +427,6 @@
    "Name": "SOUTHEAST ENERGY AUTH COOPERATIVE DIST AL 5%, due 11/01/2035",
    "Ticker": "-",
    "Identifier": "84136HAU7",
-   "Weight": "0.3",
-   "Market Value": "0",
-   "Shares Held": "3000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "VIRGIN ISLANDS PUBLIC FIN AUTH 6%, due 04/01/2053",
-   "Ticker": "-",
-   "Identifier": "927677AA2",
-   "Weight": "0.3",
-   "Market Value": "0",
-   "Shares Held": "3000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "VIRGINIA ST SMALL BUSINESS FIN AUTH 5.50%, due 12/01/2054",
-   "Ticker": "-",
-   "Identifier": "928103AY6",
-   "Weight": "0.3",
-   "Market Value": "0",
-   "Shares Held": "3000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "BARTOW CNTY GA DEV AUTH SOLID WASTE DISP Variable rate, due 11/01/2062",
-   "Ticker": "-",
-   "Identifier": "06964KAB2",
-   "Weight": "0.29",
-   "Market Value": "0",
-   "Shares Held": "2800000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "COLUMBUS-FRANKLIN CNTY OH FIN AUTH MF HSG 6.30%, due 01/01/2046",
-   "Ticker": "-",
-   "Identifier": "19910XAS5",
-   "Weight": "0.29",
-   "Market Value": "0",
-   "Shares Held": "3000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "KANSAS CITY MO INDL DEV AUTH ECON ACTIVITY TAX 5%, due 06/01/2054",
-   "Ticker": "-",
-   "Identifier": "48502MAB9",
-   "Weight": "0.29",
-   "Market Value": "0",
-   "Shares Held": "3170000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PUERTO RICO CMWLTH 4%, due 07/01/2035",
-   "Ticker": "-",
-   "Identifier": "74514L3L9",
-   "Weight": "0.29",
-   "Market Value": "0",
-   "Shares Held": "3002265",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "SCHAUMBURG COOK & DUPAGE CNTYS IL CTFS PARTN 6.125%, due 12/30/2038",
-   "Ticker": "-",
-   "Identifier": "806345AA2",
    "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "3000000",
@@ -478,9 +442,36 @@
    "Asset Category": "-"
   },
   {
-   "Name": "DENTON CNTY TX SPL ASSMNT REV 5.625%, due 12/31/2054",
+   "Name": "VIRGIN ISLANDS PUBLIC FIN AUTH 6%, due 04/01/2053",
    "Ticker": "-",
-   "Identifier": "24880GAJ8",
+   "Identifier": "927677AA2",
+   "Weight": "0.29",
+   "Market Value": "0",
+   "Shares Held": "3000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "VIRGINIA ST SMALL BUSINESS FIN AUTH 5.50%, due 12/01/2054",
+   "Ticker": "-",
+   "Identifier": "928103AY6",
+   "Weight": "0.29",
+   "Market Value": "0",
+   "Shares Held": "3000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BARTOW CNTY GA DEV AUTH SOLID WASTE DISP Variable rate, due 11/01/2062",
+   "Ticker": "-",
+   "Identifier": "06964KAB2",
+   "Weight": "0.28",
+   "Market Value": "0",
+   "Shares Held": "2800000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "COLUMBUS-FRANKLIN CNTY OH FIN AUTH MF HSG 6.30%, due 01/01/2046",
+   "Ticker": "-",
+   "Identifier": "19910XAS5",
    "Weight": "0.28",
    "Market Value": "0",
    "Shares Held": "3000000",
@@ -505,12 +496,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "KENTON CNTY KY ARPT BRD 5.25%, due 01/01/2049",
+   "Name": "KANSAS CITY MO INDL DEV AUTH ECON ACTIVITY TAX 5%, due 06/01/2054",
    "Ticker": "-",
-   "Identifier": "491026WJ5",
+   "Identifier": "48502MAB9",
    "Weight": "0.28",
    "Market Value": "0",
-   "Shares Held": "2840000",
+   "Shares Held": "3170000",
    "Asset Category": "-"
   },
   {
@@ -532,39 +523,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "NEW YORK CITY NY MUNI WTR FIN AUTH Variable rate, due 06/15/2049",
-   "Ticker": "-",
-   "Identifier": "64972GML5",
-   "Weight": "0.28",
-   "Market Value": "0",
-   "Shares Held": "2700000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "NORTH CAROLINA ST MED CARE COMMN 5%, due 10/01/2037",
    "Ticker": "-",
    "Identifier": "65820YMR4",
    "Weight": "0.28",
    "Market Value": "0",
    "Shares Held": "2850000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PORT OF GTR CINCINNATI DEV AUTH OH 5.125%, due 12/01/2055",
-   "Ticker": "-",
-   "Identifier": "73421NAD9",
-   "Weight": "0.28",
-   "Market Value": "0",
-   "Shares Held": "3000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PUBLIC FIN AUTH WI TOLL REVENUE 5.75%, due 06/30/2060",
-   "Ticker": "-",
-   "Identifier": "74448UAB4",
-   "Weight": "0.28",
-   "Market Value": "0",
-   "Shares Held": "2750000",
    "Asset Category": "-"
   },
   {
@@ -577,27 +541,54 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SAN ANTONIO TX ARPT SYS REVENUE 5.50%, due 07/01/2051",
+   "Name": "PUERTO RICO CMWLTH 4%, due 07/01/2035",
    "Ticker": "-",
-   "Identifier": "796242WC5",
+   "Identifier": "74514L3L9",
    "Weight": "0.28",
    "Market Value": "0",
-   "Shares Held": "2690000",
+   "Shares Held": "3002265",
    "Asset Category": "-"
   },
   {
-   "Name": "WOOD RANCH PUB INFRASTRUCTURE DIST UT 5.625%, due 12/01/2053",
+   "Name": "DENTON CNTY TX SPL ASSMNT REV 5.625%, due 12/31/2054",
    "Ticker": "-",
-   "Identifier": "97850AAA2",
-   "Weight": "0.28",
+   "Identifier": "24880GAJ8",
+   "Weight": "0.27",
    "Market Value": "0",
-   "Shares Held": "2921753",
+   "Shares Held": "3000000",
    "Asset Category": "-"
   },
   {
    "Name": "HANOVER CNTY VA ECON DEV AUTH 5%, due 07/01/2051",
    "Ticker": "-",
    "Identifier": "41077CAS4",
+   "Weight": "0.27",
+   "Market Value": "0",
+   "Shares Held": "3000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "KENTON CNTY KY ARPT BRD 5.25%, due 01/01/2049",
+   "Ticker": "-",
+   "Identifier": "491026WJ5",
+   "Weight": "0.27",
+   "Market Value": "0",
+   "Shares Held": "2840000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NEW YORK CITY NY MUNI WTR FIN AUTH Variable rate, due 06/15/2049",
+   "Ticker": "-",
+   "Identifier": "64972GML5",
+   "Weight": "0.27",
+   "Market Value": "0",
+   "Shares Held": "2700000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PORT OF GTR CINCINNATI DEV AUTH OH 5.125%, due 12/01/2055",
+   "Ticker": "-",
+   "Identifier": "73421NAD9",
    "Weight": "0.27",
    "Market Value": "0",
    "Shares Held": "3000000",
@@ -613,39 +604,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SOUTH SALT LAKE UT REDEV AGY TAX INCR 6.25%, due 04/15/2046",
+   "Name": "PUBLIC FIN AUTH WI TOLL REVENUE 5.75%, due 06/30/2060",
    "Ticker": "-",
-   "Identifier": "83985AAA0",
+   "Identifier": "74448UAB4",
    "Weight": "0.27",
    "Market Value": "0",
-   "Shares Held": "2730000",
+   "Shares Held": "2750000",
    "Asset Category": "-"
   },
   {
-   "Name": "WARREN CNTY OH HOSP FACS REV 5%, due 05/15/2049",
+   "Name": "SAN ANTONIO TX ARPT SYS REVENUE 5.50%, due 07/01/2051",
    "Ticker": "-",
-   "Identifier": "935158BE4",
+   "Identifier": "796242WC5",
    "Weight": "0.27",
    "Market Value": "0",
-   "Shares Held": "2835000",
+   "Shares Held": "2690000",
    "Asset Category": "-"
   },
   {
-   "Name": "JACKSONVILLE FL AVIATION AUTH 5.50%, due 10/01/2050",
+   "Name": "WOOD RANCH PUB INFRASTRUCTURE DIST UT 5.625%, due 12/01/2053",
    "Ticker": "-",
-   "Identifier": "46935MBW3",
-   "Weight": "0.26",
+   "Identifier": "97850AAA2",
+   "Weight": "0.27",
    "Market Value": "0",
-   "Shares Held": "2500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "KENTUCKY ST PUBLIC ENERGY AUTH Variable rate, due 02/01/2050",
-   "Ticker": "-",
-   "Identifier": "74440DCM4",
-   "Weight": "0.26",
-   "Market Value": "0",
-   "Shares Held": "2525000",
+   "Shares Held": "2921753",
    "Asset Category": "-"
   },
   {
@@ -667,48 +649,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SUNSET PARKS MET DIST CO 5.125%, due 12/01/2054",
+   "Name": "SEAGROVE CDD FL SPL ASSMNT 4.875%, due 06/15/2044",
    "Ticker": "-",
-   "Identifier": "86777VAA9",
+   "Identifier": "811897AB3",
    "Weight": "0.26",
    "Market Value": "0",
-   "Shares Held": "2820000",
+   "Shares Held": "3000000",
    "Asset Category": "-"
   },
   {
-   "Name": "TENNESSEE ST ENERGY ACQUISITION CORP 5%, due 12/01/2035",
+   "Name": "SOUTH SALT LAKE UT REDEV AGY TAX INCR 6.25%, due 04/15/2046",
    "Ticker": "-",
-   "Identifier": "880443JM9",
+   "Identifier": "83985AAA0",
    "Weight": "0.26",
    "Market Value": "0",
-   "Shares Held": "2500000",
+   "Shares Held": "2730000",
    "Asset Category": "-"
   },
   {
-   "Name": "TOBACCO SETTLEMENT FING CORP RI 5%, due 06/01/2040",
+   "Name": "WARREN CNTY OH HOSP FACS REV 5%, due 05/15/2049",
    "Ticker": "-",
-   "Identifier": "888809BE9",
+   "Identifier": "935158BE4",
    "Weight": "0.26",
    "Market Value": "0",
-   "Shares Held": "2500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "WALKER CNTY AL ECON & INDL DEV AUTH Variable rate, due 08/01/2063",
-   "Ticker": "-",
-   "Identifier": "931542AB0",
-   "Weight": "0.26",
-   "Market Value": "0",
-   "Shares Held": "2500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "ARROWHEAD SPRINGS PUBLIC INFRASTRUCTURE DIST UT 5.625%, due 12/01/2054",
-   "Ticker": "-",
-   "Identifier": "04280BAA6",
-   "Weight": "0.25",
-   "Market Value": "0",
-   "Shares Held": "2600000",
+   "Shares Held": "2835000",
    "Asset Category": "-"
   },
   {
@@ -721,6 +685,24 @@
    "Asset Category": "-"
   },
   {
+   "Name": "JACKSONVILLE FL AVIATION AUTH 5.50%, due 10/01/2050",
+   "Ticker": "-",
+   "Identifier": "46935MBW3",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "2500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "KENTUCKY ST PUBLIC ENERGY AUTH Variable rate, due 02/01/2050",
+   "Ticker": "-",
+   "Identifier": "74440DCM4",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "2525000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "MINNEAPOLIS-SAINT PAUL MN MET APRTS COMMN 5.25%, due 01/01/2042",
    "Ticker": "-",
    "Identifier": "603827Q58",
@@ -730,12 +712,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SOUTHEAST ENERGY AUTH AL COMMODITY SPLY Variable rate, due 11/01/2051",
+   "Name": "SUNSET PARKS MET DIST CO 5.125%, due 12/01/2054",
    "Ticker": "-",
-   "Identifier": "84136FAH0",
+   "Identifier": "86777VAA9",
    "Weight": "0.25",
    "Market Value": "0",
-   "Shares Held": "2425000",
+   "Shares Held": "2820000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TENNESSEE ST ENERGY ACQUISITION CORP 5%, due 12/01/2035",
+   "Ticker": "-",
+   "Identifier": "880443JM9",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "2500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TOBACCO SETTLEMENT FING CORP RI 5%, due 06/01/2040",
+   "Ticker": "-",
+   "Identifier": "888809BE9",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "2500000",
    "Asset Category": "-"
   },
   {
@@ -748,75 +748,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MIAMI-DADE CNTY FL AVIATION REV 5%, due 10/01/2049",
+   "Name": "WALKER CNTY AL ECON & INDL DEV AUTH Variable rate, due 08/01/2063",
    "Ticker": "-",
-   "Identifier": "59333P4D7",
-   "Weight": "0.24",
+   "Identifier": "931542AB0",
+   "Weight": "0.25",
    "Market Value": "0",
    "Shares Held": "2500000",
    "Asset Category": "-"
   },
   {
-   "Name": "NEW YORK CITY NY TRANSITIONAL FIN AUTH REV 4%, due 02/01/2042",
+   "Name": "ARROWHEAD SPRINGS PUBLIC INFRASTRUCTURE DIST UT 5.625%, due 12/01/2054",
    "Ticker": "-",
-   "Identifier": "64971XL30",
+   "Identifier": "04280BAA6",
    "Weight": "0.24",
    "Market Value": "0",
-   "Shares Held": "2625000",
+   "Shares Held": "2600000",
    "Asset Category": "-"
   },
   {
-   "Name": "OHIO ST HSG FIN AGY MF HSG REV 6.125%, due 01/01/2046",
+   "Name": "SOUTHEAST ENERGY AUTH AL COMMODITY SPLY Variable rate, due 11/01/2051",
    "Ticker": "-",
-   "Identifier": "676900YT4",
+   "Identifier": "84136FAH0",
    "Weight": "0.24",
    "Market Value": "0",
-   "Shares Held": "2430000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PALISADE CO MET DIST #2 LIMITED TAX 0%, due 12/15/2054",
-   "Ticker": "-",
-   "Identifier": "696392AD1",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "2500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "POWHATAN CNTY VA ECON DEV AUTH 6.125%, due 09/01/2060",
-   "Ticker": "-",
-   "Identifier": "73937XAA0",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "2500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "RESORT CORE PUBLIC INFRASTRUCTURE DIST 1 UT 5.375%, due 03/01/2046",
-   "Ticker": "-",
-   "Identifier": "76091EAB5",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "2500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "VIRGINIA SMALL BUSINESS FING AUTH 5%, due 12/31/2047",
-   "Ticker": "-",
-   "Identifier": "928097AA2",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "2500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "WYANDOTTE CNTY KS KANSAS CITY UNIF GOVT 5.50%, due 03/01/2046",
-   "Ticker": "-",
-   "Identifier": "98267VDQ3",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "2500000",
+   "Shares Held": "2425000",
    "Asset Category": "-"
   },
   {
@@ -856,15 +811,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "ILLINOIS ST 5.50%, due 04/01/2051",
-   "Ticker": "-",
-   "Identifier": "452153RJ0",
-   "Weight": "0.23",
-   "Market Value": "0",
-   "Shares Held": "2200000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "KING CNTY WA HSG AUTH 3%, due 08/01/2040",
    "Ticker": "-",
    "Identifier": "494762PA9",
@@ -874,12 +820,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "LAKEWOOD VLG TX SPL ASSMNT REV 5.375%, due 09/15/2052",
+   "Name": "MIAMI-DADE CNTY FL AVIATION REV 5%, due 10/01/2049",
    "Ticker": "-",
-   "Identifier": "51270AAD5",
+   "Identifier": "59333P4D7",
    "Weight": "0.23",
    "Market Value": "0",
-   "Shares Held": "2400000",
+   "Shares Held": "2500000",
    "Asset Category": "-"
   },
   {
@@ -901,39 +847,75 @@
    "Asset Category": "-"
   },
   {
-   "Name": "OKLAHOMA ST DEV FIN AUTH 7.25%, due 09/01/2051",
+   "Name": "NEW YORK CITY NY TRANSITIONAL FIN AUTH REV 4%, due 02/01/2042",
    "Ticker": "-",
-   "Identifier": "6789083V4",
+   "Identifier": "64971XL30",
+   "Weight": "0.23",
+   "Market Value": "0",
+   "Shares Held": "2625000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "OHIO ST HSG FIN AGY MF HSG REV 6.125%, due 01/01/2046",
+   "Ticker": "-",
+   "Identifier": "676900YT4",
+   "Weight": "0.23",
+   "Market Value": "0",
+   "Shares Held": "2430000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PALISADE CO MET DIST #2 LIMITED TAX 0%, due 12/15/2054",
+   "Ticker": "-",
+   "Identifier": "696392AD1",
+   "Weight": "0.23",
+   "Market Value": "0",
+   "Shares Held": "2500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "POWHATAN CNTY VA ECON DEV AUTH 6.125%, due 09/01/2060",
+   "Ticker": "-",
+   "Identifier": "73937XAA0",
+   "Weight": "0.23",
+   "Market Value": "0",
+   "Shares Held": "2500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "REAGAN HOSP DIST REAGAN CNTY TX 6%, due 08/01/2046",
+   "Ticker": "-",
+   "Identifier": "755783AQ0",
    "Weight": "0.23",
    "Market Value": "0",
    "Shares Held": "2400000",
    "Asset Category": "-"
   },
   {
-   "Name": "RESORT CORE PUBLIC INFRASTRUCTURE DIST 1 UT Variable rate, due 03/01/2046",
+   "Name": "RESORT CORE PUBLIC INFRASTRUCTURE DIST 1 UT 5.375%, due 03/01/2046",
    "Ticker": "-",
-   "Identifier": "76091EAE9",
+   "Identifier": "76091EAB5",
    "Weight": "0.23",
    "Market Value": "0",
-   "Shares Held": "3000000",
+   "Shares Held": "2500000",
    "Asset Category": "-"
   },
   {
-   "Name": "ALLEGHENY CNTY PA HOSP DEV AUTH 5%, due 04/01/2047",
+   "Name": "VIRGINIA SMALL BUSINESS FING AUTH 5%, due 12/31/2047",
    "Ticker": "-",
-   "Identifier": "01728A4A1",
-   "Weight": "0.22",
+   "Identifier": "928097AA2",
+   "Weight": "0.23",
    "Market Value": "0",
-   "Shares Held": "2280000",
+   "Shares Held": "2500000",
    "Asset Category": "-"
   },
   {
-   "Name": "CONNECTICUT ST HLTH & EDUCTNL FACS AUTH 5.25%, due 08/01/2051",
+   "Name": "WYANDOTTE CNTY KS KANSAS CITY UNIF GOVT 5.50%, due 03/01/2046",
    "Ticker": "-",
-   "Identifier": "20775DX72",
-   "Weight": "0.22",
+   "Identifier": "98267VDQ3",
+   "Weight": "0.23",
    "Market Value": "0",
-   "Shares Held": "2200000",
+   "Shares Held": "2500000",
    "Asset Category": "-"
   },
   {
@@ -955,12 +937,30 @@
    "Asset Category": "-"
   },
   {
+   "Name": "LAKEWOOD VLG TX SPL ASSMNT REV 5.375%, due 09/15/2052",
+   "Ticker": "-",
+   "Identifier": "51270AAD5",
+   "Weight": "0.22",
+   "Market Value": "0",
+   "Shares Held": "2400000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "NEW YORK ST TRANSPRTN DEV CORP 4.375%, due 10/01/2045",
    "Ticker": "-",
    "Identifier": "650116DA1",
    "Weight": "0.22",
    "Market Value": "0",
    "Shares Held": "2540000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "OKLAHOMA ST DEV FIN AUTH 7.25%, due 09/01/2051",
+   "Ticker": "-",
+   "Identifier": "6789083V4",
+   "Weight": "0.22",
+   "Market Value": "0",
+   "Shares Held": "2400000",
    "Asset Category": "-"
   },
   {
@@ -973,6 +973,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "RESORT CORE PUBLIC INFRASTRUCTURE DIST 1 UT Variable rate, due 03/01/2046",
+   "Ticker": "-",
+   "Identifier": "76091EAE9",
+   "Weight": "0.22",
+   "Market Value": "0",
+   "Shares Held": "3000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "STAMFORD CT HSG AUTH 6.50%, due 10/01/2055",
    "Ticker": "-",
    "Identifier": "852640AK7",
@@ -982,12 +991,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "VIRGINIA BEACH VA DEV AUTH RSDL CARE 7%, due 09/01/2053",
+   "Name": "ALLEGHENY CNTY PA HOSP DEV AUTH 5%, due 04/01/2047",
    "Ticker": "-",
-   "Identifier": "92774NBB5",
-   "Weight": "0.22",
+   "Identifier": "01728A4A1",
+   "Weight": "0.21",
    "Market Value": "0",
-   "Shares Held": "2000000",
+   "Shares Held": "2280000",
    "Asset Category": "-"
   },
   {
@@ -997,15 +1006,6 @@
    "Weight": "0.21",
    "Market Value": "0",
    "Shares Held": "2595000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "ARIZONA ST INDL DEV AUTH EDU REV 5.25%, due 07/01/2047",
-   "Ticker": "-",
-   "Identifier": "04052BAM6",
-   "Weight": "0.21",
-   "Market Value": "0",
-   "Shares Held": "2240000",
    "Asset Category": "-"
   },
   {
@@ -1036,45 +1036,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "HARRIS CNTY TX HOSP DIST 5.25%, due 02/15/2050",
-   "Ticker": "-",
-   "Identifier": "41415UCC8",
-   "Weight": "0.21",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "HOUSTON TX ARPT SYS REVENUE 5.50%, due 07/15/2035",
-   "Ticker": "-",
-   "Identifier": "442349KG0",
-   "Weight": "0.21",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "ILLINOIS ST 5%, due 11/01/2029",
-   "Ticker": "-",
-   "Identifier": "452152P21",
-   "Weight": "0.21",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "JORDANELLE RIDGE PUBLIC INFRSTCT DIST 2 UT 7.75%, due 03/01/2054",
    "Ticker": "-",
    "Identifier": "480790AA2",
-   "Weight": "0.21",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "MAIN STREET NATURAL GAS INC GA Variable rate, due 12/01/2054",
-   "Ticker": "-",
-   "Identifier": "56035DFT4",
    "Weight": "0.21",
    "Market Value": "0",
    "Shares Held": "2000000",
@@ -1090,30 +1054,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "NORTH CAROLINA ST MED CARE COMMN 5.25%, due 11/01/2046",
-   "Ticker": "-",
-   "Identifier": "65820YVL7",
-   "Weight": "0.21",
-   "Market Value": "0",
-   "Shares Held": "2100000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "OHIO ST HSG FIN AGY MF HSG REV 6.375%, due 01/01/2046",
    "Ticker": "-",
    "Identifier": "676900ZC0",
    "Weight": "0.21",
    "Market Value": "0",
    "Shares Held": "2225000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PENNSYLVANIA ST ECON DEV FING AUTH 5.75%, due 06/30/2048",
-   "Ticker": "-",
-   "Identifier": "70868YAV1",
-   "Weight": "0.21",
-   "Market Value": "0",
-   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -1144,21 +1090,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SUFFOLK REGL OFF-TRACK BETTING CORP NY 6%, due 12/01/2053",
+   "Name": "VIRGINIA BEACH VA DEV AUTH RSDL CARE 7%, due 09/01/2053",
    "Ticker": "-",
-   "Identifier": "86480TAC8",
+   "Identifier": "92774NBB5",
    "Weight": "0.21",
    "Market Value": "0",
    "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
-   "Name": "THE HEIGHTS CDD FL SPL ASSESSMENT REV 5%, due 01/01/2050",
+   "Name": "ARIZONA ST INDL DEV AUTH EDU REV 5.25%, due 07/01/2047",
    "Ticker": "-",
-   "Identifier": "88339EAD8",
-   "Weight": "0.21",
+   "Identifier": "04052BAM6",
+   "Weight": "0.2",
    "Market Value": "0",
-   "Shares Held": "2300000",
+   "Shares Held": "2240000",
    "Asset Category": "-"
   },
   {
@@ -1168,15 +1114,6 @@
    "Weight": "0.2",
    "Market Value": "0",
    "Shares Held": "2080000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "BALDWIN CNTY AL INDL DEV AUTH Variable rate, due 03/01/2056",
-   "Ticker": "-",
-   "Identifier": "05786PAC7",
-   "Weight": "0.2",
-   "Market Value": "0",
-   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -1198,24 +1135,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "COLUMBUS-FRANKLIN CNTY OH FIN AUTH MF HSG 6.05%, due 01/01/2046",
-   "Ticker": "-",
-   "Identifier": "19910XAR7",
-   "Weight": "0.2",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "EDGEWATER EAST CDD FL SPL ASSMNT REV 4%, due 05/01/2052",
-   "Ticker": "-",
-   "Identifier": "280286AH8",
-   "Weight": "0.2",
-   "Market Value": "0",
-   "Shares Held": "2630000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "HALIFAX FL HOSP MED CTR 5%, due 06/01/2036",
    "Ticker": "-",
    "Identifier": "405815LG4",
@@ -1234,9 +1153,27 @@
    "Asset Category": "-"
   },
   {
-   "Name": "LEXINGTON CNTY SC HLTH SVCS DIST 5%, due 11/01/2041",
+   "Name": "HARRIS CNTY TX HOSP DIST 5.25%, due 02/15/2050",
    "Ticker": "-",
-   "Identifier": "529050DZ6",
+   "Identifier": "41415UCC8",
+   "Weight": "0.2",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "HOUSTON TX ARPT SYS REVENUE 5.50%, due 07/15/2035",
+   "Ticker": "-",
+   "Identifier": "442349KG0",
+   "Weight": "0.2",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ILLINOIS ST 5%, due 11/01/2029",
+   "Ticker": "-",
+   "Identifier": "452152P21",
    "Weight": "0.2",
    "Market Value": "0",
    "Shares Held": "2000000",
@@ -1252,27 +1189,18 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MET NASHVILLE TN ARPT AUTH ARPT REV 5.25%, due 07/01/2051",
+   "Name": "MAIN STREET NATURAL GAS INC GA Variable rate, due 12/01/2054",
    "Ticker": "-",
-   "Identifier": "592190SV5",
+   "Identifier": "56035DFT4",
    "Weight": "0.2",
    "Market Value": "0",
    "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
-   "Name": "MISSISSIPPI ST BUSINESS FIN COMMN Variable rate, due 12/01/2030",
+   "Name": "MET NASHVILLE TN ARPT AUTH ARPT REV 5.25%, due 07/01/2051",
    "Ticker": "-",
-   "Identifier": "60528ABH6",
-   "Weight": "0.2",
-   "Market Value": "0",
-   "Shares Held": "1925000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "N SUMTER CNTY FL UTILITY DEPENDENT DIST 5%, due 10/01/2049",
-   "Ticker": "-",
-   "Identifier": "66272RCH3",
+   "Identifier": "592190SV5",
    "Weight": "0.2",
    "Market Value": "0",
    "Shares Held": "2000000",
@@ -1285,15 +1213,6 @@
    "Weight": "0.2",
    "Market Value": "0",
    "Shares Held": "5000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "NATIONAL FIN AUTH NH SPL REVENUE 5.375%, due 12/01/2031",
-   "Ticker": "-",
-   "Identifier": "63608TAK6",
-   "Weight": "0.2",
-   "Market Value": "0",
-   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -1315,9 +1234,27 @@
    "Asset Category": "-"
   },
   {
+   "Name": "NORTH CAROLINA ST MED CARE COMMN 5.25%, due 11/01/2046",
+   "Ticker": "-",
+   "Identifier": "65820YVL7",
+   "Weight": "0.2",
+   "Market Value": "0",
+   "Shares Held": "2100000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "OHIO ST HSG FIN AGY MF HSG REV 6.25%, due 01/01/2045",
    "Ticker": "-",
    "Identifier": "676900XZ1",
+   "Weight": "0.2",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PENNSYLVANIA ST ECON DEV FING AUTH 5.75%, due 06/30/2048",
+   "Ticker": "-",
+   "Identifier": "70868YAV1",
    "Weight": "0.2",
    "Market Value": "0",
    "Shares Held": "2000000",
@@ -1342,6 +1279,33 @@
    "Asset Category": "-"
   },
   {
+   "Name": "SUFFOLK REGL OFF-TRACK BETTING CORP NY 6%, due 12/01/2053",
+   "Ticker": "-",
+   "Identifier": "86480TAC8",
+   "Weight": "0.2",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "THE HEIGHTS CDD FL SPL ASSESSMENT REV 5%, due 01/01/2050",
+   "Ticker": "-",
+   "Identifier": "88339EAD8",
+   "Weight": "0.2",
+   "Market Value": "0",
+   "Shares Held": "2300000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BALDWIN CNTY AL INDL DEV AUTH Variable rate, due 03/01/2056",
+   "Ticker": "-",
+   "Identifier": "05786PAC7",
+   "Weight": "0.19",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "BLACK DESERT PUB INFRASTRUCTURE DIST UT 5.625%, due 12/01/2053",
    "Ticker": "-",
    "Identifier": "09204TAA9",
@@ -1360,30 +1324,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 11/01/2046",
+   "Name": "COLUMBUS-FRANKLIN CNTY OH FIN AUTH MF HSG 6.05%, due 01/01/2046",
    "Ticker": "-",
-   "Identifier": "13048TG23",
+   "Identifier": "19910XAR7",
    "Weight": "0.19",
    "Market Value": "0",
    "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
-   "Name": "DOWNTOWN DAYBREAK PUB INFRASTR DIST 1 UT 5.625%, due 03/01/2046",
+   "Name": "DENVER CITY & CNTY CO ARPT REV 5%, due 12/01/2043",
    "Ticker": "-",
-   "Identifier": "26114MAB5",
+   "Identifier": "249182LV6",
    "Weight": "0.19",
    "Market Value": "0",
-   "Shares Held": "1945000",
+   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
-   "Name": "FULTON CNTY GA DEV AUTH REVENUE 4%, due 07/01/2049",
+   "Name": "EDGEWATER EAST CDD FL SPL ASSMNT REV 4%, due 05/01/2052",
    "Ticker": "-",
-   "Identifier": "36005FGE9",
+   "Identifier": "280286AH8",
    "Weight": "0.19",
    "Market Value": "0",
-   "Shares Held": "2275000",
+   "Shares Held": "2630000",
    "Asset Category": "-"
   },
   {
@@ -1405,21 +1369,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "LANCASTER CNTY PA HOSP AUTH 5%, due 11/01/2051",
+   "Name": "LEXINGTON CNTY SC HLTH SVCS DIST 5%, due 11/01/2041",
    "Ticker": "-",
-   "Identifier": "514045W66",
+   "Identifier": "529050DZ6",
    "Weight": "0.19",
    "Market Value": "0",
    "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "LANGLEY SOUTH CDD FL SPL ASSMNT 5.40%, due 05/01/2055",
-   "Ticker": "-",
-   "Identifier": "515816AC0",
-   "Weight": "0.19",
-   "Market Value": "0",
-   "Shares Held": "2090000",
    "Asset Category": "-"
   },
   {
@@ -1432,12 +1387,39 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MIAMI-DADE CNTY FL SEAPORT REV 5.25%, due 10/01/2052",
+   "Name": "MISSISSIPPI ST BUSINESS FIN COMMN Variable rate, due 12/01/2030",
    "Ticker": "-",
-   "Identifier": "59335KFB8",
+   "Identifier": "60528ABH6",
    "Weight": "0.19",
    "Market Value": "0",
-   "Shares Held": "1900000",
+   "Shares Held": "1925000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MONTGOMERY CNTY PA INDL DEV AUTH 5%, due 11/15/2045",
+   "Ticker": "-",
+   "Identifier": "61360PCM0",
+   "Weight": "0.19",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "N SUMTER CNTY FL UTILITY DEPENDENT DIST 5%, due 10/01/2049",
+   "Ticker": "-",
+   "Identifier": "66272RCH3",
+   "Weight": "0.19",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NATIONAL FIN AUTH NH SPL REVENUE 5.375%, due 12/01/2031",
+   "Ticker": "-",
+   "Identifier": "63608TAK6",
+   "Weight": "0.19",
+   "Market Value": "0",
+   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -1531,6 +1513,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 11/01/2046",
+   "Ticker": "-",
+   "Identifier": "13048TG23",
+   "Weight": "0.18",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CALIFORNIA STWD CMNTYS DEV AUTH 5%, due 11/01/2041",
    "Ticker": "-",
    "Identifier": "13080SSJ4",
@@ -1540,30 +1531,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CAPITAL PROJS FIN AUTH FL EDUCTNL FACS 5%, due 06/15/2044",
+   "Name": "DOWNTOWN DAYBREAK PUB INFRASTR DIST 1 UT 5.625%, due 03/01/2046",
    "Ticker": "-",
-   "Identifier": "14043FAL0",
+   "Identifier": "26114MAB5",
    "Weight": "0.18",
    "Market Value": "0",
-   "Shares Held": "1985000",
+   "Shares Held": "1945000",
    "Asset Category": "-"
   },
   {
-   "Name": "CHICAGO IL BRD OF EDU N/C, 5%, due 12/01/2030",
+   "Name": "FULTON CNTY GA DEV AUTH REVENUE 4%, due 07/01/2049",
    "Ticker": "-",
-   "Identifier": "167505XV3",
+   "Identifier": "36005FGE9",
    "Weight": "0.18",
    "Market Value": "0",
-   "Shares Held": "1750000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "FORT LAUDERDALE FL WTR & SWR REV 5.50%, due 09/01/2053",
-   "Ticker": "-",
-   "Identifier": "347658ZA7",
-   "Weight": "0.18",
-   "Market Value": "0",
-   "Shares Held": "1750000",
+   "Shares Held": "2275000",
    "Asset Category": "-"
   },
   {
@@ -1576,24 +1558,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "HENDERSON KY EXEMPT FACS REV 4.70%, due 01/01/2052",
-   "Ticker": "-",
-   "Identifier": "425099AB4",
-   "Weight": "0.18",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "HILLSBOROUGH CNTY FL AVIATION AUTH 5%, due 10/01/2048",
-   "Ticker": "-",
-   "Identifier": "432308L85",
-   "Weight": "0.18",
-   "Market Value": "0",
-   "Shares Held": "1825000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "ILLINOIS ST 5.50%, due 03/01/2047",
    "Ticker": "-",
    "Identifier": "452153DB2",
@@ -1603,12 +1567,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "LAKEWOOD RANCH FL STEWARDSHIP DIST 6%, due 05/01/2056",
+   "Name": "LANCASTER CNTY PA HOSP AUTH 5%, due 11/01/2051",
    "Ticker": "-",
-   "Identifier": "51265KGH5",
+   "Identifier": "514045W66",
    "Weight": "0.18",
    "Market Value": "0",
-   "Shares Held": "1750000",
+   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -1630,21 +1594,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MAIN STREET NATURAL GAS INC GA Variable rate, due 09/01/2052",
+   "Name": "MET GOVT NASHVILLE & DAVIDSON CNTY TN 6%, due 12/01/2051",
    "Ticker": "-",
-   "Identifier": "56035DDX7",
+   "Identifier": "592125CA4",
    "Weight": "0.18",
    "Market Value": "0",
-   "Shares Held": "1750000",
+   "Shares Held": "1700000",
    "Asset Category": "-"
   },
   {
-   "Name": "MARICOPA CNTY AZ INDL DEV AUTH 5%, due 07/01/2049",
+   "Name": "MIAMI-DADE CNTY FL SEAPORT REV 5.25%, due 10/01/2052",
    "Ticker": "-",
-   "Identifier": "56681NEN3",
+   "Identifier": "59335KFB8",
    "Weight": "0.18",
    "Market Value": "0",
-   "Shares Held": "2035000",
+   "Shares Held": "1900000",
    "Asset Category": "-"
   },
   {
@@ -1675,30 +1639,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "PHOENIX AZ INDL DEV AUTH EDU REV 5%, due 07/01/2045",
-   "Ticker": "-",
-   "Identifier": "71885FDV6",
-   "Weight": "0.18",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "PHOENIX AZ INDL DEV AUTH EDU REV 5%, due 07/01/2046",
    "Ticker": "-",
    "Identifier": "71885FEB9",
    "Weight": "0.18",
    "Market Value": "0",
    "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PUBLIC FIN AUTH WI STUDENT HSG 5%, due 06/01/2044",
-   "Ticker": "-",
-   "Identifier": "74439YCV1",
-   "Weight": "0.18",
-   "Market Value": "0",
-   "Shares Held": "1900000",
    "Asset Category": "-"
   },
   {
@@ -1720,12 +1666,39 @@
    "Asset Category": "-"
   },
   {
-   "Name": "COBB CNTY GA DEV AUTH CHARTER SCH REV 6.40%, due 06/15/2053",
+   "Name": "CAPITAL PROJS FIN AUTH FL EDUCTNL FACS 5%, due 06/15/2044",
    "Ticker": "-",
-   "Identifier": "190779AH1",
+   "Identifier": "14043FAL0",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "1985000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CHICAGO IL BRD OF EDU N/C, 5%, due 12/01/2030",
+   "Ticker": "-",
+   "Identifier": "167505XV3",
    "Weight": "0.17",
    "Market Value": "0",
    "Shares Held": "1750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "HENDERSON KY EXEMPT FACS REV 4.70%, due 01/01/2052",
+   "Ticker": "-",
+   "Identifier": "425099AB4",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "HILLSBOROUGH CNTY FL AVIATION AUTH 5%, due 10/01/2048",
+   "Ticker": "-",
+   "Identifier": "432308L85",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "1825000",
    "Asset Category": "-"
   },
   {
@@ -1738,21 +1711,48 @@
    "Asset Category": "-"
   },
   {
-   "Name": "JEFFERSON CENTER CO MET DIST 2 6%, due 12/01/2056",
-   "Ticker": "-",
-   "Identifier": "472483AE6",
-   "Weight": "0.17",
-   "Market Value": "0",
-   "Shares Held": "1750000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "KENTWOOD MI ECON DEV CORP 5%, due 11/15/2037",
    "Ticker": "-",
    "Identifier": "491740EV4",
    "Weight": "0.17",
    "Market Value": "0",
    "Shares Held": "1750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "LAKEWOOD RANCH FL STEWARDSHIP DIST 6%, due 05/01/2056",
+   "Ticker": "-",
+   "Identifier": "51265KGH5",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "1750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "LANGLEY SOUTH CDD FL SPL ASSMNT 5.40%, due 05/01/2055",
+   "Ticker": "-",
+   "Identifier": "515816AC0",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "1890000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MAIN STREET NATURAL GAS INC GA Variable rate, due 09/01/2052",
+   "Ticker": "-",
+   "Identifier": "56035DDX7",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "1750000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MARICOPA CNTY AZ INDL DEV AUTH 5%, due 07/01/2049",
+   "Ticker": "-",
+   "Identifier": "56681NEN3",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "2035000",
    "Asset Category": "-"
   },
   {
@@ -1774,12 +1774,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MINNEAPOLIS-SAINT PAUL MN MET APRTS COMMN 5.25%, due 01/01/2049",
+   "Name": "MOBILE CNTY AL INDL DEV AUTH 4.75%, due 12/01/2054",
    "Ticker": "-",
-   "Identifier": "603827Q82",
+   "Identifier": "60733UAB7",
    "Weight": "0.17",
    "Market Value": "0",
-   "Shares Held": "1655000",
+   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -1801,12 +1801,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "PALM BEACH CNTY FL HLTH FACS AUTH 5%, due 11/15/2045",
+   "Name": "PHOENIX AZ INDL DEV AUTH EDU REV 5%, due 07/01/2045",
    "Ticker": "-",
-   "Identifier": "69650MAW9",
+   "Identifier": "71885FDV6",
    "Weight": "0.17",
    "Market Value": "0",
-   "Shares Held": "1800000",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PUBLIC FIN AUTH WI STUDENT HSG 5%, due 06/01/2044",
+   "Ticker": "-",
+   "Identifier": "74439YCV1",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "1900000",
    "Asset Category": "-"
   },
   {
@@ -1846,15 +1855,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SCENIC TERRACE SOUTH CDD FL SPL ASSMNT 4.625%, due 05/01/2053",
-   "Ticker": "-",
-   "Identifier": "806205AD2",
-   "Weight": "0.17",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "ARIZONA ST INDL DEV AUTH EDU REV 5.125%, due 07/01/2037",
    "Ticker": "-",
    "Identifier": "04052BAL8",
@@ -1873,21 +1873,21 @@
    "Asset Category": "-"
   },
   {
+   "Name": "COBB CNTY GA DEV AUTH CHARTER SCH REV 6.40%, due 06/15/2053",
+   "Ticker": "-",
+   "Identifier": "190779AH1",
+   "Weight": "0.16",
+   "Market Value": "0",
+   "Shares Held": "1750000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "ELBERT & HIGHWAY 86 CO COMMERCIA SPL REV 5%, due 12/01/2041",
    "Ticker": "-",
    "Identifier": "28421SAB6",
    "Weight": "0.16",
    "Market Value": "0",
    "Shares Held": "1700000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "HOUSTON TX ARPT SYS REVENUE 5.50%, due 07/15/2035",
-   "Ticker": "-",
-   "Identifier": "442349HV1",
-   "Weight": "0.16",
-   "Market Value": "0",
-   "Shares Held": "1500000",
    "Asset Category": "-"
   },
   {
@@ -1900,12 +1900,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "KENTUCKY ST PUBLIC ENERGY AUTH Variable rate, due 04/01/2054",
+   "Name": "JEFFERSON CENTER CO MET DIST 2 6%, due 12/01/2056",
    "Ticker": "-",
-   "Identifier": "74440DEC4",
+   "Identifier": "472483AE6",
    "Weight": "0.16",
    "Market Value": "0",
-   "Shares Held": "1500000",
+   "Shares Held": "1750000",
    "Asset Category": "-"
   },
   {
@@ -1918,12 +1918,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MAINE ST FIN AUTH 5.50%, due 07/01/2050",
+   "Name": "MINNEAPOLIS-SAINT PAUL MN MET APRTS COMMN 5.25%, due 01/01/2049",
    "Ticker": "-",
-   "Identifier": "56042BCR6",
+   "Identifier": "603827Q82",
    "Weight": "0.16",
    "Market Value": "0",
-   "Shares Held": "1500000",
+   "Shares Held": "1655000",
    "Asset Category": "-"
   },
   {
@@ -1945,36 +1945,18 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SAWYERS LANDING CDD FL SPL ASSMNT REV 4.25%, due 05/01/2053",
+   "Name": "SCENIC TERRACE SOUTH CDD FL SPL ASSMNT 4.625%, due 05/01/2053",
    "Ticker": "-",
-   "Identifier": "805517AD1",
+   "Identifier": "806205AD2",
    "Weight": "0.16",
    "Market Value": "0",
    "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
-   "Name": "VERK INDL REGL PUBLIC INFRASTRCTURE DIST UT 6.625%, due 09/01/2047",
-   "Ticker": "-",
-   "Identifier": "92348YAA1",
-   "Weight": "0.16",
-   "Market Value": "0",
-   "Shares Held": "1500000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "ATLANTA GA ARPT REVENUE 5.25%, due 07/01/2049",
    "Ticker": "-",
    "Identifier": "04780M7E3",
-   "Weight": "0.15",
-   "Market Value": "0",
-   "Shares Held": "1500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "BUILD NYC RESOURCE CORP NY REV 6.50%, due 12/15/2045",
-   "Ticker": "-",
-   "Identifier": "12008EXQ4",
    "Weight": "0.15",
    "Market Value": "0",
    "Shares Held": "1500000",
@@ -2008,9 +1990,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "HOMEWOOD AL EDUCTNL BLDG AUTH 5.50%, due 10/01/2049",
+   "Name": "HOUSTON TX ARPT SYS REVENUE 5.50%, due 07/15/2035",
    "Ticker": "-",
-   "Identifier": "437887HX3",
+   "Identifier": "442349HV1",
    "Weight": "0.15",
    "Market Value": "0",
    "Shares Held": "1500000",
@@ -2026,6 +2008,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "KENTUCKY ST PUBLIC ENERGY AUTH Variable rate, due 04/01/2054",
+   "Ticker": "-",
+   "Identifier": "74440DEC4",
+   "Weight": "0.15",
+   "Market Value": "0",
+   "Shares Held": "1500000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "LINCOLNWOOD IL TAX INCREMENT ALLOC REV 4.82%, due 01/01/2041",
    "Ticker": "-",
    "Identifier": "53509AAA0",
@@ -2035,9 +2026,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MASSACHUSETTS ST DEV FIN AGY 6.50%, due 07/15/2060",
+   "Name": "MAINE ST FIN AUTH 5.50%, due 07/01/2050",
    "Ticker": "-",
-   "Identifier": "57563WAC2",
+   "Identifier": "56042BCR6",
    "Weight": "0.15",
    "Market Value": "0",
    "Shares Held": "1500000",
@@ -2089,24 +2080,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "NEW YORK ST TRANSPRTN DEV CORP 5.50%, due 06/30/2054",
-   "Ticker": "-",
-   "Identifier": "650116HM1",
-   "Weight": "0.15",
-   "Market Value": "0",
-   "Shares Held": "1515000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "NORTH CAROLINA ST MED CARE COMMN 4%, due 09/01/2046",
-   "Ticker": "-",
-   "Identifier": "65820YSL1",
-   "Weight": "0.15",
-   "Market Value": "0",
-   "Shares Held": "1780000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "OLYMPIA PUBLIC INFRASTRUCTURE DIST 1 UT 6.375%, due 03/01/2055",
    "Ticker": "-",
    "Identifier": "681483AA1",
@@ -2116,30 +2089,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "PINE VIEW PUBLIC INFRASTRUCTURE DIST 2 UT 6.25%, due 12/01/2055",
-   "Ticker": "-",
-   "Identifier": "72302PAA6",
-   "Weight": "0.15",
-   "Market Value": "0",
-   "Shares Held": "1500000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "PRINCETON TX SPL ASSMNT REVENUE 5.125%, due 09/01/2042",
    "Ticker": "-",
    "Identifier": "742400BS2",
    "Weight": "0.15",
    "Market Value": "0",
    "Shares Held": "1550000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "PUBLIC FIN AUTH WI EDU REVENUE 5%, due 07/01/2045",
-   "Ticker": "-",
-   "Identifier": "74442ECS7",
-   "Weight": "0.15",
-   "Market Value": "0",
-   "Shares Held": "1590000",
    "Asset Category": "-"
   },
   {
@@ -2161,30 +2116,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SAN DIEGO CNTY CA REGL ARPT AUTH 5%, due 07/01/2047",
+   "Name": "SAWYERS LANDING CDD FL SPL ASSMNT REV 4.25%, due 05/01/2053",
    "Ticker": "-",
-   "Identifier": "79739GGP5",
+   "Identifier": "805517AD1",
    "Weight": "0.15",
    "Market Value": "0",
-   "Shares Held": "1515000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "SANDRIDGE CMNTY DEV DIST FL SPL ASSMNT 4.30%, due 05/01/2052",
-   "Ticker": "-",
-   "Identifier": "80007LAJ7",
-   "Weight": "0.15",
-   "Market Value": "0",
-   "Shares Held": "1880000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "SIX MILE CREEK FL CDD CAPITAL IMPT REV 4%, due 05/01/2051",
-   "Ticker": "-",
-   "Identifier": "83005TBB2",
-   "Weight": "0.15",
-   "Market Value": "0",
-   "Shares Held": "1940000",
+   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -2197,21 +2134,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "WASHINGTON ST HSG FIN COMMISSION 5%, due 07/01/2043",
+   "Name": "VERK INDL REGL PUBLIC INFRASTRCTURE DIST UT 6.625%, due 09/01/2047",
    "Ticker": "-",
-   "Identifier": "939783Q66",
+   "Identifier": "92348YAA1",
    "Weight": "0.15",
    "Market Value": "0",
    "Shares Held": "1500000",
    "Asset Category": "-"
   },
   {
-   "Name": "AVE MARIA FL STEWARDSHIP CMNTY DIST 4.45%, due 05/01/2052",
+   "Name": "WASHINGTON ST HSG FIN COMMISSION 5%, due 07/01/2043",
    "Ticker": "-",
-   "Identifier": "05355AAZ0",
-   "Weight": "0.14",
+   "Identifier": "939783Q66",
+   "Weight": "0.15",
    "Market Value": "0",
-   "Shares Held": "1655000",
+   "Shares Held": "1500000",
    "Asset Category": "-"
   },
   {
@@ -2242,6 +2179,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "BUILD NYC RESOURCE CORP NY REV 6.50%, due 12/15/2045",
+   "Ticker": "-",
+   "Identifier": "12008EXQ4",
+   "Weight": "0.14",
+   "Market Value": "0",
+   "Shares Held": "1500000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CAPITAL PROJS FIN AUTH FL EDUCTNL FACS 5%, due 06/15/2054",
    "Ticker": "-",
    "Identifier": "14043FAM8",
@@ -2258,7 +2204,61 @@
    "Market Value": "0",
    "Shares Held": "1500000",
    "Asset Category": "-"
+  },
+  {
+   "Name": "COOK CNTY IL MF HSG REVENUE 6.50%, due 01/01/2045",
+   "Ticker": "-",
+   "Identifier": "213226AE3",
+   "Weight": "0.14",
+   "Market Value": "0",
+   "Shares Held": "1415000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "COOL WTR MUNI UTILITY DIST TX 5%, due 08/15/2045",
+   "Ticker": "-",
+   "Identifier": "21640ABZ1",
+   "Weight": "0.14",
+   "Market Value": "0",
+   "Shares Held": "1410000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CRANDALL TX SPL ASSMNT REVENUE 4.25%, due 09/15/2041",
+   "Ticker": "-",
+   "Identifier": "224384AG2",
+   "Weight": "0.14",
+   "Market Value": "0",
+   "Shares Held": "1552000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CROSSWINDS EAST CDD FL SPL ASSMNT 5.75%, due 05/01/2054",
+   "Ticker": "-",
+   "Identifier": "22769LAC2",
+   "Weight": "0.14",
+   "Market Value": "0",
+   "Shares Held": "1500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "EDEN HILLS CMNTY DEV DIST FL SPL ASSMNT 4%, due 05/01/2042",
+   "Ticker": "-",
+   "Identifier": "279449AG7",
+   "Weight": "0.14",
+   "Market Value": "0",
+   "Shares Held": "1640000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GULFPORT MS HOSP FAC REVENUE 5.50%, due 07/01/2050",
+   "Ticker": "-",
+   "Identifier": "402682DG0",
+   "Weight": "0.14",
+   "Market Value": "0",
+   "Shares Held": "1400000",
+   "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-09-25"
+ "asOfDate": "2026-10-01"
 }
