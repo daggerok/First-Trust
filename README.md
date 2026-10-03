@@ -54,7 +54,8 @@ The updater uses issuer-published NAV performance values for month-end and quart
 - Every fund is either fully updated or fully kept: when its summary page, holdings, history or distributions cannot be read in a run, nothing is written for it and its previous published state stays untouched (a first publication of a new fund writes what is available)
 - An SEC N-PORT-P fallback never replaces holdings that are newer than the filing
 - Files are written through a temp file and a rename; a fund's pages are written first, then `meta.json`, and stale pages are removed afterwards; an identical rerun produces no diff (timestamps move only when content moved)
-- Every request has a 45 s timeout (headers and body) and is retried per `MAX_RETRIES`; the run stops taking new funds after 25 minutes, still writes the index, and the next run continues after the last processed fund
+- Every request has a 45 s timeout (headers and body) and is retried per `MAX_RETRIES`; the run stops taking new funds after 25 minutes and still writes the index
+- Unbounded runs (`MAX_FETCHES=0`, and `TICKERS` runs) process the stalest fund first: funds without published data, then the oldest published as-of date (`asOfDate`, `metrics.performanceAsOf`), ties alphabetical. A run cut short by the 25 minute deadline therefore leaves the freshest funds for last and the next run starts with the skipped ones, so the tail of the list never starves (this replaces the former resume-after-last-fund cursor of unbounded runs; no state file is needed). The log and the step summary report how many funds were refreshed and the oldest remaining as-of date. A bounded run (`MAX_FETCHES` > 0) keeps walking the alphabetical cursor in `api/firsttrust/update-state.json`
 - New funds in the catalog are printed as `NEW FUNDS: A, B` and added to the GitHub step summary; the run exits non-zero when every fund failed
 
 ### Update controls
