@@ -160,7 +160,7 @@ function outputCreateReporter(root: URL | string, total: number) {
 //
 // Usage: bun ./scripts/update-data.ts   (or ./scripts/update-data.ts --help)
 
-import { mkdir, readFile, writeFile, readdir, rm, appendFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, readdir, rm, appendFile, rename } from 'node:fs/promises';
 import { inflateRawSync } from 'node:zlib';
 
 // ---------------------------------------------------------------------------
@@ -197,9 +197,16 @@ const SEC_COMPANY_TICKERS_URL = 'https://www.sec.gov/files/company_tickers.json'
 // SEC_UA (or env SEC_UA) overrides this default.
 const SEC_UA_DEFAULT = 'daggerok ETF feed daggerok@gmail.com';
 
-const API_ROOT = new URL('../api/firsttrust/', import.meta.url);
-const INDEX_FILE = new URL('index.json', API_ROOT);
-const STATE_FILE = new URL('update-state.json', API_ROOT);
+let API_ROOT = new URL('../api/firsttrust/', import.meta.url);
+let INDEX_FILE = new URL('index.json', API_ROOT);
+let STATE_FILE = new URL('update-state.json', API_ROOT);
+
+/** Points every read and write at another feed directory (tests run the whole pipeline in a temp dir). */
+export function setApiRoot(root: URL): void {
+  API_ROOT = root;
+  INDEX_FILE = new URL('index.json', API_ROOT);
+  STATE_FILE = new URL('update-state.json', API_ROOT);
+}
 
 const HOLDINGS_PAGE_SIZE_FALLBACK = 250;
 const HISTORY_PAGE_SIZE_FALLBACK = 1000;
@@ -687,11 +694,13 @@ let nextRequestAtLanes: number[] = [0];
 let requestSleepMs = REQUEST_SLEEP_FALLBACK * 1000;
 
 async function paceRequests(): Promise<void> {
+  // Reserve the slot synchronously, before any await: two callers can never wait on the same slot and wake together.
+  const now = Date.now();
   let lane = 0;
   for (let i = 1; i < nextRequestAtLanes.length; i++) if (nextRequestAtLanes[i] < nextRequestAtLanes[lane]) lane = i;
-  const waitFor = nextRequestAtLanes[lane] - Date.now();
-  if (waitFor > 0) await sleep(waitFor);
-  nextRequestAtLanes[lane] = Date.now() + requestSleepMs;
+  const startAt = Math.max(now, nextRequestAtLanes[lane]);
+  nextRequestAtLanes[lane] = startAt + requestSleepMs;
+  if (startAt > now) await sleep(startAt - now);
 }
 
 class HttpError extends Error {
@@ -711,6 +720,13 @@ function errorMessage(error: unknown): string {
   return message.replace(/^\[[^\]]*\] ?/, '');
 }
 
+let requestTimeoutMs = 45_000;
+
+/** Per-request timeout (headers AND body); every attempt gets a fresh one and a timeout is retried like a network error. */
+export function configureRequestTimeout(ms: number): void {
+  requestTimeoutMs = ms;
+}
+
 export async function fetchWithRetry(
   url: string,
   label: string,
@@ -721,8 +737,13 @@ export async function fetchWithRetry(
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     await paceRequests();
     try {
-      const response = await fetch(url, { redirect: 'follow', ...init });
-      if (response.ok) return response;
+      const timeout = AbortSignal.timeout(requestTimeoutMs);
+      const response = await fetch(url, { redirect: 'follow', ...init, signal: init.signal ? AbortSignal.any([init.signal, timeout]) : timeout });
+      if (response.ok) {
+        // Read the body inside the attempt so a stalled body is aborted by the same timeout and retried; callers get a buffered copy.
+        const body = await response.arrayBuffer();
+        return new Response(body, { status: response.status, statusText: response.statusText, headers: response.headers });
+      }
       const retryable = [403, 408, 425, 429].includes(response.status) || response.status >= 500;
       if (!retryable) throw new HttpError(`${label}: HTTP ${response.status} ${response.statusText}`, response.status, false);
       lastError = new HttpError(`${label}: HTTP ${response.status} (attempt ${attempt + 1} of ${maxRetries + 1})`, response.status, true);
@@ -1989,9 +2010,21 @@ async function writeIfChanged(file: URL, value: unknown): Promise<boolean> {
     // First write.
   }
   if (previous === next || (previous !== null && samePublishedContent(previous, value))) return false;
-  await mkdir(new URL('.', file), { recursive: true });
-  await writeFile(file, next, 'utf8');
+  await writeFileAtomic(file, next);
   return true;
+}
+
+/** Temp file + rename in the same directory: a crash or a timeout never leaves a half-written JSON file behind. */
+export async function writeFileAtomic(file: URL, text: string): Promise<void> {
+  await mkdir(new URL('.', file), { recursive: true });
+  const temp = new URL(`${file.href}.${process.pid}.tmp`);
+  try {
+    await writeFile(temp, text, 'utf8');
+    await rename(temp, file);
+  } catch (error) {
+    await rm(temp, { force: true }).catch(() => undefined);
+    throw error;
+  }
 }
 
 function pad3(value: number): string {
@@ -2025,11 +2058,16 @@ async function writePages(ticker: string, kind: 'holdings' | 'history', headers:
     pages.push(name);
     await writeIfChanged(new URL(name, dir), { headers, rows: chunk, asOfDate });
   }
+  return { pages, pageSize: size, totalRows: rows.length, asOfDate, source };
+}
+
+/** Removes page files the new manifest no longer lists; runs only AFTER the new meta.json is written. */
+export async function pruneStalePages(ticker: string, kind: 'holdings' | 'history', pages: string[]): Promise<void> {
+  const folder = new URL(`funds/${ticker}/${kind}/`, API_ROOT);
   const keep = pageBasenames(pages);
   for (const entry of await readdir(folder).catch(() => [])) {
     if (entry.endsWith('.json') && !keep.has(entry)) await rm(new URL(entry, folder), { force: true });
   }
-  return { pages, pageSize: size, totalRows: rows.length, asOfDate, source };
 }
 
 async function previousRows(ticker: string, kind: 'holdings' | 'history'): Promise<SheetRow[]> {
@@ -2342,6 +2380,8 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
     secYield,
   };
   await writeIfChanged(new URL(`funds/${fund.ticker}/meta.json`, API_ROOT), meta);
+  await pruneStalePages(fund.ticker, 'holdings', hManifest.pages);
+  await pruneStalePages(fund.ticker, 'history', yManifest.pages);
   return { meta, officialHistoryCount, yahooHistoryCount };
 }
 

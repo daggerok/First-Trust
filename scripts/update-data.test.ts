@@ -1,9 +1,12 @@
 /// <reference types="bun" />
 import { describe, expect, test } from 'bun:test';
-import { readFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { deflateRawSync } from 'node:zlib';
 import {
-  applyCatalogPerformance, buildPages, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
+  applyCatalogPerformance, buildPages, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
@@ -363,6 +366,78 @@ describe('configuration, pacing, paging and display normalization', () => {
       expect(statuses).toEqual([200]);
     } finally {
       globalThis.fetch = originalFetch;
+    }
+  });
+
+  test('reserves the lane slot synchronously so callers never wake on the same slot', async () => {
+    const originalFetch = globalThis.fetch;
+    try {
+      // Spacing: 4 callers on 2 lanes at 0.2 s start at 0, 0, 0.2, 0.2 - never two on the same slot.
+      const starts: number[] = [];
+      globalThis.fetch = (async () => { starts.push(Date.now()); return new Response('ok'); }) as unknown as typeof fetch;
+      configureRequestLanes(2, 0.2);
+      const t0 = Date.now();
+      await Promise.all(Array.from({ length: 4 }, (_, i) => fetchWithRetry(`https://example.test/s${i}`, `s${i}`, {}, 0)));
+      const offsets = starts.map((value) => value - t0).sort((a, b) => a - b);
+      expect(offsets[1]).toBeLessThan(120);
+      expect(offsets[2]).toBeGreaterThanOrEqual(170);
+      expect(offsets[3]).toBeGreaterThanOrEqual(170);
+      expect(offsets[3] - offsets[2]).toBeLessThan(120);
+      // One lane, three callers at 0.2 s: slots 0, 0.2 and 0.4 s (an unreserved gate wakes all three together).
+      starts.length = 0;
+      configureRequestLanes(1, 0.2);
+      const t1 = Date.now();
+      await Promise.all(Array.from({ length: 3 }, (_, i) => fetchWithRetry(`https://example.test/o${i}`, `o${i}`, {}, 0)));
+      const single = starts.map((value) => value - t1).sort((a, b) => a - b);
+      expect(single[1]).toBeGreaterThanOrEqual(170);
+      expect(single[2]).toBeGreaterThanOrEqual(370);
+    } finally {
+      globalThis.fetch = originalFetch;
+      configureRequestLanes(1, 0);
+    }
+  });
+
+  test('aborts stalled requests and stalled bodies after the timeout and retries them', async () => {
+    const originalFetch = globalThis.fetch;
+    let calls = 0;
+    const stalled = (signal: AbortSignal | undefined): Promise<never> => new Promise((_, reject) => signal?.addEventListener('abort', () => reject(signal.reason)));
+    globalThis.fetch = (async (_url: unknown, init?: RequestInit) => {
+      calls += 1;
+      if (calls === 1) return stalled(init?.signal ?? undefined); // headers never arrive
+      if (calls === 2) {
+        const body = new ReadableStream({ start(controller) { init?.signal?.addEventListener('abort', () => controller.error(init.signal?.reason)); } });
+        return new Response(body); // headers arrive, body never does
+      }
+      return new Response('done');
+    }) as unknown as typeof fetch;
+    try {
+      configureRequestLanes(1, 0);
+      configureRequestTimeout(60);
+      const response = await fetchWithRetry('https://example.test/slow', 'slow', {}, 3);
+      expect(await response.text()).toBe('done');
+      expect(calls).toBe(3);
+      calls = 0;
+      await expect(fetchWithRetry('https://example.test/slow', 'slow', {}, 0)).rejects.toThrow('network error');
+    } finally {
+      configureRequestTimeout(45_000);
+      globalThis.fetch = originalFetch;
+    }
+  });
+
+  test('writes JSON through a temp file and removes stale pages only after the new meta exists', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'ft-atomic-'));
+    try {
+      setApiRoot(pathToFileURL(`${root}/`));
+      const file = pathToFileURL(`${root}/funds/FDN/meta.json`);
+      await writeFileAtomic(file, '{"a":1}\n');
+      expect(readFileSync(file, 'utf8')).toBe('{"a":1}\n');
+      expect(readdirSync(`${root}/funds/FDN`)).toEqual(['meta.json']);
+      mkdirSync(`${root}/funds/FDN/holdings`, { recursive: true });
+      for (const name of ['001.json', '002.json', '003.json']) writeFileSync(`${root}/funds/FDN/holdings/${name}`, '{}');
+      await pruneStalePages('FDN', 'holdings', ['holdings/001.json']);
+      expect(readdirSync(`${root}/funds/FDN/holdings`)).toEqual(['001.json']);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
     }
   });
 
