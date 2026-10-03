@@ -1,5 +1,5 @@
 /// <reference types="bun" />
-import { describe, expect, test } from 'bun:test';
+import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
 import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -123,8 +123,141 @@ const priceXlsx = zip({
     + '<row r="5"><c r="A5" t="s"><v>8</v></c><c r="B5"><v>292.55</v></c><c r="C5"><v>292.52</v></c><c r="E5"><v>178521</v></c><c r="F5"><v>5323945132</v></c></row></sheetData></worksheet>',
 });
 
-describe('First Trust official source parsers', () => {
-  test('reads the official ETF list sections by header label, ignores commented template rows and keeps list yields', () => {
+const read = (path: string) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
+const file = JSON.parse(read('scripts/update-data.config.json'));
+const SEC_UA = 'daggerok ETF feed daggerok@gmail.com';
+
+// Clean, portable environment for every test: no control variables from the shell or the workflow, fixed time zone,
+// and everything a test may replace is restored afterwards.
+const savedEnv = { ...process.env };
+const originalFetch = globalThis.fetch;
+const originalLog = console.log;
+beforeEach(() => {
+  for (const key of Object.keys(process.env)) if ((CONTROL_NAMES as readonly string[]).includes(key) || key.startsWith('FIRSTTRUST_') || key === 'HISTORICAL_PAGE_SIZE') delete process.env[key];
+  process.env.TZ = 'UTC';
+});
+afterEach(() => {
+  globalThis.fetch = originalFetch;
+  console.log = originalLog;
+  process.exitCode = 0;
+  for (const key of Object.keys(process.env)) if (!(key in savedEnv)) delete process.env[key];
+  Object.assign(process.env, savedEnv);
+  configureRequestLanes(1, 0);
+  configureRequestTimeout(45_000);
+  configureSoftDeadline(25 * 60_000);
+});
+
+describe('controls', () => {
+  test('strict ranges, AUM presets and HISTORY_RANGE validation', () => {
+    expect(parseRange('0.2:2', 'TER')).toEqual({ min: 0.2, max: 2 });
+    expect(parseRange(':', 'TER')).toBeUndefined();
+    expect(parseRange('', 'TER')).toBeUndefined();
+    expect(parseAumRange('10M:2B')).toMatchObject({ min: 10000000, max: 2000000000 });
+    expect(parseAumRange('small')).toMatchObject({ min: 300000000, max: 2000000000 });
+    expect(() => parseRange('1', 'TER')).toThrow('a colon is required');
+    expect(() => parseRange('5:1', 'TER')).toThrow('must not exceed');
+    expect(() => parseRange('a:1', 'TER')).toThrow('is not a number');
+    expect(['max', '10y', 'MAX', ''].map(normalizeHistoryRange)).toEqual(['max', '10y', 'max', 'max']);
+    for (const bad of ['6mo', 'forever', '0y', '-1y', '1.5y', '10']) expect(() => normalizeHistoryRange(bad)).toThrow('HISTORY_RANGE');
+    expect(() => readConfig({ HISTORY_RANGE: '6mo' })).toThrow('HISTORY_RANGE');
+    expect(() => resolveControls({}, {}, { HISTORY_RANGE: '6mo' }, {})).toThrow('HISTORY_RANGE');
+  });
+
+  test('resolver precedence: file < advanced < nonblank input < env, blanks and booleans', () => {
+    const c = resolveControls({ CONCURRENCY: 2, TICKERS: 'FDN' }, { CONCURRENCY: 3, TICKERS: 'FTSM' }, { CONCURRENCY: '4', TICKERS: '' }, { FIRSTTRUST_CONCURRENCY: '5', CONCURRENCY: '6' });
+    expect(c.CONCURRENCY).toBe('5');
+    expect(c.TICKERS).toBe('FTSM');
+    expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }, { CONCURRENCY: '4' }).CONCURRENCY).toBe('4');
+    expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }).CONCURRENCY).toBe('3');
+    expect(resolveControls({ CONCURRENCY: 2 }, {}, {}, { CONCURRENCY: '7' }).CONCURRENCY).toBe('7');
+    expect(resolveControls({ CONCURRENCY: 2 }, {}, { CONCURRENCY: '' }).CONCURRENCY).toBe('2');
+    expect(resolveControls({ TICKERS: 'FDN' }, { TICKERS: '' }, { TICKERS: '' }).TICKERS).toBe('');
+    expect(resolveControls({ SKIP_YAHOO: true }, {}, {}, { SKIP_YAHOO: 'false' }).SKIP_YAHOO).toBe('false');
+    expect(resolveControls({ MAX_FETCHES: 0 }).MAX_FETCHES).toBe('0');
+    const controls = resolveControls(file, {}, {}, {});
+    expect(controls).toEqual(Object.fromEntries(Object.entries(file).map(([key, value]) => [key, String(value)])));
+    const config = readConfig(controls);
+    expect(config).toMatchObject({
+      maxFetches: 0, requestSleep: 1, concurrency: 2, maxRetries: 2, holdingsPageSize: 250, historyPageSize: 1000,
+      historyRange: 'max', tickers: [], edgarFallback: true, skipYahoo: false, performanceRanges: {}, totalReturnRanges: {},
+    });
+    expect(config.aumRange).toBeUndefined();
+    expect(config.terRange).toBeUndefined();
+  });
+
+  test('scheduled path equals the config defaults; SEC contact default and protected override', () => {
+    expect(file.SEC_UA).toBe(SEC_UA);
+    expect(resolveControls(file, {}, {}, { SEC_UA: 'Org Contact (ops@example.org)' }).SEC_UA).toBe('Org Contact (ops@example.org)');
+    expect(readConfig({}).secUa).toBe(SEC_UA);
+  });
+
+  test('invalid values, unknown keys and CR/LF/NUL are errors, never silent fallbacks; explicit empty env clears', () => {
+    expect(resolveControls({ TICKERS: 'FDN' }, {}, {}, { TICKERS: '' }).TICKERS).toBe('');
+    expect(() => resolveControls({}, {}, {}, { MAX_RETRIES: '0' })).toThrow('MAX_RETRIES');
+    expect(() => resolveControls({}, {}, {}, { CONCURRENCY: 'two' })).toThrow('CONCURRENCY');
+    expect(() => resolveControls({}, {}, {}, { VERBOSE: 'maybe' })).toThrow('VERBOSE');
+    for (const value of [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_FETCHES: 1.5 }, { MAX_FETCHES: -1 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { EDGAR_FALLBACK: 'later' }, { HISTORY_RANGE: 'forever' }, { AUM: '5B:1B' }, { TER: '5:1' }, { PERFORMANCE_1Y: '10' }, { TICKERS: ['FDN'] }, { TICKERS: { a: 1 } }, null, []]) {
+      expect(() => resolveControls(value)).toThrow();
+    }
+    expect(() => resolveControls({}, { SEC_UA: 'x\rfoo' })).toThrow();
+    expect(() => resolveControls({}, {}, { TICKERS: 'FDN\0' })).toThrow();
+    expect(() => resolveControls({}, {}, {}, { FIRSTTRUST_SEC_UA: 'x\0bad' })).toThrow();
+    expect(() => resolveControls({}, 'not an object')).toThrow();
+    expect(() => resolveControls({}, [])).toThrow();
+    expect(() => JSON.parse('{bad json')).toThrow();
+  });
+
+  test('conservative defaults and data filters on published values', () => {
+    const config = readConfig({ TICKERS: 'fdn, ftsm;fjan', TER: ':0.6', FIRSTTRUST_PERFORMANCE_1Y: '10:', TOTAL_RETURN_3Y: '30:' });
+    expect(config).toMatchObject({ requestSleep: 1, concurrency: 2, maxRetries: 2, maxFetches: 0, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', edgarFallback: true, skipYahoo: false, secUa: 'daggerok ETF feed daggerok@gmail.com' });
+    expect(config.tickers).toEqual(['FDN', 'FTSM', 'FJAN']);
+    expect(readConfig({ REQUEST_SLEEP: '', CONCURRENCY: '0', MAX_FETCHES: '0' })).toMatchObject({ requestSleep: 1, concurrency: 2, maxFetches: 0 });
+    expect(readConfig({ REQUEST_SLEEP: '0' }).requestSleep).toBe(0);
+    const base: Fund = { ...parseCatalogHtml(catalogHtml)[1], aumValue: 1e9 };
+    const withReturns = (terValue: number | null, yr1: number | null, yr3: number | null): Fund => ({ ...base, terValue, returns: { monthEnd: { ...emptyReturns(), yr1, yr3 }, quarterEnd: null } });
+    expect(fundPasses(withReturns(0.5, 12, 10), config)).toBe(true);
+    expect(fundPasses(withReturns(0.75, 12, 10), config)).toBe(false);
+    expect(fundPasses(withReturns(0.5, 5, 10), config)).toBe(false);
+    expect(fundPasses(withReturns(0.5, 12, 8), config)).toBe(false);
+    expect(fundPasses(withReturns(null, 12, 10), config)).toBe(false);
+    expect(returnForFilter({ ...emptyReturns(), yr3: 10 }, '3Y', true)).toBe(33.1);
+    expect(returnForFilter({ ...emptyReturns(), yr1: -4 }, '1Y', true)).toBe(-4);
+    expect(returnForFilter(null, 'YTD', false)).toBeNull();
+  });
+
+  test('runtimeControls reads the checked-in file and brand env alias wins', async () => {
+    const controls = await runtimeControls({ TICKERS: 'FDN FTSM', FIRSTTRUST_REQUEST_SLEEP: '0' });
+    expect(controls.TICKERS).toBe('FDN FTSM');
+    expect(controls.REQUEST_SLEEP).toBe('0');
+    expect(controls.HISTORY_RANGE).toBe('max');
+    expect(readConfig(controls).tickers).toEqual(['FDN', 'FTSM']);
+  });
+
+  test('config keys, CONTROL_NAMES, README rows and --help are in sync; USE_SYSTEM_CA modes', () => {
+    expect(Object.keys(file).sort()).toEqual([...CONTROL_NAMES].sort());
+    expect(Object.values(file).every((value) => typeof value === 'string')).toBe(true);
+    const doc = read('README.md');
+    const usage = Bun.spawnSync(['bun', 'scripts/update-data.ts', '--help'], { cwd: new URL('..', import.meta.url).pathname }).stdout.toString();
+    const rows = new Set<string>();
+    for (const [, cell] of doc.matchAll(/^\| ((?:`[A-Z0-9_]+`(?:, )?)+) \|/gm)) for (const [, name] of cell.matchAll(/`([A-Z0-9_]+)`/g)) rows.add(name);
+    for (const name of CONTROL_NAMES) {
+      const tenor = name.match(/^(PERFORMANCE|TOTAL_RETURN)_(1Y|3Y|5Y|10Y)$/);
+      expect(rows.has(name)).toBe(true);
+      expect(usage).toContain(tenor ? `${tenor[1]}_YTD` : name);
+    }
+    expect([...rows].filter((name) => !(CONTROL_NAMES as readonly string[]).includes(name))).toEqual([]);
+    expect(doc).toContain('scripts/update-data.config.json');
+    expect(doc).toContain('file defaults < advanced JSON < nonblank inputs < protected Actions variable/env');
+    expect(file.USE_SYSTEM_CA).toBe('auto');
+    expect(resolveControls(file).USE_SYSTEM_CA).toBe('auto');
+    for (const mode of ['auto', 'true', 'false']) expect(resolveControls(file, {}, {}, { USE_SYSTEM_CA: mode.toUpperCase() }).USE_SYSTEM_CA).toBe(mode);
+    expect(() => resolveControls(file, {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow('USE_SYSTEM_CA');
+  });
+
+});
+
+describe('parsing', () => {
+  test('catalog list: sections by header label, commented rows ignored, missing values null', () => {
     const funds = parseCatalogHtml(catalogHtml);
     expect(funds.map(fund => fund.ticker)).toEqual(['FDN', 'FTHI']);
     expect(funds[1]).toMatchObject({ name: 'First Trust BuyWrite Income ETF', category: 'Alternative', navValue: 23.72, secYield: 0.66, dividendYield: 8.86, unsubsidizedSecYield: null, inceptionListed: '2014-01-06', yieldAsOf: '2026-08-31' });
@@ -134,7 +267,115 @@ describe('First Trust official source parsers', () => {
     expect(firstTrustIsoDate('9/25/2026')).toBe('2026-09-25');
   });
 
-  test('enriches every catalog fund with gross/net TER and month-end NAV returns from the NAV performance view', () => {
+  test('return tenors map by header label; unavailable values become null, never 0', () => {
+    const header = ['', '3 Month', 'YTD', '1 Year', '3 Year', '5 Year', '10 Year', 'Since Fund Inception'];
+    expect(mapReturnRow(header, ['Net Asset Value (NAV)', '1%', '2%', '3%', '4%', '5%', '6%', '7%'], '2026-08-31'))
+      .toEqual({ asOfDate: '2026-08-31', mo3: 1, ytd: 2, yr1: 3, yr3: 4, yr5: 5, yr10: 6, sinceInception: 7 });
+    const reordered = ['Since Inception', '10 Year', 'Fund Name', '1 Year', 'YTD', '5 Year', '3 Year', '3 Month', 'As Of Date'];
+    expect(mapReturnRow(reordered, ['7.5%', '-6.25%', 'Some Fund', '0.00%', '(1.10)', 'N/A', '', '—', '8/31/2026'], null))
+      .toEqual({ asOfDate: null, mo3: null, ytd: -1.1, yr1: 0, yr3: null, yr5: null, yr10: -6.25, sinceInception: 7.5 });
+    expect(mapReturnRow(['Unknown', 'Benchmark', 'YTD'], ['12%', 'S&P 500', '3%'], null)).toEqual({ ...emptyReturns(), ytd: 3 });
+    expect(mapReturnRow(['YTD', '1 Year'], ['4%'], null)).toMatchObject({ ytd: 4, yr1: null });
+    expect(['3 Month', 'YTD', '1 Year', '3 Year', '5 Year', '10 Year', 'Since Inception', 'Fund Name', 'As Of Date', 'Total Expense Ratio'].map(returnSlot))
+      .toEqual(['mo3', 'ytd', 'yr1', 'yr3', 'yr5', 'yr10', 'sinceInception', null, null, null]);
+    expect([toNumber('(5,630,772.60)'), toNumber('$1,234.5'), toNumber('0'), toNumber('-0.38%'), toNumber('-------'), toNumber('N/A'), toNumber(null)])
+      .toEqual([-5630772.6, 1234.5, 0, -0.38, null, null, null]);
+  });
+
+  test('fund summary: name/value pairs, as-of dates, month and quarter-end NAV returns', () => {
+    const summary = parseSummaryHtml(summaryHtml);
+    expect(summary.name).toBe('First Trust BuyWrite Income ETF');
+    expect(summary.navAsOf).toBe('2026-09-25');
+    expect(summary.expenseAsOf).toBe('2026-05-01');
+    expect(summary.benchmark).toBe('Cboe S&P 500 BuyWrite Index');
+    expect(summaryValue(summary, 'Total Expense Ratio')?.value).toBe('0.75%');
+    expect(summaryValue(summary, 'Closing NAV')?.value).toBe('$23.72');
+    expect(summaryValue(summary, '12-Month Distribution Rate')).toEqual({ value: '8.86%', asOf: '2026-08-31' });
+    expect(summary.monthEnd).toEqual({ asOfDate: '2026-08-31', mo3: 2.21, ytd: 6.87, yr1: 12.02, yr3: 13.8, yr5: 10.83, yr10: 8.36, sinceInception: 7.74 });
+    expect(summary.quarterEnd).toMatchObject({ asOfDate: '2026-06-30', yr1: 13.93, yr10: null, sinceInception: 7.75 });
+  });
+
+  test('holdings: equity, international, cash, option and bond rows map to the Watchlist columns', () => {
+    const equity = parseHoldingsHtml(equityHoldingsHtml);
+    expect(equity.asOfDate).toBe('2026-09-25');
+    expect(equity.rows).toEqual([
+      { Name: 'Meta Platforms, Inc. (Class A)', Ticker: 'META', Identifier: '30303M102', Weight: '11.36', 'Market Value': '602910995.96', 'Shares Held': '802106', 'Asset Category': 'Communication Services' },
+      { Name: 'Samsung Electro-Mechanics Co., Ltd.', Ticker: '009150.KS', Identifier: 'Y7470U102', Weight: '1.64', 'Market Value': '22440080.94', 'Shares Held': '20240', 'Asset Category': 'Information Technology' },
+      { Name: 'US Dollar', Ticker: '-', Identifier: '$USD', Weight: '0.08', 'Market Value': '4479159.67', 'Shares Held': '4479160', 'Asset Category': 'Other' },
+    ]);
+    const options = parseHoldingsHtml(optionsHoldingsHtml).rows;
+    expect(options[0]).toMatchObject({ Name: '2027-01-15 State Street SPDR S&P 500 ETF Trust C 6.92', Ticker: '-', Identifier: '4SPY 270115C00006920', Weight: '101.29', 'Asset Category': '-' });
+    expect(options[1]).toMatchObject({ 'Market Value': '-5630772.6', 'Shares Held': '-19780', Weight: '-0.38' });
+    expect(parseHoldingsHtml(bondHoldingsHtml).rows).toEqual([{ Name: 'AUTONATION INC 0%, due 09/28/2026', Ticker: '-', Identifier: '05330NJU4', Weight: '0.99', 'Market Value': '65000000', 'Shares Held': '65000000', 'Asset Category': '-' }]);
+  });
+
+  test('distributions: official columns, incremental year merge and cadence', () => {
+    const page = parseDistributionHtml(distributionHtml);
+    expect(page.years).toEqual([2024, 2025, 2026]);
+    expect(page.selectedYear).toBe(2026);
+    expect(page.headers).toEqual(['Ex-Date', 'Record Date', 'Payable Date', 'Distribution Amount', 'Distribution Type']);
+    expect(page.rows[0]).toEqual(['2026-09-24', '2026-09-24', '2026-09-30', '0.179000', 'Ordinary Distributions']);
+    const previous = [['2026-07-21', '2026-07-21', '2026-07-31', '0.170000', 'Ordinary Distributions'], ['2019-12-13', '2019-12-16', '2019-12-31', '0.080000', 'Ordinary Distributions']];
+    const merged = mergeDistributionRows(page.rows, previous, new Set([2026]));
+    expect(merged.map(row => row[0])).toEqual(['2026-09-24', '2026-08-21', '2026-07-21', '2019-12-13']);
+    expect(merged[2][3]).toBe('0.179000');
+    expect(summarizeDistributions(merged, new Date('2026-09-28T00:00:00Z'))).toEqual({ frequency: 'Monthly', latest: 0.179, exDate: '2026-09-24' });
+    const stale = [['2011-12-21', '', '', '0.011100', 'Ordinary Distributions'], ['2011-06-21', '', '', '0.011400', 'Ordinary Distributions']];
+    expect(summarizeDistributions(stale, new Date('2026-09-28T00:00:00Z'))).toEqual({ frequency: null, latest: 0.0111, exDate: '2011-12-21' });
+    expect(summarizeDistributions([['2026-06-20', '', '', '0.2', 'Ordinary Distributions'], ['2025-12-20', '', '', '0.2', 'Ordinary Distributions'], ['2025-12-20', '', '', '1.5', 'Long-Term Capital Gain']], new Date('2026-09-28T00:00:00Z')).frequency).toBe('Semi-annually');
+  });
+
+  test('hidden form fields and the official price-history Excel export', () => {
+    const form = parseHiddenInputs('<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="a&amp;b" /><input type="hidden" name="ctl00$ContentPlaceHolder1$PriceHistory$txtMinDate" value="6/19/2006" /><input type="text" name="q" value="x" />');
+    expect(form).toEqual({ __VIEWSTATE: 'a&b', 'ctl00$ContentPlaceHolder1$PriceHistory$txtMinDate': '6/19/2006' });
+    const grid = readXlsxRows(priceXlsx);
+    expect(grid[1]).toEqual(['Date', 'Market Price', 'Net Asset Value', 'Bid/Ask Midpoint', 'Volume', 'Net Assets']);
+    const days = parsePriceHistoryRows(grid);
+    expect(days).toEqual([
+      { date: '2026-09-24', nav: 292.52, market: 292.55, netAssets: 5323945132 },
+      { date: '2026-09-25', nav: 291.54, market: 291.61, netAssets: 5306019723 },
+    ]);
+    expect(historySheetRows(days)[1]).toEqual({ Date: '2026-09-25', NAV: '291.54', 'Market Price': '291.61', 'Premium/Discount': '0.0240%', 'Total Net Assets': '5306019723' });
+    expect(historyStartDate('max', '6/19/2006', '9/25/2026')).toBe('2006-06-19');
+    expect(historyStartDate('1y', '6/19/2006', '9/25/2026')).toBe('2025-09-25');
+    expect(historyStartDate('10y', '1/5/2021', '9/25/2026')).toBe('2021-01-05');
+  });
+
+  test('Yahoo fallback chart: daily closes, adjusted close and dividends', () => {
+    const chart = parseChart({ chart: { result: [{ meta: { longName: 'FT', regularMarketPrice: 23.7 }, timestamp: [1758672000, 1758758400], indicators: { quote: [{ close: [23.7000004, 23.745], volume: [100, null] }], adjclose: [{ adjclose: [23.6912, 23.7449] }] }, events: { dividends: { 1758672000: { date: 1758672000, amount: 0.179 } } } }] } });
+    expect(chart.days).toEqual([
+      { date: '2025-09-24', close: 23.7, adjClose: 23.69, volume: 100 },
+      { date: '2025-09-25', close: 23.745, adjClose: 23.74, volume: 0 },
+    ]);
+    expect(chart.dividends).toEqual([{ epoch: 1758672000, amount: 0.179 }]);
+  });
+
+  test('SEC fund symbols and N-PORT-P fallback positions without inventing exchange tickers', () => {
+    const refs = parseFundTickerMap({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 's000012345', 'C000033333', 'fdn'], [1383496, 'S000099999', 'C000011111', 'FXL']] });
+    expect(refs.get('FDN')).toEqual({ cik: '0001329377', seriesId: 'S000012345', classId: 'C000033333' });
+    expect(refs.get('FXL')?.cik).toBe('0001383496');
+    expect(parseEdgarAtomFilings('<entry><filing-type>NPORT-P</filing-type><accession-number>0001445546-26-001234</accession-number><filing-date>2026-08-28</filing-date><period>2026-06-30</period><filing-href>https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/</filing-href></entry><entry><filing-type>N-CSR</filing-type><accession-number>x</accession-number></entry>')).toEqual([
+      { accession: '0001445546-26-001234', filed: '2026-08-28', reportDate: '2026-06-30', url: 'https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/primary_doc.xml' },
+    ]);
+    const nport = parseNport('<genInfo><regName>First Trust Exchange-Traded Fund</regName><regCik>0001329377</regCik><seriesId>S000012345</seriesId><repPdDate>2026-06-30</repPdDate></genInfo><fundInfo><netAssets>5306019723</netAssets></fundInfo><invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><balance>802106</balance><valUSD>602910995.96</valUSD><pctVal>11.36</pctVal><assetCat>EC</assetCat></invstOrSec>');
+    expect(nport).toMatchObject({ regCik: '0001329377', seriesId: 'S000012345', repPdDate: '2026-06-30', netAssets: 5306019723 });
+    expect(nport.holdings).toEqual([
+      { Name: 'Meta Platforms Inc', Ticker: '-', Identifier: '30303M102', Weight: '11.36', 'Market Value': '602910995.96', 'Shares Held': '802106', 'Asset Category': 'EC' },
+    ]);
+  });
+
+  test('frequency placeholder keeps None and Unknown distinct', () => {
+    for (const missing of [null, undefined, '', '  ', '-', '—']) expect(formatFrequencyPlaceholder(missing)).toBe('00 - None');
+    expect(formatFrequencyPlaceholder('none')).toBe('00 - None');
+    expect(formatFrequencyPlaceholder('unknown')).toBe('00 - Unknown');
+    expect(formatFrequencyPlaceholder('Monthly')).toBe('01 - Monthly');
+    expect(formatFrequencyPlaceholder('Semi-annually')).toBe('06 - Semi-annually');
+  });
+
+});
+
+describe('metrics', () => {
+  test('TER gross/net mapping, catalog-only row, shared key set, dataFile null and old-row normalization', () => {
     const performance = parsePerformanceNavHtml(performanceNavHtml);
     expect([...performance.keys()]).toEqual(['FTHI', 'BFEW']);
     expect(performance.get('FTHI')).toEqual({
@@ -164,119 +405,25 @@ describe('First Trust official source parsers', () => {
     expect(normalizePreviousRow(old, false).dataFile).toBeNull();
   });
 
-  test('maps every return tenor by header label, whatever the column order', () => {
-    const header = ['', '3 Month', 'YTD', '1 Year', '3 Year', '5 Year', '10 Year', 'Since Fund Inception'];
-    expect(mapReturnRow(header, ['Net Asset Value (NAV)', '1%', '2%', '3%', '4%', '5%', '6%', '7%'], '2026-08-31'))
-      .toEqual({ asOfDate: '2026-08-31', mo3: 1, ytd: 2, yr1: 3, yr3: 4, yr5: 5, yr10: 6, sinceInception: 7 });
-    const reordered = ['Since Inception', '10 Year', 'Fund Name', '1 Year', 'YTD', '5 Year', '3 Year', '3 Month', 'As Of Date'];
-    expect(mapReturnRow(reordered, ['7.5%', '-6.25%', 'Some Fund', '0.00%', '(1.10)', 'N/A', '', '—', '8/31/2026'], null))
-      .toEqual({ asOfDate: null, mo3: null, ytd: -1.1, yr1: 0, yr3: null, yr5: null, yr10: -6.25, sinceInception: 7.5 });
-    expect(mapReturnRow(['Unknown', 'Benchmark', 'YTD'], ['12%', 'S&P 500', '3%'], null)).toEqual({ ...emptyReturns(), ytd: 3 });
-    expect(mapReturnRow(['YTD', '1 Year'], ['4%'], null)).toMatchObject({ ytd: 4, yr1: null });
-    expect(['3 Month', 'YTD', '1 Year', '3 Year', '5 Year', '10 Year', 'Since Inception', 'Fund Name', 'As Of Date', 'Total Expense Ratio'].map(returnSlot))
-      .toEqual(['mo3', 'ytd', 'yr1', 'yr3', 'yr5', 'yr10', 'sinceInception', null, null, null]);
-    expect([toNumber('(5,630,772.60)'), toNumber('$1,234.5'), toNumber('0'), toNumber('-0.38%'), toNumber('-------'), toNumber('N/A'), toNumber(null)])
-      .toEqual([-5630772.6, 1234.5, 0, -0.38, null, null, null]);
-  });
-
-  test('parses summary name/value pairs, as-of dates, gross TER date and month/quarter-end NAV returns', () => {
-    const summary = parseSummaryHtml(summaryHtml);
-    expect(summary.name).toBe('First Trust BuyWrite Income ETF');
-    expect(summary.navAsOf).toBe('2026-09-25');
-    expect(summary.expenseAsOf).toBe('2026-05-01');
-    expect(summary.benchmark).toBe('Cboe S&P 500 BuyWrite Index');
-    expect(summaryValue(summary, 'Total Expense Ratio')?.value).toBe('0.75%');
-    expect(summaryValue(summary, 'Closing NAV')?.value).toBe('$23.72');
-    expect(summaryValue(summary, '12-Month Distribution Rate')).toEqual({ value: '8.86%', asOf: '2026-08-31' });
-    expect(summary.monthEnd).toEqual({ asOfDate: '2026-08-31', mo3: 2.21, ytd: 6.87, yr1: 12.02, yr3: 13.8, yr5: 10.83, yr10: 8.36, sinceInception: 7.74 });
-    expect(summary.quarterEnd).toMatchObject({ asOfDate: '2026-06-30', yr1: 13.93, yr10: null, sinceInception: 7.75 });
-  });
-
-  test('derives cumulative total returns from official annualized return tenors', () => {
+  test('cumulative total returns derive from annualized tenors; too-young horizons stay null', () => {
     const metrics = metricsFromReturns({ asOfDate: null, mo3: 1, ytd: 2, yr1: 10, yr3: 10, yr5: 10, yr10: null, sinceInception: 8 });
     expect(metrics).toMatchObject({ tr1y: 10, tr3y: 33.1, tr5y: 61.05, tr10y: null, cagr3y: 10, siAnn: 8 });
   });
 
-  test('returns provenance is a non-empty basis plus an ISO date or null', () => {
+  test('a young fund with only 3-month and since-inception data has null (not 0) for every longer horizon', () => {
+    const metrics = metricsFromReturns({ ...emptyReturns('2026-08-31'), mo3: 4, sinceInception: 9.21 });
+    for (const key of ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y']) expect(metrics[key]).toBeNull();
+    expect(metrics.siAnn).toBe(9.21);
+  });
+
+  test('returnsBasis and performanceAsOf travel together: basis always set, date ISO or null', () => {
     expect(RETURNS_BASIS).toMatch(/official First Trust NAV/);
     expect(returnsProvenance({ ...emptyReturns('2026-08-31') })).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
     expect(returnsProvenance(emptyReturns('Aug 31 2026'))).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
     expect(returnsProvenance(emptyReturns())).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
   });
 
-  test('maps equity, international, cash, options and bond holdings to the shared Watchlist columns', () => {
-    const equity = parseHoldingsHtml(equityHoldingsHtml);
-    expect(equity.asOfDate).toBe('2026-09-25');
-    expect(equity.rows).toEqual([
-      { Name: 'Meta Platforms, Inc. (Class A)', Ticker: 'META', Identifier: '30303M102', Weight: '11.36', 'Market Value': '602910995.96', 'Shares Held': '802106', 'Asset Category': 'Communication Services' },
-      { Name: 'Samsung Electro-Mechanics Co., Ltd.', Ticker: '009150.KS', Identifier: 'Y7470U102', Weight: '1.64', 'Market Value': '22440080.94', 'Shares Held': '20240', 'Asset Category': 'Information Technology' },
-      { Name: 'US Dollar', Ticker: '-', Identifier: '$USD', Weight: '0.08', 'Market Value': '4479159.67', 'Shares Held': '4479160', 'Asset Category': 'Other' },
-    ]);
-    const options = parseHoldingsHtml(optionsHoldingsHtml).rows;
-    expect(options[0]).toMatchObject({ Name: '2027-01-15 State Street SPDR S&P 500 ETF Trust C 6.92', Ticker: '-', Identifier: '4SPY 270115C00006920', Weight: '101.29', 'Asset Category': '-' });
-    expect(options[1]).toMatchObject({ 'Market Value': '-5630772.6', 'Shares Held': '-19780', Weight: '-0.38' });
-    expect(parseHoldingsHtml(bondHoldingsHtml).rows).toEqual([{ Name: 'AUTONATION INC 0%, due 09/28/2026', Ticker: '-', Identifier: '05330NJU4', Weight: '0.99', 'Market Value': '65000000', 'Shares Held': '65000000', 'Asset Category': '-' }]);
-  });
-
-  test('keeps official distribution columns, merges years incrementally and infers cadence', () => {
-    const page = parseDistributionHtml(distributionHtml);
-    expect(page.years).toEqual([2024, 2025, 2026]);
-    expect(page.selectedYear).toBe(2026);
-    expect(page.headers).toEqual(['Ex-Date', 'Record Date', 'Payable Date', 'Distribution Amount', 'Distribution Type']);
-    expect(page.rows[0]).toEqual(['2026-09-24', '2026-09-24', '2026-09-30', '0.179000', 'Ordinary Distributions']);
-    const previous = [['2026-07-21', '2026-07-21', '2026-07-31', '0.170000', 'Ordinary Distributions'], ['2019-12-13', '2019-12-16', '2019-12-31', '0.080000', 'Ordinary Distributions']];
-    const merged = mergeDistributionRows(page.rows, previous, new Set([2026]));
-    expect(merged.map(row => row[0])).toEqual(['2026-09-24', '2026-08-21', '2026-07-21', '2019-12-13']);
-    expect(merged[2][3]).toBe('0.179000');
-    expect(summarizeDistributions(merged, new Date('2026-09-28T00:00:00Z'))).toEqual({ frequency: 'Monthly', latest: 0.179, exDate: '2026-09-24' });
-    const stale = [['2011-12-21', '', '', '0.011100', 'Ordinary Distributions'], ['2011-06-21', '', '', '0.011400', 'Ordinary Distributions']];
-    expect(summarizeDistributions(stale, new Date('2026-09-28T00:00:00Z'))).toEqual({ frequency: null, latest: 0.0111, exDate: '2011-12-21' });
-    expect(summarizeDistributions([['2026-06-20', '', '', '0.2', 'Ordinary Distributions'], ['2025-12-20', '', '', '0.2', 'Ordinary Distributions'], ['2025-12-20', '', '', '1.5', 'Long-Term Capital Gain']], new Date('2026-09-28T00:00:00Z')).frequency).toBe('Semi-annually');
-  });
-
-  test('reads ASP.NET hidden form fields and the official price-history Excel export', () => {
-    const form = parseHiddenInputs('<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="a&amp;b" /><input type="hidden" name="ctl00$ContentPlaceHolder1$PriceHistory$txtMinDate" value="6/19/2006" /><input type="text" name="q" value="x" />');
-    expect(form).toEqual({ __VIEWSTATE: 'a&b', 'ctl00$ContentPlaceHolder1$PriceHistory$txtMinDate': '6/19/2006' });
-    const grid = readXlsxRows(priceXlsx);
-    expect(grid[1]).toEqual(['Date', 'Market Price', 'Net Asset Value', 'Bid/Ask Midpoint', 'Volume', 'Net Assets']);
-    const days = parsePriceHistoryRows(grid);
-    expect(days).toEqual([
-      { date: '2026-09-24', nav: 292.52, market: 292.55, netAssets: 5323945132 },
-      { date: '2026-09-25', nav: 291.54, market: 291.61, netAssets: 5306019723 },
-    ]);
-    expect(historySheetRows(days)[1]).toEqual({ Date: '2026-09-25', NAV: '291.54', 'Market Price': '291.61', 'Premium/Discount': '0.0240%', 'Total Net Assets': '5306019723' });
-    expect(historyStartDate('max', '6/19/2006', '9/25/2026')).toBe('2006-06-19');
-    expect(historyStartDate('1y', '6/19/2006', '9/25/2026')).toBe('2025-09-25');
-    expect(historyStartDate('10y', '1/5/2021', '9/25/2026')).toBe('2021-01-05');
-  });
-
-  test('parses the Yahoo fallback chart with the shared JPMorgan helper and requests explicit daily periods', async () => {
-    const chart = parseChart({ chart: { result: [{ meta: { longName: 'FT', regularMarketPrice: 23.7 }, timestamp: [1758672000, 1758758400], indicators: { quote: [{ close: [23.7000004, 23.745], volume: [100, null] }], adjclose: [{ adjclose: [23.6912, 23.7449] }] }, events: { dividends: { 1758672000: { date: 1758672000, amount: 0.179 } } } }] } });
-    expect(chart.days).toEqual([
-      { date: '2025-09-24', close: 23.7, adjClose: 23.69, volume: 100 },
-      { date: '2025-09-25', close: 23.745, adjClose: 23.74, volume: 0 },
-    ]);
-    expect(chart.dividends).toEqual([{ epoch: 1758672000, amount: 0.179 }]);
-    const source = readFileSync(new URL('./update-data.ts', import.meta.url), 'utf8');
-    expect(source).toContain('period1=${period1}&period2=${period2}&interval=1d&events=div%7Csplit');
-    expect(source).not.toMatch(/[?&]range=|\{ range: /);
-  });
-
-  test('maps SEC fund symbols and N-PORT-P fallback positions without inventing exchange tickers', () => {
-    const refs = parseFundTickerMap({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 's000012345', 'C000033333', 'fdn'], [1383496, 'S000099999', 'C000011111', 'FXL']] });
-    expect(refs.get('FDN')).toEqual({ cik: '0001329377', seriesId: 'S000012345', classId: 'C000033333' });
-    expect(refs.get('FXL')?.cik).toBe('0001383496');
-    expect(parseEdgarAtomFilings('<entry><filing-type>NPORT-P</filing-type><accession-number>0001445546-26-001234</accession-number><filing-date>2026-08-28</filing-date><period>2026-06-30</period><filing-href>https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/</filing-href></entry><entry><filing-type>N-CSR</filing-type><accession-number>x</accession-number></entry>')).toEqual([
-      { accession: '0001445546-26-001234', filed: '2026-08-28', reportDate: '2026-06-30', url: 'https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/primary_doc.xml' },
-    ]);
-    const nport = parseNport('<genInfo><regName>First Trust Exchange-Traded Fund</regName><regCik>0001329377</regCik><seriesId>S000012345</seriesId><repPdDate>2026-06-30</repPdDate></genInfo><fundInfo><netAssets>5306019723</netAssets></fundInfo><invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><balance>802106</balance><valUSD>602910995.96</valUSD><pctVal>11.36</pctVal><assetCat>EC</assetCat></invstOrSec>');
-    expect(nport).toMatchObject({ regCik: '0001329377', seriesId: 'S000012345', repPdDate: '2026-06-30', netAssets: 5306019723 });
-    expect(nport.holdings).toEqual([
-      { Name: 'Meta Platforms Inc', Ticker: '-', Identifier: '30303M102', Weight: '11.36', 'Market Value': '602910995.96', 'Shares Held': '802106', 'Asset Category': 'EC' },
-    ]);
-  });
-
-  test('builds index entries in the shared sibling schema', () => {
+  test('index entry from fund meta keeps the shared sibling schema and the same metrics key set', () => {
     const fund = { ...parseCatalogHtml(catalogHtml)[1] };
     const summary = parseSummaryHtml(summaryHtml);
     const entry = indexEntryFromMeta(fund, {
@@ -296,341 +443,14 @@ describe('First Trust official source parsers', () => {
     expect(Object.keys(entry.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
     expect(entry.metrics).toMatchObject({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
   });
-});
 
-describe('configuration, pacing, paging and display normalization', () => {
-  test('supports strict min:max ranges, K/M/B/T AUM bounds and presets', () => {
-    expect(parseRange('0.2:2', 'TER')).toEqual({ min: 0.2, max: 2 });
-    expect(parseRange(':', 'TER')).toBeUndefined();
-    expect(parseRange('', 'TER')).toBeUndefined();
-    expect(parseAumRange('10M:2B')).toMatchObject({ min: 10000000, max: 2000000000 });
-    expect(parseAumRange('small')).toMatchObject({ min: 300000000, max: 2000000000 });
-    expect(() => parseRange('1', 'TER')).toThrow('a colon is required');
-    expect(() => parseRange('5:1', 'TER')).toThrow('must not exceed');
-    expect(() => parseRange('a:1', 'TER')).toThrow('is not a number');
-    expect(['max', '10y', 'MAX', ''].map(normalizeHistoryRange)).toEqual(['max', '10y', 'max', 'max']);
-    for (const bad of ['6mo', 'forever', '0y', '-1y', '1.5y', '10']) expect(() => normalizeHistoryRange(bad)).toThrow('HISTORY_RANGE');
-    expect(() => readConfig({ HISTORY_RANGE: '6mo' })).toThrow('HISTORY_RANGE');
-    expect(() => resolveControls({}, {}, { HISTORY_RANGE: '6mo' }, {})).toThrow('HISTORY_RANGE');
+  test('catalog-only and full rows expose exactly the same metrics keys', () => {
+    const [, fthi] = parseCatalogHtml(catalogHtml);
+    const catalogOnly = catalogOnlyEntry(fthi);
+    const full = indexEntryFromMeta({ ...fthi }, { returns: { monthEnd: parseSummaryHtml(summaryHtml).monthEnd, quarterEnd: null }, yields: {}, holdings: { totalRows: 1 }, history: { totalRows: 1 } });
+    expect(Object.keys(full.metrics)).toEqual(Object.keys(catalogOnly.metrics));
   });
 
-  test('HISTORY_RANGE shrinks the Yahoo request through explicit period1/period2', () => {
-    const now = Date.UTC(2026, 9, 2);
-    const period2 = Math.floor(now / 1000);
-    const query = (range: string): URLSearchParams => new URL(chartUrl('FDN', { ...readConfig({}), historyRange: range }, now)).searchParams;
-    expect(query('max').get('period1')).toBe('0');
-    expect(query('max').get('range')).toBeNull();
-    expect(query('5y').get('period2')).toBe(String(period2));
-    expect(Number(query('5y').get('period1'))).toBe(Math.floor(period2 - 5 * 365.25 * 86_400));
-    expect(query('5y').get('range')).toBeNull();
-    expect(historyStartDate('2y', '2010-01-01', '2026-09-25')).toBe('2024-09-25');
-  });
-
-  test('reads conservative defaults and applies data filters to published values', () => {
-    const config = readConfig({ TICKERS: 'fdn, ftsm;fjan', TER: ':0.6', FIRSTTRUST_PERFORMANCE_1Y: '10:', TOTAL_RETURN_3Y: '30:' });
-    expect(config).toMatchObject({ requestSleep: 1, concurrency: 2, maxRetries: 2, maxFetches: 0, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', edgarFallback: true, skipYahoo: false, secUa: 'daggerok ETF feed daggerok@gmail.com' });
-    expect(config.tickers).toEqual(['FDN', 'FTSM', 'FJAN']);
-    expect(readConfig({ REQUEST_SLEEP: '', CONCURRENCY: '0', MAX_FETCHES: '0' })).toMatchObject({ requestSleep: 1, concurrency: 2, maxFetches: 0 });
-    expect(readConfig({ REQUEST_SLEEP: '0' }).requestSleep).toBe(0);
-    const base: Fund = { ...parseCatalogHtml(catalogHtml)[1], aumValue: 1e9 };
-    const withReturns = (terValue: number | null, yr1: number | null, yr3: number | null): Fund => ({ ...base, terValue, returns: { monthEnd: { ...emptyReturns(), yr1, yr3 }, quarterEnd: null } });
-    expect(fundPasses(withReturns(0.5, 12, 10), config)).toBe(true);
-    expect(fundPasses(withReturns(0.75, 12, 10), config)).toBe(false);
-    expect(fundPasses(withReturns(0.5, 5, 10), config)).toBe(false);
-    expect(fundPasses(withReturns(0.5, 12, 8), config)).toBe(false);
-    expect(fundPasses(withReturns(null, 12, 10), config)).toBe(false);
-    expect(returnForFilter({ ...emptyReturns(), yr3: 10 }, '3Y', true)).toBe(33.1);
-    expect(returnForFilter({ ...emptyReturns(), yr1: -4 }, '1Y', true)).toBe(-4);
-    expect(returnForFilter(null, 'YTD', false)).toBeNull();
-  });
-
-  test('paces each worker lane independently and retries only transient HTTP statuses', async () => {
-    const originalFetch = globalThis.fetch;
-    const starts: number[] = [];
-    const statuses = [200, 404];
-    globalThis.fetch = (async () => { starts.push(Date.now()); return new Response('ok', { status: statuses.shift() ?? 200 }); }) as unknown as typeof fetch;
-    try {
-      configureRequestLanes(2, 0.3);
-      const t0 = Date.now();
-      await Promise.all([fetchWithRetry('https://example.test/a', 'a', {}, 0), fetchWithRetry('https://example.test/b', 'b', {}, 0).catch(() => null)]);
-      expect(starts.length).toBe(2);
-      expect(starts[1] - t0).toBeLessThan(150);
-      statuses.splice(0, statuses.length, 200);
-      await fetchWithRetry('https://example.test/c', 'c', {}, 0);
-      expect(starts[2] - t0).toBeGreaterThanOrEqual(280);
-      configureRequestLanes(1, 0);
-      statuses.splice(0, statuses.length, 503, 200);
-      expect((await fetchWithRetry('https://example.test/d', 'd', {}, 1)).status).toBe(200);
-      statuses.splice(0, statuses.length, 404, 200);
-      await expect(fetchWithRetry('https://example.test/e', 'e', {}, 2)).rejects.toThrow('HTTP 404');
-      expect(statuses).toEqual([200]);
-    } finally {
-      globalThis.fetch = originalFetch;
-    }
-  });
-
-  test('reserves the lane slot synchronously so callers never wake on the same slot', async () => {
-    const originalFetch = globalThis.fetch;
-    try {
-      // Spacing: 4 callers on 2 lanes at 0.2 s start at 0, 0, 0.2, 0.2 - never two on the same slot.
-      const starts: number[] = [];
-      globalThis.fetch = (async () => { starts.push(Date.now()); return new Response('ok'); }) as unknown as typeof fetch;
-      configureRequestLanes(2, 0.2);
-      const t0 = Date.now();
-      await Promise.all(Array.from({ length: 4 }, (_, i) => fetchWithRetry(`https://example.test/s${i}`, `s${i}`, {}, 0)));
-      const offsets = starts.map((value) => value - t0).sort((a, b) => a - b);
-      expect(offsets[1]).toBeLessThan(120);
-      expect(offsets[2]).toBeGreaterThanOrEqual(170);
-      expect(offsets[3]).toBeGreaterThanOrEqual(170);
-      expect(offsets[3] - offsets[2]).toBeLessThan(120);
-      // One lane, three callers at 0.2 s: slots 0, 0.2 and 0.4 s (an unreserved gate wakes all three together).
-      starts.length = 0;
-      configureRequestLanes(1, 0.2);
-      const t1 = Date.now();
-      await Promise.all(Array.from({ length: 3 }, (_, i) => fetchWithRetry(`https://example.test/o${i}`, `o${i}`, {}, 0)));
-      const single = starts.map((value) => value - t1).sort((a, b) => a - b);
-      expect(single[1]).toBeGreaterThanOrEqual(170);
-      expect(single[2]).toBeGreaterThanOrEqual(370);
-    } finally {
-      globalThis.fetch = originalFetch;
-      configureRequestLanes(1, 0);
-    }
-  });
-
-  test('aborts stalled requests and stalled bodies after the timeout and retries them', async () => {
-    const originalFetch = globalThis.fetch;
-    let calls = 0;
-    const stalled = (signal: AbortSignal | undefined): Promise<never> => new Promise((_, reject) => signal?.addEventListener('abort', () => reject(signal.reason)));
-    globalThis.fetch = (async (_url: unknown, init?: RequestInit) => {
-      calls += 1;
-      if (calls === 1) return stalled(init?.signal ?? undefined); // headers never arrive
-      if (calls === 2) {
-        const body = new ReadableStream({ start(controller) { init?.signal?.addEventListener('abort', () => controller.error(init.signal?.reason)); } });
-        return new Response(body); // headers arrive, body never does
-      }
-      return new Response('done');
-    }) as unknown as typeof fetch;
-    try {
-      configureRequestLanes(1, 0);
-      configureRequestTimeout(60);
-      const response = await fetchWithRetry('https://example.test/slow', 'slow', {}, 3);
-      expect(await response.text()).toBe('done');
-      expect(calls).toBe(3);
-      calls = 0;
-      await expect(fetchWithRetry('https://example.test/slow', 'slow', {}, 0)).rejects.toThrow('network error');
-    } finally {
-      configureRequestTimeout(45_000);
-      globalThis.fetch = originalFetch;
-    }
-  });
-
-  test('writes JSON through a temp file and removes stale pages only after the new meta exists', async () => {
-    const root = mkdtempSync(join(tmpdir(), 'ft-atomic-'));
-    try {
-      setApiRoot(pathToFileURL(`${root}/`));
-      const file = pathToFileURL(`${root}/funds/FDN/meta.json`);
-      await writeFileAtomic(file, '{"a":1}\n');
-      expect(readFileSync(file, 'utf8')).toBe('{"a":1}\n');
-      expect(readdirSync(`${root}/funds/FDN`)).toEqual(['meta.json']);
-      mkdirSync(`${root}/funds/FDN/holdings`, { recursive: true });
-      for (const name of ['001.json', '002.json', '003.json']) writeFileSync(`${root}/funds/FDN/holdings/${name}`, '{}');
-      await pruneStalePages('FDN', 'holdings', ['holdings/001.json']);
-      expect(readdirSync(`${root}/funds/FDN/holdings`)).toEqual(['001.json']);
-    } finally {
-      rmSync(root, { recursive: true, force: true });
-    }
-  });
-
-  test('paginates deterministic row sets and ignores run timestamps recursively when comparing published JSON', () => {
-    expect(buildPages([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]]);
-    expect(buildPages([], 2)).toEqual([]);
-    expect(() => buildPages([1], 0)).toThrow('positive integer');
-    expect([...pageBasenames(['holdings/001.json', 'holdings/002.json'])]).toEqual(['001.json', '002.json']);
-    expect(withoutRunTimestamps({ b: 1, generatedAt: 'x', a: [{ savedAt: 'y', c: 2 }] })).toEqual({ b: 1, a: [{ c: 2 }] });
-    expect(samePublishedContent(JSON.stringify({ generatedAt: 'x', funds: [{ t: 1, savedAt: 'a' }] }), { generatedAt: 'z', funds: [{ t: 1, savedAt: 'b' }] })).toBe(true);
-    expect(samePublishedContent(JSON.stringify({ generatedAt: 'x', funds: [{ t: 1 }] }), { generatedAt: 'x', funds: [{ t: 2 }] })).toBe(false);
-    expect(splitRowCells('<td>A<td>B</td><th>C')).toEqual(['A', 'B', 'C']);
-  });
-
-  test('uses the requested None presentation placeholder and preserves Unknown', () => {
-    for (const missing of [null, undefined, '', '  ', '-', '—']) expect(formatFrequencyPlaceholder(missing)).toBe('00 - None');
-    expect(formatFrequencyPlaceholder('none')).toBe('00 - None');
-    expect(formatFrequencyPlaceholder('unknown')).toBe('00 - Unknown');
-    expect(formatFrequencyPlaceholder('Monthly')).toBe('01 - Monthly');
-    expect(formatFrequencyPlaceholder('Semi-annually')).toBe('06 - Semi-annually');
-  });
-});
-
-const read = (path: string) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
-const file = JSON.parse(read('scripts/update-data.config.json'));
-const SEC_UA = 'daggerok ETF feed daggerok@gmail.com';
-
-test('configuration precedence: file < advanced < nonblank input < environment', () => {
-  const c = resolveControls({ CONCURRENCY: 2, TICKERS: 'FDN' }, { CONCURRENCY: 3, TICKERS: 'FTSM' }, { CONCURRENCY: '4', TICKERS: '' }, { FIRSTTRUST_CONCURRENCY: '5', CONCURRENCY: '6' });
-  expect(c.CONCURRENCY).toBe('5');
-  expect(c.TICKERS).toBe('FTSM');
-  expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }, { CONCURRENCY: '4' }).CONCURRENCY).toBe('4');
-  expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }).CONCURRENCY).toBe('3');
-  expect(resolveControls({ CONCURRENCY: 2 }, {}, {}, { CONCURRENCY: '7' }).CONCURRENCY).toBe('7');
-});
-
-test('blank input inherits, advanced can deliberately blank a key, env can override booleans', () => {
-  expect(resolveControls({ CONCURRENCY: 2 }, {}, { CONCURRENCY: '' }).CONCURRENCY).toBe('2');
-  expect(resolveControls({ TICKERS: 'FDN' }, { TICKERS: '' }, { TICKERS: '' }).TICKERS).toBe('');
-  expect(resolveControls({ SKIP_YAHOO: true }, {}, {}, { SKIP_YAHOO: 'false' }).SKIP_YAHOO).toBe('false');
-  expect(resolveControls({ MAX_FETCHES: 0 }).MAX_FETCHES).toBe('0');
-});
-
-test('scheduled path (empty inputs and advanced) equals the config defaults', () => {
-  const controls = resolveControls(file, {}, {}, {});
-  expect(controls).toEqual(Object.fromEntries(Object.entries(file).map(([key, value]) => [key, String(value)])));
-  const config = readConfig(controls);
-  expect(config).toMatchObject({
-    maxFetches: 0, requestSleep: 1, concurrency: 2, maxRetries: 2, holdingsPageSize: 250, historyPageSize: 1000,
-    historyRange: 'max', tickers: [], edgarFallback: true, skipYahoo: false, performanceRanges: {}, totalReturnRanges: {},
-  });
-  expect(config.aumRange).toBeUndefined();
-  expect(config.terRange).toBeUndefined();
-});
-
-test('SEC_UA default is the owner contact descriptor and the protected value overrides it', () => {
-  expect(file.SEC_UA).toBe(SEC_UA);
-  expect(resolveControls(file, {}, {}, { SEC_UA: 'Org Contact (ops@example.org)' }).SEC_UA).toBe('Org Contact (ops@example.org)');
-  expect(readConfig({}).secUa).toBe(SEC_UA);
-});
-
-test('explicitly set empty env var clears a control; invalid values are errors, never silent fallbacks', () => {
-  expect(resolveControls({ TICKERS: 'FDN' }, {}, {}, { TICKERS: '' }).TICKERS).toBe('');
-  expect(() => resolveControls({}, {}, {}, { MAX_RETRIES: '0' })).toThrow('MAX_RETRIES');
-  expect(() => resolveControls({}, {}, {}, { CONCURRENCY: 'two' })).toThrow('CONCURRENCY');
-  expect(() => resolveControls({}, {}, {}, { VERBOSE: 'maybe' })).toThrow('VERBOSE');
-});
-
-test('resolver rejects unknown, non-scalar, multiline and invalid values', () => {
-  for (const value of [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_FETCHES: 1.5 }, { MAX_FETCHES: -1 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { EDGAR_FALLBACK: 'later' }, { HISTORY_RANGE: 'forever' }, { AUM: '5B:1B' }, { TER: '5:1' }, { PERFORMANCE_1Y: '10' }, { TICKERS: ['FDN'] }, { TICKERS: { a: 1 } }, null, []]) {
-    expect(() => resolveControls(value)).toThrow();
-  }
-  expect(() => resolveControls({}, { SEC_UA: 'x\rfoo' })).toThrow();
-  expect(() => resolveControls({}, {}, { TICKERS: 'FDN\0' })).toThrow();
-  expect(() => resolveControls({}, {}, {}, { FIRSTTRUST_SEC_UA: 'x\0bad' })).toThrow();
-  expect(() => resolveControls({}, 'not an object')).toThrow();
-  expect(() => resolveControls({}, [])).toThrow();
-  expect(() => JSON.parse('{bad json')).toThrow();
-});
-
-test('runtimeControls reads the checked-in file and lets the environment win', async () => {
-  const controls = await runtimeControls({ TICKERS: 'FDN FTSM', FIRSTTRUST_REQUEST_SLEEP: '0' });
-  expect(controls.TICKERS).toBe('FDN FTSM');
-  expect(controls.REQUEST_SLEEP).toBe('0');
-  expect(controls.HISTORY_RANGE).toBe('max');
-  expect(readConfig(controls).tickers).toEqual(['FDN', 'FTSM']);
-});
-
-test('config keys, CONTROL_NAMES, README rows and --help are in sync', () => {
-  expect(Object.keys(file).sort()).toEqual([...CONTROL_NAMES].sort());
-  expect(Object.values(file).every((value) => typeof value === 'string')).toBe(true);
-  const doc = read('README.md');
-  const usage = Bun.spawnSync(['bun', 'scripts/update-data.ts', '--help'], { cwd: new URL('..', import.meta.url).pathname }).stdout.toString();
-  const rows = new Set<string>();
-  for (const [, cell] of doc.matchAll(/^\| ((?:`[A-Z0-9_]+`(?:, )?)+) \|/gm)) for (const [, name] of cell.matchAll(/`([A-Z0-9_]+)`/g)) rows.add(name);
-  for (const name of CONTROL_NAMES) {
-    const tenor = name.match(/^(PERFORMANCE|TOTAL_RETURN)_(1Y|3Y|5Y|10Y)$/);
-    expect(rows.has(name)).toBe(true);
-    expect(usage).toContain(tenor ? `${tenor[1]}_YTD` : name);
-  }
-  expect([...rows].filter((name) => !(CONTROL_NAMES as readonly string[]).includes(name))).toEqual([]);
-  expect(doc).toContain('scripts/update-data.config.json');
-  expect(doc).toContain('file defaults < advanced JSON < nonblank inputs < protected Actions variable/env');
-});
-
-test('workflow resolves controls with the shared resolver and writes only api/firsttrust', () => {
-  const workflow = read('.github/workflows/update-data.yml');
-  const names = [...workflow.slice(workflow.indexOf('    inputs:'), workflow.indexOf('\npermissions:')).matchAll(/^      (\w+):$/gm)].map((m) => m[1]);
-  expect(names.length).toBeLessThanOrEqual(25);
-  expect(names).toContain('advanced');
-  expect(workflow).toMatch(/advanced:\n(?:        .+\n)*?        default: '\{\}'/);
-  for (const name of names.filter((n) => n !== 'advanced')) expect(CONTROL_NAMES).toContain(name.toUpperCase());
-  expect(names).not.toContain('sec_ua');
-  expect(names).not.toContain('output_dir');
-  expect(workflow).toContain("cron: '0 0 * * 0'");
-  expect(workflow).toContain('resolveControls(file, advanced, individual, protectedVars)');
-  expect(workflow).toContain('PROTECTED_SEC_UA: ${{ vars.SEC_UA }}');
-  expect(workflow).toContain('toJSON(inputs)');
-  expect(workflow).not.toMatch(/\$\{\{\s*inputs\./);
-  expect(workflow).not.toContain('bunx tsc');
-  expect(workflow).toContain('name: Generate api/firsttrust static data');
-  expect(workflow).toContain('git add api/firsttrust\n          if git diff --cached --quiet -- api/firsttrust');
-  expect([...workflow.matchAll(/git add (\S+)/g)].map((m) => m[1])).toEqual(['api/firsttrust']);
-});
-
-test('README keeps the standard section order and the verification commands', () => {
-  const readme = read('README.md');
-  const headings = [...readme.matchAll(/^#{2,3} .+$/gm)].map((match) => match[0]);
-  expect(headings).toEqual([
-    '## Using Bun', '## Updating the static First Trust data', '### Data sources', '### Metrics and caveats', '### Update controls', '### Examples',
-    '## TypeScript and verification', '## Brands table', '## Sibling applications', '## License',
-  ]);
-  for (const command of ['bun install --frozen-lockfile', 'bun test', 'bun build --target=bun scripts/update-data.ts --outfile=/dev/null', 'git diff --check']) expect(readme).toContain(command);
-  expect(readme).not.toMatch(/worklog|\.prompt|evidence|fixtures|config-docs\.test/i);
-});
-
-test('workflow never writes outside api/firsttrust and keeps the hardened template', () => {
-  const workflow = read('.github/workflows/update-data.yml');
-  expect(workflow).not.toContain('OUTPUT_DIR');
-  expect(workflow).toContain('timeout-minutes: 30');
-  expect(workflow).toContain('persist-credentials: false');
-  expect(workflow.match(/^permissions:\n  contents: write$/m)).not.toBeNull();
-});
-
-describe('system CA support', () => {
-  test('USE_SYSTEM_CA resolver accepts auto/true/false case-insensitively and rejects others', () => {
-    expect(file.USE_SYSTEM_CA).toBe('auto');
-    expect(resolveControls(file).USE_SYSTEM_CA).toBe('auto');
-    for (const mode of ['auto', 'true', 'false']) expect(resolveControls(file, {}, {}, { USE_SYSTEM_CA: mode.toUpperCase() }).USE_SYSTEM_CA).toBe(mode);
-    expect(() => resolveControls(file, {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow('USE_SYSTEM_CA');
-  });
-
-  test('isCertError detects untrusted-certificate errors, also via cause', () => {
-    expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
-    expect(isCertError(new Error('unable to get local issuer certificate'))).toBe(true);
-    expect(isCertError(new Error('fetch failed', { cause: new Error('unable to get local issuer certificate') }))).toBe(true);
-    expect(isCertError({ code: 'ECONNRESET' })).toBe(false);
-    expect(isCertError(new Error('HTTP 403 Forbidden'))).toBe(false);
-  });
-
-  test('installSystemCa honors the mode and only restarts on certificate errors', async () => {
-    const original = globalThis.fetch;
-    let reexecs = 0;
-    const reexec = (() => { reexecs++; return new Response('restarted') as never; }) as () => never;
-    try {
-      installSystemCa('false', reexec, false);
-      expect(globalThis.fetch).toBe(original);
-      installSystemCa('auto', reexec, true);
-      expect(globalThis.fetch).toBe(original);
-      installSystemCa('true', reexec, false);
-      expect(reexecs).toBe(1);
-
-      reexecs = 0;
-      globalThis.fetch = (async () => new Response('ok')) as unknown as typeof fetch;
-      const ok = globalThis.fetch;
-      installSystemCa('auto', reexec, false);
-      expect(globalThis.fetch).not.toBe(ok);
-      expect(await (await fetch('https://example.test/')).text()).toBe('ok');
-      expect(reexecs).toBe(0);
-
-      globalThis.fetch = (async () => { throw Object.assign(new Error('fetch failed'), { code: 'SELF_SIGNED_CERT_IN_CHAIN' }); }) as unknown as typeof fetch;
-      installSystemCa('auto', reexec, false);
-      await fetch('https://example.test/');
-      expect(reexecs).toBe(1);
-
-      globalThis.fetch = (async () => { throw Object.assign(new Error('socket closed'), { code: 'ECONNRESET' }); }) as unknown as typeof fetch;
-      installSystemCa('auto', reexec, false);
-      await expect(fetch('https://example.test/')).rejects.toThrow('socket closed');
-      expect(reexecs).toBe(1);
-    } finally {
-      globalThis.fetch = original;
-    }
-  });
 });
 
 // ---------------------------------------------------------------------------
@@ -681,38 +501,34 @@ function snapshotTree(dir: string, prefix = ''): Record<string, string> {
   return out;
 }
 
-describe('pipeline runs (mocked network, temp feed directory)', () => {
-  const baseEnv = { USE_SYSTEM_CA: 'false', REQUEST_SLEEP: '0', MAX_RETRIES: '1', CONCURRENCY: '2', EDGAR_FALLBACK: 'false', TICKERS: '', MAX_FETCHES: '0' };
-  const withFeed = async (work: (root: string) => Promise<void>): Promise<void> => {
-    const root = mkdtempSync(join(tmpdir(), 'ft-run-'));
-    const quiet = console.log;
-    console.log = () => undefined;
-    try {
-      setApiRoot(pathToFileURL(`${root}/`));
-      await work(root);
-    } finally {
-      console.log = quiet;
-      configureSoftDeadline(25 * 60_000);
-      rmSync(root, { recursive: true, force: true });
-    }
-  };
-  const readIndex = (root: string): any => JSON.parse(readFileSync(`${root}/index.json`, 'utf8'));
 
-  test('an unchanged rerun writes nothing, and CONCURRENCY decides how many funds run in parallel', async () => {
+const baseEnv = { USE_SYSTEM_CA: 'false', REQUEST_SLEEP: '0', MAX_RETRIES: '1', CONCURRENCY: '2', EDGAR_FALLBACK: 'false', TICKERS: '', MAX_FETCHES: '0' };
+const withFeed = async (work: (root: string) => Promise<void>): Promise<void> => {
+  const root = mkdtempSync(join(tmpdir(), 'ft-run-'));
+  console.log = () => undefined;
+  try {
+    setApiRoot(pathToFileURL(`${root}/`));
+    await work(root);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+};
+const readIndex = (root: string): any => JSON.parse(readFileSync(`${root}/index.json`, 'utf8'));
+
+describe('pipeline', () => {
+  test('a second identical run writes nothing (zero diff) and lists every fund with its meta file', async () => {
     await withFeed(async (root) => {
-      const net = installMockNetwork({ delayMs: 15 });
+      const net = installMockNetwork();
       try {
-        const first = await main({ ...baseEnv, CONCURRENCY: '2' });
-        expect(first).toMatchObject({ updated: 2, failures: 0 });
-        expect(net.stats.peak).toBe(2);
+        expect(await main(baseEnv)).toMatchObject({ updated: 2, failures: 0 });
         const index = readIndex(root);
         expect(index.funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI']);
         expect(index.funds.every((fund: any) => fund.dataFile === `./funds/${fund.ticker}/meta.json` && 'ytd' in fund.metrics)).toBe(true);
         expect(readdirSync(`${root}/funds/FTHI`).sort()).toEqual(['history', 'holdings', 'meta.json']);
         const before = snapshotTree(root);
-        net.stats.peak = 0;
-        await main({ ...baseEnv, CONCURRENCY: '1' });
-        expect(net.stats.peak).toBe(1);
+        // Run timestamps have one-second granularity: cross a second boundary so a missing zero-diff check cannot hide.
+        await new Promise((resolve) => setTimeout(resolve, 1020 - (Date.now() % 1000)));
+        await main(baseEnv);
         expect(snapshotTree(root)).toEqual(before);
       } finally {
         net.restore();
@@ -720,7 +536,7 @@ describe('pipeline runs (mocked network, temp feed directory)', () => {
     });
   });
 
-  test('a one-ticker run keeps every row, every fund file and the cursor state, and lists catalog-only funds with dataFile null', async () => {
+  test('a one-ticker run keeps every row and fund file; catalog-only funds have dataFile null; cursor untouched', async () => {
     await withFeed(async (root) => {
       let net = installMockNetwork();
       try {
@@ -753,7 +569,7 @@ describe('pipeline runs (mocked network, temp feed directory)', () => {
     });
   });
 
-  test('a fund whose sources failed keeps its complete previous state; all funds failing reports zero updated', async () => {
+  test('a failed source keeps the fund exactly as published; all funds failing reports zero updated', async () => {
     await withFeed(async (root) => {
       let net = installMockNetwork();
       try {
@@ -779,14 +595,13 @@ describe('pipeline runs (mocked network, temp feed directory)', () => {
 
   test('stops taking new funds at the soft deadline, still writes the index and resumes after the last fund', async () => {
     await withFeed(async (root) => {
-      const net = installMockNetwork({ delayMs: 20 });
+      const net = installMockNetwork({ delayMs: 50 });
       try {
-        configureSoftDeadline(60);
+        configureSoftDeadline(150);
         const run = await main({ ...baseEnv, CONCURRENCY: '1' });
         expect(run.stoppedAtDeadline).toBe(true);
         expect(run.updated).toBe(1);
-        const index = readIndex(root);
-        expect(index.funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI']);
+        expect(readIndex(root).funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI']);
         expect(JSON.parse(readFileSync(`${root}/update-state.json`, 'utf8')).cursor).toBe('FDN');
         configureSoftDeadline(25 * 60_000);
         const next = await main({ ...baseEnv, CONCURRENCY: '1' });
@@ -797,4 +612,147 @@ describe('pipeline runs (mocked network, temp feed directory)', () => {
       }
     });
   });
+
+  test('JSON is written through a temp file; stale pages are pruned only after the new meta exists', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'ft-atomic-'));
+    try {
+      setApiRoot(pathToFileURL(`${root}/`));
+      const file = pathToFileURL(`${root}/funds/FDN/meta.json`);
+      await writeFileAtomic(file, '{"a":1}\n');
+      expect(readFileSync(file, 'utf8')).toBe('{"a":1}\n');
+      expect(readdirSync(`${root}/funds/FDN`)).toEqual(['meta.json']);
+      mkdirSync(`${root}/funds/FDN/holdings`, { recursive: true });
+      for (const name of ['001.json', '002.json', '003.json']) writeFileSync(`${root}/funds/FDN/holdings/${name}`, '{}');
+      await pruneStalePages('FDN', 'holdings', ['holdings/001.json']);
+      expect(readdirSync(`${root}/funds/FDN/holdings`)).toEqual(['001.json']);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
+
+  test('pages are deterministic and run timestamps are ignored when comparing published JSON', () => {
+    expect(buildPages([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]]);
+    expect(buildPages([], 2)).toEqual([]);
+    expect(() => buildPages([1], 0)).toThrow('positive integer');
+    expect([...pageBasenames(['holdings/001.json', 'holdings/002.json'])]).toEqual(['001.json', '002.json']);
+    expect(withoutRunTimestamps({ b: 1, generatedAt: 'x', a: [{ savedAt: 'y', c: 2 }] })).toEqual({ b: 1, a: [{ c: 2 }] });
+    expect(samePublishedContent(JSON.stringify({ generatedAt: 'x', funds: [{ t: 1, savedAt: 'a' }] }), { generatedAt: 'z', funds: [{ t: 1, savedAt: 'b' }] })).toBe(true);
+    expect(samePublishedContent(JSON.stringify({ generatedAt: 'x', funds: [{ t: 1 }] }), { generatedAt: 'x', funds: [{ t: 2 }] })).toBe(false);
+    expect(splitRowCells('<td>A<td>B</td><th>C')).toEqual(['A', 'B', 'C']);
+  });
+
+});
+
+describe('network', () => {
+  test('each worker lane paces its own requests; a third caller waits a full sleep slot', async () => {
+    const starts: number[] = [];
+    globalThis.fetch = (async () => { starts.push(Date.now()); return new Response('ok'); }) as unknown as typeof fetch;
+    configureRequestLanes(2, 1);
+    const t0 = Date.now();
+    await Promise.all(Array.from({ length: 3 }, (_, i) => fetchWithRetry(`https://example.test/s${i}`, `s${i}`, {}, 0)));
+    const offsets = starts.map((value) => value - t0).sort((a, b) => a - b);
+    expect(offsets[2] - offsets[1]).toBeGreaterThan(400);
+    expect(offsets[2]).toBeGreaterThanOrEqual(900);
+  });
+
+  test('only transient statuses are retried and retries are bounded', async () => {
+    let calls = 0;
+    const statuses: number[] = [];
+    globalThis.fetch = (async () => { calls += 1; return new Response('x', { status: statuses.shift() ?? 200 }); }) as unknown as typeof fetch;
+    statuses.push(404, 200);
+    await expect(fetchWithRetry('https://example.test/a', 'a', {}, 2)).rejects.toThrow('HTTP 404');
+    expect(calls).toBe(1);
+    calls = 0;
+    statuses.splice(0, statuses.length, 503, 503, 503, 503);
+    await expect(fetchWithRetry('https://example.test/b', 'b', {}, 1)).rejects.toThrow();
+    expect(calls).toBe(2); // one retry, then give up
+  });
+
+  test('timeout covers stalled headers and stalled bodies, and both are retried', async () => {
+    let calls = 0;
+    const stalled = (signal: AbortSignal | undefined): Promise<never> => new Promise((_, reject) => signal?.addEventListener('abort', () => reject(signal.reason)));
+    globalThis.fetch = (async (_url: unknown, init?: RequestInit) => {
+      calls += 1;
+      if (calls === 1) return stalled(init?.signal ?? undefined); // headers never arrive
+      if (calls === 2) {
+        const body = new ReadableStream({ start(controller) { init?.signal?.addEventListener('abort', () => controller.error(init.signal?.reason)); } });
+        return new Response(body); // headers arrive, body never does
+      }
+      return new Response('done');
+    }) as unknown as typeof fetch;
+    configureRequestLanes(1, 0);
+    configureRequestTimeout(60);
+    const response = await fetchWithRetry('https://example.test/slow', 'slow', {}, 3);
+    expect(await response.text()).toBe('done');
+    expect(calls).toBe(3);
+    calls = 0;
+    await expect(fetchWithRetry('https://example.test/slow', 'slow', {}, 0)).rejects.toThrow('network error');
+  });
+
+  test('CONCURRENCY decides how many funds are in flight (peak 1 at 1, peak 2 at 2)', async () => {
+    await withFeed(async () => {
+      const net = installMockNetwork({ delayMs: 15 });
+      try {
+        await main({ ...baseEnv, CONCURRENCY: '1' });
+        expect(net.stats.peak).toBe(1);
+        net.stats.peak = 0;
+        await main({ ...baseEnv, CONCURRENCY: '2' });
+        expect(net.stats.peak).toBe(2);
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('HISTORY_RANGE shrinks the Yahoo request through explicit period1/period2', () => {
+    const now = Date.UTC(2026, 9, 2);
+    const period2 = Math.floor(now / 1000);
+    const query = (range: string): URLSearchParams => new URL(chartUrl('FDN', { ...readConfig({}), historyRange: range }, now)).searchParams;
+    expect(query('max').get('period1')).toBe('0');
+    expect(query('max').get('range')).toBeNull();
+    expect(query('5y').get('period2')).toBe(String(period2));
+    expect(Number(query('5y').get('period1'))).toBe(Math.floor(period2 - 5 * 365.25 * 86_400));
+    expect(query('5y').get('range')).toBeNull();
+    expect(historyStartDate('2y', '2010-01-01', '2026-09-25')).toBe('2024-09-25');
+  });
+
+  test('system CA: certificate errors are detected and only they restart the script', async () => {
+    expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
+    expect(isCertError(new Error('unable to get local issuer certificate'))).toBe(true);
+    expect(isCertError(new Error('fetch failed', { cause: new Error('unable to get local issuer certificate') }))).toBe(true);
+    expect(isCertError({ code: 'ECONNRESET' })).toBe(false);
+    expect(isCertError(new Error('HTTP 403 Forbidden'))).toBe(false);
+    const original = globalThis.fetch;
+    let reexecs = 0;
+    const reexec = (() => { reexecs++; return new Response('restarted') as never; }) as () => never;
+    try {
+      installSystemCa('false', reexec, false);
+      expect(globalThis.fetch).toBe(original);
+      installSystemCa('auto', reexec, true);
+      expect(globalThis.fetch).toBe(original);
+      installSystemCa('true', reexec, false);
+      expect(reexecs).toBe(1);
+
+      reexecs = 0;
+      globalThis.fetch = (async () => new Response('ok')) as unknown as typeof fetch;
+      const ok = globalThis.fetch;
+      installSystemCa('auto', reexec, false);
+      expect(globalThis.fetch).not.toBe(ok);
+      expect(await (await fetch('https://example.test/')).text()).toBe('ok');
+      expect(reexecs).toBe(0);
+
+      globalThis.fetch = (async () => { throw Object.assign(new Error('fetch failed'), { code: 'SELF_SIGNED_CERT_IN_CHAIN' }); }) as unknown as typeof fetch;
+      installSystemCa('auto', reexec, false);
+      await fetch('https://example.test/');
+      expect(reexecs).toBe(1);
+
+      globalThis.fetch = (async () => { throw Object.assign(new Error('socket closed'), { code: 'ECONNRESET' }); }) as unknown as typeof fetch;
+      installSystemCa('auto', reexec, false);
+      await expect(fetch('https://example.test/')).rejects.toThrow('socket closed');
+      expect(reexecs).toBe(1);
+    } finally {
+      globalThis.fetch = original;
+    }
+  });
+
 });
