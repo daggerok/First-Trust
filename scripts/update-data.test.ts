@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { deflateRawSync } from 'node:zlib';
 import {
-  applyCatalogPerformance, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
+  applyCatalogPerformance, publishedAsOf, stalestFirst, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
@@ -457,7 +457,7 @@ describe('metrics', () => {
 // End-to-end runs against a mocked network in a temp feed directory
 // ---------------------------------------------------------------------------
 
-type MockOptions = { catalog?: string; failFor?: { summary?: string[]; holdings?: string[]; history?: string[] }; delayMs?: number; failAll?: boolean };
+type MockOptions = { catalog?: string; failFor?: { summary?: string[]; holdings?: string[]; history?: string[] }; delayMs?: number; failAll?: boolean; onSummary?: () => void };
 
 function chartJson(close: number): string {
   const timestamps = [1790208000, 1790294400, 1790380800]; // 2026-09-24 .. 2026-09-26
@@ -465,9 +465,9 @@ function chartJson(close: number): string {
     indicators: { quote: [{ close: [close - 2, close - 1, close], volume: [10, 20, 30] }], adjclose: [{ adjclose: [close - 2, close - 1, close] }] } }] } });
 }
 
-function installMockNetwork(options: MockOptions = {}): { stats: { peak: number; calls: number }; restore: () => void } {
+function installMockNetwork(options: MockOptions = {}): { stats: { peak: number; calls: number; summaries: string[] }; restore: () => void } {
   const original = globalThis.fetch;
-  const stats = { peak: 0, calls: 0 };
+  const stats = { peak: 0, calls: 0, summaries: [] as string[] };
   let inFlight = 0;
   globalThis.fetch = (async (input: unknown) => {
     const url = String(input);
@@ -478,6 +478,7 @@ function installMockNetwork(options: MockOptions = {}): { stats: { peak: number;
       if (options.failAll) return new Response('down', { status: 404 });
       if (url.includes('DisplayType=PerformanceNav')) return new Response(performanceNavHtml);
       if (url.includes('etflist.aspx')) return new Response(options.catalog ?? catalogHtml);
+      if (url.includes('EtfSummary')) { stats.summaries.push(ticker); options.onSummary?.(); }
       if (url.includes('EtfSummary')) return options.failFor?.summary?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(summaryHtml);
       if (url.includes('EtfHoldings')) return options.failFor?.holdings?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(equityHoldingsHtml);
       if (url.includes('EtfDividHistory')) return new Response(distributionHtml);
@@ -593,21 +594,47 @@ describe('pipeline', () => {
     });
   });
 
-  test('stops taking new funds at the soft deadline, still writes the index and resumes after the last fund', async () => {
+  test('stalest fund first: a deadline-truncated run refreshes the stalest, the next runs pick up the skipped funds', async () => {
     await withFeed(async (root) => {
-      const net = installMockNetwork({ delayMs: 50 });
+      // a 3-fund catalog: ETHR, FDN, FTHI
+      const catalog3 = `${catalogHtml}\n${catalogHtml.split('\n').filter((line) => line.includes('Ticker=FDN')).join('\n').replaceAll('FDN', 'ETHR')}`;
+      let clock = Date.now();
+      const realNow = Date.now;
+      let net = installMockNetwork({ catalog: catalog3 });
       try {
-        configureSoftDeadline(150);
-        const run = await main({ ...baseEnv, CONCURRENCY: '1' });
-        expect(run.stoppedAtDeadline).toBe(true);
-        expect(run.updated).toBe(1);
-        expect(readIndex(root).funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI']);
-        expect(JSON.parse(readFileSync(`${root}/update-state.json`, 'utf8')).cursor).toBe('FDN');
-        configureSoftDeadline(25 * 60_000);
-        const next = await main({ ...baseEnv, CONCURRENCY: '1' });
-        expect(next).toMatchObject({ updated: 2, stoppedAtDeadline: false });
+        expect((await main({ ...baseEnv, CONCURRENCY: '1' })).updated).toBe(3);
+        // published as-of dates: FTHI stalest, then ETHR, then FDN (alphabetical order would be ETHR, FDN, FTHI)
+        const asOf: Record<string, [string, string]> = { FTHI: ['Jan 10 2026', '2026-01-10'], ETHR: ['Feb 10 2026', '2026-02-10'], FDN: ['Mar 01 2026', '2026-03-01'] };
+        const index = readIndex(root);
+        expect(index.funds.map((fund: any) => fund.ticker)).toEqual(['ETHR', 'FDN', 'FTHI']);
+        for (const row of index.funds) { row.asOfDate = asOf[row.ticker][0]; row.metrics.performanceAsOf = asOf[row.ticker][1]; }
+        writeFileSync(`${root}/index.json`, JSON.stringify(index));
+        const published = new Map<string, any>(index.funds.map((row: any) => [row.ticker, row]));
+        expect(stalestFirst(['ETHR', 'FDN', 'FTHI', 'ZNEW'].map((ticker) => ({ ticker })), published).map((fund) => fund.ticker)).toEqual(['ZNEW', 'FTHI', 'ETHR', 'FDN']);
+        expect(publishedAsOf({ ...index.funds[0], dataFile: null })).toBeNull();
+        net.restore();
+
+        // fake clock: every fund summary request "takes" 2 minutes against a 1 minute soft deadline, so each run handles exactly one fund
+        const summary = `${root}.summary.md`;
+        Date.now = () => clock;
+        net = installMockNetwork({ catalog: catalog3, onSummary: () => { clock += 120_000; } });
+        const order: string[][] = [];
+        for (let run = 0; run < 3; run += 1) {
+          net.stats.summaries.length = 0;
+          configureSoftDeadline(60_000);
+          expect(await main({ ...baseEnv, CONCURRENCY: '1', GITHUB_STEP_SUMMARY: summary })).toMatchObject({ updated: 1, stoppedAtDeadline: true });
+          order.push([...net.stats.summaries]);
+        }
+        expect(order).toEqual([['FTHI'], ['ETHR'], ['FDN']]);
+        expect(readFileSync(summary, 'utf8')).toContain('1 of 3 funds refreshed, 2 keep their published state, oldest remaining published as-of: 2026-02-10 (ETHR)');
+        expect(readIndex(root).funds.map((fund: any) => fund.ticker)).toEqual(['ETHR', 'FDN', 'FTHI']);
         expect(JSON.parse(readFileSync(`${root}/update-state.json`, 'utf8')).cursor).toBeNull();
+        rmSync(summary, { force: true });
+        // a run with room left finishes every fund and reports no deadline
+        configureSoftDeadline(25 * 60_000);
+        expect(await main({ ...baseEnv, CONCURRENCY: '1' })).toMatchObject({ updated: 3, stoppedAtDeadline: false });
       } finally {
+        Date.now = realNow;
         net.restore();
       }
     });

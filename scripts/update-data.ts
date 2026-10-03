@@ -627,7 +627,7 @@ FIRSTTRUST_ prefix, which wins over the plain name):
   MAX_FETCHES          Batch size: continue after the ticker cursor saved in
                        api/firsttrust/update-state.json. Empty or 0 (the
                        default) means a full pass over every eligible fund,
-                       starting from the first ticker; the cursor is reset.
+                       stalest published as-of first; the cursor is reset.
   REQUEST_SLEEP        Minimum seconds between request starts in each worker
                        lane, including retries (default 1). Every fund needs
                        about 6 requests (summary, holdings, 2 price-history,
@@ -2103,6 +2103,41 @@ async function publishedFundTickers(): Promise<Set<string>> {
   return tickers;
 }
 
+/** Any accepted date form ("2026-09-30", "Sep 30 2026", "9/30/2026") as an ISO day, or null. */
+function isoDay(value: unknown): string | null {
+  const iso = firstTrustIsoDate(value);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso;
+  const parsed = typeof value === 'string' ? Date.parse(`${value} UTC`) : NaN;
+  return Number.isNaN(parsed) ? null : new Date(parsed).toISOString().slice(0, 10);
+}
+
+/**
+ * ISO date a published index row is refreshed up to (the latest of its dated fields),
+ * or null when the fund has no published data yet.
+ */
+export function publishedAsOf(row: JsonRecord | null | undefined): string | null {
+  if (!row || row.dataFile === null) return null;
+  const dates = [row.asOfDate, row.metrics?.performanceAsOf].map(isoDay).filter((value): value is string => value !== null);
+  return dates.length ? dates.sort()[dates.length - 1] : null;
+}
+
+/**
+ * Run order of an unbounded run: funds without published data first, then the stalest
+ * published as-of, ties alphabetical. A run cut short by the soft deadline therefore
+ * leaves the freshest funds for last, and the next run starts where this one stopped.
+ */
+export function stalestFirst<T extends { ticker: string }>(funds: T[], published: Map<string, JsonRecord>): T[] {
+  const key = (fund: T): string => publishedAsOf(published.get(fund.ticker)) ?? '';
+  return [...funds].sort((a, b) => (key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : a.ticker.localeCompare(b.ticker)));
+}
+
+/** One line for the log and the step summary: what a deadline-truncated run left behind. */
+export function deadlineSummary(attempted: number, total: number, remaining: Array<{ ticker: string }>, published: Map<string, JsonRecord>): string {
+  const ordered = stalestFirst(remaining, published);
+  const oldest = ordered.length ? `${publishedAsOf(published.get(ordered[0].ticker)) ?? 'never published'} (${ordered[0].ticker})` : 'none';
+  return `${attempted} of ${total} funds refreshed, ${remaining.length} keep their published state, oldest remaining published as-of: ${oldest}`;
+}
+
 type UpdateState = { cursor: string | null; savedAt: string };
 
 async function readUpdateState(): Promise<UpdateState | null> {
@@ -2598,10 +2633,15 @@ export async function main(env: Record<string, string | undefined> = process.env
   // K: a TICKERS run never reads, writes or deletes the cursor; the cursor is scoped to the (already filtered) universe and wraps around.
   const useCursor = requested.size === 0;
   const state = useCursor ? await readUpdateState() : null;
-  const cursor = state?.cursor || null;
+  // A bounded run walks the alphabetical cursor; an unbounded run goes stalest first, so a run cut short by
+  // the soft deadline leaves the freshest funds for last and the next run starts with the skipped ones.
+  const cursor = config.maxFetches > 0 ? state?.cursor || null : null;
   const cursorIndex = cursor ? universe.findIndex((fund) => fund.ticker === cursor) : -1;
-  const ordered = cursorIndex >= 0 ? universe.slice(cursorIndex + 1).concat(universe.slice(0, cursorIndex + 1)) : universe.slice();
+  const ordered = config.maxFetches > 0
+    ? (cursorIndex >= 0 ? universe.slice(cursorIndex + 1).concat(universe.slice(0, cursorIndex + 1)) : universe.slice())
+    : stalestFirst(universe, previousIndex);
   const queue = ordered.slice();
+  const queued = queue.length;
   const results = new Map<string, JsonRecord>();
   let processed = 0;
   let lastProcessedTicker: string | null = cursor;
@@ -2611,12 +2651,12 @@ export async function main(env: Record<string, string | undefined> = process.env
   const output = outputCreateReporter(API_ROOT, config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length);
   async function worker(): Promise<void> {
     for (;;) {
+      if (!queue.length) return;
       if (Date.now() - startedAt >= softDeadlineMs) {
         stoppedAtDeadline = true;
         return;
       }
-      const fund = queue.shift();
-      if (!fund) return;
+      const fund = queue.shift()!;
       if (config.maxFetches > 0 && processed >= config.maxFetches) return;
       processed += 1;
       const before = await output.before(fund.ticker);
@@ -2690,19 +2730,20 @@ export async function main(env: Record<string, string | undefined> = process.env
     funds,
   });
 
-  // Bounded runs and runs cut short by the soft deadline resume after the last processed fund; a completed full pass resets the cursor.
-  if (useCursor) await writeUpdateState(config.maxFetches > 0 || stoppedAtDeadline ? lastProcessedTicker : null);
-  if (stoppedAtDeadline) console.log(`[ deadline ] soft deadline of ${Math.round(softDeadlineMs / 1000)} s reached: remaining funds keep their published state, the next run continues after ${lastProcessedTicker ?? 'the start'}`);
+  // Only a bounded run owns the cursor and resumes after the last processed fund; unbounded runs reset it (their order is stalest first).
+  if (useCursor) await writeUpdateState(config.maxFetches > 0 ? lastProcessedTicker : null);
+  const deadlineText = stoppedAtDeadline ? `soft deadline of ${Math.round(softDeadlineMs / 1000)} s reached: ${deadlineSummary(processed, queued, queue, previousIndex)}` : '';
+  if (stoppedAtDeadline) console.log(`[ deadline ] ${deadlineText}; the next run starts with them`);
 
   console.log('');
   console.log(`[ done     ] ${results.size} funds updated, ${keptFromPrevious} kept from previous runs, ${failures} failures`);
   console.log(`[ done     ] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
-  console.log(`[ cursor   ] ${useCursor ? ((config.maxFetches > 0 || stoppedAtDeadline) && lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)') : 'TICKERS run: cursor untouched'}`);
+  console.log(`[ cursor   ] ${useCursor ? (config.maxFetches > 0 && lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'unbounded run (cursor reset)') : 'TICKERS run: cursor untouched'}`);
 
   if (env.GITHUB_STEP_SUMMARY) {
     await appendFile(
       env.GITHUB_STEP_SUMMARY,
-      `### First Trust data update\n\n${newFunds.length ? `- NEW FUNDS: ${newFunds.join(', ')}\n` : ''}- updated: ${results.size}\n- kept from previous runs: ${keptFromPrevious}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n`,
+      `### First Trust data update\n\n${newFunds.length ? `- NEW FUNDS: ${newFunds.join(', ')}\n` : ''}- updated: ${results.size}\n- kept from previous runs: ${keptFromPrevious}\n- failed: ${failures}\n${stoppedAtDeadline ? `- ${deadlineText}\n` : ''}- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n`,
       'utf8',
     );
   }
