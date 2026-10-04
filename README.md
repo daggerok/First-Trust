@@ -60,13 +60,24 @@ The updater uses issuer-published NAV performance values for month-end and quart
 
 - `metrics.returnsBasis` is always a non-empty label of how returns are computed: official First Trust NAV total returns from the month-end performance table, with cumulative 3-, 5- and 10-year values derived from the published annualized ones
 - `metrics.performanceAsOf` is the ISO date (`YYYY-MM-DD`) of that performance table, not the NAV date; it is `null` only for funds without a published performance table yet (for example newly launched funds)
+- `metrics.dividendYieldBasis` is a short code for the definition behind `dividendYield`, `null` exactly when `dividendYield` is `null` (the free text stays in `meta.json` as `yields.dividendYieldKind`); the code is kept together with the yield it describes when a previous value is retained
+
+| `dividendYieldBasis` | When First Trust data uses it |
+| --- | --- |
+| `official-trailing-12m` | the 12-month (trailing) distribution rate published on the fund summary page or in the ETF list (the normal case) |
+| `indicated` | updater estimate used only when First Trust publishes no rate: latest ordinary distribution x inferred payments per year / market price |
+| `official-other` | a retained First Trust yield whose source text is unknown (legacy row without a code) |
+| `null` | no yield available |
+
+`official-distribution-rate` and `computed-trailing-12m` are not produced for this brand
+
 - Net assets, expense ratios, SEC yield, distribution rates and NAV returns are issuer-published values; NAV and market price come from the official daily export
 - Yahoo Finance history (used only if the official export fails) carries market price only, so it is an estimate and the NAV and premium/discount columns stay blank
 - SEC N-PORT-P holdings are a periodic snapshot and may be less current than the issuer's daily holdings
 - Each fund stores an as-of date and a source label for its holdings and history
 - Unavailable values are shown as unavailable, never as `0`
 - Unselected funds keep their previously published entries and data files, and a limited ticker run preserves the full catalog
-- `metrics` always carries the same keys (`ytd`, `tr1y`, `tr3y`, `tr5y`, `tr10y`, `cagr3y`, `cagr5y`, `cagr10y`, `siAnn`, `dividendYield`, `dividendYieldText`, `secYield`, `secYieldText`, `returnsBasis`, `performanceAsOf`)
+- `metrics` always carries the same keys (`ytd`, `tr1y`, `tr3y`, `tr5y`, `tr10y`, `cagr3y`, `cagr5y`, `cagr10y`, `siAnn`, `dividendYield`, `dividendYieldText`, `dividendYieldBasis`, `secYield`, `secYieldText`, `returnsBasis`, `performanceAsOf`)
 - A fund that is in the catalog but has no `funds/<TICKER>/meta.json` yet is listed with `dataFile: null` and all-null metrics; every fund that has a `meta.json` stays listed
 - Every fund is either fully updated or fully kept: when its summary page, holdings, history or distributions cannot be read in a run, nothing is written for it and its previous published state stays untouched (a first publication of a new fund writes what is available)
 - An SEC N-PORT-P fallback never replaces holdings that are newer than the filing

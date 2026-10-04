@@ -12,6 +12,7 @@ import {
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
+  resolveYieldBasis, yieldBasisFromKind,
   CONTROL_NAMES, resolveControls, runtimeControls, isCertError, installSystemCa,
   type Fund,
 } from './update-data';
@@ -397,7 +398,7 @@ describe('metrics', () => {
     // No meta.json exists for a catalog-only row: the hub must see dataFile null, not a dead link.
     expect(entry.dataFile).toBeNull();
     // Same metrics key set as the sibling feeds, ytd included.
-    expect(Object.keys(entry.metrics)).toEqual(['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf']);
+    expect(Object.keys(entry.metrics)).toEqual(['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf']);
     expect(entry.metrics.ytd).toBe(6.87);
     // A previously published row without ytd (old shape) is brought to the current key set and keeps a real dataFile only when meta.json exists.
     const old = { ...entry, dataFile: './funds/FTHI/meta.json', metrics: { tr1y: 12.02, dividendYield: 8.86 } };
@@ -442,6 +443,43 @@ describe('metrics', () => {
     // performanceAsOf is the performance table date (Aug 31), never the NAV date (Sep 25)
     expect(Object.keys(entry.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
     expect(entry.metrics).toMatchObject({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
+  });
+
+  test('dividendYieldBasis: one code per yield source, null with a null yield, the same key set on fresh, rebuilt, retained and placeholder rows', () => {
+    const [fdn, fthi] = parseCatalogHtml(catalogHtml);
+    // catalog rate (12-Month Trailing Distribution Rate column) and an empty catalog cell
+    expect(fthi).toMatchObject({ dividendYield: 8.86, dividendYieldBasis: 'official-trailing-12m' });
+    expect(fdn).toMatchObject({ dividendYield: null, dividendYieldBasis: null });
+    const placeholder = catalogOnlyEntry(fthi);
+    expect(placeholder.metrics.dividendYieldBasis).toBe('official-trailing-12m');
+    expect(catalogOnlyEntry(fdn).metrics).toMatchObject({ dividendYield: null, dividendYieldBasis: null });
+    // rebuilt from meta: stored code, kind text of every source, and a null yield
+    const base = { returns: { monthEnd: parseSummaryHtml(summaryHtml).monthEnd, quarterEnd: null }, holdings: { totalRows: 1 }, history: { totalRows: 1 } };
+    const kinds: [string, string][] = [
+      ['First Trust published 12-month distribution rate as of Aug 31 2026', 'official-trailing-12m'],
+      ['First Trust ETF list 12-month trailing distribution rate as of Aug 31 2026', 'official-trailing-12m'],
+      ['Indicated from the latest ordinary distribution per share x inferred payments per year / market price', 'indicated'],
+      ['First Trust something new', 'official-other'],
+      ['some other wording', 'indicated'],
+    ];
+    const rebuilt = [{ yields: { dividendYield: 8.86, dividendYieldBasis: 'indicated' } }, { yields: { dividendYield: null, dividendYieldBasis: 'indicated' } }, { yields: {} },
+      ...kinds.map(([kind]) => ({ yields: { dividendYield: 5, dividendYieldKind: kind } })), { yields: { dividendYield: 5 } }]
+      .map((meta) => indexEntryFromMeta({ ...fthi }, { ...base, ...meta }));
+    expect(rebuilt.map((row) => row.metrics.dividendYieldBasis)).toEqual(['indicated', null, null, ...kinds.map(([, code]) => code), 'official-other']);
+    for (const [kind, code] of kinds) expect(yieldBasisFromKind(kind)).toBe(code);
+    expect(resolveYieldBasis(0, null, 'First Trust published 12-month distribution rate')).toBe('official-trailing-12m');
+    expect(resolveYieldBasis(null, 'indicated')).toBeNull();
+    const keys = Object.keys(placeholder.metrics);
+    for (const row of rebuilt) expect(Object.keys(row.metrics)).toEqual(keys);
+    // retained rows: legacy row without the key gets it (kind text of the same yield decides), a stale code never outlives its yield
+    const legacy = { ...placeholder, dataFile: './funds/FTHI/meta.json', metrics: { tr1y: 12.02, dividendYield: 8.86, dividendYieldText: '8.86%' } };
+    const withMeta = normalizePreviousRow(legacy, true, { yields: { dividendYield: 8.86, dividendYieldKind: kinds[2][0] } });
+    expect(withMeta.metrics.dividendYieldBasis).toBe('indicated');
+    expect(Object.keys(withMeta.metrics).indexOf('dividendYieldBasis')).toBe(Object.keys(withMeta.metrics).indexOf('dividendYieldText') + 1);
+    const otherYield = normalizePreviousRow(legacy, true, { yields: { dividendYield: 7, dividendYieldKind: kinds[2][0] } });
+    expect(otherYield.metrics.dividendYieldBasis).toBe('official-other');
+    expect(normalizePreviousRow({ ...legacy, metrics: { ...legacy.metrics, dividendYield: null, dividendYieldBasis: 'indicated' } }, false).metrics.dividendYieldBasis).toBeNull();
+    expect(normalizePreviousRow(legacy, false).metrics).toHaveProperty('dividendYieldBasis', 'official-other');
   });
 
   test('catalog-only and full rows expose exactly the same metrics keys', () => {
@@ -525,6 +563,7 @@ describe('pipeline', () => {
         const index = readIndex(root);
         expect(index.funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI']);
         expect(index.funds.every((fund: any) => fund.dataFile === `./funds/${fund.ticker}/meta.json` && 'ytd' in fund.metrics)).toBe(true);
+        for (const fund of index.funds) expect(fund.metrics.dividendYieldBasis).toBe(fund.metrics.dividendYield === null ? null : 'official-trailing-12m');
         expect(readdirSync(`${root}/funds/FTHI`).sort()).toEqual(['history', 'holdings', 'meta.json']);
         const before = snapshotTree(root);
         // Run timestamps have one-second granularity: cross a second boundary so a missing zero-diff check cannot hide.
