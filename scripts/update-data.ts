@@ -927,6 +927,27 @@ export function mapReturnRow(header: string[], values: string[], asOfDate: strin
   return result;
 }
 
+/** Which definition stands behind `dividendYield` (index metrics key `dividendYieldBasis`). */
+export type YieldBasis = 'official-trailing-12m' | 'official-distribution-rate' | 'official-other' | 'computed-trailing-12m' | 'indicated';
+export const YIELD_BASES: readonly YieldBasis[] = ['official-trailing-12m', 'official-distribution-rate', 'official-other', 'computed-trailing-12m', 'indicated'];
+
+/** Exhaustive lookup of every `yields.dividendYieldKind` text this updater has written. Unknown text: First Trust wording -> official-other, anything else -> indicated. */
+export function yieldBasisFromKind(kind: unknown): YieldBasis {
+  const text = typeof kind === 'string' ? kind : '';
+  if (text.startsWith('First Trust published 12-month distribution rate')) return 'official-trailing-12m';
+  if (text.startsWith('First Trust ETF list 12-month trailing distribution rate')) return 'official-trailing-12m';
+  if (text.startsWith('Indicated from the latest ordinary distribution')) return 'indicated';
+  return text.startsWith('First Trust') ? 'official-other' : 'indicated';
+}
+
+/** The code travels with the yield it describes: null exactly when the yield is null; a valid stored code wins; else the kind text; else official-other (a published yield of unknown definition). */
+export function resolveYieldBasis(dividendYield: number | null, code: unknown, kind?: unknown): YieldBasis | null {
+  if (dividendYield === null) return null;
+  const known = YIELD_BASES.find((item) => item === code);
+  if (known) return known;
+  return typeof kind === 'string' && kind ? yieldBasisFromKind(kind) : 'official-other';
+}
+
 export type Fund = {
   ticker: string;
   name: string;
@@ -936,6 +957,7 @@ export type Fund = {
   terValue: number | null;
   netExpenseRatio: number | null;
   dividendYield: number | null;
+  dividendYieldBasis: YieldBasis | null;
   secYield: number | null;
   unsubsidizedSecYield: number | null;
   inceptionListed: string | null;
@@ -977,7 +999,7 @@ export function parseEtfListTables(html: string): ListTable[] {
 function emptyFund(ticker: string, name: string, category: string): Fund {
   return {
     ticker, name, category, navValue: null, aumValue: null, terValue: null, netExpenseRatio: null,
-    dividendYield: null, secYield: null, unsubsidizedSecYield: null, inceptionListed: null, yieldAsOf: null,
+    dividendYield: null, dividendYieldBasis: null, secYield: null, unsubsidizedSecYield: null, inceptionListed: null, yieldAsOf: null,
     returns: null, trustCik: null,
   };
 }
@@ -999,6 +1021,7 @@ export function parseCatalogHtml(html: string): Fund[] {
       fund.secYield = toNumber(cell(row.cells, secAt));
       fund.unsubsidizedSecYield = toNumber(cell(row.cells, unsubsidizedAt));
       fund.dividendYield = toNumber(cell(row.cells, rateAt));
+      fund.dividendYieldBasis = fund.dividendYield === null ? null : 'official-trailing-12m';
       fund.yieldAsOf = firstTrustIsoDate(cell(row.cells, yieldAsOfAt)) || null;
       byTicker.set(row.ticker, fund);
     }
@@ -1831,7 +1854,8 @@ export function applySummary(fund: Fund, summary: Summary): Fund {
   fund.aumValue = toNumber(summaryValue(summary, 'Total Net Assets', 'Net Assets')?.value) ?? fund.aumValue;
   fund.navValue = toNumber(summaryValue(summary, 'Closing NAV')?.value) ?? fund.navValue;
   fund.secYield = toNumber(summaryValue(summary, '30-Day SEC Yield')?.value) ?? fund.secYield;
-  fund.dividendYield = toNumber(summaryValue(summary, '12-Month Distribution Rate')?.value) ?? fund.dividendYield;
+  const summaryRate = toNumber(summaryValue(summary, '12-Month Distribution Rate')?.value);
+  if (summaryRate !== null) { fund.dividendYield = summaryRate; fund.dividendYieldBasis = 'official-trailing-12m'; }
   if (summary.monthEnd.asOfDate) fund.returns = { monthEnd: summary.monthEnd, quarterEnd: summary.quarterEnd };
   return fund;
 }
@@ -1855,6 +1879,7 @@ function cachedFundFromIndex(item: JsonRecord): Fund {
   fund.aumValue = toNumber(item.aumValue);
   fund.terValue = toNumber(item.terValue);
   fund.dividendYield = toNumber(metrics.dividendYield);
+  fund.dividendYieldBasis = resolveYieldBasis(fund.dividendYield, metrics.dividendYieldBasis);
   fund.secYield = toNumber(metrics.secYield);
   if (isRecord(item.returns)) fund.returns = { monthEnd: returnRowFrom(item.returns.monthEnd), quarterEnd: returnRowFrom(item.returns.quarterEnd) };
   return fund;
@@ -1866,7 +1891,7 @@ function mergePrevious(fund: Fund, previous: JsonRecord | undefined): Fund {
   const cached = cachedFundFromIndex(previous);
   fund.aumValue = fund.aumValue ?? cached.aumValue;
   fund.terValue = fund.terValue ?? cached.terValue;
-  fund.dividendYield = fund.dividendYield ?? cached.dividendYield;
+  if (fund.dividendYield === null) { fund.dividendYield = cached.dividendYield; fund.dividendYieldBasis = cached.dividendYieldBasis; }
   fund.secYield = fund.secYield ?? cached.secYield;
   fund.returns = fund.returns ?? cached.returns;
   return fund;
@@ -1889,6 +1914,7 @@ export function indexEntryFromMeta(fund: Fund, meta: JsonRecord): JsonRecord {
   const history = isRecord(meta.history) ? toNumber(meta.history.totalRows) ?? 0 : 0;
   const navValue = toNumber(nav.value), closeValue = toNumber(market.value), aumValue = toNumber(aum.value), terValue = toNumber(expense.value);
   const dividendYield = toNumber(yields.dividendYield), secYield = toNumber(yields.secYield);
+  const dividendYieldBasis = resolveYieldBasis(dividendYield, yields.dividendYieldBasis, yields.dividendYieldKind);
   const withDisplayDate = (row: ReturnRow): JsonRecord => ({ ...row, asOfDate: row.asOfDate ? displayDate(row.asOfDate) : null });
   return {
     ticker: fund.ticker,
@@ -1919,6 +1945,7 @@ export function indexEntryFromMeta(fund: Fund, meta: JsonRecord): JsonRecord {
       ...metricsFromReturns(monthEnd),
       dividendYield,
       dividendYieldText: dividendYield === null ? null : formatPercent(dividendYield),
+      dividendYieldBasis,
       secYield,
       secYieldText: secYield === null ? null : formatPercent(secYield),
       ...returnsProvenance(monthEnd),
@@ -1929,15 +1956,24 @@ export function indexEntryFromMeta(fund: Fund, meta: JsonRecord): JsonRecord {
 }
 
 /** A previously published index row kept as is, with the current metrics key set and a dataFile that matches reality. */
-export function normalizePreviousRow(row: JsonRecord, hasMeta: boolean): JsonRecord {
+export function normalizePreviousRow(row: JsonRecord, hasMeta: boolean, meta?: JsonRecord): JsonRecord {
   const returns = isRecord(row.returns) ? row.returns : {};
   const metrics = isRecord(row.metrics) ? row.metrics : {};
   const monthEnd = returnRowFrom(returns.monthEnd);
-  return {
-    ...row,
-    dataFile: hasMeta ? row.dataFile ?? `./funds/${row.ticker}/meta.json` : null,
-    metrics: { ...metricsFromReturns(monthEnd), ...metrics, ytd: 'ytd' in metrics ? metrics.ytd : monthEnd.ytd },
-  };
+  const yields = meta && isRecord(meta.yields) ? meta.yields : {};
+  const merged: JsonRecord = { ...metricsFromReturns(monthEnd), ...metrics, ytd: 'ytd' in metrics ? metrics.ytd : monthEnd.ytd };
+  // The code is judged against the yield in this row: a stored code wins, then the meta kind text of the same yield, never a code for another yield.
+  const dividendYield = toNumber(merged.dividendYield);
+  const kind = toNumber(yields.dividendYield) === dividendYield ? yields.dividendYieldKind : undefined;
+  const basis = resolveYieldBasis(dividendYield, merged.dividendYieldBasis, kind);
+  const ordered: JsonRecord = {};
+  for (const [key, value] of Object.entries(merged)) {
+    if (key === 'dividendYieldBasis') continue;
+    ordered[key] = value;
+    if (key === 'dividendYieldText') ordered.dividendYieldBasis = basis;
+  }
+  if (!('dividendYieldBasis' in ordered)) ordered.dividendYieldBasis = basis;
+  return { ...row, dataFile: hasMeta ? row.dataFile ?? `./funds/${row.ticker}/meta.json` : null, metrics: ordered };
 }
 
 /** Catalog-only entry (ETF list + NAV performance view) for funds that have never been fetched: no meta.json exists, so dataFile is null. */
@@ -1971,6 +2007,7 @@ export function catalogOnlyEntry(fund: Fund): JsonRecord {
       ...metricsFromReturns(monthEnd),
       dividendYield: fund.dividendYield,
       dividendYieldText: fund.dividendYield === null ? null : formatPercent(fund.dividendYield),
+      dividendYieldBasis: resolveYieldBasis(fund.dividendYield, fund.dividendYieldBasis),
       secYield: fund.secYield,
       secYieldText: fund.secYield === null ? null : formatPercent(fund.secYield),
       ...returnsProvenance(monthEnd),
@@ -2245,6 +2282,7 @@ type FundResult = { meta: JsonRecord; officialHistoryCount: number | null; yahoo
 async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult> {
   const summary = await loadSummary(fund.ticker, config);
   const catalogRate = fund.dividendYield;
+  const catalogBasis = resolveYieldBasis(catalogRate, fund.dividendYieldBasis);
   applySummary(fund, summary);
   const priorMeta = await readJson(new URL(`funds/${fund.ticker}/meta.json`, API_ROOT));
   const prior = isRecord(priorMeta) ? priorMeta : {};
@@ -2360,6 +2398,7 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
   const rate12 = toNumber(ratePair?.value);
   const indicated = indicatedYield(distSummary.latest, PAYMENTS_PER_YEAR[distSummary.frequency ?? ''] ?? null, market);
   const dividendYield = rate12 ?? catalogRate ?? indicated;
+  const dividendYieldBasis: YieldBasis | null = rate12 !== null ? 'official-trailing-12m' : catalogRate !== null ? catalogBasis : indicated !== null ? 'indicated' : null;
   const navAsOf = summary.navAsOf ?? historyAsOf;
   const monthEnd = summary.monthEnd.asOfDate ? summary.monthEnd : fund.returns?.monthEnd ?? emptyReturns();
   const quarterEnd = summary.quarterEnd.asOfDate ? summary.quarterEnd : fund.returns?.quarterEnd ?? emptyReturns();
@@ -2393,6 +2432,7 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
     yields: {
       dividendYield,
       dividendYieldText: dividendYield === null ? null : formatPercent(dividendYield),
+      dividendYieldBasis,
       dividendYieldKind: rate12 !== null
         ? `First Trust published 12-month distribution rate${ratePair?.asOf ? ` as of ${displayDate(ratePair.asOf)}` : ''}`
         : catalogRate !== null
@@ -2691,7 +2731,8 @@ export async function main(env: Record<string, string | undefined> = process.env
     listed.add(fund.ticker);
     if (fresh) funds.push(fresh);
     else if (previous && (published.has(fund.ticker) || !live)) {
-      funds.push(normalizePreviousRow(previous, published.has(fund.ticker)));
+      const keptMeta = published.has(fund.ticker) ? await readJson(new URL(`funds/${fund.ticker}/meta.json`, API_ROOT)) : null;
+      funds.push(normalizePreviousRow(previous, published.has(fund.ticker), isRecord(keptMeta) ? keptMeta : undefined));
       keptFromPrevious += 1;
     } else if (published.has(fund.ticker)) {
       const meta = await readJson(new URL(`funds/${fund.ticker}/meta.json`, API_ROOT));
