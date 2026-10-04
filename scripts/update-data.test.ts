@@ -14,7 +14,7 @@ import {
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
   resolveYieldBasis, yieldBasisFromKind,
   CONTROL_NAMES, resolveControls, runtimeControls, isCertError, installSystemCa,
-  type Fund,
+  type Fund, type YieldBasis,
 } from './update-data';
 
 // Fixtures below are trimmed verbatim fragments of the official ftportfolios.com pages (captured 2026-09-28).
@@ -455,7 +455,7 @@ describe('metrics', () => {
     expect(catalogOnlyEntry(fdn).metrics).toMatchObject({ dividendYield: null, dividendYieldBasis: null });
     // rebuilt from meta: stored code, kind text of every source, and a null yield
     const base = { returns: { monthEnd: parseSummaryHtml(summaryHtml).monthEnd, quarterEnd: null }, holdings: { totalRows: 1 }, history: { totalRows: 1 } };
-    const kinds: [string, string][] = [
+    const kinds: [string, YieldBasis][] = [
       ['First Trust published 12-month distribution rate as of Aug 31 2026', 'official-trailing-12m'],
       ['First Trust ETF list 12-month trailing distribution rate as of Aug 31 2026', 'official-trailing-12m'],
       ['Indicated from the latest ordinary distribution per share x inferred payments per year / market price', 'indicated'],
