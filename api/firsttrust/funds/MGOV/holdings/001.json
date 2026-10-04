@@ -22,7 +22,7 @@
    "Name": "GNMA G2 MA7366, 2%, due 05/20/2051",
    "Ticker": "-",
    "Identifier": "36179WFF0",
-   "Weight": "3.99",
+   "Weight": "3.98",
    "Market Value": "0",
    "Shares Held": "5001706",
    "Asset Category": "-"
@@ -37,21 +37,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Fannie Mae FN MA4057, 2.50%, due 06/01/2050",
-   "Ticker": "-",
-   "Identifier": "31418DQK1",
-   "Weight": "2.63",
-   "Market Value": "0",
-   "Shares Held": "3270919",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Fannie Mae FN MA4392, 2.50%, due 07/01/2051",
    "Ticker": "-",
    "Identifier": "31418D3A8",
    "Weight": "2.63",
    "Market Value": "0",
    "Shares Held": "3280842",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae FN MA4057, 2.50%, due 06/01/2050",
+   "Ticker": "-",
+   "Identifier": "31418DQK1",
+   "Weight": "2.62",
+   "Market Value": "0",
+   "Shares Held": "3270919",
    "Asset Category": "-"
   },
   {
@@ -175,7 +175,7 @@
    "Name": "Freddie Mac Series 4639, Class HZ, Variable rate, due 04/15/2053",
    "Ticker": "-",
    "Identifier": "3137BTEH0",
-   "Weight": "1.51",
+   "Weight": "1.5",
    "Market Value": "0",
    "Shares Held": "1882490",
    "Asset Category": "-"
@@ -184,7 +184,7 @@
    "Name": "Freddie Mac FT ZT2264, 4%, due 03/01/2044",
    "Ticker": "-",
    "Identifier": "3132AEQR0",
-   "Weight": "1.47",
+   "Weight": "1.46",
    "Market Value": "0",
    "Shares Held": "1563924",
    "Asset Category": "-"
@@ -325,15 +325,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "GNMA Series 2025-4, Class FY, Variable rate, due 01/20/2055",
-   "Ticker": "-",
-   "Identifier": "38385CCE6",
-   "Weight": "1.06",
-   "Market Value": "0",
-   "Shares Held": "1035545",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Fannie Mae Series 2016-94, Class MB, 2.50%, due 12/25/2046",
    "Ticker": "-",
    "Identifier": "3136AULL3",
@@ -343,19 +334,19 @@
    "Asset Category": "-"
   },
   {
-   "Name": "GNMA Series 2023-81, Class YD, 4%, due 06/20/2053",
+   "Name": "GNMA Series 2025-4, Class FY, Variable rate, due 01/20/2055",
    "Ticker": "-",
-   "Identifier": "38384BJS1",
-   "Weight": "1.04",
+   "Identifier": "38385CCE6",
+   "Weight": "1.05",
    "Market Value": "0",
-   "Shares Held": "1200000",
+   "Shares Held": "1035545",
    "Asset Category": "-"
   },
   {
    "Name": "U.S. Treasury Bill, 0%, due 10/06/2026",
    "Ticker": "-",
    "Identifier": "912797VK0",
-   "Weight": "1.03",
+   "Weight": "1.04",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
@@ -364,7 +355,7 @@
    "Name": "U.S. Treasury Bill, 0%, due 10/08/2026",
    "Ticker": "-",
    "Identifier": "912797UJ4",
-   "Weight": "1.03",
+   "Weight": "1.04",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
@@ -373,7 +364,7 @@
    "Name": "U.S. Treasury Bill, 0%, due 10/15/2026",
    "Ticker": "-",
    "Identifier": "912797UK1",
-   "Weight": "1.03",
+   "Weight": "1.04",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
@@ -382,9 +373,18 @@
    "Name": "U.S. Treasury Bill, 0%, due 10/20/2026",
    "Ticker": "-",
    "Identifier": "912797VM6",
-   "Weight": "1.03",
+   "Weight": "1.04",
    "Market Value": "0",
    "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2023-81, Class YD, 4%, due 06/20/2053",
+   "Ticker": "-",
+   "Identifier": "38384BJS1",
+   "Weight": "1.03",
+   "Market Value": "0",
+   "Shares Held": "1200000",
    "Asset Category": "-"
   },
   {
@@ -679,7 +679,7 @@
    "Name": "Barclays Commercial Mortgage Securities LLC Series 2018-TALL, Class A, Variable rate, due 03/15/2037",
    "Ticker": "-",
    "Identifier": "05548WAA5",
-   "Weight": "0.42",
+   "Weight": "0.43",
    "Market Value": "0",
    "Shares Held": "440000",
    "Asset Category": "-"
@@ -1111,7 +1111,7 @@
    "Name": "Preston Ridge Partners Mortgage Trust Series 2026-NQM1, Class A1, Variable rate, due 02/25/2071",
    "Ticker": "-",
    "Identifier": "74391DAC7",
-   "Weight": "0.22",
+   "Weight": "0.23",
    "Market Value": "0",
    "Shares Held": "222995",
    "Asset Category": "-"
@@ -1621,6 +1621,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "2027-02-19 US 5YR NOTE (CBT) Mar27 P 101",
+   "Ticker": "-",
+   "Identifier": "FVH7P 101",
+   "Weight": "0",
+   "Market Value": "0",
+   "Shares Held": "-3",
+   "Asset Category": "-"
+  },
+  {
    "Name": "2027-02-19 US 5YR NOTE (CBT) Mar27 P 103",
    "Ticker": "-",
    "Identifier": "FVH7P 103",
@@ -1725,7 +1734,7 @@
    "Identifier": "-",
    "Weight": "0",
    "Market Value": "0",
-   "Shares Held": "63",
+   "Shares Held": "51",
    "Asset Category": "-"
   },
   {
@@ -1734,7 +1743,7 @@
    "Identifier": "-",
    "Weight": "0",
    "Market Value": "0",
-   "Shares Held": "68",
+   "Shares Held": "80",
    "Asset Category": "-"
   },
   {
@@ -1771,15 +1780,6 @@
    "Weight": "-0.01",
    "Market Value": "0",
    "Shares Held": "-6",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "2026-11-20 US 5YR NOTE (CBT) Dec26 P 105",
-   "Ticker": "-",
-   "Identifier": "FVZ6P 105",
-   "Weight": "-0.01",
-   "Market Value": "0",
-   "Shares Held": "-9",
    "Asset Category": "-"
   },
   {
@@ -1828,6 +1828,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "2026-11-20 US 5YR NOTE (CBT) Dec26 P 105",
+   "Ticker": "-",
+   "Identifier": "FVZ6P 105",
+   "Weight": "-0.02",
+   "Market Value": "0",
+   "Shares Held": "-9",
+   "Asset Category": "-"
+  },
+  {
    "Name": "2026-11-20 US 5YR NOTE (CBT) Dec26 P 105.50",
    "Ticker": "-",
    "Identifier": "FVZ6P 105.5",
@@ -1852,15 +1861,6 @@
    "Weight": "-0.03",
    "Market Value": "0",
    "Shares Held": "-8",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "2026-11-20 US LONG BOND(CBT) Dec26 P 108",
-   "Ticker": "-",
-   "Identifier": "USZ6P 108",
-   "Weight": "-0.03",
-   "Market Value": "0",
-   "Shares Held": "-6",
    "Asset Category": "-"
   },
   {
@@ -1897,6 +1897,15 @@
    "Weight": "-0.04",
    "Market Value": "0",
    "Shares Held": "-9",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "2026-11-20 US LONG BOND(CBT) Dec26 P 108",
+   "Ticker": "-",
+   "Identifier": "USZ6P 108",
+   "Weight": "-0.04",
+   "Market Value": "0",
+   "Shares Held": "-6",
    "Asset Category": "-"
   },
   {
@@ -1984,11 +1993,11 @@
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "-5.56",
+   "Weight": "-5.53",
    "Market Value": "0",
-   "Shares Held": "-5368233",
+   "Shares Held": "-5331604",
    "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-10-01"
+ "asOfDate": "2026-10-02"
 }

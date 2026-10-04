@@ -61,6 +61,7 @@
  "yields": {
   "dividendYield": 4.78,
   "dividendYieldText": "4.78%",
+  "dividendYieldBasis": "official-trailing-12m",
   "dividendYieldKind": "First Trust published 12-month distribution rate as of Sep 30 2026",
   "distributionRate": 5.33,
   "distributionPerShare": null,
@@ -672,8 +673,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 100,
-  "asOfDate": "2026-10-01",
+  "totalRows": 98,
+  "asOfDate": "2026-10-02",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -686,7 +687,7 @@
   "asOfDate": "2026-10-02",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 100,
+ "holdingsCount": 98,
  "historyCount": 1615,
  "distributionCount": 80,
  "netAssets": 58854706,

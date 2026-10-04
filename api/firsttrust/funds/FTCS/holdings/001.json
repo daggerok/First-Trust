@@ -10,29 +10,38 @@
  ],
  "rows": [
   {
+   "Name": "Merck & Co., Inc.",
+   "Ticker": "MRK",
+   "Identifier": "58933Y105",
+   "Weight": "2.34",
+   "Market Value": "171938356.2",
+   "Shares Held": "1191534",
+   "Asset Category": "Health Care"
+  },
+  {
    "Name": "Garmin Ltd.",
    "Ticker": "GRMN",
    "Identifier": "H2906T109",
-   "Weight": "2.34",
-   "Market Value": "171951196.98",
+   "Weight": "2.33",
+   "Market Value": "171159805.08",
    "Shares Held": "608763",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Merck & Co., Inc.",
-   "Ticker": "MRK",
-   "Identifier": "58933Y105",
-   "Weight": "2.33",
-   "Market Value": "171354504.54",
-   "Shares Held": "1191534",
-   "Asset Category": "Health Care"
+   "Name": "Airbnb, Inc. (Class A)",
+   "Ticker": "ABNB",
+   "Identifier": "009066101",
+   "Weight": "2.3",
+   "Market Value": "169038789.41",
+   "Shares Held": "1040687",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Amgen Inc.",
    "Ticker": "AMGN",
    "Identifier": "031162100",
-   "Weight": "2.29",
-   "Market Value": "168911159.8",
+   "Weight": "2.27",
+   "Market Value": "167156809.6",
    "Shares Held": "414740",
    "Asset Category": "Health Care"
   },
@@ -40,26 +49,17 @@
    "Name": "ResMed Inc.",
    "Ticker": "RMD",
    "Identifier": "761152107",
-   "Weight": "2.29",
-   "Market Value": "168838515.55",
+   "Weight": "2.27",
+   "Market Value": "167113102.73",
    "Shares Held": "763457",
    "Asset Category": "Health Care"
-  },
-  {
-   "Name": "Airbnb, Inc. (Class A)",
-   "Ticker": "ABNB",
-   "Identifier": "009066101",
-   "Weight": "2.27",
-   "Market Value": "166999042.89",
-   "Shares Held": "1040687",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Gilead Sciences, Inc.",
    "Ticker": "GILD",
    "Identifier": "375558103",
-   "Weight": "2.27",
-   "Market Value": "166875600",
+   "Weight": "2.23",
+   "Market Value": "163753046.4",
    "Shares Held": "1131360",
    "Asset Category": "Health Care"
   },
@@ -67,17 +67,26 @@
    "Name": "CME Group Inc.",
    "Ticker": "CME",
    "Identifier": "12572Q105",
-   "Weight": "2.23",
-   "Market Value": "164354577.2",
+   "Weight": "2.22",
+   "Market Value": "163139432.08",
    "Shares Held": "619972",
    "Asset Category": "Financials"
+  },
+  {
+   "Name": "Expeditors International of Washington, Inc.",
+   "Ticker": "EXPD",
+   "Identifier": "302130109",
+   "Weight": "2.18",
+   "Market Value": "159957582.66",
+   "Shares Held": "831078",
+   "Asset Category": "Industrials"
   },
   {
    "Name": "The Coca-Cola Company",
    "Ticker": "KO",
    "Identifier": "191216100",
-   "Weight": "2.18",
-   "Market Value": "160377350.7",
+   "Weight": "2.17",
+   "Market Value": "159539141.55",
    "Shares Held": "1862687",
    "Asset Category": "Consumer Staples"
   },
@@ -86,115 +95,97 @@
    "Ticker": "VRTX",
    "Identifier": "92532F100",
    "Weight": "2.15",
-   "Market Value": "158517393.32",
+   "Market Value": "157888629.14",
    "Shares Held": "312818",
-   "Asset Category": "Health Care"
-  },
-  {
-   "Name": "Automatic Data Processing, Inc.",
-   "Ticker": "ADP",
-   "Identifier": "053015103",
-   "Weight": "2.13",
-   "Market Value": "157091834.6",
-   "Shares Held": "595135",
-   "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Expeditors International of Washington, Inc.",
-   "Ticker": "EXPD",
-   "Identifier": "302130109",
-   "Weight": "2.12",
-   "Market Value": "156026583.72",
-   "Shares Held": "831078",
-   "Asset Category": "Industrials"
-  },
-  {
-   "Name": "3M Company",
-   "Ticker": "MMM",
-   "Identifier": "88579Y101",
-   "Weight": "2.11",
-   "Market Value": "154944478.26",
-   "Shares Held": "950463",
-   "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Johnson & Johnson",
-   "Ticker": "JNJ",
-   "Identifier": "478160104",
-   "Weight": "2.11",
-   "Market Value": "155294032.14",
-   "Shares Held": "600379",
    "Asset Category": "Health Care"
   },
   {
    "Name": "Mastercard Incorporated",
    "Ticker": "MA",
    "Identifier": "57636Q104",
-   "Weight": "2.09",
-   "Market Value": "153714000",
+   "Weight": "2.1",
+   "Market Value": "154345624.8",
    "Shares Held": "279480",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "3M Company",
+   "Ticker": "MMM",
+   "Identifier": "88579Y101",
+   "Weight": "2.09",
+   "Market Value": "153870455.07",
+   "Shares Held": "950463",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Automatic Data Processing, Inc.",
+   "Ticker": "ADP",
+   "Identifier": "053015103",
+   "Weight": "2.09",
+   "Market Value": "153354386.8",
+   "Shares Held": "595135",
    "Asset Category": "Industrials"
   },
   {
    "Name": "EOG Resources, Inc.",
    "Ticker": "EOG",
    "Identifier": "26875P101",
-   "Weight": "2.08",
-   "Market Value": "153461105.59",
+   "Weight": "2.09",
+   "Market Value": "153537124.82",
    "Shares Held": "1085989",
    "Asset Category": "Energy"
+  },
+  {
+   "Name": "Johnson & Johnson",
+   "Ticker": "JNJ",
+   "Identifier": "478160104",
+   "Weight": "2.09",
+   "Market Value": "153715035.37",
+   "Shares Held": "600379",
+   "Asset Category": "Health Care"
   },
   {
    "Name": "Veralto Corporation",
    "Ticker": "VLTO",
    "Identifier": "92338C103",
-   "Weight": "2.08",
-   "Market Value": "153199686.2",
+   "Weight": "2.09",
+   "Market Value": "153329241.96",
    "Shares Held": "1619447",
    "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Ross Stores, Inc.",
-   "Ticker": "ROST",
-   "Identifier": "778296103",
-   "Weight": "2.07",
-   "Market Value": "152337531.7",
-   "Shares Held": "650737",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Visa Inc. (Class A)",
    "Ticker": "V",
    "Identifier": "92826C839",
-   "Weight": "2.07",
-   "Market Value": "152469884.4",
+   "Weight": "2.08",
+   "Market Value": "152813084.64",
    "Shares Held": "423704",
-   "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Lockheed Martin Corporation",
-   "Ticker": "LMT",
-   "Identifier": "539830109",
-   "Weight": "2.05",
-   "Market Value": "150951904.5",
-   "Shares Held": "298619",
    "Asset Category": "Industrials"
   },
   {
    "Name": "Apple Inc.",
    "Ticker": "AAPL",
    "Identifier": "037833100",
-   "Weight": "2.04",
-   "Market Value": "150367279.44",
+   "Weight": "2.07",
+   "Market Value": "151901360.73",
    "Shares Held": "455217",
    "Asset Category": "Technology"
+  },
+  {
+   "Name": "Lockheed Martin Corporation",
+   "Ticker": "LMT",
+   "Identifier": "539830109",
+   "Weight": "2.05",
+   "Market Value": "150925028.79",
+   "Shares Held": "298619",
+   "Asset Category": "Industrials"
   },
   {
    "Name": "Copart, Inc.",
    "Ticker": "CPRT",
    "Identifier": "217204106",
    "Weight": "2.04",
-   "Market Value": "150160359.55",
+   "Market Value": "149775191.9",
    "Shares Held": "5502395",
    "Asset Category": "Consumer Discretionary"
   },
@@ -202,9 +193,18 @@
    "Name": "Costco Wholesale Corporation",
    "Ticker": "COST",
    "Identifier": "22160K105",
-   "Weight": "2.01",
-   "Market Value": "147733531.92",
+   "Weight": "2.02",
+   "Market Value": "148655514.2",
    "Shares Held": "161468",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Ross Stores, Inc.",
+   "Ticker": "ROST",
+   "Identifier": "778296103",
+   "Weight": "2.02",
+   "Market Value": "148719433.98",
+   "Shares Held": "650737",
    "Asset Category": "Consumer Discretionary"
   },
   {
@@ -212,53 +212,35 @@
    "Ticker": "EXE",
    "Identifier": "165167735",
    "Weight": "2.01",
-   "Market Value": "148181286.4",
+   "Market Value": "147422796.8",
    "Shares Held": "1723840",
    "Asset Category": "Energy"
   },
   {
-   "Name": "The Charles Schwab Corporation",
-   "Ticker": "SCHW",
-   "Identifier": "808513105",
+   "Name": "The Procter & Gamble Company",
+   "Ticker": "PG",
+   "Identifier": "742718109",
    "Weight": "2",
-   "Market Value": "147149223.75",
-   "Shares Held": "1495875",
-   "Asset Category": "Financials"
+   "Market Value": "146785570.13",
+   "Shares Held": "1012943",
+   "Asset Category": "Consumer Staples"
   },
   {
    "Name": "W.R. Berkley Corporation",
    "Ticker": "WRB",
    "Identifier": "084423102",
    "Weight": "1.99",
-   "Market Value": "146171694.5",
+   "Market Value": "146341414.9",
    "Shares Held": "2121505",
    "Asset Category": "Financials"
   },
   {
-   "Name": "The Procter & Gamble Company",
-   "Ticker": "PG",
-   "Identifier": "742718109",
-   "Weight": "1.98",
-   "Market Value": "145813144.85",
-   "Shares Held": "1012943",
-   "Asset Category": "Consumer Staples"
-  },
-  {
-   "Name": "Raymond James Financial, Inc.",
-   "Ticker": "RJF",
-   "Identifier": "754730109",
-   "Weight": "1.96",
-   "Market Value": "144163270.24",
-   "Shares Held": "902374",
-   "Asset Category": "Financials"
-  },
-  {
-   "Name": "Marsh & McLennan Companies, Inc.",
-   "Ticker": "MRSH",
-   "Identifier": "571748102",
-   "Weight": "1.95",
-   "Market Value": "143305886.85",
-   "Shares Held": "833901",
+   "Name": "The Charles Schwab Corporation",
+   "Ticker": "SCHW",
+   "Identifier": "808513105",
+   "Weight": "1.97",
+   "Market Value": "144651112.5",
+   "Shares Held": "1495875",
    "Asset Category": "Financials"
   },
   {
@@ -266,34 +248,25 @@
    "Ticker": "CB",
    "Identifier": "H1467J104",
    "Weight": "1.94",
-   "Market Value": "142923482.6",
+   "Market Value": "142746607.78",
    "Shares Held": "431402",
    "Asset Category": "Financials"
   },
   {
-   "Name": "Ameriprise Financial, Inc.",
-   "Ticker": "AMP",
-   "Identifier": "03076C106",
-   "Weight": "1.93",
-   "Market Value": "142401773.7",
-   "Shares Held": "287785",
+   "Name": "Raymond James Financial, Inc.",
+   "Ticker": "RJF",
+   "Identifier": "754730109",
+   "Weight": "1.94",
+   "Market Value": "142764590.54",
+   "Shares Held": "902374",
    "Asset Category": "Financials"
-  },
-  {
-   "Name": "Northrop Grumman Corporation",
-   "Ticker": "NOC",
-   "Identifier": "666807102",
-   "Weight": "1.91",
-   "Market Value": "140391658",
-   "Shares Held": "291269",
-   "Asset Category": "Industrials"
   },
   {
    "Name": "CSX Corporation",
    "Ticker": "CSX",
    "Identifier": "126408103",
-   "Weight": "1.89",
-   "Market Value": "139318467.34",
+   "Weight": "1.93",
+   "Market Value": "141982701.03",
    "Shares Held": "2993521",
    "Asset Category": "Industrials"
   },
@@ -301,89 +274,89 @@
    "Name": "Linde Plc",
    "Ticker": "LIN",
    "Identifier": "G54950103",
-   "Weight": "1.89",
-   "Market Value": "138960955.6",
+   "Weight": "1.93",
+   "Market Value": "141929915.84",
    "Shares Held": "296008",
    "Asset Category": "Basic Materials"
   },
   {
-   "Name": "PepsiCo, Inc.",
-   "Ticker": "PEP",
-   "Identifier": "713448108",
-   "Weight": "1.89",
-   "Market Value": "139155756.8",
-   "Shares Held": "1107928",
-   "Asset Category": "Consumer Staples"
+   "Name": "Marsh & McLennan Companies, Inc.",
+   "Ticker": "MRSH",
+   "Identifier": "571748102",
+   "Weight": "1.93",
+   "Market Value": "141813204.06",
+   "Shares Held": "833901",
+   "Asset Category": "Financials"
   },
   {
-   "Name": "Colgate-Palmolive Company",
-   "Ticker": "CL",
-   "Identifier": "194162103",
-   "Weight": "1.88",
-   "Market Value": "138114496.83",
-   "Shares Held": "1633911",
-   "Asset Category": "Consumer Staples"
-  },
-  {
-   "Name": "Walmart Inc.",
-   "Ticker": "WMT",
-   "Identifier": "931142103",
-   "Weight": "1.88",
-   "Market Value": "138649535.44",
-   "Shares Held": "1329844",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Kenvue Inc.",
-   "Ticker": "KVUE",
-   "Identifier": "49177J102",
-   "Weight": "1.87",
-   "Market Value": "137833322.76",
-   "Shares Held": "8004258",
-   "Asset Category": "Consumer Staples"
-  },
-  {
-   "Name": "General Dynamics Corporation",
-   "Ticker": "GD",
-   "Identifier": "369550108",
-   "Weight": "1.86",
-   "Market Value": "137138866",
-   "Shares Held": "412175",
-   "Asset Category": "Industrials"
-  },
-  {
-   "Name": "T. Rowe Price Group, Inc.",
-   "Ticker": "TROW",
-   "Identifier": "74144T108",
-   "Weight": "1.86",
-   "Market Value": "137005930.55",
-   "Shares Held": "1294585",
+   "Name": "Ameriprise Financial, Inc.",
+   "Ticker": "AMP",
+   "Identifier": "03076C106",
+   "Weight": "1.92",
+   "Market Value": "141276534.35",
+   "Shares Held": "287785",
    "Asset Category": "Financials"
   },
   {
    "Name": "Union Pacific Corporation",
    "Ticker": "UNP",
    "Identifier": "907818108",
-   "Weight": "1.86",
-   "Market Value": "137155024.98",
+   "Weight": "1.91",
+   "Market Value": "140105353.32",
    "Shares Held": "503469",
    "Asset Category": "Industrials"
   },
   {
-   "Name": "Cincinnati Financial Corporation",
-   "Ticker": "CINF",
-   "Identifier": "172062101",
-   "Weight": "1.85",
-   "Market Value": "136257077.25",
-   "Shares Held": "840315",
-   "Asset Category": "Financials"
+   "Name": "PepsiCo, Inc.",
+   "Ticker": "PEP",
+   "Identifier": "713448108",
+   "Weight": "1.9",
+   "Market Value": "139477055.92",
+   "Shares Held": "1107928",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Northrop Grumman Corporation",
+   "Ticker": "NOC",
+   "Identifier": "666807102",
+   "Weight": "1.89",
+   "Market Value": "139226582",
+   "Shares Held": "291269",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Walmart Inc.",
+   "Ticker": "WMT",
+   "Identifier": "931142103",
+   "Weight": "1.89",
+   "Market Value": "138649535.44",
+   "Shares Held": "1329844",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Colgate-Palmolive Company",
+   "Ticker": "CL",
+   "Identifier": "194162103",
+   "Weight": "1.87",
+   "Market Value": "137673340.86",
+   "Shares Held": "1633911",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Kenvue Inc.",
+   "Ticker": "KVUE",
+   "Identifier": "49177J102",
+   "Weight": "1.87",
+   "Market Value": "137673237.6",
+   "Shares Held": "8004258",
+   "Asset Category": "Consumer Staples"
   },
   {
    "Name": "Snap-on Incorporated",
    "Ticker": "SNA",
    "Identifier": "833034101",
-   "Weight": "1.85",
-   "Market Value": "135923285.36",
+   "Weight": "1.86",
+   "Market Value": "136359458.2",
    "Shares Held": "369638",
    "Asset Category": "Industrials"
   },
@@ -391,62 +364,89 @@
    "Name": "Aflac Incorporated",
    "Ticker": "AFL",
    "Identifier": "001055102",
-   "Weight": "1.84",
-   "Market Value": "135427357.38",
+   "Weight": "1.85",
+   "Market Value": "135865870.14",
    "Shares Held": "1218091",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Cincinnati Financial Corporation",
+   "Ticker": "CINF",
+   "Identifier": "172062101",
+   "Weight": "1.85",
+   "Market Value": "136089014.25",
+   "Shares Held": "840315",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "General Dynamics Corporation",
+   "Ticker": "GD",
+   "Identifier": "369550108",
+   "Weight": "1.85",
+   "Market Value": "136054845.75",
+   "Shares Held": "412175",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "T. Rowe Price Group, Inc.",
+   "Ticker": "TROW",
+   "Identifier": "74144T108",
+   "Weight": "1.84",
+   "Market Value": "135439482.7",
+   "Shares Held": "1294585",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Monster Beverage Corporation",
+   "Ticker": "MNST",
+   "Identifier": "61174X109",
+   "Weight": "1.82",
+   "Market Value": "133815124.32",
+   "Shares Held": "3116328",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Moody's Corporation",
+   "Ticker": "MCO",
+   "Identifier": "615369105",
+   "Weight": "1.79",
+   "Market Value": "131247664.56",
+   "Shares Held": "297371",
    "Asset Category": "Financials"
   },
   {
    "Name": "Paychex, Inc.",
    "Ticker": "PAYX",
    "Identifier": "704326107",
-   "Weight": "1.82",
-   "Market Value": "133925200.64",
+   "Weight": "1.79",
+   "Market Value": "131401818.24",
    "Shares Held": "1328096",
    "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Moody's Corporation",
-   "Ticker": "MCO",
-   "Identifier": "615369105",
-   "Weight": "1.81",
-   "Market Value": "133031890.56",
-   "Shares Held": "297371",
-   "Asset Category": "Financials"
-  },
-  {
-   "Name": "The TJX Companies, Inc.",
-   "Ticker": "TJX",
-   "Identifier": "872540109",
-   "Weight": "1.79",
-   "Market Value": "131395249.89",
-   "Shares Held": "983571",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Monster Beverage Corporation",
-   "Ticker": "MNST",
-   "Identifier": "61174X109",
-   "Weight": "1.78",
-   "Market Value": "131322061.92",
-   "Shares Held": "3116328",
-   "Asset Category": "Consumer Staples"
   },
   {
    "Name": "Stryker Corporation",
    "Ticker": "SYK",
    "Identifier": "863667101",
-   "Weight": "1.76",
-   "Market Value": "129640441.28",
+   "Weight": "1.78",
+   "Market Value": "130813550.49",
    "Shares Held": "474943",
    "Asset Category": "Health Care"
+  },
+  {
+   "Name": "The TJX Companies, Inc.",
+   "Ticker": "TJX",
+   "Identifier": "872540109",
+   "Weight": "1.78",
+   "Market Value": "130500200.28",
+   "Shares Held": "983571",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "American Express Company",
    "Ticker": "AXP",
    "Identifier": "025816109",
-   "Weight": "1.75",
-   "Market Value": "129147704.26",
+   "Weight": "1.76",
+   "Market Value": "129442688.92",
    "Shares Held": "427514",
    "Asset Category": "Industrials"
   },
@@ -454,8 +454,8 @@
    "Name": "The Home Depot, Inc.",
    "Ticker": "HD",
    "Identifier": "437076102",
-   "Weight": "1.72",
-   "Market Value": "126630489.98",
+   "Weight": "1.73",
+   "Market Value": "126805332.05",
    "Shares Held": "448313",
    "Asset Category": "Consumer Discretionary"
   },
@@ -464,10 +464,10 @@
    "Ticker": "-",
    "Identifier": "$USD",
    "Weight": "0.11",
-   "Market Value": "8017868.08",
-   "Shares Held": "8017868",
+   "Market Value": "7863072.17",
+   "Shares Held": "7863072",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-10-01"
+ "asOfDate": "2026-10-02"
 }

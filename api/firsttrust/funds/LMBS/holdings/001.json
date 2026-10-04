@@ -13,7 +13,7 @@
    "Name": "Fannie Mae or Freddie Mac TBA, 6%, due 06/01/2056",
    "Ticker": "-",
    "Identifier": "01F0606B6",
-   "Weight": "5.95",
+   "Weight": "5.94",
    "Market Value": "0",
    "Shares Held": "389830000",
    "Asset Category": "-"
@@ -22,9 +22,9 @@
    "Name": "Fannie Mae or Freddie Mac TBA, 5.50%, due 04/01/2056",
    "Ticker": "-",
    "Identifier": "01F0526A5",
-   "Weight": "3.7",
+   "Weight": "2.83",
    "Market Value": "0",
-   "Shares Held": "248777000",
+   "Shares Held": "190777000",
    "Asset Category": "-"
   },
   {
@@ -46,18 +46,18 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Freddie Mac FR SL2533, 4%, due 05/01/2049",
-   "Ticker": "-",
-   "Identifier": "31427PY73",
-   "Weight": "1.49",
-   "Market Value": "0",
-   "Shares Held": "108138381",
-   "Asset Category": "-"
-  },
-  {
    "Name": "U.S. Treasury Bill, 0%, due 10/20/2026",
    "Ticker": "-",
    "Identifier": "912797VM6",
+   "Weight": "1.24",
+   "Market Value": "0",
+   "Shares Held": "80000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "U.S. Treasury Bill, 0%, due 10/27/2026",
+   "Ticker": "-",
+   "Identifier": "912797VN4",
    "Weight": "1.24",
    "Market Value": "0",
    "Shares Held": "80000000",
@@ -73,10 +73,19 @@
    "Asset Category": "-"
   },
   {
+   "Name": "U.S. Treasury Bill, 0%, due 10/15/2026",
+   "Ticker": "-",
+   "Identifier": "912797UK1",
+   "Weight": "1.09",
+   "Market Value": "0",
+   "Shares Held": "70000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "U.S. Treasury Bill, 0%, due 11/03/2026",
    "Ticker": "-",
    "Identifier": "912797VP9",
-   "Weight": "1.08",
+   "Weight": "1.09",
    "Market Value": "0",
    "Shares Held": "70000000",
    "Asset Category": "-"
@@ -85,7 +94,7 @@
    "Name": "U.S. Treasury Bill, 0%, due 11/05/2026",
    "Ticker": "-",
    "Identifier": "912797UM7",
-   "Weight": "1.08",
+   "Weight": "1.09",
    "Market Value": "0",
    "Shares Held": "70000000",
    "Asset Category": "-"
@@ -94,7 +103,7 @@
    "Name": "GNMA G2 MA7366, 2%, due 05/20/2051",
    "Ticker": "-",
    "Identifier": "36179WFF0",
-   "Weight": "1.07",
+   "Weight": "1.06",
    "Market Value": "0",
    "Shares Held": "89145528",
    "Asset Category": "-"
@@ -103,7 +112,7 @@
    "Name": "GNMA G2 788612, 6%, due 11/20/2065",
    "Ticker": "-",
    "Identifier": "3622AEN51",
-   "Weight": "1.02",
+   "Weight": "1.03",
    "Market Value": "0",
    "Shares Held": "66730910",
    "Asset Category": "-"
@@ -124,6 +133,15 @@
    "Weight": "0.98",
    "Market Value": "0",
    "Shares Held": "64000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "U.S. Treasury Bill, 0%, due 11/10/2026",
+   "Ticker": "-",
+   "Identifier": "912797VW4",
+   "Weight": "0.93",
+   "Market Value": "0",
+   "Shares Held": "60000000",
    "Asset Category": "-"
   },
   {
@@ -172,6 +190,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Fannie Mae FN FA5201, 4%, due 03/01/2050",
+   "Ticker": "-",
+   "Identifier": "3140W5X74",
+   "Weight": "0.87",
+   "Market Value": "0",
+   "Shares Held": "62295113",
+   "Asset Category": "-"
+  },
+  {
    "Name": "Freddie Mac FR SL1523, 3.50%, due 07/01/2050",
    "Ticker": "-",
    "Identifier": "31427NVR7",
@@ -199,19 +226,10 @@
    "Asset Category": "-"
   },
   {
-   "Name": "U.S. Treasury Bill, 0%, due 10/27/2026",
-   "Ticker": "-",
-   "Identifier": "912797VN4",
-   "Weight": "0.78",
-   "Market Value": "0",
-   "Shares Held": "50000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "U.S. Treasury Bill, 0%, due 10/29/2026",
    "Ticker": "-",
    "Identifier": "912797SK4",
-   "Weight": "0.77",
+   "Weight": "0.78",
    "Market Value": "0",
    "Shares Held": "50000000",
    "Asset Category": "-"
@@ -238,7 +256,7 @@
    "Name": "Fannie Mae FN FA2450, 4%, due 03/01/2047",
    "Ticker": "-",
    "Identifier": "3140W2WL1",
-   "Weight": "0.66",
+   "Weight": "0.65",
    "Market Value": "0",
    "Shares Held": "46599236",
    "Asset Category": "-"
@@ -250,15 +268,6 @@
    "Weight": "0.64",
    "Market Value": "0",
    "Shares Held": "63418000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "U.S. Treasury Bond, 0%, due 05/15/2035",
-   "Ticker": "-",
-   "Identifier": "912833X88",
-   "Weight": "0.63",
-   "Market Value": "0",
-   "Shares Held": "63205000",
    "Asset Category": "-"
   },
   {
@@ -280,30 +289,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "U.S. Treasury Bill, 0%, due 10/15/2026",
-   "Ticker": "-",
-   "Identifier": "912797UK1",
-   "Weight": "0.62",
-   "Market Value": "0",
-   "Shares Held": "40000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "U.S. Treasury Bill, 0%, due 11/10/2026",
-   "Ticker": "-",
-   "Identifier": "912797VW4",
-   "Weight": "0.62",
-   "Market Value": "0",
-   "Shares Held": "40000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "U.S. Treasury Bill, 0%, due 11/17/2026",
    "Ticker": "-",
    "Identifier": "912797VX2",
    "Weight": "0.62",
    "Market Value": "0",
    "Shares Held": "40000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "U.S. Treasury Bond, 0%, due 05/15/2035",
+   "Ticker": "-",
+   "Identifier": "912833X88",
+   "Weight": "0.62",
+   "Market Value": "0",
+   "Shares Held": "63205000",
    "Asset Category": "-"
   },
   {
@@ -352,6 +352,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Fannie Mae or Freddie Mac TBA, 4%, due 06/01/2056",
+   "Ticker": "-",
+   "Identifier": "01F0406A0",
+   "Weight": "0.56",
+   "Market Value": "0",
+   "Shares Held": "41000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "U.S. Treasury Bond, 0%, due 11/15/2037",
    "Ticker": "-",
    "Identifier": "912834AD0",
@@ -361,21 +370,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Fannie Mae Series 2022-66, Class CF, Variable rate, due 10/25/2052",
-   "Ticker": "-",
-   "Identifier": "3136BN6P6",
-   "Weight": "0.48",
-   "Market Value": "0",
-   "Shares Held": "31617930",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Freddie Mac FR ZT0779, 3%, due 09/01/2047",
    "Ticker": "-",
    "Identifier": "3132AC2L3",
    "Weight": "0.48",
    "Market Value": "0",
    "Shares Held": "37063975",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2022-66, Class CF, Variable rate, due 10/25/2052",
+   "Ticker": "-",
+   "Identifier": "3136BN6P6",
+   "Weight": "0.47",
+   "Market Value": "0",
+   "Shares Held": "31617930",
    "Asset Category": "-"
   },
   {
@@ -505,6 +514,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Fannie Mae FN FS6379, 5.50%, due 11/01/2053",
+   "Ticker": "-",
+   "Identifier": "3140XNCR3",
+   "Weight": "0.41",
+   "Market Value": "0",
+   "Shares Held": "27454406",
+   "Asset Category": "-"
+  },
+  {
    "Name": "GNMA Series 2025-98, Class SX, Variable rate, due 06/20/2055",
    "Ticker": "-",
    "Identifier": "38381NPY8",
@@ -520,24 +538,6 @@
    "Weight": "0.4",
    "Market Value": "0",
    "Shares Held": "29753911",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Fannie Mae Series 2022-69, Class FA, Variable rate, due 10/25/2052",
-   "Ticker": "-",
-   "Identifier": "3136BPEZ0",
-   "Weight": "0.4",
-   "Market Value": "0",
-   "Shares Held": "26285160",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Fannie Mae Series 2025-49, Class FD, Variable rate, due 06/25/2055",
-   "Ticker": "-",
-   "Identifier": "3136BV6G8",
-   "Weight": "0.4",
-   "Market Value": "0",
-   "Shares Held": "26302579",
    "Asset Category": "-"
   },
   {
@@ -568,6 +568,24 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Fannie Mae Series 2022-69, Class FA, Variable rate, due 10/25/2052",
+   "Ticker": "-",
+   "Identifier": "3136BPEZ0",
+   "Weight": "0.39",
+   "Market Value": "0",
+   "Shares Held": "26285160",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2025-49, Class FD, Variable rate, due 06/25/2055",
+   "Ticker": "-",
+   "Identifier": "3136BV6G8",
+   "Weight": "0.39",
+   "Market Value": "0",
+   "Shares Held": "26302579",
+   "Asset Category": "-"
+  },
+  {
    "Name": "GNMA Series 2026-2, Class AF, Variable rate, due 01/20/2056",
    "Ticker": "-",
    "Identifier": "38385LKF4",
@@ -583,6 +601,15 @@
    "Weight": "0.38",
    "Market Value": "0",
    "Shares Held": "30140764",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae FN FA3009, 5.50%, due 07/01/2055",
+   "Ticker": "-",
+   "Identifier": "3140W3KX6",
+   "Weight": "0.37",
+   "Market Value": "0",
+   "Shares Held": "24740712",
    "Asset Category": "-"
   },
   {
@@ -793,6 +820,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "U.S. Treasury Bill, 0%, due 01/05/2027",
+   "Ticker": "-",
+   "Identifier": "912797WN3",
+   "Weight": "0.31",
+   "Market Value": "0",
+   "Shares Held": "20000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "U.S. Treasury Bill, 0%, due 01/19/2027",
    "Ticker": "-",
    "Identifier": "912797WQ6",
@@ -805,6 +841,15 @@
    "Name": "U.S. Treasury Bill, 0%, due 01/26/2027",
    "Ticker": "-",
    "Identifier": "912797WR4",
+   "Weight": "0.31",
+   "Market Value": "0",
+   "Shares Held": "20000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "U.S. Treasury Bill, 0%, due 02/02/2027",
+   "Ticker": "-",
+   "Identifier": "912797WS2",
    "Weight": "0.31",
    "Market Value": "0",
    "Shares Held": "20000000",
@@ -856,15 +901,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "U.S. Treasury Bond, 0%, due 08/15/2040",
-   "Ticker": "-",
-   "Identifier": "912834JB5",
-   "Weight": "0.31",
-   "Market Value": "0",
-   "Shares Held": "43500000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Fannie Mae FN FA1348, 4.50%, due 09/01/2052",
    "Ticker": "-",
    "Identifier": "3140W1QA4",
@@ -907,6 +943,15 @@
    "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "27336806",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "U.S. Treasury Bond, 0%, due 08/15/2041",
+   "Ticker": "-",
+   "Identifier": "912834KP2",
+   "Weight": "0.29",
+   "Market Value": "0",
+   "Shares Held": "43000000",
    "Asset Category": "-"
   },
   {
@@ -1036,15 +1081,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "GNMA Series 2015-30, Class DZ, 2.95%, due 05/16/2055",
-   "Ticker": "-",
-   "Identifier": "38379KAF5",
-   "Weight": "0.25",
-   "Market Value": "0",
-   "Shares Held": "18287876",
-   "Asset Category": "-"
-  },
-  {
    "Name": "GNMA Series 2026-99, Class SC, Variable rate, due 06/20/2056",
    "Ticker": "-",
    "Identifier": "38385TD57",
@@ -1087,6 +1123,15 @@
    "Weight": "0.24",
    "Market Value": "0",
    "Shares Held": "16231411",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2015-30, Class DZ, 2.95%, due 05/16/2055",
+   "Ticker": "-",
+   "Identifier": "38379KAF5",
+   "Weight": "0.24",
+   "Market Value": "0",
+   "Shares Held": "18287876",
    "Asset Category": "-"
   },
   {
@@ -1144,15 +1189,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Freddie Mac Series 5201, Class PF, Variable rate, due 03/25/2052",
-   "Ticker": "-",
-   "Identifier": "3137H6KT1",
-   "Weight": "0.23",
-   "Market Value": "0",
-   "Shares Held": "14985778",
-   "Asset Category": "-"
-  },
-  {
    "Name": "GNMA Series 2022-63, Class HZ, 2.50%, due 11/20/2051",
    "Ticker": "-",
    "Identifier": "38383RDP9",
@@ -1195,6 +1231,15 @@
    "Weight": "0.22",
    "Market Value": "0",
    "Shares Held": "15098610",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Freddie Mac Series 5201, Class PF, Variable rate, due 03/25/2052",
+   "Ticker": "-",
+   "Identifier": "3137H6KT1",
+   "Weight": "0.22",
+   "Market Value": "0",
+   "Shares Held": "14985778",
    "Asset Category": "-"
   },
   {
@@ -1360,15 +1405,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "GNMA Series 2026-99, Class HS, Variable rate, due 06/20/2056",
-   "Ticker": "-",
-   "Identifier": "38385TC25",
-   "Weight": "0.2",
-   "Market Value": "0",
-   "Shares Held": "15535878",
-   "Asset Category": "-"
-  },
-  {
    "Name": "PRP Advisors, LLC Series 2024-RPL4, Class A1, Variable rate, due 12/25/2054",
    "Ticker": "-",
    "Identifier": "74448MAA4",
@@ -1495,6 +1531,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "GNMA Series 2026-99, Class HS, Variable rate, due 06/20/2056",
+   "Ticker": "-",
+   "Identifier": "38385TC25",
+   "Weight": "0.19",
+   "Market Value": "0",
+   "Shares Held": "15535878",
+   "Asset Category": "-"
+  },
+  {
    "Name": "PMT Loan Trust Series 2025-CNF2, Class A26, Variable rate, due 01/25/2057",
    "Ticker": "-",
    "Identifier": "729911BE6",
@@ -1555,15 +1600,6 @@
    "Weight": "0.18",
    "Market Value": "0",
    "Shares Held": "11717113",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Fannie Mae Series 2024-28, Class CZ, 4%, due 05/25/2044",
-   "Ticker": "-",
-   "Identifier": "3136BRSL2",
-   "Weight": "0.18",
-   "Market Value": "0",
-   "Shares Held": "13272144",
    "Asset Category": "-"
   },
   {
@@ -1648,6 +1684,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Fannie Mae Series 2024-28, Class CZ, 4%, due 05/25/2044",
+   "Ticker": "-",
+   "Identifier": "3136BRSL2",
+   "Weight": "0.17",
+   "Market Value": "0",
+   "Shares Held": "13272144",
+   "Asset Category": "-"
+  },
+  {
    "Name": "Fannie Mae Series 2024-81, Class FE, Variable rate, due 07/25/2054",
    "Ticker": "-",
    "Identifier": "3136BTLF8",
@@ -1663,15 +1708,6 @@
    "Weight": "0.17",
    "Market Value": "0",
    "Shares Held": "11160376",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Fanniemae-Aces Series 2024-M3, Class Z, Variable rate, due 04/25/2053",
-   "Ticker": "-",
-   "Identifier": "3136BRLB1",
-   "Weight": "0.17",
-   "Market Value": "0",
-   "Shares Held": "14073095",
    "Asset Category": "-"
   },
   {
@@ -1861,6 +1897,15 @@
    "Weight": "0.16",
    "Market Value": "0",
    "Shares Held": "12326337",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fanniemae-Aces Series 2024-M3, Class Z, Variable rate, due 04/25/2053",
+   "Ticker": "-",
+   "Identifier": "3136BRLB1",
+   "Weight": "0.16",
+   "Market Value": "0",
+   "Shares Held": "14073095",
    "Asset Category": "-"
   },
   {
@@ -2197,6 +2242,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Fannie Mae or Freddie Mac TBA, 3%, due 02/01/2052",
+   "Ticker": "-",
+   "Identifier": "01F0306A1",
+   "Weight": "0.13",
+   "Market Value": "0",
+   "Shares Held": "10000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "Fannie Mae Series 2015-49, Class LE, 3%, due 07/25/2045",
    "Ticker": "-",
    "Identifier": "3136AN7L5",
@@ -2204,61 +2258,7 @@
    "Market Value": "0",
    "Shares Held": "9226460",
    "Asset Category": "-"
-  },
-  {
-   "Name": "Freddie Mac - SCRT Series 2019-3, Class MV, 3.50%, due 10/25/2058",
-   "Ticker": "-",
-   "Identifier": "35563PLK3",
-   "Weight": "0.13",
-   "Market Value": "0",
-   "Shares Held": "8923565",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Freddie Mac - STACR Series 2024-HQA1, Class M2, Variable rate, due 03/25/2044",
-   "Ticker": "-",
-   "Identifier": "35564NCA9",
-   "Weight": "0.13",
-   "Market Value": "0",
-   "Shares Held": "8000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Freddie Mac FR SD0844, 3.50%, due 07/01/2047",
-   "Ticker": "-",
-   "Identifier": "3132DM5D3",
-   "Weight": "0.13",
-   "Market Value": "0",
-   "Shares Held": "9384503",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Freddie Mac Series 5255, Class KZ, 4%, due 06/01/2052",
-   "Ticker": "-",
-   "Identifier": "3137H8VE8",
-   "Weight": "0.13",
-   "Market Value": "0",
-   "Shares Held": "9931252",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Freddie Mac Series 5350, Class PO, 0%, due 11/25/2053",
-   "Ticker": "-",
-   "Identifier": "3137HAYT7",
-   "Weight": "0.13",
-   "Market Value": "0",
-   "Shares Held": "11342993",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Freddie Mac Series 5445, Class BS, Variable rate, due 08/25/2054",
-   "Ticker": "-",
-   "Identifier": "3137HDVT4",
-   "Weight": "0.13",
-   "Market Value": "0",
-   "Shares Held": "10546577",
-   "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-10-01"
+ "asOfDate": "2026-10-02"
 }

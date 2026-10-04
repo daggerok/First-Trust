@@ -61,6 +61,7 @@
  "yields": {
   "dividendYield": null,
   "dividendYieldText": null,
+  "dividendYieldBasis": null,
   "dividendYieldKind": null,
   "distributionRate": null,
   "distributionPerShare": null,
@@ -350,8 +351,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 225,
-  "asOfDate": "2026-10-01",
+  "totalRows": 226,
+  "asOfDate": "2026-10-02",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -366,7 +367,7 @@
   "asOfDate": "2026-10-02",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 225,
+ "holdingsCount": 226,
  "historyCount": 3886,
  "distributionCount": 34,
  "netAssets": 572972756,
