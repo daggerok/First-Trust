@@ -6,9 +6,11 @@ One of the app's features lets you select First Trust ETFs in the Watchlist and 
 
 ```bash
 bunx degit daggerok/First-Trust#main ./12345 && cd $_
-bunx serve . -p 1234
-open http://0:1234
+bun install
+bun run serve
 ```
+
+`bun run serve` starts the Parcel dev server (it copies `api/` to `dist/api` first). `bun run build` writes the production site to `dist/`, `bun run build-github-pages` does the same with the `/First-Trust/` public URL used by the GitHub Pages workflow.
 
 The published application is available at <https://daggerok.github.io/First-Trust/>.
 
@@ -127,7 +129,7 @@ PERFORMANCE_1Y="15:" bun scripts/update-data.ts
 
 ## TypeScript and verification
 
-The browser app is intentionally build-free: `index.html` carries the markup, styles and bootstrap, and `app.tsx` is TypeScript compiled in the browser with Babel standalone - no build step, no bundler, no `tsconfig.json` needed. Bun runs TypeScript out of the box.
+The browser app is built by Parcel with Tailwind v4: `src/index.html` carries the markup, `src/index.css` the styles and `src/main.tsx` is the TypeScript of the app, bundled into `dist/` and deployed by `.github/workflows/github-pages.yml`. No `tsconfig.json` is needed. Bun runs TypeScript out of the box.
 
 Verification before every publish:
 
