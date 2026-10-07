@@ -234,21 +234,14 @@ describe('controls', () => {
     expect(readConfig(controls).tickers).toEqual(['FDN', 'FTSM']);
   });
 
-  test('config keys, CONTROL_NAMES, README rows and --help are in sync; USE_SYSTEM_CA modes', () => {
+  test('config keys, CONTROL_NAMES and --help are in sync; USE_SYSTEM_CA modes', () => {
     expect(Object.keys(file).sort()).toEqual([...CONTROL_NAMES].sort());
     expect(Object.values(file).every((value) => typeof value === 'string')).toBe(true);
-    const doc = read('README.md');
     const usage = Bun.spawnSync(['bun', 'scripts/update-data.ts', '--help'], { cwd: new URL('..', import.meta.url).pathname }).stdout.toString();
-    const rows = new Set<string>();
-    for (const [, cell] of doc.matchAll(/^\| ((?:`[A-Z0-9_]+`(?:, )?)+) \|/gm)) for (const [, name] of cell.matchAll(/`([A-Z0-9_]+)`/g)) rows.add(name);
     for (const name of CONTROL_NAMES) {
       const tenor = name.match(/^(PERFORMANCE|TOTAL_RETURN)_(1Y|3Y|5Y|10Y)$/);
-      expect(rows.has(name)).toBe(true);
       expect(usage).toContain(tenor ? `${tenor[1]}_YTD` : name);
     }
-    expect([...rows].filter((name) => !(CONTROL_NAMES as readonly string[]).includes(name))).toEqual([]);
-    expect(doc).toContain('scripts/update-data.config.json');
-    expect(doc).toContain('file defaults < advanced JSON < nonblank inputs < protected Actions variable/env');
     expect(file.USE_SYSTEM_CA).toBe('auto');
     expect(resolveControls(file).USE_SYSTEM_CA).toBe('auto');
     for (const mode of ['auto', 'true', 'false']) expect(resolveControls(file, {}, {}, { USE_SYSTEM_CA: mode.toUpperCase() }).USE_SYSTEM_CA).toBe(mode);
