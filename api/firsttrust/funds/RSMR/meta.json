@@ -35,24 +35,24 @@
   "asOfDate": "2026-10-01"
  },
  "nav": {
-  "display": "$23.82",
-  "value": 23.82,
-  "asOfDate": "Oct 02 2026"
+  "display": "$24.10",
+  "value": 24.1,
+  "asOfDate": "Oct 09 2026"
  },
  "marketPrice": {
-  "display": "$23.82",
-  "value": 23.82,
-  "asOfDate": "Oct 02 2026"
+  "display": "$24.05",
+  "value": 24.05,
+  "asOfDate": "Oct 09 2026"
  },
  "premiumDiscount": {
-  "display": "0.00%",
-  "value": 0,
+  "display": "—",
+  "value": null,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$10.72M",
-  "value": 10721201,
-  "asOfDate": "Oct 02 2026",
+  "display": "$10.84M",
+  "value": 10843586,
+  "asOfDate": "Oct 09 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,24 +73,24 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-08-31",
-   "mo3": 3.55,
-   "ytd": 10.1,
-   "yr1": 13.3,
+   "asOfDate": "2026-09-30",
+   "mo3": 0,
+   "ytd": 7.87,
+   "yr1": 10.18,
    "yr3": null,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 13.39
+   "sinceInception": 11.13
   },
   "quarterEnd": {
-   "asOfDate": "2026-06-30",
-   "mo3": 7.19,
+   "asOfDate": "2026-09-30",
+   "mo3": 0,
    "ytd": 7.87,
-   "yr1": 13.78,
+   "yr1": 10.18,
    "yr3": null,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 13.46
+   "sinceInception": 11.13
   }
  },
  "distributions": {
@@ -113,7 +113,7 @@
   ],
   "pageSize": 250,
   "totalRows": 5,
-  "asOfDate": "2026-10-02",
+  "asOfDate": "2026-10-09",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -121,14 +121,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 385,
-  "asOfDate": "2026-10-02",
+  "totalRows": 390,
+  "asOfDate": "2026-10-09",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 5,
- "historyCount": 385,
+ "historyCount": 390,
  "distributionCount": 0,
- "netAssets": 10721201,
+ "netAssets": 10843586,
  "dividendYield": null,
  "secYield": null
 }

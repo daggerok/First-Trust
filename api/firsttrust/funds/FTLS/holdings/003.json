@@ -10,15 +10,6 @@
  ],
  "rows": [
   {
-   "Name": "Royal Bank of Canada",
-   "Ticker": "RY",
-   "Identifier": "780087102",
-   "Weight": "-0.18",
-   "Market Value": "0",
-   "Shares Held": "-23372",
-   "Asset Category": "Financials"
-  },
-  {
    "Name": "SAP SE (ADR)",
    "Ticker": "SAP",
    "Identifier": "803054204",
@@ -28,13 +19,22 @@
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Ulta Beauty, Inc.",
-   "Ticker": "ULTA",
-   "Identifier": "90384S303",
+   "Name": "The Cigna Group",
+   "Ticker": "CI",
+   "Identifier": "125523100",
    "Weight": "-0.18",
    "Market Value": "0",
-   "Shares Held": "-8643",
-   "Asset Category": "Consumer Discretionary"
+   "Shares Held": "-16793",
+   "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Constellation Energy Corporation",
+   "Ticker": "CEG",
+   "Identifier": "21037T109",
+   "Weight": "-0.19",
+   "Market Value": "0",
+   "Shares Held": "-16994",
+   "Asset Category": "Utilities"
   },
   {
    "Name": "Fastenal Company",
@@ -46,12 +46,57 @@
    "Asset Category": "Industrials"
   },
   {
-   "Name": "Honeywell International Inc.",
-   "Ticker": "HON",
-   "Identifier": "438516205",
+   "Name": "Ingersoll-Rand Inc.",
+   "Ticker": "IR",
+   "Identifier": "45687V106",
    "Weight": "-0.19",
    "Market Value": "0",
-   "Shares Held": "-22569",
+   "Shares Held": "-63179",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "MetLife, Inc.",
+   "Ticker": "MET",
+   "Identifier": "59156R108",
+   "Weight": "-0.19",
+   "Market Value": "0",
+   "Shares Held": "-50229",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Nokia Corporation (ADR)",
+   "Ticker": "NOK",
+   "Identifier": "654902204",
+   "Weight": "-0.19",
+   "Market Value": "0",
+   "Shares Held": "-480742",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "TE Connectivity Plc",
+   "Ticker": "TEL",
+   "Identifier": "G87052109",
+   "Weight": "-0.19",
+   "Market Value": "0",
+   "Shares Held": "-23209",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Ulta Beauty, Inc.",
+   "Ticker": "ULTA",
+   "Identifier": "90384S303",
+   "Weight": "-0.19",
+   "Market Value": "0",
+   "Shares Held": "-8643",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "United Rentals, Inc.",
+   "Ticker": "URI",
+   "Identifier": "911363109",
+   "Weight": "-0.19",
+   "Market Value": "0",
+   "Shares Held": "-4726",
    "Asset Category": "Industrials"
   },
   {
@@ -73,67 +118,22 @@
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "CoreWeave, Inc. (Class A)",
-   "Ticker": "CRWV",
-   "Identifier": "21873S108",
+   "Name": "Monolithic Power Systems, Inc.",
+   "Ticker": "MPWR",
+   "Identifier": "609839105",
    "Weight": "-0.2",
    "Market Value": "0",
-   "Shares Held": "-57926",
+   "Shares Held": "-3852",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "MARA Holdings, Inc.",
-   "Ticker": "MARA",
-   "Identifier": "565788106",
+   "Name": "Nu Holdings Ltd. (Class A)",
+   "Ticker": "NU",
+   "Identifier": "G6683N103",
    "Weight": "-0.2",
    "Market Value": "0",
-   "Shares Held": "-458349",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Nokia Corporation (ADR)",
-   "Ticker": "NOK",
-   "Identifier": "654902204",
-   "Weight": "-0.2",
-   "Market Value": "0",
-   "Shares Held": "-480742",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Riot Platforms, Inc.",
-   "Ticker": "RIOT",
-   "Identifier": "767292105",
-   "Weight": "-0.2",
-   "Market Value": "0",
-   "Shares Held": "-262332",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "TE Connectivity Plc",
-   "Ticker": "TEL",
-   "Identifier": "G87052109",
-   "Weight": "-0.2",
-   "Market Value": "0",
-   "Shares Held": "-23209",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "United Rentals, Inc.",
-   "Ticker": "URI",
-   "Identifier": "911363109",
-   "Weight": "-0.2",
-   "Market Value": "0",
-   "Shares Held": "-4726",
-   "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Zscaler, Inc.",
-   "Ticker": "ZS",
-   "Identifier": "98980G102",
-   "Weight": "-0.2",
-   "Market Value": "0",
-   "Shares Held": "-26740",
-   "Asset Category": "Information Technology"
+   "Shares Held": "-325520",
+   "Asset Category": "Financials"
   },
   {
    "Name": "Fabrinet",
@@ -145,32 +145,32 @@
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Monolithic Power Systems, Inc.",
-   "Ticker": "MPWR",
-   "Identifier": "609839105",
+   "Name": "Skyworks Solutions, Inc.",
+   "Ticker": "SWKS",
+   "Identifier": "83088M102",
    "Weight": "-0.21",
    "Market Value": "0",
-   "Shares Held": "-3852",
+   "Shares Held": "-71392",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Synopsys, Inc.",
    "Ticker": "SNPS",
    "Identifier": "871607107",
-   "Weight": "-0.21",
+   "Weight": "-0.22",
    "Market Value": "0",
    "Shares Held": "-11283",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Skyworks Solutions, Inc.",
-   "Ticker": "SWKS",
-   "Identifier": "83088M102",
-   "Weight": "-0.23",
+   "Name": "Zscaler, Inc.",
+   "Ticker": "ZS",
+   "Identifier": "98980G102",
+   "Weight": "-0.24",
    "Market Value": "0",
-   "Shares Held": "-71392",
+   "Shares Held": "-26740",
    "Asset Category": "Information Technology"
   }
  ],
- "asOfDate": "2026-10-02"
+ "asOfDate": "2026-10-09"
 }

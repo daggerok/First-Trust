@@ -35,14 +35,14 @@
   "asOfDate": "2025-12-01"
  },
  "nav": {
-  "display": "$83.14",
-  "value": 83.14,
-  "asOfDate": "Oct 02 2026"
+  "display": "$82.73",
+  "value": 82.73,
+  "asOfDate": "Oct 09 2026"
  },
  "marketPrice": {
-  "display": "$83.17",
-  "value": 83.17,
-  "asOfDate": "Oct 02 2026"
+  "display": "$82.69",
+  "value": 82.69,
+  "asOfDate": "Oct 09 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -50,9 +50,9 @@
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$690.08M",
-  "value": 690078024,
-  "asOfDate": "Oct 02 2026",
+  "display": "$686.63M",
+  "value": 686627939,
+  "asOfDate": "Oct 09 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,24 +73,24 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-08-31",
-   "mo3": -0.51,
-   "ytd": 8.73,
-   "yr1": 10.03,
-   "yr3": 13.52,
-   "yr5": 8.06,
-   "yr10": 12.38,
-   "sinceInception": 8.76
+   "asOfDate": "2026-09-30",
+   "mo3": -10.35,
+   "ytd": 2.49,
+   "yr1": 5.11,
+   "yr3": 13.21,
+   "yr5": 8.14,
+   "yr10": 11.64,
+   "sinceInception": 8.39
   },
   "quarterEnd": {
-   "asOfDate": "2026-06-30",
-   "mo3": 11.77,
-   "ytd": 14.32,
-   "yr1": 23.61,
-   "yr3": 15.73,
-   "yr5": 9.92,
-   "yr10": 13.69,
-   "sinceInception": 9.12
+   "asOfDate": "2026-09-30",
+   "mo3": -10.35,
+   "ytd": 2.49,
+   "yr1": 5.11,
+   "yr3": 13.21,
+   "yr5": 8.14,
+   "yr10": 11.64,
+   "sinceInception": 8.39
   }
  },
  "distributions": {
@@ -540,8 +540,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 157,
-  "asOfDate": "2026-10-02",
+  "totalRows": 160,
+  "asOfDate": "2026-10-09",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -553,14 +553,14 @@
    "history/005.json"
   ],
   "pageSize": 1000,
-  "totalRows": 4882,
-  "asOfDate": "2026-10-02",
+  "totalRows": 4887,
+  "asOfDate": "2026-10-09",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 157,
- "historyCount": 4882,
+ "holdingsCount": 160,
+ "historyCount": 4887,
  "distributionCount": 61,
- "netAssets": 690078024,
+ "netAssets": 686627939,
  "dividendYield": 0.81,
  "secYield": 0.77
 }
