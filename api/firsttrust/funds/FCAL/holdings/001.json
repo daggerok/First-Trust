@@ -13,7 +13,7 @@
    "Name": "SAN FRANCISCO CALIF CITY & CNTY ARPTS COMMN 5%, due 05/01/2049",
    "Ticker": "-",
    "Identifier": "79766DMB2",
-   "Weight": "1.37",
+   "Weight": "1.44",
    "Market Value": "0",
    "Shares Held": "3040000",
    "Asset Category": "-"
@@ -22,16 +22,7 @@
    "Name": "STHRN CA PUBLIC PWR AUTH REV 5%, due 11/01/2033",
    "Ticker": "-",
    "Identifier": "84247PPF2",
-   "Weight": "1.23",
-   "Market Value": "0",
-   "Shares Held": "2500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH 5.25%, due 11/01/2049",
-   "Ticker": "-",
-   "Identifier": "13067VBR4",
-   "Weight": "1.21",
+   "Weight": "1.24",
    "Market Value": "0",
    "Shares Held": "2500000",
    "Asset Category": "-"
@@ -40,9 +31,18 @@
    "Name": "STOCKTON-EAST CA WTR DIST 5%, due 03/01/2050",
    "Ticker": "-",
    "Identifier": "861431EB6",
-   "Weight": "1.07",
+   "Weight": "1.09",
    "Market Value": "0",
    "Shares Held": "2250000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST 5%, due 08/01/2046",
+   "Ticker": "-",
+   "Identifier": "13063EUH7",
+   "Weight": "0.99",
+   "Market Value": "0",
+   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -55,9 +55,18 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST 5%, due 08/01/2046",
+   "Name": "CENTRL VLY CA ENERGY AUTH COMMODITY SPLY REV Variable rate, due 12/01/2055",
    "Ticker": "-",
-   "Identifier": "13063EUH7",
+   "Identifier": "15569DAA0",
+   "Weight": "0.98",
+   "Market Value": "0",
+   "Shares Held": "2000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FRESNO CA JT PWRS FING AUTH 5.25%, due 04/01/2050",
+   "Ticker": "-",
+   "Identifier": "358184SA8",
    "Weight": "0.98",
    "Market Value": "0",
    "Shares Held": "2000000",
@@ -82,19 +91,10 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CENTRL VLY CA ENERGY AUTH COMMODITY SPLY REV Variable rate, due 12/01/2055",
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5%, due 12/01/2044",
    "Ticker": "-",
-   "Identifier": "15569DAA0",
-   "Weight": "0.97",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "FRESNO CA JT PWRS FING AUTH 5.25%, due 04/01/2050",
-   "Ticker": "-",
-   "Identifier": "358184SA8",
-   "Weight": "0.97",
+   "Identifier": "13032US58",
+   "Weight": "0.96",
    "Market Value": "0",
    "Shares Held": "2000000",
    "Asset Category": "-"
@@ -104,15 +104,6 @@
    "Ticker": "-",
    "Identifier": "13048RAN7",
    "Weight": "0.96",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5%, due 12/01/2044",
-   "Ticker": "-",
-   "Identifier": "13032US58",
-   "Weight": "0.94",
    "Market Value": "0",
    "Shares Held": "2000000",
    "Asset Category": "-"
@@ -130,16 +121,7 @@
    "Name": "CALIFORNIA ST MUNI FIN AUTH MF HSG REV 4.45%, due 12/01/2042",
    "Ticker": "-",
    "Identifier": "130483GQ7",
-   "Weight": "0.88",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH MF HSG REV 4.40%, due 12/01/2043",
-   "Ticker": "-",
-   "Identifier": "130483MB3",
-   "Weight": "0.86",
+   "Weight": "0.9",
    "Market Value": "0",
    "Shares Held": "2000000",
    "Asset Category": "-"
@@ -148,9 +130,18 @@
    "Name": "FONTANA CA SPL TAX 5%, due 09/01/2039",
    "Ticker": "-",
    "Identifier": "344630M70",
-   "Weight": "0.86",
+   "Weight": "0.87",
    "Market Value": "0",
    "Shares Held": "1790000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH MF HSG REV 4.40%, due 12/01/2043",
+   "Ticker": "-",
+   "Identifier": "130483MB3",
+   "Weight": "0.85",
+   "Market Value": "0",
+   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -163,6 +154,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH SPL FAC REV N/C, 4%, due 07/15/2029",
+   "Ticker": "-",
+   "Identifier": "13050RAA0",
+   "Weight": "0.77",
+   "Market Value": "0",
+   "Shares Held": "1600000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "RIVERSIDE CA SWR REVENUE 5%, due 08/01/2040",
    "Ticker": "-",
    "Identifier": "769047KL4",
@@ -172,18 +172,36 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH SPL FAC REV N/C, 4%, due 07/15/2029",
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.50%, due 11/15/2052",
    "Ticker": "-",
-   "Identifier": "13050RAA0",
+   "Identifier": "13032U7U6",
    "Weight": "0.76",
    "Market Value": "0",
-   "Shares Held": "1600000",
+   "Shares Held": "1500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SANTA CLARA CA WSTWTR REV CTFS PARTN 4.25%, due 02/01/2041",
+   "Ticker": "-",
+   "Identifier": "801517AT0",
+   "Weight": "0.76",
+   "Market Value": "0",
+   "Shares Held": "1590000",
    "Asset Category": "-"
   },
   {
    "Name": "CALIFORNIA ST POLL CONTROL FING AUTH 5%, due 07/01/2036",
    "Ticker": "-",
    "Identifier": "13054WBB2",
+   "Weight": "0.75",
+   "Market Value": "0",
+   "Shares Held": "1500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CORONA-NORCO CA UNIF SCH DIST 5%, due 08/01/2046",
+   "Ticker": "-",
+   "Identifier": "219764UQ8",
    "Weight": "0.75",
    "Market Value": "0",
    "Shares Held": "1500000",
@@ -199,37 +217,10 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SANTA CLARA CA WSTWTR REV CTFS PARTN 4.25%, due 02/01/2041",
-   "Ticker": "-",
-   "Identifier": "801517AT0",
-   "Weight": "0.75",
-   "Market Value": "0",
-   "Shares Held": "1590000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.50%, due 11/15/2052",
-   "Ticker": "-",
-   "Identifier": "13032U7U6",
-   "Weight": "0.74",
-   "Market Value": "0",
-   "Shares Held": "1500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CORONA-NORCO CA UNIF SCH DIST 5%, due 08/01/2046",
-   "Ticker": "-",
-   "Identifier": "219764UQ8",
-   "Weight": "0.74",
-   "Market Value": "0",
-   "Shares Held": "1500000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 11/15/2042",
    "Ticker": "-",
    "Identifier": "13048VG51",
-   "Weight": "0.73",
+   "Weight": "0.74",
    "Market Value": "0",
    "Shares Held": "1500000",
    "Asset Category": "-"
@@ -238,9 +229,18 @@
    "Name": "FONTANA CA PUBLIC FIN AUTH LEASE REV 5%, due 11/01/2050",
    "Ticker": "-",
    "Identifier": "34461BCN4",
-   "Weight": "0.73",
+   "Weight": "0.74",
    "Market Value": "0",
    "Shares Held": "1500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CSCDA CMNTY IMPT AUTH CA ESSENTIAL HSG REV 4%, due 07/01/2056",
+   "Ticker": "-",
+   "Identifier": "126292AP6",
+   "Weight": "0.73",
+   "Market Value": "0",
+   "Shares Held": "2000000",
    "Asset Category": "-"
   },
   {
@@ -262,19 +262,10 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CSCDA CMNTY IMPT AUTH CA ESSENTIAL HSG REV 4%, due 07/01/2056",
-   "Ticker": "-",
-   "Identifier": "126292AP6",
-   "Weight": "0.72",
-   "Market Value": "0",
-   "Shares Held": "2000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "ORANGE CNTY CA CMNTY FACS DIST 5%, due 08/15/2046",
    "Ticker": "-",
    "Identifier": "68423PC65",
-   "Weight": "0.7",
+   "Weight": "0.71",
    "Market Value": "0",
    "Shares Held": "1500000",
    "Asset Category": "-"
@@ -283,7 +274,7 @@
    "Name": "CALIFORNIA ST INFRASTRUCTURE & ECON DEV BANK 5%, due 07/01/2040",
    "Ticker": "-",
    "Identifier": "13034A5E6",
-   "Weight": "0.68",
+   "Weight": "0.69",
    "Market Value": "0",
    "Shares Held": "1410000",
    "Asset Category": "-"
@@ -292,7 +283,7 @@
    "Name": "OAKDALE CA JT UNIF SCH DIST 5%, due 08/01/2044",
    "Ticker": "-",
    "Identifier": "672006EC3",
-   "Weight": "0.68",
+   "Weight": "0.69",
    "Market Value": "0",
    "Shares Held": "1375000",
    "Asset Category": "-"
@@ -301,7 +292,7 @@
    "Name": "SAN CLEMENTE CA SPL TAX 5%, due 09/01/2041",
    "Ticker": "-",
    "Identifier": "797214DH3",
-   "Weight": "0.68",
+   "Weight": "0.69",
    "Market Value": "0",
    "Shares Held": "1355000",
    "Asset Category": "-"
@@ -310,7 +301,7 @@
    "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 11/15/2040",
    "Ticker": "-",
    "Identifier": "13048VZ84",
-   "Weight": "0.65",
+   "Weight": "0.66",
    "Market Value": "0",
    "Shares Held": "1345000",
    "Asset Category": "-"
@@ -319,9 +310,18 @@
    "Name": "SAN FRANCISCO CITY & CNTY CA REDEV AGY 5%, due 08/01/2048",
    "Ticker": "-",
    "Identifier": "79770GJZ0",
-   "Weight": "0.64",
+   "Weight": "0.66",
    "Market Value": "0",
    "Shares Held": "1350000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "INGLEWOOD CA JT PWRS AUTH LEASE REV 5.25%, due 08/01/2050",
+   "Ticker": "-",
+   "Identifier": "45710PAY6",
+   "Weight": "0.63",
+   "Market Value": "0",
+   "Shares Held": "1265000",
    "Asset Category": "-"
   },
   {
@@ -334,36 +334,27 @@
    "Asset Category": "-"
   },
   {
-   "Name": "INGLEWOOD CA JT PWRS AUTH LEASE REV 5.25%, due 08/01/2050",
-   "Ticker": "-",
-   "Identifier": "45710PAY6",
-   "Weight": "0.62",
-   "Market Value": "0",
-   "Shares Held": "1265000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5%, due 02/01/2043",
    "Ticker": "-",
    "Identifier": "13032U2X5",
-   "Weight": "0.61",
+   "Weight": "0.62",
    "Market Value": "0",
    "Shares Held": "1240000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH SOL WST DISP Variable rate, due 12/01/2044",
-   "Ticker": "-",
-   "Identifier": "13048RAF4",
-   "Weight": "0.61",
-   "Market Value": "0",
-   "Shares Held": "1250000",
    "Asset Category": "-"
   },
   {
    "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5%, due 11/15/2046",
    "Ticker": "-",
    "Identifier": "13032U7R3",
+   "Weight": "0.61",
+   "Market Value": "0",
+   "Shares Held": "1250000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH SOL WST DISP Variable rate, due 12/01/2044",
+   "Ticker": "-",
+   "Identifier": "13048RAF4",
    "Weight": "0.6",
    "Market Value": "0",
    "Shares Held": "1250000",
@@ -373,9 +364,27 @@
    "Name": "AZUSA CA SPL TAX 5%, due 09/01/2044",
    "Ticker": "-",
    "Identifier": "055032FF8",
-   "Weight": "0.57",
+   "Weight": "0.58",
    "Market Value": "0",
    "Shares Held": "1200000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "LAMMERSVILLE CA JT UNIF SCH DIST 5%, due 09/01/2046",
+   "Ticker": "-",
+   "Identifier": "513533KK4",
+   "Weight": "0.58",
+   "Market Value": "0",
+   "Shares Held": "1250000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MENIFEE CA UNION SCH DIST 3%, due 08/01/2040",
+   "Ticker": "-",
+   "Identifier": "586807JR1",
+   "Weight": "0.58",
+   "Market Value": "0",
+   "Shares Held": "1500000",
    "Asset Category": "-"
   },
   {
@@ -385,15 +394,6 @@
    "Weight": "0.57",
    "Market Value": "0",
    "Shares Held": "1120000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "LAMMERSVILLE CA JT UNIF SCH DIST 5%, due 09/01/2046",
-   "Ticker": "-",
-   "Identifier": "513533KK4",
-   "Weight": "0.56",
-   "Market Value": "0",
-   "Shares Held": "1250000",
    "Asset Category": "-"
   },
   {
@@ -415,12 +415,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MENIFEE CA UNION SCH DIST 3%, due 08/01/2040",
+   "Name": "ELK GROVE CA FIN AUTH SPL TAX REV 4%, due 09/01/2050",
    "Ticker": "-",
-   "Identifier": "586807JR1",
-   "Weight": "0.56",
+   "Identifier": "287254GS9",
+   "Weight": "0.55",
    "Market Value": "0",
-   "Shares Held": "1500000",
+   "Shares Held": "1450000",
    "Asset Category": "-"
   },
   {
@@ -430,15 +430,6 @@
    "Weight": "0.54",
    "Market Value": "0",
    "Shares Held": "1110000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "ELK GROVE CA FIN AUTH SPL TAX REV 4%, due 09/01/2050",
-   "Ticker": "-",
-   "Identifier": "287254GS9",
-   "Weight": "0.54",
-   "Market Value": "0",
-   "Shares Held": "1450000",
    "Asset Category": "-"
   },
   {
@@ -460,6 +451,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH Variable rate, due 08/15/2065",
+   "Ticker": "-",
+   "Identifier": "13032U5U8",
+   "Weight": "0.53",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CALIFORNIA STWD CMNTYS DEV AUTH 5.25%, due 12/01/2044",
    "Ticker": "-",
    "Identifier": "13080ST53",
@@ -469,9 +469,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH Variable rate, due 08/15/2065",
+   "Name": "KERN CA CMNTY CLG DIST 5.25%, due 08/01/2039",
    "Ticker": "-",
-   "Identifier": "13032U5U8",
+   "Identifier": "492244GR3",
    "Weight": "0.52",
    "Market Value": "0",
    "Shares Held": "1000000",
@@ -487,9 +487,27 @@
    "Asset Category": "-"
   },
   {
-   "Name": "KERN CA CMNTY CLG DIST 5.25%, due 08/01/2039",
+   "Name": "SAN LUIS OBISPO CNTY CA FING AUTH 5.25%, due 11/15/2040",
    "Ticker": "-",
-   "Identifier": "492244GR3",
+   "Identifier": "798712CZ6",
+   "Weight": "0.52",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5%, due 11/15/2042",
+   "Ticker": "-",
+   "Identifier": "13032UN46",
+   "Weight": "0.51",
+   "Market Value": "0",
+   "Shares Held": "1025000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "EAST BAY CA MUNI UTILITY DIST 5%, due 06/01/2043",
+   "Ticker": "-",
+   "Identifier": "271014V66",
    "Weight": "0.51",
    "Market Value": "0",
    "Shares Held": "1000000",
@@ -505,36 +523,54 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SAN LUIS OBISPO CNTY CA FING AUTH 5.25%, due 11/15/2040",
+   "Name": "S WSTRN CA CMNTY CLG DIST 5.25%, due 08/01/2046",
    "Ticker": "-",
-   "Identifier": "798712CZ6",
+   "Identifier": "845389QN8",
    "Weight": "0.51",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5%, due 11/15/2042",
+   "Name": "SAN JOAQUIN VLY CLEAN ENERGY AUTH CA Variable rate, due 01/01/2056",
    "Ticker": "-",
-   "Identifier": "13032UN46",
-   "Weight": "0.5",
+   "Identifier": "79811YAK4",
+   "Weight": "0.51",
    "Market Value": "0",
-   "Shares Held": "1025000",
+   "Shares Held": "1000000",
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST UNIV REVENUE 5%, due 11/01/2043",
+   "Name": "UNIV OF CALIFORNIA CA REVENUES 5%, due 11/15/2041",
    "Ticker": "-",
-   "Identifier": "13077DWA6",
+   "Identifier": "91412HXC2",
+   "Weight": "0.51",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA CMNTY CHOICE FING AUTH Variable rate, due 01/01/2054",
+   "Ticker": "-",
+   "Identifier": "13013JCM6",
    "Weight": "0.5",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
   },
   {
-   "Name": "EAST BAY CA MUNI UTILITY DIST 5%, due 06/01/2043",
+   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 05/15/2043",
    "Ticker": "-",
-   "Identifier": "271014V66",
+   "Identifier": "13048VL30",
+   "Weight": "0.5",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST UNIV REVENUE 5%, due 11/01/2043",
+   "Ticker": "-",
+   "Identifier": "13077DWA6",
    "Weight": "0.5",
    "Market Value": "0",
    "Shares Held": "1000000",
@@ -577,9 +613,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "S WSTRN CA CMNTY CLG DIST 5.25%, due 08/01/2046",
+   "Name": "OXNARD CA SCH DIST 5%, due 08/01/2042",
    "Ticker": "-",
-   "Identifier": "845389QN8",
+   "Identifier": "692020Z45",
    "Weight": "0.5",
    "Market Value": "0",
    "Shares Held": "1000000",
@@ -595,18 +631,18 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SAN JOAQUIN VLY CLEAN ENERGY AUTH CA Variable rate, due 01/01/2056",
+   "Name": "SAN FRANCISCO CA CITY & CNTY PUB UTILS COMMN 5.25%, due 11/01/2048",
    "Ticker": "-",
-   "Identifier": "79811YAK4",
+   "Identifier": "79771FCU9",
    "Weight": "0.5",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
   },
   {
-   "Name": "UNIV OF CALIFORNIA CA REVENUES 5%, due 11/15/2041",
+   "Name": "SANTA ROSA CA HIGH SCH DIST 5%, due 08/01/2045",
    "Ticker": "-",
-   "Identifier": "91412HXC2",
+   "Identifier": "802615S21",
    "Weight": "0.5",
    "Market Value": "0",
    "Shares Held": "1000000",
@@ -622,18 +658,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA CMNTY CHOICE FING AUTH Variable rate, due 01/01/2054",
+   "Name": "BURBANK GLENDALE PASADENA CA ARPT AUTH 5.25%, due 07/01/2040",
    "Ticker": "-",
-   "Identifier": "13013JCM6",
-   "Weight": "0.49",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 05/15/2043",
-   "Ticker": "-",
-   "Identifier": "13048VL30",
+   "Identifier": "120827DY3",
    "Weight": "0.49",
    "Market Value": "0",
    "Shares Held": "1000000",
@@ -646,6 +673,33 @@
    "Weight": "0.49",
    "Market Value": "0",
    "Shares Held": "1015000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5.50%, due 12/01/2045",
+   "Ticker": "-",
+   "Identifier": "13048V4K1",
+   "Weight": "0.49",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FONTANA CA SPL TAX 5%, due 09/01/2039",
+   "Ticker": "-",
+   "Identifier": "344630P51",
+   "Weight": "0.49",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GUAM GOVT WTRWKS AUTH WTR & WSTWTR SYS 5.25%, due 07/01/2042",
+   "Ticker": "-",
+   "Identifier": "40065FFE9",
+   "Weight": "0.49",
+   "Market Value": "0",
+   "Shares Held": "1000000",
    "Asset Category": "-"
   },
   {
@@ -676,18 +730,18 @@
    "Asset Category": "-"
   },
   {
-   "Name": "OXNARD CA SCH DIST 5%, due 08/01/2042",
+   "Name": "LOS ANGELES CNTY CA MET TRANSPRTN AUTH 5%, due 06/01/2045",
    "Ticker": "-",
-   "Identifier": "692020Z45",
+   "Identifier": "544721AM5",
    "Weight": "0.49",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
   },
   {
-   "Name": "SAN FRANCISCO CA CITY & CNTY PUB UTILS COMMN 5.25%, due 11/01/2048",
+   "Name": "SACRAMENTO CNTY CA ARPT SYS REV 5%, due 07/01/2037",
    "Ticker": "-",
-   "Identifier": "79771FCU9",
+   "Identifier": "786107RW4",
    "Weight": "0.49",
    "Market Value": "0",
    "Shares Held": "1000000",
@@ -703,73 +757,10 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SANTA ROSA CA HIGH SCH DIST 5%, due 08/01/2045",
-   "Ticker": "-",
-   "Identifier": "802615S21",
-   "Weight": "0.49",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "BURBANK GLENDALE PASADENA CA ARPT AUTH 5.25%, due 07/01/2040",
-   "Ticker": "-",
-   "Identifier": "120827DY3",
-   "Weight": "0.48",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5.50%, due 12/01/2045",
-   "Ticker": "-",
-   "Identifier": "13048V4K1",
-   "Weight": "0.48",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "FONTANA CA SPL TAX 5%, due 09/01/2039",
-   "Ticker": "-",
-   "Identifier": "344630P51",
-   "Weight": "0.48",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "GUAM GOVT WTRWKS AUTH WTR & WSTWTR SYS 5.25%, due 07/01/2042",
-   "Ticker": "-",
-   "Identifier": "40065FFE9",
-   "Weight": "0.48",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "LOS ANGELES CNTY CA MET TRANSPRTN AUTH 5%, due 06/01/2045",
-   "Ticker": "-",
-   "Identifier": "544721AM5",
-   "Weight": "0.48",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "SACRAMENTO CNTY CA ARPT SYS REV 5%, due 07/01/2037",
-   "Ticker": "-",
-   "Identifier": "786107RW4",
-   "Weight": "0.48",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5.125%, due 11/01/2040",
    "Ticker": "-",
    "Identifier": "13048V3E6",
-   "Weight": "0.47",
+   "Weight": "0.48",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
@@ -778,9 +769,45 @@
    "Name": "W PATTERSON CA FING AUTH SPL TAX 5%, due 09/01/2046",
    "Ticker": "-",
    "Identifier": "955232GB3",
+   "Weight": "0.48",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.25%, due 11/15/2048",
+   "Ticker": "-",
+   "Identifier": "13032UK98",
    "Weight": "0.47",
    "Market Value": "0",
    "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH MF HSG REV 5.45%, due 12/01/2042",
+   "Ticker": "-",
+   "Identifier": "130483QU7",
+   "Weight": "0.47",
+   "Market Value": "0",
+   "Shares Held": "950000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST STWD CMNTYS DEV AUTH 5%, due 09/01/2044",
+   "Ticker": "-",
+   "Identifier": "13077EQY9",
+   "Weight": "0.47",
+   "Market Value": "0",
+   "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA CMNTY CHOICE FING AUTH Variable rate, due 12/01/2053",
+   "Ticker": "-",
+   "Identifier": "13013JBL9",
+   "Weight": "0.46",
+   "Market Value": "0",
+   "Shares Held": "925000",
    "Asset Category": "-"
   },
   {
@@ -793,24 +820,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.25%, due 11/15/2048",
-   "Ticker": "-",
-   "Identifier": "13032UK98",
-   "Weight": "0.46",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH MF HSG REV 5.45%, due 12/01/2042",
-   "Ticker": "-",
-   "Identifier": "130483QU7",
-   "Weight": "0.46",
-   "Market Value": "0",
-   "Shares Held": "950000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CALIFORNIA ST MUNI FIN AUTH MHP REV 5%, due 08/15/2049",
    "Ticker": "-",
    "Identifier": "13049SGB4",
@@ -820,9 +829,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST STWD CMNTYS DEV AUTH 5%, due 09/01/2044",
+   "Name": "CALIFORNIA ST POLL CONTROL FING AUTH 5%, due 11/21/2045",
    "Ticker": "-",
-   "Identifier": "13077EQY9",
+   "Identifier": "13054WAC1",
    "Weight": "0.46",
    "Market Value": "0",
    "Shares Held": "1000000",
@@ -856,15 +865,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA CMNTY CHOICE FING AUTH Variable rate, due 12/01/2053",
-   "Ticker": "-",
-   "Identifier": "13013JBL9",
-   "Weight": "0.45",
-   "Market Value": "0",
-   "Shares Held": "925000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CALIFORNIA ST 5.25%, due 08/01/2047",
    "Ticker": "-",
    "Identifier": "13063EYD2",
@@ -874,12 +874,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST POLL CONTROL FING AUTH 5%, due 11/21/2045",
+   "Name": "RIVERSIDE CNTY CA TRANSPRTN COMMN 4%, due 06/01/2041",
    "Ticker": "-",
-   "Identifier": "13054WAC1",
+   "Identifier": "76912DAY4",
    "Weight": "0.45",
    "Market Value": "0",
    "Shares Held": "1000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ROSEVILLE CA SPL TAX 5%, due 09/01/2039",
+   "Ticker": "-",
+   "Identifier": "7778706M3",
+   "Weight": "0.45",
+   "Market Value": "0",
+   "Shares Held": "930000",
    "Asset Category": "-"
   },
   {
@@ -892,28 +901,10 @@
    "Asset Category": "-"
   },
   {
-   "Name": "RIVERSIDE CNTY CA TRANSPRTN COMMN 4%, due 06/01/2041",
-   "Ticker": "-",
-   "Identifier": "76912DAY4",
-   "Weight": "0.44",
-   "Market Value": "0",
-   "Shares Held": "1000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "ROSEVILLE CA SPL TAX 5%, due 09/01/2039",
-   "Ticker": "-",
-   "Identifier": "7778706M3",
-   "Weight": "0.44",
-   "Market Value": "0",
-   "Shares Held": "930000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CALIFORNIA ST HLTH FACS FING AUTH 4%, due 11/01/2044",
    "Ticker": "-",
    "Identifier": "13032UMN5",
-   "Weight": "0.42",
+   "Weight": "0.43",
    "Market Value": "0",
    "Shares Held": "1000000",
    "Asset Category": "-"
@@ -922,7 +913,7 @@
    "Name": "SAN FRANCISCO CITY & CNTY CA 2%, due 06/15/2029",
    "Ticker": "-",
    "Identifier": "7976467Q3",
-   "Weight": "0.42",
+   "Weight": "0.43",
    "Market Value": "0",
    "Shares Held": "935000",
    "Asset Category": "-"
@@ -937,6 +928,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CALIFORNIA ST STWD CMNTYS DEV AUTH 5%, due 09/02/2046",
+   "Ticker": "-",
+   "Identifier": "13078YYK5",
+   "Weight": "0.41",
+   "Market Value": "0",
+   "Shares Held": "860000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CLOVIS CA UNIF SCH DIST CTFS PARTN 5%, due 06/01/2041",
    "Ticker": "-",
    "Identifier": "189344GK4",
@@ -946,12 +946,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST STWD CMNTYS DEV AUTH 5%, due 09/02/2046",
+   "Name": "BURBANK GLENDALE PASADENA CA ARPT AUTH 5.25%, due 07/01/2049",
    "Ticker": "-",
-   "Identifier": "13078YYK5",
+   "Identifier": "120827ED8",
    "Weight": "0.4",
    "Market Value": "0",
-   "Shares Held": "860000",
+   "Shares Held": "825000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST EDUCTNL FACS AUTH 5%, due 04/01/2047",
+   "Ticker": "-",
+   "Identifier": "130179JF2",
+   "Weight": "0.4",
+   "Market Value": "0",
+   "Shares Held": "900000",
    "Asset Category": "-"
   },
   {
@@ -964,30 +973,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "BURBANK GLENDALE PASADENA CA ARPT AUTH 5.25%, due 07/01/2049",
-   "Ticker": "-",
-   "Identifier": "120827ED8",
-   "Weight": "0.39",
-   "Market Value": "0",
-   "Shares Held": "825000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST EDUCTNL FACS AUTH 5%, due 04/01/2047",
-   "Ticker": "-",
-   "Identifier": "130179JF2",
-   "Weight": "0.39",
-   "Market Value": "0",
-   "Shares Held": "900000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CALIFORNIA ST MUNI FIN AUTH MHP REV N/C, 5%, due 08/15/2027",
    "Ticker": "-",
    "Identifier": "13049SCJ1",
    "Weight": "0.39",
    "Market Value": "0",
    "Shares Held": "785000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "IRVINE CA SPL TAX 5%, due 09/01/2044",
+   "Ticker": "-",
+   "Identifier": "46360THP1",
+   "Weight": "0.39",
+   "Market Value": "0",
+   "Shares Held": "775000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SAINT JAMES PARISH LA REVENUE Variable rate, due 06/01/2038",
+   "Ticker": "-",
+   "Identifier": "790103AU9",
+   "Weight": "0.39",
+   "Market Value": "0",
+   "Shares Held": "750000",
    "Asset Category": "-"
   },
   {
@@ -1003,15 +1012,6 @@
    "Name": "CALIFORNIA ST MUNI FIN AUTH ARPT REV 5.75%, due 07/01/2051",
    "Ticker": "-",
    "Identifier": "130490AU9",
-   "Weight": "0.38",
-   "Market Value": "0",
-   "Shares Held": "775000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "IRVINE CA SPL TAX 5%, due 09/01/2044",
-   "Ticker": "-",
-   "Identifier": "46360THP1",
    "Weight": "0.38",
    "Market Value": "0",
    "Shares Held": "775000",
@@ -1036,12 +1036,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SAINT JAMES PARISH LA REVENUE Variable rate, due 06/01/2038",
+   "Name": "CALIFORNIA ST MUNI FIN AUTH MHP REV 5%, due 11/15/2037",
    "Ticker": "-",
-   "Identifier": "790103AU9",
-   "Weight": "0.38",
+   "Identifier": "13049SGP3",
+   "Weight": "0.37",
    "Market Value": "0",
-   "Shares Held": "750000",
+   "Shares Held": "720000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 4%, due 10/01/2036",
+   "Ticker": "-",
+   "Identifier": "13048VKW7",
+   "Weight": "0.37",
+   "Market Value": "0",
+   "Shares Held": "800000",
    "Asset Category": "-"
   },
   {
@@ -1072,21 +1081,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH MHP REV 5%, due 11/15/2037",
+   "Name": "MODESTO CA HIGH SCH DIST 5%, due 08/01/2041",
    "Ticker": "-",
-   "Identifier": "13049SGP3",
+   "Identifier": "607743LW9",
    "Weight": "0.36",
    "Market Value": "0",
-   "Shares Held": "720000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 4%, due 10/01/2036",
-   "Ticker": "-",
-   "Identifier": "13048VKW7",
-   "Weight": "0.36",
-   "Market Value": "0",
-   "Shares Held": "800000",
+   "Shares Held": "700000",
    "Asset Category": "-"
   },
   {
@@ -1099,21 +1099,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "US Dollar",
+   "Name": "CALIFORNIA ST MUNI FIN AUTH SPL TAX 5%, due 09/01/2044",
    "Ticker": "-",
-   "Identifier": "$USD",
-   "Weight": "0.36",
+   "Identifier": "13051AJJ8",
+   "Weight": "0.35",
    "Market Value": "0",
-   "Shares Held": "743835",
+   "Shares Held": "750000",
    "Asset Category": "-"
   },
   {
-   "Name": "MODESTO CA HIGH SCH DIST 5%, due 08/01/2041",
+   "Name": "PITTSBURG CA UNIF SCH DIST 3%, due 08/01/2040",
    "Ticker": "-",
-   "Identifier": "607743LW9",
+   "Identifier": "724581SP9",
    "Weight": "0.35",
    "Market Value": "0",
-   "Shares Held": "700000",
+   "Shares Held": "925000",
    "Asset Category": "-"
   },
   {
@@ -1135,21 +1135,21 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH 5%, due 06/01/2044",
+   "Ticker": "-",
+   "Identifier": "13069AAY4",
+   "Weight": "0.34",
+   "Market Value": "0",
+   "Shares Held": "750000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CALIFORNIA ST MUNI FIN AUTH SOL WST DISP Variable rate, due 07/01/2041",
    "Ticker": "-",
    "Identifier": "13048RAJ6",
    "Weight": "0.34",
    "Market Value": "0",
    "Shares Held": "700000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH SPL TAX 5%, due 09/01/2044",
-   "Ticker": "-",
-   "Identifier": "13051AJJ8",
-   "Weight": "0.34",
-   "Market Value": "0",
-   "Shares Held": "750000",
    "Asset Category": "-"
   },
   {
@@ -1171,24 +1171,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "PITTSBURG CA UNIF SCH DIST 3%, due 08/01/2040",
-   "Ticker": "-",
-   "Identifier": "724581SP9",
-   "Weight": "0.34",
-   "Market Value": "0",
-   "Shares Held": "925000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH 5%, due 06/01/2044",
-   "Ticker": "-",
-   "Identifier": "13069AAY4",
-   "Weight": "0.33",
-   "Market Value": "0",
-   "Shares Held": "750000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CHABOT-LAS POSITAS CA CMNTY CLG DIST 5%, due 08/01/2045",
    "Ticker": "-",
    "Identifier": "15722TLU3",
@@ -1201,9 +1183,18 @@
    "Name": "MENIFEE CA SPL TAX 5%, due 09/01/2048",
    "Ticker": "-",
    "Identifier": "58680WDJ0",
-   "Weight": "0.32",
+   "Weight": "0.33",
    "Market Value": "0",
    "Shares Held": "700000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH 5%, due 01/15/2039",
+   "Ticker": "-",
+   "Identifier": "13069BBB1",
+   "Weight": "0.32",
+   "Market Value": "0",
+   "Shares Held": "650000",
    "Asset Category": "-"
   },
   {
@@ -1216,12 +1207,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH 5%, due 01/15/2039",
+   "Name": "ALBANY CA UNIF SCH DIST 5%, due 08/01/2043",
    "Ticker": "-",
-   "Identifier": "13069BBB1",
-   "Weight": "0.31",
+   "Identifier": "012104UN3",
+   "Weight": "0.3",
    "Market Value": "0",
-   "Shares Held": "650000",
+   "Shares Held": "585000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH REV 5%, due 12/01/2041",
+   "Ticker": "-",
+   "Identifier": "13067RFD0",
+   "Weight": "0.3",
+   "Market Value": "0",
+   "Shares Held": "600000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 09/01/2041",
+   "Ticker": "-",
+   "Identifier": "13048V5K0",
+   "Weight": "0.3",
+   "Market Value": "0",
+   "Shares Held": "635000",
    "Asset Category": "-"
   },
   {
@@ -1252,39 +1261,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "ALBANY CA UNIF SCH DIST 5%, due 08/01/2043",
-   "Ticker": "-",
-   "Identifier": "012104UN3",
-   "Weight": "0.29",
-   "Market Value": "0",
-   "Shares Held": "585000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "ALBANY CA UNIF SCH DIST 5%, due 08/01/2050",
    "Ticker": "-",
    "Identifier": "012104TT2",
    "Weight": "0.29",
    "Market Value": "0",
    "Shares Held": "600000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH REV 5%, due 12/01/2041",
-   "Ticker": "-",
-   "Identifier": "13067RFD0",
-   "Weight": "0.29",
-   "Market Value": "0",
-   "Shares Held": "600000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 09/01/2041",
-   "Ticker": "-",
-   "Identifier": "13048V5K0",
-   "Weight": "0.29",
-   "Market Value": "0",
-   "Shares Held": "635000",
    "Asset Category": "-"
   },
   {
@@ -1324,6 +1306,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "ALBANY CA UNIF SCH DIST 5%, due 08/01/2042",
+   "Ticker": "-",
+   "Identifier": "012104UM5",
+   "Weight": "0.28",
+   "Market Value": "0",
+   "Shares Held": "540000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CALIFORNIA ST MUNI FIN AUTH MHP REV 5%, due 11/15/2040",
    "Ticker": "-",
    "Identifier": "13049SGS7",
@@ -1351,12 +1342,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "ALBANY CA UNIF SCH DIST 5%, due 08/01/2042",
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH N/C, 5%, due 11/15/2033",
    "Ticker": "-",
-   "Identifier": "012104UM5",
+   "Identifier": "13032UK64",
    "Weight": "0.27",
    "Market Value": "0",
-   "Shares Held": "540000",
+   "Shares Held": "520000",
    "Asset Category": "-"
   },
   {
@@ -1369,6 +1360,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CALIFORNIA ST SCH FIN AUTH CHRT SCH REV 5%, due 06/01/2043",
+   "Ticker": "-",
+   "Identifier": "13058TRR3",
+   "Weight": "0.27",
+   "Market Value": "0",
+   "Shares Held": "600000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CALIFORNIA ST SCH FIN AUTH EDUCTNL FACS 5%, due 06/01/2054",
    "Ticker": "-",
    "Identifier": "130591BN9",
@@ -1378,12 +1378,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH N/C, 5%, due 11/15/2033",
+   "Name": "MODESTO CA ELEM SCH DIST 5%, due 08/01/2041",
    "Ticker": "-",
-   "Identifier": "13032UK64",
-   "Weight": "0.26",
+   "Identifier": "607735DZ7",
+   "Weight": "0.27",
    "Market Value": "0",
-   "Shares Held": "520000",
+   "Shares Held": "530000",
    "Asset Category": "-"
   },
   {
@@ -1396,30 +1396,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST SCH FIN AUTH CHRT SCH REV 5%, due 06/01/2043",
-   "Ticker": "-",
-   "Identifier": "13058TRR3",
-   "Weight": "0.26",
-   "Market Value": "0",
-   "Shares Held": "600000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CHABOT-LAS POSITAS CA CMNTY CLG DIST 5%, due 08/01/2047",
    "Ticker": "-",
    "Identifier": "15722TLW9",
    "Weight": "0.26",
    "Market Value": "0",
    "Shares Held": "525000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "MODESTO CA ELEM SCH DIST 5%, due 08/01/2041",
-   "Ticker": "-",
-   "Identifier": "607735DZ7",
-   "Weight": "0.26",
-   "Market Value": "0",
-   "Shares Held": "530000",
    "Asset Category": "-"
   },
   {
@@ -1450,6 +1432,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH 5%, due 06/01/2034",
+   "Ticker": "-",
+   "Identifier": "13069AAX6",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5%, due 08/15/2043",
    "Ticker": "-",
    "Identifier": "13032U3U0",
@@ -1462,6 +1453,42 @@
    "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5%, due 08/15/2044",
    "Ticker": "-",
    "Identifier": "13032U3V8",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.25%, due 12/01/2040",
+   "Ticker": "-",
+   "Identifier": "13032UU30",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.25%, due 12/01/2041",
+   "Ticker": "-",
+   "Identifier": "13032UU48",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.25%, due 12/01/2042",
+   "Ticker": "-",
+   "Identifier": "13032UU55",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH ARPT REV 5.50%, due 07/01/2045",
+   "Ticker": "-",
+   "Identifier": "130490AS4",
    "Weight": "0.25",
    "Market Value": "0",
    "Shares Held": "500000",
@@ -1486,6 +1513,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CORONA CA CMNTY FACS DIST SPL TAX 5%, due 09/01/2039",
+   "Ticker": "-",
+   "Identifier": "219680HC2",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "GUAM GOVT BUSINESS PRIVILEGE TAX 5.25%, due 01/01/2038",
    "Ticker": "-",
    "Identifier": "40065NDE4",
@@ -1498,6 +1534,24 @@
    "Name": "GUAM GOVT BUSINESS PRIVILEGE TAX N/C, 5%, due 01/01/2031",
    "Ticker": "-",
    "Identifier": "40065NCX3",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "LONG BEACH CA MARINA REVENUE 5%, due 05/15/2041",
+   "Ticker": "-",
+   "Identifier": "542426DS7",
+   "Weight": "0.25",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "POWAY CA UNIF SCH DIST SPL TAX 5.25%, due 09/01/2045",
+   "Ticker": "-",
+   "Identifier": "738855Q65",
    "Weight": "0.25",
    "Market Value": "0",
    "Shares Held": "500000",
@@ -1531,45 +1585,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST ENTERPRISE DEV AUTH 5%, due 06/01/2034",
+   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 01/01/2041",
    "Ticker": "-",
-   "Identifier": "13069AAX6",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.25%, due 12/01/2040",
-   "Ticker": "-",
-   "Identifier": "13032UU30",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.25%, due 12/01/2041",
-   "Ticker": "-",
-   "Identifier": "13032UU48",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST HLTH FACS FING AUTH 5.25%, due 12/01/2042",
-   "Ticker": "-",
-   "Identifier": "13032UU55",
-   "Weight": "0.24",
-   "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH ARPT REV 5.50%, due 07/01/2045",
-   "Ticker": "-",
-   "Identifier": "130490AS4",
+   "Identifier": "13048V6V5",
    "Weight": "0.24",
    "Market Value": "0",
    "Shares Held": "500000",
@@ -1603,18 +1621,27 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CORONA CA CMNTY FACS DIST SPL TAX 5%, due 09/01/2039",
+   "Name": "FONTANA CA SPL TAX 5%, due 09/01/2046",
    "Ticker": "-",
-   "Identifier": "219680HC2",
+   "Identifier": "344630SV1",
    "Weight": "0.24",
    "Market Value": "0",
    "Shares Held": "500000",
    "Asset Category": "-"
   },
   {
-   "Name": "LONG BEACH CA MARINA REVENUE 5%, due 05/15/2041",
+   "Name": "MORENO VLY CA UNIF SCH DIST CMNTY FACS DIST 5%, due 09/01/2041",
    "Ticker": "-",
-   "Identifier": "542426DS7",
+   "Identifier": "616874XE8",
+   "Weight": "0.24",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MOUNTAIN HOUSE CMNTY FACS DIST CA 5%, due 09/01/2040",
+   "Ticker": "-",
+   "Identifier": "62412KAC1",
    "Weight": "0.24",
    "Market Value": "0",
    "Shares Held": "500000",
@@ -1639,39 +1666,39 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 01/01/2041",
+   "Name": "VAL VERDE CA UNIF SCH DIST SPL TAX 5%, due 09/01/2043",
    "Ticker": "-",
-   "Identifier": "13048V6V5",
+   "Identifier": "91882PGQ3",
+   "Weight": "0.24",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 09/01/2045",
+   "Ticker": "-",
+   "Identifier": "13048V6N3",
+   "Weight": "0.23",
+   "Market Value": "0",
+   "Shares Held": "470000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "JEFFERSON CENTER CO MET DIST 2 5.75%, due 12/01/2046",
+   "Ticker": "-",
+   "Identifier": "472483AD8",
    "Weight": "0.23",
    "Market Value": "0",
    "Shares Held": "500000",
    "Asset Category": "-"
   },
   {
-   "Name": "FONTANA CA SPL TAX 5%, due 09/01/2046",
+   "Name": "MAMMOTH LAKES CA CTFS PARTN 5%, due 06/01/2041",
    "Ticker": "-",
-   "Identifier": "344630SV1",
+   "Identifier": "561550DB7",
    "Weight": "0.23",
    "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "MORENO VLY CA UNIF SCH DIST CMNTY FACS DIST 5%, due 09/01/2041",
-   "Ticker": "-",
-   "Identifier": "616874XE8",
-   "Weight": "0.23",
-   "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "MOUNTAIN HOUSE CMNTY FACS DIST CA 5%, due 09/01/2040",
-   "Ticker": "-",
-   "Identifier": "62412KAC1",
-   "Weight": "0.23",
-   "Market Value": "0",
-   "Shares Held": "500000",
+   "Shares Held": "450000",
    "Asset Category": "-"
   },
   {
@@ -1702,30 +1729,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "VAL VERDE CA UNIF SCH DIST SPL TAX 5%, due 09/01/2043",
-   "Ticker": "-",
-   "Identifier": "91882PGQ3",
-   "Weight": "0.23",
-   "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "BURBANK GLENDALE PASADENA CA ARPT AUTH 5%, due 07/01/2038",
    "Ticker": "-",
    "Identifier": "120827DW7",
    "Weight": "0.22",
    "Market Value": "0",
    "Shares Held": "455000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA ST MUNI FIN AUTH REV 5%, due 09/01/2045",
-   "Ticker": "-",
-   "Identifier": "13048V6N3",
-   "Weight": "0.22",
-   "Market Value": "0",
-   "Shares Held": "470000",
    "Asset Category": "-"
   },
   {
@@ -1747,19 +1756,10 @@
    "Asset Category": "-"
   },
   {
-   "Name": "JEFFERSON CENTER CO MET DIST 2 5.75%, due 12/01/2046",
+   "Name": "CALIFORNIA SCH FIN AUTH SCH FAC REV 5.25%, due 07/01/2048",
    "Ticker": "-",
-   "Identifier": "472483AD8",
-   "Weight": "0.22",
-   "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "MAMMOTH LAKES CA CTFS PARTN 5%, due 06/01/2041",
-   "Ticker": "-",
-   "Identifier": "561550DB7",
-   "Weight": "0.22",
+   "Identifier": "13059THM4",
+   "Weight": "0.21",
    "Market Value": "0",
    "Shares Held": "450000",
    "Asset Category": "-"
@@ -1783,21 +1783,30 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CALIFORNIA SCH FIN AUTH SCH FAC REV 5.25%, due 07/01/2048",
-   "Ticker": "-",
-   "Identifier": "13059THM4",
-   "Weight": "0.2",
-   "Market Value": "0",
-   "Shares Held": "450000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "CALIFORNIA ST MUNI FIN AUTH SCH FAC REV 5.75%, due 05/01/2054",
    "Ticker": "-",
    "Identifier": "13051BAC0",
    "Weight": "0.2",
    "Market Value": "0",
    "Shares Held": "435000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "POWAY CA UNIF SCH DIST SPL TAX 5.25%, due 09/01/2044",
+   "Ticker": "-",
+   "Identifier": "738855Q57",
+   "Weight": "0.2",
+   "Market Value": "0",
+   "Shares Held": "400000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "PUERTO RICO SALES TAX FING CORP 4.329%, due 07/01/2040",
+   "Ticker": "-",
+   "Identifier": "74529JRH0",
+   "Weight": "0.2",
+   "Market Value": "0",
+   "Shares Held": "429000",
    "Asset Category": "-"
   },
   {
@@ -1837,6 +1846,24 @@
    "Asset Category": "-"
   },
   {
+   "Name": "MILITARY INSTALLATION DEV AUTH UT 4%, due 06/01/2052",
+   "Ticker": "-",
+   "Identifier": "599772AF7",
+   "Weight": "0.19",
+   "Market Value": "0",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ROMOLAND CA SCH DIST SPL TAX 5%, due 09/01/2043",
+   "Ticker": "-",
+   "Identifier": "776192VM5",
+   "Weight": "0.19",
+   "Market Value": "0",
+   "Shares Held": "400000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "SAN FRANCISCO CA CITY & CNTY SPL TAX DIST 2020-1 4%, due 09/01/2046",
    "Ticker": "-",
    "Identifier": "79771HAE3",
@@ -1846,12 +1873,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "MILITARY INSTALLATION DEV AUTH UT 4%, due 06/01/2052",
+   "Name": "CALIFORNIA HSG FIN AGY MUNI CTFS N/C, 4.25%, due 01/15/2035",
    "Ticker": "-",
-   "Identifier": "599772AF7",
+   "Identifier": "13033DAA3",
    "Weight": "0.18",
    "Market Value": "0",
-   "Shares Held": "500000",
+   "Shares Held": "369654",
    "Asset Category": "-"
   },
   {
@@ -1864,30 +1891,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "ROMOLAND CA SCH DIST SPL TAX 5%, due 09/01/2043",
-   "Ticker": "-",
-   "Identifier": "776192VM5",
-   "Weight": "0.18",
-   "Market Value": "0",
-   "Shares Held": "400000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "SAN JUAN PR 5%, due 07/01/2046",
    "Ticker": "-",
    "Identifier": "798373PB6",
    "Weight": "0.18",
    "Market Value": "0",
    "Shares Held": "400000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "CALIFORNIA HSG FIN AGY MUNI CTFS N/C, 4.25%, due 01/15/2035",
-   "Ticker": "-",
-   "Identifier": "13033DAA3",
-   "Weight": "0.17",
-   "Market Value": "0",
-   "Shares Held": "369654",
    "Asset Category": "-"
   },
   {
@@ -1936,6 +1945,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "GUAM PWR AUTH REVENUE 5%, due 10/01/2042",
+   "Ticker": "-",
+   "Identifier": "400653LD1",
+   "Weight": "0.16",
+   "Market Value": "0",
+   "Shares Held": "325000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "VAL VERDE CA UNIF SCH DIST SPL TAX 5%, due 09/01/2038",
    "Ticker": "-",
    "Identifier": "91882PGP5",
@@ -1951,15 +1969,6 @@
    "Weight": "0.15",
    "Market Value": "0",
    "Shares Held": "300000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "GUAM PWR AUTH REVENUE 5%, due 10/01/2042",
-   "Ticker": "-",
-   "Identifier": "400653LD1",
-   "Weight": "0.15",
-   "Market Value": "0",
-   "Shares Held": "325000",
    "Asset Category": "-"
   },
   {
@@ -2143,15 +2152,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "PUERTO RICO SALES TAX FING CORP 4.329%, due 07/01/2040",
-   "Ticker": "-",
-   "Identifier": "74529JRH0",
-   "Weight": "0.12",
-   "Market Value": "0",
-   "Shares Held": "263000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "TRACY CA CMNTY FACS DIST 5%, due 09/01/2033",
    "Ticker": "-",
    "Identifier": "892376QX5",
@@ -2260,5 +2260,5 @@
    "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-10-09"
+ "asOfDate": "2026-10-16"
 }

@@ -21,7 +21,7 @@
   "cusip": "33740J203",
   "isin": "US33740J2033",
   "iopv": null,
-  "indexTicker": "ICE BofA 3-Month U.S. Treasury Bill Index"
+  "indexTicker": "ICE BofA US 3-Month Treasury Bill Index"
  },
  "inception": {
   "fundInceptionDate": "2020-02-04",
@@ -35,14 +35,14 @@
   "asOfDate": "2026-06-24"
  },
  "nav": {
-  "display": "$20.59",
-  "value": 20.59,
-  "asOfDate": "Oct 09 2026"
+  "display": "$21.09",
+  "value": 21.09,
+  "asOfDate": "Oct 16 2026"
  },
  "marketPrice": {
-  "display": "$20.58",
-  "value": 20.58,
-  "asOfDate": "Oct 09 2026"
+  "display": "$21.07",
+  "value": 21.07,
+  "asOfDate": "Oct 16 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -50,9 +50,9 @@
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$14.41M",
-  "value": 14413121,
-  "asOfDate": "Oct 09 2026",
+  "display": "$14.76M",
+  "value": 14760760,
+  "asOfDate": "Oct 16 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -184,7 +184,7 @@
   ],
   "pageSize": 250,
   "totalRows": 16,
-  "asOfDate": "2026-10-09",
+  "asOfDate": "2026-10-16",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -193,14 +193,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1679,
-  "asOfDate": "2026-10-09",
+  "totalRows": 1684,
+  "asOfDate": "2026-10-16",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 16,
- "historyCount": 1679,
+ "historyCount": 1684,
  "distributionCount": 10,
- "netAssets": 14413121,
+ "netAssets": 14760760,
  "dividendYield": 6.36,
  "secYield": 1.04
 }

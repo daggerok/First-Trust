@@ -13,9 +13,9 @@
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "3.34",
+   "Weight": "3.59",
    "Market Value": "0",
-   "Shares Held": "1151450",
+   "Shares Held": "1242578",
    "Asset Category": "-"
   },
   {
@@ -31,7 +31,7 @@
    "Name": "BX Trust Series 2025-DELC, Class A, Variable rate, due 12/15/2030",
    "Ticker": "-",
    "Identifier": "05594MAA0",
-   "Weight": "1.74",
+   "Weight": "1.73",
    "Market Value": "0",
    "Shares Held": "600000",
    "Asset Category": "-"
@@ -40,7 +40,7 @@
    "Name": "SWCH Commercial Mortgage Trust Series 2025-DATA, Class A, Variable rate, due 02/15/2042",
    "Ticker": "-",
    "Identifier": "78489CAA7",
-   "Weight": "1.59",
+   "Weight": "1.58",
    "Market Value": "0",
    "Shares Held": "555000",
    "Asset Category": "-"
@@ -49,7 +49,7 @@
    "Name": "THE 2023-MIC Trust Series 2023-MIC, Class A, Variable rate, due 12/05/2038",
    "Ticker": "-",
    "Identifier": "87256GAA0",
-   "Weight": "1.59",
+   "Weight": "1.58",
    "Market Value": "0",
    "Shares Held": "530000",
    "Asset Category": "-"
@@ -67,9 +67,18 @@
    "Name": "CENT Trust Series 2025-CITY, Class A, Variable rate, due 07/10/2040",
    "Ticker": "-",
    "Identifier": "12517TAA5",
-   "Weight": "1.55",
+   "Weight": "1.54",
    "Market Value": "0",
    "Shares Held": "550000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "HOUSTON GALLERIA MALL TRUST Series 2025-HGLR, Class A, Variable rate, due 02/05/2045",
+   "Ticker": "-",
+   "Identifier": "44216XAA3",
+   "Weight": "1.49",
+   "Market Value": "0",
+   "Shares Held": "530000",
    "Asset Category": "-"
   },
   {
@@ -82,19 +91,10 @@
    "Asset Category": "-"
   },
   {
-   "Name": "HOUSTON GALLERIA MALL TRUST Series 2025-HGLR, Class A, Variable rate, due 02/05/2045",
-   "Ticker": "-",
-   "Identifier": "44216XAA3",
-   "Weight": "1.48",
-   "Market Value": "0",
-   "Shares Held": "530000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Barclays Commercial Mortgage Securities LLC Series 2018-TALL, Class A, Variable rate, due 03/15/2037",
    "Ticker": "-",
    "Identifier": "05548WAA5",
-   "Weight": "1.46",
+   "Weight": "1.45",
    "Market Value": "0",
    "Shares Held": "543000",
    "Asset Category": "-"
@@ -103,7 +103,7 @@
    "Name": "Bank Series 2020-BN29, Class ASB, 1.805%, due 11/15/2053",
    "Ticker": "-",
    "Identifier": "06541TAZ2",
-   "Weight": "1.45",
+   "Weight": "1.44",
    "Market Value": "0",
    "Shares Held": "534993",
    "Asset Category": "-"
@@ -112,16 +112,7 @@
    "Name": "JP Morgan Chase Commercial Mortgage Sec Trust Series 2025-PHNY, Class A, Variable rate, due 01/15/2041",
    "Ticker": "-",
    "Identifier": "46592UAA8",
-   "Weight": "1.45",
-   "Market Value": "0",
-   "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "TEXAS Commercial Mortgage Trust Series 2025-TWR, Class A, Variable rate, due 04/15/2042",
-   "Ticker": "-",
-   "Identifier": "88231WAA3",
-   "Weight": "1.45",
+   "Weight": "1.44",
    "Market Value": "0",
    "Shares Held": "500000",
    "Asset Category": "-"
@@ -133,6 +124,15 @@
    "Weight": "1.43",
    "Market Value": "0",
    "Shares Held": "542000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TEXAS Commercial Mortgage Trust Series 2025-TWR, Class A, Variable rate, due 04/15/2042",
+   "Ticker": "-",
+   "Identifier": "88231WAA3",
+   "Weight": "1.43",
+   "Market Value": "0",
+   "Shares Held": "500000",
    "Asset Category": "-"
   },
   {
@@ -175,7 +175,7 @@
    "Name": "CONE Commercial Mortgage Trust Series 2026-DFW3, Class A, Variable rate, due 05/15/2043",
    "Ticker": "-",
    "Identifier": "20681AAA9",
-   "Weight": "1.39",
+   "Weight": "1.38",
    "Market Value": "0",
    "Shares Held": "500000",
    "Asset Category": "-"
@@ -274,7 +274,7 @@
    "Name": "CALI Mortgage Trust Series 2024-SUN, Class A, Variable rate, due 07/15/2041",
    "Ticker": "-",
    "Identifier": "12988DAA0",
-   "Weight": "1.13",
+   "Weight": "1.12",
    "Market Value": "0",
    "Shares Held": "389000",
    "Asset Category": "-"
@@ -292,7 +292,7 @@
    "Name": "BX Trust Series 2026-VLT10, Class A, Variable rate, due 06/13/2058",
    "Ticker": "-",
    "Identifier": "05620TAA3",
-   "Weight": "1.07",
+   "Weight": "1.06",
    "Market Value": "0",
    "Shares Held": "405000",
    "Asset Category": "-"
@@ -301,7 +301,7 @@
    "Name": "Wells Fargo Commercial Mortgage Trust Series 2018-C47, Class A4, 4.442%, due 09/15/2061",
    "Ticker": "-",
    "Identifier": "95002DBG3",
-   "Weight": "1.07",
+   "Weight": "1.06",
    "Market Value": "0",
    "Shares Held": "375000",
    "Asset Category": "-"
@@ -337,16 +337,25 @@
    "Name": "Cantor Commercial Real Estate Lending Series 2019-CF1, Class A2, 3.6234%, due 05/15/2052",
    "Ticker": "-",
    "Identifier": "12529MAB4",
-   "Weight": "1.02",
+   "Weight": "1.01",
    "Market Value": "0",
    "Shares Held": "359546",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Wells Fargo Commercial Mortgage Trust Series 2022-C62, Class A4, Variable rate, due 04/15/2055",
+   "Ticker": "-",
+   "Identifier": "95003MBS6",
+   "Weight": "1.01",
+   "Market Value": "0",
+   "Shares Held": "380000",
    "Asset Category": "-"
   },
   {
    "Name": "Wells Fargo Commercial Mortgage Trust Series 2025-B33RP, Class A, Variable rate, due 08/15/2042",
    "Ticker": "-",
    "Identifier": "95004RAA4",
-   "Weight": "1.02",
+   "Weight": "1.01",
    "Market Value": "0",
    "Shares Held": "349962",
    "Asset Category": "-"
@@ -355,18 +364,9 @@
    "Name": "Bank Series 2019-BN18, Class ASB, 3.432%, due 05/15/2062",
    "Ticker": "-",
    "Identifier": "065402BA6",
-   "Weight": "1",
+   "Weight": "0.99",
    "Market Value": "0",
    "Shares Held": "351858",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Wells Fargo Commercial Mortgage Trust Series 2022-C62, Class A4, Variable rate, due 04/15/2055",
-   "Ticker": "-",
-   "Identifier": "95003MBS6",
-   "Weight": "1",
-   "Market Value": "0",
-   "Shares Held": "380000",
    "Asset Category": "-"
   },
   {
@@ -382,18 +382,9 @@
    "Name": "Barclays Commercial Mortgage Securities LLC Series 2020-C6, Class ASB, 2.595%, due 02/15/2053",
    "Ticker": "-",
    "Identifier": "05492TAD2",
-   "Weight": "0.94",
-   "Market Value": "0",
-   "Shares Held": "339944",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "WHARF Commercial Mortgage Trust Series 2025-DC, Class A, Variable rate, due 07/15/2040",
-   "Ticker": "-",
-   "Identifier": "92987LAA5",
    "Weight": "0.93",
    "Market Value": "0",
-   "Shares Held": "325000",
+   "Shares Held": "339944",
    "Asset Category": "-"
   },
   {
@@ -406,10 +397,19 @@
    "Asset Category": "-"
   },
   {
+   "Name": "WHARF Commercial Mortgage Trust Series 2025-DC, Class A, Variable rate, due 07/15/2040",
+   "Ticker": "-",
+   "Identifier": "92987LAA5",
+   "Weight": "0.92",
+   "Market Value": "0",
+   "Shares Held": "325000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "ILPT Commercial Mortgage Trust Series 2019-SURF, Class A, 4.145%, due 02/11/2041",
    "Ticker": "-",
    "Identifier": "44965LAA2",
-   "Weight": "0.91",
+   "Weight": "0.9",
    "Market Value": "0",
    "Shares Held": "325000",
    "Asset Category": "-"
@@ -424,21 +424,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "BMO Mortgage Trust Series 2024-C9, Class ASB, 5.7715%, due 07/15/2057",
+   "Name": "Barclays Commercial Mortgage Securities LLC Series 2022-C18, Class A5, Variable rate, due 12/15/2055",
    "Ticker": "-",
-   "Identifier": "05593MAE3",
+   "Identifier": "054975AE7",
    "Weight": "0.87",
    "Market Value": "0",
    "Shares Held": "300000",
    "Asset Category": "-"
   },
   {
-   "Name": "Citigroup Commercial Mortgage Trust Series 2019-GC43, Class AAB, 2.959%, due 11/10/2052",
+   "Name": "BMO Mortgage Trust Series 2024-C9, Class ASB, 5.7715%, due 07/15/2057",
    "Ticker": "-",
-   "Identifier": "17328HBE0",
+   "Identifier": "05593MAE3",
    "Weight": "0.87",
    "Market Value": "0",
-   "Shares Held": "309646",
+   "Shares Held": "300000",
    "Asset Category": "-"
   },
   {
@@ -460,15 +460,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Morgan Stanley Capital I Trust Series 2019-L2, Class A3, 3.806%, due 03/15/2052",
-   "Ticker": "-",
-   "Identifier": "61768HAV8",
-   "Weight": "0.87",
-   "Market Value": "0",
-   "Shares Held": "310015",
-   "Asset Category": "-"
-  },
-  {
    "Name": "One New York Plaza Trust 2020-1NYP Series 2020-1NYP, Class A, Variable rate, due 01/15/2036",
    "Ticker": "-",
    "Identifier": "68249DAA7",
@@ -478,12 +469,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Barclays Commercial Mortgage Securities LLC Series 2022-C18, Class A5, Variable rate, due 12/15/2055",
+   "Name": "Citigroup Commercial Mortgage Trust Series 2019-GC43, Class AAB, 2.959%, due 11/10/2052",
    "Ticker": "-",
-   "Identifier": "054975AE7",
+   "Identifier": "17328HBE0",
    "Weight": "0.86",
    "Market Value": "0",
-   "Shares Held": "300000",
+   "Shares Held": "309646",
    "Asset Category": "-"
   },
   {
@@ -493,6 +484,15 @@
    "Weight": "0.86",
    "Market Value": "0",
    "Shares Held": "300000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Morgan Stanley Capital I Trust Series 2019-L2, Class A3, 3.806%, due 03/15/2052",
+   "Ticker": "-",
+   "Identifier": "61768HAV8",
+   "Weight": "0.86",
+   "Market Value": "0",
+   "Shares Held": "310015",
    "Asset Category": "-"
   },
   {
@@ -523,21 +523,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "SHOPS Trust Series 2026-CSTL, Class A, Variable rate, due 05/15/2039",
-   "Ticker": "-",
-   "Identifier": "82510YAA4",
-   "Weight": "0.84",
-   "Market Value": "0",
-   "Shares Held": "300000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "BENCHMARK Mortgage Trust Series 2020-B18, Class A5, 1.925%, due 07/15/2053",
    "Ticker": "-",
    "Identifier": "08163AAE3",
    "Weight": "0.83",
    "Market Value": "0",
    "Shares Held": "329000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SHOPS Trust Series 2026-CSTL, Class A, Variable rate, due 05/15/2039",
+   "Ticker": "-",
+   "Identifier": "82510YAA4",
+   "Weight": "0.83",
+   "Market Value": "0",
+   "Shares Held": "300000",
    "Asset Category": "-"
   },
   {
@@ -577,21 +577,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "NRTH PARK Mortgage Trust Series 2025-PARK, Class A, Variable rate, due 10/15/2040",
-   "Ticker": "-",
-   "Identifier": "669985AA1",
-   "Weight": "0.8",
-   "Market Value": "0",
-   "Shares Held": "275000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Citigroup Commercial Mortgage Trust Series 2019-C7, Class AAB, 3.042%, due 12/15/2072",
    "Ticker": "-",
    "Identifier": "17328CAE2",
    "Weight": "0.79",
    "Market Value": "0",
    "Shares Held": "282506",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NRTH PARK Mortgage Trust Series 2025-PARK, Class A, Variable rate, due 10/15/2040",
+   "Ticker": "-",
+   "Identifier": "669985AA1",
+   "Weight": "0.79",
+   "Market Value": "0",
+   "Shares Held": "275000",
    "Asset Category": "-"
   },
   {
@@ -622,39 +622,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "BX Trust Series 2025-GW, Class A, Variable rate, due 07/15/2042",
-   "Ticker": "-",
-   "Identifier": "12433GAA4",
-   "Weight": "0.76",
-   "Market Value": "0",
-   "Shares Held": "260000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Deutsche Bank Commercial Mortgage Trust Series 2020-C9, Class A5, 1.926%, due 08/15/2053",
    "Ticker": "-",
    "Identifier": "233063AT3",
    "Weight": "0.76",
    "Market Value": "0",
    "Shares Held": "300000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "FHLMC Multifamily Structured Pass Through Certs. Series K104, Class X1, Variable rate, due 01/25/2030",
-   "Ticker": "-",
-   "Identifier": "3137FREK3",
-   "Weight": "0.76",
-   "Market Value": "0",
-   "Shares Held": "8578491",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "JW Commercial Mortgage Trust Series 2024-BERY, Class A, Variable rate, due 11/15/2039",
-   "Ticker": "-",
-   "Identifier": "46676AAA1",
-   "Weight": "0.76",
-   "Market Value": "0",
-   "Shares Held": "260000",
    "Asset Category": "-"
   },
   {
@@ -667,10 +640,37 @@
    "Asset Category": "-"
   },
   {
+   "Name": "BX Trust Series 2025-GW, Class A, Variable rate, due 07/15/2042",
+   "Ticker": "-",
+   "Identifier": "12433GAA4",
+   "Weight": "0.75",
+   "Market Value": "0",
+   "Shares Held": "260000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "FHLMC Multifamily Structured Pass Through Certs. Series K104, Class X1, Variable rate, due 01/25/2030",
+   "Ticker": "-",
+   "Identifier": "3137FREK3",
+   "Weight": "0.75",
+   "Market Value": "0",
+   "Shares Held": "8578491",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "JW Commercial Mortgage Trust Series 2024-BERY, Class A, Variable rate, due 11/15/2039",
+   "Ticker": "-",
+   "Identifier": "46676AAA1",
+   "Weight": "0.75",
+   "Market Value": "0",
+   "Shares Held": "260000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "Hawaii Hotel Trust Series 2025-MAUI, Class A, Variable rate, due 03/15/2030",
    "Ticker": "-",
    "Identifier": "419909AA4",
-   "Weight": "0.75",
+   "Weight": "0.74",
    "Market Value": "0",
    "Shares Held": "257500",
    "Asset Category": "-"
@@ -679,7 +679,7 @@
    "Name": "BPR Trust Series 2023-STON, Class A, 7.497%, due 12/05/2039",
    "Ticker": "-",
    "Identifier": "05593GAA4",
-   "Weight": "0.74",
+   "Weight": "0.73",
    "Market Value": "0",
    "Shares Held": "250000",
    "Asset Category": "-"
@@ -688,7 +688,7 @@
    "Name": "BX Trust Series 2025-VOLT, Class A, Variable rate, due 12/15/2044",
    "Ticker": "-",
    "Identifier": "05619PAA4",
-   "Weight": "0.74",
+   "Weight": "0.73",
    "Market Value": "0",
    "Shares Held": "255000",
    "Asset Category": "-"
@@ -697,6 +697,15 @@
    "Name": "BMO Mortgage Trust Series 2025-C11, Class ASB, 5.6772%, due 02/15/2058",
    "Ticker": "-",
    "Identifier": "05613XAD7",
+   "Weight": "0.72",
+   "Market Value": "0",
+   "Shares Held": "250000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA GN DO5687, 5.72%, due 06/15/2053",
+   "Ticker": "-",
+   "Identifier": "3618V2J81",
    "Weight": "0.72",
    "Market Value": "0",
    "Shares Held": "250000",
@@ -712,21 +721,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "GNMA GN DO5687, 5.72%, due 06/15/2053",
+   "Name": "GNMA Series 2024-47, Class AI, 0.75%, due 06/16/2064",
    "Ticker": "-",
-   "Identifier": "3618V2J81",
-   "Weight": "0.71",
+   "Identifier": "38381LAV4",
+   "Weight": "0.7",
    "Market Value": "0",
-   "Shares Held": "250000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Bank Series 2021-BN31, Class XB, Variable rate, due 02/15/2054",
-   "Ticker": "-",
-   "Identifier": "06541ABN9",
-   "Weight": "0.69",
-   "Market Value": "0",
-   "Shares Held": "7500000",
+   "Shares Held": "4759697",
    "Asset Category": "-"
   },
   {
@@ -736,15 +736,6 @@
    "Weight": "0.69",
    "Market Value": "0",
    "Shares Held": "235000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "GNMA Series 2024-47, Class AI, 0.75%, due 06/16/2064",
-   "Ticker": "-",
-   "Identifier": "38381LAV4",
-   "Weight": "0.69",
-   "Market Value": "0",
-   "Shares Held": "4759697",
    "Asset Category": "-"
   },
   {
@@ -763,6 +754,15 @@
    "Weight": "0.69",
    "Market Value": "0",
    "Shares Held": "3440815",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Bank Series 2021-BN31, Class XB, Variable rate, due 02/15/2054",
+   "Ticker": "-",
+   "Identifier": "06541ABN9",
+   "Weight": "0.68",
+   "Market Value": "0",
+   "Shares Held": "7500000",
    "Asset Category": "-"
   },
   {
@@ -787,7 +787,7 @@
    "Name": "Morgan Stanley Capital I Trust Series 2019-L2, Class XA, Variable rate, due 03/15/2052",
    "Ticker": "-",
    "Identifier": "61768HAX4",
-   "Weight": "0.66",
+   "Weight": "0.65",
    "Market Value": "0",
    "Shares Held": "12155563",
    "Asset Category": "-"
@@ -796,7 +796,7 @@
    "Name": "MSWF Commercial Mortgage Trust Series 2023-1, Class XA, Variable rate, due 05/15/2056",
    "Ticker": "-",
    "Identifier": "55376CAP8",
-   "Weight": "0.66",
+   "Weight": "0.65",
    "Market Value": "0",
    "Shares Held": "5338202",
    "Asset Category": "-"
@@ -814,7 +814,7 @@
    "Name": "Morgan Stanley Capital I Trust Series 2018-L1, Class A3, 4.139%, due 10/15/2051",
    "Ticker": "-",
    "Identifier": "61691QAD0",
-   "Weight": "0.62",
+   "Weight": "0.61",
    "Market Value": "0",
    "Shares Held": "216953",
    "Asset Category": "-"
@@ -832,18 +832,9 @@
    "Name": "JP Morgan Chase Commercial Mortgage Sec Trust Series 2019-COR5, Class XA, Variable rate, due 06/13/2052",
    "Ticker": "-",
    "Identifier": "46591EAY3",
-   "Weight": "0.57",
+   "Weight": "0.56",
    "Market Value": "0",
    "Shares Held": "6950995",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Wells Fargo Commercial Mortgage Trust Series 2021-C60, Class XA, Variable rate, due 08/15/2054",
-   "Ticker": "-",
-   "Identifier": "95003DBP2",
-   "Weight": "0.57",
-   "Market Value": "0",
-   "Shares Held": "3533846",
    "Asset Category": "-"
   },
   {
@@ -856,10 +847,19 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Wells Fargo Commercial Mortgage Trust Series 2021-C60, Class XA, Variable rate, due 08/15/2054",
+   "Ticker": "-",
+   "Identifier": "95003DBP2",
+   "Weight": "0.56",
+   "Market Value": "0",
+   "Shares Held": "3533846",
+   "Asset Category": "-"
+  },
+  {
    "Name": "GS Mortgage Securities Trust Series 2019-GC39, Class XA, Variable rate, due 05/10/2052",
    "Ticker": "-",
    "Identifier": "36260JAF4",
-   "Weight": "0.55",
+   "Weight": "0.54",
    "Market Value": "0",
    "Shares Held": "8386576",
    "Asset Category": "-"
@@ -868,7 +868,7 @@
    "Name": "Bank Series 2019-BN19, Class XA, Variable rate, due 08/15/2061",
    "Ticker": "-",
    "Identifier": "06540WBH5",
-   "Weight": "0.45",
+   "Weight": "0.44",
    "Market Value": "0",
    "Shares Held": "7417456",
    "Asset Category": "-"
@@ -949,7 +949,7 @@
    "Name": "BENCHMARK Mortgage Trust Series 2024-V6, Class XA, Variable rate, due 10/15/2028",
    "Ticker": "-",
    "Identifier": "081927AC9",
-   "Weight": "0.19",
+   "Weight": "0.18",
    "Market Value": "0",
    "Shares Held": "2441403",
    "Asset Category": "-"
@@ -1014,7 +1014,7 @@
    "Identifier": "-",
    "Weight": "0",
    "Market Value": "0",
-   "Shares Held": "16",
+   "Shares Held": "17",
    "Asset Category": "-"
   },
   {
@@ -1032,7 +1032,7 @@
    "Identifier": "-",
    "Weight": "0",
    "Market Value": "0",
-   "Shares Held": "36",
+   "Shares Held": "35",
    "Asset Category": "-"
   },
   {
@@ -1043,16 +1043,7 @@
    "Market Value": "0",
    "Shares Held": "32",
    "Asset Category": "-"
-  },
-  {
-   "Name": "US LONG BOND(CBT) Dec26",
-   "Ticker": "USZ6",
-   "Identifier": "-",
-   "Weight": "0",
-   "Market Value": "0",
-   "Shares Held": "1",
-   "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-10-09"
+ "asOfDate": "2026-10-16"
 }
