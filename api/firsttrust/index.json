@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-18T04:20:43Z",
+ "generatedAt": "2026-10-20T03:12:30Z",
  "source": {
   "provider": "First Trust ETFs (First Trust Portfolios L.P. / First Trust Advisors L.P.)",
   "market": "us",
@@ -12,8 +12,8 @@
   "holdings": "First Trust official holdings pages; SEC EDGAR Form N-PORT-P (First Trust ETF trusts (e.g. First Trust Exchange-Traded Fund CIK 0001329377, First Trust Exchange-Traded AlphaDEX Fund CIK 0001383496); CIK resolved per ticker from SEC company_tickers_mf.json) as fallback"
  },
  "counts": {
-  "funds": 333,
-  "holdings": 28575,
+  "funds": 334,
+  "holdings": 28581,
   "history": 624961
  },
  "funds": [
@@ -19245,6 +19245,73 @@
    },
    "holdings": 5,
    "history": 39
+  },
+  {
+   "ticker": "SQBR",
+   "name": "FT Vest U.S. Equity Quarterly 20 Barrier ETF",
+   "category": "Target Outcome",
+   "fundPage": "https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=SQBR",
+   "dataFile": "./funds/SQBR/meta.json",
+   "ter": "0.85%",
+   "terValue": 0.85,
+   "nav": "—",
+   "navValue": null,
+   "aum": "—",
+   "aumValue": null,
+   "asOfDate": "Oct 16 2026",
+   "inceptionDate": "Oct 16 2026",
+   "exchange": "Cboe BZX",
+   "closePrice": "—",
+   "premiumDiscount": "—",
+   "cusip": "33740U232",
+   "isin": "US33740U2327",
+   "distributions": {
+    "frequency": null,
+    "exDate": "",
+    "dividend": ""
+   },
+   "returns": {
+    "monthEnd": {
+     "asOfDate": null,
+     "mo3": null,
+     "ytd": null,
+     "yr1": null,
+     "yr3": null,
+     "yr5": null,
+     "yr10": null,
+     "sinceInception": null
+    },
+    "quarterEnd": {
+     "asOfDate": null,
+     "mo3": null,
+     "ytd": null,
+     "yr1": null,
+     "yr3": null,
+     "yr5": null,
+     "yr10": null,
+     "sinceInception": null
+    }
+   },
+   "metrics": {
+    "ytd": null,
+    "tr1y": null,
+    "tr3y": null,
+    "tr5y": null,
+    "tr10y": null,
+    "cagr3y": null,
+    "cagr5y": null,
+    "cagr10y": null,
+    "siAnn": null,
+    "dividendYield": null,
+    "dividendYieldText": null,
+    "dividendYieldBasis": null,
+    "secYield": null,
+    "secYieldText": null,
+    "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
+    "performanceAsOf": null
+   },
+   "holdings": 6,
+   "history": 0
   },
   {
    "ticker": "SQMX",
