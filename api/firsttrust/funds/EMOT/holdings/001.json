@@ -14,7 +14,7 @@
    "Ticker": "MTD",
    "Identifier": "592688105",
    "Weight": "2.8",
-   "Market Value": "74625.34",
+   "Market Value": "74783.58",
    "Shares Held": "46",
    "Asset Category": "Health Care"
   },
@@ -22,8 +22,8 @@
    "Name": "Microsoft Corporation",
    "Ticker": "MSFT",
    "Identifier": "594918104",
-   "Weight": "2.58",
-   "Market Value": "68776.5",
+   "Weight": "2.6",
+   "Market Value": "69357.6",
    "Shares Held": "130",
    "Asset Category": "Information Technology"
   },
@@ -31,8 +31,8 @@
    "Name": "McKesson Corporation",
    "Ticker": "MCK",
    "Identifier": "58155Q103",
-   "Weight": "2.49",
-   "Market Value": "66319.44",
+   "Weight": "2.5",
+   "Market Value": "66688.38",
    "Shares Held": "66",
    "Asset Category": "Health Care"
   },
@@ -40,17 +40,26 @@
    "Name": "Mastercard Incorporated",
    "Ticker": "MA",
    "Identifier": "57636Q104",
-   "Weight": "2.46",
-   "Market Value": "65446.52",
+   "Weight": "2.45",
+   "Market Value": "65338.4",
    "Shares Held": "106",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Visa Inc. (Class A)",
+   "Ticker": "V",
+   "Identifier": "92826C839",
+   "Weight": "2.42",
+   "Market Value": "64467.2",
+   "Shares Held": "160",
    "Asset Category": "Financials"
   },
   {
    "Name": "Automatic Data Processing, Inc.",
    "Ticker": "ADP",
    "Identifier": "053015103",
-   "Weight": "2.43",
-   "Market Value": "64713.6",
+   "Weight": "2.41",
+   "Market Value": "64294.72",
    "Shares Held": "224",
    "Asset Category": "Industrials"
   },
@@ -58,26 +67,17 @@
    "Name": "Meta Platforms, Inc. (Class A)",
    "Ticker": "META",
    "Identifier": "30303M102",
-   "Weight": "2.42",
-   "Market Value": "64548.59",
+   "Weight": "2.41",
+   "Market Value": "64195.04",
    "Shares Held": "91",
    "Asset Category": "Communication Services"
-  },
-  {
-   "Name": "Visa Inc. (Class A)",
-   "Ticker": "V",
-   "Identifier": "92826C839",
-   "Weight": "2.42",
-   "Market Value": "64417.6",
-   "Shares Held": "160",
-   "Asset Category": "Financials"
   },
   {
    "Name": "Fortinet, Inc.",
    "Ticker": "FTNT",
    "Identifier": "34959E109",
-   "Weight": "2.37",
-   "Market Value": "63085.49",
+   "Weight": "2.4",
+   "Market Value": "63969.5",
    "Shares Held": "373",
    "Asset Category": "Information Technology"
   },
@@ -85,8 +85,8 @@
    "Name": "HP Inc.",
    "Ticker": "HPQ",
    "Identifier": "40434L105",
-   "Weight": "2.36",
-   "Market Value": "62930.97",
+   "Weight": "2.38",
+   "Market Value": "63413.28",
    "Shares Held": "2097",
    "Asset Category": "Information Technology"
   },
@@ -94,8 +94,8 @@
    "Name": "Cencora, Inc.",
    "Ticker": "COR",
    "Identifier": "03073E105",
-   "Weight": "2.35",
-   "Market Value": "62729.28",
+   "Weight": "2.34",
+   "Market Value": "62560",
    "Shares Held": "184",
    "Asset Category": "Health Care"
   },
@@ -104,70 +104,97 @@
    "Ticker": "AAPL",
    "Identifier": "037833100",
    "Weight": "2.29",
-   "Market Value": "61135.88",
+   "Market Value": "61043.32",
    "Shares Held": "178",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Philip Morris International Inc.",
-   "Ticker": "PM",
-   "Identifier": "718172109",
-   "Weight": "2.18",
-   "Market Value": "58071.6",
-   "Shares Held": "283",
-   "Asset Category": "Consumer Staples"
   },
   {
    "Name": "The Coca-Cola Company",
    "Ticker": "KO",
    "Identifier": "191216100",
-   "Weight": "2.18",
-   "Market Value": "58124.1",
+   "Weight": "2.17",
+   "Market Value": "57826.98",
    "Shares Held": "619",
    "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Amazon.com, Inc.",
+   "Ticker": "AMZN",
+   "Identifier": "023135106",
+   "Weight": "2.14",
+   "Market Value": "57214.1",
+   "Shares Held": "218",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Eli Lilly and Company",
    "Ticker": "LLY",
    "Identifier": "532457108",
-   "Weight": "2.17",
-   "Market Value": "57823.38",
+   "Weight": "2.14",
+   "Market Value": "57055.64",
    "Shares Held": "46",
    "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Philip Morris International Inc.",
+   "Ticker": "PM",
+   "Identifier": "718172109",
+   "Weight": "2.13",
+   "Market Value": "56897.15",
+   "Shares Held": "283",
+   "Asset Category": "Consumer Staples"
   },
   {
    "Name": "Paychex, Inc.",
    "Ticker": "PAYX",
    "Identifier": "704326107",
-   "Weight": "2.14",
-   "Market Value": "57154.56",
+   "Weight": "2.12",
+   "Market Value": "56704",
    "Shares Held": "512",
    "Asset Category": "Industrials"
-  },
-  {
-   "Name": "The Progressive Corporation",
-   "Ticker": "PGR",
-   "Identifier": "743315103",
-   "Weight": "2.08",
-   "Market Value": "55496.46",
-   "Shares Held": "254",
-   "Asset Category": "Financials"
   },
   {
    "Name": "NVIDIA Corporation",
    "Ticker": "NVDA",
    "Identifier": "67066G104",
-   "Weight": "2.07",
-   "Market Value": "55245.54",
+   "Weight": "2.1",
+   "Market Value": "56009.22",
    "Shares Held": "258",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "The Progressive Corporation",
+   "Ticker": "PGR",
+   "Identifier": "743315103",
+   "Weight": "2.09",
+   "Market Value": "55653.94",
+   "Shares Held": "254",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "VeriSign, Inc.",
+   "Ticker": "VRSN",
+   "Identifier": "92343E102",
+   "Weight": "2.07",
+   "Market Value": "55166.4",
+   "Shares Held": "180",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Adobe Incorporated",
+   "Ticker": "ADBE",
+   "Identifier": "00724F101",
+   "Weight": "2.06",
+   "Market Value": "54853.98",
+   "Shares Held": "222",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "The Procter & Gamble Company",
    "Ticker": "PG",
    "Identifier": "742718109",
-   "Weight": "2.07",
-   "Market Value": "55294.45",
+   "Weight": "2.05",
+   "Market Value": "54718.43",
    "Shares Held": "347",
    "Asset Category": "Consumer Staples"
   },
@@ -175,44 +202,17 @@
    "Name": "Lockheed Martin Corporation",
    "Ticker": "LMT",
    "Identifier": "539830109",
-   "Weight": "2.05",
-   "Market Value": "54656.91",
+   "Weight": "2.03",
+   "Market Value": "54274.77",
    "Shares Held": "99",
    "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Adobe Incorporated",
-   "Ticker": "ADBE",
-   "Identifier": "00724F101",
-   "Weight": "2.04",
-   "Market Value": "54434.4",
-   "Shares Held": "222",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Amazon.com, Inc.",
-   "Ticker": "AMZN",
-   "Identifier": "023135106",
-   "Weight": "2.04",
-   "Market Value": "54500",
-   "Shares Held": "218",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "VeriSign, Inc.",
-   "Ticker": "VRSN",
-   "Identifier": "92343E102",
-   "Weight": "2.04",
-   "Market Value": "54420.3",
-   "Shares Held": "180",
-   "Asset Category": "Information Technology"
   },
   {
    "Name": "Colgate-Palmolive Company",
    "Ticker": "CL",
    "Identifier": "194162103",
-   "Weight": "2.03",
-   "Market Value": "54207.36",
+   "Weight": "2.02",
+   "Market Value": "53792.64",
    "Shares Held": "576",
    "Asset Category": "Consumer Staples"
   },
@@ -220,8 +220,8 @@
    "Name": "Kimberly-Clark Corporation",
    "Ticker": "KMB",
    "Identifier": "494368103",
-   "Weight": "2.02",
-   "Market Value": "53840.7",
+   "Weight": "2.01",
+   "Market Value": "53759.1",
    "Shares Held": "510",
    "Asset Category": "Consumer Staples"
   },
@@ -229,8 +229,8 @@
    "Name": "AutoZone, Inc.",
    "Ticker": "AZO",
    "Identifier": "053332102",
-   "Weight": "1.99",
-   "Market Value": "53050.03",
+   "Weight": "1.97",
+   "Market Value": "52663.96",
    "Shares Held": "17",
    "Asset Category": "Consumer Discretionary"
   },
@@ -238,8 +238,8 @@
    "Name": "Booking Holdings Inc.",
    "Ticker": "BKNG",
    "Identifier": "09857L108",
-   "Weight": "1.97",
-   "Market Value": "52630.9",
+   "Weight": "1.96",
+   "Market Value": "52357.2",
    "Shares Held": "322",
    "Asset Category": "Consumer Discretionary"
   },
@@ -247,8 +247,8 @@
    "Name": "IDEXX Laboratories, Inc.",
    "Ticker": "IDXX",
    "Identifier": "45168D104",
-   "Weight": "1.96",
-   "Market Value": "52113.48",
+   "Weight": "1.94",
+   "Market Value": "51689.4",
    "Shares Held": "93",
    "Asset Category": "Health Care"
   },
@@ -256,18 +256,9 @@
    "Name": "Yum! Brands, Inc.",
    "Ticker": "YUM",
    "Identifier": "988498101",
-   "Weight": "1.94",
-   "Market Value": "51624.93",
+   "Weight": "1.93",
+   "Market Value": "51391.69",
    "Shares Held": "343",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "O'Reilly Automotive, Inc.",
-   "Ticker": "ORLY",
-   "Identifier": "67103H107",
-   "Weight": "1.92",
-   "Market Value": "51062.44",
-   "Shares Held": "572",
    "Asset Category": "Consumer Discretionary"
   },
   {
@@ -275,34 +266,43 @@
    "Ticker": "SBUX",
    "Identifier": "855244109",
    "Weight": "1.92",
-   "Market Value": "51100.48",
+   "Market Value": "51283.88",
    "Shares Held": "524",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Texas Instruments Incorporated",
-   "Ticker": "TXN",
-   "Identifier": "882508104",
+   "Name": "O'Reilly Automotive, Inc.",
+   "Ticker": "ORLY",
+   "Identifier": "67103H107",
    "Weight": "1.91",
-   "Market Value": "50872.32",
-   "Shares Held": "184",
-   "Asset Category": "Information Technology"
+   "Market Value": "50948.04",
+   "Shares Held": "572",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Walmart Inc.",
    "Ticker": "WMT",
    "Identifier": "931142103",
    "Weight": "1.91",
-   "Market Value": "50969.49",
+   "Market Value": "50922.3",
    "Shares Held": "429",
    "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "Texas Instruments Incorporated",
+   "Ticker": "TXN",
+   "Identifier": "882508104",
+   "Weight": "1.9",
+   "Market Value": "50811.6",
+   "Shares Held": "184",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "Zoetis Inc.",
    "Ticker": "ZTS",
    "Identifier": "98978V103",
    "Weight": "1.9",
-   "Market Value": "50565.06",
+   "Market Value": "50698.83",
    "Shares Held": "637",
    "Asset Category": "Health Care"
   },
@@ -311,7 +311,7 @@
    "Ticker": "HD",
    "Identifier": "437076102",
    "Weight": "1.88",
-   "Market Value": "50160.06",
+   "Market Value": "50200.56",
    "Shares Held": "162",
    "Asset Category": "Consumer Discretionary"
   },
@@ -319,17 +319,26 @@
    "Name": "Alphabet Inc. (Class C)",
    "Ticker": "GOOG",
    "Identifier": "02079K107",
-   "Weight": "1.86",
-   "Market Value": "49525.77",
+   "Weight": "1.87",
+   "Market Value": "50003.52",
    "Shares Held": "147",
    "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "PepsiCo, Inc.",
+   "Ticker": "PEP",
+   "Identifier": "713448108",
+   "Weight": "1.8",
+   "Market Value": "47951.63",
+   "Shares Held": "359",
+   "Asset Category": "Consumer Staples"
   },
   {
    "Name": "Texas Pacific Land Corporation",
    "Ticker": "TPL",
    "Identifier": "88262P102",
-   "Weight": "1.82",
-   "Market Value": "48426.96",
+   "Weight": "1.78",
+   "Market Value": "47556.18",
    "Shares Held": "138",
    "Asset Category": "Energy"
   },
@@ -337,98 +346,89 @@
    "Name": "Lowe's Companies, Inc.",
    "Ticker": "LOW",
    "Identifier": "548661107",
-   "Weight": "1.78",
-   "Market Value": "47371.2",
+   "Weight": "1.76",
+   "Market Value": "47020.8",
    "Shares Held": "240",
    "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "PepsiCo, Inc.",
-   "Ticker": "PEP",
-   "Identifier": "713448108",
-   "Weight": "1.77",
-   "Market Value": "47204.91",
-   "Shares Held": "359",
-   "Asset Category": "Consumer Staples"
   },
   {
    "Name": "QUALCOMM Incorporated",
    "Ticker": "QCOM",
    "Identifier": "747525103",
-   "Weight": "1.75",
-   "Market Value": "46641.81",
+   "Weight": "1.76",
+   "Market Value": "47026.63",
    "Shares Held": "271",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Broadcom Inc.",
+   "Ticker": "AVGO",
+   "Identifier": "11135F101",
+   "Weight": "1.74",
+   "Market Value": "46508.01",
+   "Shares Held": "139",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Copart, Inc.",
    "Ticker": "CPRT",
    "Identifier": "217204106",
-   "Weight": "1.73",
-   "Market Value": "46013.37",
+   "Weight": "1.7",
+   "Market Value": "45419.01",
    "Shares Held": "1651",
    "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Broadcom Inc.",
-   "Ticker": "AVGO",
-   "Identifier": "11135F101",
-   "Weight": "1.71",
-   "Market Value": "45696.25",
-   "Shares Held": "139",
-   "Asset Category": "Information Technology"
   },
   {
    "Name": "McDonald's Corporation",
    "Ticker": "MCD",
    "Identifier": "580135101",
-   "Weight": "1.67",
-   "Market Value": "44463.51",
+   "Weight": "1.66",
+   "Market Value": "44408.61",
    "Shares Held": "183",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Tapestry, Inc.",
-   "Ticker": "TPR",
-   "Identifier": "876030107",
-   "Weight": "1.65",
-   "Market Value": "44106.06",
-   "Shares Held": "367",
-   "Asset Category": "Consumer Discretionary"
+   "Name": "Lam Research Corporation",
+   "Ticker": "LRCX",
+   "Identifier": "512807306",
+   "Weight": "1.64",
+   "Market Value": "43824.2",
+   "Shares Held": "161",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "NIKE, Inc. (Class B)",
    "Ticker": "NKE",
    "Identifier": "654106103",
    "Weight": "1.64",
-   "Market Value": "43739.14",
+   "Market Value": "43833.38",
    "Shares Held": "1178",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Tapestry, Inc.",
+   "Ticker": "TPR",
+   "Identifier": "876030107",
+   "Weight": "1.62",
+   "Market Value": "43199.57",
+   "Shares Held": "367",
    "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Applied Materials, Inc.",
    "Ticker": "AMAT",
    "Identifier": "038222105",
-   "Weight": "1.6",
-   "Market Value": "42566.16",
+   "Weight": "1.61",
+   "Market Value": "42963.44",
    "Shares Held": "104",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Lam Research Corporation",
-   "Ticker": "LRCX",
-   "Identifier": "512807306",
-   "Weight": "1.59",
-   "Market Value": "42494.34",
-   "Shares Held": "161",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "lululemon athletica inc.",
    "Ticker": "LULU",
    "Identifier": "550021109",
-   "Weight": "1.58",
-   "Market Value": "42238.5",
+   "Weight": "1.59",
+   "Market Value": "42525.6",
    "Shares Held": "435",
    "Asset Category": "Consumer Discretionary"
   },
@@ -436,8 +436,8 @@
    "Name": "Jabil Inc.",
    "Ticker": "JBL",
    "Identifier": "466313103",
-   "Weight": "1.53",
-   "Market Value": "40902.75",
+   "Weight": "1.55",
+   "Market Value": "41462.82",
    "Shares Held": "147",
    "Asset Category": "Information Technology"
   },
@@ -445,8 +445,8 @@
    "Name": "KLA Corporation",
    "Ticker": "KLAC",
    "Identifier": "482480100",
-   "Weight": "1.5",
-   "Market Value": "40109.08",
+   "Weight": "1.51",
+   "Market Value": "40268.8",
    "Shares Held": "242",
    "Asset Category": "Information Technology"
   },
@@ -454,8 +454,8 @@
    "Name": "Fair Isaac Corporation",
    "Ticker": "FICO",
    "Identifier": "303250104",
-   "Weight": "1.22",
-   "Market Value": "32389.98",
+   "Weight": "1.23",
+   "Market Value": "32804.94",
    "Shares Held": "42",
    "Asset Category": "Information Technology"
   },
@@ -469,5 +469,5 @@
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-10-16"
+ "asOfDate": "2026-10-19"
 }

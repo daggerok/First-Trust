@@ -13,7 +13,7 @@
    "Name": "BRENT CRUDE FUTR Jan27",
    "Ticker": "COF7",
    "Identifier": "-",
-   "Weight": "7.35",
+   "Weight": "7.31",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Energy"
@@ -22,7 +22,7 @@
    "Name": "GASOLINE RBOB FUT Dec26",
    "Ticker": "XBZ6",
    "Identifier": "-",
-   "Weight": "7.28",
+   "Weight": "7.2",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Energy"
@@ -31,7 +31,7 @@
    "Name": "SOYBEAN MEAL FUTR Dec26",
    "Ticker": "SMZ6",
    "Identifier": "-",
-   "Weight": "6.27",
+   "Weight": "6.24",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
@@ -40,7 +40,7 @@
    "Name": "SUGAR #11 (WORLD) Mar27",
    "Ticker": "SBH7",
    "Identifier": "-",
-   "Weight": "5.68",
+   "Weight": "5.62",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
@@ -49,7 +49,7 @@
    "Name": "NY Harb ULSD Fut Dec26",
    "Ticker": "HOZ6",
    "Identifier": "-",
-   "Weight": "5.52",
+   "Weight": "5.53",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Energy"
@@ -58,7 +58,7 @@
    "Name": "NATURAL GAS FUTR Dec26",
    "Ticker": "NGZ26",
    "Identifier": "-",
-   "Weight": "5.3",
+   "Weight": "5.24",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Energy"
@@ -67,7 +67,7 @@
    "Name": "SILVER FUTURE Dec26",
    "Ticker": "SIZ6",
    "Identifier": "-",
-   "Weight": "5.11",
+   "Weight": "5.12",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Precious Metals"
@@ -76,7 +76,7 @@
    "Name": "GOLD 100 OZ FUTR Dec26",
    "Ticker": "GCZ6",
    "Identifier": "-",
-   "Weight": "5.02",
+   "Weight": "5",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Precious Metals"
@@ -85,7 +85,7 @@
    "Name": "LME ZINC FUTURE Dec26",
    "Ticker": "LXZ6",
    "Identifier": "-",
-   "Weight": "4.84",
+   "Weight": "4.88",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Industrial Metals"
@@ -94,34 +94,34 @@
    "Name": "SOYBEAN FUTURE Jan27",
    "Ticker": "-",
    "Identifier": "S F7",
-   "Weight": "4.44",
+   "Weight": "4.42",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
   },
   {
-   "Name": "WTI CRUDE FUTURE Dec26",
-   "Ticker": "CLZ6",
-   "Identifier": "-",
-   "Weight": "4.28",
-   "Market Value": "0",
-   "Shares Held": "-",
-   "Asset Category": "Energy"
-  },
-  {
    "Name": "COPPER FUTURE Dec26",
    "Ticker": "HGZ6",
    "Identifier": "-",
-   "Weight": "4.26",
+   "Weight": "4.27",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Industrial Metals"
   },
   {
+   "Name": "WTI CRUDE FUTURE Dec26",
+   "Ticker": "CLZ6",
+   "Identifier": "-",
+   "Weight": "4.27",
+   "Market Value": "0",
+   "Shares Held": "-",
+   "Asset Category": "Energy"
+  },
+  {
    "Name": "LME PRI ALUM FUTR Dec26",
    "Ticker": "LAZ26",
    "Identifier": "-",
-   "Weight": "3.89",
+   "Weight": "3.92",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Industrial Metals"
@@ -130,25 +130,16 @@
    "Name": "COFFEE 'C' FUTURE Dec26",
    "Ticker": "KCZ6",
    "Identifier": "-",
-   "Weight": "3.67",
+   "Weight": "3.8",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
   },
   {
-   "Name": "Low Su Gasoil G Nov26",
-   "Ticker": "QSX6",
-   "Identifier": "-",
-   "Weight": "3.61",
-   "Market Value": "0",
-   "Shares Held": "-",
-   "Asset Category": "Energy"
-  },
-  {
    "Name": "CORN FUTURE Dec26",
    "Ticker": "-",
    "Identifier": "C Z6",
-   "Weight": "2.67",
+   "Weight": "2.63",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
@@ -166,16 +157,25 @@
    "Name": "WHEAT FUTURE(CBT) Dec26",
    "Ticker": "-",
    "Identifier": "W Z6",
-   "Weight": "2.45",
+   "Weight": "2.44",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
   },
   {
+   "Name": "Low Su Gasoil G Nov26",
+   "Ticker": "QSX6",
+   "Identifier": "-",
+   "Weight": "2.4",
+   "Market Value": "0",
+   "Shares Held": "-",
+   "Asset Category": "Energy"
+  },
+  {
    "Name": "SOYBEAN OIL FUTR Dec26",
    "Ticker": "BOZ6",
    "Identifier": "-",
-   "Weight": "2.4",
+   "Weight": "2.39",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
@@ -190,6 +190,15 @@
    "Asset Category": "Agricultural"
   },
   {
+   "Name": "LME NICKEL FUTURE Dec26",
+   "Ticker": "LNZ6",
+   "Identifier": "-",
+   "Weight": "1.49",
+   "Market Value": "0",
+   "Shares Held": "-",
+   "Asset Category": "Industrial Metals"
+  },
+  {
    "Name": "LIVE CATTLE FUTR Dec26",
    "Ticker": "LCZ6",
    "Identifier": "-",
@@ -199,19 +208,10 @@
    "Asset Category": "Livestock"
   },
   {
-   "Name": "LME NICKEL FUTURE Dec26",
-   "Ticker": "LNZ6",
-   "Identifier": "-",
-   "Weight": "1.47",
-   "Market Value": "0",
-   "Shares Held": "-",
-   "Asset Category": "Industrial Metals"
-  },
-  {
    "Name": "COCOA FUTURE Dec26",
    "Ticker": "CCZ6",
    "Identifier": "-",
-   "Weight": "1.36",
+   "Weight": "1.37",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
@@ -220,16 +220,25 @@
    "Name": "KC HRW WHEAT FUT Dec26",
    "Ticker": "KWZ6",
    "Identifier": "-",
-   "Weight": "1.35",
+   "Weight": "1.34",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Agricultural"
   },
   {
+   "Name": "Low Su Gasoil G Dec26",
+   "Ticker": "QSZ6",
+   "Identifier": "-",
+   "Weight": "1.27",
+   "Market Value": "0",
+   "Shares Held": "-",
+   "Asset Category": "Energy"
+  },
+  {
    "Name": "LME LEAD FUTURE Dec26",
    "Ticker": "LLZ6",
    "Identifier": "-",
-   "Weight": "1.21",
+   "Weight": "1.22",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Industrial Metals"
@@ -238,7 +247,7 @@
    "Name": "LEAN HOGS FUTURE Dec26",
    "Ticker": "LHZ6",
    "Identifier": "-",
-   "Weight": "0.82",
+   "Weight": "0.81",
    "Market Value": "0",
    "Shares Held": "-",
    "Asset Category": "Livestock"
@@ -247,16 +256,16 @@
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "49.4",
+   "Weight": "49.3",
    "Market Value": "0",
-   "Shares Held": "1699286137",
+   "Shares Held": "1693069520",
    "Asset Category": "-"
   },
   {
    "Name": "U.S. Treasury Bill, 0%, due 12/15/2026",
    "Ticker": "-",
    "Identifier": "912797WF0",
-   "Weight": "11.55",
+   "Weight": "11.58",
    "Market Value": "0",
    "Shares Held": "400000000",
    "Asset Category": "-"
@@ -265,7 +274,7 @@
    "Name": "U.S. Treasury Bill, 0%, due 11/17/2026",
    "Ticker": "-",
    "Identifier": "912797VX2",
-   "Weight": "8.69",
+   "Weight": "8.71",
    "Market Value": "0",
    "Shares Held": "300000000",
    "Asset Category": "-"
@@ -274,7 +283,7 @@
    "Name": "U.S. Treasury Bill, 0%, due 12/17/2026",
    "Ticker": "-",
    "Identifier": "912797VH7",
-   "Weight": "8.66",
+   "Weight": "8.68",
    "Market Value": "0",
    "Shares Held": "300000000",
    "Asset Category": "-"
@@ -283,7 +292,7 @@
    "Name": "U.S. Treasury Bill, 0%, due 10/29/2026",
    "Ticker": "-",
    "Identifier": "912797SK4",
-   "Weight": "7.26",
+   "Weight": "7.27",
    "Market Value": "0",
    "Shares Held": "250000000",
    "Asset Category": "-"
@@ -292,7 +301,7 @@
    "Name": "U.S. Treasury Bill, 0%, due 12/03/2026",
    "Ticker": "-",
    "Identifier": "912797VA2",
-   "Weight": "7.23",
+   "Weight": "7.24",
    "Market Value": "0",
    "Shares Held": "250000000",
    "Asset Category": "-"
@@ -301,11 +310,11 @@
    "Name": "U.S. Treasury Bill, 0%, due 01/07/2027",
    "Ticker": "-",
    "Identifier": "912797VS3",
-   "Weight": "7.2",
+   "Weight": "7.22",
    "Market Value": "0",
    "Shares Held": "250000000",
    "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-10-16"
+ "asOfDate": "2026-10-19"
 }

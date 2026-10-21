@@ -14,7 +14,7 @@
    "Ticker": "SWKS",
    "Identifier": "83088M102",
    "Weight": "2.62",
-   "Market Value": "14168189.29",
+   "Market Value": "14262406.89",
    "Shares Held": "177769",
    "Asset Category": "Semiconductors"
   },
@@ -23,7 +23,7 @@
    "Ticker": "2395.TT",
    "Identifier": "Y0017P108",
    "Weight": "1.91",
-   "Market Value": "10290912.3",
+   "Market Value": "10374566.73",
    "Shares Held": "497284",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
   },
@@ -31,8 +31,8 @@
    "Name": "NEC Corporation",
    "Ticker": "6701.JP",
    "Identifier": "J48818207",
-   "Weight": "1.82",
-   "Market Value": "9808319.43",
+   "Weight": "1.8",
+   "Market Value": "9787071.99",
    "Shares Held": "292395",
    "Asset Category": "IT Consulting & Other Services"
   },
@@ -40,89 +40,44 @@
    "Name": "Fujitsu Limited",
    "Ticker": "6702.JP",
    "Identifier": "J15708159",
-   "Weight": "1.78",
-   "Market Value": "9613978.22",
+   "Weight": "1.76",
+   "Market Value": "9568074.3",
    "Shares Held": "348820",
-   "Asset Category": "IT Consulting & Other Services"
-  },
-  {
-   "Name": "HCL Technologies Limited",
-   "Ticker": "HCLT.IS",
-   "Identifier": "Y3121G147",
-   "Weight": "1.65",
-   "Market Value": "8910657.45",
-   "Shares Held": "614864",
    "Asset Category": "IT Consulting & Other Services"
   },
   {
    "Name": "Hewlett Packard Enterprise Company",
    "Ticker": "HPE",
    "Identifier": "42824C109",
-   "Weight": "1.64",
-   "Market Value": "8854208.78",
+   "Weight": "1.65",
+   "Market Value": "8973057.22",
    "Shares Held": "160606",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
   },
   {
-   "Name": "Tech Mahindra Ltd.",
-   "Ticker": "TECHM.IS",
-   "Identifier": "Y85491127",
+   "Name": "HCL Technologies Limited",
+   "Ticker": "HCLT.IS",
+   "Identifier": "Y3121G147",
    "Weight": "1.64",
-   "Market Value": "8842792.86",
-   "Shares Held": "470786",
+   "Market Value": "8937938.87",
+   "Shares Held": "614864",
    "Asset Category": "IT Consulting & Other Services"
   },
   {
    "Name": "Lenovo Group Limited",
    "Ticker": "992.HK",
    "Identifier": "Y5257Y107",
-   "Weight": "1.62",
-   "Market Value": "8726274.7",
+   "Weight": "1.64",
+   "Market Value": "8900392.29",
    "Shares Held": "2489382",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
-  },
-  {
-   "Name": "NTT Inc.",
-   "Ticker": "9432.JP",
-   "Identifier": "J59396101",
-   "Weight": "1.61",
-   "Market Value": "8715882.69",
-   "Shares Held": "7869550",
-   "Asset Category": "Integrated Telecommunication Services"
-  },
-  {
-   "Name": "Sony Group Corp.",
-   "Ticker": "6758.JP",
-   "Identifier": "J76379106",
-   "Weight": "1.6",
-   "Market Value": "8645912.91",
-   "Shares Held": "346380",
-   "Asset Category": "Consumer Electronics"
-  },
-  {
-   "Name": "Apple Inc.",
-   "Ticker": "AAPL",
-   "Identifier": "037833100",
-   "Weight": "1.59",
-   "Market Value": "8605733.76",
-   "Shares Held": "25056",
-   "Asset Category": "Technology Hardware, Storage & Peripherals"
-  },
-  {
-   "Name": "Advanced Micro Devices, Inc.",
-   "Ticker": "AMD",
-   "Identifier": "007903107",
-   "Weight": "1.58",
-   "Market Value": "8538783.75",
-   "Shares Held": "16149",
-   "Asset Category": "Semiconductors"
   },
   {
    "Name": "Arista Networks, Inc.",
    "Ticker": "ANET",
    "Identifier": "040413205",
-   "Weight": "1.58",
-   "Market Value": "8520171.16",
+   "Weight": "1.62",
+   "Market Value": "8807578.9",
    "Shares Held": "48142",
    "Asset Category": "Communications Equipment"
   },
@@ -130,35 +85,80 @@
    "Name": "ASE Technology Holding Co., Ltd.",
    "Ticker": "3711.TT",
    "Identifier": "Y0249T100",
-   "Weight": "1.58",
-   "Market Value": "8518336.58",
+   "Weight": "1.62",
+   "Market Value": "8841080.95",
    "Shares Held": "429472",
    "Asset Category": "Semiconductors"
   },
   {
-   "Name": "Tata Consultancy Services Limited",
-   "Ticker": "TCS.IS",
-   "Identifier": "Y85279100",
-   "Weight": "1.55",
-   "Market Value": "8379839.79",
-   "Shares Held": "323161",
+   "Name": "Tech Mahindra Ltd.",
+   "Ticker": "TECHM.IS",
+   "Identifier": "Y85491127",
+   "Weight": "1.62",
+   "Market Value": "8823372.23",
+   "Shares Held": "470786",
    "Asset Category": "IT Consulting & Other Services"
+  },
+  {
+   "Name": "Advanced Micro Devices, Inc.",
+   "Ticker": "AMD",
+   "Identifier": "007903107",
+   "Weight": "1.6",
+   "Market Value": "8688969.45",
+   "Shares Held": "16149",
+   "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "NTT Inc.",
+   "Ticker": "9432.JP",
+   "Identifier": "J59396101",
+   "Weight": "1.6",
+   "Market Value": "8691000.96",
+   "Shares Held": "7869550",
+   "Asset Category": "Integrated Telecommunication Services"
+  },
+  {
+   "Name": "Sony Group Corp.",
+   "Ticker": "6758.JP",
+   "Identifier": "J76379106",
+   "Weight": "1.59",
+   "Market Value": "8651307.46",
+   "Shares Held": "346380",
+   "Asset Category": "Consumer Electronics"
+  },
+  {
+   "Name": "Apple Inc.",
+   "Ticker": "AAPL",
+   "Identifier": "037833100",
+   "Weight": "1.58",
+   "Market Value": "8592704.64",
+   "Shares Held": "25056",
+   "Asset Category": "Technology Hardware, Storage & Peripherals"
   },
   {
    "Name": "F5, Inc.",
    "Ticker": "FFIV",
    "Identifier": "315616102",
-   "Weight": "1.53",
-   "Market Value": "8264192.88",
+   "Weight": "1.55",
+   "Market Value": "8428156.8",
    "Shares Held": "18696",
    "Asset Category": "Systems Software"
+  },
+  {
+   "Name": "Tata Consultancy Services Limited",
+   "Ticker": "TCS.IS",
+   "Identifier": "Y85279100",
+   "Weight": "1.54",
+   "Market Value": "8377676.99",
+   "Shares Held": "323161",
+   "Asset Category": "IT Consulting & Other Services"
   },
   {
    "Name": "Motorola Solutions, Inc.",
    "Ticker": "MSI",
    "Identifier": "620076307",
-   "Weight": "1.52",
-   "Market Value": "8219986.2",
+   "Weight": "1.5",
+   "Market Value": "8144557.2",
    "Shares Held": "17748",
    "Asset Category": "Communications Equipment"
   },
@@ -166,17 +166,26 @@
    "Name": "Super Micro Computer, Inc.",
    "Ticker": "SMCI",
    "Identifier": "86800U302",
-   "Weight": "1.46",
-   "Market Value": "7895037.78",
+   "Weight": "1.47",
+   "Market Value": "8012352.6",
    "Shares Held": "249606",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
+  },
+  {
+   "Name": "Fujikura Ltd.",
+   "Ticker": "5803.JP",
+   "Identifier": "J14784128",
+   "Weight": "1.45",
+   "Market Value": "7903924.31",
+   "Shares Held": "279600",
+   "Asset Category": "Electrical Components & Equipment"
   },
   {
    "Name": "NVIDIA Corporation",
    "Ticker": "NVDA",
    "Identifier": "67066G104",
    "Weight": "1.45",
-   "Market Value": "7805680.89",
+   "Market Value": "7913581.77",
    "Shares Held": "36453",
    "Asset Category": "Semiconductors"
   },
@@ -185,80 +194,80 @@
    "Ticker": "2303.TT",
    "Identifier": "Y92370108",
    "Weight": "1.45",
-   "Market Value": "7812951.46",
+   "Market Value": "7892723.35",
    "Shares Held": "1953464",
    "Asset Category": "Semiconductors"
-  },
-  {
-   "Name": "Fujikura Ltd.",
-   "Ticker": "5803.JP",
-   "Identifier": "J14784128",
-   "Weight": "1.41",
-   "Market Value": "7607045.56",
-   "Shares Held": "279600",
-   "Asset Category": "Electrical Components & Equipment"
-  },
-  {
-   "Name": "Infosys Limited (ADR)",
-   "Ticker": "INFY",
-   "Identifier": "456788108",
-   "Weight": "1.41",
-   "Market Value": "7604161.2",
-   "Shares Held": "621255",
-   "Asset Category": "IT Consulting & Other Services"
   },
   {
    "Name": "Wiwynn Corporation",
    "Ticker": "6669.TT",
    "Identifier": "Y9673D101",
-   "Weight": "1.4",
-   "Market Value": "7545736.58",
+   "Weight": "1.45",
+   "Market Value": "7895437.45",
    "Shares Held": "136323",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
-  },
-  {
-   "Name": "BT Group Plc",
-   "Ticker": "BT/A.LN",
-   "Identifier": "G16612106",
-   "Weight": "1.39",
-   "Market Value": "7498299.8",
-   "Shares Held": "2689551",
-   "Asset Category": "Integrated Telecommunication Services"
-  },
-  {
-   "Name": "Keysight Technologies, Inc.",
-   "Ticker": "KEYS",
-   "Identifier": "49338L103",
-   "Weight": "1.38",
-   "Market Value": "7468454.29",
-   "Shares Held": "22549",
-   "Asset Category": "Electronic Equipment & Instruments"
   },
   {
    "Name": "Kyocera Corporation",
    "Ticker": "6971.JP",
    "Identifier": "J37479110",
-   "Weight": "1.37",
-   "Market Value": "7393319.32",
+   "Weight": "1.4",
+   "Market Value": "7602174.09",
    "Shares Held": "329684",
    "Asset Category": "Electronic Components"
+  },
+  {
+   "Name": "Infosys Limited (ADR)",
+   "Ticker": "INFY",
+   "Identifier": "456788108",
+   "Weight": "1.39",
+   "Market Value": "7579311",
+   "Shares Held": "621255",
+   "Asset Category": "IT Consulting & Other Services"
+  },
+  {
+   "Name": "Keysight Technologies, Inc.",
+   "Ticker": "KEYS",
+   "Identifier": "49338L103",
+   "Weight": "1.39",
+   "Market Value": "7573307.14",
+   "Shares Held": "22549",
+   "Asset Category": "Electronic Equipment & Instruments"
+  },
+  {
+   "Name": "Samsung SDS Co., Ltd.",
+   "Ticker": "018260.KS",
+   "Identifier": "Y7T72C103",
+   "Weight": "1.39",
+   "Market Value": "7571701.8",
+   "Shares Held": "49510",
+   "Asset Category": "IT Consulting & Other Services"
   },
   {
    "Name": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
    "Ticker": "TSM",
    "Identifier": "874039100",
-   "Weight": "1.37",
-   "Market Value": "7374991.14",
+   "Weight": "1.38",
+   "Market Value": "7511012.28",
    "Shares Held": "17874",
    "Asset Category": "Semiconductors"
   },
   {
-   "Name": "Analog Devices, Inc.",
-   "Ticker": "ADI",
-   "Identifier": "032654105",
+   "Name": "BT Group Plc",
+   "Ticker": "BT/A.LN",
+   "Identifier": "G16612106",
+   "Weight": "1.37",
+   "Market Value": "7442348.61",
+   "Shares Held": "2689551",
+   "Asset Category": "Integrated Telecommunication Services"
+  },
+  {
+   "Name": "Micron Technology, Inc.",
+   "Ticker": "MU",
+   "Identifier": "595112103",
    "Weight": "1.36",
-   "Market Value": "7357556.64",
-   "Shares Held": "18606",
+   "Market Value": "7412940.8",
+   "Shares Held": "8192",
    "Asset Category": "Semiconductors"
   },
   {
@@ -266,43 +275,25 @@
    "Ticker": "1810.HK",
    "Identifier": "G9830T106",
    "Weight": "1.36",
-   "Market Value": "7362805.81",
+   "Market Value": "7389839.33",
    "Shares Held": "2175429",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
   },
   {
-   "Name": "Samsung SDS Co., Ltd.",
-   "Ticker": "018260.KS",
-   "Identifier": "Y7T72C103",
-   "Weight": "1.34",
-   "Market Value": "7219752.64",
-   "Shares Held": "49510",
-   "Asset Category": "IT Consulting & Other Services"
-  },
-  {
-   "Name": "Micron Technology, Inc.",
-   "Ticker": "MU",
-   "Identifier": "595112103",
-   "Weight": "1.33",
-   "Market Value": "7199457.28",
-   "Shares Held": "8192",
+   "Name": "Analog Devices, Inc.",
+   "Ticker": "ADI",
+   "Identifier": "032654105",
+   "Weight": "1.35",
+   "Market Value": "7337276.1",
+   "Shares Held": "18606",
    "Asset Category": "Semiconductors"
-  },
-  {
-   "Name": "Digital Realty Trust, Inc.",
-   "Ticker": "DLR",
-   "Identifier": "253868103",
-   "Weight": "1.32",
-   "Market Value": "7111651.58",
-   "Shares Held": "40414",
-   "Asset Category": "Data Center REITs"
   },
   {
    "Name": "MediaTek Inc.",
    "Ticker": "2454.TT",
    "Identifier": "Y5945U103",
-   "Weight": "1.31",
-   "Market Value": "7085416.57",
+   "Weight": "1.32",
+   "Market Value": "7198106.26",
    "Shares Held": "55713",
    "Asset Category": "Semiconductors"
   },
@@ -310,89 +301,71 @@
    "Name": "American Tower Corporation",
    "Ticker": "AMT",
    "Identifier": "03027X100",
-   "Weight": "1.3",
-   "Market Value": "7031552.31",
+   "Weight": "1.28",
+   "Market Value": "6946537.59",
    "Shares Held": "37953",
    "Asset Category": "Telecom Tower REITs"
   },
   {
-   "Name": "Equinix, Inc.",
-   "Ticker": "EQIX",
-   "Identifier": "29444U700",
+   "Name": "Digital Realty Trust, Inc.",
+   "Ticker": "DLR",
+   "Identifier": "253868103",
    "Weight": "1.28",
-   "Market Value": "6937355.28",
-   "Shares Held": "7036",
+   "Market Value": "6991622",
+   "Shares Held": "40414",
    "Asset Category": "Data Center REITs"
   },
   {
    "Name": "China Tower Corporation Limited (Class H)",
    "Ticker": "788.HK",
    "Identifier": "Y15076121",
-   "Weight": "1.27",
-   "Market Value": "6847324.27",
+   "Weight": "1.26",
+   "Market Value": "6851602.9",
    "Shares Held": "5902607",
    "Asset Category": "Integrated Telecommunication Services"
   },
   {
-   "Name": "Wipro Limited (ADR)",
-   "Ticker": "WIT",
-   "Identifier": "97651M109",
+   "Name": "Equinix, Inc.",
+   "Ticker": "EQIX",
+   "Identifier": "29444U700",
    "Weight": "1.26",
-   "Market Value": "6784104.6",
-   "Shares Held": "3479028",
-   "Asset Category": "IT Consulting & Other Services"
-  },
-  {
-   "Name": "Cisco Systems, Inc.",
-   "Ticker": "CSCO",
-   "Identifier": "17275R102",
-   "Weight": "1.22",
-   "Market Value": "6604270.22",
-   "Shares Held": "61498",
-   "Asset Category": "Communications Equipment"
+   "Market Value": "6865095.56",
+   "Shares Held": "7036",
+   "Asset Category": "Data Center REITs"
   },
   {
    "Name": "Marvell Technology, Inc.",
    "Ticker": "MRVL",
    "Identifier": "573874104",
-   "Weight": "1.22",
-   "Market Value": "6589754.92",
+   "Weight": "1.26",
+   "Market Value": "6857591.16",
    "Shares Held": "28924",
    "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Wipro Limited (ADR)",
+   "Ticker": "WIT",
+   "Identifier": "97651M109",
+   "Weight": "1.23",
+   "Market Value": "6714524.04",
+   "Shares Held": "3479028",
+   "Asset Category": "IT Consulting & Other Services"
   },
   {
    "Name": "QUALCOMM Incorporated",
    "Ticker": "QCOM",
    "Identifier": "747525103",
    "Weight": "1.22",
-   "Market Value": "6576495.21",
+   "Market Value": "6630754.83",
    "Shares Held": "38211",
    "Asset Category": "Semiconductors"
-  },
-  {
-   "Name": "SBA Communications Corporation",
-   "Ticker": "SBAC",
-   "Identifier": "78410G104",
-   "Weight": "1.22",
-   "Market Value": "6591620.28",
-   "Shares Held": "35238",
-   "Asset Category": "Telecom Tower REITs"
-  },
-  {
-   "Name": "Telefonaktiebolaget LM Ericsson (Class B)",
-   "Ticker": "ERICB.SS",
-   "Identifier": "W26049119",
-   "Weight": "1.21",
-   "Market Value": "6559736.52",
-   "Shares Held": "620893",
-   "Asset Category": "Communications Equipment"
   },
   {
    "Name": "Broadcom Inc.",
    "Ticker": "AVGO",
    "Identifier": "11135F101",
-   "Weight": "1.2",
-   "Market Value": "6454677.5",
+   "Weight": "1.21",
+   "Market Value": "6569340.06",
    "Shares Held": "19634",
    "Asset Category": "Semiconductors"
   },
@@ -400,44 +373,80 @@
    "Name": "Mitsubishi Electric Corporation",
    "Ticker": "6503.JP",
    "Identifier": "J43873116",
-   "Weight": "1.2",
-   "Market Value": "6487940.28",
+   "Weight": "1.21",
+   "Market Value": "6574791.2",
    "Shares Held": "210465",
    "Asset Category": "Heavy Electrical Equipment"
+  },
+  {
+   "Name": "Cisco Systems, Inc.",
+   "Ticker": "CSCO",
+   "Identifier": "17275R102",
+   "Weight": "1.2",
+   "Market Value": "6549537",
+   "Shares Held": "61498",
+   "Asset Category": "Communications Equipment"
+  },
+  {
+   "Name": "SBA Communications Corporation",
+   "Ticker": "SBAC",
+   "Identifier": "78410G104",
+   "Weight": "1.19",
+   "Market Value": "6451725.42",
+   "Shares Held": "35238",
+   "Asset Category": "Telecom Tower REITs"
+  },
+  {
+   "Name": "Telefonaktiebolaget LM Ericsson (Class B)",
+   "Ticker": "ERICB.SS",
+   "Identifier": "W26049119",
+   "Weight": "1.19",
+   "Market Value": "6456062.94",
+   "Shares Held": "620893",
+   "Asset Category": "Communications Equipment"
   },
   {
    "Name": "Crown Castle Inc.",
    "Ticker": "CCI",
    "Identifier": "22822V101",
-   "Weight": "1.19",
-   "Market Value": "6435940.14",
+   "Weight": "1.17",
+   "Market Value": "6342053.34",
    "Shares Held": "78239",
    "Asset Category": "Telecom Tower REITs"
-  },
-  {
-   "Name": "Elisa Oyj",
-   "Ticker": "ELISA.FH",
-   "Identifier": "X1949T102",
-   "Weight": "1.17",
-   "Market Value": "6300838.39",
-   "Shares Held": "157709",
-   "Asset Category": "Integrated Telecommunication Services"
   },
   {
    "Name": "International Business Machines Corporation",
    "Ticker": "IBM",
    "Identifier": "459200101",
-   "Weight": "1.15",
-   "Market Value": "6227155.5",
+   "Weight": "1.17",
+   "Market Value": "6341161.75",
    "Shares Held": "26825",
    "Asset Category": "IT Consulting & Other Services"
+  },
+  {
+   "Name": "LG Electronics Inc.",
+   "Ticker": "066570.KS",
+   "Identifier": "Y5275H177",
+   "Weight": "1.17",
+   "Market Value": "6372175.63",
+   "Shares Held": "49731",
+   "Asset Category": "Consumer Electronics"
+  },
+  {
+   "Name": "Elisa Oyj",
+   "Ticker": "ELISA.FH",
+   "Identifier": "X1949T102",
+   "Weight": "1.16",
+   "Market Value": "6315571.68",
+   "Shares Held": "157709",
+   "Asset Category": "Integrated Telecommunication Services"
   },
   {
    "Name": "Intel Corporation",
    "Ticker": "INTC",
    "Identifier": "458140100",
-   "Weight": "1.14",
-   "Market Value": "6132621.9",
+   "Weight": "1.15",
+   "Market Value": "6281415.62",
    "Shares Held": "68254",
    "Asset Category": "Semiconductors"
   },
@@ -446,43 +455,34 @@
    "Ticker": "MCHP",
    "Identifier": "595017104",
    "Weight": "1.14",
-   "Market Value": "6137451.95",
+   "Market Value": "6185654.01",
    "Shares Held": "83107",
-   "Asset Category": "Semiconductors"
-  },
-  {
-   "Name": "LG Electronics Inc.",
-   "Ticker": "066570.KS",
-   "Identifier": "Y5275H177",
-   "Weight": "1.13",
-   "Market Value": "6125750.96",
-   "Shares Held": "49731",
-   "Asset Category": "Consumer Electronics"
-  },
-  {
-   "Name": "NXP Semiconductors N.V.",
-   "Ticker": "NXPI",
-   "Identifier": "N6596X109",
-   "Weight": "1.09",
-   "Market Value": "5867408.05",
-   "Shares Held": "25585",
    "Asset Category": "Semiconductors"
   },
   {
    "Name": "Samsung Electronics Co., Ltd.",
    "Ticker": "005930.KS",
    "Identifier": "Y74718100",
-   "Weight": "1.06",
-   "Market Value": "5711064.14",
+   "Weight": "1.11",
+   "Market Value": "6033192.79",
    "Shares Held": "36826",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
+  },
+  {
+   "Name": "NXP Semiconductors N.V.",
+   "Ticker": "NXPI",
+   "Identifier": "N6596X109",
+   "Weight": "1.08",
+   "Market Value": "5889411.15",
+   "Shares Held": "25585",
+   "Asset Category": "Semiconductors"
   },
   {
    "Name": "Ciena Corporation",
    "Ticker": "CIEN",
    "Identifier": "171779309",
-   "Weight": "1.04",
-   "Market Value": "5592858.57",
+   "Weight": "1.06",
+   "Market Value": "5785657.8",
    "Shares Held": "16809",
    "Asset Category": "Communications Equipment"
   },
@@ -490,98 +490,89 @@
    "Name": "Prysmian SpA",
    "Ticker": "PRY.IM",
    "Identifier": "T7630L105",
-   "Weight": "1.04",
-   "Market Value": "5634201.1",
+   "Weight": "1.02",
+   "Market Value": "5571124.08",
    "Shares Held": "46399",
    "Asset Category": "Electrical Components & Equipment"
+  },
+  {
+   "Name": "Delta Electronics Inc.",
+   "Ticker": "2308.TT",
+   "Identifier": "Y20263102",
+   "Weight": "0.97",
+   "Market Value": "5302027.55",
+   "Shares Held": "105221",
+   "Asset Category": "Electronic Components"
   },
   {
    "Name": "ZTE Corporation (Class H)",
    "Ticker": "763.HK",
    "Identifier": "Y0004F105",
    "Weight": "0.97",
-   "Market Value": "5257813.5",
+   "Market Value": "5296315.33",
    "Shares Held": "2134902",
    "Asset Category": "Communications Equipment"
-  },
-  {
-   "Name": "Delta Electronics Inc.",
-   "Ticker": "2308.TT",
-   "Identifier": "Y20263102",
-   "Weight": "0.95",
-   "Market Value": "5127922.2",
-   "Shares Held": "105221",
-   "Asset Category": "Electronic Components"
   },
   {
    "Name": "Renesas Electronics Corporation",
    "Ticker": "6723.JP",
    "Identifier": "J4881V107",
-   "Weight": "0.93",
-   "Market Value": "5015320.4",
+   "Weight": "0.95",
+   "Market Value": "5178831.31",
    "Shares Held": "272159",
    "Asset Category": "Semiconductors"
-  },
-  {
-   "Name": "Nokia Corporation (ADR)",
-   "Ticker": "NOK",
-   "Identifier": "654902204",
-   "Weight": "0.92",
-   "Market Value": "4983319.94",
-   "Shares Held": "545221",
-   "Asset Category": "Communications Equipment"
   },
   {
    "Name": "Infineon Technologies AG",
    "Ticker": "IFX.GY",
    "Identifier": "D35415104",
    "Weight": "0.91",
-   "Market Value": "4897904.11",
+   "Market Value": "4958303.72",
    "Shares Held": "84210",
    "Asset Category": "Semiconductors"
+  },
+  {
+   "Name": "Nokia Corporation (ADR)",
+   "Ticker": "NOK",
+   "Identifier": "654902204",
+   "Weight": "0.91",
+   "Market Value": "4950606.68",
+   "Shares Held": "545221",
+   "Asset Category": "Communications Equipment"
   },
   {
    "Name": "STMicroelectronics NV",
    "Ticker": "STMMI.IM",
    "Identifier": "N83574108",
-   "Weight": "0.87",
-   "Market Value": "4697566.84",
+   "Weight": "0.88",
+   "Market Value": "4762908.35",
    "Shares Held": "103117",
    "Asset Category": "Semiconductors"
-  },
-  {
-   "Name": "Emirates Telecommunications Group Company PJSC",
-   "Ticker": "ETISALAT.UH",
-   "Identifier": "M4040L103",
-   "Weight": "0.61",
-   "Market Value": "3287617.31",
-   "Shares Held": "576525",
-   "Asset Category": "Integrated Telecommunication Services"
   },
   {
    "Name": "SoftBank Corp.",
    "Ticker": "9434.JP",
    "Identifier": "J75963132",
    "Weight": "0.61",
-   "Market Value": "3305350.33",
+   "Market Value": "3315970.08",
    "Shares Held": "2134580",
    "Asset Category": "Wireless Telecommunication Services"
   },
   {
-   "Name": "Bharti Airtel Ltd.",
-   "Ticker": "BHARTI.IS",
-   "Identifier": "Y0885K108",
-   "Weight": "0.57",
-   "Market Value": "3068493.56",
-   "Shares Held": "153304",
-   "Asset Category": "Wireless Telecommunication Services"
+   "Name": "Emirates Telecommunications Group Company PJSC",
+   "Ticker": "ETISALAT.UH",
+   "Identifier": "M4040L103",
+   "Weight": "0.6",
+   "Market Value": "3280526.11",
+   "Shares Held": "576525",
+   "Asset Category": "Integrated Telecommunication Services"
   },
   {
    "Name": "KDDI Corporation",
    "Ticker": "9433.JP",
    "Identifier": "J31843105",
    "Weight": "0.57",
-   "Market Value": "3062405.72",
+   "Market Value": "3093400.31",
    "Shares Held": "166596",
    "Asset Category": "Wireless Telecommunication Services"
   },
@@ -590,17 +581,17 @@
    "Ticker": "3045.TT",
    "Identifier": "Y84153215",
    "Weight": "0.57",
-   "Market Value": "3084201.37",
+   "Market Value": "3075764.82",
    "Shares Held": "767091",
    "Asset Category": "Wireless Telecommunication Services"
   },
   {
-   "Name": "Vodafone Group Plc",
-   "Ticker": "VOD.LN",
-   "Identifier": "G93882192",
-   "Weight": "0.57",
-   "Market Value": "3067001.59",
-   "Shares Held": "1889860",
+   "Name": "Bharti Airtel Ltd.",
+   "Ticker": "BHARTI.IS",
+   "Identifier": "Y0885K108",
+   "Weight": "0.56",
+   "Market Value": "3028389.83",
+   "Shares Held": "153304",
    "Asset Category": "Wireless Telecommunication Services"
   },
   {
@@ -608,8 +599,17 @@
    "Ticker": "VOD.SJ",
    "Identifier": "S9453B108",
    "Weight": "0.56",
-   "Market Value": "3035918.79",
+   "Market Value": "3033101.37",
    "Shares Held": "319095",
+   "Asset Category": "Wireless Telecommunication Services"
+  },
+  {
+   "Name": "Vodafone Group Plc",
+   "Ticker": "VOD.LN",
+   "Identifier": "G93882192",
+   "Weight": "0.56",
+   "Market Value": "3032102.19",
+   "Shares Held": "1889860",
    "Asset Category": "Wireless Telecommunication Services"
   },
   {
@@ -617,7 +617,7 @@
    "Ticker": "2412.TT",
    "Identifier": "Y1613J108",
    "Weight": "0.55",
-   "Market Value": "2968035.27",
+   "Market Value": "2983946.46",
    "Shares Held": "628589",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -625,27 +625,27 @@
    "Name": "Far EasTone Telecommunications Co., Ltd.",
    "Ticker": "4904.TT",
    "Identifier": "Y7540C108",
-   "Weight": "0.55",
-   "Market Value": "2969185.93",
+   "Weight": "0.54",
+   "Market Value": "2937837.87",
    "Shares Held": "849923",
    "Asset Category": "Wireless Telecommunication Services"
-  },
-  {
-   "Name": "AT&T Inc.",
-   "Ticker": "T",
-   "Identifier": "00206R102",
-   "Weight": "0.53",
-   "Market Value": "2885135.84",
-   "Shares Held": "123086",
-   "Asset Category": "Integrated Telecommunication Services"
   },
   {
    "Name": "KT Corporation (ADR)",
    "Ticker": "KT",
    "Identifier": "48268K101",
-   "Weight": "0.53",
-   "Market Value": "2878494.09",
+   "Weight": "0.54",
+   "Market Value": "2926806.66",
    "Shares Held": "155847",
+   "Asset Category": "Integrated Telecommunication Services"
+  },
+  {
+   "Name": "AT&T Inc.",
+   "Ticker": "T",
+   "Identifier": "00206R102",
+   "Weight": "0.52",
+   "Market Value": "2855595.2",
+   "Shares Held": "123086",
    "Asset Category": "Integrated Telecommunication Services"
   },
   {
@@ -653,7 +653,7 @@
    "Ticker": "ST.SP",
    "Identifier": "Y79985209",
    "Weight": "0.52",
-   "Market Value": "2799107.92",
+   "Market Value": "2810020.6",
    "Shares Held": "860552",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -662,7 +662,7 @@
    "Ticker": "SCMN.SW",
    "Identifier": "H8398N104",
    "Weight": "0.52",
-   "Market Value": "2801805.21",
+   "Market Value": "2809280.26",
    "Shares Held": "3456",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -671,7 +671,7 @@
    "Ticker": "VIV",
    "Identifier": "87936R205",
    "Weight": "0.52",
-   "Market Value": "2787740.91",
+   "Market Value": "2810025.01",
    "Shares Held": "222841",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -679,8 +679,8 @@
    "Name": "Verizon Communications Inc.",
    "Ticker": "VZ",
    "Identifier": "92343V104",
-   "Weight": "0.5",
-   "Market Value": "2725381.92",
+   "Weight": "0.49",
+   "Market Value": "2686439.2",
    "Shares Held": "60848",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -688,27 +688,9 @@
    "Name": "Advanced Info Service Pcl",
    "Ticker": "ADVANC.TB",
    "Identifier": "Y0014U191",
-   "Weight": "0.49",
-   "Market Value": "2642435.82",
-   "Shares Held": "265400",
-   "Asset Category": "Wireless Telecommunication Services"
-  },
-  {
-   "Name": "Celcomdigi Bhd",
-   "Ticker": "CDB.MK",
-   "Identifier": "Y2070F100",
-   "Weight": "0.49",
-   "Market Value": "2652702.02",
-   "Shares Held": "4258055",
-   "Asset Category": "Wireless Telecommunication Services"
-  },
-  {
-   "Name": "America Movil, S.A.B. de C.V. (Class B)",
-   "Ticker": "AMXB.MM",
-   "Identifier": "P0280A192",
    "Weight": "0.48",
-   "Market Value": "2567635.31",
-   "Shares Held": "2244710",
+   "Market Value": "2638791.41",
+   "Shares Held": "265400",
    "Asset Category": "Wireless Telecommunication Services"
   },
   {
@@ -716,7 +698,7 @@
    "Ticker": "SPCX",
    "Identifier": "84615Q103",
    "Weight": "0.48",
-   "Market Value": "2592032.5",
+   "Market Value": "2626290",
    "Shares Held": "17750",
    "Asset Category": "Alternative Carriers"
   },
@@ -725,43 +707,43 @@
    "Ticker": "TLS.AU",
    "Identifier": "Q8975N105",
    "Weight": "0.48",
-   "Market Value": "2586746.03",
+   "Market Value": "2609444.15",
    "Shares Held": "785503",
    "Asset Category": "Integrated Telecommunication Services"
   },
   {
-   "Name": "Koninklijke (Royal) KPN N.V.",
-   "Ticker": "KPN.NA",
-   "Identifier": "N4297B146",
+   "Name": "America Movil, S.A.B. de C.V. (Class B)",
+   "Ticker": "AMXB.MM",
+   "Identifier": "P0280A192",
    "Weight": "0.47",
-   "Market Value": "2552245.98",
-   "Shares Held": "555458",
-   "Asset Category": "Integrated Telecommunication Services"
+   "Market Value": "2567052.94",
+   "Shares Held": "2244710",
+   "Asset Category": "Wireless Telecommunication Services"
+  },
+  {
+   "Name": "Celcomdigi Bhd",
+   "Ticker": "CDB.MK",
+   "Identifier": "Y2070F100",
+   "Weight": "0.47",
+   "Market Value": "2565784.53",
+   "Shares Held": "4258055",
+   "Asset Category": "Wireless Telecommunication Services"
   },
   {
    "Name": "MTN Group Limited",
    "Ticker": "MTN.SJ",
    "Identifier": "S8039R108",
    "Weight": "0.47",
-   "Market Value": "2528362.53",
+   "Market Value": "2537958.59",
    "Shares Held": "220194",
    "Asset Category": "Wireless Telecommunication Services"
-  },
-  {
-   "Name": "Telia Company AB",
-   "Ticker": "TELIA.SS",
-   "Identifier": "W95890104",
-   "Weight": "0.47",
-   "Market Value": "2521954.31",
-   "Shares Held": "539952",
-   "Asset Category": "Integrated Telecommunication Services"
   },
   {
    "Name": "Cellnex Telecom, S.A.",
    "Ticker": "CLNX.SM",
    "Identifier": "E2R41M104",
    "Weight": "0.46",
-   "Market Value": "2498262.22",
+   "Market Value": "2512513.15",
    "Shares Held": "87135",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -770,17 +752,35 @@
    "Ticker": "DTE.GY",
    "Identifier": "D2035M136",
    "Weight": "0.46",
-   "Market Value": "2502398.74",
+   "Market Value": "2476044.82",
    "Shares Held": "86374",
    "Asset Category": "Integrated Telecommunication Services"
   },
   {
-   "Name": "Tele2 AB (Class B)",
-   "Ticker": "TEL2B.SS",
-   "Identifier": "W95878166",
+   "Name": "Koninklijke (Royal) KPN N.V.",
+   "Ticker": "KPN.NA",
+   "Identifier": "N4297B146",
+   "Weight": "0.46",
+   "Market Value": "2520788.85",
+   "Shares Held": "555458",
+   "Asset Category": "Integrated Telecommunication Services"
+  },
+  {
+   "Name": "Telia Company AB",
+   "Ticker": "TELIA.SS",
+   "Identifier": "W95890104",
+   "Weight": "0.46",
+   "Market Value": "2493974.46",
+   "Shares Held": "539952",
+   "Asset Category": "Integrated Telecommunication Services"
+  },
+  {
+   "Name": "SK Telecom Co., Ltd.",
+   "Ticker": "017670.KS",
+   "Identifier": "Y4935N104",
    "Weight": "0.45",
-   "Market Value": "2420102.41",
-   "Shares Held": "150110",
+   "Market Value": "2431131.41",
+   "Shares Held": "41210",
    "Asset Category": "Wireless Telecommunication Services"
   },
   {
@@ -788,35 +788,17 @@
    "Ticker": "TEL.NO",
    "Identifier": "R89923107",
    "Weight": "0.45",
-   "Market Value": "2431338.99",
+   "Market Value": "2423330.97",
    "Shares Held": "181745",
    "Asset Category": "Integrated Telecommunication Services"
   },
   {
-   "Name": "T-Mobile US, Inc.",
-   "Ticker": "TMUS",
-   "Identifier": "872590104",
-   "Weight": "0.45",
-   "Market Value": "2449503.6",
-   "Shares Held": "15396",
-   "Asset Category": "Wireless Telecommunication Services"
-  },
-  {
-   "Name": "Rogers Communications Inc. (Class B)",
-   "Ticker": "RCI/B.CN",
-   "Identifier": "775109200",
+   "Name": "Tele2 AB (Class B)",
+   "Ticker": "TEL2B.SS",
+   "Identifier": "W95878166",
    "Weight": "0.44",
-   "Market Value": "2361334.31",
-   "Shares Held": "73840",
-   "Asset Category": "Wireless Telecommunication Services"
-  },
-  {
-   "Name": "SK Telecom Co., Ltd.",
-   "Ticker": "017670.KS",
-   "Identifier": "Y4935N104",
-   "Weight": "0.44",
-   "Market Value": "2366109.69",
-   "Shares Held": "41210",
+   "Market Value": "2401421.1",
+   "Shares Held": "150110",
    "Asset Category": "Wireless Telecommunication Services"
   },
   {
@@ -824,16 +806,43 @@
    "Ticker": "TEF.SM",
    "Identifier": "879382109",
    "Weight": "0.44",
-   "Market Value": "2396808.98",
+   "Market Value": "2374610.45",
    "Shares Held": "627959",
    "Asset Category": "Integrated Telecommunication Services"
+  },
+  {
+   "Name": "T-Mobile US, Inc.",
+   "Ticker": "TMUS",
+   "Identifier": "872590104",
+   "Weight": "0.44",
+   "Market Value": "2403161.64",
+   "Shares Held": "15396",
+   "Asset Category": "Wireless Telecommunication Services"
+  },
+  {
+   "Name": "Ooredoo Q.P.S.C.",
+   "Ticker": "ORDS.QD",
+   "Identifier": "M8180V102",
+   "Weight": "0.43",
+   "Market Value": "2349523.37",
+   "Shares Held": "747781",
+   "Asset Category": "Integrated Telecommunication Services"
+  },
+  {
+   "Name": "Rogers Communications Inc. (Class B)",
+   "Ticker": "RCI/B.CN",
+   "Identifier": "775109200",
+   "Weight": "0.43",
+   "Market Value": "2336361.12",
+   "Shares Held": "73840",
+   "Asset Category": "Wireless Telecommunication Services"
   },
   {
    "Name": "Airtel Africa Plc",
    "Ticker": "AAF.LN",
    "Identifier": "G01415101",
-   "Weight": "0.43",
-   "Market Value": "2320414.59",
+   "Weight": "0.42",
+   "Market Value": "2278926.25",
    "Shares Held": "613987",
    "Asset Category": "Wireless Telecommunication Services"
   },
@@ -841,26 +850,17 @@
    "Name": "BCE Inc.",
    "Ticker": "BCE.CN",
    "Identifier": "05534B760",
-   "Weight": "0.43",
-   "Market Value": "2343687.77",
+   "Weight": "0.42",
+   "Market Value": "2288831.09",
    "Shares Held": "115353",
-   "Asset Category": "Integrated Telecommunication Services"
-  },
-  {
-   "Name": "Ooredoo Q.P.S.C.",
-   "Ticker": "ORDS.QD",
-   "Identifier": "M8180V102",
-   "Weight": "0.43",
-   "Market Value": "2333596.16",
-   "Shares Held": "747781",
    "Asset Category": "Integrated Telecommunication Services"
   },
   {
    "Name": "Orange",
    "Ticker": "ORA.FP",
    "Identifier": "F6866T100",
-   "Weight": "0.42",
-   "Market Value": "2246515.04",
+   "Weight": "0.4",
+   "Market Value": "2184667.29",
    "Shares Held": "137231",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -869,7 +869,7 @@
    "Ticker": "ECHO",
    "Identifier": "278768106",
    "Weight": "0.39",
-   "Market Value": "2116322.3",
+   "Market Value": "2136898",
    "Shares Held": "24790",
    "Asset Category": "Cable & Satellite"
   },
@@ -878,7 +878,7 @@
    "Ticker": "T.CN",
    "Identifier": "87971M103",
    "Weight": "0.37",
-   "Market Value": "2021082.49",
+   "Market Value": "1987826.01",
    "Shares Held": "239959",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -886,8 +886,8 @@
    "Name": "PT Telekomunikasi Indonesia (Persero) Tbk",
    "Ticker": "TLKM.IJ",
    "Identifier": "Y71474145",
-   "Weight": "0.36",
-   "Market Value": "1941439.27",
+   "Weight": "0.33",
+   "Market Value": "1791258.05",
    "Shares Held": "18251604",
    "Asset Category": "Integrated Telecommunication Services"
   },
@@ -896,8 +896,8 @@
    "Ticker": "-",
    "Identifier": "$USD",
    "Weight": "0.2",
-   "Market Value": "1086364.45",
-   "Shares Held": "1086364",
+   "Market Value": "1090636.58",
+   "Shares Held": "1090637",
    "Asset Category": "Other"
   },
   {
@@ -905,7 +905,7 @@
    "Ticker": "-",
    "Identifier": "$CNY",
    "Weight": "0.03",
-   "Market Value": "170302.99",
+   "Market Value": "170392.18",
    "Shares Held": "1138731",
    "Asset Category": "Other"
   },
@@ -914,7 +914,7 @@
    "Ticker": "-",
    "Identifier": "$INR",
    "Weight": "0.02",
-   "Market Value": "113914.47",
+   "Market Value": "113951.91",
    "Shares Held": "10817033",
    "Asset Category": "Other"
   },
@@ -923,7 +923,7 @@
    "Ticker": "-",
    "Identifier": "$NOK",
    "Weight": "0.01",
-   "Market Value": "67954.85",
+   "Market Value": "68012.56",
    "Shares Held": "640651",
    "Asset Category": "Other"
   },
@@ -932,7 +932,7 @@
    "Ticker": "-",
    "Identifier": "$EUR",
    "Weight": "0",
-   "Market Value": "2994.71",
+   "Market Value": "2986.98",
    "Shares Held": "2665",
    "Asset Category": "Other"
   },
@@ -950,17 +950,8 @@
    "Ticker": "-",
    "Identifier": "$GBP",
    "Weight": "0",
-   "Market Value": "26.2",
+   "Market Value": "26.16",
    "Shares Held": "20",
-   "Asset Category": "Other"
-  },
-  {
-   "Name": "Swedish Krona",
-   "Ticker": "-",
-   "Identifier": "$SEK",
-   "Weight": "0",
-   "Market Value": "0",
-   "Shares Held": "0",
    "Asset Category": "Other"
   },
   {
@@ -968,10 +959,10 @@
    "Ticker": "-",
    "Identifier": "$CHF",
    "Weight": "0",
-   "Market Value": "6.94",
+   "Market Value": "6.92",
    "Shares Held": "6",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-10-16"
+ "asOfDate": "2026-10-19"
 }

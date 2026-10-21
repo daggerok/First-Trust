@@ -10,21 +10,21 @@
  ],
  "rows": [
   {
-   "Name": "General Motors Company",
-   "Ticker": "GM",
-   "Identifier": "37045V100",
-   "Weight": "8.07",
-   "Market Value": "13460635.12",
-   "Shares Held": "160322",
-   "Asset Category": "Automobiles"
-  },
-  {
    "Name": "Tesla, Inc.",
    "Ticker": "TSLA",
    "Identifier": "88160R101",
-   "Weight": "8",
-   "Market Value": "13348113.6",
+   "Weight": "8.36",
+   "Market Value": "13850097.8",
    "Shares Held": "37630",
+   "Asset Category": "Automobiles"
+  },
+  {
+   "Name": "General Motors Company",
+   "Ticker": "GM",
+   "Identifier": "37045V100",
+   "Weight": "8.01",
+   "Market Value": "13266645.5",
+   "Shares Held": "160322",
    "Asset Category": "Automobiles"
   },
   {
@@ -32,7 +32,7 @@
    "Ticker": "UNP",
    "Identifier": "907818108",
    "Weight": "7.97",
-   "Market Value": "13293816.72",
+   "Market Value": "13200450.93",
    "Shares Held": "45993",
    "Asset Category": "Railroads"
   },
@@ -40,8 +40,8 @@
    "Name": "Ford Motor Company",
    "Ticker": "F",
    "Identifier": "345370860",
-   "Weight": "7.4",
-   "Market Value": "12335183.96",
+   "Weight": "7.29",
+   "Market Value": "12087090.96",
    "Shares Held": "992372",
    "Asset Category": "Automobiles"
   },
@@ -49,8 +49,8 @@
    "Name": "FedEx Corporation",
    "Ticker": "FDX",
    "Identifier": "31428X106",
-   "Weight": "6.84",
-   "Market Value": "11403536.85",
+   "Weight": "6.89",
+   "Market Value": "11412471.66",
    "Shares Held": "38847",
    "Asset Category": "Delivery Services"
   },
@@ -58,62 +58,62 @@
    "Name": "United Rentals, Inc.",
    "Ticker": "URI",
    "Identifier": "911363109",
-   "Weight": "4.14",
-   "Market Value": "6905795.48",
+   "Weight": "4.15",
+   "Market Value": "6874675",
    "Shares Held": "6707",
    "Asset Category": "Commercial Vehicle-Equipment Leasing"
-  },
-  {
-   "Name": "CSX Corporation",
-   "Ticker": "CSX",
-   "Identifier": "126408103",
-   "Weight": "4",
-   "Market Value": "6669208.68",
-   "Shares Held": "137001",
-   "Asset Category": "Railroads"
   },
   {
    "Name": "Delta Air Lines, Inc.",
    "Ticker": "DAL",
    "Identifier": "247361702",
-   "Weight": "4",
-   "Market Value": "6678008.11",
+   "Weight": "3.99",
+   "Market Value": "6612441.89",
    "Shares Held": "88603",
    "Asset Category": "Airlines"
+  },
+  {
+   "Name": "CSX Corporation",
+   "Ticker": "CSX",
+   "Identifier": "126408103",
+   "Weight": "3.96",
+   "Market Value": "6559607.88",
+   "Shares Held": "137001",
+   "Asset Category": "Railroads"
   },
   {
    "Name": "United Parcel Service, Inc. (Class B)",
    "Ticker": "UPS",
    "Identifier": "911312106",
-   "Weight": "3.88",
-   "Market Value": "6470722.4",
+   "Weight": "3.9",
+   "Market Value": "6469394.8",
    "Shares Held": "66380",
    "Asset Category": "Delivery Services"
-  },
-  {
-   "Name": "PACCAR Inc",
-   "Ticker": "PCAR",
-   "Identifier": "693718108",
-   "Weight": "3.7",
-   "Market Value": "6169792.68",
-   "Shares Held": "55674",
-   "Asset Category": "Commercial Vehicles and Parts"
   },
   {
    "Name": "United Airlines Holdings, Inc.",
    "Ticker": "UAL",
    "Identifier": "910047109",
    "Weight": "3.69",
-   "Market Value": "6148093.6",
+   "Market Value": "6116105.6",
    "Shares Held": "63976",
    "Asset Category": "Airlines"
+  },
+  {
+   "Name": "PACCAR Inc",
+   "Ticker": "PCAR",
+   "Identifier": "693718108",
+   "Weight": "3.64",
+   "Market Value": "6036175.08",
+   "Shares Held": "55674",
+   "Asset Category": "Commercial Vehicles and Parts"
   },
   {
    "Name": "American Airlines Group Inc.",
    "Ticker": "AAL",
    "Identifier": "02376R102",
-   "Weight": "3.67",
-   "Market Value": "6117701.04",
+   "Weight": "3.63",
+   "Market Value": "6014709.44",
    "Shares Held": "514958",
    "Asset Category": "Airlines"
   },
@@ -121,8 +121,8 @@
    "Name": "Southwest Airlines Co.",
    "Ticker": "LUV",
    "Identifier": "844741108",
-   "Weight": "3.2",
-   "Market Value": "5341545.5",
+   "Weight": "3.17",
+   "Market Value": "5246885.2",
    "Shares Held": "135229",
    "Asset Category": "Airlines"
   },
@@ -130,8 +130,8 @@
    "Name": "Ryder System, Inc.",
    "Ticker": "R",
    "Identifier": "783549108",
-   "Weight": "2.94",
-   "Market Value": "4896530.6",
+   "Weight": "2.93",
+   "Market Value": "4848261.6",
    "Shares Held": "20540",
    "Asset Category": "Commercial Vehicle-Equipment Leasing"
   },
@@ -139,8 +139,8 @@
    "Name": "Wabtec Corporation",
    "Ticker": "WAB",
    "Identifier": "929740108",
-   "Weight": "2.39",
-   "Market Value": "3986511.18",
+   "Weight": "2.41",
+   "Market Value": "3985399.26",
    "Shares Held": "13899",
    "Asset Category": "Railroad Equipment"
   },
@@ -148,8 +148,8 @@
    "Name": "BorgWarner Inc.",
    "Ticker": "BWA",
    "Identifier": "099724106",
-   "Weight": "1.93",
-   "Market Value": "3217379.24",
+   "Weight": "1.95",
+   "Market Value": "3222914.04",
    "Shares Held": "55348",
    "Asset Category": "Auto Parts"
   },
@@ -157,8 +157,8 @@
    "Name": "Lear Corporation",
    "Ticker": "LEA",
    "Identifier": "521865204",
-   "Weight": "1.7",
-   "Market Value": "2831995.98",
+   "Weight": "1.71",
+   "Market Value": "2826096.48",
    "Shares Held": "23598",
    "Asset Category": "Auto Parts"
   },
@@ -166,8 +166,8 @@
    "Name": "J.B. Hunt Transport Services, Inc.",
    "Ticker": "JBHT",
    "Identifier": "445658107",
-   "Weight": "1.66",
-   "Market Value": "2765721.42",
+   "Weight": "1.63",
+   "Market Value": "2698869.25",
    "Shares Held": "12089",
    "Asset Category": "Trucking"
   },
@@ -176,7 +176,7 @@
    "Ticker": "ODFL",
    "Identifier": "679580100",
    "Weight": "1.61",
-   "Market Value": "2679515.28",
+   "Market Value": "2667096.9",
    "Shares Held": "14274",
    "Asset Category": "Trucking"
   },
@@ -184,8 +184,8 @@
    "Name": "Knight-Swift Transportation Holdings Inc.",
    "Ticker": "KNX",
    "Identifier": "499049104",
-   "Weight": "1.6",
-   "Market Value": "2669718.33",
+   "Weight": "1.57",
+   "Market Value": "2603809.53",
    "Shares Held": "41193",
    "Asset Category": "Trucking"
   },
@@ -193,8 +193,8 @@
    "Name": "Genuine Parts Company",
    "Ticker": "GPC",
    "Identifier": "372460105",
-   "Weight": "1.39",
-   "Market Value": "2325009.76",
+   "Weight": "1.36",
+   "Market Value": "2259404.08",
    "Shares Held": "17356",
    "Asset Category": "Auto Parts"
   },
@@ -202,35 +202,35 @@
    "Name": "Oshkosh Corporation",
    "Ticker": "OSK",
    "Identifier": "688239201",
-   "Weight": "1.29",
-   "Market Value": "2153243.04",
+   "Weight": "1.31",
+   "Market Value": "2167991.28",
    "Shares Held": "16952",
    "Asset Category": "Commercial Vehicles and Parts"
+  },
+  {
+   "Name": "Herc Holdings, Inc.",
+   "Ticker": "HRI",
+   "Identifier": "42704L104",
+   "Weight": "1.26",
+   "Market Value": "2081842.42",
+   "Shares Held": "16727",
+   "Asset Category": "Commercial Vehicle-Equipment Leasing"
   },
   {
    "Name": "XPO, Inc.",
    "Ticker": "XPO",
    "Identifier": "983793100",
    "Weight": "1.23",
-   "Market Value": "2049636.6",
+   "Market Value": "2035143",
    "Shares Held": "10980",
    "Asset Category": "Trucking"
-  },
-  {
-   "Name": "Herc Holdings, Inc.",
-   "Ticker": "HRI",
-   "Identifier": "42704L104",
-   "Weight": "1.22",
-   "Market Value": "2033501.39",
-   "Shares Held": "16727",
-   "Asset Category": "Commercial Vehicle-Equipment Leasing"
   },
   {
    "Name": "Expeditors International of Washington, Inc.",
    "Ticker": "EXPD",
    "Identifier": "302130109",
-   "Weight": "1.15",
-   "Market Value": "1924815.75",
+   "Weight": "1.17",
+   "Market Value": "1933658.25",
    "Shares Held": "9825",
    "Asset Category": "Transportation Services"
   },
@@ -239,7 +239,7 @@
    "Ticker": "ALSN",
    "Identifier": "01973R101",
    "Weight": "0.98",
-   "Market Value": "1635745.8",
+   "Market Value": "1620529.56",
    "Shares Held": "14631",
    "Asset Category": "Commercial Vehicles and Parts"
   },
@@ -247,8 +247,8 @@
    "Name": "LKQ Corporation",
    "Ticker": "LKQ",
    "Identifier": "501889208",
-   "Weight": "0.87",
-   "Market Value": "1454975.73",
+   "Weight": "0.85",
+   "Market Value": "1408505.52",
    "Shares Held": "65451",
    "Asset Category": "Auto Parts"
   },
@@ -256,8 +256,8 @@
    "Name": "International Seaways, Inc.",
    "Ticker": "INSW",
    "Identifier": "Y41053102",
-   "Weight": "0.86",
-   "Market Value": "1438449.22",
+   "Weight": "0.83",
+   "Market Value": "1370966.74",
    "Shares Held": "13078",
    "Asset Category": "Marine Transportation"
   },
@@ -266,7 +266,7 @@
    "Ticker": "KEX",
    "Identifier": "497266106",
    "Weight": "0.82",
-   "Market Value": "1363072.13",
+   "Market Value": "1362472.67",
    "Shares Held": "9991",
    "Asset Category": "Marine Transportation"
   },
@@ -274,35 +274,35 @@
    "Name": "Matson, Inc.",
    "Ticker": "MATX",
    "Identifier": "57686G105",
-   "Weight": "0.75",
-   "Market Value": "1247326.92",
+   "Weight": "0.74",
+   "Market Value": "1230288.24",
    "Shares Held": "5308",
    "Asset Category": "Marine Transportation"
+  },
+  {
+   "Name": "RXO, Inc.",
+   "Ticker": "RXO",
+   "Identifier": "74982T103",
+   "Weight": "0.72",
+   "Market Value": "1186882.5",
+   "Shares Held": "41645",
+   "Asset Category": "Transportation Services"
   },
   {
    "Name": "Saia, Inc.",
    "Ticker": "SAIA",
    "Identifier": "78709Y105",
    "Weight": "0.72",
-   "Market Value": "1206335",
+   "Market Value": "1191931",
    "Shares Held": "3601",
    "Asset Category": "Trucking"
-  },
-  {
-   "Name": "RXO, Inc.",
-   "Ticker": "RXO",
-   "Identifier": "74982T103",
-   "Weight": "0.71",
-   "Market Value": "1191047",
-   "Shares Held": "41645",
-   "Asset Category": "Transportation Services"
   },
   {
    "Name": "C.H. Robinson Worldwide, Inc.",
    "Ticker": "CHRW",
    "Identifier": "12541W209",
    "Weight": "0.7",
-   "Market Value": "1170321.1",
+   "Market Value": "1164951.5",
    "Shares Held": "8390",
    "Asset Category": "Trucking"
   },
@@ -310,8 +310,8 @@
    "Name": "Schneider National, Inc. (Class B)",
    "Ticker": "SNDR",
    "Identifier": "80689H102",
-   "Weight": "0.7",
-   "Market Value": "1167413.99",
+   "Weight": "0.68",
+   "Market Value": "1128883.03",
    "Shares Held": "37049",
    "Asset Category": "Trucking"
   },
@@ -320,7 +320,7 @@
    "Ticker": "GNTX",
    "Identifier": "371901109",
    "Weight": "0.65",
-   "Market Value": "1079829.96",
+   "Market Value": "1072634.52",
    "Shares Held": "51396",
    "Asset Category": "Auto Parts"
   },
@@ -329,25 +329,16 @@
    "Ticker": "FSS",
    "Identifier": "313855108",
    "Weight": "0.52",
-   "Market Value": "859221.55",
+   "Market Value": "863273.4",
    "Shares Held": "7645",
    "Asset Category": "Commercial Vehicles and Parts"
-  },
-  {
-   "Name": "Dorman Products, Inc.",
-   "Ticker": "DORM",
-   "Identifier": "258278100",
-   "Weight": "0.51",
-   "Market Value": "846788.15",
-   "Shares Held": "6835",
-   "Asset Category": "Auto Parts"
   },
   {
    "Name": "Landstar System, Inc.",
    "Ticker": "LSTR",
    "Identifier": "515098101",
    "Weight": "0.51",
-   "Market Value": "854130.4",
+   "Market Value": "837759.36",
    "Shares Held": "4976",
    "Asset Category": "Trucking"
   },
@@ -356,7 +347,7 @@
    "Ticker": "ARCB",
    "Identifier": "03937C105",
    "Weight": "0.5",
-   "Market Value": "835641.42",
+   "Market Value": "824069.22",
    "Shares Held": "6429",
    "Asset Category": "Trucking"
   },
@@ -365,17 +356,17 @@
    "Ticker": "ATMU",
    "Identifier": "04956D107",
    "Weight": "0.5",
-   "Market Value": "833401.71",
+   "Market Value": "832838.22",
    "Shares Held": "18783",
    "Asset Category": "Auto Parts"
   },
   {
-   "Name": "Garrett Motion Inc.",
-   "Ticker": "GTX",
-   "Identifier": "366505105",
-   "Weight": "0.48",
-   "Market Value": "803880.48",
-   "Shares Held": "32892",
+   "Name": "Dorman Products, Inc.",
+   "Ticker": "DORM",
+   "Identifier": "258278100",
+   "Weight": "0.5",
+   "Market Value": "828607.05",
+   "Shares Held": "6835",
    "Asset Category": "Auto Parts"
   },
   {
@@ -383,9 +374,18 @@
    "Ticker": "FTAI",
    "Identifier": "G3730V105",
    "Weight": "0.47",
-   "Market Value": "777402.42",
+   "Market Value": "772108.18",
    "Shares Held": "4727",
    "Asset Category": "Commercial Vehicle-Equipment Leasing"
+  },
+  {
+   "Name": "Garrett Motion Inc.",
+   "Ticker": "GTX",
+   "Identifier": "366505105",
+   "Weight": "0.46",
+   "Market Value": "767370.36",
+   "Shares Held": "32892",
+   "Asset Category": "Auto Parts"
   },
   {
    "Name": "US Dollar",
@@ -397,5 +397,5 @@
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-10-16"
+ "asOfDate": "2026-10-19"
 }
