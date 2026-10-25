@@ -13,8 +13,8 @@
    "Name": "Shopify Inc. (Class A)",
    "Ticker": "SHOP.CT",
    "Identifier": "82509L107",
-   "Weight": "13.5",
-   "Market Value": "4119610.8",
+   "Weight": "13.77",
+   "Market Value": "4060116.74",
    "Shares Held": "24073",
    "Asset Category": "Information Technology"
   },
@@ -22,8 +22,8 @@
    "Name": "Alibaba Group Holding Limited",
    "Ticker": "9988.HK",
    "Identifier": "G01719114",
-   "Weight": "9.92",
-   "Market Value": "3025319.85",
+   "Weight": "9.23",
+   "Market Value": "2721115.36",
    "Shares Held": "218229",
    "Asset Category": "Consumer Discretionary"
   },
@@ -31,35 +31,35 @@
    "Name": "Tencent Holdings Limited",
    "Ticker": "700.HK",
    "Identifier": "G87572163",
-   "Weight": "9.63",
-   "Market Value": "2937248.66",
+   "Weight": "9.21",
+   "Market Value": "2715346.65",
    "Shares Held": "55175",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Spotify Technology S.A.",
+   "Ticker": "SPOT",
+   "Identifier": "L8681T102",
+   "Weight": "6.4",
+   "Market Value": "1886446.38",
+   "Shares Held": "3229",
    "Asset Category": "Communication Services"
   },
   {
    "Name": "PDD Holdings Inc. (ADR)",
    "Ticker": "PDD",
    "Identifier": "722304102",
-   "Weight": "5.9",
-   "Market Value": "1800997.92",
+   "Weight": "5.93",
+   "Market Value": "1748997.12",
    "Shares Held": "22128",
    "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Spotify Technology S.A.",
-   "Ticker": "SPOT",
-   "Identifier": "L8681T102",
-   "Weight": "5.49",
-   "Market Value": "1675076.04",
-   "Shares Held": "3229",
-   "Asset Category": "Communication Services"
   },
   {
    "Name": "NetEase, Inc.",
    "Ticker": "9999.HK",
    "Identifier": "G6427A102",
-   "Weight": "4.86",
-   "Market Value": "1481780.18",
+   "Weight": "4.65",
+   "Market Value": "1372441.67",
    "Shares Held": "58823",
    "Asset Category": "Communication Services"
   },
@@ -67,17 +67,26 @@
    "Name": "JD.com, Inc. (Class A)",
    "Ticker": "9618.HK",
    "Identifier": "G8208B101",
-   "Weight": "4.49",
-   "Market Value": "1369923.2",
+   "Weight": "4.38",
+   "Market Value": "1291952.47",
    "Shares Held": "101333",
    "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Adyen NV",
+   "Ticker": "ADYEN.NA",
+   "Identifier": "N3501V104",
+   "Weight": "4.36",
+   "Market Value": "1285920.24",
+   "Shares Held": "1215",
+   "Asset Category": "Financials"
   },
   {
    "Name": "Meituan (Class B)",
    "Ticker": "3690.HK",
    "Identifier": "G59669104",
-   "Weight": "4.38",
-   "Market Value": "1337178.25",
+   "Weight": "4.29",
+   "Market Value": "1266412.89",
    "Shares Held": "138632",
    "Asset Category": "Consumer Discretionary"
   },
@@ -85,26 +94,17 @@
    "Name": "Prosus N.V.",
    "Ticker": "PRX.NA",
    "Identifier": "N7163R103",
-   "Weight": "4.33",
-   "Market Value": "1319728.49",
+   "Weight": "4.28",
+   "Market Value": "1261359.17",
    "Shares Held": "32974",
    "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Adyen NV",
-   "Ticker": "ADYEN.NA",
-   "Identifier": "N3501V104",
-   "Weight": "4.15",
-   "Market Value": "1267332.93",
-   "Shares Held": "1215",
-   "Asset Category": "Financials"
   },
   {
    "Name": "Naspers Limited (Class N)",
    "Ticker": "NPN.SJ",
    "Identifier": "S53435129",
    "Weight": "3.69",
-   "Market Value": "1126072.43",
+   "Market Value": "1088982.46",
    "Shares Held": "26405",
    "Asset Category": "Consumer Discretionary"
   },
@@ -112,8 +112,8 @@
    "Name": "Sea Limited (ADR)",
    "Ticker": "SE",
    "Identifier": "81141R100",
-   "Weight": "3.67",
-   "Market Value": "1119941.73",
+   "Weight": "3.2",
+   "Market Value": "944741.17",
    "Shares Held": "12659",
    "Asset Category": "Consumer Discretionary"
   },
@@ -121,8 +121,8 @@
    "Name": "NAVER Corporation",
    "Ticker": "035420.KS",
    "Identifier": "Y62579100",
-   "Weight": "2.84",
-   "Market Value": "866082.66",
+   "Weight": "2.8",
+   "Market Value": "825861.54",
    "Shares Held": "6301",
    "Asset Category": "Communication Services"
   },
@@ -130,8 +130,8 @@
    "Name": "Baidu, Inc. (Class A)",
    "Ticker": "9888.HK",
    "Identifier": "G07034104",
-   "Weight": "2.4",
-   "Market Value": "731411.34",
+   "Weight": "2.37",
+   "Market Value": "699618.47",
    "Shares Held": "72250",
    "Asset Category": "Communication Services"
   },
@@ -139,8 +139,8 @@
    "Name": "Allegro.eu SA",
    "Ticker": "ALE.PW",
    "Identifier": "L0R67D109",
-   "Weight": "1.65",
-   "Market Value": "502244.31",
+   "Weight": "1.71",
+   "Market Value": "505405.34",
    "Shares Held": "34002",
    "Asset Category": "Consumer Discretionary"
   },
@@ -148,80 +148,71 @@
    "Name": "Kuaishou Technology",
    "Ticker": "1024.HK",
    "Identifier": "G53263102",
-   "Weight": "1.42",
-   "Market Value": "432156.51",
+   "Weight": "1.4",
+   "Market Value": "411759.23",
    "Shares Held": "115756",
    "Asset Category": "Communication Services"
-  },
-  {
-   "Name": "IREN Ltd.",
-   "Ticker": "IREN",
-   "Identifier": "Q4982L109",
-   "Weight": "1.04",
-   "Market Value": "316038.81",
-   "Shares Held": "11397",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Delivery Hero SE",
-   "Ticker": "DHER.GY",
-   "Identifier": "D1T0KZ103",
-   "Weight": "0.97",
-   "Market Value": "295025.27",
-   "Shares Held": "6927",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Wise Group Plc (Class A)",
-   "Ticker": "WISE.LN",
-   "Identifier": "G9723Y105",
-   "Weight": "0.96",
-   "Market Value": "293780.38",
-   "Shares Held": "26891",
-   "Asset Category": "Financials"
   },
   {
    "Name": "The Descartes Systems Group Inc.",
    "Ticker": "DSG.CN",
    "Identifier": "249906108",
-   "Weight": "0.94",
-   "Market Value": "286908.82",
+   "Weight": "1.06",
+   "Market Value": "311289.34",
    "Shares Held": "3314",
    "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Wise Group Plc (Class A)",
+   "Ticker": "WISE.LN",
+   "Identifier": "G9723Y105",
+   "Weight": "1.01",
+   "Market Value": "296455.49",
+   "Shares Held": "26891",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "Delivery Hero SE",
+   "Ticker": "DHER.GY",
+   "Identifier": "D1T0KZ103",
+   "Weight": "0.98",
+   "Market Value": "289329.42",
+   "Shares Held": "6927",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Xero Limited",
    "Ticker": "XRO.AU",
    "Identifier": "Q98665104",
-   "Weight": "0.88",
-   "Market Value": "268623.05",
+   "Weight": "0.98",
+   "Market Value": "288253.45",
    "Shares Held": "6381",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "IREN Ltd.",
+   "Ticker": "IREN",
+   "Identifier": "Q4982L109",
+   "Weight": "0.96",
+   "Market Value": "283842.29",
+   "Shares Held": "11397",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Scout24 SE",
    "Ticker": "G24.GY",
    "Identifier": "D345XT105",
-   "Weight": "0.87",
-   "Market Value": "263980.37",
+   "Weight": "0.95",
+   "Market Value": "280262.94",
    "Shares Held": "2947",
-   "Asset Category": "Communication Services"
-  },
-  {
-   "Name": "Nexon Co., Ltd.",
-   "Ticker": "3659.JP",
-   "Identifier": "J4914X104",
-   "Weight": "0.84",
-   "Market Value": "256599.03",
-   "Shares Held": "14582",
    "Asset Category": "Communication Services"
   },
   {
    "Name": "Wisetech Global Limited",
    "Ticker": "WTC.AU",
    "Identifier": "Q98056106",
-   "Weight": "0.84",
-   "Market Value": "256142.81",
+   "Weight": "0.92",
+   "Market Value": "271841.28",
    "Shares Held": "9628",
    "Asset Category": "Information Technology"
   },
@@ -229,17 +220,26 @@
    "Name": "CAR Group Limited",
    "Ticker": "CAR.AU",
    "Identifier": "Q21411121",
-   "Weight": "0.81",
-   "Market Value": "247013.24",
+   "Weight": "0.88",
+   "Market Value": "259345.65",
    "Shares Held": "14729",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Nexon Co., Ltd.",
+   "Ticker": "3659.JP",
+   "Identifier": "J4914X104",
+   "Weight": "0.87",
+   "Market Value": "257824.38",
+   "Shares Held": "14582",
    "Asset Category": "Communication Services"
   },
   {
    "Name": "Quebecor Inc. (Class B)",
    "Ticker": "QBR/B.CN",
    "Identifier": "748193208",
-   "Weight": "0.78",
-   "Market Value": "238058.22",
+   "Weight": "0.82",
+   "Market Value": "242242.25",
    "Shares Held": "5189",
    "Asset Category": "Communication Services"
   },
@@ -247,8 +247,8 @@
    "Name": "Rakuten Group, Inc.",
    "Ticker": "4755.JP",
    "Identifier": "J64264104",
-   "Weight": "0.78",
-   "Market Value": "238744.69",
+   "Weight": "0.81",
+   "Market Value": "239393.44",
    "Shares Held": "59173",
    "Asset Category": "Consumer Discretionary"
   },
@@ -256,8 +256,8 @@
    "Name": "LY Corp.",
    "Ticker": "4689.JP",
    "Identifier": "J9894K105",
-   "Weight": "0.77",
-   "Market Value": "235547.46",
+   "Weight": "0.8",
+   "Market Value": "234991.75",
    "Shares Held": "71176",
    "Asset Category": "Communication Services"
   },
@@ -265,17 +265,35 @@
    "Name": "Kakao Corp.",
    "Ticker": "035720.KS",
    "Identifier": "Y4519H119",
-   "Weight": "0.74",
-   "Market Value": "224300.75",
+   "Weight": "0.71",
+   "Market Value": "210249.23",
    "Shares Held": "9298",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Zalando SE",
+   "Ticker": "ZAL.GY",
+   "Identifier": "D98423102",
+   "Weight": "0.71",
+   "Market Value": "208942.96",
+   "Shares Held": "6959",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "REA Group Limited",
+   "Ticker": "REA.AU",
+   "Identifier": "Q8051B108",
+   "Weight": "0.7",
+   "Market Value": "206384.93",
+   "Shares Held": "1787",
    "Asset Category": "Communication Services"
   },
   {
    "Name": "Futu Holdings Limited (ADR)",
    "Ticker": "FUTU",
    "Identifier": "36118L106",
-   "Weight": "0.71",
-   "Market Value": "215220",
+   "Weight": "0.69",
+   "Market Value": "202347.6",
    "Shares Held": "2040",
    "Asset Category": "Financials"
   },
@@ -283,35 +301,17 @@
    "Name": "Tencent Music Entertainment (Class A)",
    "Ticker": "1698.HK",
    "Identifier": "G87577113",
-   "Weight": "0.67",
-   "Market Value": "204304.19",
+   "Weight": "0.69",
+   "Market Value": "202387.33",
    "Shares Held": "47104",
    "Asset Category": "Communication Services"
-  },
-  {
-   "Name": "REA Group Limited",
-   "Ticker": "REA.AU",
-   "Identifier": "Q8051B108",
-   "Weight": "0.66",
-   "Market Value": "200703.42",
-   "Shares Held": "1787",
-   "Asset Category": "Communication Services"
-  },
-  {
-   "Name": "Zalando SE",
-   "Ticker": "ZAL.GY",
-   "Identifier": "D98423102",
-   "Weight": "0.66",
-   "Market Value": "202143.14",
-   "Shares Held": "6959",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "International Games System Co., Ltd.",
    "Ticker": "3293.TT",
    "Identifier": "Y41065114",
-   "Weight": "0.65",
-   "Market Value": "198431.67",
+   "Weight": "0.68",
+   "Market Value": "201346.91",
    "Shares Held": "8344",
    "Asset Category": "Communication Services"
   },
@@ -319,35 +319,35 @@
    "Name": "JD Health International Inc.",
    "Ticker": "6618.HK",
    "Identifier": "G5074A100",
-   "Weight": "0.58",
-   "Market Value": "178453.37",
+   "Weight": "0.59",
+   "Market Value": "174117.05",
    "Shares Held": "36321",
    "Asset Category": "Consumer Staples"
-  },
-  {
-   "Name": "Yangtze Optical Fibre and Cable Joint Stock Limited Company (Class H)",
-   "Ticker": "6869.HK",
-   "Identifier": "Y9737F100",
-   "Weight": "0.53",
-   "Market Value": "160683.98",
-   "Shares Held": "10170",
-   "Asset Category": "Information Technology"
   },
   {
    "Name": "IG Group Holdings Plc",
    "Ticker": "IGG.LN",
    "Identifier": "G4753Q106",
-   "Weight": "0.5",
-   "Market Value": "153479.63",
+   "Weight": "0.51",
+   "Market Value": "149642.16",
    "Shares Held": "11949",
    "Asset Category": "Financials"
+  },
+  {
+   "Name": "Yangtze Optical Fibre and Cable Joint Stock Limited Company (Class H)",
+   "Ticker": "6869.HK",
+   "Identifier": "Y9737F100",
+   "Weight": "0.49",
+   "Market Value": "145482.06",
+   "Shares Held": "10170",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "Krafton, Inc.",
    "Ticker": "259960.KS",
    "Identifier": "Y0929C104",
-   "Weight": "0.5",
-   "Market Value": "153017.7",
+   "Weight": "0.48",
+   "Market Value": "141950.02",
    "Shares Held": "1013",
    "Asset Category": "Communication Services"
   },
@@ -355,8 +355,8 @@
    "Name": "Entain Plc",
    "Ticker": "ENT.LN",
    "Identifier": "G3167C109",
-   "Weight": "0.44",
-   "Market Value": "133884.11",
+   "Weight": "0.47",
+   "Market Value": "137587.89",
    "Shares Held": "22961",
    "Asset Category": "Consumer Discretionary"
   },
@@ -364,8 +364,8 @@
    "Name": "Vipshop Holdings Limited (ADR)",
    "Ticker": "VIPS",
    "Identifier": "92763W103",
-   "Weight": "0.36",
-   "Market Value": "110873.6",
+   "Weight": "0.37",
+   "Market Value": "108621.48",
    "Shares Held": "8662",
    "Asset Category": "Consumer Discretionary"
   },
@@ -373,8 +373,8 @@
    "Name": "Japanese Yen",
    "Ticker": "-",
    "Identifier": "$JPY",
-   "Weight": "0.12",
-   "Market Value": "37180.39",
+   "Weight": "0.13",
+   "Market Value": "37585.79",
    "Shares Held": "5894579",
    "Asset Category": "Other"
   },
@@ -392,10 +392,10 @@
    "Ticker": "-",
    "Identifier": "$CNY",
    "Weight": "0.01",
-   "Market Value": "1911.9",
+   "Market Value": "1915.63",
    "Shares Held": "12777",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-10-19"
+ "asOfDate": "2026-10-23"
 }

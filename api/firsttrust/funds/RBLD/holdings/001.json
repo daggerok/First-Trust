@@ -13,8 +13,8 @@
    "Name": "Crown Castle Inc.",
    "Ticker": "CCI",
    "Identifier": "22822V101",
-   "Weight": "1.19",
-   "Market Value": "496492.5",
+   "Weight": "1.26",
+   "Market Value": "526566.25",
    "Shares Held": "6125",
    "Asset Category": "Specialized REITs"
   },
@@ -22,8 +22,8 @@
    "Name": "American Tower Corporation",
    "Ticker": "AMT",
    "Identifier": "03027X100",
-   "Weight": "1.11",
-   "Market Value": "463248.93",
+   "Weight": "1.15",
+   "Market Value": "478283.07",
    "Shares Held": "2531",
    "Asset Category": "Specialized REITs"
   },
@@ -31,26 +31,314 @@
    "Name": "Otis Worldwide Corporation",
    "Ticker": "OTIS",
    "Identifier": "68902V107",
-   "Weight": "1.09",
-   "Market Value": "453377.28",
+   "Weight": "1.15",
+   "Market Value": "479607.3",
    "Shares Held": "6382",
    "Asset Category": "Machinery"
+  },
+  {
+   "Name": "American Water Works Company, Inc.",
+   "Ticker": "AWK",
+   "Identifier": "030420103",
+   "Weight": "1.13",
+   "Market Value": "469933",
+   "Shares Held": "3292",
+   "Asset Category": "Water Utilities"
+  },
+  {
+   "Name": "Consolidated Edison, Inc.",
+   "Ticker": "ED",
+   "Identifier": "209115104",
+   "Weight": "1.1",
+   "Market Value": "460760.94",
+   "Shares Held": "3981",
+   "Asset Category": "Multi-Utilities"
   },
   {
    "Name": "SBA Communications Corporation",
    "Ticker": "SBAC",
    "Identifier": "78410G104",
-   "Weight": "1.09",
-   "Market Value": "454429.38",
+   "Weight": "1.1",
+   "Market Value": "458549.5",
    "Shares Held": "2482",
    "Asset Category": "Specialized REITs"
+  },
+  {
+   "Name": "SLB Ltd.",
+   "Ticker": "SLB",
+   "Identifier": "806857108",
+   "Weight": "1.1",
+   "Market Value": "457058.84",
+   "Shares Held": "8614",
+   "Asset Category": "Energy Equipment & Services"
+  },
+  {
+   "Name": "Cheniere Energy, Inc.",
+   "Ticker": "LNG",
+   "Identifier": "16411R208",
+   "Weight": "1.09",
+   "Market Value": "453381.06",
+   "Shares Held": "1518",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "The Southern Company",
+   "Ticker": "SO",
+   "Identifier": "842587107",
+   "Weight": "1.09",
+   "Market Value": "454975.22",
+   "Shares Held": "4898",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Alliant Energy Corporation",
+   "Ticker": "LNT",
+   "Identifier": "018802108",
+   "Weight": "1.08",
+   "Market Value": "448749.72",
+   "Shares Held": "6442",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Atmos Energy Corporation",
+   "Ticker": "ATO",
+   "Identifier": "049560105",
+   "Weight": "1.08",
+   "Market Value": "452223.46",
+   "Shares Held": "2626",
+   "Asset Category": "Gas Utilities"
+  },
+  {
+   "Name": "CenterPoint Energy, Inc.",
+   "Ticker": "CNP",
+   "Identifier": "15189T107",
+   "Weight": "1.08",
+   "Market Value": "451030.74",
+   "Shares Held": "10982",
+   "Asset Category": "Multi-Utilities"
+  },
+  {
+   "Name": "CMS Energy Corporation",
+   "Ticker": "CMS",
+   "Identifier": "125896100",
+   "Weight": "1.08",
+   "Market Value": "449278.06",
+   "Shares Held": "6457",
+   "Asset Category": "Multi-Utilities"
+  },
+  {
+   "Name": "CSX Corporation",
+   "Ticker": "CSX",
+   "Identifier": "126408103",
+   "Weight": "1.08",
+   "Market Value": "452691.27",
+   "Shares Held": "8913",
+   "Asset Category": "Ground Transportation"
+  },
+  {
+   "Name": "Duke Energy Corporation",
+   "Ticker": "DUK",
+   "Identifier": "26441C204",
+   "Weight": "1.08",
+   "Market Value": "451302.78",
+   "Shares Held": "3611",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Exelon Corporation",
+   "Ticker": "EXC",
+   "Identifier": "30161N101",
+   "Weight": "1.08",
+   "Market Value": "449231.73",
+   "Shares Held": "10111",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Fortive Corporation",
+   "Ticker": "FTV",
+   "Identifier": "34959J108",
+   "Weight": "1.08",
+   "Market Value": "450549.5",
+   "Shares Held": "7478",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Halliburton Company",
+   "Ticker": "HAL",
+   "Identifier": "406216101",
+   "Weight": "1.08",
+   "Market Value": "452353.68",
+   "Shares Held": "12954",
+   "Asset Category": "Energy Equipment & Services"
+  },
+  {
+   "Name": "Honeywell International Inc.",
+   "Ticker": "HON",
+   "Identifier": "438516205",
+   "Weight": "1.08",
+   "Market Value": "451588.3",
+   "Shares Held": "2042",
+   "Asset Category": "Industrial Conglomerates"
+  },
+  {
+   "Name": "Kinder Morgan, Inc.",
+   "Ticker": "KMI",
+   "Identifier": "49456B101",
+   "Weight": "1.08",
+   "Market Value": "450447.69",
+   "Shares Held": "13083",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "NiSource Inc.",
+   "Ticker": "NI",
+   "Identifier": "65473P105",
+   "Weight": "1.08",
+   "Market Value": "450544.8",
+   "Shares Held": "10410",
+   "Asset Category": "Multi-Utilities"
+  },
+  {
+   "Name": "WEC Energy Group, Inc.",
+   "Ticker": "WEC",
+   "Identifier": "92939U106",
+   "Weight": "1.08",
+   "Market Value": "452358.48",
+   "Shares Held": "4072",
+   "Asset Category": "Multi-Utilities"
+  },
+  {
+   "Name": "Xcel Energy Inc.",
+   "Ticker": "XEL",
+   "Identifier": "98389B100",
+   "Weight": "1.08",
+   "Market Value": "448865.55",
+   "Shares Held": "5751",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Xylem Inc.",
+   "Ticker": "XYL",
+   "Identifier": "98419M100",
+   "Weight": "1.08",
+   "Market Value": "449857.38",
+   "Shares Held": "4137",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "3M Company",
+   "Ticker": "MMM",
+   "Identifier": "88579Y101",
+   "Weight": "1.07",
+   "Market Value": "447353.34",
+   "Shares Held": "2579",
+   "Asset Category": "Industrial Conglomerates"
+  },
+  {
+   "Name": "Ameren Corporation",
+   "Ticker": "AEE",
+   "Identifier": "023608102",
+   "Weight": "1.07",
+   "Market Value": "447609.72",
+   "Shares Held": "4143",
+   "Asset Category": "Multi-Utilities"
+  },
+  {
+   "Name": "American Electric Power Company, Inc.",
+   "Ticker": "AEP",
+   "Identifier": "025537101",
+   "Weight": "1.07",
+   "Market Value": "447300.81",
+   "Shares Held": "3449",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Dominion Energy, Inc.",
+   "Ticker": "D",
+   "Identifier": "25746U109",
+   "Weight": "1.07",
+   "Market Value": "445511.6",
+   "Shares Held": "6833",
+   "Asset Category": "Multi-Utilities"
+  },
+  {
+   "Name": "Dover Corporation",
+   "Ticker": "DOV",
+   "Identifier": "260003108",
+   "Weight": "1.07",
+   "Market Value": "444813.6",
+   "Shares Held": "2233",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Edison International",
+   "Ticker": "EIX",
+   "Identifier": "281020107",
+   "Weight": "1.07",
+   "Market Value": "445609.5",
+   "Shares Held": "7770",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "NextEra Energy, Inc.",
+   "Ticker": "NEE",
+   "Identifier": "65339F101",
+   "Weight": "1.07",
+   "Market Value": "447691.3",
+   "Shares Held": "5453",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "ONEOK, Inc.",
+   "Ticker": "OKE",
+   "Identifier": "30609A109",
+   "Weight": "1.07",
+   "Market Value": "447813.59",
+   "Shares Held": "4673",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Vulcan Materials Company",
+   "Ticker": "VMC",
+   "Identifier": "929160109",
+   "Weight": "1.07",
+   "Market Value": "448274.97",
+   "Shares Held": "1713",
+   "Asset Category": "Construction Materials"
+  },
+  {
+   "Name": "Entergy Corporation",
+   "Ticker": "ETR",
+   "Identifier": "29364G103",
+   "Weight": "1.06",
+   "Market Value": "441918.78",
+   "Shares Held": "4117",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Evergy, Inc.",
+   "Ticker": "EVRG",
+   "Identifier": "30034W106",
+   "Weight": "1.06",
+   "Market Value": "442413.2",
+   "Shares Held": "5240",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Martin Marietta Materials, Inc.",
+   "Ticker": "MLM",
+   "Identifier": "573284106",
+   "Weight": "1.06",
+   "Market Value": "444280.92",
+   "Shares Held": "876",
+   "Asset Category": "Construction Materials"
   },
   {
    "Name": "Nucor Corporation",
    "Ticker": "NUE",
    "Identifier": "670346105",
-   "Weight": "1.07",
-   "Market Value": "446891.22",
+   "Weight": "1.06",
+   "Market Value": "442400.54",
    "Shares Held": "1714",
    "Asset Category": "Metals & Mining"
   },
@@ -59,277 +347,52 @@
    "Ticker": "RS",
    "Identifier": "759509102",
    "Weight": "1.06",
-   "Market Value": "441857.21",
+   "Market Value": "441804.06",
    "Shares Held": "1063",
    "Asset Category": "Metals & Mining"
   },
   {
-   "Name": "Steel Dynamics, Inc.",
-   "Ticker": "STLD",
-   "Identifier": "858119100",
+   "Name": "Sempra",
+   "Ticker": "SRE",
+   "Identifier": "816851109",
    "Weight": "1.06",
-   "Market Value": "441796.34",
-   "Shares Held": "1802",
-   "Asset Category": "Metals & Mining"
+   "Market Value": "442912.14",
+   "Shares Held": "5269",
+   "Asset Category": "Multi-Utilities"
   },
   {
-   "Name": "Vulcan Materials Company",
-   "Ticker": "VMC",
-   "Identifier": "929160109",
+   "Name": "Targa Resources Corp.",
+   "Ticker": "TRGP",
+   "Identifier": "87612G101",
    "Weight": "1.06",
-   "Market Value": "441011.85",
-   "Shares Held": "1713",
-   "Asset Category": "Construction Materials"
-  },
-  {
-   "Name": "American Water Works Company, Inc.",
-   "Ticker": "AWK",
-   "Identifier": "030420103",
-   "Weight": "1.05",
-   "Market Value": "439712.44",
-   "Shares Held": "3292",
-   "Asset Category": "Water Utilities"
-  },
-  {
-   "Name": "Consolidated Edison, Inc.",
-   "Ticker": "ED",
-   "Identifier": "209115104",
-   "Weight": "1.05",
-   "Market Value": "436675.89",
-   "Shares Held": "3981",
-   "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "Dover Corporation",
-   "Ticker": "DOV",
-   "Identifier": "260003108",
-   "Weight": "1.05",
-   "Market Value": "436261.21",
-   "Shares Held": "2233",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Kinder Morgan, Inc.",
-   "Ticker": "KMI",
-   "Identifier": "49456B101",
-   "Weight": "1.05",
-   "Market Value": "436841.37",
-   "Shares Held": "13083",
+   "Market Value": "442367.31",
+   "Shares Held": "1463",
    "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "Martin Marietta Materials, Inc.",
-   "Ticker": "MLM",
-   "Identifier": "573284106",
-   "Weight": "1.05",
-   "Market Value": "439445.4",
-   "Shares Held": "876",
-   "Asset Category": "Construction Materials"
-  },
-  {
-   "Name": "NiSource Inc.",
-   "Ticker": "NI",
-   "Identifier": "65473P105",
-   "Weight": "1.05",
-   "Market Value": "436699.5",
-   "Shares Held": "10410",
-   "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "PG&E Corporation",
-   "Ticker": "PCG",
-   "Identifier": "69331C108",
-   "Weight": "1.05",
-   "Market Value": "437242.13",
-   "Shares Held": "33301",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "The Southern Company",
-   "Ticker": "SO",
-   "Identifier": "842587107",
-   "Weight": "1.05",
-   "Market Value": "437244.46",
-   "Shares Held": "4898",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Atmos Energy Corporation",
-   "Ticker": "ATO",
-   "Identifier": "049560105",
-   "Weight": "1.04",
-   "Market Value": "432607.24",
-   "Shares Held": "2626",
-   "Asset Category": "Gas Utilities"
-  },
-  {
-   "Name": "CenterPoint Energy, Inc.",
-   "Ticker": "CNP",
-   "Identifier": "15189T107",
-   "Weight": "1.04",
-   "Market Value": "434447.92",
-   "Shares Held": "10982",
-   "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "Cheniere Energy, Inc.",
-   "Ticker": "LNG",
-   "Identifier": "16411R208",
-   "Weight": "1.04",
-   "Market Value": "435058.8",
-   "Shares Held": "1518",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "CMS Energy Corporation",
-   "Ticker": "CMS",
-   "Identifier": "125896100",
-   "Weight": "1.04",
-   "Market Value": "435008.09",
-   "Shares Held": "6457",
-   "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "Edison International",
-   "Ticker": "EIX",
-   "Identifier": "281020107",
-   "Weight": "1.04",
-   "Market Value": "432633.6",
-   "Shares Held": "7770",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "ONEOK, Inc.",
-   "Ticker": "OKE",
-   "Identifier": "30609A109",
-   "Weight": "1.04",
-   "Market Value": "431878.66",
-   "Shares Held": "4673",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "RBC Bearings Incorporated",
-   "Ticker": "RBC",
-   "Identifier": "75524B104",
-   "Weight": "1.04",
-   "Market Value": "432755.61",
-   "Shares Held": "859",
-   "Asset Category": "Machinery"
   },
   {
    "Name": "Union Pacific Corporation",
    "Ticker": "UNP",
    "Identifier": "907818108",
-   "Weight": "1.04",
-   "Market Value": "435394.17",
+   "Weight": "1.06",
+   "Market Value": "444283.79",
    "Shares Held": "1517",
    "Asset Category": "Ground Transportation"
   },
   {
-   "Name": "VeriSign, Inc.",
-   "Ticker": "VRSN",
-   "Identifier": "92343E102",
-   "Weight": "1.04",
-   "Market Value": "434282.16",
-   "Shares Held": "1417",
-   "Asset Category": "IT Services"
-  },
-  {
-   "Name": "WEC Energy Group, Inc.",
-   "Ticker": "WEC",
-   "Identifier": "92939U106",
-   "Weight": "1.04",
-   "Market Value": "435704",
-   "Shares Held": "4072",
+   "Name": "DTE Energy Company",
+   "Ticker": "DTE",
+   "Identifier": "233331107",
+   "Weight": "1.05",
+   "Market Value": "437874.8",
+   "Shares Held": "3320",
    "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "Xcel Energy Inc.",
-   "Ticker": "XEL",
-   "Identifier": "98389B100",
-   "Weight": "1.04",
-   "Market Value": "432130.14",
-   "Shares Held": "5751",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Alliant Energy Corporation",
-   "Ticker": "LNT",
-   "Identifier": "018802108",
-   "Weight": "1.03",
-   "Market Value": "430647.7",
-   "Shares Held": "6442",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Ameren Corporation",
-   "Ticker": "AEE",
-   "Identifier": "023608102",
-   "Weight": "1.03",
-   "Market Value": "430913.43",
-   "Shares Held": "4143",
-   "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "American Electric Power Company, Inc.",
-   "Ticker": "AEP",
-   "Identifier": "025537101",
-   "Weight": "1.03",
-   "Market Value": "430159.28",
-   "Shares Held": "3449",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Duke Energy Corporation",
-   "Ticker": "DUK",
-   "Identifier": "26441C204",
-   "Weight": "1.03",
-   "Market Value": "430683.97",
-   "Shares Held": "3611",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Evergy, Inc.",
-   "Ticker": "EVRG",
-   "Identifier": "30034W106",
-   "Weight": "1.03",
-   "Market Value": "428055.6",
-   "Shares Held": "5240",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Exelon Corporation",
-   "Ticker": "EXC",
-   "Identifier": "30161N101",
-   "Weight": "1.03",
-   "Market Value": "428807.51",
-   "Shares Held": "10111",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Fortive Corporation",
-   "Ticker": "FTV",
-   "Identifier": "34959J108",
-   "Weight": "1.03",
-   "Market Value": "429835.44",
-   "Shares Held": "7478",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Honeywell International Inc.",
-   "Ticker": "HON",
-   "Identifier": "438516205",
-   "Weight": "1.03",
-   "Market Value": "428779.16",
-   "Shares Held": "2042",
-   "Asset Category": "Industrial Conglomerates"
   },
   {
    "Name": "Illinois Tool Works Inc.",
    "Ticker": "ITW",
    "Identifier": "452308109",
-   "Weight": "1.03",
-   "Market Value": "430650.98",
+   "Weight": "1.05",
+   "Market Value": "439545.5",
    "Shares Held": "1594",
    "Asset Category": "Machinery"
   },
@@ -337,296 +400,17 @@
    "Name": "Norfolk Southern Corporation",
    "Ticker": "NSC",
    "Identifier": "655844108",
-   "Weight": "1.03",
-   "Market Value": "430551.88",
+   "Weight": "1.05",
+   "Market Value": "439216.69",
    "Shares Held": "1331",
    "Asset Category": "Ground Transportation"
-  },
-  {
-   "Name": "Parker-Hannifin Corporation",
-   "Ticker": "PH",
-   "Identifier": "701094104",
-   "Weight": "1.03",
-   "Market Value": "430951.96",
-   "Shares Held": "446",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Sempra",
-   "Ticker": "SRE",
-   "Identifier": "816851109",
-   "Weight": "1.03",
-   "Market Value": "430688.06",
-   "Shares Held": "5269",
-   "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "Snap-on Incorporated",
-   "Ticker": "SNA",
-   "Identifier": "833034101",
-   "Weight": "1.03",
-   "Market Value": "429087.12",
-   "Shares Held": "1176",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Targa Resources Corp.",
-   "Ticker": "TRGP",
-   "Identifier": "87612G101",
-   "Weight": "1.03",
-   "Market Value": "428366.4",
-   "Shares Held": "1463",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "Wabtec Corporation",
-   "Ticker": "WAB",
-   "Identifier": "929740108",
-   "Weight": "1.03",
-   "Market Value": "430970.22",
-   "Shares Held": "1503",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Xylem Inc.",
-   "Ticker": "XYL",
-   "Identifier": "98419M100",
-   "Weight": "1.03",
-   "Market Value": "428303.61",
-   "Shares Held": "4137",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "CSX Corporation",
-   "Ticker": "CSX",
-   "Identifier": "126408103",
-   "Weight": "1.02",
-   "Market Value": "426754.44",
-   "Shares Held": "8913",
-   "Asset Category": "Ground Transportation"
-  },
-  {
-   "Name": "Cummins Inc.",
-   "Ticker": "CMI",
-   "Identifier": "231021106",
-   "Weight": "1.02",
-   "Market Value": "423447.43",
-   "Shares Held": "811",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Dominion Energy, Inc.",
-   "Ticker": "D",
-   "Identifier": "25746U109",
-   "Weight": "1.02",
-   "Market Value": "425080.93",
-   "Shares Held": "6833",
-   "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "Emerson Electric Co.",
-   "Ticker": "EMR",
-   "Identifier": "291011104",
-   "Weight": "1.02",
-   "Market Value": "425912.62",
-   "Shares Held": "2653",
-   "Asset Category": "Electrical Equipment"
-  },
-  {
-   "Name": "Entergy Corporation",
-   "Ticker": "ETR",
-   "Identifier": "29364G103",
-   "Weight": "1.02",
-   "Market Value": "427344.6",
-   "Shares Held": "4117",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "FirstEnergy Corp.",
-   "Ticker": "FE",
-   "Identifier": "337932107",
-   "Weight": "1.02",
-   "Market Value": "425666.75",
-   "Shares Held": "9407",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Halliburton Company",
-   "Ticker": "HAL",
-   "Identifier": "406216101",
-   "Weight": "1.02",
-   "Market Value": "427222.92",
-   "Shares Held": "12954",
-   "Asset Category": "Energy Equipment & Services"
-  },
-  {
-   "Name": "IDEX Corporation",
-   "Ticker": "IEX",
-   "Identifier": "45167R104",
-   "Weight": "1.02",
-   "Market Value": "425859.06",
-   "Shares Held": "1821",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Mueller Industries, Inc.",
-   "Ticker": "MLI",
-   "Identifier": "624756102",
-   "Weight": "1.02",
-   "Market Value": "424219.5",
-   "Shares Held": "6975",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "NextEra Energy, Inc.",
-   "Ticker": "NEE",
-   "Identifier": "65339F101",
-   "Weight": "1.02",
-   "Market Value": "426261.01",
-   "Shares Held": "5453",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "PPL Corporation",
-   "Ticker": "PPL",
-   "Identifier": "69351T106",
-   "Weight": "1.02",
-   "Market Value": "424517.63",
-   "Shares Held": "12373",
-   "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "AMETEK, Inc.",
-   "Ticker": "AME",
-   "Identifier": "031100100",
-   "Weight": "1.01",
-   "Market Value": "421510.1",
-   "Shares Held": "1705",
-   "Asset Category": "Electrical Equipment"
-  },
-  {
-   "Name": "APi Group Corporation",
-   "Ticker": "APG",
-   "Identifier": "00187Y100",
-   "Weight": "1.01",
-   "Market Value": "422858.71",
-   "Shares Held": "10553",
-   "Asset Category": "Construction & Engineering"
-  },
-  {
-   "Name": "DTE Energy Company",
-   "Ticker": "DTE",
-   "Identifier": "233331107",
-   "Weight": "1.01",
-   "Market Value": "421407.6",
-   "Shares Held": "3320",
-   "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "Ingersoll-Rand Inc.",
-   "Ticker": "IR",
-   "Identifier": "45687V106",
-   "Weight": "1.01",
-   "Market Value": "420549.75",
-   "Shares Held": "5409",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "ITT Inc.",
-   "Ticker": "ITT",
-   "Identifier": "45073V108",
-   "Weight": "1.01",
-   "Market Value": "421224.43",
-   "Shares Held": "2123",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Lincoln Electric Holdings, Inc.",
-   "Ticker": "LECO",
-   "Identifier": "533900106",
-   "Weight": "1.01",
-   "Market Value": "422479.7",
-   "Shares Held": "1630",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "SLB Ltd.",
-   "Ticker": "SLB",
-   "Identifier": "806857108",
-   "Weight": "1.01",
-   "Market Value": "422861.26",
-   "Shares Held": "8614",
-   "Asset Category": "Energy Equipment & Services"
-  },
-  {
-   "Name": "3M Company",
-   "Ticker": "MMM",
-   "Identifier": "88579Y101",
-   "Weight": "1",
-   "Market Value": "417823.79",
-   "Shares Held": "2579",
-   "Asset Category": "Industrial Conglomerates"
-  },
-  {
-   "Name": "Baker Hughes Company (Class A)",
-   "Ticker": "BKR",
-   "Identifier": "05722G100",
-   "Weight": "1",
-   "Market Value": "418240.14",
-   "Shares Held": "7494",
-   "Asset Category": "Energy Equipment & Services"
-  },
-  {
-   "Name": "Carrier Global Corporation",
-   "Ticker": "CARR",
-   "Identifier": "14448C104",
-   "Weight": "1",
-   "Market Value": "417221.97",
-   "Shares Held": "7557",
-   "Asset Category": "Building Products"
-  },
-  {
-   "Name": "Nordson Corporation",
-   "Ticker": "NDSN",
-   "Identifier": "655663102",
-   "Weight": "1",
-   "Market Value": "418129.08",
-   "Shares Held": "1291",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "PACCAR Inc",
-   "Ticker": "PCAR",
-   "Identifier": "693718108",
-   "Weight": "1",
-   "Market Value": "417200.16",
-   "Shares Held": "3848",
-   "Asset Category": "Machinery"
-  },
-  {
-   "Name": "Trane Technologies plc",
-   "Ticker": "TT",
-   "Identifier": "G8994E103",
-   "Weight": "1",
-   "Market Value": "417605.92",
-   "Shares Held": "898",
-   "Asset Category": "Building Products"
-  },
-  {
-   "Name": "Digital Realty Trust, Inc.",
-   "Ticker": "DLR",
-   "Identifier": "253868103",
-   "Weight": "0.99",
-   "Market Value": "414508",
-   "Shares Held": "2396",
-   "Asset Category": "Specialized REITs"
   },
   {
    "Name": "DuPont de Nemours Inc.",
    "Ticker": "DD",
    "Identifier": "26614N201",
-   "Weight": "0.99",
-   "Market Value": "411947.9",
+   "Weight": "1.04",
+   "Market Value": "434911.75",
    "Shares Held": "3185",
    "Asset Category": "Industrial Conglomerates"
   },
@@ -634,134 +418,395 @@
    "Name": "Eversource Energy",
    "Ticker": "ES",
    "Identifier": "30040W108",
-   "Weight": "0.99",
-   "Market Value": "414155.04",
+   "Weight": "1.04",
+   "Market Value": "433295.58",
    "Shares Held": "6423",
    "Asset Category": "Electric Utilities"
   },
   {
-   "Name": "Freeport-McMoRan Inc.",
-   "Ticker": "FCX",
-   "Identifier": "35671D857",
-   "Weight": "0.99",
-   "Market Value": "413687.25",
-   "Shares Held": "5931",
+   "Name": "FirstEnergy Corp.",
+   "Ticker": "FE",
+   "Identifier": "337932107",
+   "Weight": "1.04",
+   "Market Value": "434133.05",
+   "Shares Held": "9407",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "PPL Corporation",
+   "Ticker": "PPL",
+   "Identifier": "69351T106",
+   "Weight": "1.04",
+   "Market Value": "432807.54",
+   "Shares Held": "12373",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Steel Dynamics, Inc.",
+   "Ticker": "STLD",
+   "Identifier": "858119100",
+   "Weight": "1.04",
+   "Market Value": "435237.06",
+   "Shares Held": "1802",
    "Asset Category": "Metals & Mining"
   },
   {
-   "Name": "Hubbell Incorporated",
-   "Ticker": "HUBB",
-   "Identifier": "443510607",
-   "Weight": "0.99",
-   "Market Value": "412848.96",
-   "Shares Held": "888",
+   "Name": "Emerson Electric Co.",
+   "Ticker": "EMR",
+   "Identifier": "291011104",
+   "Weight": "1.03",
+   "Market Value": "428698.27",
+   "Shares Held": "2653",
    "Asset Category": "Electrical Equipment"
+  },
+  {
+   "Name": "Carrier Global Corporation",
+   "Ticker": "CARR",
+   "Identifier": "14448C104",
+   "Weight": "1.02",
+   "Market Value": "425005.68",
+   "Shares Held": "7557",
+   "Asset Category": "Building Products"
+  },
+  {
+   "Name": "VeriSign, Inc.",
+   "Ticker": "VRSN",
+   "Identifier": "92343E102",
+   "Weight": "1.02",
+   "Market Value": "425553.44",
+   "Shares Held": "1417",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Cummins Inc.",
+   "Ticker": "CMI",
+   "Identifier": "231021106",
+   "Weight": "1.01",
+   "Market Value": "419611.4",
+   "Shares Held": "811",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "MongoDB, Inc.",
+   "Ticker": "MDB",
+   "Identifier": "60937P106",
+   "Weight": "1.01",
+   "Market Value": "421558.24",
+   "Shares Held": "1136",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "PG&E Corporation",
+   "Ticker": "PCG",
+   "Identifier": "69331C108",
+   "Weight": "1.01",
+   "Market Value": "420591.63",
+   "Shares Held": "33301",
+   "Asset Category": "Electric Utilities"
   },
   {
    "Name": "Public Service Enterprise Group Incorporated",
    "Ticker": "PEG",
    "Identifier": "744573106",
-   "Weight": "0.99",
-   "Market Value": "412989.36",
+   "Weight": "1.01",
+   "Market Value": "422973.46",
    "Shares Held": "5873",
    "Asset Category": "Multi-Utilities"
+  },
+  {
+   "Name": "Snap-on Incorporated",
+   "Ticker": "SNA",
+   "Identifier": "833034101",
+   "Weight": "1.01",
+   "Market Value": "419855.52",
+   "Shares Held": "1176",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "APi Group Corporation",
+   "Ticker": "APG",
+   "Identifier": "00187Y100",
+   "Weight": "1",
+   "Market Value": "416315.85",
+   "Shares Held": "10553",
+   "Asset Category": "Construction & Engineering"
+  },
+  {
+   "Name": "Baker Hughes Company (Class A)",
+   "Ticker": "BKR",
+   "Identifier": "05722G100",
+   "Weight": "1",
+   "Market Value": "418614.84",
+   "Shares Held": "7494",
+   "Asset Category": "Energy Equipment & Services"
+  },
+  {
+   "Name": "IDEX Corporation",
+   "Ticker": "IEX",
+   "Identifier": "45167R104",
+   "Weight": "1",
+   "Market Value": "417100.05",
+   "Shares Held": "1821",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Lincoln Electric Holdings, Inc.",
+   "Ticker": "LECO",
+   "Identifier": "533900106",
+   "Weight": "1",
+   "Market Value": "417214.8",
+   "Shares Held": "1630",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "The Williams Companies, Inc.",
+   "Ticker": "WMB",
+   "Identifier": "969457100",
+   "Weight": "1",
+   "Market Value": "418226.1",
+   "Shares Held": "5833",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Digital Realty Trust, Inc.",
+   "Ticker": "DLR",
+   "Identifier": "253868103",
+   "Weight": "0.99",
+   "Market Value": "412998.52",
+   "Shares Held": "2396",
+   "Asset Category": "Specialized REITs"
+  },
+  {
+   "Name": "Nordson Corporation",
+   "Ticker": "NDSN",
+   "Identifier": "655663102",
+   "Weight": "0.99",
+   "Market Value": "411622.44",
+   "Shares Held": "1291",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "PACCAR Inc",
+   "Ticker": "PCAR",
+   "Identifier": "693718108",
+   "Weight": "0.99",
+   "Market Value": "411582.08",
+   "Shares Held": "3848",
+   "Asset Category": "Machinery"
   },
   {
    "Name": "Rockwell Automation, Inc.",
    "Ticker": "ROK",
    "Identifier": "773903109",
    "Weight": "0.99",
-   "Market Value": "412584.84",
+   "Market Value": "414178.92",
    "Shares Held": "972",
    "Asset Category": "Electrical Equipment"
   },
   {
-   "Name": "Talen Energy Corporation",
-   "Ticker": "TLN",
-   "Identifier": "87422Q109",
-   "Weight": "0.99",
-   "Market Value": "412683.5",
-   "Shares Held": "1175",
-   "Asset Category": "Independent Power and Renewable Electricity Producers"
-  },
-  {
-   "Name": "Equinix, Inc.",
-   "Ticker": "EQIX",
-   "Identifier": "29444U700",
+   "Name": "AMETEK, Inc.",
+   "Ticker": "AME",
+   "Identifier": "031100100",
    "Weight": "0.98",
-   "Market Value": "406871.07",
-   "Shares Held": "417",
-   "Asset Category": "Specialized REITs"
+   "Market Value": "409251.15",
+   "Shares Held": "1705",
+   "Asset Category": "Electrical Equipment"
   },
   {
-   "Name": "The Williams Companies, Inc.",
-   "Ticker": "WMB",
-   "Identifier": "969457100",
+   "Name": "Okta, Inc.",
+   "Ticker": "OKTA",
+   "Identifier": "679295105",
    "Weight": "0.98",
-   "Market Value": "410526.54",
-   "Shares Held": "5833",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "Johnson Controls International Plc",
-   "Ticker": "JCI",
-   "Identifier": "G51502105",
-   "Weight": "0.97",
-   "Market Value": "406122.8",
-   "Shares Held": "2740",
-   "Asset Category": "Building Products"
-  },
-  {
-   "Name": "Vistra Corp.",
-   "Ticker": "VST",
-   "Identifier": "92840M102",
-   "Weight": "0.97",
-   "Market Value": "404489.4",
-   "Shares Held": "2702",
-   "Asset Category": "Independent Power and Renewable Electricity Producers"
-  },
-  {
-   "Name": "MongoDB, Inc.",
-   "Ticker": "MDB",
-   "Identifier": "60937P106",
-   "Weight": "0.95",
-   "Market Value": "396111.84",
-   "Shares Held": "1136",
+   "Market Value": "408203.8",
+   "Shares Held": "1916",
    "Asset Category": "IT Services"
   },
   {
-   "Name": "NRG Energy, Inc.",
-   "Ticker": "NRG",
-   "Identifier": "629377508",
-   "Weight": "0.95",
-   "Market Value": "394339.84",
-   "Shares Held": "3968",
-   "Asset Category": "Electric Utilities"
+   "Name": "Wabtec Corporation",
+   "Ticker": "WAB",
+   "Identifier": "929740108",
+   "Weight": "0.98",
+   "Market Value": "409342.05",
+   "Shares Held": "1503",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "ITT Inc.",
+   "Ticker": "ITT",
+   "Identifier": "45073V108",
+   "Weight": "0.97",
+   "Market Value": "403582.3",
+   "Shares Held": "2123",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "RBC Bearings Incorporated",
+   "Ticker": "RBC",
+   "Identifier": "75524B104",
+   "Weight": "0.97",
+   "Market Value": "405430.82",
+   "Shares Held": "859",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Cloudflare, Inc. (Class A)",
+   "Ticker": "NET",
+   "Identifier": "18915M107",
+   "Weight": "0.96",
+   "Market Value": "401950.82",
+   "Shares Held": "1234",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Snowflake Inc. (Class A)",
+   "Ticker": "SNOW",
+   "Identifier": "833445109",
+   "Weight": "0.96",
+   "Market Value": "399953.47",
+   "Shares Held": "1229",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Trane Technologies plc",
+   "Ticker": "TT",
+   "Identifier": "G8994E103",
+   "Weight": "0.96",
+   "Market Value": "399520.2",
+   "Shares Held": "898",
+   "Asset Category": "Building Products"
   },
   {
    "Name": "Twilio Inc. (Class A)",
    "Ticker": "TWLO",
    "Identifier": "90138F102",
-   "Weight": "0.94",
-   "Market Value": "393653.7",
+   "Weight": "0.96",
+   "Market Value": "400538.7",
    "Shares Held": "1530",
    "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Equinix, Inc.",
+   "Ticker": "EQIX",
+   "Identifier": "29444U700",
+   "Weight": "0.95",
+   "Market Value": "398247.51",
+   "Shares Held": "417",
+   "Asset Category": "Specialized REITs"
+  },
+  {
+   "Name": "Hubbell Incorporated",
+   "Ticker": "HUBB",
+   "Identifier": "443510607",
+   "Weight": "0.95",
+   "Market Value": "397912.8",
+   "Shares Held": "888",
+   "Asset Category": "Electrical Equipment"
+  },
+  {
+   "Name": "Ingersoll-Rand Inc.",
+   "Ticker": "IR",
+   "Identifier": "45687V106",
+   "Weight": "0.95",
+   "Market Value": "397453.32",
+   "Shares Held": "5409",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Johnson Controls International Plc",
+   "Ticker": "JCI",
+   "Identifier": "G51502105",
+   "Weight": "0.95",
+   "Market Value": "394450.4",
+   "Shares Held": "2740",
+   "Asset Category": "Building Products"
+  },
+  {
+   "Name": "Akamai Technologies, Inc.",
+   "Ticker": "AKAM",
+   "Identifier": "00971T101",
+   "Weight": "0.94",
+   "Market Value": "391142.46",
+   "Shares Held": "4182",
+   "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Parker-Hannifin Corporation",
+   "Ticker": "PH",
+   "Identifier": "701094104",
+   "Weight": "0.94",
+   "Market Value": "392734.22",
+   "Shares Held": "446",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "Freeport-McMoRan Inc.",
+   "Ticker": "FCX",
+   "Identifier": "35671D857",
+   "Weight": "0.93",
+   "Market Value": "386582.58",
+   "Shares Held": "5931",
+   "Asset Category": "Metals & Mining"
+  },
+  {
+   "Name": "Talen Energy Corporation",
+   "Ticker": "TLN",
+   "Identifier": "87422Q109",
+   "Weight": "0.92",
+   "Market Value": "385294.25",
+   "Shares Held": "1175",
+   "Asset Category": "Independent Power and Renewable Electricity Producers"
+  },
+  {
+   "Name": "Vistra Corp.",
+   "Ticker": "VST",
+   "Identifier": "92840M102",
+   "Weight": "0.91",
+   "Market Value": "378712.32",
+   "Shares Held": "2702",
+   "Asset Category": "Independent Power and Renewable Electricity Producers"
   },
   {
    "Name": "Constellation Energy Corporation",
    "Ticker": "CEG",
    "Identifier": "21037T109",
-   "Weight": "0.93",
-   "Market Value": "389521.2",
+   "Weight": "0.9",
+   "Market Value": "375106",
    "Shares Held": "1480",
    "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Mueller Industries, Inc.",
+   "Ticker": "MLI",
+   "Identifier": "624756102",
+   "Weight": "0.9",
+   "Market Value": "377417.25",
+   "Shares Held": "6975",
+   "Asset Category": "Machinery"
+  },
+  {
+   "Name": "NRG Energy, Inc.",
+   "Ticker": "NRG",
+   "Identifier": "629377508",
+   "Weight": "0.88",
+   "Market Value": "366286.08",
+   "Shares Held": "3968",
+   "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Caterpillar Inc.",
+   "Ticker": "CAT",
+   "Identifier": "149123101",
+   "Weight": "0.87",
+   "Market Value": "364110",
+   "Shares Held": "530",
+   "Asset Category": "Machinery"
   },
   {
    "Name": "Eaton Corporation Plc",
    "Ticker": "ETN",
    "Identifier": "G29183103",
-   "Weight": "0.93",
-   "Market Value": "389151",
+   "Weight": "0.87",
+   "Market Value": "363913.34",
    "Shares Held": "994",
    "Asset Category": "Electrical Equipment"
   },
@@ -769,35 +814,17 @@
    "Name": "EMCOR Group, Inc.",
    "Ticker": "EME",
    "Identifier": "29084Q100",
-   "Weight": "0.93",
-   "Market Value": "388500.18",
+   "Weight": "0.84",
+   "Market Value": "351031.72",
    "Shares Held": "542",
    "Asset Category": "Construction & Engineering"
-  },
-  {
-   "Name": "Snowflake Inc. (Class A)",
-   "Ticker": "SNOW",
-   "Identifier": "833445109",
-   "Weight": "0.93",
-   "Market Value": "387565.15",
-   "Shares Held": "1229",
-   "Asset Category": "IT Services"
-  },
-  {
-   "Name": "Caterpillar Inc.",
-   "Ticker": "CAT",
-   "Identifier": "149123101",
-   "Weight": "0.92",
-   "Market Value": "384668.7",
-   "Shares Held": "530",
-   "Asset Category": "Machinery"
   },
   {
    "Name": "GE Vernova Inc.",
    "Ticker": "GEV",
    "Identifier": "36828A101",
-   "Weight": "0.92",
-   "Market Value": "383361.68",
+   "Weight": "0.82",
+   "Market Value": "343930",
    "Shares Held": "422",
    "Asset Category": "Electrical Equipment"
   },
@@ -805,107 +832,80 @@
    "Name": "Quanta Services, Inc.",
    "Ticker": "PWR",
    "Identifier": "74762E102",
-   "Weight": "0.91",
-   "Market Value": "380940.56",
+   "Weight": "0.81",
+   "Market Value": "336600.88",
    "Shares Held": "616",
    "Asset Category": "Construction & Engineering"
+  },
+  {
+   "Name": "Vertiv Holdings Co (Class A)",
+   "Ticker": "VRT",
+   "Identifier": "92537N108",
+   "Weight": "0.81",
+   "Market Value": "336367.92",
+   "Shares Held": "1731",
+   "Asset Category": "Electrical Equipment"
   },
   {
    "Name": "MasTec, Inc.",
    "Ticker": "MTZ",
    "Identifier": "576323109",
-   "Weight": "0.89",
-   "Market Value": "371701.77",
+   "Weight": "0.8",
+   "Market Value": "333034.35",
    "Shares Held": "1947",
-   "Asset Category": "Construction & Engineering"
-  },
-  {
-   "Name": "Cloudflare, Inc. (Class A)",
-   "Ticker": "NET",
-   "Identifier": "18915M107",
-   "Weight": "0.88",
-   "Market Value": "367213.72",
-   "Shares Held": "1234",
-   "Asset Category": "IT Services"
-  },
-  {
-   "Name": "Akamai Technologies, Inc.",
-   "Ticker": "AKAM",
-   "Identifier": "00971T101",
-   "Weight": "0.87",
-   "Market Value": "364879.5",
-   "Shares Held": "4182",
-   "Asset Category": "IT Services"
-  },
-  {
-   "Name": "Comfort Systems USA, Inc.",
-   "Ticker": "FIX",
-   "Identifier": "199908104",
-   "Weight": "0.87",
-   "Market Value": "361625.29",
-   "Shares Held": "247",
    "Asset Category": "Construction & Engineering"
   },
   {
    "Name": "nVent Electric plc",
    "Ticker": "NVT",
    "Identifier": "G6700G107",
-   "Weight": "0.87",
-   "Market Value": "363834.9",
+   "Weight": "0.77",
+   "Market Value": "322278",
    "Shares Held": "2570",
    "Asset Category": "Electrical Equipment"
-  },
-  {
-   "Name": "Okta, Inc.",
-   "Ticker": "OKTA",
-   "Identifier": "679295105",
-   "Weight": "0.87",
-   "Market Value": "363905.88",
-   "Shares Held": "1916",
-   "Asset Category": "IT Services"
-  },
-  {
-   "Name": "Vertiv Holdings Co (Class A)",
-   "Ticker": "VRT",
-   "Identifier": "92537N108",
-   "Weight": "0.86",
-   "Market Value": "356724.48",
-   "Shares Held": "1731",
-   "Asset Category": "Electrical Equipment"
-  },
-  {
-   "Name": "Bloom Energy Corporation (Class A)",
-   "Ticker": "BE",
-   "Identifier": "093712107",
-   "Weight": "0.84",
-   "Market Value": "349962.34",
-   "Shares Held": "1547",
-   "Asset Category": "Electrical Equipment"
-  },
-  {
-   "Name": "Sterling Infrastructure, Inc.",
-   "Ticker": "STRL",
-   "Identifier": "859241101",
-   "Weight": "0.83",
-   "Market Value": "344712.72",
-   "Shares Held": "814",
-   "Asset Category": "Construction & Engineering"
   },
   {
    "Name": "DigitalOcean Holdings, Inc.",
    "Ticker": "DOCN",
    "Identifier": "25402D102",
-   "Weight": "0.82",
-   "Market Value": "341759.85",
+   "Weight": "0.76",
+   "Market Value": "317414.1",
    "Shares Held": "3405",
    "Asset Category": "IT Services"
+  },
+  {
+   "Name": "Bloom Energy Corporation (Class A)",
+   "Ticker": "BE",
+   "Identifier": "093712107",
+   "Weight": "0.72",
+   "Market Value": "299035.1",
+   "Shares Held": "1547",
+   "Asset Category": "Electrical Equipment"
+  },
+  {
+   "Name": "Comfort Systems USA, Inc.",
+   "Ticker": "FIX",
+   "Identifier": "199908104",
+   "Weight": "0.69",
+   "Market Value": "286732.42",
+   "Shares Held": "247",
+   "Asset Category": "Construction & Engineering"
+  },
+  {
+   "Name": "Sterling Infrastructure, Inc.",
+   "Ticker": "STRL",
+   "Identifier": "859241101",
+   "Weight": "0.69",
+   "Market Value": "289214.2",
+   "Shares Held": "814",
+   "Asset Category": "Construction & Engineering"
   },
   {
    "Name": "CoreWeave, Inc. (Class A)",
    "Ticker": "CRWV",
    "Identifier": "21873S108",
-   "Weight": "0.76",
-   "Market Value": "316112.64",
+   "Weight": "0.67",
+   "Market Value": "280503.42",
    "Shares Held": "5172",
    "Asset Category": "IT Services"
   },
@@ -914,8 +914,8 @@
    "Ticker": "-",
    "Identifier": "$USD",
    "Weight": "0.12",
-   "Market Value": "50967.59",
-   "Shares Held": "50968",
+   "Market Value": "51507.29",
+   "Shares Held": "51507",
    "Asset Category": "Other"
   },
   {
@@ -946,5 +946,5 @@
    "Asset Category": "Construction & Engineering"
   }
  ],
- "asOfDate": "2026-10-19"
+ "asOfDate": "2026-10-23"
 }

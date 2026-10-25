@@ -35,28 +35,28 @@
   "asOfDate": "2026-03-02"
  },
  "nav": {
-  "display": "$21.94",
-  "value": 21.94,
-  "asOfDate": "Oct 19 2026"
+  "display": "$22.22",
+  "value": 22.22,
+  "asOfDate": "Oct 23 2026"
  },
  "marketPrice": {
-  "display": "$21.99",
-  "value": 21.99,
-  "asOfDate": "Oct 19 2026"
+  "display": "$22.26",
+  "value": 22.26,
+  "asOfDate": "Oct 23 2026"
  },
  "premiumDiscount": {
-  "display": "0.14%",
-  "value": 0.14,
+  "display": "0.09%",
+  "value": 0.09,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$89.96M",
-  "value": 89956306,
-  "asOfDate": "Oct 19 2026",
+  "display": "$93.30M",
+  "value": 93303872,
+  "asOfDate": "Oct 23 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 4100002
+  "outstanding": 4200002
  },
  "yields": {
   "dividendYield": 9.14,
@@ -95,8 +95,8 @@
  },
  "distributions": {
   "frequency": "Monthly",
-  "latestAmount": 0.1577,
-  "latestExDate": "2026-09-24",
+  "latestAmount": 0.1623,
+  "latestExDate": "2026-10-21",
   "headers": [
    "Ex-Date",
    "Record Date",
@@ -105,6 +105,13 @@
    "Distribution Type"
   ],
   "rows": [
+   [
+    "2026-10-21",
+    "2026-10-21",
+    "2026-10-30",
+    "0.162300",
+    "Ordinary Distributions"
+   ],
    [
     "2026-09-24",
     "2026-09-24",
@@ -401,7 +408,7 @@
   ],
   "pageSize": 250,
   "totalRows": 42,
-  "asOfDate": "2026-10-19",
+  "asOfDate": "2026-10-23",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -409,14 +416,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 873,
-  "asOfDate": "2026-10-19",
+  "totalRows": 877,
+  "asOfDate": "2026-10-23",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 42,
- "historyCount": 873,
- "distributionCount": 41,
- "netAssets": 89956306,
+ "historyCount": 877,
+ "distributionCount": 42,
+ "netAssets": 93303872,
  "dividendYield": 9.14,
  "secYield": 3.92
 }

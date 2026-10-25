@@ -10,29 +10,47 @@
  ],
  "rows": [
   {
+   "Name": "Roblox Corporation (Class A)",
+   "Ticker": "RBLX",
+   "Identifier": "771049103",
+   "Weight": "3.61",
+   "Market Value": "304646.4",
+   "Shares Held": "5760",
+   "Asset Category": "Entertainment"
+  },
+  {
    "Name": "Xiaomi Corporation (Class B)",
    "Ticker": "1810.HK",
    "Identifier": "G9830T106",
-   "Weight": "3.46",
-   "Market Value": "295266.93",
+   "Weight": "3.52",
+   "Market Value": "296999.11",
    "Shares Held": "86921",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
   },
   {
-   "Name": "Roblox Corporation (Class A)",
-   "Ticker": "RBLX",
-   "Identifier": "771049103",
-   "Weight": "3.42",
-   "Market Value": "292320",
-   "Shares Held": "5760",
-   "Asset Category": "Entertainment"
+   "Name": "Sony Group Corp.",
+   "Ticker": "6758.JP",
+   "Identifier": "J76379106",
+   "Weight": "3.49",
+   "Market Value": "294642.72",
+   "Shares Held": "11170",
+   "Asset Category": "Household Durables"
+  },
+  {
+   "Name": "Adobe Incorporated",
+   "Ticker": "ADBE",
+   "Identifier": "00724F101",
+   "Weight": "3.4",
+   "Market Value": "287036.16",
+   "Shares Held": "1088",
+   "Asset Category": "Software"
   },
   {
    "Name": "Nintendo Co., Ltd.",
    "Ticker": "7974.JP",
    "Identifier": "J51699106",
-   "Weight": "3.3",
-   "Market Value": "282275.86",
+   "Weight": "3.38",
+   "Market Value": "285295.77",
    "Shares Held": "5240",
    "Asset Category": "Entertainment"
   },
@@ -40,152 +58,116 @@
    "Name": "Nexon Co., Ltd.",
    "Ticker": "3659.JP",
    "Identifier": "J4914X104",
-   "Weight": "3.28",
-   "Market Value": "280003.04",
+   "Weight": "3.33",
+   "Market Value": "281340.11",
    "Shares Held": "15912",
    "Asset Category": "Entertainment"
-  },
-  {
-   "Name": "Sony Group Corp.",
-   "Ticker": "6758.JP",
-   "Identifier": "J76379106",
-   "Weight": "3.27",
-   "Market Value": "278985.81",
-   "Shares Held": "11170",
-   "Asset Category": "Household Durables"
-  },
-  {
-   "Name": "NetEase, Inc.",
-   "Ticker": "9999.HK",
-   "Identifier": "G6427A102",
-   "Weight": "3.25",
-   "Market Value": "277196.16",
-   "Shares Held": "11004",
-   "Asset Category": "Entertainment"
-  },
-  {
-   "Name": "Capcom Co., Ltd.",
-   "Ticker": "9697.JP",
-   "Identifier": "J05187109",
-   "Weight": "3.24",
-   "Market Value": "276658.01",
-   "Shares Held": "9632",
-   "Asset Category": "Entertainment"
-  },
-  {
-   "Name": "Zoom Communications, Inc. (Class A)",
-   "Ticker": "ZM",
-   "Identifier": "98980L101",
-   "Weight": "3.16",
-   "Market Value": "270324.3",
-   "Shares Held": "2770",
-   "Asset Category": "Software"
-  },
-  {
-   "Name": "Adobe Incorporated",
-   "Ticker": "ADBE",
-   "Identifier": "00724F101",
-   "Weight": "3.15",
-   "Market Value": "268833.92",
-   "Shares Held": "1088",
-   "Asset Category": "Software"
-  },
-  {
-   "Name": "Microsoft Corporation",
-   "Ticker": "MSFT",
-   "Identifier": "594918104",
-   "Weight": "3.14",
-   "Market Value": "267827.04",
-   "Shares Held": "502",
-   "Asset Category": "Software"
-  },
-  {
-   "Name": "Tencent Holdings Limited",
-   "Ticker": "700.HK",
-   "Identifier": "G87572163",
-   "Weight": "3.12",
-   "Market Value": "266175.68",
-   "Shares Held": "5000",
-   "Asset Category": "Interactive Media & Services"
   },
   {
    "Name": "Apple Inc.",
    "Ticker": "AAPL",
    "Identifier": "037833100",
-   "Weight": "3.09",
-   "Market Value": "264063.8",
+   "Weight": "3.17",
+   "Market Value": "267748.26",
    "Shares Held": "770",
    "Asset Category": "Technology Hardware, Storage & Peripherals"
   },
   {
-   "Name": "Microchip Technology Incorporated",
-   "Ticker": "MCHP",
-   "Identifier": "595017104",
-   "Weight": "3.03",
-   "Market Value": "258420.96",
-   "Shares Held": "3472",
-   "Asset Category": "Semiconductors & Semiconductor Equipment"
+   "Name": "Zoom Communications, Inc. (Class A)",
+   "Ticker": "ZM",
+   "Identifier": "98980L101",
+   "Weight": "3.14",
+   "Market Value": "265282.9",
+   "Shares Held": "2770",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Capcom Co., Ltd.",
+   "Ticker": "9697.JP",
+   "Identifier": "J05187109",
+   "Weight": "3.13",
+   "Market Value": "264083.89",
+   "Shares Held": "9632",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Microsoft Corporation",
+   "Ticker": "MSFT",
+   "Identifier": "594918104",
+   "Weight": "3.12",
+   "Market Value": "263304.02",
+   "Shares Held": "502",
+   "Asset Category": "Software"
   },
   {
    "Name": "QUALCOMM Incorporated",
    "Ticker": "QCOM",
    "Identifier": "747525103",
-   "Weight": "3.03",
-   "Market Value": "258559.7",
+   "Weight": "3.11",
+   "Market Value": "262105.9",
    "Shares Held": "1490",
    "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
   {
-   "Name": "Meta Platforms, Inc. (Class A)",
-   "Ticker": "META",
-   "Identifier": "30303M102",
-   "Weight": "3.01",
-   "Market Value": "256780.16",
-   "Shares Held": "364",
-   "Asset Category": "Interactive Media & Services"
+   "Name": "Texas Instruments Incorporated",
+   "Ticker": "TXN",
+   "Identifier": "882508104",
+   "Weight": "3.07",
+   "Market Value": "259067.9",
+   "Shares Held": "910",
+   "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
   {
-   "Name": "Netflix, Inc.",
-   "Ticker": "NFLX",
-   "Identifier": "64110L106",
-   "Weight": "3",
-   "Market Value": "255930.4",
-   "Shares Held": "3664",
+   "Name": "Microchip Technology Incorporated",
+   "Ticker": "MCHP",
+   "Identifier": "595017104",
+   "Weight": "3.05",
+   "Market Value": "257101.6",
+   "Shares Held": "3472",
+   "Asset Category": "Semiconductors & Semiconductor Equipment"
+  },
+  {
+   "Name": "NetEase, Inc.",
+   "Ticker": "9999.HK",
+   "Identifier": "G6427A102",
+   "Weight": "3.04",
+   "Market Value": "256742.22",
+   "Shares Held": "11004",
    "Asset Category": "Entertainment"
   },
   {
    "Name": "Take-Two Interactive Software, Inc.",
    "Ticker": "TTWO",
    "Identifier": "874054109",
-   "Weight": "3",
-   "Market Value": "256559.84",
+   "Weight": "3.02",
+   "Market Value": "255019.88",
    "Shares Held": "1252",
    "Asset Category": "Entertainment"
   },
   {
-   "Name": "Texas Instruments Incorporated",
-   "Ticker": "TXN",
-   "Identifier": "882508104",
-   "Weight": "2.94",
-   "Market Value": "251296.5",
-   "Shares Held": "910",
-   "Asset Category": "Semiconductors & Semiconductor Equipment"
+   "Name": "Tencent Holdings Limited",
+   "Ticker": "700.HK",
+   "Identifier": "G87572163",
+   "Weight": "2.92",
+   "Market Value": "246066.77",
+   "Shares Held": "5000",
+   "Asset Category": "Interactive Media & Services"
   },
   {
-   "Name": "Amphenol Corporation",
-   "Ticker": "APH",
-   "Identifier": "032095101",
-   "Weight": "2.89",
-   "Market Value": "246700.44",
-   "Shares Held": "3073",
-   "Asset Category": "Electronic Equipment, Instruments & Components"
+   "Name": "Netflix, Inc.",
+   "Ticker": "NFLX",
+   "Identifier": "64110L106",
+   "Weight": "2.86",
+   "Market Value": "241274.4",
+   "Shares Held": "3664",
+   "Asset Category": "Entertainment"
   },
   {
    "Name": "NVIDIA Corporation",
    "Ticker": "NVDA",
    "Identifier": "67066G104",
-   "Weight": "2.89",
-   "Market Value": "247048.42",
+   "Weight": "2.85",
+   "Market Value": "240072.48",
    "Shares Held": "1138",
    "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
@@ -193,35 +175,53 @@
    "Name": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
    "Ticker": "TSM",
    "Identifier": "874039100",
-   "Weight": "2.82",
-   "Market Value": "240786.06",
+   "Weight": "2.84",
+   "Market Value": "239806.23",
    "Shares Held": "573",
    "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
   {
-   "Name": "Synopsys, Inc.",
-   "Ticker": "SNPS",
-   "Identifier": "871607107",
-   "Weight": "2.8",
-   "Market Value": "239563.66",
-   "Shares Held": "527",
-   "Asset Category": "Software"
+   "Name": "Meta Platforms, Inc. (Class A)",
+   "Ticker": "META",
+   "Identifier": "30303M102",
+   "Weight": "2.77",
+   "Market Value": "233913.68",
+   "Shares Held": "364",
+   "Asset Category": "Interactive Media & Services"
   },
   {
    "Name": "Unity Software Inc.",
    "Ticker": "U",
    "Identifier": "91332U101",
-   "Weight": "2.71",
-   "Market Value": "231874.12",
+   "Weight": "2.76",
+   "Market Value": "233074.06",
    "Shares Held": "5714",
+   "Asset Category": "Software"
+  },
+  {
+   "Name": "Amphenol Corporation",
+   "Ticker": "APH",
+   "Identifier": "032095101",
+   "Weight": "2.7",
+   "Market Value": "227678.57",
+   "Shares Held": "3073",
+   "Asset Category": "Electronic Equipment, Instruments & Components"
+  },
+  {
+   "Name": "Synopsys, Inc.",
+   "Ticker": "SNPS",
+   "Identifier": "871607107",
+   "Weight": "2.69",
+   "Market Value": "226683.78",
+   "Shares Held": "527",
    "Asset Category": "Software"
   },
   {
    "Name": "Micron Technology, Inc.",
    "Ticker": "MU",
    "Identifier": "595112103",
-   "Weight": "2.68",
-   "Market Value": "228939.7",
+   "Weight": "2.63",
+   "Market Value": "222020.15",
    "Shares Held": "253",
    "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
@@ -229,108 +229,117 @@
    "Name": "Advanced Micro Devices, Inc.",
    "Ticker": "AMD",
    "Identifier": "007903107",
-   "Weight": "2.66",
-   "Market Value": "227057.1",
+   "Weight": "2.58",
+   "Market Value": "218085.38",
    "Shares Held": "422",
-   "Asset Category": "Semiconductors & Semiconductor Equipment"
-  },
-  {
-   "Name": "Intel Corporation",
-   "Ticker": "INTC",
-   "Identifier": "458140100",
-   "Weight": "2.64",
-   "Market Value": "225381.47",
-   "Shares Held": "2449",
    "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
   {
    "Name": "STMicroelectronics NV",
    "Ticker": "STMMI.IM",
    "Identifier": "N83574108",
-   "Weight": "2.64",
-   "Market Value": "225080.76",
+   "Weight": "2.55",
+   "Market Value": "215211.55",
    "Shares Held": "4873",
    "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
   {
-   "Name": "Krafton, Inc.",
-   "Ticker": "259960.KS",
-   "Identifier": "Y0929C104",
-   "Weight": "1.32",
-   "Market Value": "112535.24",
-   "Shares Held": "745",
-   "Asset Category": "Entertainment"
+   "Name": "Intel Corporation",
+   "Ticker": "INTC",
+   "Identifier": "458140100",
+   "Weight": "2.52",
+   "Market Value": "212965.04",
+   "Shares Held": "2449",
+   "Asset Category": "Semiconductors & Semiconductor Equipment"
+  },
+  {
+   "Name": "Teladoc Health, Inc.",
+   "Ticker": "TDOC",
+   "Identifier": "87918A105",
+   "Weight": "1.41",
+   "Market Value": "119147.62",
+   "Shares Held": "18793",
+   "Asset Category": "Health Care Technology"
   },
   {
    "Name": "MIXI Inc.",
    "Ticker": "2121.JP",
    "Identifier": "J45993110",
-   "Weight": "1.32",
-   "Market Value": "112851.59",
+   "Weight": "1.33",
+   "Market Value": "112094.11",
    "Shares Held": "4462",
-   "Asset Category": "Entertainment"
-  },
-  {
-   "Name": "Square Enix Holdings Co., Ltd.",
-   "Ticker": "9684.JP",
-   "Identifier": "J7659R109",
-   "Weight": "1.32",
-   "Market Value": "112353.96",
-   "Shares Held": "5930",
    "Asset Category": "Entertainment"
   },
   {
    "Name": "Snap Inc. (Class A)",
    "Ticker": "SNAP",
    "Identifier": "83304A106",
-   "Weight": "1.3",
-   "Market Value": "111399.09",
+   "Weight": "1.33",
+   "Market Value": "112642.78",
    "Shares Held": "17767",
    "Asset Category": "Interactive Media & Services"
   },
   {
-   "Name": "Koei Tecmo Holdings Co., Ltd.",
-   "Ticker": "3635.JP",
-   "Identifier": "J8239A103",
-   "Weight": "1.28",
-   "Market Value": "109422.75",
-   "Shares Held": "10336",
+   "Name": "Square Enix Holdings Co., Ltd.",
+   "Ticker": "9684.JP",
+   "Identifier": "J7659R109",
+   "Weight": "1.33",
+   "Market Value": "112599.48",
+   "Shares Held": "5930",
    "Asset Category": "Entertainment"
   },
   {
    "Name": "Pearl Abyss Corp.",
    "Ticker": "263750.KS",
    "Identifier": "Y6803R109",
-   "Weight": "1.28",
-   "Market Value": "109206.78",
+   "Weight": "1.32",
+   "Market Value": "111649.98",
    "Shares Held": "4274",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "Sunny Optical Technology (Group) Company Limited",
+   "Ticker": "2382.HK",
+   "Identifier": "G8586D109",
+   "Weight": "1.3",
+   "Market Value": "109595.06",
+   "Shares Held": "13612",
+   "Asset Category": "Electronic Equipment, Instruments & Components"
+  },
+  {
+   "Name": "Koei Tecmo Holdings Co., Ltd.",
+   "Ticker": "3635.JP",
+   "Identifier": "J8239A103",
+   "Weight": "1.29",
+   "Market Value": "109268.26",
+   "Shares Held": "10336",
+   "Asset Category": "Entertainment"
+  },
+  {
+   "Name": "DeNA Co., Ltd.",
+   "Ticker": "2432.JP",
+   "Identifier": "J1257N107",
+   "Weight": "1.28",
+   "Market Value": "107798.01",
+   "Shares Held": "6630",
    "Asset Category": "Entertainment"
   },
   {
    "Name": "Netmarble Corporation",
    "Ticker": "251270.KS",
    "Identifier": "Y6S5CG100",
-   "Weight": "1.27",
-   "Market Value": "108583.02",
+   "Weight": "1.26",
+   "Market Value": "106274.07",
    "Shares Held": "4140",
    "Asset Category": "Entertainment"
   },
   {
-   "Name": "Teladoc Health, Inc.",
-   "Ticker": "TDOC",
-   "Identifier": "87918A105",
-   "Weight": "1.26",
-   "Market Value": "107683.89",
-   "Shares Held": "18793",
-   "Asset Category": "Health Care Technology"
-  },
-  {
-   "Name": "DeNA Co., Ltd.",
-   "Ticker": "2432.JP",
-   "Identifier": "J1257N107",
+   "Name": "Krafton, Inc.",
+   "Ticker": "259960.KS",
+   "Identifier": "Y0929C104",
    "Weight": "1.24",
-   "Market Value": "106088.38",
-   "Shares Held": "6630",
+   "Market Value": "104395.63",
+   "Shares Held": "745",
    "Asset Category": "Entertainment"
   },
   {
@@ -338,43 +347,34 @@
    "Ticker": "5388.TT",
    "Identifier": "Y7670W106",
    "Weight": "1.22",
-   "Market Value": "103960.38",
+   "Market Value": "103326.36",
    "Shares Held": "45539",
    "Asset Category": "Communications Equipment"
-  },
-  {
-   "Name": "AU Optronics Corp.",
-   "Ticker": "2409.TT",
-   "Identifier": "Y0453H107",
-   "Weight": "1.2",
-   "Market Value": "102421.51",
-   "Shares Held": "90830",
-   "Asset Category": "Electronic Equipment, Instruments & Components"
-  },
-  {
-   "Name": "Sunny Optical Technology (Group) Company Limited",
-   "Ticker": "2382.HK",
-   "Identifier": "G8586D109",
-   "Weight": "1.17",
-   "Market Value": "100075.48",
-   "Shares Held": "13612",
-   "Asset Category": "Electronic Equipment, Instruments & Components"
   },
   {
    "Name": "PixArt Imaging Inc.",
    "Ticker": "3227.TT",
    "Identifier": "Y6986P102",
-   "Weight": "1.16",
-   "Market Value": "99408.97",
+   "Weight": "1.18",
+   "Market Value": "99748.3",
    "Shares Held": "17777",
    "Asset Category": "Semiconductors & Semiconductor Equipment"
+  },
+  {
+   "Name": "AU Optronics Corp.",
+   "Ticker": "2409.TT",
+   "Identifier": "Y0453H107",
+   "Weight": "1.17",
+   "Market Value": "98589.02",
+   "Shares Held": "90830",
+   "Asset Category": "Electronic Equipment, Instruments & Components"
   },
   {
    "Name": "Grindr Inc.",
    "Ticker": "GRND",
    "Identifier": "39854F101",
-   "Weight": "1.15",
-   "Market Value": "98332.59",
+   "Weight": "1.13",
+   "Market Value": "95335.92",
    "Shares Held": "6969",
    "Asset Category": "Interactive Media & Services"
   },
@@ -382,8 +382,8 @@
    "Name": "Japanese Yen",
    "Ticker": "-",
    "Identifier": "$JPY",
-   "Weight": "0.51",
-   "Market Value": "43847.5",
+   "Weight": "0.53",
+   "Market Value": "44325.59",
    "Shares Held": "6951582",
    "Asset Category": "Other"
   },
@@ -391,9 +391,9 @@
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "0.39",
-   "Market Value": "33644.43",
-   "Shares Held": "33644",
+   "Weight": "0.4",
+   "Market Value": "33880.32",
+   "Shares Held": "33880",
    "Asset Category": "Other"
   },
   {
@@ -401,19 +401,10 @@
    "Ticker": "-",
    "Identifier": "$EUR",
    "Weight": "0",
-   "Market Value": "33.41",
+   "Market Value": "33.37",
    "Shares Held": "30",
-   "Asset Category": "Other"
-  },
-  {
-   "Name": "Hong Kong Dollar",
-   "Ticker": "-",
-   "Identifier": "$HKD",
-   "Weight": "0",
-   "Market Value": "0",
-   "Shares Held": "0",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-10-19"
+ "asOfDate": "2026-10-23"
 }
