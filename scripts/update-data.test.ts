@@ -9,7 +9,7 @@ import {
   applyCatalogPerformance, publishedAsOf, stalestFirst, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, holdingsGuard, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
-  parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
+  parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport, nportBelongsToFund,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
   resolveYieldBasis, yieldBasisFromKind,
@@ -373,6 +373,17 @@ describe('parsing', () => {
     ]);
   });
 
+  test('N-PORT-P identity: a filing of the fund series is used, a filing of another series of the same trust is rejected', () => {
+    const fdn = 'First Trust Dow Jones Internet Index Fund';
+    expect(nportBelongsToFund({ seriesId: 'S000012345', seriesName: fdn }, 's000012345', fdn)).toBe(true);
+    expect(nportBelongsToFund({ seriesId: 'S000099999', seriesName: fdn }, 'S000012345', fdn)).toBe(false); // the series id decides, not the name
+    expect(nportBelongsToFund({ seriesId: '', seriesName: fdn }, 'S000012345', fdn)).toBe(false);
+    // no series id known (full-text search path): the series name must match the fund name
+    expect(nportBelongsToFund({ seriesId: 'S000012345', seriesName: 'FIRST TRUST DOW JONES INTERNET INDEX FUND' }, '', fdn)).toBe(true);
+    expect(nportBelongsToFund({ seriesId: 'S000099999', seriesName: 'First Trust NASDAQ-100 Equal Weighted Index Fund' }, '', fdn)).toBe(false);
+    expect(nportBelongsToFund({ seriesId: '', seriesName: '' }, '', fdn)).toBe(false);
+  });
+
   test('frequency placeholder keeps None and Unknown distinct', () => {
     for (const missing of [null, undefined, '', '  ', '-', '—']) expect(formatFrequencyPlaceholder(missing)).toBe('00 - None');
     expect(formatFrequencyPlaceholder('none')).toBe('00 - None');
@@ -653,6 +664,40 @@ describe('pipeline', () => {
         globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input).includes('EtfHoldings') ? new Response(broken) : good(input as RequestInfo, init))) as unknown as typeof fetch;
         expect(await main({ ...baseEnv, TICKERS: 'FTHI' })).toMatchObject({ updated: 0, failures: 1 });
         expect(snapshotTree(root)).toEqual(before);
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('N-PORT fallback: a filing of another series keeps the fund as published, the fund own filing is used', async () => {
+    await withFeed(async (root) => {
+      let net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const before = snapshotTree(root);
+        net.restore();
+        net = installMockNetwork({ failFor: { holdings: ['FTHI'] } });
+        const official = globalThis.fetch;
+        let filedSeries = 'S000099999'; // the trust's newest filing is another fund's
+        const nportXml = (): string => `<genInfo><regCik>0001329377</regCik><seriesName>Some Other First Trust Fund</seriesName><seriesId>${filedSeries}</seriesId><repPdDate>2026-09-30</repPdDate></genInfo>`
+          + '<invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><valUSD>600</valUSD><pctVal>60</pctVal></invstOrSec><invstOrSec><name>Apple Inc</name><cusip>037833100</cusip><valUSD>400</valUSD><pctVal>40</pctVal></invstOrSec>';
+        globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
+          const url = String(input);
+          if (url.includes('company_tickers_mf.json')) return new Response(JSON.stringify({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 'S000012345', 'C000033333', 'FTHI']] }));
+          if (url.includes('company_tickers.json')) return new Response('{}');
+          if (url.includes('browse-edgar')) return new Response('<entry><filing-type>NPORT-P</filing-type><accession-number>0001445546-26-001234</accession-number><filing-date>2026-10-20</filing-date><period>2026-09-30</period><filing-href>https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/</filing-href></entry>');
+          if (url.includes('primary_doc.xml')) return new Response(nportXml());
+          return official(input as RequestInfo, init);
+        }) as unknown as typeof fetch;
+        const env = { ...baseEnv, TICKERS: 'FTHI', EDGAR_FALLBACK: 'true', SEC_UA };
+        expect(await main(env)).toMatchObject({ updated: 0, failures: 1 });
+        expect(snapshotTree(root)).toEqual(before);
+        filedSeries = 'S000012345';
+        expect(await main(env)).toMatchObject({ updated: 1, failures: 0 });
+        const meta = JSON.parse(readFileSync(`${root}/funds/FTHI/meta.json`, 'utf8'));
+        expect(meta.source.holdingsSource).toContain('SEC EDGAR N-PORT-P');
+        expect(meta.holdings).toMatchObject({ totalRows: 2, asOfDate: '2026-09-30' });
       } finally {
         net.restore();
       }
