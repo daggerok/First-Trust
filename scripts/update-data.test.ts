@@ -7,7 +7,7 @@ import { pathToFileURL } from 'node:url';
 import { deflateRawSync } from 'node:zlib';
 import {
   applyCatalogPerformance, publishedAsOf, stalestFirst, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
-  formatFrequencyPlaceholder, fundPasses, historySheetRows, historyStartDate, indexEntryFromMeta, mapReturnRow,
+  formatFrequencyPlaceholder, fundPasses, historySheetRows, holdingsGuard, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
@@ -68,7 +68,7 @@ const holdingsHeader = (columns: string[]): string => `<tr class="fundSilverGrid
 const equityHoldingsHtml = `<span id="ContentPlaceHolder1_HoldingsListing_lblHoldingsTitle" class="PageHeading">Holdings of the Fund as of 9/25/2026</span>
 <table width="100%" cellspacing="0" rules="none" border="0" class="fundSilverGrid" style="border-collapse: collapse;">
 ${holdingsHeader(['Security Name', 'Identifier', 'CUSIP', 'Classification', 'Shares / Quantity', 'Market Value', 'Weighting'])}
-<tr > <td>Meta Platforms, Inc. (Class A)</td> <td>META</td> <td>30303M102</td> <td>Communication Services</td> <td align="right">802,106</td> <td align="right">$602,910,995.96</td> <td align="right">11.36%</td> </tr>
+<tr > <td>Meta Platforms, Inc. (Class A)</td> <td>META</td> <td>30303M102</td> <td>Communication Services</td> <td align="right">802,106</td> <td align="right">$602,910,995.96</td> <td align="right">98.28%</td> </tr>
 <tr class='alternateFundSilverGridRow'> <td>Samsung Electro-Mechanics Co., Ltd.</td> <td>009150.KS</td> <td>Y7470U102</td> <td>Information Technology</td> <td>20,240</td> <td>$22,440,080.94</td> <td>1.64%</td> </tr>
 <tr > <td>US Dollar</td> <td>$USD</td> <td></td> <td>Other</td> <td>4,479,160</td> <td>$4,479,159.67</td> <td>0.08%</td> </tr>
 </table>`;
@@ -293,7 +293,7 @@ describe('parsing', () => {
     const equity = parseHoldingsHtml(equityHoldingsHtml);
     expect(equity.asOfDate).toBe('2026-09-25');
     expect(equity.rows).toEqual([
-      { Name: 'Meta Platforms, Inc. (Class A)', Ticker: 'META', Identifier: '30303M102', Weight: '11.36', 'Market Value': '602910995.96', 'Shares Held': '802106', 'Asset Category': 'Communication Services' },
+      { Name: 'Meta Platforms, Inc. (Class A)', Ticker: 'META', Identifier: '30303M102', Weight: '98.28', 'Market Value': '602910995.96', 'Shares Held': '802106', 'Asset Category': 'Communication Services' },
       { Name: 'Samsung Electro-Mechanics Co., Ltd.', Ticker: '009150.KS', Identifier: 'Y7470U102', Weight: '1.64', 'Market Value': '22440080.94', 'Shares Held': '20240', 'Asset Category': 'Information Technology' },
       { Name: 'US Dollar', Ticker: '-', Identifier: '$USD', Weight: '0.08', 'Market Value': '4479159.67', 'Shares Held': '4479160', 'Asset Category': 'Other' },
     ]);
@@ -301,6 +301,21 @@ describe('parsing', () => {
     expect(options[0]).toMatchObject({ Name: '2027-01-15 State Street SPDR S&P 500 ETF Trust C 6.92', Ticker: '-', Identifier: '4SPY 270115C00006920', Weight: '101.29', 'Asset Category': '-' });
     expect(options[1]).toMatchObject({ 'Market Value': '-5630772.6', 'Shares Held': '-19780', Weight: '-0.38' });
     expect(parseHoldingsHtml(bondHoldingsHtml).rows).toEqual([{ Name: 'AUTONATION INC 0%, due 09/28/2026', Ticker: '-', Identifier: '05330NJU4', Weight: '0.99', 'Market Value': '65000000', 'Shares Held': '65000000', 'Asset Category': '-' }]);
+  });
+
+  test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
+    const headers = ['Name', 'Ticker', 'Weight'];
+    const rows = [{ Name: 'A', Ticker: 'A', Weight: '60%' }, { Name: 'B', Ticker: 'B', Weight: '40%' }];
+    expect(holdingsGuard(headers, rows, 2)).toBeNull();
+    expect(holdingsGuard(headers, [['A', 'A', '60'], ['B', 'B', '40']], null)).toBeNull();
+    expect(holdingsGuard([], [], 0)).toBeNull(); // nothing published before: an empty sheet is honest
+    expect(holdingsGuard(headers, [], 505)).toContain('no holdings rows');
+    expect(holdingsGuard(['Name', 'Ticker', 'Wt'], rows, 2)).toContain('no weight column');
+    expect(holdingsGuard(headers, rows.map((row) => ({ ...row, Weight: '6​0' })), 2)).toContain('numeric weight');
+    const allocation = [{ Name: 'Cash&Collateral', Ticker: '-', Weight: '100' }, { Name: 'Equities', Ticker: '-', Weight: '476' }];
+    expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
+    expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
+    expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
   });
 
   test('distributions: official columns, incremental year merge and cadence', () => {
@@ -620,6 +635,24 @@ describe('pipeline', () => {
         net = installMockNetwork({ failAll: true });
         expect(await main(baseEnv)).toMatchObject({ updated: 0, failures: 2 });
         expect(snapshotTree(root)['funds/FDN/meta.json']).toBe(before['funds/FDN/meta.json']);
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('fresh holdings that fail the guard keep the fund exactly as published and report it failed', async () => {
+    await withFeed(async (root) => {
+      const net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const before = snapshotTree(root);
+        // every weight cell broken -> each row parses to weight 0 -> the sheet adds up to 0
+        const broken = equityHoldingsHtml.replace(/<td align="right">98\.28%<\/td>|<td>1\.64%<\/td>|<td>0\.08%<\/td>/g, '<td>n/a</td>');
+        const good = globalThis.fetch;
+        globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input).includes('EtfHoldings') ? new Response(broken) : good(input as RequestInfo, init))) as unknown as typeof fetch;
+        expect(await main({ ...baseEnv, TICKERS: 'FTHI' })).toMatchObject({ updated: 0, failures: 1 });
+        expect(snapshotTree(root)).toEqual(before);
       } finally {
         net.restore();
       }
