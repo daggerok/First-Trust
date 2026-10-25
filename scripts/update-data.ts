@@ -1675,6 +1675,17 @@ export function parseNport(xml: string): ParsedNport {
   };
 }
 
+// A registrant files one N-PORT-P per series, and the registrant-submissions and
+// full-text-search paths return the trust's newest filing, not necessarily this
+// fund's: a filing is used only when its series id equals the fund's SEC series
+// id, or, when no series id is known, its series name matches the fund name.
+export function nportBelongsToFund(parsed: Pick<ParsedNport, 'seriesId' | 'seriesName'>, seriesId: string, fundName: string): boolean {
+  if (seriesId) return parsed.seriesId.toUpperCase() === seriesId.toUpperCase();
+  const filed = normalizeHoldingName(parsed.seriesName);
+  const wanted = normalizeHoldingName(fundName);
+  return Boolean(filed && wanted && (filed === wanted || filed.includes(wanted) || wanted.includes(filed)));
+}
+
 // EDGAR full-text search maps a fund ticker to the registrant that filed its
 // N-PORT-P, so the fallback works for every First Trust ETF without a hand-kept
 // CIK table.
@@ -2278,6 +2289,10 @@ async function fetchEdgarHoldings(fund: Fund, config: UpdaterConfig): Promise<{ 
     const filing = await resolveNportFiling(fund, config);
     if (!filing) return null;
     const parsed = parseNport(await fetchText(filing.accession.url, `[edgar   ] ${fund.ticker} N-PORT-P`, secHeaders(config), config));
+    if (!nportBelongsToFund(parsed, filing.seriesId, fund.name)) {
+      outputNote(`[ edgar    ] ${fund.ticker}: ${filing.accession.accession} reports "${parsed.seriesName || parsed.seriesId || 'unknown series'}", not this fund; skipped`);
+      return null;
+    }
     if (!parsed.holdings.length) return null;
     const rows = fillNportTickers(parsed.holdings, await loadCompanyTickerMap(config));
     return { rows, asOfDate: parsed.repPdDate || filing.accession.reportDate || null, cik: filing.cik };
