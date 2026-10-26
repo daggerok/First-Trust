@@ -696,7 +696,7 @@ FIRSTTRUST_ prefix, which wins over the plain name):
   AUM                  Total net assets range in USD: "min:max". Bounds accept
                        plain amounts or K/M/B/T suffixes; a whole-value preset
                        may be one of nano, micro, small, mid, large.
-  TER                  Total (gross) expense ratio range in percent.
+  TER                  Net expense ratio range in percent (after fee waivers; the total ratio when none).
   DIVIDEND_YIELD       12-month distribution rate range in percent.
   SEC_YIELD            30-day SEC yield range in percent.
   PERFORMANCE_YTD      Month-end NAV return ranges, average annualized for
@@ -1008,8 +1008,11 @@ export type Fund = {
   category: string;
   navValue: number | null;
   aumValue: number | null;
+  /** NET expense ratio (after the contractual fee waiver; the total ratio when no waiver is published). */
   terValue: number | null;
   netExpenseRatio: number | null;
+  /** GROSS (total) expense ratio before waivers. */
+  grossExpenseRatio: number | null;
   dividendYield: number | null;
   dividendYieldBasis: YieldBasis | null;
   secYield: number | null;
@@ -1052,7 +1055,7 @@ export function parseEtfListTables(html: string): ListTable[] {
 
 function emptyFund(ticker: string, name: string, category: string): Fund {
   return {
-    ticker, name, category, navValue: null, aumValue: null, terValue: null, netExpenseRatio: null,
+    ticker, name, category, navValue: null, aumValue: null, terValue: null, netExpenseRatio: null, grossExpenseRatio: null,
     dividendYield: null, dividendYieldBasis: null, secYield: null, unsubsidizedSecYield: null, inceptionListed: null, yieldAsOf: null,
     returns: null, trustCik: null,
   };
@@ -1109,8 +1112,9 @@ export function parsePerformanceNavHtml(html: string): Map<string, CatalogPerfor
 
 export function applyCatalogPerformance(fund: Fund, performance: CatalogPerformance | undefined): Fund {
   if (!performance) return fund;
-  fund.terValue = performance.grossExpenseRatio ?? performance.netExpenseRatio ?? fund.terValue;
+  fund.terValue = performance.netExpenseRatio ?? performance.grossExpenseRatio ?? fund.terValue;
   fund.netExpenseRatio = performance.netExpenseRatio;
+  fund.grossExpenseRatio = performance.grossExpenseRatio ?? fund.grossExpenseRatio;
   fund.inceptionListed = fund.inceptionListed ?? performance.inception;
   fund.returns = { monthEnd: performance.monthEnd, quarterEnd: fund.returns?.quarterEnd ?? null };
   return fund;
@@ -1393,6 +1397,31 @@ export function historySheetRows(days: PriceDay[]): SheetRow[] {
     'Total Net Assets': day.netAssets === null ? '' : String(round(day.netAssets, 2)),
   }));
 }
+
+/**
+ * HISTORY_RANGE shortens the request, never the published history: published rows dated before the first fresh row are kept
+ * in front of it (FT-4). Callers pass previous rows only when they come from the same source as the fresh rows. The series are raw
+ * NAV and market prices (no adjusted close to rescale), so the join is honest only when the published history has the first fresh
+ * day with the same NAV and market price; otherwise (a gap, a revised or split-adjusted series) it returns null and the caller keeps
+ * the fund as published. All official returns come from the summary page, so a window never nulls a return metric.
+ */
+export function withOlderHistory(fresh: SheetRow[], previous: SheetRow[]): SheetRow[] | null {
+  const ordered = [...fresh].sort((a, b) => a.Date.localeCompare(b.Date));
+  const first = ordered[0];
+  if (!first?.Date) return fresh;
+  const older = previous.filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.Date ?? '') && row.Date < first.Date).sort((a, b) => a.Date.localeCompare(b.Date));
+  if (!older.length) return fresh;
+  const same = (a: string | undefined, b: string | undefined): boolean => {
+    const x = toNumber(a), y = toNumber(b);
+    return x === null || y === null ? x === y : Math.abs(x - y) < 1e-6;
+  };
+  const joint = previous.find((row) => row.Date === first.Date);
+  if (!joint || !same(joint.NAV, first.NAV) || !same(joint['Market Price'], first['Market Price'])) return null;
+  return [...older, ...fresh];
+}
+
+const OFFICIAL_HISTORY_SOURCE = 'First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)';
+const YAHOO_HISTORY_SOURCE = 'Yahoo Finance daily market-price chart (fallback; no NAV in this series)';
 
 /** First export date for HISTORY_RANGE ("max", "10y", "6mo"), never before the fund's first price. */
 export function historyStartDate(range: string, minDate: string, maxDate: string): string {
@@ -1924,8 +1953,9 @@ function needsSummaryForFilters(fund: Fund, config: UpdaterConfig): boolean {
 export function applySummary(fund: Fund, summary: Summary): Fund {
   const gross = toNumber(summaryValue(summary, 'Total Expense Ratio', 'Gross Expense Ratio', 'Expense Ratio')?.value);
   const net = toNumber(summaryValue(summary, 'Net Expense Ratio')?.value);
-  fund.terValue = gross ?? net ?? fund.terValue;
+  fund.terValue = net ?? gross ?? fund.terValue;
   fund.netExpenseRatio = net ?? fund.netExpenseRatio;
+  fund.grossExpenseRatio = gross ?? fund.grossExpenseRatio;
   fund.aumValue = toNumber(summaryValue(summary, 'Total Net Assets', 'Net Assets')?.value) ?? fund.aumValue;
   fund.navValue = toNumber(summaryValue(summary, 'Closing NAV')?.value) ?? fund.navValue;
   fund.secYield = toNumber(summaryValue(summary, '30-Day SEC Yield')?.value) ?? fund.secYield;
@@ -1953,6 +1983,7 @@ function cachedFundFromIndex(item: JsonRecord): Fund {
   fund.navValue = toNumber(item.navValue);
   fund.aumValue = toNumber(item.aumValue);
   fund.terValue = toNumber(item.terValue);
+  fund.grossExpenseRatio = toNumber(item.terGrossValue);
   fund.dividendYield = toNumber(metrics.dividendYield);
   fund.dividendYieldBasis = resolveYieldBasis(fund.dividendYield, metrics.dividendYieldBasis);
   fund.secYield = toNumber(metrics.secYield);
@@ -1966,6 +1997,7 @@ function mergePrevious(fund: Fund, previous: JsonRecord | undefined): Fund {
   const cached = cachedFundFromIndex(previous);
   fund.aumValue = fund.aumValue ?? cached.aumValue;
   fund.terValue = fund.terValue ?? cached.terValue;
+  fund.grossExpenseRatio = fund.grossExpenseRatio ?? cached.grossExpenseRatio;
   if (fund.dividendYield === null) { fund.dividendYield = cached.dividendYield; fund.dividendYieldBasis = cached.dividendYieldBasis; }
   fund.secYield = fund.secYield ?? cached.secYield;
   fund.returns = fund.returns ?? cached.returns;
@@ -1987,7 +2019,9 @@ export function indexEntryFromMeta(fund: Fund, meta: JsonRecord): JsonRecord {
   const premium = isRecord(meta.premiumDiscount) ? meta.premiumDiscount : {};
   const holdings = isRecord(meta.holdings) ? toNumber(meta.holdings.totalRows) ?? 0 : 0;
   const history = isRecord(meta.history) ? toNumber(meta.history.totalRows) ?? 0 : 0;
-  const navValue = toNumber(nav.value), closeValue = toNumber(market.value), aumValue = toNumber(aum.value), terValue = toNumber(expense.value);
+  const navValue = toNumber(nav.value), closeValue = toNumber(market.value), aumValue = toNumber(aum.value);
+  // meta.json written before 2026-10-26 kept the gross ratio in expenseRatio.value: the published net wins.
+  const terValue = toNumber(expense.net) ?? toNumber(expense.value), terGrossValue = toNumber(expense.gross);
   const dividendYield = toNumber(yields.dividendYield), secYield = toNumber(yields.secYield);
   const dividendYieldBasis = resolveYieldBasis(dividendYield, yields.dividendYieldBasis, yields.dividendYieldKind);
   const withDisplayDate = (row: ReturnRow): JsonRecord => ({ ...row, asOfDate: row.asOfDate ? displayDate(row.asOfDate) : null });
@@ -1999,6 +2033,8 @@ export function indexEntryFromMeta(fund: Fund, meta: JsonRecord): JsonRecord {
     dataFile: `./funds/${fund.ticker}/meta.json`,
     ter: formatPercent(terValue),
     terValue,
+    terGross: formatPercent(terGrossValue),
+    terGrossValue,
     nav: navValue === null ? '—' : `$${navValue.toFixed(2)}`,
     navValue,
     aum: formatMoney(aumValue),
@@ -2065,6 +2101,8 @@ export function catalogOnlyEntry(fund: Fund): JsonRecord {
     dataFile: null,
     ter: formatPercent(fund.terValue),
     terValue: fund.terValue,
+    terGross: formatPercent(fund.grossExpenseRatio),
+    terGrossValue: fund.grossExpenseRatio,
     nav: nav === null ? '—' : `$${nav.toFixed(2)}`,
     navValue: nav,
     aum: formatMoney(fund.aumValue),
@@ -2411,6 +2449,10 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
   if (holdingsProblem) throw new Error(`holdings guard: ${holdingsProblem}; ${Object.keys(prior).length ? 'kept the previous complete data' : 'no data published for this fund yet'}`);
 
   // History: official XLSX export -> Yahoo market closes -> previously published rows.
+  // A fund whose published history is the official NAV series never swaps it for Yahoo market closes (no NAV, no net assets):
+  // a failed export keeps the whole fund as published (FT-3). Yahoo stays the fallback for a fund with no official history yet.
+  const priorHistorySource = isRecord(prior.history) && typeof prior.history.source === 'string' ? prior.history.source : '';
+  const priorOfficialHistory = priorHistorySource === OFFICIAL_HISTORY_SOURCE;
   let historyRowsOut: SheetRow[] = [];
   let historySource = '';
   let historyAsOf: string | null = null;
@@ -2419,22 +2461,27 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
   try {
     const days = await fetchOfficialHistory(fund.ticker, config);
     if (days.length) {
-      historyRowsOut = historySheetRows(days);
+      const joined = withOlderHistory(historySheetRows(days), priorOfficialHistory ? await previousRows(fund.ticker, 'history') : []);
+      if (!joined) throw new Error('kept previous published state: the official history window does not join the published history (gap or revised prices)');
+      historyRowsOut = joined;
       historyAsOf = days.at(-1)?.date ?? null;
       officialHistoryCount = days.length;
-      historySource = 'First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)';
+      historySource = OFFICIAL_HISTORY_SOURCE;
     }
   } catch (error) {
     outputNote(`[ history  ] ${fund.ticker}: ${errorMessage(error)}`);
   }
-  if (!historyRowsOut.length && !config.skipYahoo) {
+  if (!historyRowsOut.length && !config.skipYahoo && !priorOfficialHistory) {
     try {
       const chart = await fetchYahooChart(fund.ticker, config);
       if (chart.days.length) {
-        historyRowsOut = historySheetRows(chart.days.map((day) => ({ date: day.date, nav: null, market: day.close, netAssets: null })));
+        const fresh = historySheetRows(chart.days.map((day) => ({ date: day.date, nav: null, market: day.close, netAssets: null })));
+        const joined = withOlderHistory(fresh, priorHistorySource === YAHOO_HISTORY_SOURCE ? await previousRows(fund.ticker, 'history') : []);
+        if (!joined) throw new Error('kept previous published state: the Yahoo history window does not join the published history (gap or revised prices)');
+        historyRowsOut = joined;
         historyAsOf = chart.days.at(-1)?.date ?? null;
         yahooHistoryCount = chart.days.length;
-        historySource = 'Yahoo Finance daily market-price chart (fallback; no NAV in this series)';
+        historySource = YAHOO_HISTORY_SOURCE;
       }
     } catch (error) {
       outputNote(`[ chart    ] ${fund.ticker}: ${errorMessage(error)}`);
@@ -2478,9 +2525,9 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
   const market = toNumber(pair('Closing Market Price')?.value);
   const premium = toNumber(pair('Bid/Ask Premium', 'Bid/Ask Premium/Discount')?.value);
   const aum = toNumber(pair('Total Net Assets', 'Net Assets')?.value) ?? fund.aumValue;
-  const gross = toNumber(pair('Total Expense Ratio', 'Gross Expense Ratio', 'Expense Ratio')?.value) ?? fund.terValue;
+  const gross = toNumber(pair('Total Expense Ratio', 'Gross Expense Ratio', 'Expense Ratio')?.value) ?? fund.grossExpenseRatio;
   const net = toNumber(pair('Net Expense Ratio')?.value) ?? fund.netExpenseRatio;
-  const ter = gross ?? net;
+  const ter = net ?? gross;
   const secYield = toNumber(pair('30-Day SEC Yield')?.value) ?? fund.secYield;
   const ratePair = pair('12-Month Distribution Rate');
   const rate12 = toNumber(ratePair?.value);
