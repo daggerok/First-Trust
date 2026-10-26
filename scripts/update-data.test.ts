@@ -9,7 +9,8 @@ import {
   applyCatalogPerformance, publishedAsOf, stalestFirst, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, holdingsGuard, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
-  parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport, nportBelongsToFund,
+  parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport, nportBelongsToFund, pickEftsCik,
+  HOLDINGS_GUARD_RELAX, HOLDINGS_HEADERS,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
   resolveYieldBasis, yieldBasisFromKind,
@@ -316,6 +317,10 @@ describe('parsing', () => {
     expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
     expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
     expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
+    // FT Vest single-stock Target Income funds: an expired option package leaves stock, cash and one call (9 -> 3 rows, 2026-10-23)
+    const rolled = [{ Name: 'Advanced Micro Devices, Inc.', Weight: '53.5' }, { Name: 'US Dollar', Weight: '46.7' }, { Name: '2026-10-30 Advanced Micro Devices, Inc. C 515', Weight: '-0.2' }];
+    expect(holdingsGuard(HOLDINGS_HEADERS, rolled, 9)).toContain('less than half');
+    expect(holdingsGuard(HOLDINGS_HEADERS, rolled, 9, HOLDINGS_GUARD_RELAX.XVAD)).toBeNull();
   });
 
   test('distributions: official columns, incremental year merge and cadence', () => {
@@ -382,6 +387,20 @@ describe('parsing', () => {
     expect(nportBelongsToFund({ seriesId: 'S000012345', seriesName: 'FIRST TRUST DOW JONES INTERNET INDEX FUND' }, '', fdn)).toBe(true);
     expect(nportBelongsToFund({ seriesId: 'S000099999', seriesName: 'First Trust NASDAQ-100 Equal Weighted Index Fund' }, '', fdn)).toBe(false);
     expect(nportBelongsToFund({ seriesId: '', seriesName: '' }, '', fdn)).toBe(false);
+    // an exact normalized name is silent; a name that only contains the fund name is still used, with a warning
+    const warnings: string[] = [];
+    const warn = (message: string) => { warnings.push(message); };
+    expect(nportBelongsToFund({ seriesId: '', seriesName: 'FIRST TRUST DOW JONES INTERNET INDEX FUND' }, '', fdn, warn)).toBe(true);
+    expect(warnings).toHaveLength(0);
+    expect(nportBelongsToFund({ seriesId: '', seriesName: 'First Trust Dow Jones Internet Index Fund II' }, '', fdn, warn)).toBe(true);
+    expect(warnings).toHaveLength(1);
+    // full-text search: the exact name wins over an earlier partial hit; a partial hit alone is used with a warning
+    const hit = (name: string, cik: string) => ({ _source: { display_names: [`${name}  (CIK ${cik})`] } });
+    const partialHit = hit('First Trust Dow Jones Internet Index Fund II', '0000000111');
+    expect(pickEftsCik({ hits: [partialHit, hit(fdn, '0000000222')] }, fdn, warn)).toBe('0000000222');
+    expect(warnings).toHaveLength(1);
+    expect(pickEftsCik({ hits: [partialHit, hit('First Trust Other Fund', '0000000333')] }, fdn, warn)).toBe('0000000111');
+    expect(warnings).toHaveLength(2);
   });
 
   test('frequency placeholder keeps None and Unknown distinct', () => {
