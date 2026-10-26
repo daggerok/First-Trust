@@ -10,7 +10,7 @@ import {
   formatFrequencyPlaceholder, fundPasses, historySheetRows, holdingsGuard, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport, nportBelongsToFund, pickEftsCik,
-  HOLDINGS_GUARD_RELAX, HOLDINGS_HEADERS,
+  CLOSED_FUNDS, closedFund, HOLDINGS_GUARD_RELAX, HOLDINGS_HEADERS,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
   resolveYieldBasis, yieldBasisFromKind,
@@ -208,7 +208,9 @@ describe('controls', () => {
     expect(() => resolveControls({}, [])).toThrow();
     expect(() => JSON.parse('{bad json')).toThrow();
   });
+});
 
+describe('controls 2', () => {
   test('conservative defaults and data filters on published values', () => {
     const config = readConfig({ TICKERS: 'fdn, ftsm;fjan', TER: ':0.6', FIRSTTRUST_PERFORMANCE_1Y: '10:', TOTAL_RETURN_3Y: '30:' });
     expect(config).toMatchObject({ requestSleep: 1, concurrency: 2, maxRetries: 2, maxFetches: 0, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', edgarFallback: true, skipYahoo: false, secUa: 'daggerok ETF feed daggerok@gmail.com' });
@@ -303,7 +305,9 @@ describe('parsing', () => {
     expect(options[1]).toMatchObject({ 'Market Value': '-5630772.6', 'Shares Held': '-19780', Weight: '-0.38' });
     expect(parseHoldingsHtml(bondHoldingsHtml).rows).toEqual([{ Name: 'AUTONATION INC 0%, due 09/28/2026', Ticker: '-', Identifier: '05330NJU4', Weight: '0.99', 'Market Value': '65000000', 'Shares Held': '65000000', 'Asset Category': '-' }]);
   });
+});
 
+describe('parsing 2', () => {
   test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
     const headers = ['Name', 'Ticker', 'Weight'];
     const rows = [{ Name: 'A', Ticker: 'A', Weight: '60%' }, { Name: 'B', Ticker: 'B', Weight: '40%' }];
@@ -363,7 +367,9 @@ describe('parsing', () => {
     ]);
     expect(chart.dividends).toEqual([{ epoch: 1758672000, amount: 0.179 }]);
   });
+});
 
+describe('parsing 3', () => {
   test('SEC fund symbols and N-PORT-P fallback positions without inventing exchange tickers', () => {
     const refs = parseFundTickerMap({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 's000012345', 'C000033333', 'fdn'], [1383496, 'S000099999', 'C000011111', 'FXL']] });
     expect(refs.get('FDN')).toEqual({ cik: '0001329377', seriesId: 'S000012345', classId: 'C000033333' });
@@ -461,7 +467,9 @@ describe('metrics', () => {
     expect(returnsProvenance(emptyReturns('Aug 31 2026'))).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
     expect(returnsProvenance(emptyReturns())).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
   });
+});
 
+describe('metrics 2', () => {
   test('index entry from fund meta keeps the shared sibling schema and the same metrics key set', () => {
     const fund = { ...parseCatalogHtml(catalogHtml)[1] };
     const summary = parseSummaryHtml(summaryHtml);
@@ -689,6 +697,113 @@ describe('pipeline', () => {
     });
   });
 
+  test('a new fund whose first refresh fails (guard rejection, no source answering) is failed with a catalog-only row that is never read as published', async () => {
+    const catalogNew = `${catalogHtml}\n${catalogHtml.split('\n').filter((line) => line.includes('Ticker=FDN')).join('\n').replace(/FDN/g, 'NEWT')}`;
+    const broken = equityHoldingsHtml.replace(/<td align="right">98\.28%<\/td>|<td>1\.64%<\/td>|<td>0\.08%<\/td>/g, '<td>n/a</td>');
+    await withFeed(async (root) => {
+      let net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const published = snapshotTree(root);
+        const expectCatalogOnly = (): void => {
+          const rows = readIndex(root).funds;
+          const row = rows.find((fund: any) => fund.ticker === 'NEWT');
+          expect(row).toMatchObject({ dataFile: null, holdings: 0 });
+          expect(Object.keys(row.metrics)).toEqual(Object.keys(rows.find((fund: any) => fund.ticker === 'FDN').metrics));
+          expect(row.metrics.returnsBasis).toBeTruthy();
+          expect(existsSync(`${root}/funds/NEWT`)).toBe(false);
+        };
+        // 1) the guard rejects the new fund's first holdings: reported failed, like any failed source
+        net.restore();
+        net = installMockNetwork({ catalog: catalogNew });
+        const good = globalThis.fetch;
+        globalThis.fetch = (async (input: unknown, init?: RequestInit) => (/EtfHoldings.*NEWT/.test(String(input)) ? new Response(broken) : good(input as RequestInfo, init))) as unknown as typeof fetch;
+        const lines: string[] = [];
+        console.log = (line?: unknown) => { lines.push(String(line)); };
+        expect(await main({ ...baseEnv, TICKERS: 'NEWT' })).toMatchObject({ updated: 0, failures: 1, newFunds: ['NEWT'] });
+        expect(lines.filter((line) => / NEWT +failed +reason=holdings guard/.test(line))).toHaveLength(1);
+        expect(lines.some((line) => /\[ done +\] 1 fund: .*1 failed/.test(line))).toBe(true);
+        expectCatalogOnly();
+        // 2) no source answers for the new fund
+        net.restore();
+        net = installMockNetwork({ catalog: catalogNew, failFor: { summary: ['NEWT'], holdings: ['NEWT'], history: ['NEWT'] } });
+        expect(await main({ ...baseEnv, TICKERS: 'NEWT' })).toMatchObject({ updated: 0, failures: 1 });
+        expectCatalogOnly();
+        // a catalog outage reads the catalog-only row back from index.json: it stays catalog-only, the published funds stay as they were
+        net.restore();
+        net = installMockNetwork({ failAll: true });
+        await main(baseEnv);
+        expectCatalogOnly();
+        for (const path of Object.keys(published).filter((name) => name.startsWith('funds/'))) expect(snapshotTree(root)[path]).toBe(published[path]);
+        // the next good run treats it as never published: it goes first and gets its files
+        net.restore();
+        net = installMockNetwork({ catalog: catalogNew });
+        expect(await main({ ...baseEnv, CONCURRENCY: '1' })).toMatchObject({ updated: 3, failures: 0 });
+        expect(net.stats.summaries[0]).toBe('NEWT');
+        expect(readIndex(root).funds.find((fund: any) => fund.ticker === 'NEWT').dataFile).toBe('./funds/NEWT/meta.json');
+      } finally {
+        net.restore();
+      }
+    });
+  });
+});
+
+describe('pipeline 2', () => {
+  test('a closed fund is never fetched or reported failed: its files stay as published, its index row says closed, a rerun writes nothing', async () => {
+    const entry = { ticker: 'FTHI', closed: '2026-10-01', source: 'https://www.sec.gov/Archives/edgar/data/1/notice.htm' };
+    expect(() => closedFund([{ ...entry, closed: 'soon' }], 'FTHI')).toThrow('CLOSED_FUNDS');
+    expect(closedFund([entry], 'fthi')).toEqual(entry);
+    // the guard would reject these holdings
+    const broken = equityHoldingsHtml.replace(/<td align="right">98\.28%<\/td>|<td>1\.64%<\/td>|<td>0\.08%<\/td>/g, '<td>n/a</td>');
+    const withoutFthi = catalogHtml.split('\n').filter((line) => !line.includes('Ticker=FTHI')).join('\n');
+    await withFeed(async (root) => {
+      let net = installMockNetwork();
+      const calls: string[] = [];
+      const spy = (): void => {
+        const inner = globalThis.fetch;
+        globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
+          calls.push(String(input));
+          return /EtfHoldings.*FTHI/.test(String(input)) ? new Response(broken) : inner(input as RequestInfo, init);
+        }) as unknown as typeof fetch;
+      };
+      try {
+        await main(baseEnv);
+        const first = snapshotTree(root);
+        spy();
+        CLOSED_FUNDS.push(entry);
+        try {
+          const run = await main({ ...baseEnv, TICKERS: 'FTHI' });
+          expect(calls.filter((url) => /fthi/i.test(url))).toEqual([]);
+          expect(run).toMatchObject({ updated: 0, failures: 0 });
+          expect(process.exitCode).not.toBe(1);
+          const closed = snapshotTree(root);
+          for (const path of Object.keys(first)) if (path !== 'index.json') expect([path, closed[path]]).toEqual([path, first[path]]);
+          const rows = readIndex(root).funds;
+          expect(rows.map((row: any) => row.ticker)).toEqual(['FDN', 'FTHI']);
+          expect(rows.find((row: any) => row.ticker === 'FTHI')).toMatchObject({ status: 'closed', closedDate: '2026-10-01', closedSource: entry.source, dataFile: './funds/FTHI/meta.json' });
+          expect(rows.filter((row: any) => row.status === 'closed')).toHaveLength(1);
+          // a full rerun refreshes FDN only and writes nothing
+          calls.length = 0;
+          expect(await main(baseEnv)).toMatchObject({ updated: 1, failures: 0 });
+          expect(calls.filter((url) => /fthi/i.test(url))).toEqual([]);
+          expect(snapshotTree(root)).toEqual(closed);
+          // the live catalog drops the closed fund: TICKERS still accepts it, its row and files survive, nothing is written
+          net.restore();
+          net = installMockNetwork({ catalog: withoutFthi });
+          spy();
+          calls.length = 0;
+          expect(await main({ ...baseEnv, TICKERS: 'FTHI' })).toMatchObject({ updated: 0, failures: 0 });
+          expect(calls.filter((url) => /fthi/i.test(url))).toEqual([]);
+          expect(snapshotTree(root)).toEqual(closed);
+        } finally {
+          CLOSED_FUNDS.splice(CLOSED_FUNDS.indexOf(entry), 1);
+        }
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
   test('N-PORT fallback: a filing of another series keeps the fund as published, the fund own filing is used', async () => {
     await withFeed(async (root) => {
       let net = installMockNetwork();
@@ -844,7 +959,9 @@ describe('network', () => {
     calls = 0;
     await expect(fetchWithRetry('https://example.test/slow', 'slow', {}, 0)).rejects.toThrow('network error');
   });
+});
 
+describe('network 2', () => {
   test('CONCURRENCY decides how many funds are in flight (peak 1 at 1, peak 2 at 2)', async () => {
     await withFeed(async () => {
       const net = installMockNetwork({ delayMs: 15 });
