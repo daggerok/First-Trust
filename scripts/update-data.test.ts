@@ -9,7 +9,8 @@ import {
   applyCatalogPerformance, applySummary, withOlderHistory, publishedAsOf, stalestFirst, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, holdingsGuard, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
-  parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport, nportBelongsToFund, pickEftsCik,
+  parseDistributionHtml, parseHiddenInputs, parseHoldingsHtml, pickEftsCik,
+  parseNportFiling, parseSecCompanyNames, parseSecFundTickers, nportHoldingsSheet, nportIsFresh, nportTickers, holdingsWeightCount, matureReturns, toIsoDate,
   CLOSED_FUNDS, closedFund, HOLDINGS_GUARD_RELAX, HOLDINGS_HEADERS,
   parsePerformanceNavHtml, parsePriceHistoryRows, parseRange, parseSummaryHtml, readConfig, readXlsxRows, returnForFilter,
   returnSlot, samePublishedContent, splitRowCells, summarizeDistributions, summaryValue, toNumber, withoutRunTimestamps,
@@ -370,43 +371,59 @@ describe('parsing 2', () => {
 });
 
 describe('parsing 3', () => {
-  test('SEC fund symbols and N-PORT-P fallback positions without inventing exchange tickers', () => {
-    const refs = parseFundTickerMap({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 's000012345', 'C000033333', 'fdn'], [1383496, 'S000099999', 'C000011111', 'FXL']] });
-    expect(refs.get('FDN')).toEqual({ cik: '0001329377', seriesId: 'S000012345', classId: 'C000033333' });
-    expect(refs.get('FXL')?.cik).toBe('0001383496');
-    expect(parseEdgarAtomFilings('<entry><filing-type>NPORT-P</filing-type><accession-number>0001445546-26-001234</accession-number><filing-date>2026-08-28</filing-date><period>2026-06-30</period><filing-href>https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/</filing-href></entry><entry><filing-type>N-CSR</filing-type><accession-number>x</accession-number></entry>')).toEqual([
-      { accession: '0001445546-26-001234', filed: '2026-08-28', reportDate: '2026-06-30', url: 'https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/primary_doc.xml' },
-    ]);
-    const nport = parseNport('<genInfo><regName>First Trust Exchange-Traded Fund</regName><regCik>0001329377</regCik><seriesId>S000012345</seriesId><repPdDate>2026-06-30</repPdDate></genInfo><fundInfo><netAssets>5306019723</netAssets></fundInfo><invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><balance>802106</balance><valUSD>602910995.96</valUSD><pctVal>11.36</pctVal><assetCat>EC</assetCat></invstOrSec>');
-    expect(nport).toMatchObject({ regCik: '0001329377', seriesId: 'S000012345', repPdDate: '2026-06-30', netAssets: 5306019723 });
-    expect(nport.holdings).toEqual([
-      { Name: 'Meta Platforms Inc', Ticker: '-', Identifier: '30303M102', Weight: '11.36', 'Market Value': '602910995.96', 'Shares Held': '802106', 'Asset Category': 'EC' },
+  test('SEC EDGAR fallback (shared nport-reader): ticker map, the published headers, empty missing numbers, no derivative identifiers, tickers only on common stock', () => {
+    const map = parseSecFundTickers({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1424212, 'S000019853', 'C000055213', 'FPE'], [1329377, 'S000012345', 'C000033333', 'FDN']] });
+    expect(map.get('FPE')).toEqual({ cik: '0001424212', seriesId: 'S000019853', classId: 'C000055213' });
+    const xml = `<edgarSubmission><genInfo><regCik>0001424212</regCik><seriesName>First Trust Preferred Securities and Income ETF</seriesName><seriesId>S000019853</seriesId><repPdDate>2026-07-31</repPdDate></genInfo><fundInfo><netAssets>1000</netAssets></fundInfo><invstOrSecs>
+<invstOrSec><name>META PLATFORMS INC</name><cusip>30303M102</cusip><identifiers><isin value="US30303M1027"/></identifiers><balance>10.00000000</balance><curCd>USD</curCd><valUSD>600</valUSD><pctVal>60</pctVal><assetCat>EC</assetCat></invstOrSec>
+<invstOrSec><name>EQUITABLE HOLDINGS INC</name><title>EQUITABLE HOLDINGS INC 5.25% DEPOSITARY SHARES FIXED RATE NONCUMULATIVE PERPETUAL PREFERRED STOCK</title><cusip>29452E200</cusip><identifiers><ticker value="EQH"/></identifiers><balance>5</balance><curCd>USD</curCd><valUSD>300</valUSD><pctVal>30</pctVal><assetCat>EP</assetCat></invstOrSec>
+<invstOrSec><name>UNITED STATES TREASURY NOTE</name><cusip>91282CJL6</cusip><identifiers><ticker value="T"/></identifiers><balance>100</balance><curCd>USD</curCd><valUSD>99</valUSD><assetCat>DBT</assetCat><debtSec><maturityDt>2028-01-31</maturityDt><annualizedRt>3.5</annualizedRt></debtSec></invstOrSec>
+<invstOrSec><name>DJIA MINI E-CBOT</name><cusip>000000000</cusip><identifiers><other otherDesc="Bloomberg Identifier" value="BBG01VKPGXL9"/></identifiers><curCd>USD</curCd><valUSD>1</valUSD><pctVal>0.005</pctVal><assetCat>DE</assetCat><derivativeInfo><futrDeriv derivCat="FUT"><descRefInstrmnt><otherRefInst><identifiers><cusip value="78462F103"/><ticker value="SPY"/></identifiers></otherRefInst></descRefInstrmnt></futrDeriv></derivativeInfo></invstOrSec></invstOrSecs></edgarSubmission>`;
+    const filing = parseNportFiling(xml);
+    expect([filing.seriesId, filing.repPdDate, filing.netAssets, filing.positions.length]).toEqual(['S000019853', '2026-07-31', 1000, 4]);
+    const sheet = nportHoldingsSheet(filing, nportTickers(filing.positions, parseSecCompanyNames({ 0: { ticker: 'META', title: 'Meta Platforms, Inc.' }, 1: { ticker: 'T', title: 'AT&T INC.' } })));
+    expect(sheet.headers).toEqual(HOLDINGS_HEADERS);
+    expect(sheet.rows).toEqual([
+      { Name: 'META PLATFORMS INC', Ticker: 'META', Identifier: '30303M102', Weight: '60', 'Market Value': '600', 'Shares Held': '10', 'Asset Category': 'EC' },
+      // FPE 2026-07-31: the trust files this preferred under Equitable's common ticker, so a preferred row stays identifier-keyed
+      { Name: 'EQUITABLE HOLDINGS INC', Ticker: '-', Identifier: '29452E200', Weight: '30', 'Market Value': '300', 'Shares Held': '5', 'Asset Category': 'EP' },
+      // the Treasury note keeps no ticker (a bond is no "T" for AT&T) and an empty weight, never 0; the future keeps its own id, not SPY's
+      { Name: 'UNITED STATES TREASURY NOTE', Ticker: '-', Identifier: '91282CJL6', Weight: '', 'Market Value': '99', 'Shares Held': '100', 'Asset Category': 'DBT' },
+      { Name: 'DJIA MINI E-CBOT', Ticker: '-', Identifier: 'BBG01VKPGXL9', Weight: '0.005', 'Market Value': '1', 'Shares Held': '', 'Asset Category': 'DE' },
     ]);
   });
 
-  test('N-PORT-P identity: a filing of the fund series is used, a filing of another series of the same trust is rejected', () => {
+  test('N-PORT freshness: a report replaces published holdings only when strictly newer; the full-text search falls back to the First Trust trust', () => {
+    expect(nportIsFresh('2026-06-30', '2026-09-25', 193)).toBe(false);
+    expect(nportIsFresh('2026-09-25', '2026-09-25', 193)).toBe(false);
+    expect(nportIsFresh('2026-09-30', '2026-09-25', 193)).toBe(true);
+    expect(nportIsFresh('', '2026-03-31', 100)).toBe(false);
+    expect(nportIsFresh('2026-06-30', null, 0)).toBe(true);
+    expect(nportIsFresh('2026-06-30', null, 100)).toBe(false); // published rows without a date cannot be compared: keep them
     const fdn = 'First Trust Dow Jones Internet Index Fund';
-    expect(nportBelongsToFund({ seriesId: 'S000012345', seriesName: fdn }, 's000012345', fdn)).toBe(true);
-    expect(nportBelongsToFund({ seriesId: 'S000099999', seriesName: fdn }, 'S000012345', fdn)).toBe(false); // the series id decides, not the name
-    expect(nportBelongsToFund({ seriesId: '', seriesName: fdn }, 'S000012345', fdn)).toBe(false);
-    // no series id known (full-text search path): the series name must match the fund name
-    expect(nportBelongsToFund({ seriesId: 'S000012345', seriesName: 'FIRST TRUST DOW JONES INTERNET INDEX FUND' }, '', fdn)).toBe(true);
-    expect(nportBelongsToFund({ seriesId: 'S000099999', seriesName: 'First Trust NASDAQ-100 Equal Weighted Index Fund' }, '', fdn)).toBe(false);
-    expect(nportBelongsToFund({ seriesId: '', seriesName: '' }, '', fdn)).toBe(false);
-    // an exact normalized name is silent; a name that only contains the fund name is still used, with a warning
     const warnings: string[] = [];
     const warn = (message: string) => { warnings.push(message); };
-    expect(nportBelongsToFund({ seriesId: '', seriesName: 'FIRST TRUST DOW JONES INTERNET INDEX FUND' }, '', fdn, warn)).toBe(true);
-    expect(warnings).toHaveLength(0);
-    expect(nportBelongsToFund({ seriesId: '', seriesName: 'First Trust Dow Jones Internet Index Fund II' }, '', fdn, warn)).toBe(true);
-    expect(warnings).toHaveLength(1);
-    // full-text search: the exact name wins over an earlier partial hit; a partial hit alone is used with a warning
     const hit = (name: string, cik: string) => ({ _source: { display_names: [`${name}  (CIK ${cik})`] } });
     const partialHit = hit('First Trust Dow Jones Internet Index Fund II', '0000000111');
+    // the exact name wins over an earlier partial hit; a partial hit alone is used with a warning
     expect(pickEftsCik({ hits: [partialHit, hit(fdn, '0000000222')] }, fdn, warn)).toBe('0000000222');
+    expect(warnings).toHaveLength(0);
+    expect(pickEftsCik({ hits: [partialHit, hit('Other Trust', '0000000333')] }, fdn, warn)).toBe('0000000111');
     expect(warnings).toHaveLength(1);
-    expect(pickEftsCik({ hits: [partialHit, hit('First Trust Other Fund', '0000000333')] }, fdn, warn)).toBe('0000000111');
-    expect(warnings).toHaveLength(2);
+    // ACYN 2026-10-26: the hits name the filing trust, never the fund: the first First Trust trust is the registrant, another issuer never
+    const acyn = { hits: { hits: [hit('Stone Ridge Trust V  (LENDX)', '0001658645'), hit('FIRST TRUST EXCHANGE-TRADED FUND', '0001329377')] } };
+    expect(pickEftsCik(acyn, 'FT Vest Laddered Autocallable Barrier & Income ETF', warn)).toBe('0001329377');
+    expect(pickEftsCik({ hits: [hit('Stone Ridge Trust V  (LENDX)', '0001658645')] }, 'FT Vest Laddered Autocallable Barrier & Income ETF', warn)).toBeNull();
+  });
+
+  test('dates: month-name and U.S. dates are the same calendar day in every time zone', () => {
+    for (const tz of ['Asia/Tokyo', 'America/Los_Angeles', 'UTC']) {
+      process.env.TZ = tz;
+      expect(['Oct 24, 2026', 'October 24 2026', '24 Oct 2026', '10/24/2026', '10/24/26', '2026-10-24', '2026-10-24T00:00:00Z'].map((raw) => toIsoDate(raw))).toEqual(Array(7).fill('2026-10-24'));
+      expect(firstTrustIsoDate('12/21/99')).toBe('1999-12-21');
+      expect(publishedAsOf({ dataFile: './funds/FDN/meta.json', asOfDate: 'Sep 25 2026', metrics: { performanceAsOf: '2026-08-31' } })).toBe('2026-09-25');
+      expect(toIsoDate('not a date')).toBe('not a date');
+    }
   });
 
   test('frequency placeholder keeps None and Unknown distinct', () => {
@@ -474,12 +491,37 @@ describe('metrics', () => {
   test('returnsBasis and performanceAsOf travel together: basis always set, date ISO or null', () => {
     expect(RETURNS_BASIS).toMatch(/official First Trust NAV/);
     expect(returnsProvenance({ ...emptyReturns('2026-08-31') })).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' });
-    expect(returnsProvenance(emptyReturns('Aug 31 2026'))).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
+    expect(returnsProvenance(emptyReturns('Aug 31 2026'))).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: '2026-08-31' }); // a display date is the same calendar day
+    expect(returnsProvenance(emptyReturns('n/a'))).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
     expect(returnsProvenance(emptyReturns())).toEqual({ returnsBasis: RETURNS_BASIS, performanceAsOf: null });
   });
 });
 
 describe('metrics 2', () => {
+  test('a fund younger than one year publishes no 1y, 3y or since-inception return in its metrics or either performance table', async () => {
+    await withFeed(async (root) => {
+      const young = summaryHtml.replace('<td class="CEFPagesBody" align="right">1/6/2014</td>', '<td class="CEFPagesBody" align="right">1/15/2026</td>');
+      const net = installMockNetwork({ summary: young });
+      try {
+        await main({ ...baseEnv, TICKERS: 'FTHI' });
+        const metrics = readIndex(root).funds.find((fund: any) => fund.ticker === 'FTHI').metrics;
+        expect([metrics.ytd, metrics.tr1y, metrics.cagr3y, metrics.tr10y, metrics.siAnn, metrics.performanceAsOf]).toEqual([6.87, null, null, null, null, '2026-08-31']);
+        const returns = JSON.parse(readFileSync(`${root}/funds/FTHI/meta.json`, 'utf8')).returns;
+        expect([returns.monthEnd.mo3, returns.monthEnd.yr1, returns.monthEnd.sinceInception, returns.quarterEnd.ytd, returns.quarterEnd.yr1, returns.quarterEnd.sinceInception]).toEqual([2.21, null, null, 5.58, null, null]);
+      } finally {
+        net.restore();
+      }
+    });
+    // calendar anniversary, inclusive, measured on each table's own date; an unknown inception keeps every value
+    const row = { ...emptyReturns('2026-08-31'), ytd: 6.87, yr1: 12.02, yr3: 13.8, sinceInception: 7.74 };
+    expect(matureReturns(row, '2025-08-31')).toEqual({ ...row, yr3: null });
+    expect(matureReturns({ ...row, asOfDate: '2026-08-30' }, '2025-08-31')).toEqual({ ...row, asOfDate: '2026-08-30', yr1: null, yr3: null, sinceInception: null });
+    expect(matureReturns(row, null)).toEqual(row);
+    // a catalog-only row of a young fund (BFEW, launched 2026-04-07) has no since-inception return either
+    const bfew = applyCatalogPerformance({ ...parseCatalogHtml(catalogHtml)[1], ticker: 'BFEW', inceptionListed: null }, parsePerformanceNavHtml(performanceNavHtml).get('BFEW'));
+    expect([bfew.returns?.monthEnd.sinceInception, catalogOnlyEntry(bfew).metrics.siAnn, catalogOnlyEntry(bfew).returns.monthEnd.sinceInception]).toEqual([9.21, null, null]);
+  });
+
   test('index entry from fund meta keeps the shared sibling schema and the same metrics key set', () => {
     const fund = { ...parseCatalogHtml(catalogHtml)[1] };
     const summary = parseSummaryHtml(summaryHtml);
@@ -551,7 +593,7 @@ describe('metrics 2', () => {
 // End-to-end runs against a mocked network in a temp feed directory
 // ---------------------------------------------------------------------------
 
-type MockOptions = { officialHistory?: Record<string, Array<[string, number, number]>>; catalog?: string; failFor?: { summary?: string[]; holdings?: string[]; history?: string[] }; delayMs?: number; failAll?: boolean; onSummary?: () => void };
+type MockOptions = { officialHistory?: Record<string, Array<[string, number, number]>>; catalog?: string; summary?: string; failFor?: { summary?: string[]; holdings?: string[]; history?: string[] }; delayMs?: number; failAll?: boolean; onSummary?: () => void };
 
 /** Official price-history export with the given [ISO date, market price, NAV] rows (dates as Excel serials). */
 function priceXlsxOf(days: Array<[string, number, number]>): Uint8Array {
@@ -569,21 +611,21 @@ function chartJson(close: number): string {
     indicators: { quote: [{ close: [close - 2, close - 1, close], volume: [10, 20, 30] }], adjclose: [{ adjclose: [close - 2, close - 1, close] }] } }] } });
 }
 
-function installMockNetwork(options: MockOptions = {}): { stats: { peak: number; calls: number; summaries: string[] }; restore: () => void } {
+function installMockNetwork(options: MockOptions = {}): { stats: { peak: number; calls: number; summaries: string[]; urls: string[] }; restore: () => void } {
   const original = globalThis.fetch;
-  const stats = { peak: 0, calls: 0, summaries: [] as string[] };
+  const stats = { peak: 0, calls: 0, summaries: [] as string[], urls: [] as string[] };
   let inFlight = 0;
   globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
     const url = String(input);
     const ticker = /Ticker=([A-Z]+)/.exec(url)?.[1] ?? /chart\/([A-Z]+)/.exec(url)?.[1] ?? '';
-    stats.calls += 1; inFlight += 1; stats.peak = Math.max(stats.peak, inFlight);
+    stats.calls += 1; stats.urls.push(url); inFlight += 1; stats.peak = Math.max(stats.peak, inFlight);
     try {
       if (options.delayMs) await new Promise((resolve) => setTimeout(resolve, options.delayMs));
       if (options.failAll) return new Response('down', { status: 404 });
       if (url.includes('DisplayType=PerformanceNav')) return new Response(performanceNavHtml);
       if (url.includes('etflist.aspx')) return new Response(options.catalog ?? catalogHtml);
       if (url.includes('EtfSummary')) { stats.summaries.push(ticker); options.onSummary?.(); }
-      if (url.includes('EtfSummary')) return options.failFor?.summary?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(summaryHtml);
+      if (url.includes('EtfSummary')) return options.failFor?.summary?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(options.summary ?? summaryHtml);
       if (url.includes('EtfHoldings')) return options.failFor?.holdings?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(equityHoldingsHtml);
       if (url.includes('EtfDividHistory')) return new Response(distributionHtml);
       const official = url.includes('EtfPriceHistory') ? options.officialHistory?.[ticker] : undefined;
@@ -655,7 +697,7 @@ describe('pipeline', () => {
         net.restore();
         net = installMockNetwork({ catalog: withNew });
         const run = await main({ ...baseEnv, TICKERS: 'FTHI', MAX_FETCHES: '1' });
-        expect(run.newFunds).toEqual(['NEWT']);
+        expect(run.newFunds).toEqual({ published: [], pending: ['NEWT'] });
         const index = readIndex(root);
         expect(index.funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI', 'NEWT']);
         expect(index.funds.find((fund: any) => fund.ticker === 'FDN').dataFile).toBe('./funds/FDN/meta.json');
@@ -708,7 +750,7 @@ describe('pipeline', () => {
       try {
         await main(baseEnv);
         const before = snapshotTree(root);
-        // every weight cell broken -> each row parses to weight 0 -> the sheet adds up to 0
+        // every weight cell broken -> no row has a numeric weight (an empty cell, never 0)
         const broken = equityHoldingsHtml.replace(/<td align="right">98\.28%<\/td>|<td>1\.64%<\/td>|<td>0\.08%<\/td>/g, '<td>n/a</td>');
         const good = globalThis.fetch;
         globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input).includes('EtfHoldings') ? new Response(broken) : good(input as RequestInfo, init))) as unknown as typeof fetch;
@@ -743,7 +785,7 @@ describe('pipeline', () => {
         globalThis.fetch = (async (input: unknown, init?: RequestInit) => (/EtfHoldings.*NEWT/.test(String(input)) ? new Response(broken) : good(input as RequestInfo, init))) as unknown as typeof fetch;
         const lines: string[] = [];
         console.log = (line?: unknown) => { lines.push(String(line)); };
-        expect(await main({ ...baseEnv, TICKERS: 'NEWT' })).toMatchObject({ updated: 0, failures: 1, newFunds: ['NEWT'] });
+        expect(await main({ ...baseEnv, TICKERS: 'NEWT' })).toMatchObject({ updated: 0, failures: 1, newFunds: { published: [], pending: ['NEWT'] } });
         expect(lines.filter((line) => / NEWT +failed +reason=holdings guard/.test(line))).toHaveLength(1);
         expect(lines.some((line) => /\[ done +\] 1 fund: .*1 failed/.test(line))).toBe(true);
         expectCatalogOnly();
@@ -827,7 +869,7 @@ describe('pipeline 2', () => {
     });
   });
 
-  test('N-PORT fallback: a filing of another series keeps the fund as published, the fund own filing is used', async () => {
+  test('N-PORT fallback: another series is never used, the fund own strictly newer filing is, the same filing again writes nothing, an older one is not used', async () => {
     await withFeed(async (root) => {
       let net = installMockNetwork();
       try {
@@ -836,15 +878,18 @@ describe('pipeline 2', () => {
         net.restore();
         net = installMockNetwork({ failFor: { holdings: ['FTHI'] } });
         const official = globalThis.fetch;
-        let filedSeries = 'S000099999'; // the trust's newest filing is another fund's
-        const nportXml = (): string => `<genInfo><regCik>0001329377</regCik><seriesName>Some Other First Trust Fund</seriesName><seriesId>${filedSeries}</seriesId><repPdDate>2026-09-30</repPdDate></genInfo>`
-          + '<invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><valUSD>600</valUSD><pctVal>60</pctVal></invstOrSec><invstOrSec><name>Apple Inc</name><cusip>037833100</cusip><valUSD>400</valUSD><pctVal>40</pctVal></invstOrSec>';
+        let filedSeries = 'S000099999'; // the series feed answers with another fund's filing
+        let period = '2026-09-30';
+        let accession = '0000940400-26-001234';
+        const nportXml = (): string => `<genInfo><regCik>0001329377</regCik><seriesName>Some Other First Trust Fund</seriesName><seriesId>${filedSeries}</seriesId><repPdDate>${period}</repPdDate></genInfo>`
+          + '<invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><valUSD>600</valUSD><pctVal>60</pctVal><assetCat>EC</assetCat><curCd>USD</curCd></invstOrSec><invstOrSec><name>Apple Inc</name><cusip>037833100</cusip><valUSD>400</valUSD><pctVal>40</pctVal><assetCat>EC</assetCat><curCd>USD</curCd></invstOrSec>';
+        const documents: string[] = [];
         globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
           const url = String(input);
           if (url.includes('company_tickers_mf.json')) return new Response(JSON.stringify({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 'S000012345', 'C000033333', 'FTHI']] }));
-          if (url.includes('company_tickers.json')) return new Response('{}');
-          if (url.includes('browse-edgar')) return new Response('<entry><filing-type>NPORT-P</filing-type><accession-number>0001445546-26-001234</accession-number><filing-date>2026-10-20</filing-date><period>2026-09-30</period><filing-href>https://www.sec.gov/Archives/edgar/data/1329377/000144554626001234/</filing-href></entry>');
-          if (url.includes('primary_doc.xml')) return new Response(nportXml());
+          if (url.includes('company_tickers.json')) return new Response(JSON.stringify({ 0: { ticker: 'META', title: 'Meta Platforms, Inc.' } }));
+          if (url.includes('browse-edgar')) return new Response(`<feed><entry><content><accession-number>${accession}</accession-number><filing-date>2026-10-20</filing-date><filing-type>NPORT-P</filing-type><filing-href>https://www.sec.gov/Archives/edgar/data/1329377/${accession.replace(/-/g, '')}/${accession}-index.htm</filing-href><period>${period}</period></content></entry></feed>`);
+          if (url.includes('primary_doc.xml')) { documents.push(url); return new Response(nportXml()); }
           return official(input as RequestInfo, init);
         }) as unknown as typeof fetch;
         const env = { ...baseEnv, TICKERS: 'FTHI', EDGAR_FALLBACK: 'true', SEC_UA };
@@ -852,15 +897,63 @@ describe('pipeline 2', () => {
         expect(snapshotTree(root)).toEqual(before);
         filedSeries = 'S000012345';
         expect(await main(env)).toMatchObject({ updated: 1, failures: 0 });
+        expect(documents[documents.length - 1]).toBe('https://www.sec.gov/Archives/edgar/data/1329377/000094040026001234/primary_doc.xml');
         const meta = JSON.parse(readFileSync(`${root}/funds/FTHI/meta.json`, 'utf8'));
-        expect(meta.source.holdingsSource).toContain('SEC EDGAR N-PORT-P');
+        expect(meta.source.holdingsSource).toBe('SEC EDGAR Form N-PORT-P (accession 0000940400-26-001234, report period 2026-09-30)');
         expect(meta.holdings).toMatchObject({ totalRows: 2, asOfDate: '2026-09-30' });
+        expect(JSON.parse(readFileSync(`${root}/funds/FTHI/holdings/001.json`, 'utf8')).rows.map((row: any) => row.Ticker)).toEqual(['META', '-']);
+        // the official table is still down: the same filing is published again unchanged, an older one is not used
+        const published = snapshotTree(root);
+        expect(await main(env)).toMatchObject({ updated: 1, failures: 0 });
+        expect(snapshotTree(root)).toEqual(published);
+        period = '2026-06-30';
+        accession = '0000940400-26-000999';
+        expect(await main(env)).toMatchObject({ updated: 0, failures: 1 });
+        expect(snapshotTree(root)).toEqual(published);
       } finally {
         net.restore();
       }
     });
   });
 
+  test('N-PORT name path: a fund missing from the SEC ticker table is found in its trust by its exact series name, never by a partial one', async () => {
+    await withFeed(async (root) => {
+      let net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const before = snapshotTree(root);
+        net.restore();
+        net = installMockNetwork({ failFor: { holdings: ['FTHI'] } });
+        const official = globalThis.fetch;
+        // the trust's filings, newest period first: another fund, a fund whose name contains FTHI's, then FTHI's own
+        let names = ['First Trust Dow Jones Internet Index Fund', 'First Trust BuyWrite Income ETF II', 'First Trust BuyWrite Income ETF'];
+        const accessions = names.map((_, index) => `0000940400-26-00000${index + 1}`);
+        const xml = (index: number): string => `<genInfo><regCik>0001329377</regCik><seriesName>${names[index]}</seriesName><repPdDate>2026-09-30</repPdDate></genInfo><invstOrSec><name>Apple Inc</name><cusip>037833100</cusip><valUSD>60</valUSD><pctVal>60</pctVal><assetCat>EC</assetCat></invstOrSec><invstOrSec><name>Meta Platforms Inc</name><cusip>30303M102</cusip><valUSD>40</valUSD><pctVal>40</pctVal><assetCat>EC</assetCat></invstOrSec>`;
+        globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
+          const url = String(input);
+          if (url.includes('company_tickers_mf.json')) return new Response(JSON.stringify({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[1329377, 'S000012345', 'C000033333', 'FDN']] }));
+          if (url.includes('company_tickers.json')) return new Response('{}');
+          if (url.includes('efts.sec.gov')) return new Response(JSON.stringify({ hits: { hits: [{ _source: { display_names: ['FIRST TRUST EXCHANGE-TRADED FUND  (CIK 0001329377)'] } }] } }));
+          if (url.includes('/submissions/CIK0001329377.json')) return new Response(JSON.stringify({ cik: '1329377', filings: { recent: { form: ['NPORT-P', 'NPORT-P', 'NPORT-P'], accessionNumber: accessions, filingDate: ['2026-10-22', '2026-10-21', '2026-10-20'], reportDate: ['2026-09-30', '2026-09-30', '2026-09-30'] } } }));
+          const document = accessions.findIndex((accession) => url.includes(accession.replace(/-/g, '')));
+          if (document >= 0) return new Response(xml(document));
+          return official(input as RequestInfo, init);
+        }) as unknown as typeof fetch;
+        const env = { ...baseEnv, TICKERS: 'FTHI', EDGAR_FALLBACK: 'true', SEC_UA };
+        // "First Trust BuyWrite Income ETF II" only contains the fund name: never used, the fund keeps its published state
+        expect(await main(env)).toMatchObject({ updated: 0, failures: 1 });
+        expect(snapshotTree(root)).toEqual(before);
+        names = ['First Trust Dow Jones Internet Index Fund', 'First Trust Capital Strength ETF', 'First Trust BuyWrite Income ETF']
+        expect(await main(env)).toMatchObject({ updated: 1, failures: 0 });
+        expect(JSON.parse(readFileSync(`${root}/funds/FTHI/meta.json`, 'utf8')).source.holdingsSource).toBe('SEC EDGAR Form N-PORT-P (accession 0000940400-26-000003, report period 2026-09-30)');
+      } finally {
+        net.restore();
+      }
+    });
+  });
+});
+
+describe('pipeline 4', () => {
   test('stalest fund first: a deadline-truncated run refreshes the stalest, the next runs pick up the skipped funds', async () => {
     await withFeed(async (root) => {
       // a 3-fund catalog: ETHR, FDN, FTHI
@@ -946,12 +1039,13 @@ describe('pipeline 3', () => {
       try {
         expect(await main({ ...baseEnv, TICKERS: 'FTHI' })).toMatchObject({ updated: 1, failures: 0 });
         expect(dates()).toEqual(['2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25']);
+        const before = snapshotTree(root);
         net.restore();
-        // FT-4: HISTORY_RANGE (or a shorter export window) returns only the last rows: the older published rows stay
+        // FT-4 (Q25): HISTORY_RANGE (or a shorter export window) returns only the last rows: the older published rows stay, nothing is written
         net = installMockNetwork({ officialHistory: { FTHI: full.slice(2) } });
         await main({ ...baseEnv, TICKERS: 'FTHI', HISTORY_RANGE: '1y' });
         expect(dates()).toEqual(['2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25']);
-        const before = snapshotTree(root);
+        expect(snapshotTree(root)).toEqual(before);
         net.restore();
         // a window whose first day has another NAV than the published one (revised or split-adjusted) does not join: kept as published
         net = installMockNetwork({ officialHistory: { FTHI: [['2026-09-24', 11.85, 11.84], ['2026-09-25', 11.87, 11.86]] } });
@@ -982,6 +1076,82 @@ describe('pipeline 3', () => {
     expect(withOlderHistory([row('2026-09-30', '2')], published)).toBeNull(); // a gap: the published history lacks the first fresh day
     expect(withOlderHistory([row('2026-09-22')], published)).toEqual([row('2026-09-22')]); // nothing older: the fresh rows as they are
     expect(withOlderHistory([], published)).toEqual([]);
+  });
+
+  test('a relaxed guard still keeps numeric published weights from an all-dash sheet (Q24)', async () => {
+    await withFeed(async (root) => {
+      const net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const before = snapshotTree(root);
+        const dashes = equityHoldingsHtml.replace(/98\.28%|1\.64%|0\.08%/g, '-------');
+        const good = globalThis.fetch;
+        globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input).includes('EtfHoldings') ? new Response(dashes) : good(input as RequestInfo, init))) as unknown as typeof fetch;
+        HOLDINGS_GUARD_RELAX.FTHI = ['numeric', 'sum'];
+        try {
+          expect(await main({ ...baseEnv, TICKERS: 'FTHI' })).toMatchObject({ updated: 0, failures: 1 });
+        } finally {
+          delete HOLDINGS_GUARD_RELAX.FTHI;
+        }
+        expect(snapshotTree(root)).toEqual(before);
+        expect(holdingsWeightCount(HOLDINGS_HEADERS, [{ Weight: '' }, { Weight: '2' }])).toBe(1);
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('TICKERS outside the live catalog stops the run before any fund request; a stale catalog-only row is dropped (Q27)', async () => {
+    await withFeed(async (root) => {
+      const net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const index = readIndex(root);
+        const stale = { ...catalogOnlyEntry(parseCatalogHtml(catalogHtml)[0]), ticker: 'NOPE', name: 'NOPE' };
+        writeFileSync(`${root}/index.json`, JSON.stringify({ ...index, funds: [...index.funds, stale] }));
+        const before = snapshotTree(root);
+        net.stats.urls.length = 0;
+        await expect(main({ ...baseEnv, TICKERS: 'NOPE' })).rejects.toThrow('TICKERS: NOPE not in the First Trust catalog or published feed; nothing was fetched or written');
+        expect(net.stats.urls.filter((url) => !url.includes('etflist.aspx'))).toEqual([]);
+        expect(snapshotTree(root)).toEqual(before);
+        await main(baseEnv);
+        expect(readIndex(root).funds.map((fund: any) => fund.ticker)).toEqual(['FDN', 'FTHI']);
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('NEW FUNDS announces a fund on its first successful publish, a failed new fund as not published yet (Q28)', async () => {
+    const line = catalogHtml.split('\n').filter((row) => row.includes('Ticker=FDN')).join('\n');
+    const catalogNew = `${catalogHtml}\n${line.replace(/FDN/g, 'NEWF')}\n${line.replace(/FDN/g, 'NEWT')}`;
+    await withFeed(async (root) => {
+      let net = installMockNetwork();
+      try {
+        await main(baseEnv);
+        const lines: string[] = [];
+        console.log = (text?: unknown) => { if (/^NEW FUNDS/.test(String(text))) lines.push(String(text)); };
+        const summary = `${root}.summary.md`;
+        net.restore();
+        net = installMockNetwork({ catalog: catalogNew, failFor: { summary: ['NEWF'] } });
+        try {
+          await main({ ...baseEnv, GITHUB_STEP_SUMMARY: summary });
+          expect(lines).toEqual(['NEW FUNDS: NEWT', 'NEW FUNDS (not published yet): NEWF']);
+          expect(readFileSync(summary, 'utf8')).toContain('### NEW FUNDS\n\nNEW FUNDS: NEWT\nNEW FUNDS (not published yet): NEWF\n');
+        } finally {
+          rmSync(summary, { force: true });
+        }
+        lines.length = 0;
+        await main(baseEnv);
+        expect(lines).toEqual([]);
+        net.restore();
+        net = installMockNetwork({ catalog: catalogNew });
+        expect(await main(baseEnv)).toMatchObject({ newFunds: { published: ['NEWF'], pending: [] } });
+        expect(lines).toEqual(['NEW FUNDS: NEWF']);
+      } finally {
+        net.restore();
+      }
+    });
   });
 });
 
