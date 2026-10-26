@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T04:29:22Z",
+ "generatedAt": "2026-10-26T03:11:00Z",
  "source": {
   "provider": "First Trust ETFs (First Trust Portfolios L.P. / First Trust Advisors L.P.)",
   "market": "us",
@@ -13,8 +13,8 @@
  },
  "counts": {
   "funds": 334,
-  "holdings": 28501,
-  "history": 626591
+  "holdings": 28441,
+  "history": 626631
  },
  "funds": [
   {
@@ -21465,21 +21465,21 @@
    "dataFile": "./funds/XVAD/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$26.14",
-   "navValue": 26.14,
-   "aum": "$1.31M",
-   "aumValue": 1307020,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$24.85",
+   "navValue": 24.85,
+   "aum": "$2.48M",
+   "aumValue": 2484698,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Sep 22 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$26.20",
-   "premiumDiscount": "0.23%",
+   "closePrice": "$24.81",
+   "premiumDiscount": "0.24%",
    "cusip": "33738D697",
    "isin": "US33738D6976",
    "distributions": {
-    "frequency": null,
-    "exDate": "",
-    "dividend": ""
+    "frequency": "Annually",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.3127
    },
    "returns": {
     "monthEnd": {
@@ -21513,16 +21513,16 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -1.76,
-    "dividendYield": null,
-    "dividendYieldText": null,
-    "dividendYieldBasis": null,
+    "dividendYield": 1.26,
+    "dividendYieldText": "1.26%",
+    "dividendYieldBasis": "indicated",
     "secYield": null,
     "secYieldText": null,
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 19
+   "holdings": 3,
+   "history": 23
   },
   {
    "ticker": "XVAP",
@@ -21532,21 +21532,21 @@
    "dataFile": "./funds/XVAP/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$32.49",
-   "navValue": 32.49,
-   "aum": "$1.62M",
-   "aumValue": 1624477,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$32.50",
+   "navValue": 32.5,
+   "aum": "$3.25M",
+   "aumValue": 3250461,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Aug 18 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$32.53",
-   "premiumDiscount": "0.12%",
+   "closePrice": "$32.51",
+   "premiumDiscount": "0.06%",
    "cusip": "33738D630",
    "isin": "US33738D6307",
    "distributions": {
-    "frequency": "Annually",
-    "exDate": "Sep 24 2026",
-    "dividend": 0.5048
+    "frequency": "Monthly",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.4149
    },
    "returns": {
     "monthEnd": {
@@ -21588,8 +21588,8 @@
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 43
+   "holdings": 3,
+   "history": 47
   },
   {
    "ticker": "XVAZ",
@@ -21599,21 +21599,21 @@
    "dataFile": "./funds/XVAZ/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$30.48",
-   "navValue": 30.48,
-   "aum": "$2.29M",
-   "aumValue": 2285932,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$28.74",
+   "navValue": 28.74,
+   "aum": "$2.87M",
+   "aumValue": 2873648,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Sep 22 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$30.52",
-   "premiumDiscount": "0.10%",
+   "closePrice": "$28.77",
+   "premiumDiscount": "0.07%",
    "cusip": "33738D671",
    "isin": "US33738D6711",
    "distributions": {
-    "frequency": null,
-    "exDate": "",
-    "dividend": ""
+    "frequency": "Annually",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.3556
    },
    "returns": {
     "monthEnd": {
@@ -21647,16 +21647,16 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -2.15,
-    "dividendYield": null,
-    "dividendYieldText": null,
-    "dividendYieldBasis": null,
+    "dividendYield": 1.24,
+    "dividendYieldText": "1.24%",
+    "dividendYieldBasis": "indicated",
     "secYield": null,
     "secYieldText": null,
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 19
+   "holdings": 3,
+   "history": 23
   },
   {
    "ticker": "XVGL",
@@ -21666,21 +21666,21 @@
    "dataFile": "./funds/XVGL/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$29.29",
-   "navValue": 29.29,
-   "aum": "$2.20M",
-   "aumValue": 2196785,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$27.08",
+   "navValue": 27.08,
+   "aum": "$2.71M",
+   "aumValue": 2708428,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Sep 22 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$29.33",
-   "premiumDiscount": "0.10%",
+   "closePrice": "$27.12",
+   "premiumDiscount": "0.11%",
    "cusip": "33738D648",
    "isin": "US33738D6489",
    "distributions": {
-    "frequency": null,
-    "exDate": "",
-    "dividend": ""
+    "frequency": "Annually",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.3531
    },
    "returns": {
     "monthEnd": {
@@ -21714,16 +21714,16 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -1.85,
-    "dividendYield": null,
-    "dividendYieldText": null,
-    "dividendYieldBasis": null,
+    "dividendYield": 1.3,
+    "dividendYieldText": "1.30%",
+    "dividendYieldBasis": "indicated",
     "secYield": null,
     "secYieldText": null,
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 19
+   "holdings": 3,
+   "history": 23
   },
   {
    "ticker": "XVMS",
@@ -21733,21 +21733,21 @@
    "dataFile": "./funds/XVMS/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$32.03",
-   "navValue": 32.03,
-   "aum": "$2.40M",
-   "aumValue": 2402563,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$31.24",
+   "navValue": 31.24,
+   "aum": "$3.12M",
+   "aumValue": 3124490,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Sep 22 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$32.12",
-   "premiumDiscount": "0.28%",
+   "closePrice": "$31.28",
+   "premiumDiscount": "0.16%",
    "cusip": "33738D614",
    "isin": "US33738D6141",
    "distributions": {
-    "frequency": null,
-    "exDate": "",
-    "dividend": ""
+    "frequency": "Annually",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.3869
    },
    "returns": {
     "monthEnd": {
@@ -21781,16 +21781,16 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 3.17,
-    "dividendYield": null,
-    "dividendYieldText": null,
-    "dividendYieldBasis": null,
+    "dividendYield": 1.24,
+    "dividendYieldText": "1.24%",
+    "dividendYieldBasis": "indicated",
     "secYield": null,
     "secYieldText": null,
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 19
+   "holdings": 3,
+   "history": 23
   },
   {
    "ticker": "XVMT",
@@ -21800,21 +21800,21 @@
    "dataFile": "./funds/XVMT/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$28.87",
-   "navValue": 28.87,
-   "aum": "$2.16M",
-   "aumValue": 2164947,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$26.07",
+   "navValue": 26.07,
+   "aum": "$2.61M",
+   "aumValue": 2606973,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Sep 22 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$28.94",
-   "premiumDiscount": "0.24%",
+   "closePrice": "$26.10",
+   "premiumDiscount": "0.04%",
    "cusip": "33738D598",
    "isin": "US33738D5986",
    "distributions": {
-    "frequency": null,
-    "exDate": "",
-    "dividend": ""
+    "frequency": "Annually",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.3532
    },
    "returns": {
     "monthEnd": {
@@ -21848,16 +21848,16 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -1.24,
-    "dividendYield": null,
-    "dividendYieldText": null,
-    "dividendYieldBasis": null,
+    "dividendYield": 1.35,
+    "dividendYieldText": "1.35%",
+    "dividendYieldBasis": "indicated",
     "secYield": null,
     "secYieldText": null,
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 19
+   "holdings": 3,
+   "history": 23
   },
   {
    "ticker": "XVNV",
@@ -21867,21 +21867,21 @@
    "dataFile": "./funds/XVNV/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$29.25",
-   "navValue": 29.25,
-   "aum": "$1.46M",
-   "aumValue": 1462533,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$28.10",
+   "navValue": 28.1,
+   "aum": "$2.81M",
+   "aumValue": 2809614,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Aug 18 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$29.29",
-   "premiumDiscount": "0.03%",
+   "closePrice": "$28.12",
+   "premiumDiscount": "0.14%",
    "cusip": "33738D572",
    "isin": "US33738D5721",
    "distributions": {
-    "frequency": "Annually",
-    "exDate": "Sep 24 2026",
-    "dividend": 0.4808
+    "frequency": "Monthly",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.3683
    },
    "returns": {
     "monthEnd": {
@@ -21923,8 +21923,8 @@
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 43
+   "holdings": 3,
+   "history": 47
   },
   {
    "ticker": "XVPT",
@@ -21934,21 +21934,21 @@
    "dataFile": "./funds/XVPT/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$31.32",
-   "navValue": 31.32,
-   "aum": "$1.57M",
-   "aumValue": 1566010,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$31.35",
+   "navValue": 31.35,
+   "aum": "$3.14M",
+   "aumValue": 3135451,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Sep 22 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$31.35",
-   "premiumDiscount": "0.19%",
+   "closePrice": "$31.38",
+   "premiumDiscount": "0.22%",
    "cusip": "33738D556",
    "isin": "US33738D5564",
    "distributions": {
-    "frequency": null,
-    "exDate": "",
-    "dividend": ""
+    "frequency": "Annually",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.3661
    },
    "returns": {
     "monthEnd": {
@@ -21982,16 +21982,16 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 1.33,
-    "dividendYield": null,
-    "dividendYieldText": null,
-    "dividendYieldBasis": null,
+    "dividendYield": 1.17,
+    "dividendYieldText": "1.17%",
+    "dividendYieldBasis": "indicated",
     "secYield": null,
     "secYieldText": null,
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 19
+   "holdings": 3,
+   "history": 23
   },
   {
    "ticker": "XVSP",
@@ -22001,21 +22001,21 @@
    "dataFile": "./funds/XVSP/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$31.57",
-   "navValue": 31.57,
-   "aum": "$3.16M",
-   "aumValue": 3157349,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$31.14",
+   "navValue": 31.14,
+   "aum": "$3.89M",
+   "aumValue": 3892705,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Aug 25 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$31.61",
-   "premiumDiscount": "0.25%",
+   "closePrice": "$31.13",
+   "premiumDiscount": "0.19%",
    "cusip": "33738D481",
    "isin": "US33738D4815",
    "distributions": {
-    "frequency": "Annually",
-    "exDate": "Sep 24 2026",
-    "dividend": 0.4126
+    "frequency": "Monthly",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.398
    },
    "returns": {
     "monthEnd": {
@@ -22057,8 +22057,8 @@
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 38
+   "holdings": 3,
+   "history": 42
   },
   {
    "ticker": "XVTS",
@@ -22068,21 +22068,21 @@
    "dataFile": "./funds/XVTS/meta.json",
    "ter": "0.85%",
    "terValue": 0.85,
-   "nav": "$32.44",
-   "navValue": 32.44,
-   "aum": "$3.24M",
-   "aumValue": 3243750,
-   "asOfDate": "Oct 19 2026",
+   "nav": "$32.41",
+   "navValue": 32.41,
+   "aum": "$4.05M",
+   "aumValue": 4050908,
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Aug 18 2026",
    "exchange": "Cboe BZX",
-   "closePrice": "$32.46",
-   "premiumDiscount": "0.18%",
+   "closePrice": "$32.47",
+   "premiumDiscount": "0.19%",
    "cusip": "33738D549",
    "isin": "US33738D5499",
    "distributions": {
-    "frequency": "Annually",
-    "exDate": "Sep 24 2026",
-    "dividend": 0.5189
+    "frequency": "Monthly",
+    "exDate": "Oct 21 2026",
+    "dividend": 0.3996
    },
    "returns": {
     "monthEnd": {
@@ -22124,8 +22124,8 @@
     "returnsBasis": "official First Trust NAV total returns (month-end performance table; cumulative 3y/5y/10y derived from the published annualized values)",
     "performanceAsOf": "2026-09-30"
    },
-   "holdings": 9,
-   "history": 43
+   "holdings": 3,
+   "history": 47
   },
   {
    "ticker": "YDEC",
