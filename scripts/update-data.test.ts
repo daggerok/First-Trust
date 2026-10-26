@@ -953,6 +953,11 @@ describe('pipeline 3', () => {
         expect(dates()).toEqual(['2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25']);
         const before = snapshotTree(root);
         net.restore();
+        // a window whose first day has another NAV than the published one (revised or split-adjusted) does not join: kept as published
+        net = installMockNetwork({ officialHistory: { FTHI: [['2026-09-24', 11.85, 11.84], ['2026-09-25', 11.87, 11.86]] } });
+        expect(await main({ ...baseEnv, TICKERS: 'FTHI', HISTORY_RANGE: '1y' })).toMatchObject({ updated: 0, failures: 1 });
+        expect(snapshotTree(root)).toEqual(before);
+        net.restore();
         // FT-3: the export fails while Yahoo answers: the official NAV history is not replaced by market closes, the fund is kept and failed
         net = installMockNetwork();
         expect(await main({ ...baseEnv, TICKERS: 'FTHI' })).toMatchObject({ updated: 0, failures: 1 });
@@ -966,11 +971,17 @@ describe('pipeline 3', () => {
     });
   });
 
-  test('withOlderHistory keeps only rows older than the fresh window, sorted, and nothing when there is no fresh row', () => {
-    const row = (Date: string, NAV = '1') => ({ Date, NAV });
-    expect(withOlderHistory([row('2026-09-24', '2'), row('2026-09-25', '3')], [row('2026-09-25', 'old'), row('2026-09-22'), row('bad'), row('2026-09-23')]))
+  test('withOlderHistory keeps the rows older than the fresh window only when the window joins the published history on its first day', () => {
+    const row = (Date: string, NAV = '1', price = '1') => ({ Date, NAV, 'Market Price': price });
+    const published = [row('2026-09-25', '3.5'), row('2026-09-22'), row('bad'), row('2026-09-23'), row('2026-09-24', '2')];
+    expect(withOlderHistory([row('2026-09-24', '2'), row('2026-09-25', '3')], published))
       .toEqual([row('2026-09-22'), row('2026-09-23'), row('2026-09-24', '2'), row('2026-09-25', '3')]);
-    expect(withOlderHistory([], [row('2026-09-22')])).toEqual([]);
+    expect(withOlderHistory([row('2026-09-24', '2.000000')], published)).toEqual([row('2026-09-22'), row('2026-09-23'), row('2026-09-24', '2.000000')]);
+    expect(withOlderHistory([row('2026-09-24', '1')], published)).toBeNull(); // revised or split-adjusted NAV on the joint day
+    expect(withOlderHistory([row('2026-09-24', '2', '9')], published)).toBeNull(); // market price moved
+    expect(withOlderHistory([row('2026-09-30', '2')], published)).toBeNull(); // a gap: the published history lacks the first fresh day
+    expect(withOlderHistory([row('2026-09-22')], published)).toEqual([row('2026-09-22')]); // nothing older: the fresh rows as they are
+    expect(withOlderHistory([], published)).toEqual([]);
   });
 });
 

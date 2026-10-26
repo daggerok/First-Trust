@@ -1400,13 +1400,24 @@ export function historySheetRows(days: PriceDay[]): SheetRow[] {
 
 /**
  * HISTORY_RANGE shortens the request, never the published history: published rows dated before the first fresh row are kept
- * in front of it (FT-4). Callers pass previous rows only when they come from the same source as the fresh rows.
+ * in front of it (FT-4). Callers pass previous rows only when they come from the same source as the fresh rows. The series are raw
+ * NAV and market prices (no adjusted close to rescale), so the join is honest only when the published history has the first fresh
+ * day with the same NAV and market price; otherwise (a gap, a revised or split-adjusted series) it returns null and the caller keeps
+ * the fund as published. All official returns come from the summary page, so a window never nulls a return metric.
  */
-export function withOlderHistory(fresh: SheetRow[], previous: SheetRow[]): SheetRow[] {
-  const first = fresh.reduce((min, row) => (row.Date && (!min || row.Date < min) ? row.Date : min), '');
-  if (!first) return fresh;
-  const older = previous.filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.Date ?? '') && row.Date < first).sort((a, b) => a.Date.localeCompare(b.Date));
-  return older.length ? [...older, ...fresh] : fresh;
+export function withOlderHistory(fresh: SheetRow[], previous: SheetRow[]): SheetRow[] | null {
+  const ordered = [...fresh].sort((a, b) => a.Date.localeCompare(b.Date));
+  const first = ordered[0];
+  if (!first?.Date) return fresh;
+  const older = previous.filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.Date ?? '') && row.Date < first.Date).sort((a, b) => a.Date.localeCompare(b.Date));
+  if (!older.length) return fresh;
+  const same = (a: string | undefined, b: string | undefined): boolean => {
+    const x = toNumber(a), y = toNumber(b);
+    return x === null || y === null ? x === y : Math.abs(x - y) < 1e-6;
+  };
+  const joint = previous.find((row) => row.Date === first.Date);
+  if (!joint || !same(joint.NAV, first.NAV) || !same(joint['Market Price'], first['Market Price'])) return null;
+  return [...older, ...fresh];
 }
 
 const OFFICIAL_HISTORY_SOURCE = 'First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)';
@@ -2450,7 +2461,9 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
   try {
     const days = await fetchOfficialHistory(fund.ticker, config);
     if (days.length) {
-      historyRowsOut = withOlderHistory(historySheetRows(days), priorOfficialHistory ? await previousRows(fund.ticker, 'history') : []);
+      const joined = withOlderHistory(historySheetRows(days), priorOfficialHistory ? await previousRows(fund.ticker, 'history') : []);
+      if (!joined) throw new Error('kept previous published state: the official history window does not join the published history (gap or revised prices)');
+      historyRowsOut = joined;
       historyAsOf = days.at(-1)?.date ?? null;
       officialHistoryCount = days.length;
       historySource = OFFICIAL_HISTORY_SOURCE;
@@ -2463,7 +2476,9 @@ async function createMeta(fund: Fund, config: UpdaterConfig): Promise<FundResult
       const chart = await fetchYahooChart(fund.ticker, config);
       if (chart.days.length) {
         const fresh = historySheetRows(chart.days.map((day) => ({ date: day.date, nav: null, market: day.close, netAssets: null })));
-        historyRowsOut = withOlderHistory(fresh, priorHistorySource === YAHOO_HISTORY_SOURCE ? await previousRows(fund.ticker, 'history') : []);
+        const joined = withOlderHistory(fresh, priorHistorySource === YAHOO_HISTORY_SOURCE ? await previousRows(fund.ticker, 'history') : []);
+        if (!joined) throw new Error('kept previous published state: the Yahoo history window does not join the published history (gap or revised prices)');
+        historyRowsOut = joined;
         historyAsOf = chart.days.at(-1)?.date ?? null;
         yahooHistoryCount = chart.days.length;
         historySource = YAHOO_HISTORY_SOURCE;
