@@ -55,7 +55,7 @@ The **Update First Trust ETF data** GitHub Actions workflow exposes the most use
 | Fund details | `https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker={TICKER}` (for example, [FDN](https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=FDN)): CUSIP, ISIN, exchange, inception, gross and net expense ratio, closing NAV and market price, bid/ask premium, total net assets, SEC yield, distribution rates and month-end / quarter-end NAV performance. |
 | Holdings per fund | `https://www.ftportfolios.com/Retail/Etf/EtfHoldings.aspx?Ticker={TICKER}` - the full published holdings table (equities, bonds, FLEX options and cash). |
 | Distributions | `https://www.ftportfolios.com/Retail/Etf/EtfDividHistory.aspx?Ticker={TICKER}` - every year listed by the page (ex, record and payable dates, amount and type). Later runs refresh the newest published years and keep older rows. |
-| Daily history | The official "Export Prices to Excel" download on `https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker={TICKER}` - daily NAV, market price and net assets since inception, read by a zero-dependency XLSX reader. Premium/discount is computed from that day's market price and NAV. The [Yahoo Finance chart API](https://query1.finance.yahoo.com/v8/finance/chart/{TICKER}) is used only if the export fails (market price only; the NAV column stays blank). |
+| Daily history | The official "Export Prices to Excel" download on `https://www.ftportfolios.com/Retail/Etf/EtfPriceHistory.aspx?Ticker={TICKER}` - daily NAV, market price and net assets since inception, read by a zero-dependency XLSX reader. Premium/discount is computed from that day's market price and NAV. The [Yahoo Finance chart API](https://query1.finance.yahoo.com/v8/finance/chart/{TICKER}) is used only if the export fails and the fund has no official history published yet (market price only; the NAV column stays blank): a fund with published official history whose export fails is kept as it was. A shorter export window (`HISTORY_RANGE`) never shortens the published history: older published rows of the same source stay. |
 | Holdings fallback | SEC EDGAR Form N-PORT-P for the First Trust ETF trusts (for example First Trust Exchange-Traded Fund, CIK `0001329377`; First Trust Exchange-Traded AlphaDEX Fund, CIK `0001383496`), resolved per ticker from SEC's fund ticker table, only when ftportfolios.com provides no holdings. SEC requests declare the `SEC_UA` contact. An N-PORT snapshot may be less current than the issuer's daily holdings. |
 
 ### Metrics and caveats
@@ -75,6 +75,7 @@ The updater uses issuer-published NAV performance values for month-end and quart
 
 `official-distribution-rate` and `computed-trailing-12m` are not produced for this brand
 
+- The expense ratio (`terValue`, the `TER` filter) is the net ratio after First Trust's contractual fee waiver (FFLX 0.65%), the total ratio when no waiver is published; the total (gross) ratio is `terGrossValue` (FFLX 0.75%)
 - Net assets, expense ratios, SEC yield, distribution rates and NAV returns are issuer-published values; NAV and market price come from the official daily export
 - Yahoo Finance history (used only if the official export fails) carries market price only, so it is an estimate and the NAV and premium/discount columns stay blank
 - SEC N-PORT-P holdings are a periodic snapshot and may be less current than the issuer's daily holdings
@@ -105,7 +106,7 @@ Every row below has a matching key in `scripts/update-data.config.json` (all val
 | `HISTORY_RANGE` | `max` | History window for the official export and the Yahoo fallback: `max` or a whole number of years such as `10y`, `5y` or `1y`. The Yahoo request carries explicit `period1`/`period2`. Any other value (for example `6mo`) is an error, never a silent `max`. |
 | `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `FDN FTSM FJAN`. |
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
-| `TER` | `:` | Gross expense-ratio range in percent (`min:max`). |
+| `TER` | `:` | Net expense-ratio range in percent (`min:max`; after fee waivers, the total ratio when none is published). |
 | `DIVIDEND_YIELD` | `:` | Published 12-month distribution-rate range in percent. |
 | `SEC_YIELD` | `:` | Published 30-day SEC yield range in percent. |
 | `PERFORMANCE_YTD`, `PERFORMANCE_1Y`, `PERFORMANCE_3Y`, `PERFORMANCE_5Y`, `PERFORMANCE_10Y` | `:` | Published NAV return ranges in percent; multi-year performance filters use First Trust's annualized values. |

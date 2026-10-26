@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { deflateRawSync } from 'node:zlib';
 import {
-  applyCatalogPerformance, publishedAsOf, stalestFirst, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
+  applyCatalogPerformance, applySummary, withOlderHistory, publishedAsOf, stalestFirst, buildPages, configureSoftDeadline, main, configureRequestTimeout, pruneStalePages, setApiRoot, writeFileAtomic, catalogOnlyEntry, chartUrl, configureRequestLanes, emptyReturns, fetchWithRetry, firstTrustIsoDate,
   formatFrequencyPlaceholder, fundPasses, historySheetRows, holdingsGuard, historyStartDate, indexEntryFromMeta, mapReturnRow,
   mergeDistributionRows, metricsFromReturns, normalizePreviousRow, normalizeHistoryRange, RETURNS_BASIS, returnsProvenance, pageBasenames, parseAumRange, parseCatalogHtml, parseChart,
   parseDistributionHtml, parseEdgarAtomFilings, parseFundTickerMap, parseHiddenInputs, parseHoldingsHtml, parseNport, nportBelongsToFund, pickEftsCik,
@@ -433,8 +433,18 @@ describe('metrics', () => {
     applyCatalogPerformance(fdn, performance.get('FDN'));
     expect(fthi).toMatchObject({ terValue: 0.75, netExpenseRatio: null, returns: { monthEnd: { yr1: 12.02 }, quarterEnd: null } });
     expect(fdn).toMatchObject({ terValue: null, returns: null });
+    // FT-2: a fund with a contractual fee waiver publishes the NET ratio as terValue and the total (gross) one as terGrossValue
+    const waived = applyCatalogPerformance({ ...fthi, ticker: 'BFEW' }, performance.get('BFEW'));
+    expect(waived).toMatchObject({ terValue: 0.85, netExpenseRatio: 0.85, grossExpenseRatio: 0.95 });
+    expect(catalogOnlyEntry(waived)).toMatchObject({ ter: '0.85%', terValue: 0.85, terGross: '0.95%', terGrossValue: 0.95 });
+    const ffls = applySummary({ ...fthi, ticker: 'FFLX' }, parseSummaryHtml(summaryHtml.replace('0.75%</td> </tr> </table>', '0.75%</td> </tr><tr> <td class="CEFFieldLabel" valign="top">Net Expense Ratio*</td><td class="CEFPagesBody" align="right" valign="top">0.65%</td> </tr> </table>')));
+    expect(ffls).toMatchObject({ terValue: 0.65, grossExpenseRatio: 0.75 });
+    // a meta.json written before the fix kept the gross in expenseRatio.value: the index row reads the published net
+    const kept = indexEntryFromMeta({ ...fthi, ticker: 'FFLX' }, { expenseRatio: { display: '0.75%', value: 0.75, gross: 0.75, net: 0.65 } });
+    expect(kept).toMatchObject({ ter: '0.65%', terValue: 0.65, terGross: '0.75%', terGrossValue: 0.75 });
+    expect(indexEntryFromMeta({ ...fthi }, { expenseRatio: { value: 0.75, gross: 0.75, net: null } })).toMatchObject({ terValue: 0.75, terGrossValue: 0.75 });
     const entry = catalogOnlyEntry(fthi);
-    expect(entry).toMatchObject({ ter: '0.75%', terValue: 0.75, inceptionDate: 'Jan 06 2014', holdings: 0, history: 0 });
+    expect(entry).toMatchObject({ ter: '0.75%', terValue: 0.75, terGross: '0.75%', terGrossValue: 0.75, inceptionDate: 'Jan 06 2014', holdings: 0, history: 0 });
     expect(entry.returns.monthEnd).toMatchObject({ asOfDate: 'Aug 31 2026', ytd: 6.87 });
     expect(entry.metrics).toMatchObject({ tr1y: 12.02, tr3y: 47.38, cagr5y: 10.83, dividendYield: 8.86, secYieldText: '0.66%' });
     expect(Object.keys(entry.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
@@ -541,7 +551,17 @@ describe('metrics 2', () => {
 // End-to-end runs against a mocked network in a temp feed directory
 // ---------------------------------------------------------------------------
 
-type MockOptions = { catalog?: string; failFor?: { summary?: string[]; holdings?: string[]; history?: string[] }; delayMs?: number; failAll?: boolean; onSummary?: () => void };
+type MockOptions = { officialHistory?: Record<string, Array<[string, number, number]>>; catalog?: string; failFor?: { summary?: string[]; holdings?: string[]; history?: string[] }; delayMs?: number; failAll?: boolean; onSummary?: () => void };
+
+/** Official price-history export with the given [ISO date, market price, NAV] rows (dates as Excel serials). */
+function priceXlsxOf(days: Array<[string, number, number]>): Uint8Array {
+  const serial = (iso: string) => (Date.parse(`${iso}T00:00:00Z`) - Date.UTC(1899, 11, 30)) / 86_400_000;
+  const rows = days.map(([date, market, nav], i) => `<row r="${i + 4}"><c r="A${i + 4}"><v>${serial(date)}</v></c><c r="B${i + 4}"><v>${market}</v></c><c r="C${i + 4}"><v>${nav}</v></c><c r="F${i + 4}"><v>1000000</v></c></row>`).join('');
+  return zip({
+    'xl/sharedStrings.xml': '<sst><si><t>Price History</t></si><si><t>Date</t></si><si><t>Market Price</t></si><si><t>Net Asset Value</t></si><si><t>Bid/Ask Midpoint</t></si><si><t>Volume</t></si><si><t>Net Assets</t></si></sst>',
+    'xl/worksheets/sheet1.xml': '<worksheet><sheetData><row r="3"><c r="A3" t="s"><v>1</v></c><c r="B3" t="s"><v>2</v></c><c r="C3" t="s"><v>3</v></c><c r="D3" t="s"><v>4</v></c><c r="E3" t="s"><v>5</v></c><c r="F3" t="s"><v>6</v></c></row>' + rows + '</sheetData></worksheet>',
+  });
+}
 
 function chartJson(close: number): string {
   const timestamps = [1790208000, 1790294400, 1790380800]; // 2026-09-24 .. 2026-09-26
@@ -553,7 +573,7 @@ function installMockNetwork(options: MockOptions = {}): { stats: { peak: number;
   const original = globalThis.fetch;
   const stats = { peak: 0, calls: 0, summaries: [] as string[] };
   let inFlight = 0;
-  globalThis.fetch = (async (input: unknown) => {
+  globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
     const url = String(input);
     const ticker = /Ticker=([A-Z]+)/.exec(url)?.[1] ?? /chart\/([A-Z]+)/.exec(url)?.[1] ?? '';
     stats.calls += 1; inFlight += 1; stats.peak = Math.max(stats.peak, inFlight);
@@ -566,6 +586,9 @@ function installMockNetwork(options: MockOptions = {}): { stats: { peak: number;
       if (url.includes('EtfSummary')) return options.failFor?.summary?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(summaryHtml);
       if (url.includes('EtfHoldings')) return options.failFor?.holdings?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(equityHoldingsHtml);
       if (url.includes('EtfDividHistory')) return new Response(distributionHtml);
+      const official = url.includes('EtfPriceHistory') ? options.officialHistory?.[ticker] : undefined;
+      if (official && init?.method === 'POST') return new Response(new Uint8Array(priceXlsxOf(official)), { headers: { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' } });
+      if (official) return new Response('<input type="hidden" name="__VIEWSTATE" value="v" /><input type="hidden" name="ctl00$ContentPlaceHolder1$PriceHistory$txtMinDate" value="1/6/2014" /><input type="hidden" name="ctl00$ContentPlaceHolder1$PriceHistory$txtMaxDate" value="9/25/2026" />');
       if (url.includes('EtfPriceHistory')) return new Response('no export', { status: 404 });
       if (url.includes('finance.yahoo.com')) return options.failFor?.history?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(chartJson(ticker === 'FDN' ? 291.5 : 23.7));
       return new Response('unexpected', { status: 404 });
@@ -912,6 +935,43 @@ describe('pipeline 2', () => {
     expect(splitRowCells('<td>A<td>B</td><th>C')).toEqual(['A', 'B', 'C']);
   });
 
+});
+
+describe('pipeline 3', () => {
+  test('official NAV history: a shorter export keeps the older published rows, a failed export keeps the fund as published, never Yahoo closes', async () => {
+    await withFeed(async (root) => {
+      const full: Array<[string, number, number]> = [['2026-09-22', 23.5, 23.48], ['2026-09-23', 23.6, 23.58], ['2026-09-24', 23.7, 23.68], ['2026-09-25', 23.74, 23.72]];
+      const dates = () => JSON.parse(readFileSync(`${root}/funds/FTHI/history/001.json`, 'utf8')).rows.map((row: any) => row.Date);
+      let net = installMockNetwork({ officialHistory: { FTHI: full } });
+      try {
+        expect(await main({ ...baseEnv, TICKERS: 'FTHI' })).toMatchObject({ updated: 1, failures: 0 });
+        expect(dates()).toEqual(['2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25']);
+        net.restore();
+        // FT-4: HISTORY_RANGE (or a shorter export window) returns only the last rows: the older published rows stay
+        net = installMockNetwork({ officialHistory: { FTHI: full.slice(2) } });
+        await main({ ...baseEnv, TICKERS: 'FTHI', HISTORY_RANGE: '1y' });
+        expect(dates()).toEqual(['2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25']);
+        const before = snapshotTree(root);
+        net.restore();
+        // FT-3: the export fails while Yahoo answers: the official NAV history is not replaced by market closes, the fund is kept and failed
+        net = installMockNetwork();
+        expect(await main({ ...baseEnv, TICKERS: 'FTHI' })).toMatchObject({ updated: 0, failures: 1 });
+        expect(snapshotTree(root)).toEqual(before);
+        // a fund with nothing official published still gets the Yahoo fallback
+        expect(await main({ ...baseEnv, TICKERS: 'FDN' })).toMatchObject({ updated: 1, failures: 0 });
+        expect(JSON.parse(readFileSync(`${root}/funds/FDN/meta.json`, 'utf8')).history.source).toStartWith('Yahoo Finance');
+      } finally {
+        net.restore();
+      }
+    });
+  });
+
+  test('withOlderHistory keeps only rows older than the fresh window, sorted, and nothing when there is no fresh row', () => {
+    const row = (Date: string, NAV = '1') => ({ Date, NAV });
+    expect(withOlderHistory([row('2026-09-24', '2'), row('2026-09-25', '3')], [row('2026-09-25', 'old'), row('2026-09-22'), row('bad'), row('2026-09-23')]))
+      .toEqual([row('2026-09-22'), row('2026-09-23'), row('2026-09-24', '2'), row('2026-09-25', '3')]);
+    expect(withOlderHistory([], [row('2026-09-22')])).toEqual([]);
+  });
 });
 
 describe('network', () => {
