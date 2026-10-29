@@ -704,6 +704,9 @@ describe('pipeline', () => {
         const fresh = index.funds.find((fund: any) => fund.ticker === 'NEWT');
         expect(fresh.dataFile).toBeNull();
         expect(Object.keys(fresh.metrics)).toContain('ytd');
+        // the 52-week keys are in every row, computed from its history pages (range-52w block)
+        const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
+        for (const fund of index.funds) expect(Object.keys(fund.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
         expect(existsSync(`${root}/funds/NEWT`)).toBe(false);
         const after = snapshotTree(root);
         for (const path of Object.keys(before).filter((name) => name.startsWith('funds/FDN/'))) expect(after[path]).toBe(before[path]);
