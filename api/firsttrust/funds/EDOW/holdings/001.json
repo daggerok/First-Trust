@@ -10,11 +10,20 @@
  ],
  "rows": [
   {
+   "Name": "Amgen Inc.",
+   "Ticker": "AMGN",
+   "Identifier": "031162100",
+   "Weight": "3.77",
+   "Market Value": "12194439.87",
+   "Shares Held": "26989",
+   "Asset Category": "Health Care"
+  },
+  {
    "Name": "Walmart Inc.",
    "Ticker": "WMT",
    "Identifier": "931142103",
-   "Weight": "3.69",
-   "Market Value": "11962983.87",
+   "Weight": "3.67",
+   "Market Value": "11851226.91",
    "Shares Held": "99783",
    "Asset Category": "Consumer Staples"
   },
@@ -22,107 +31,71 @@
    "Name": "The Procter & Gamble Company",
    "Ticker": "PG",
    "Identifier": "742718109",
-   "Weight": "3.67",
-   "Market Value": "11920793.66",
+   "Weight": "3.62",
+   "Market Value": "11716462.58",
    "Shares Held": "74033",
    "Asset Category": "Consumer Staples"
-  },
-  {
-   "Name": "Amgen Inc.",
-   "Ticker": "AMGN",
-   "Identifier": "031162100",
-   "Weight": "3.65",
-   "Market Value": "11855188.14",
-   "Shares Held": "26989",
-   "Asset Category": "Health Care"
-  },
-  {
-   "Name": "Visa Inc. (Class A)",
-   "Ticker": "V",
-   "Identifier": "92826C839",
-   "Weight": "3.61",
-   "Market Value": "11724844.56",
-   "Shares Held": "28743",
-   "Asset Category": "Financials"
   },
   {
    "Name": "Apple Inc.",
    "Ticker": "AAPL",
    "Identifier": "037833100",
-   "Weight": "3.59",
-   "Market Value": "11644614.91",
+   "Weight": "3.56",
+   "Market Value": "11514179.04",
    "Shares Held": "33488",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Chevron Corporation",
-   "Ticker": "CVX",
-   "Identifier": "166764100",
-   "Weight": "3.55",
-   "Market Value": "11518241.9",
-   "Shares Held": "49390",
-   "Asset Category": "Energy"
-  },
-  {
-   "Name": "The Travelers Companies, Inc.",
-   "Ticker": "TRV",
-   "Identifier": "89417E109",
-   "Weight": "3.53",
-   "Market Value": "11464888.08",
-   "Shares Held": "28786",
+   "Name": "Visa Inc. (Class A)",
+   "Ticker": "V",
+   "Identifier": "92826C839",
+   "Weight": "3.56",
+   "Market Value": "11514445.8",
+   "Shares Held": "28743",
    "Asset Category": "Financials"
-  },
-  {
-   "Name": "The Walt Disney Company",
-   "Ticker": "DIS",
-   "Identifier": "254687106",
-   "Weight": "3.52",
-   "Market Value": "11405477.28",
-   "Shares Held": "101364",
-   "Asset Category": "Communication Services"
-  },
-  {
-   "Name": "Honeywell International Inc.",
-   "Ticker": "HON",
-   "Identifier": "438516205",
-   "Weight": "3.51",
-   "Market Value": "11395859.61",
-   "Shares Held": "51530",
-   "Asset Category": "Industrials"
   },
   {
    "Name": "Microsoft Corporation",
    "Ticker": "MSFT",
    "Identifier": "594918104",
-   "Weight": "3.47",
-   "Market Value": "11265950.29",
+   "Weight": "3.53",
+   "Market Value": "11405563.79",
    "Shares Held": "21479",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "UnitedHealth Group Incorporated",
-   "Ticker": "UNH",
-   "Identifier": "91324P102",
-   "Weight": "3.46",
-   "Market Value": "11232405.94",
-   "Shares Held": "26866",
-   "Asset Category": "Health Care"
+   "Name": "The Travelers Companies, Inc.",
+   "Ticker": "TRV",
+   "Identifier": "89417E109",
+   "Weight": "3.51",
+   "Market Value": "11341971.86",
+   "Shares Held": "28786",
+   "Asset Category": "Financials"
   },
   {
-   "Name": "The Coca-Cola Company",
-   "Ticker": "KO",
-   "Identifier": "191216100",
-   "Weight": "3.45",
-   "Market Value": "11182494.78",
-   "Shares Held": "120618",
-   "Asset Category": "Consumer Staples"
+   "Name": "Chevron Corporation",
+   "Ticker": "CVX",
+   "Identifier": "166764100",
+   "Weight": "3.5",
+   "Market Value": "11320188",
+   "Shares Held": "49390",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "Honeywell International Inc.",
+   "Ticker": "HON",
+   "Identifier": "438516205",
+   "Weight": "3.5",
+   "Market Value": "11298467.8",
+   "Shares Held": "51530",
+   "Asset Category": "Industrials"
   },
   {
    "Name": "International Business Machines Corporation",
    "Ticker": "IBM",
    "Identifier": "459200101",
-   "Weight": "3.44",
-   "Market Value": "11159429.16",
+   "Weight": "3.45",
+   "Market Value": "11144465.42",
    "Shares Held": "44011",
    "Asset Category": "Information Technology"
   },
@@ -131,106 +104,124 @@
    "Ticker": "MMM",
    "Identifier": "88579Y101",
    "Weight": "3.43",
-   "Market Value": "11142029.64",
+   "Market Value": "11099635.2",
    "Shares Held": "64234",
    "Asset Category": "Industrials"
   },
   {
-   "Name": "The Sherwin-Williams Company",
-   "Ticker": "SHW",
-   "Identifier": "824348106",
+   "Name": "The Coca-Cola Company",
+   "Ticker": "KO",
+   "Identifier": "191216100",
    "Weight": "3.42",
-   "Market Value": "11100734.04",
-   "Shares Held": "32934",
-   "Asset Category": "Materials"
+   "Market Value": "11064289.14",
+   "Shares Held": "120618",
+   "Asset Category": "Consumer Staples"
+  },
+  {
+   "Name": "The Walt Disney Company",
+   "Ticker": "DIS",
+   "Identifier": "254687106",
+   "Weight": "3.42",
+   "Market Value": "11052730.56",
+   "Shares Held": "101364",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "UnitedHealth Group Incorporated",
+   "Ticker": "UNH",
+   "Identifier": "91324P102",
+   "Weight": "3.38",
+   "Market Value": "10937148.6",
+   "Shares Held": "26866",
+   "Asset Category": "Health Care"
   },
   {
    "Name": "The Home Depot, Inc.",
    "Ticker": "HD",
    "Identifier": "437076102",
-   "Weight": "3.35",
-   "Market Value": "10879017.45",
+   "Weight": "3.34",
+   "Market Value": "10801803.4",
    "Shares Held": "34015",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Salesforce, Inc.",
-   "Ticker": "CRM",
-   "Identifier": "79466L302",
-   "Weight": "3.31",
-   "Market Value": "10750901.07",
-   "Shares Held": "43251",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "NIKE, Inc. (Class B)",
-   "Ticker": "NKE",
-   "Identifier": "654106103",
-   "Weight": "3.25",
-   "Market Value": "10545940.9",
-   "Shares Held": "282733",
    "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Johnson & Johnson",
    "Ticker": "JNJ",
    "Identifier": "478160104",
-   "Weight": "3.22",
-   "Market Value": "10430783.59",
+   "Weight": "3.32",
+   "Market Value": "10716650.56",
    "Shares Held": "39539",
-   "Asset Category": "Health Care"
-  },
-  {
-   "Name": "Merck & Co., Inc.",
-   "Ticker": "MRK",
-   "Identifier": "58933Y105",
-   "Weight": "3.21",
-   "Market Value": "10398281.33",
-   "Shares Held": "71579",
    "Asset Category": "Health Care"
   },
   {
    "Name": "Amazon.com, Inc.",
    "Ticker": "AMZN",
    "Identifier": "023135106",
-   "Weight": "3.2",
-   "Market Value": "10376072",
+   "Weight": "3.3",
+   "Market Value": "10652209.4",
    "Shares Held": "41839",
    "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "McDonald's Corporation",
-   "Ticker": "MCD",
-   "Identifier": "580135101",
-   "Weight": "3.19",
-   "Market Value": "10350843.6",
-   "Shares Held": "41660",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "American Express Company",
-   "Ticker": "AXP",
-   "Identifier": "025816109",
-   "Weight": "3.17",
-   "Market Value": "10278627.52",
-   "Shares Held": "32816",
-   "Asset Category": "Financials"
   },
   {
    "Name": "Cisco Systems, Inc.",
    "Ticker": "CSCO",
    "Identifier": "17275R102",
-   "Weight": "3.17",
-   "Market Value": "10277356.5",
+   "Weight": "3.29",
+   "Market Value": "10643095.29",
    "Shares Held": "96501",
    "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "The Sherwin-Williams Company",
+   "Ticker": "SHW",
+   "Identifier": "824348106",
+   "Weight": "3.27",
+   "Market Value": "10565227.2",
+   "Shares Held": "32934",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "NIKE, Inc. (Class B)",
+   "Ticker": "NKE",
+   "Identifier": "654106103",
+   "Weight": "3.25",
+   "Market Value": "10503530.95",
+   "Shares Held": "282733",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Salesforce, Inc.",
+   "Ticker": "CRM",
+   "Identifier": "79466L302",
+   "Weight": "3.24",
+   "Market Value": "10471499.61",
+   "Shares Held": "43251",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "American Express Company",
+   "Ticker": "AXP",
+   "Identifier": "025816109",
+   "Weight": "3.23",
+   "Market Value": "10433519.04",
+   "Shares Held": "32816",
+   "Asset Category": "Financials"
+  },
+  {
+   "Name": "McDonald's Corporation",
+   "Ticker": "MCD",
+   "Identifier": "580135101",
+   "Weight": "3.23",
+   "Market Value": "10435830",
+   "Shares Held": "41660",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Alphabet Inc. (Class A)",
    "Ticker": "GOOGL",
    "Identifier": "02079K305",
-   "Weight": "3.15",
-   "Market Value": "10226546.77",
+   "Weight": "3.21",
+   "Market Value": "10376011.93",
    "Shares Held": "31937",
    "Asset Category": "Communication Services"
   },
@@ -238,8 +229,8 @@
    "Name": "NVIDIA Corporation",
    "Ticker": "NVDA",
    "Identifier": "67066G104",
-   "Weight": "3.07",
-   "Market Value": "9960054.48",
+   "Weight": "3.15",
+   "Market Value": "10168735.94",
    "Shares Held": "47213",
    "Asset Category": "Information Technology"
   },
@@ -247,26 +238,26 @@
    "Name": "JPMorgan Chase & Co.",
    "Ticker": "JPM",
    "Identifier": "46625H100",
-   "Weight": "3.04",
-   "Market Value": "9871468.18",
+   "Weight": "3.12",
+   "Market Value": "10101300.3",
    "Shares Held": "29771",
    "Asset Category": "Financials"
   },
   {
-   "Name": "The Boeing Company",
-   "Ticker": "BA",
-   "Identifier": "097023105",
-   "Weight": "2.97",
-   "Market Value": "9635609.3",
-   "Shares Held": "51158",
-   "Asset Category": "Industrials"
+   "Name": "Merck & Co., Inc.",
+   "Ticker": "MRK",
+   "Identifier": "58933Y105",
+   "Weight": "3.12",
+   "Market Value": "10087628.47",
+   "Shares Held": "71579",
+   "Asset Category": "Health Care"
   },
   {
    "Name": "The Goldman Sachs Group, Inc.",
    "Ticker": "GS",
    "Identifier": "38141G104",
-   "Weight": "2.77",
-   "Market Value": "8988855.2",
+   "Weight": "2.94",
+   "Market Value": "9496870.05",
    "Shares Held": "10265",
    "Asset Category": "Financials"
   },
@@ -274,20 +265,29 @@
    "Name": "Caterpillar Inc.",
    "Ticker": "CAT",
    "Identifier": "149123101",
-   "Weight": "2.74",
-   "Market Value": "8895276",
+   "Weight": "2.86",
+   "Market Value": "9236844.24",
    "Shares Held": "12948",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "The Boeing Company",
+   "Ticker": "BA",
+   "Identifier": "097023105",
+   "Weight": "2.65",
+   "Market Value": "8550548.12",
+   "Shares Held": "51158",
    "Asset Category": "Industrials"
   },
   {
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "0.16",
-   "Market Value": "533886.24",
-   "Shares Held": "533886",
+   "Weight": "0.17",
+   "Market Value": "554991.48",
+   "Shares Held": "554991",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-10-23"
+ "asOfDate": "2026-10-28"
 }
