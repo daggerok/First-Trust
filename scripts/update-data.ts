@@ -132,7 +132,7 @@ function outputFundLine(index: number, total: number, ticker: string, status: st
     field('sec', outputPercent(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
     field('wp', data.workplaceRaw),
   ].filter(part => part !== '').join(' ');
-  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
+  return `[ ${`${String(index).padStart(width)}/${total}`.padEnd(8)} ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
@@ -824,7 +824,7 @@ async function fetchJson(url: string, label: string, headers: Record<string, str
 }
 
 async function fetchFirstTrustPage(page: 'EtfSummary' | 'EtfHoldings' | 'EtfDividHistory', ticker: string, config: UpdaterConfig, extra = ''): Promise<string> {
-  return fetchText(firstTrustPageUrl(page, ticker, extra), `[product ] ${ticker} ${page}`, firstTrustHeaders(), config);
+  return fetchText(firstTrustPageUrl(page, ticker, extra), `[ product  ] ${ticker} ${page}`, firstTrustHeaders(), config);
 }
 
 // ---------------------------------------------------------------------------
@@ -2122,7 +2122,7 @@ async function writeUpdateState(lastProcessedTicker: string | null): Promise<voi
 /** Official price-history XLSX export: GET the page, then post its ASP.NET form with the selected date range. */
 async function fetchOfficialHistory(ticker: string, config: UpdaterConfig): Promise<PriceDay[]> {
   const url = firstTrustPageUrl('EtfPriceHistory', ticker);
-  const first = await fetchWithRetry(url, `[history ] ${ticker} page`, { headers: firstTrustHeaders() }, config.maxRetries);
+  const first = await fetchWithRetry(url, `[ history  ] ${ticker} page`, { headers: firstTrustHeaders() }, config.maxRetries);
   const cookies = first.headers.getSetCookie().map((cookie) => cookie.split(';')[0]).join('; ');
   const form = parseHiddenInputs(await first.text());
   const prefix = 'ctl00$ContentPlaceHolder1$PriceHistory$';
@@ -2136,7 +2136,7 @@ async function fetchOfficialHistory(ticker: string, config: UpdaterConfig): Prom
   });
   const response = await fetchWithRetry(
     url,
-    `[history ] ${ticker} xlsx`,
+    `[ history  ] ${ticker} xlsx`,
     {
       method: 'POST',
       body: body.toString(),
@@ -2150,7 +2150,7 @@ async function fetchOfficialHistory(ticker: string, config: UpdaterConfig): Prom
 }
 
 async function fetchYahooChart(ticker: string, config: UpdaterConfig): Promise<ParsedChart> {
-  return parseChart(await fetchJson(chartUrl(ticker, config), `[chart   ] ${ticker}`, yahooHeaders(), config));
+  return parseChart(await fetchJson(chartUrl(ticker, config), `[ chart    ] ${ticker}`, yahooHeaders(), config));
 }
 
 /** Documents the N-PORT name path reads at most (newest report period first): First Trust Exchange-Traded Fund VIII files up to 136 series per period. */
@@ -2183,7 +2183,7 @@ async function fetchEdgarHoldings(fund: Fund, published: JsonRecord, config: Upd
     const read = await readNportHoldings(
       { ticker: fund.ticker, cik, seriesId: ref?.seriesId || null, name: fund.name },
       fromNport ? { rows: 0 } : { asOf: publishedAsOf, rows: publishedRows },
-      (url, label) => fetchText(url, `[edgar   ] ${label}`, secHeaders(config), config),
+      (url, label) => fetchText(url, `[ edgar    ] ${label}`, secHeaders(config), config),
       ref ? { cache: secState.reader } : { cache: secState.reader, maxDocuments: NPORT_NAME_PATH_DOCUMENTS },
     );
     if ('problem' in read) {
@@ -2199,7 +2199,7 @@ async function fetchEdgarHoldings(fund: Fund, published: JsonRecord, config: Upd
       outputNote(`[ edgar    ] ${fund.ticker}: N-PORT ${read.filing.repPdDate || 'undated'} is not newer than the published holdings (${publishedAsOf || 'undated'}); not used`);
       return null;
     }
-    const sheet = nportHoldingsSheet(read.filing, nportTickers(read.filing.positions, await loadCompanyNames(config).catch(() => null), await loadUsListings((url, label) => fetchText(url, `[edgar   ] ${label}`, secHeaders(config), config))));
+    const sheet = nportHoldingsSheet(read.filing, nportTickers(read.filing.positions, await loadCompanyNames(config).catch(() => null), await loadUsListings((url, label) => fetchText(url, `[ edgar    ] ${label}`, secHeaders(config), config))));
     return { rows: sheet.rows, asOfDate: read.filing.repPdDate || null, cik, accession: read.candidate.accession, url: read.url };
   } catch (error) {
     outputNote(`[ edgar    ] ${fund.ticker}: ${errorMessage(error)}`);
@@ -2480,7 +2480,7 @@ export function resetSecState(): void {
 /** SEC's ticker -> registrant CIK + series id table, loaded once per run (a failed load is asked again by the next fund). */
 function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSeriesRef>> {
   if (!secState.funds) {
-    const loading = fetchJson(SEC_FUND_TICKERS_URL, '[edgar   ] fund ticker table', secHeaders(config), config).then((payload) => parseSecFundTickers(payload));
+    const loading = fetchJson(SEC_FUND_TICKERS_URL, '[ edgar    ] fund ticker table', secHeaders(config), config).then((payload) => parseSecFundTickers(payload));
     secState.funds = loading;
     loading.catch(() => { if (secState.funds === loading) secState.funds = null; });
   }
@@ -2490,7 +2490,7 @@ function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSe
 /** SEC's company name -> ticker table for the N-PORT rows, loaded once per run. */
 function loadCompanyNames(config: UpdaterConfig): Promise<Map<string, string>> {
   if (!secState.names) {
-    const loading = fetchJson(SEC_COMPANY_TICKERS_URL, '[edgar   ] company ticker table', secHeaders(config), config).then((payload) => parseSecCompanyNames(payload));
+    const loading = fetchJson(SEC_COMPANY_TICKERS_URL, '[ edgar    ] company ticker table', secHeaders(config), config).then((payload) => parseSecCompanyNames(payload));
     secState.names = loading;
     loading.catch(() => { if (secState.names === loading) secState.names = null; });
   }
@@ -2512,7 +2512,7 @@ async function resolveRegistrantCik(fund: CatalogFund, config: UpdaterConfig): P
   let cik: string | null = fund.trustCik || null;
   if (!cik) {
     try {
-      const payload = await fetchJson(eftsSearchUrl(fund.ticker), `[edgar   ] search ${fund.ticker}`, secHeaders(config), config);
+      const payload = await fetchJson(eftsSearchUrl(fund.ticker), `[ edgar    ] search ${fund.ticker}`, secHeaders(config), config);
       cik = pickEftsCik(payload, fund.name);
     } catch (error) {
       outputNote(`[ edgar    ] search ${fund.ticker}: ${errorMessage(error)}`);
@@ -2552,7 +2552,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   let catalogSource = 'previous api/firsttrust/index.json';
   let live = false;
   try {
-    catalog = parseCatalogHtml(await fetchText(FIRSTTRUST_ETF_LIST, '[catalog ] ETF list', firstTrustHeaders(), config));
+    catalog = parseCatalogHtml(await fetchText(FIRSTTRUST_ETF_LIST, '[ catalog  ] ETF list', firstTrustHeaders(), config));
     if (!catalog.length) throw new Error('official ETF list contained no funds');
     live = true;
     catalogSource = 'ftportfolios.com official ETF list';
@@ -2561,7 +2561,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   }
   if (live) {
     try {
-      const performance = parsePerformanceNavHtml(await fetchText(FIRSTTRUST_PERFORMANCE_LIST, '[catalog ] NAV performance view', firstTrustHeaders(), config));
+      const performance = parsePerformanceNavHtml(await fetchText(FIRSTTRUST_PERFORMANCE_LIST, '[ catalog  ] NAV performance view', firstTrustHeaders(), config));
       for (const fund of catalog) applyCatalogPerformance(fund, performance.get(fund.ticker));
       catalogSource += ` + NAV performance view (${performance.size} funds)`;
     } catch (error) {
