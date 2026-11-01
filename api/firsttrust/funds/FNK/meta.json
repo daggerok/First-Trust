@@ -35,39 +35,39 @@
   "asOfDate": "2025-12-01"
  },
  "nav": {
-  "display": "$62.71",
-  "value": 62.71,
-  "asOfDate": "Oct 28 2026"
+  "display": "$64.13",
+  "value": 64.13,
+  "asOfDate": "Oct 30 2026"
  },
  "marketPrice": {
-  "display": "$62.67",
-  "value": 62.67,
-  "asOfDate": "Oct 28 2026"
+  "display": "$64.10",
+  "value": 64.1,
+  "asOfDate": "Oct 30 2026"
  },
  "premiumDiscount": {
-  "display": "—",
-  "value": null,
+  "display": "0.01%",
+  "value": 0.01,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$235.15M",
-  "value": 235148356,
-  "asOfDate": "Oct 28 2026",
+  "display": "$240.51M",
+  "value": 240505896,
+  "asOfDate": "Oct 30 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
   "outstanding": 3750002
  },
  "yields": {
-  "dividendYield": 1.66,
-  "dividendYieldText": "1.66%",
+  "dividendYield": 1.53,
+  "dividendYieldText": "1.53%",
   "dividendYieldBasis": "official-trailing-12m",
-  "dividendYieldKind": "First Trust published 12-month distribution rate as of Sep 30 2026",
+  "dividendYieldKind": "First Trust published 12-month distribution rate as of Oct 30 2026",
   "distributionRate": null,
   "distributionPerShare": null,
-  "secYield": 1.71,
-  "secYieldText": "1.71%",
-  "secYieldKind": "First Trust published 30-day SEC yield as of Sep 30 2026",
+  "secYield": 1.69,
+  "secYieldText": "1.69%",
+  "secYieldKind": "First Trust published 30-day SEC yield as of Oct 30 2026",
   "unsubsidizedSecYield": null
  },
  "returns": {
@@ -527,7 +527,7 @@
   ],
   "pageSize": 250,
   "totalRows": 227,
-  "asOfDate": "2026-10-28",
+  "asOfDate": "2026-10-30",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -538,14 +538,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3904,
-  "asOfDate": "2026-10-28",
+  "totalRows": 3906,
+  "asOfDate": "2026-10-30",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 227,
- "historyCount": 3904,
+ "historyCount": 3906,
  "distributionCount": 59,
- "netAssets": 235148356,
- "dividendYield": 1.66,
- "secYield": 1.71
+ "netAssets": 240505896,
+ "dividendYield": 1.53,
+ "secYield": 1.69
 }

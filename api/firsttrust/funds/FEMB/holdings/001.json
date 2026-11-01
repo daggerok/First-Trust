@@ -10,21 +10,30 @@
  ],
  "rows": [
   {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "6.28",
+   "Market Value": "22885981.39",
+   "Shares Held": "22885981",
+   "Asset Category": "-"
+  },
+  {
    "Name": "THAILAND GOVERNMENT BOND N/C, 3.39%, due 06/17/2037",
    "Ticker": "BPVGVM0",
    "Identifier": "-",
-   "Weight": "4.99",
-   "Market Value": "18272481.66",
+   "Weight": "5.06",
+   "Market Value": "18445457.53",
    "Shares Held": "560237000",
    "Asset Category": "-"
   },
   {
-   "Name": "US Dollar",
+   "Name": "INDIA GOVERNMENT BOND N/C, 7.18%, due 07/24/2037",
    "Ticker": "-",
-   "Identifier": "$USD",
-   "Weight": "4.85",
-   "Market Value": "17781514.46",
-   "Shares Held": "17781514",
+   "Identifier": "Y2R3MBYE9",
+   "Weight": "4.54",
+   "Market Value": "16535251.73",
+   "Shares Held": "1599560000",
    "Asset Category": "-"
   },
   {
@@ -32,25 +41,16 @@
    "Ticker": "BQXQSG8",
    "Identifier": "-",
    "Weight": "4.51",
-   "Market Value": "16526829.32",
+   "Market Value": "16429524.11",
    "Shares Held": "3322500",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "INDIA GOVERNMENT BOND N/C, 7.18%, due 07/24/2037",
-   "Ticker": "-",
-   "Identifier": "Y2R3MBYE9",
-   "Weight": "4.46",
-   "Market Value": "16356492.55",
-   "Shares Held": "1599560000",
    "Asset Category": "-"
   },
   {
    "Name": "MALAYSIA GOVERNMENT N/C, 2.632%, due 04/15/2031",
    "Ticker": "BMD9C89",
    "Identifier": "-",
-   "Weight": "4.18",
-   "Market Value": "15319728.89",
+   "Weight": "4.22",
+   "Market Value": "15395529.14",
    "Shares Held": "65299000",
    "Asset Category": "-"
   },
@@ -58,8 +58,8 @@
    "Name": "INDONESIA GOVERNMENT N/C, 8.375%, due 03/15/2034",
    "Ticker": "-",
    "Identifier": "Y39814JF9",
-   "Weight": "3.59",
-   "Market Value": "13167663.34",
+   "Weight": "3.6",
+   "Market Value": "13119505",
    "Shares Held": "228156000000",
    "Asset Category": "-"
   },
@@ -67,8 +67,8 @@
    "Name": "BONOS DE TESORERIA N/C, 6.90%, due 08/12/2037",
    "Ticker": "-",
    "Identifier": "P87324BF8",
-   "Weight": "3.5",
-   "Market Value": "12815842.34",
+   "Weight": "3.52",
+   "Market Value": "12814966.23",
    "Shares Held": "45122000",
    "Asset Category": "-"
   },
@@ -76,8 +76,8 @@
    "Name": "INDONESIA GOVERNMENT N/C, 9%, due 03/15/2029",
    "Ticker": "BDZCRY4",
    "Identifier": "-",
-   "Weight": "3.44",
-   "Market Value": "12604553.95",
+   "Weight": "3.46",
+   "Market Value": "12630243.72",
    "Shares Held": "220921000000",
    "Asset Category": "-"
   },
@@ -85,45 +85,45 @@
    "Name": "INDONESIA GOVERNMENT N/C, 8.25%, due 05/15/2036",
    "Ticker": "BYPGH98",
    "Identifier": "-",
-   "Weight": "3.43",
-   "Market Value": "12581314.71",
+   "Weight": "3.44",
+   "Market Value": "12535925.29",
    "Shares Held": "217623000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "POLAND GOVERNMENT BOND N/C, 6%, due 10/25/2033",
-   "Ticker": "BPWCC24",
-   "Identifier": "-",
-   "Weight": "3.39",
-   "Market Value": "12439503.21",
-   "Shares Held": "49427000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "TITULOS DE TESORERIA N/C, 7%, due 06/30/2032",
-   "Ticker": "BD446H7",
-   "Identifier": "-",
-   "Weight": "3.02",
-   "Market Value": "11075429.12",
-   "Shares Held": "45440000000",
    "Asset Category": "-"
   },
   {
    "Name": "INDONESIA GOVERNMENT N/C, 7%, due 09/15/2030",
    "Ticker": "BK5HHR1",
    "Identifier": "-",
-   "Weight": "2.99",
-   "Market Value": "10955548.77",
+   "Weight": "3.01",
+   "Market Value": "10961279.41",
    "Shares Held": "201489000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "TITULOS DE TESORERIA N/C, 7%, due 06/30/2032",
+   "Ticker": "BD446H7",
+   "Identifier": "-",
+   "Weight": "3",
+   "Market Value": "10927377.17",
+   "Shares Held": "45440000000",
    "Asset Category": "-"
   },
   {
    "Name": "REPUBLIC OF SOUTH AFRICA N/C, 8.875%, due 02/28/2035",
    "Ticker": "BYY9RY3",
    "Identifier": "-",
-   "Weight": "2.91",
-   "Market Value": "10648775.07",
+   "Weight": "2.9",
+   "Market Value": "10563972.01",
    "Shares Held": "173499000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "POLAND GOVERNMENT BOND N/C, 6%, due 10/25/2033",
+   "Ticker": "BPWCC24",
+   "Identifier": "-",
+   "Weight": "2.78",
+   "Market Value": "10120272.25",
+   "Shares Held": "39927000",
    "Asset Category": "-"
   },
   {
@@ -131,7 +131,7 @@
    "Ticker": "BP4JP79",
    "Identifier": "-",
    "Weight": "2.7",
-   "Market Value": "9903779.55",
+   "Market Value": "9837749.64",
    "Shares Held": "165215000",
    "Asset Category": "-"
   },
@@ -139,35 +139,35 @@
    "Name": "INTL BK RECON & DEVELOP N/C, 6.71%, due 01/21/2035",
    "Ticker": "-",
    "Identifier": "U4586H2G7",
-   "Weight": "2.63",
-   "Market Value": "9628028.95",
+   "Weight": "2.65",
+   "Market Value": "9660047",
    "Shares Held": "1032500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "NOTA DO TESOURO NACIONAL N/C, 10%, due 01/01/2035",
-   "Ticker": "-",
-   "Identifier": "P8T60NQG9",
-   "Weight": "2.45",
-   "Market Value": "8964001.13",
-   "Shares Held": "62000",
    "Asset Category": "-"
   },
   {
    "Name": "MEX BONOS DESARR FIX RT N/C, 8.50%, due 11/18/2038",
    "Ticker": "-",
    "Identifier": "P6625CAM0",
-   "Weight": "2.43",
-   "Market Value": "8890579.93",
+   "Weight": "2.42",
+   "Market Value": "8826443.31",
    "Shares Held": "179990000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NOTA DO TESOURO NACIONAL N/C, 10%, due 01/01/2035",
+   "Ticker": "-",
+   "Identifier": "P8T60NQG9",
+   "Weight": "2.39",
+   "Market Value": "8713560.83",
+   "Shares Held": "62000",
    "Asset Category": "-"
   },
   {
    "Name": "INTER-AMERICAN DEVEL BK N/C, 7.35%, due 10/06/2030",
    "Ticker": "-",
    "Identifier": "U4582NMK7",
-   "Weight": "2.19",
-   "Market Value": "8016374.25",
+   "Weight": "2.21",
+   "Market Value": "8043684.32",
    "Shares Held": "797000000",
    "Asset Category": "-"
   },
@@ -175,18 +175,9 @@
    "Name": "POLAND GOVERNMENT BOND N/C, 5.25%, due 04/25/2036",
    "Ticker": "BVV7SD5",
    "Identifier": "-",
-   "Weight": "2.17",
-   "Market Value": "7962318.12",
+   "Weight": "2.2",
+   "Market Value": "8020721.95",
    "Shares Held": "34199000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "NOTA DO TESOURO NACIONAL N/C, 10%, due 01/01/2031",
-   "Ticker": "BK6FNL0",
-   "Identifier": "-",
-   "Weight": "2.08",
-   "Market Value": "7627874.73",
-   "Shares Held": "47700",
    "Asset Category": "-"
   },
   {
@@ -194,7 +185,7 @@
    "Ticker": "BPXR8C0",
    "Identifier": "-",
    "Weight": "2.08",
-   "Market Value": "7607096.84",
+   "Market Value": "7574093.73",
    "Shares Held": "131280000",
    "Asset Category": "-"
   },
@@ -202,17 +193,26 @@
    "Name": "BONOS TESORERIA PESOS N/C, 4.70%, due 09/01/2030",
    "Ticker": "BG7P9X5",
    "Identifier": "-",
-   "Weight": "2.03",
-   "Market Value": "7444889.02",
+   "Weight": "2.04",
+   "Market Value": "7428528.37",
    "Shares Held": "7630000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NOTA DO TESOURO NACIONAL N/C, 10%, due 01/01/2031",
+   "Ticker": "BK6FNL0",
+   "Identifier": "-",
+   "Weight": "2.04",
+   "Market Value": "7433404.48",
+   "Shares Held": "47700",
    "Asset Category": "-"
   },
   {
    "Name": "HUNGARY GOVERNMENT BOND N/C, 7%, due 10/24/2035",
    "Ticker": "-",
    "Identifier": "X51627P88",
-   "Weight": "1.96",
-   "Market Value": "7190780.31",
+   "Weight": "1.98",
+   "Market Value": "7236243.1",
    "Shares Held": "2153800000",
    "Asset Category": "-"
   },
@@ -220,8 +220,8 @@
    "Name": "NOTA DO TESOURO NACIONAL N/C, 10%, due 01/01/2029",
    "Ticker": "BF4LY56",
    "Identifier": "-",
-   "Weight": "1.89",
-   "Market Value": "6943849.89",
+   "Weight": "1.86",
+   "Market Value": "6798262.08",
    "Shares Held": "40300",
    "Asset Category": "-"
   },
@@ -229,44 +229,53 @@
    "Name": "MALAYSIA GOVERNMENT N/C, 4.642%, due 11/07/2033",
    "Ticker": "BF16186",
    "Identifier": "-",
-   "Weight": "1.83",
-   "Market Value": "6708413.95",
+   "Weight": "1.85",
+   "Market Value": "6756380.95",
    "Shares Held": "26196000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "NOTA DO TESOURO NACIONAL N/C, 10%, due 01/01/2033",
-   "Ticker": "BNT8674",
-   "Identifier": "-",
-   "Weight": "1.77",
-   "Market Value": "6481888.31",
-   "Shares Held": "43000",
    "Asset Category": "-"
   },
   {
    "Name": "MALAYSIA GOVERNMENT N/C, 4.498%, due 04/15/2030",
    "Ticker": "-",
    "Identifier": "Y557773V9",
-   "Weight": "1.72",
-   "Market Value": "6286691.76",
+   "Weight": "1.73",
+   "Market Value": "6324999.26",
    "Shares Held": "24897000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "NOTA DO TESOURO NACIONAL N/C, 10%, due 01/01/2033",
+   "Ticker": "BNT8674",
+   "Identifier": "-",
+   "Weight": "1.73",
+   "Market Value": "6304973.93",
+   "Shares Held": "43000",
    "Asset Category": "-"
   },
   {
    "Name": "ROMANIA GOVERNMENT BOND N/C, 6.70%, due 02/25/2032",
    "Ticker": "BMCN431",
    "Identifier": "-",
-   "Weight": "1.7",
-   "Market Value": "6223980.73",
+   "Weight": "1.71",
+   "Market Value": "6244043.96",
    "Shares Held": "30115000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Zloty",
+   "Ticker": "-",
+   "Identifier": "$PLN",
+   "Weight": "1.51",
+   "Market Value": "5503250.31",
+   "Shares Held": "21715826",
    "Asset Category": "-"
   },
   {
    "Name": "ROMANIA GOVERNMENT BOND N/C, 8.75%, due 10/30/2028",
    "Ticker": "BQQ9K35",
    "Identifier": "-",
-   "Weight": "1.47",
-   "Market Value": "5379323.23",
+   "Weight": "1.48",
+   "Market Value": "5389946.28",
    "Shares Held": "24780000",
    "Asset Category": "-"
   },
@@ -274,8 +283,8 @@
    "Name": "MEX BONOS DESARR FIX RT N/C, 7.75%, due 05/29/2031",
    "Ticker": "-",
    "Identifier": "P9767HEK1",
-   "Weight": "1.39",
-   "Market Value": "5078144.18",
+   "Weight": "1.38",
+   "Market Value": "5046362.13",
    "Shares Held": "973400",
    "Asset Category": "-"
   },
@@ -284,7 +293,7 @@
    "Ticker": "BM9HZJ9",
    "Identifier": "-",
    "Weight": "1.31",
-   "Market Value": "4783934.26",
+   "Market Value": "4785791.17",
    "Shares Held": "103280000",
    "Asset Category": "-"
   },
@@ -292,35 +301,17 @@
    "Name": "REPUBLIC OF PHILIPPINES N/C, 6.25%, due 01/14/2036",
    "Ticker": "-",
    "Identifier": "718286BM8",
-   "Weight": "1.27",
-   "Market Value": "4662375.86",
+   "Weight": "1.29",
+   "Market Value": "4688842.09",
    "Shares Held": "331000000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "THAILAND GOVERNMENT BOND N/C, 3.35%, due 06/17/2033",
-   "Ticker": "BLFGTJ1",
-   "Identifier": "-",
-   "Weight": "1.17",
-   "Market Value": "4280842.03",
-   "Shares Held": "132950000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Indian Rupee",
-   "Ticker": "-",
-   "Identifier": "$INR",
-   "Weight": "1.12",
-   "Market Value": "4101997.6",
-   "Shares Held": "390633231",
    "Asset Category": "-"
   },
   {
    "Name": "MALAYSIA GOVERNMENT N/C, 3.885%, due 08/15/2029",
    "Ticker": "BDVLNF8",
    "Identifier": "-",
-   "Weight": "1.09",
-   "Market Value": "3975884.37",
+   "Weight": "1.1",
+   "Market Value": "3999403.69",
    "Shares Held": "16040000",
    "Asset Category": "-"
   },
@@ -328,8 +319,8 @@
    "Name": "CZECH REPUBLIC N/C, 3.50%, due 05/30/2035",
    "Ticker": "BMYRRT8",
    "Identifier": "-",
-   "Weight": "0.9",
-   "Market Value": "3297753.93",
+   "Weight": "0.91",
+   "Market Value": "3304835.57",
    "Shares Held": "82050000",
    "Asset Category": "-"
   },
@@ -337,8 +328,8 @@
    "Name": "NOTA DO TESOURO NACIONAL N/C, 10%, due 01/01/2037",
    "Ticker": "-",
    "Identifier": "P8T60NWJ6",
-   "Weight": "0.88",
-   "Market Value": "3217520.25",
+   "Weight": "0.86",
+   "Market Value": "3124168.3",
    "Shares Held": "23000",
    "Asset Category": "-"
   },
@@ -346,26 +337,17 @@
    "Name": "TURKIYE GOVERNMENT BOND N/C, 26.20%, due 10/05/2033",
    "Ticker": "-",
    "Identifier": "M8T85T8U9",
-   "Weight": "0.85",
-   "Market Value": "3117390",
+   "Weight": "0.83",
+   "Market Value": "3017754.27",
    "Shares Held": "187150000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Zloty",
-   "Ticker": "-",
-   "Identifier": "$PLN",
-   "Weight": "0.84",
-   "Market Value": "3077575.1",
-   "Shares Held": "12143188",
    "Asset Category": "-"
   },
   {
    "Name": "TITULOS DE TESORERIA N/C, 9.25%, due 05/28/2042",
    "Ticker": "BNGJFM8",
    "Identifier": "-",
-   "Weight": "0.82",
-   "Market Value": "3004392.85",
+   "Weight": "0.81",
+   "Market Value": "2967909.62",
    "Shares Held": "12650000000",
    "Asset Category": "-"
   },
@@ -373,8 +355,8 @@
    "Name": "TITULOS DE TESORERIA N/C, 7.25%, due 10/18/2034",
    "Ticker": "BHPGGV4",
    "Identifier": "-",
-   "Weight": "0.81",
-   "Market Value": "2971901.05",
+   "Weight": "0.8",
+   "Market Value": "2929815.35",
    "Shares Held": "12938000000",
    "Asset Category": "-"
   },
@@ -382,8 +364,8 @@
    "Name": "HUNGARY GOVERNMENT BOND N/C, 6.75%, due 10/22/2028",
    "Ticker": "-",
    "Identifier": "X9379QRH5",
-   "Weight": "0.6",
-   "Market Value": "2205465.98",
+   "Weight": "0.61",
+   "Market Value": "2212157.4",
    "Shares Held": "710540000",
    "Asset Category": "-"
   },
@@ -392,7 +374,7 @@
    "Ticker": "BP4DN55",
    "Identifier": "-",
    "Weight": "0.52",
-   "Market Value": "1907119.46",
+   "Market Value": "1903551.76",
    "Shares Held": "186000000",
    "Asset Category": "-"
   },
@@ -401,7 +383,7 @@
    "Ticker": "-",
    "Identifier": "M8T85VCB1",
    "Weight": "0.47",
-   "Market Value": "1725973.92",
+   "Market Value": "1727374.42",
    "Shares Held": "93000000",
    "Asset Category": "-"
   },
@@ -410,7 +392,7 @@
    "Ticker": "BNLYQW5",
    "Identifier": "-",
    "Weight": "0.45",
-   "Market Value": "1640642.14",
+   "Market Value": "1648034.74",
    "Shares Held": "164200000",
    "Asset Category": "-"
   },
@@ -419,7 +401,7 @@
    "Ticker": "-",
    "Identifier": "U4582NMH4",
    "Weight": "0.45",
-   "Market Value": "1644289.15",
+   "Market Value": "1647247.78",
    "Shares Held": "170000000",
    "Asset Category": "-"
   },
@@ -428,7 +410,7 @@
    "Ticker": "BMFY8K6",
    "Identifier": "-",
    "Weight": "0.44",
-   "Market Value": "1605272.7",
+   "Market Value": "1606335.66",
    "Shares Held": "56910000",
    "Asset Category": "-"
   },
@@ -437,8 +419,17 @@
    "Ticker": "BV3PLM7",
    "Identifier": "-",
    "Weight": "0.43",
-   "Market Value": "1584867.38",
+   "Market Value": "1568724.43",
    "Shares Held": "25526666",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "ROMANIA GOVERNMENT BOND N/C, 4.75%, due 10/11/2034",
+   "Ticker": "BLKQJX0",
+   "Identifier": "-",
+   "Weight": "0.43",
+   "Market Value": "1553561.85",
+   "Shares Held": "8600000",
    "Asset Category": "-"
   },
   {
@@ -446,17 +437,8 @@
    "Ticker": "BV3PLJ4",
    "Identifier": "-",
    "Weight": "0.42",
-   "Market Value": "1544270.17",
+   "Market Value": "1533578.59",
    "Shares Held": "25526667",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "ROMANIA GOVERNMENT BOND N/C, 4.75%, due 10/11/2034",
-   "Ticker": "BLKQJX0",
-   "Identifier": "-",
-   "Weight": "0.42",
-   "Market Value": "1550552.1",
-   "Shares Held": "8600000",
    "Asset Category": "-"
   },
   {
@@ -464,7 +446,7 @@
    "Ticker": "BK8T4L7",
    "Identifier": "-",
    "Weight": "0.32",
-   "Market Value": "1189846.11",
+   "Market Value": "1177549.72",
    "Shares Held": "100000000",
    "Asset Category": "-"
   },
@@ -473,7 +455,7 @@
    "Ticker": "BDRTCZ9",
    "Identifier": "-",
    "Weight": "0.32",
-   "Market Value": "1180699.34",
+   "Market Value": "1171746.34",
    "Shares Held": "62500000",
    "Asset Category": "-"
   },
@@ -482,7 +464,7 @@
    "Ticker": "BZ8VHW0",
    "Identifier": "-",
    "Weight": "0.29",
-   "Market Value": "1051483.31",
+   "Market Value": "1046201.14",
    "Shares Held": "1105000000",
    "Asset Category": "-"
   },
@@ -491,7 +473,7 @@
    "Ticker": "BMXCSY6",
    "Identifier": "-",
    "Weight": "0.29",
-   "Market Value": "1052430.61",
+   "Market Value": "1049133.4",
    "Shares Held": "1035000000",
    "Asset Category": "-"
   },
@@ -500,7 +482,7 @@
    "Ticker": "BYQJ0V9",
    "Identifier": "-",
    "Weight": "0.23",
-   "Market Value": "829053.95",
+   "Market Value": "831631.63",
    "Shares Held": "3186000",
    "Asset Category": "-"
   },
@@ -509,7 +491,7 @@
    "Ticker": "-",
    "Identifier": "U4586HVM2",
    "Weight": "0.17",
-   "Market Value": "621603.24",
+   "Market Value": "623354.79",
    "Shares Held": "62000000",
    "Asset Category": "-"
   },
@@ -518,7 +500,7 @@
    "Ticker": "BMWJJP6",
    "Identifier": "-",
    "Weight": "0.16",
-   "Market Value": "595688.26",
+   "Market Value": "591391.95",
    "Shares Held": "1850000",
    "Asset Category": "-"
   },
@@ -527,7 +509,7 @@
    "Ticker": "-",
    "Identifier": "P87324BH4",
    "Weight": "0.12",
-   "Market Value": "446173.14",
+   "Market Value": "443714.11",
    "Shares Held": "1400000",
    "Asset Category": "-"
   },
@@ -536,17 +518,26 @@
    "Ticker": "BP4X3Y4",
    "Identifier": "-",
    "Weight": "0.07",
-   "Market Value": "269341.38",
+   "Market Value": "269807.46",
    "Shares Held": "1016000",
    "Asset Category": "-"
   },
   {
-   "Name": "ISRAEL FIXED BOND N/C, 6.25%, due 10/30/2026",
+   "Name": "New Israeli Shekel",
    "Ticker": "-",
-   "Identifier": "M8489CJQ6",
+   "Identifier": "$ILS",
    "Weight": "0.04",
-   "Market Value": "160207.29",
+   "Market Value": "159327",
    "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Czech Koruna",
+   "Ticker": "-",
+   "Identifier": "$CZK",
+   "Weight": "0.02",
+   "Market Value": "54772.03",
+   "Shares Held": "1194956",
    "Asset Category": "-"
   },
   {
@@ -554,17 +545,8 @@
    "Ticker": "-",
    "Identifier": "$PEN",
    "Weight": "0.02",
-   "Market Value": "80626.29",
+   "Market Value": "80258.99",
    "Shares Held": "278362",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Czech Koruna",
-   "Ticker": "-",
-   "Identifier": "$CZK",
-   "Weight": "0.01",
-   "Market Value": "54738.91",
-   "Shares Held": "1194956",
    "Asset Category": "-"
   },
   {
@@ -572,7 +554,7 @@
    "Ticker": "-",
    "Identifier": "$COP",
    "Weight": "0",
-   "Market Value": "139.29",
+   "Market Value": "137.96",
    "Shares Held": "440708",
    "Asset Category": "-"
   },
@@ -586,23 +568,23 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Mexican Peso",
+   "Name": "Indian Rupee",
    "Ticker": "-",
-   "Identifier": "$MXN",
-   "Weight": "-0.49",
-   "Market Value": "-1788636.02",
-   "Shares Held": "-33332484",
+   "Identifier": "$INR",
+   "Weight": "0",
+   "Market Value": "14627.26",
+   "Shares Held": "1388931",
    "Asset Category": "-"
   },
   {
    "Name": "Thai Baht",
    "Ticker": "-",
    "Identifier": "$THB",
-   "Weight": "-0.57",
-   "Market Value": "-2090486.27",
-   "Shares Held": "-70455659",
+   "Weight": "-0.46",
+   "Market Value": "-1684061.02",
+   "Shares Held": "-56882529",
    "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-10-28"
+ "asOfDate": "2026-10-30"
 }

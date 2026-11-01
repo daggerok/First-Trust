@@ -13,8 +13,8 @@
    "Name": "Amazon.com, Inc.",
    "Ticker": "AMZN",
    "Identifier": "023135106",
-   "Weight": "10.27",
-   "Market Value": "1007706.8",
+   "Weight": "10.24",
+   "Market Value": "951305.3",
    "Shares Held": "3958",
    "Asset Category": "Consumer Discretionary"
   },
@@ -22,8 +22,8 @@
    "Name": "Meta Platforms, Inc. (Class A)",
    "Ticker": "META",
    "Identifier": "30303M102",
-   "Weight": "9.54",
-   "Market Value": "935884.72",
+   "Weight": "10.12",
+   "Market Value": "939704.72",
    "Shares Held": "1528",
    "Asset Category": "Communication Services"
   },
@@ -31,27 +31,27 @@
    "Name": "Cisco Systems, Inc.",
    "Ticker": "CSCO",
    "Identifier": "17275R102",
-   "Weight": "8.93",
-   "Market Value": "876584.92",
+   "Weight": "8.94",
+   "Market Value": "830645.48",
    "Shares Held": "7948",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Alphabet Inc. (Class A)",
-   "Ticker": "GOOGL",
-   "Identifier": "02079K305",
-   "Weight": "5.54",
-   "Market Value": "543865.86",
-   "Shares Held": "1674",
-   "Asset Category": "Communication Services"
   },
   {
    "Name": "Netflix, Inc.",
    "Ticker": "NFLX",
    "Identifier": "64110L106",
-   "Weight": "5.22",
-   "Market Value": "512595.31",
+   "Weight": "5.53",
+   "Market Value": "513339.52",
    "Shares Held": "8269",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Alphabet Inc. (Class A)",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K305",
+   "Weight": "5.04",
+   "Market Value": "468452.16",
+   "Shares Held": "1674",
    "Asset Category": "Communication Services"
   },
   {
@@ -59,34 +59,43 @@
    "Ticker": "CRM",
    "Identifier": "79466L302",
    "Weight": "4.54",
-   "Market Value": "445724.51",
+   "Market Value": "421901.97",
    "Shares Held": "1841",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Alphabet Inc. (Class C)",
-   "Ticker": "GOOG",
-   "Identifier": "02079K107",
-   "Weight": "4.45",
-   "Market Value": "436482.84",
-   "Shares Held": "1356",
-   "Asset Category": "Communication Services"
   },
   {
    "Name": "Arista Networks, Inc.",
    "Ticker": "ANET",
    "Identifier": "040413205",
-   "Weight": "4.43",
-   "Market Value": "435057.6",
+   "Weight": "4.24",
+   "Market Value": "393443.8",
    "Shares Held": "2330",
    "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Booking Holdings Inc.",
+   "Ticker": "BKNG",
+   "Identifier": "09857L108",
+   "Weight": "4.09",
+   "Market Value": "379657.19",
+   "Shares Held": "2563",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Alphabet Inc. (Class C)",
+   "Ticker": "GOOG",
+   "Identifier": "02079K107",
+   "Weight": "4.06",
+   "Market Value": "377266.32",
+   "Shares Held": "1356",
+   "Asset Category": "Communication Services"
   },
   {
    "Name": "Oracle Corporation",
    "Ticker": "ORCL",
    "Identifier": "68389X105",
-   "Weight": "4.1",
-   "Market Value": "401965.74",
+   "Weight": "3.91",
+   "Market Value": "363393.27",
    "Shares Held": "2781",
    "Asset Category": "Information Technology"
   },
@@ -94,26 +103,17 @@
    "Name": "Snowflake Inc. (Class A)",
    "Ticker": "SNOW",
    "Identifier": "833445109",
-   "Weight": "4.09",
-   "Market Value": "401433.71",
+   "Weight": "3.89",
+   "Market Value": "361480.48",
    "Shares Held": "1181",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Booking Holdings Inc.",
-   "Ticker": "BKNG",
-   "Identifier": "09857L108",
-   "Weight": "3.86",
-   "Market Value": "379170.22",
-   "Shares Held": "2563",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Cloudflare, Inc. (Class A)",
    "Ticker": "NET",
    "Identifier": "18915M107",
-   "Weight": "3.56",
-   "Market Value": "349317.12",
+   "Weight": "3.31",
+   "Market Value": "307647.2",
    "Shares Held": "1096",
    "Asset Category": "Information Technology"
   },
@@ -121,8 +121,8 @@
    "Name": "Datadog, Inc. (Class A)",
    "Ticker": "DDOG",
    "Identifier": "23804L103",
-   "Weight": "3.25",
-   "Market Value": "319057.86",
+   "Weight": "2.9",
+   "Market Value": "269619.42",
    "Shares Held": "1146",
    "Asset Category": "Information Technology"
   },
@@ -130,8 +130,8 @@
    "Name": "Airbnb, Inc. (Class A)",
    "Ticker": "ABNB",
    "Identifier": "009066101",
-   "Weight": "2.42",
-   "Market Value": "237610.44",
+   "Weight": "2.53",
+   "Market Value": "235242.09",
    "Shares Held": "1431",
    "Asset Category": "Consumer Discretionary"
   },
@@ -139,26 +139,35 @@
    "Name": "DoorDash, Inc. (Class A)",
    "Ticker": "DASH",
    "Identifier": "25809K105",
-   "Weight": "2.21",
-   "Market Value": "217286.18",
+   "Weight": "2.47",
+   "Market Value": "229465.18",
    "Shares Held": "1282",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Ciena Corporation",
-   "Ticker": "CIEN",
-   "Identifier": "171779309",
+   "Name": "Carvana Co. (Class A)",
+   "Ticker": "CVNA",
+   "Identifier": "146869102",
    "Weight": "1.8",
-   "Market Value": "176520.06",
-   "Shares Held": "486",
-   "Asset Category": "Information Technology"
+   "Market Value": "167583.66",
+   "Shares Held": "2454",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "eBay Inc.",
+   "Ticker": "EBAY",
+   "Identifier": "278642103",
+   "Weight": "1.78",
+   "Market Value": "165187.12",
+   "Shares Held": "1358",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "PayPal Holdings, Inc.",
    "Ticker": "PYPL",
    "Identifier": "70450Y103",
-   "Weight": "1.68",
-   "Market Value": "164390.85",
+   "Weight": "1.78",
+   "Market Value": "165728.07",
    "Shares Held": "2907",
    "Asset Category": "Financials"
   },
@@ -166,35 +175,26 @@
    "Name": "Veeva Systems Inc. (Class A)",
    "Ticker": "VEEV",
    "Identifier": "922475108",
-   "Weight": "1.64",
-   "Market Value": "161134.74",
+   "Weight": "1.71",
+   "Market Value": "158670.72",
    "Shares Held": "507",
    "Asset Category": "Health Care"
   },
   {
-   "Name": "eBay Inc.",
-   "Ticker": "EBAY",
-   "Identifier": "278642103",
-   "Weight": "1.63",
-   "Market Value": "160271.16",
-   "Shares Held": "1358",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Carvana Co. (Class A)",
-   "Ticker": "CVNA",
-   "Identifier": "146869102",
-   "Weight": "1.48",
-   "Market Value": "144908.7",
-   "Shares Held": "2454",
-   "Asset Category": "Consumer Discretionary"
+   "Name": "Ciena Corporation",
+   "Ticker": "CIEN",
+   "Identifier": "171779309",
+   "Weight": "1.68",
+   "Market Value": "155869.92",
+   "Shares Held": "486",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "Workday, Inc. (Class A)",
    "Ticker": "WDAY",
    "Identifier": "98138H101",
-   "Weight": "1.43",
-   "Market Value": "139986.6",
+   "Weight": "1.46",
+   "Market Value": "135506.7",
    "Shares Held": "685",
    "Asset Category": "Information Technology"
   },
@@ -202,35 +202,44 @@
    "Name": "Okta, Inc.",
    "Ticker": "OKTA",
    "Identifier": "679295105",
-   "Weight": "1.29",
-   "Market Value": "126470.88",
+   "Weight": "1.27",
+   "Market Value": "118280.32",
    "Shares Held": "568",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Atlassian Corporation (Class A)",
+   "Ticker": "TEAM",
+   "Identifier": "049468101",
+   "Weight": "1.12",
+   "Market Value": "104295.68",
+   "Shares Held": "544",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Roblox Corporation (Class A)",
    "Ticker": "RBLX",
    "Identifier": "771049103",
-   "Weight": "1.24",
-   "Market Value": "121531.68",
+   "Weight": "1.06",
+   "Market Value": "98060.19",
    "Shares Held": "2281",
    "Asset Category": "Communication Services"
   },
   {
-   "Name": "Atlassian Corporation (Class A)",
-   "Ticker": "TEAM",
-   "Identifier": "049468101",
-   "Weight": "1.22",
-   "Market Value": "119745.28",
-   "Shares Held": "544",
-   "Asset Category": "Information Technology"
+   "Name": "Copart, Inc.",
+   "Ticker": "CPRT",
+   "Identifier": "217204106",
+   "Weight": "0.93",
+   "Market Value": "86744.27",
+   "Shares Held": "2879",
+   "Asset Category": "Industrials"
   },
   {
    "Name": "Zoom Communications, Inc. (Class A)",
    "Ticker": "ZM",
    "Identifier": "98980L101",
-   "Weight": "0.92",
-   "Market Value": "90534.78",
+   "Weight": "0.93",
+   "Market Value": "86236.5",
    "Shares Held": "903",
    "Asset Category": "Information Technology"
   },
@@ -238,35 +247,35 @@
    "Name": "VeriSign, Inc.",
    "Ticker": "VRSN",
    "Identifier": "92343E102",
-   "Weight": "0.87",
-   "Market Value": "85348.78",
+   "Weight": "0.92",
+   "Market Value": "85404.38",
    "Shares Held": "278",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Copart, Inc.",
-   "Ticker": "CPRT",
-   "Identifier": "217204106",
-   "Weight": "0.85",
-   "Market Value": "83375.84",
-   "Shares Held": "2879",
-   "Asset Category": "Industrials"
   },
   {
    "Name": "CoreWeave, Inc. (Class A)",
    "Ticker": "CRWV",
    "Identifier": "21873S108",
-   "Weight": "0.85",
-   "Market Value": "83556.51",
+   "Weight": "0.77",
+   "Market Value": "71715.09",
    "Shares Held": "1307",
    "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.75",
+   "Market Value": "69349.29",
+   "Shares Held": "69349",
+   "Asset Category": "Other"
   },
   {
    "Name": "F5, Inc.",
    "Ticker": "FFIV",
    "Identifier": "315616102",
-   "Weight": "0.72",
-   "Market Value": "70547.29",
+   "Weight": "0.7",
+   "Market Value": "65299.62",
    "Shares Held": "193",
    "Asset Category": "Information Technology"
   },
@@ -274,54 +283,45 @@
    "Name": "Nutanix, Inc. (Class A)",
    "Ticker": "NTNX",
    "Identifier": "67059N108",
-   "Weight": "0.68",
-   "Market Value": "67074.41",
+   "Weight": "0.67",
+   "Market Value": "62034.83",
    "Shares Held": "923",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Reddit, Inc. (Class A)",
-   "Ticker": "RDDT",
-   "Identifier": "75734B100",
-   "Weight": "0.68",
-   "Market Value": "66945.9",
-   "Shares Held": "497",
-   "Asset Category": "Communication Services"
-  },
-  {
-   "Name": "Circle Internet Group, Inc. (Class A)",
-   "Ticker": "CRCL",
-   "Identifier": "172573107",
-   "Weight": "0.57",
-   "Market Value": "56216.48",
-   "Shares Held": "688",
+   "Name": "DocuSign, Inc.",
+   "Ticker": "DOCU",
+   "Identifier": "256163106",
+   "Weight": "0.58",
+   "Market Value": "53492.67",
+   "Shares Held": "651",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Samsara Inc. (Class A)",
    "Ticker": "IOT",
    "Identifier": "79589L106",
-   "Weight": "0.56",
-   "Market Value": "54622.7",
+   "Weight": "0.58",
+   "Market Value": "53428.9",
    "Shares Held": "1270",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "US Dollar",
-   "Ticker": "-",
-   "Identifier": "$USD",
-   "Weight": "0.56",
-   "Market Value": "55292.26",
-   "Shares Held": "55292",
-   "Asset Category": "Other"
+   "Name": "Circle Internet Group, Inc. (Class A)",
+   "Ticker": "CRCL",
+   "Identifier": "172573107",
+   "Weight": "0.54",
+   "Market Value": "49907.52",
+   "Shares Held": "688",
+   "Asset Category": "Information Technology"
   },
   {
-   "Name": "DocuSign, Inc.",
-   "Ticker": "DOCU",
-   "Identifier": "256163106",
-   "Weight": "0.55",
-   "Market Value": "54423.6",
-   "Shares Held": "651",
+   "Name": "GoDaddy Inc. (Class A)",
+   "Ticker": "GDDY",
+   "Identifier": "380237107",
+   "Weight": "0.54",
+   "Market Value": "50530.44",
+   "Shares Held": "431",
    "Asset Category": "Information Technology"
   },
   {
@@ -329,43 +329,43 @@
    "Ticker": "AKAM",
    "Identifier": "00971T101",
    "Weight": "0.49",
-   "Market Value": "48069",
+   "Market Value": "45432.8",
    "Shares Held": "490",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "GoDaddy Inc. (Class A)",
-   "Ticker": "GDDY",
-   "Identifier": "380237107",
-   "Weight": "0.47",
-   "Market Value": "45918.74",
-   "Shares Held": "431",
-   "Asset Category": "Information Technology"
+   "Name": "Reddit, Inc. (Class A)",
+   "Ticker": "RDDT",
+   "Identifier": "75734B100",
+   "Weight": "0.49",
+   "Market Value": "45589.81",
+   "Shares Held": "497",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Flutter Entertainment Plc",
+   "Ticker": "FLUT",
+   "Identifier": "G3643J108",
+   "Weight": "0.43",
+   "Market Value": "39560.61",
+   "Shares Held": "479",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "HubSpot, Inc.",
    "Ticker": "HUBS",
    "Identifier": "443573100",
    "Weight": "0.43",
-   "Market Value": "42324.9",
+   "Market Value": "39927.9",
    "Shares Held": "170",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Flutter Entertainment Plc",
-   "Ticker": "FLUT",
-   "Identifier": "G3643J108",
-   "Weight": "0.38",
-   "Market Value": "37615.87",
-   "Shares Held": "479",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "DraftKings Inc.",
    "Ticker": "DKNG",
    "Identifier": "26142V105",
-   "Weight": "0.35",
-   "Market Value": "33860.4",
+   "Weight": "0.38",
+   "Market Value": "34877.88",
    "Shares Held": "1668",
    "Asset Category": "Consumer Discretionary"
   },
@@ -373,8 +373,8 @@
    "Name": "Paycom Software, Inc.",
    "Ticker": "PAYC",
    "Identifier": "70432V102",
-   "Weight": "0.35",
-   "Market Value": "34425.49",
+   "Weight": "0.37",
+   "Market Value": "34610.2",
    "Shares Held": "131",
    "Asset Category": "Industrials"
   },
@@ -383,19 +383,19 @@
    "Ticker": "DUOL",
    "Identifier": "26603R106",
    "Weight": "0.19",
-   "Market Value": "18523.77",
+   "Market Value": "18027.83",
    "Shares Held": "137",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "2026-10-30 Nasdaq 100 Micro Index C 289",
+   "Name": "2026-11-06 Nasdaq 100 Micro Index C 284",
    "Ticker": "-",
-   "Identifier": "XND 261030C00289000",
-   "Weight": "-0.31",
-   "Market Value": "-30600",
-   "Shares Held": "-34",
+   "Identifier": "XND 261106C00284000",
+   "Weight": "-0.15",
+   "Market Value": "-14105",
+   "Shares Held": "-31",
    "Asset Category": "N/A"
   }
  ],
- "asOfDate": "2026-10-28"
+ "asOfDate": "2026-10-30"
 }
