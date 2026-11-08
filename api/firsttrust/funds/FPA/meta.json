@@ -35,28 +35,28 @@
   "asOfDate": "2026-05-01"
  },
  "nav": {
-  "display": "$43.94",
-  "value": 43.94,
-  "asOfDate": "Oct 30 2026"
+  "display": "$43.89",
+  "value": 43.89,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$43.93",
-  "value": 43.93,
-  "asOfDate": "Oct 30 2026"
+  "display": "$43.86",
+  "value": 43.86,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.19%",
-  "value": 0.19,
+  "display": "0.03%",
+  "value": 0.03,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$107.65M",
-  "value": 107645802,
-  "asOfDate": "Oct 30 2026",
+  "display": "$103.13M",
+  "value": 103134918,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 2450002
+  "outstanding": 2350002
  },
  "yields": {
   "dividendYield": 4.41,
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -4.92,
-   "ytd": 35.69,
-   "yr1": 39.7,
-   "yr3": 29.68,
-   "yr5": 13.41,
-   "yr10": 8.76,
-   "sinceInception": 6.6
+   "asOfDate": "2026-10-30",
+   "mo3": -4.21,
+   "ytd": 19.89,
+   "yr1": 17.15,
+   "yr3": 27.94,
+   "yr5": 10.49,
+   "yr10": 8.02,
+   "sinceInception": 5.72
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -519,8 +519,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 105,
-  "asOfDate": "2026-10-30",
+  "totalRows": 104,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -531,14 +531,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3907,
-  "asOfDate": "2026-10-30",
+  "totalRows": 3912,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 105,
- "historyCount": 3907,
+ "holdingsCount": 104,
+ "historyCount": 3912,
  "distributionCount": 58,
- "netAssets": 107645802,
+ "netAssets": 103134918,
  "dividendYield": 4.41,
  "secYield": 2.24
 }

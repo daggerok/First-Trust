@@ -35,24 +35,24 @@
   "asOfDate": "2026-08-03"
  },
  "nav": {
-  "display": "$43.39",
-  "value": 43.39,
-  "asOfDate": "Oct 30 2026"
+  "display": "$42.49",
+  "value": 42.49,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$43.36",
-  "value": 43.36,
-  "asOfDate": "Oct 30 2026"
+  "display": "$42.47",
+  "value": 42.47,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.06%",
-  "value": 0.06,
+  "display": "0.01%",
+  "value": 0.01,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$69.43M",
-  "value": 69428073,
-  "asOfDate": "Oct 30 2026",
+  "display": "$67.98M",
+  "value": 67977410,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 1.7,
-   "ytd": 15.32,
-   "yr1": 16.17,
-   "yr3": 17.1,
-   "yr5": 10.09,
+   "asOfDate": "2026-10-30",
+   "mo3": 6.93,
+   "ytd": 23.67,
+   "yr1": 26.1,
+   "yr3": 21.53,
+   "yr5": 11,
    "yr10": null,
-   "sinceInception": 11
+   "sinceInception": 11.73
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -373,7 +373,7 @@
   ],
   "pageSize": 250,
   "totalRows": 99,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -383,14 +383,14 @@
    "history/003.json"
   ],
   "pageSize": 1000,
-  "totalRows": 2354,
-  "asOfDate": "2026-10-30",
+  "totalRows": 2359,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 99,
- "historyCount": 2354,
+ "historyCount": 2359,
  "distributionCount": 37,
- "netAssets": 69428073,
+ "netAssets": 67977410,
  "dividendYield": 2.45,
  "secYield": 2.62
 }

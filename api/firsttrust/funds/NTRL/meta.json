@@ -35,24 +35,24 @@
   "asOfDate": "2026-06-24"
  },
  "nav": {
-  "display": "$20.93",
-  "value": 20.93,
-  "asOfDate": "Oct 30 2026"
+  "display": "$20.34",
+  "value": 20.34,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$20.93",
-  "value": 20.93,
-  "asOfDate": "Oct 30 2026"
+  "display": "$20.39",
+  "value": 20.39,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "—",
-  "value": null,
+  "display": "0.20%",
+  "value": 0.2,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$15.70M",
-  "value": 15695371,
-  "asOfDate": "Oct 30 2026",
+  "display": "$15.26M",
+  "value": 15257732,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 4.01,
-   "ytd": 4.22,
-   "yr1": 6.65,
-   "yr3": 4.14,
-   "yr5": 3.46,
+   "asOfDate": "2026-10-30",
+   "mo3": 2.05,
+   "ytd": 7.34,
+   "yr1": 9.15,
+   "yr3": 5.34,
+   "yr5": 4.1,
    "yr10": null,
-   "sinceInception": 2.34
+   "sinceInception": 2.76
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -184,7 +184,7 @@
   ],
   "pageSize": 250,
   "totalRows": 16,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -193,14 +193,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1694,
-  "asOfDate": "2026-10-30",
+  "totalRows": 1699,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 16,
- "historyCount": 1694,
+ "historyCount": 1699,
  "distributionCount": 10,
- "netAssets": 15695371,
+ "netAssets": 15257732,
  "dividendYield": 6.17,
  "secYield": 1.09
 }

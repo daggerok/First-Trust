@@ -35,24 +35,24 @@
   "asOfDate": "2026-01-02"
  },
  "nav": {
-  "display": "$36.05",
-  "value": 36.05,
-  "asOfDate": "Oct 30 2026"
+  "display": "$33.98",
+  "value": 33.98,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$36.02",
-  "value": 36.02,
-  "asOfDate": "Oct 30 2026"
+  "display": "$33.97",
+  "value": 33.97,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.03%",
-  "value": 0.03,
+  "display": "0.06%",
+  "value": 0.06,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$335.26M",
-  "value": 335263352,
-  "asOfDate": "Oct 30 2026",
+  "display": "$316.02M",
+  "value": 316016499,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 0.54,
-   "ytd": 19.79,
-   "yr1": 21.97,
-   "yr3": 32.04,
-   "yr5": 12.74,
+   "asOfDate": "2026-10-30",
+   "mo3": -0.74,
+   "ytd": 9.57,
+   "yr1": 5.13,
+   "yr3": 30.18,
+   "yr5": 9.72,
    "yr10": null,
-   "sinceInception": 13.47
+   "sinceInception": 11.41
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -121,7 +121,7 @@
   ],
   "pageSize": 250,
   "totalRows": 82,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -130,14 +130,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1365,
-  "asOfDate": "2026-10-30",
+  "totalRows": 1370,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 82,
- "historyCount": 1365,
+ "historyCount": 1370,
  "distributionCount": 1,
- "netAssets": 335263352,
+ "netAssets": 316016499,
  "dividendYield": null,
  "secYield": null
 }

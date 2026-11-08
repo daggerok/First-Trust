@@ -35,24 +35,24 @@
   "asOfDate": "2026-08-03"
  },
  "nav": {
-  "display": "$33.07",
-  "value": 33.07,
-  "asOfDate": "Oct 30 2026"
+  "display": "$32.22",
+  "value": 32.22,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$33.04",
-  "value": 33.04,
-  "asOfDate": "Oct 30 2026"
+  "display": "$32.20",
+  "value": 32.2,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.03%",
-  "value": 0.03,
+  "display": "0.00%",
+  "value": 0,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$29.76M",
-  "value": 29764853,
-  "asOfDate": "Oct 30 2026",
+  "display": "$29.00M",
+  "value": 28997147,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 0.28,
-   "ytd": 4.27,
-   "yr1": 1.63,
-   "yr3": 8.84,
-   "yr5": 4.11,
+   "asOfDate": "2026-10-30",
+   "mo3": 1.63,
+   "ytd": 8.71,
+   "yr1": 9,
+   "yr3": 12.34,
+   "yr5": 4.26,
    "yr10": null,
-   "sinceInception": 6.97
+   "sinceInception": 7.38
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -324,7 +324,7 @@
   ],
   "pageSize": 250,
   "totalRows": 101,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -334,14 +334,14 @@
    "history/003.json"
   ],
   "pageSize": 1000,
-  "totalRows": 2354,
-  "asOfDate": "2026-10-30",
+  "totalRows": 2359,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 101,
- "historyCount": 2354,
+ "historyCount": 2359,
  "distributionCount": 30,
- "netAssets": 29764853,
+ "netAssets": 28997147,
  "dividendYield": 0.03,
  "secYield": 0.19
 }

@@ -10,29 +10,38 @@
  ],
  "rows": [
   {
+   "Name": "Amazon.com, Inc.",
+   "Ticker": "AMZN",
+   "Identifier": "023135106",
+   "Weight": "10.06",
+   "Market Value": "23173381.7",
+   "Shares Held": "89369",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
    "Name": "Microsoft Corporation",
    "Ticker": "MSFT",
    "Identifier": "594918104",
-   "Weight": "9.14",
-   "Market Value": "22668638.94",
+   "Weight": "10",
+   "Market Value": "23046514.74",
    "Shares Held": "43434",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Amazon.com, Inc.",
-   "Ticker": "AMZN",
-   "Identifier": "023135106",
-   "Weight": "8.66",
-   "Market Value": "21479839.15",
-   "Shares Held": "89369",
-   "Asset Category": "Consumer Discretionary"
+   "Name": "Alphabet Inc. (Class A)",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K305",
+   "Weight": "8.09",
+   "Market Value": "18636003.2",
+   "Shares Held": "65440",
+   "Asset Category": "Communication Services"
   },
   {
    "Name": "Broadcom Inc.",
    "Ticker": "AVGO",
    "Identifier": "11135F101",
-   "Weight": "8.32",
-   "Market Value": "20639233.6",
+   "Weight": "8.07",
+   "Market Value": "18589108.55",
    "Shares Held": "63295",
    "Asset Category": "Information Technology"
   },
@@ -40,71 +49,53 @@
    "Name": "NVIDIA Corporation",
    "Ticker": "NVDA",
    "Identifier": "67066G104",
-   "Weight": "7.93",
-   "Market Value": "19662425.12",
+   "Weight": "7.78",
+   "Market Value": "17932931.12",
    "Shares Held": "96083",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Alphabet Inc. (Class A)",
-   "Ticker": "GOOGL",
-   "Identifier": "02079K305",
-   "Weight": "7.39",
-   "Market Value": "18312729.6",
-   "Shares Held": "65440",
-   "Asset Category": "Communication Services"
   },
   {
    "Name": "Palantir Technologies Inc. (Class A)",
    "Ticker": "PLTR",
    "Identifier": "69608A108",
-   "Weight": "4.42",
-   "Market Value": "10963014.06",
+   "Weight": "4.14",
+   "Market Value": "9549987.48",
    "Shares Held": "59546",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Taiwan Semiconductor Manufacturing Company Ltd.",
-   "Ticker": "2330.TT",
-   "Identifier": "Y84629107",
-   "Weight": "4.13",
-   "Market Value": "10228032.3",
-   "Shares Held": "143245",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Meta Platforms, Inc. (Class A)",
    "Ticker": "META",
    "Identifier": "30303M102",
-   "Weight": "3.83",
-   "Market Value": "9492985.64",
+   "Weight": "4.09",
+   "Market Value": "9418275.4",
    "Shares Held": "15436",
    "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Taiwan Semiconductor Manufacturing Company Ltd.",
+   "Ticker": "2330.TT",
+   "Identifier": "Y84629107",
+   "Weight": "4.06",
+   "Market Value": "9349109.74",
+   "Shares Held": "143245",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "ASML Holding N.V.",
    "Ticker": "ASML.NA",
    "Identifier": "N07059202",
-   "Weight": "3.82",
-   "Market Value": "9481007.93",
+   "Weight": "3.74",
+   "Market Value": "8623031.5",
    "Shares Held": "6029",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Micron Technology, Inc.",
-   "Ticker": "MU",
-   "Identifier": "595112103",
-   "Weight": "3.73",
-   "Market Value": "9251726.18",
-   "Shares Held": "10457",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Oracle Corporation",
    "Ticker": "ORCL",
    "Identifier": "68389X105",
-   "Weight": "3.64",
-   "Market Value": "9031518.39",
+   "Weight": "3.48",
+   "Market Value": "8024483.7",
    "Shares Held": "69117",
    "Asset Category": "Information Technology"
   },
@@ -112,17 +103,26 @@
    "Name": "Advanced Micro Devices, Inc.",
    "Ticker": "AMD",
    "Identifier": "007903107",
-   "Weight": "3.61",
-   "Market Value": "8950104",
+   "Weight": "3.45",
+   "Market Value": "7961479.2",
    "Shares Held": "17730",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Micron Technology, Inc.",
+   "Ticker": "MU",
+   "Identifier": "595112103",
+   "Weight": "3.13",
+   "Market Value": "7215330",
+   "Shares Held": "10457",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "SK Hynix Inc.",
    "Ticker": "000660.KS",
    "Identifier": "Y8085F100",
-   "Weight": "3.37",
-   "Market Value": "8349950.45",
+   "Weight": "2.97",
+   "Market Value": "6848802.29",
    "Shares Held": "8211",
    "Asset Category": "Information Technology"
   },
@@ -130,8 +130,8 @@
    "Name": "Marvell Technology, Inc.",
    "Ticker": "MRVL",
    "Identifier": "573874104",
-   "Weight": "2.78",
-   "Market Value": "6904049.2",
+   "Weight": "2.15",
+   "Market Value": "4963603.6",
    "Shares Held": "35153",
    "Asset Category": "Information Technology"
   },
@@ -139,8 +139,8 @@
    "Name": "CrowdStrike Holdings, Inc. (Class A)",
    "Ticker": "CRWD",
    "Identifier": "22788C105",
-   "Weight": "2.02",
-   "Market Value": "4998332.37",
+   "Weight": "1.88",
+   "Market Value": "4329107.1",
    "Shares Held": "19959",
    "Asset Category": "Information Technology"
   },
@@ -148,35 +148,35 @@
    "Name": "ServiceNow, Inc.",
    "Ticker": "NOW",
    "Identifier": "81762P102",
-   "Weight": "1.76",
-   "Market Value": "4373412.48",
+   "Weight": "1.84",
+   "Market Value": "4242359.88",
    "Shares Held": "41604",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Snowflake Inc. (Class A)",
-   "Ticker": "SNOW",
-   "Identifier": "833445109",
-   "Weight": "1.64",
-   "Market Value": "4056478.24",
-   "Shares Held": "13253",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Adobe Incorporated",
    "Ticker": "ADBE",
    "Identifier": "00724F101",
-   "Weight": "1.61",
-   "Market Value": "4000927.47",
+   "Weight": "1.66",
+   "Market Value": "3826167.7",
    "Shares Held": "15989",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Snowflake Inc. (Class A)",
+   "Ticker": "SNOW",
+   "Identifier": "833445109",
+   "Weight": "1.59",
+   "Market Value": "3656237.64",
+   "Shares Held": "13253",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Shopify Inc. (Class A)",
    "Ticker": "SHOP.CT",
    "Identifier": "82509L107",
-   "Weight": "1.55",
-   "Market Value": "3848093.29",
+   "Weight": "1.58",
+   "Market Value": "3633982.32",
    "Shares Held": "24390",
    "Asset Category": "Information Technology"
   },
@@ -184,8 +184,8 @@
    "Name": "Arista Networks, Inc.",
    "Ticker": "ANET",
    "Identifier": "040413205",
-   "Weight": "1.44",
-   "Market Value": "3559231.08",
+   "Weight": "1.56",
+   "Market Value": "3600122.4",
    "Shares Held": "21078",
    "Asset Category": "Information Technology"
   },
@@ -193,8 +193,8 @@
    "Name": "QUALCOMM Incorporated",
    "Ticker": "QCOM",
    "Identifier": "747525103",
-   "Weight": "1.44",
-   "Market Value": "3562595.01",
+   "Weight": "1.55",
+   "Market Value": "3575998.79",
    "Shares Held": "21619",
    "Asset Category": "Information Technology"
   },
@@ -202,8 +202,8 @@
    "Name": "Space Exploration Technologies Corp. (Class A)",
    "Ticker": "SPCX",
    "Identifier": "84615Q103",
-   "Weight": "1.4",
-   "Market Value": "3468635.84",
+   "Weight": "1.5",
+   "Market Value": "3457049.69",
    "Shares Held": "25747",
    "Asset Category": "Communication Services"
   },
@@ -211,8 +211,8 @@
    "Name": "MediaTek Inc.",
    "Ticker": "2454.TT",
    "Identifier": "Y5945U103",
-   "Weight": "1.32",
-   "Market Value": "3277733.13",
+   "Weight": "1.25",
+   "Market Value": "2885520.96",
    "Shares Held": "27844",
    "Asset Category": "Information Technology"
   },
@@ -220,8 +220,8 @@
    "Name": "Datadog, Inc. (Class A)",
    "Ticker": "DDOG",
    "Identifier": "23804L103",
-   "Weight": "1.24",
-   "Market Value": "3077331.6",
+   "Weight": "1.02",
+   "Market Value": "2341843.2",
    "Shares Held": "13080",
    "Asset Category": "Information Technology"
   },
@@ -229,8 +229,8 @@
    "Name": "Intuit Inc.",
    "Ticker": "INTU",
    "Identifier": "461202103",
-   "Weight": "0.74",
-   "Market Value": "1839839.46",
+   "Weight": "0.8",
+   "Market Value": "1842051",
    "Shares Held": "5394",
    "Asset Category": "Information Technology"
   },
@@ -238,8 +238,8 @@
    "Name": "Cadence Design Systems, Inc.",
    "Ticker": "CDNS",
    "Identifier": "127387108",
-   "Weight": "0.73",
-   "Market Value": "1813231.7",
+   "Weight": "0.77",
+   "Market Value": "1769157.6",
    "Shares Held": "5530",
    "Asset Category": "Information Technology"
   },
@@ -247,8 +247,8 @@
    "Name": "Synopsys, Inc.",
    "Ticker": "SNPS",
    "Identifier": "871607107",
-   "Weight": "0.72",
-   "Market Value": "1796557.62",
+   "Weight": "0.75",
+   "Market Value": "1730667.32",
    "Shares Held": "3842",
    "Asset Category": "Information Technology"
   },
@@ -256,17 +256,26 @@
    "Name": "Astera Labs, Inc.",
    "Ticker": "ALAB",
    "Identifier": "04626A103",
-   "Weight": "0.64",
-   "Market Value": "1589452.8",
+   "Weight": "0.51",
+   "Market Value": "1171722.24",
    "Shares Held": "6144",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Monolithic Power Systems, Inc.",
+   "Ticker": "MPWR",
+   "Identifier": "609839105",
+   "Weight": "0.49",
+   "Market Value": "1136870.2",
+   "Shares Held": "955",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Okta, Inc.",
    "Ticker": "OKTA",
    "Identifier": "679295105",
-   "Weight": "0.56",
-   "Market Value": "1382297.12",
+   "Weight": "0.49",
+   "Market Value": "1119764.22",
    "Shares Held": "6638",
    "Asset Category": "Information Technology"
   },
@@ -274,26 +283,17 @@
    "Name": "Nebius Group N.V.",
    "Ticker": "NBIS",
    "Identifier": "N97284108",
-   "Weight": "0.52",
-   "Market Value": "1290922.5",
-   "Shares Held": "8375",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Monolithic Power Systems, Inc.",
-   "Ticker": "MPWR",
-   "Identifier": "609839105",
    "Weight": "0.47",
-   "Market Value": "1157106.65",
-   "Shares Held": "955",
+   "Market Value": "1084478.75",
+   "Shares Held": "8375",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Zoom Communications, Inc. (Class A)",
    "Ticker": "ZM",
    "Identifier": "98980L101",
-   "Weight": "0.41",
-   "Market Value": "1016120",
+   "Weight": "0.42",
+   "Market Value": "956323.2",
    "Shares Held": "10640",
    "Asset Category": "Information Technology"
   },
@@ -301,8 +301,8 @@
    "Name": "CoreWeave, Inc. (Class A)",
    "Ticker": "CRWV",
    "Identifier": "21873S108",
-   "Weight": "0.34",
-   "Market Value": "833310.69",
+   "Weight": "0.31",
+   "Market Value": "704676.8",
    "Shares Held": "15187",
    "Asset Category": "Information Technology"
   },
@@ -310,54 +310,27 @@
    "Name": "Zscaler, Inc.",
    "Ticker": "ZS",
    "Identifier": "98980G102",
-   "Weight": "0.34",
-   "Market Value": "849766.59",
+   "Weight": "0.31",
+   "Market Value": "706239.18",
    "Shares Held": "3573",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Qualys, Inc.",
-   "Ticker": "QLYS",
-   "Identifier": "74758T303",
-   "Weight": "0.33",
-   "Market Value": "816020.92",
-   "Shares Held": "3641",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "NetApp, Inc.",
-   "Ticker": "NTAP",
-   "Identifier": "64110D104",
-   "Weight": "0.32",
-   "Market Value": "784171.66",
-   "Shares Held": "3937",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "ASM International N.V.",
    "Ticker": "ASM.NA",
    "Identifier": "N07045201",
-   "Weight": "0.31",
-   "Market Value": "773912.3",
+   "Weight": "0.3",
+   "Market Value": "689111.72",
    "Shares Held": "950",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "GitLab Inc. (Class A)",
-   "Ticker": "GTLB",
-   "Identifier": "37637K108",
-   "Weight": "0.31",
-   "Market Value": "763209.9",
-   "Shares Held": "14110",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Trend Micro Incorporated",
-   "Ticker": "4704.JP",
-   "Identifier": "J9298Q104",
+   "Name": "Qualys, Inc.",
+   "Ticker": "QLYS",
+   "Identifier": "74758T303",
    "Weight": "0.3",
-   "Market Value": "753790.81",
-   "Shares Held": "16362",
+   "Market Value": "693282.81",
+   "Shares Held": "3641",
    "Asset Category": "Information Technology"
   },
   {
@@ -365,44 +338,44 @@
    "Ticker": "PATH",
    "Identifier": "90364P105",
    "Weight": "0.3",
-   "Market Value": "735104.2",
+   "Market Value": "696020",
    "Shares Held": "53540",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Atlassian Corporation (Class A)",
-   "Ticker": "TEAM",
-   "Identifier": "049468101",
+   "Name": "GitLab Inc. (Class A)",
+   "Ticker": "GTLB",
+   "Identifier": "37637K108",
    "Weight": "0.29",
-   "Market Value": "717032.8",
-   "Shares Held": "3740",
+   "Market Value": "678549.9",
+   "Shares Held": "14110",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Dynatrace, Inc.",
-   "Ticker": "DT",
-   "Identifier": "268150109",
-   "Weight": "0.28",
-   "Market Value": "683164.98",
-   "Shares Held": "11842",
+   "Name": "NetApp, Inc.",
+   "Ticker": "NTAP",
+   "Identifier": "64110D104",
+   "Weight": "0.29",
+   "Market Value": "666101.03",
+   "Shares Held": "3937",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Trend Micro Incorporated",
+   "Ticker": "4704.JP",
+   "Identifier": "J9298Q104",
+   "Weight": "0.29",
+   "Market Value": "668746.97",
+   "Shares Held": "16362",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "MongoDB, Inc.",
    "Ticker": "MDB",
    "Identifier": "60937P106",
-   "Weight": "0.28",
-   "Market Value": "692507.52",
+   "Weight": "0.27",
+   "Market Value": "613772.46",
    "Shares Held": "1962",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "SentinelOne, Inc. (Class A)",
-   "Ticker": "S",
-   "Identifier": "81730H109",
-   "Weight": "0.28",
-   "Market Value": "704979.65",
-   "Shares Held": "28031",
    "Asset Category": "Information Technology"
   },
   {
@@ -410,8 +383,35 @@
    "Ticker": "AMBA",
    "Identifier": "G037AX101",
    "Weight": "0.26",
-   "Market Value": "645780.72",
+   "Market Value": "599025.05",
    "Shares Held": "10231",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "SentinelOne, Inc. (Class A)",
+   "Ticker": "S",
+   "Identifier": "81730H109",
+   "Weight": "0.26",
+   "Market Value": "610234.87",
+   "Shares Held": "28031",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Atlassian Corporation (Class A)",
+   "Ticker": "TEAM",
+   "Identifier": "049468101",
+   "Weight": "0.25",
+   "Market Value": "574763.2",
+   "Shares Held": "3740",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Dynatrace, Inc.",
+   "Ticker": "DT",
+   "Identifier": "268150109",
+   "Weight": "0.22",
+   "Market Value": "514416.48",
+   "Shares Held": "11842",
    "Asset Category": "Information Technology"
   },
   {
@@ -419,17 +419,8 @@
    "Ticker": "BESI.NA",
    "Identifier": "N13107144",
    "Weight": "0.21",
-   "Market Value": "522688.83",
+   "Market Value": "485904.07",
    "Shares Held": "3041",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Super Micro Computer, Inc.",
-   "Ticker": "SMCI",
-   "Identifier": "86800U302",
-   "Weight": "0.21",
-   "Market Value": "529770.1",
-   "Shares Held": "16078",
    "Asset Category": "Information Technology"
   },
   {
@@ -437,7 +428,7 @@
    "Ticker": "2513.HK",
    "Identifier": "Y615F6108",
    "Weight": "0.21",
-   "Market Value": "527763",
+   "Market Value": "475841.85",
    "Shares Held": "8753",
    "Asset Category": "Information Technology"
   },
@@ -445,9 +436,18 @@
    "Name": "Minimax Group Inc",
    "Ticker": "100.HK",
    "Identifier": "G6181S109",
-   "Weight": "0.19",
-   "Market Value": "459145.39",
+   "Weight": "0.2",
+   "Market Value": "451311.95",
    "Shares Held": "22710",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Super Micro Computer, Inc.",
+   "Ticker": "SMCI",
+   "Identifier": "86800U302",
+   "Weight": "0.2",
+   "Market Value": "462403.28",
+   "Shares Held": "16078",
    "Asset Category": "Information Technology"
   },
   {
@@ -455,7 +455,7 @@
    "Ticker": "VIAV",
    "Identifier": "925550105",
    "Weight": "0.18",
-   "Market Value": "446226.88",
+   "Market Value": "424601.58",
    "Shares Held": "14914",
    "Asset Category": "Information Technology"
   },
@@ -463,9 +463,9 @@
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "0.06",
-   "Market Value": "156643.89",
-   "Shares Held": "156644",
+   "Weight": "0.01",
+   "Market Value": "28884.06",
+   "Shares Held": "28884",
    "Asset Category": "Other"
   },
   {
@@ -473,19 +473,10 @@
    "Ticker": "-",
    "Identifier": "$EUR",
    "Weight": "0",
-   "Market Value": "10546.53",
-   "Shares Held": "9447",
-   "Asset Category": "Other"
-  },
-  {
-   "Name": "Hong Kong Dollar",
-   "Ticker": "-",
-   "Identifier": "$HKD",
-   "Weight": "0",
-   "Market Value": "0",
-   "Shares Held": "0",
+   "Market Value": "11.94",
+   "Shares Held": "11",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-10-30"
+ "asOfDate": "2026-11-06"
 }

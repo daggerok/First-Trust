@@ -35,24 +35,24 @@
   "asOfDate": null
  },
  "nav": {
-  "display": "$26.42",
-  "value": 26.42,
-  "asOfDate": "Oct 30 2026"
+  "display": "$26.22",
+  "value": 26.22,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$26.43",
-  "value": 26.43,
-  "asOfDate": "Oct 30 2026"
+  "display": "$26.20",
+  "value": 26.2,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.04%",
-  "value": 0.04,
+  "display": "0.00%",
+  "value": 0,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$165.13M",
-  "value": 165132514,
-  "asOfDate": "Oct 30 2026",
+  "display": "$163.87M",
+  "value": 163873513,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 1.97,
-   "ytd": 7.28,
-   "yr1": 9.32,
-   "yr3": 10.22,
-   "yr5": null,
+   "asOfDate": "2026-10-30",
+   "mo3": 1.38,
+   "ytd": 7.4,
+   "yr1": 8.9,
+   "yr3": 10.71,
+   "yr5": 5.72,
    "yr10": null,
-   "sinceInception": 5.78
+   "sinceInception": 5.7
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -113,7 +113,7 @@
   ],
   "pageSize": 250,
   "totalRows": 8,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -122,14 +122,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1258,
-  "asOfDate": "2026-10-30",
+  "totalRows": 1263,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 8,
- "historyCount": 1258,
+ "historyCount": 1263,
  "distributionCount": 0,
- "netAssets": 165132514,
+ "netAssets": 163873513,
  "dividendYield": null,
  "secYield": null
 }

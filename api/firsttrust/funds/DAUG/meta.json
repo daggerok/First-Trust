@@ -35,28 +35,28 @@
   "asOfDate": "2026-08-24"
  },
  "nav": {
-  "display": "$47.42",
-  "value": 47.42,
-  "asOfDate": "Oct 30 2026"
+  "display": "$46.64",
+  "value": 46.64,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$47.36",
-  "value": 47.36,
-  "asOfDate": "Oct 30 2026"
+  "display": "$46.68",
+  "value": 46.68,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "—",
-  "value": null,
+  "display": "0.19%",
+  "value": 0.19,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$445.73M",
-  "value": 445725878,
-  "asOfDate": "Oct 30 2026",
+  "display": "$441.88M",
+  "value": 441883570,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 9400002
+  "outstanding": 9475002
  },
  "yields": {
   "dividendYield": null,
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 1.37,
-   "ytd": 7.05,
-   "yr1": 8.9,
-   "yr3": 12.79,
-   "yr5": 6.88,
+   "asOfDate": "2026-10-30",
+   "mo3": 0.32,
+   "ytd": 6.87,
+   "yr1": 7.9,
+   "yr3": 13.29,
+   "yr5": 6.27,
    "yr10": null,
-   "sinceInception": 6.83
+   "sinceInception": 6.72
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -113,7 +113,7 @@
   ],
   "pageSize": 250,
   "totalRows": 5,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -122,14 +122,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1754,
-  "asOfDate": "2026-10-30",
+  "totalRows": 1759,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 5,
- "historyCount": 1754,
+ "historyCount": 1759,
  "distributionCount": 0,
- "netAssets": 445725878,
+ "netAssets": 441883570,
  "dividendYield": null,
  "secYield": null
 }

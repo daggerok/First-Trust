@@ -35,24 +35,24 @@
   "asOfDate": "2026-02-02"
  },
  "nav": {
-  "display": "$84.80",
-  "value": 84.8,
-  "asOfDate": "Oct 30 2026"
+  "display": "$81.33",
+  "value": 81.33,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$84.73",
-  "value": 84.73,
-  "asOfDate": "Oct 30 2026"
+  "display": "$81.27",
+  "value": 81.27,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "—",
-  "value": null,
+  "display": "0.01%",
+  "value": 0.01,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$42.40M",
-  "value": 42399936,
-  "asOfDate": "Oct 30 2026",
+  "display": "$40.67M",
+  "value": 40667404,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -8.21,
-   "ytd": 11.07,
-   "yr1": 10.31,
-   "yr3": 19.04,
-   "yr5": 10.4,
-   "yr10": 7.2,
-   "sinceInception": 7.54
+   "asOfDate": "2026-10-30",
+   "mo3": -2,
+   "ytd": 14.31,
+   "yr1": 11.46,
+   "yr3": 21.26,
+   "yr5": 10.5,
+   "yr10": 7.69,
+   "sinceInception": 7.67
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -527,7 +527,7 @@
   ],
   "pageSize": 250,
   "totalRows": 104,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -539,14 +539,14 @@
    "history/005.json"
   ],
   "pageSize": 1000,
-  "totalRows": 4540,
-  "asOfDate": "2026-10-30",
+  "totalRows": 4545,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 104,
- "historyCount": 4540,
+ "historyCount": 4545,
  "distributionCount": 59,
- "netAssets": 42399936,
+ "netAssets": 40667404,
  "dividendYield": 1.04,
  "secYield": 1.13
 }

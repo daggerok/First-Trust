@@ -35,14 +35,14 @@
   "asOfDate": "2025-12-01"
  },
  "nav": {
-  "display": "$137.55",
-  "value": 137.55,
-  "asOfDate": "Oct 30 2026"
+  "display": "$133.73",
+  "value": 133.73,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$137.63",
-  "value": 137.63,
-  "asOfDate": "Oct 30 2026"
+  "display": "$133.81",
+  "value": 133.81,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
   "display": "0.03%",
@@ -50,9 +50,9 @@
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$1.60B",
-  "value": 1595619628,
-  "asOfDate": "Oct 30 2026",
+  "display": "$1.55B",
+  "value": 1551241893,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -5.03,
-   "ytd": 12.52,
-   "yr1": 14.61,
-   "yr3": 19.17,
-   "yr5": 10.64,
-   "yr10": 12.39,
-   "sinceInception": 9.3
+   "asOfDate": "2026-10-30",
+   "mo3": 1.32,
+   "ytd": 16.86,
+   "yr1": 18.7,
+   "yr3": 22.16,
+   "yr5": 10.15,
+   "yr10": 13.03,
+   "sinceInception": 9.47
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -577,7 +577,7 @@
   ],
   "pageSize": 250,
   "totalRows": 376,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -589,14 +589,14 @@
    "history/005.json"
   ],
   "pageSize": 1000,
-  "totalRows": 4902,
-  "asOfDate": "2026-10-30",
+  "totalRows": 4907,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 376,
- "historyCount": 4902,
+ "historyCount": 4907,
  "distributionCount": 66,
- "netAssets": 1595619628,
+ "netAssets": 1551241893,
  "dividendYield": 1,
  "secYield": 1.09
 }

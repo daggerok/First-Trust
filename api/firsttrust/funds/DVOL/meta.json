@@ -35,24 +35,24 @@
   "asOfDate": "2026-02-02"
  },
  "nav": {
-  "display": "$36.35",
-  "value": 36.35,
-  "asOfDate": "Oct 30 2026"
+  "display": "$36.09",
+  "value": 36.09,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$36.34",
-  "value": 36.34,
-  "asOfDate": "Oct 30 2026"
+  "display": "$36.09",
+  "value": 36.09,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.01%",
-  "value": 0.01,
+  "display": "—",
+  "value": null,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$74.52M",
-  "value": 74519990,
-  "asOfDate": "Oct 30 2026",
+  "display": "$73.98M",
+  "value": 73982489,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -3.98,
-   "ytd": 0.54,
-   "yr1": -0.36,
-   "yr3": 12.91,
-   "yr5": 6,
+   "asOfDate": "2026-10-30",
+   "mo3": -3.43,
+   "ytd": 4.36,
+   "yr1": 6.18,
+   "yr3": 14.42,
+   "yr5": 5.1,
    "yr10": null,
-   "sinceInception": 8.32
+   "sinceInception": 8.72
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -338,7 +338,7 @@
   ],
   "pageSize": 250,
   "totalRows": 51,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -348,14 +348,14 @@
    "history/003.json"
   ],
   "pageSize": 1000,
-  "totalRows": 2049,
-  "asOfDate": "2026-10-30",
+  "totalRows": 2054,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 51,
- "historyCount": 2049,
+ "historyCount": 2054,
  "distributionCount": 32,
- "netAssets": 74519990,
+ "netAssets": 73982489,
  "dividendYield": 0.81,
  "secYield": 1.03
 }

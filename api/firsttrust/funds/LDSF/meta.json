@@ -35,24 +35,24 @@
   "asOfDate": null
  },
  "nav": {
-  "display": "$18.56",
-  "value": 18.56,
-  "asOfDate": "Oct 30 2026"
+  "display": "$18.62",
+  "value": 18.62,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$18.58",
-  "value": 18.58,
-  "asOfDate": "Oct 30 2026"
+  "display": "$18.61",
+  "value": 18.61,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.03%",
-  "value": 0.03,
+  "display": "—",
+  "value": null,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$159.66M",
-  "value": 159655037,
-  "asOfDate": "Oct 30 2026",
+  "display": "$160.13M",
+  "value": 160130641,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -1.31,
-   "ytd": -0.41,
-   "yr1": 0.93,
-   "yr3": 4.85,
-   "yr5": 2.17,
+   "asOfDate": "2026-10-30",
+   "mo3": -0.13,
+   "ytd": 0.76,
+   "yr1": 1.68,
+   "yr3": 5.44,
+   "yr5": 2.45,
    "yr10": null,
-   "sinceInception": 2.43
+   "sinceInception": 2.55
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -772,7 +772,7 @@
   ],
   "pageSize": 250,
   "totalRows": 9,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -781,14 +781,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1967,
-  "asOfDate": "2026-10-30",
+  "totalRows": 1972,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 9,
- "historyCount": 1967,
+ "historyCount": 1972,
  "distributionCount": 94,
- "netAssets": 159655037,
+ "netAssets": 160130641,
  "dividendYield": 4.78,
  "secYield": 5.05
 }

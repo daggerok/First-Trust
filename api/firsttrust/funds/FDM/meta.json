@@ -35,24 +35,24 @@
   "asOfDate": "2026-05-01"
  },
  "nav": {
-  "display": "$90.64",
-  "value": 90.64,
-  "asOfDate": "Oct 30 2026"
+  "display": "$89.20",
+  "value": 89.2,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$90.67",
-  "value": 90.67,
-  "asOfDate": "Oct 30 2026"
+  "display": "$89.18",
+  "value": 89.18,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "—",
-  "value": null,
+  "display": "0.08%",
+  "value": 0.08,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$267.85M",
-  "value": 267854035,
-  "asOfDate": "Oct 30 2026",
+  "display": "$263.59M",
+  "value": 263594301,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -5.49,
-   "ytd": 11.18,
-   "yr1": 17.64,
-   "yr3": 18.72,
-   "yr5": 9.78,
-   "yr10": 10.86,
-   "sinceInception": 8.56
+   "asOfDate": "2026-10-30",
+   "mo3": -0.61,
+   "ytd": 15.23,
+   "yr1": 24.74,
+   "yr3": 22.02,
+   "yr5": 9.68,
+   "yr10": 11.54,
+   "sinceInception": 8.71
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -611,7 +611,7 @@
   ],
   "pageSize": 250,
   "totalRows": 136,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -624,14 +624,14 @@
    "history/006.json"
   ],
   "pageSize": 1000,
-  "totalRows": 5306,
-  "asOfDate": "2026-10-30",
+  "totalRows": 5311,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 136,
- "historyCount": 5306,
+ "historyCount": 5311,
  "distributionCount": 71,
- "netAssets": 267854035,
+ "netAssets": 263594301,
  "dividendYield": 1.51,
  "secYield": 2.07
 }

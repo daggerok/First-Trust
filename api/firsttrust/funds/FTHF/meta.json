@@ -35,24 +35,24 @@
   "asOfDate": "2026-02-02"
  },
  "nav": {
-  "display": "$42.80",
-  "value": 42.8,
-  "asOfDate": "Oct 30 2026"
+  "display": "$41.42",
+  "value": 41.42,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$42.92",
-  "value": 42.92,
-  "asOfDate": "Oct 30 2026"
+  "display": "$41.63",
+  "value": 41.63,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.33%",
-  "value": 0.33,
+  "display": "0.58%",
+  "value": 0.58,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$134.83M",
-  "value": 134831268,
-  "asOfDate": "Oct 30 2026",
+  "display": "$130.48M",
+  "value": 130476679,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -0.18,
-   "ytd": 49.56,
-   "yr1": 73.72,
-   "yr3": null,
+   "asOfDate": "2026-10-30",
+   "mo3": -5.82,
+   "ytd": 31.1,
+   "yr1": 41.35,
+   "yr3": 33.09,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 40.21
+   "sinceInception": 32.95
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -212,7 +212,7 @@
   ],
   "pageSize": 250,
   "totalRows": 105,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -220,14 +220,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 753,
-  "asOfDate": "2026-10-30",
+  "totalRows": 758,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 105,
- "historyCount": 753,
+ "historyCount": 758,
  "distributionCount": 14,
- "netAssets": 134831268,
+ "netAssets": 130476679,
  "dividendYield": 2.34,
  "secYield": 2.05
 }

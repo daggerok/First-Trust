@@ -35,14 +35,14 @@
   "asOfDate": "2026-05-01"
  },
  "nav": {
-  "display": "$37.48",
-  "value": 37.48,
-  "asOfDate": "Oct 30 2026"
+  "display": "$36.82",
+  "value": 36.82,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$37.47",
-  "value": 37.47,
-  "asOfDate": "Oct 30 2026"
+  "display": "$36.83",
+  "value": 36.83,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
   "display": "0.07%",
@@ -50,13 +50,13 @@
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$1.27B",
-  "value": 1270588676,
-  "asOfDate": "Oct 30 2026",
+  "display": "$1.24B",
+  "value": 1244658523,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 33900002
+  "outstanding": 33800002
  },
  "yields": {
   "dividendYield": 0.04,
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 2.54,
-   "ytd": 7.44,
-   "yr1": 5.55,
-   "yr3": 17.2,
+   "asOfDate": "2026-10-30",
+   "mo3": -2.09,
+   "ytd": 6.14,
+   "yr1": 5.35,
+   "yr3": 17.89,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 17.71
+   "sinceInception": 16.95
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -212,7 +212,7 @@
   ],
   "pageSize": 250,
   "totalRows": 51,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -221,14 +221,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1007,
-  "asOfDate": "2026-10-30",
+  "totalRows": 1012,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 51,
- "historyCount": 1007,
+ "historyCount": 1012,
  "distributionCount": 14,
- "netAssets": 1270588676,
+ "netAssets": 1244658523,
  "dividendYield": 0.04,
  "secYield": 0.18
 }

@@ -35,14 +35,14 @@
   "asOfDate": "2026-05-01"
  },
  "nav": {
-  "display": "$63.33",
-  "value": 63.33,
-  "asOfDate": "Oct 30 2026"
+  "display": "$63.84",
+  "value": 63.84,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$63.17",
-  "value": 63.17,
-  "asOfDate": "Oct 30 2026"
+  "display": "$63.29",
+  "value": 63.29,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -50,9 +50,9 @@
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$114.00M",
-  "value": 114000654,
-  "asOfDate": "Oct 30 2026",
+  "display": "$114.92M",
+  "value": 114918688,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -2.15,
-   "ytd": 7.47,
-   "yr1": 13.76,
-   "yr3": 23.1,
-   "yr5": 10.12,
-   "yr10": 9.61,
-   "sinceInception": 8.85
+   "asOfDate": "2026-10-30",
+   "mo3": -6.08,
+   "ytd": 5.47,
+   "yr1": 12.26,
+   "yr3": 24.55,
+   "yr5": 9.19,
+   "yr10": 9.54,
+   "sinceInception": 8.62
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -379,8 +379,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 153,
-  "asOfDate": "2026-10-30",
+  "totalRows": 152,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -391,14 +391,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3024,
-  "asOfDate": "2026-10-30",
+  "totalRows": 3029,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 153,
- "historyCount": 3024,
+ "holdingsCount": 152,
+ "historyCount": 3029,
  "distributionCount": 38,
- "netAssets": 114000654,
+ "netAssets": 114918688,
  "dividendYield": 3.15,
  "secYield": 2.46
 }

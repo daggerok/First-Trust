@@ -35,24 +35,24 @@
   "asOfDate": "2026-02-02"
  },
  "nav": {
-  "display": "$39.43",
-  "value": 39.43,
-  "asOfDate": "Oct 30 2026"
+  "display": "$37.94",
+  "value": 37.94,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$39.41",
-  "value": 39.41,
-  "asOfDate": "Oct 30 2026"
+  "display": "$37.94",
+  "value": 37.94,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.00%",
-  "value": 0,
+  "display": "—",
+  "value": null,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$47.31M",
-  "value": 47314540,
-  "asOfDate": "Oct 30 2026",
+  "display": "$45.53M",
+  "value": 45526824,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -2.29,
-   "ytd": 8.71,
-   "yr1": 15.81,
-   "yr3": 20.33,
-   "yr5": 11.89,
+   "asOfDate": "2026-10-30",
+   "mo3": -3.32,
+   "ytd": 11.01,
+   "yr1": 17.12,
+   "yr3": 23.54,
+   "yr5": 11.46,
    "yr10": null,
-   "sinceInception": 10.06
+   "sinceInception": 10.23
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -338,7 +338,7 @@
   ],
   "pageSize": 250,
   "totalRows": 51,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -348,14 +348,14 @@
    "history/003.json"
   ],
   "pageSize": 1000,
-  "totalRows": 2049,
-  "asOfDate": "2026-10-30",
+  "totalRows": 2054,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 51,
- "historyCount": 2049,
+ "historyCount": 2054,
  "distributionCount": 32,
- "netAssets": 47314540,
+ "netAssets": 45526824,
  "dividendYield": 0.77,
  "secYield": 0.93
 }

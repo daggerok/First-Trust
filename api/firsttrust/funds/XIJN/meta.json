@@ -35,14 +35,14 @@
   "asOfDate": "2026-06-22"
  },
  "nav": {
-  "display": "$30.79",
-  "value": 30.79,
-  "asOfDate": "Oct 30 2026"
+  "display": "$30.41",
+  "value": 30.41,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$30.75",
-  "value": 30.75,
-  "asOfDate": "Oct 30 2026"
+  "display": "$30.39",
+  "value": 30.39,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -50,13 +50,13 @@
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$50.04M",
-  "value": 50039262,
-  "asOfDate": "Oct 30 2026",
+  "display": "$48.66M",
+  "value": 48659894,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 1625002
+  "outstanding": 1600002
  },
  "yields": {
   "dividendYield": 6.69,
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 1.88,
-   "ytd": 4.78,
-   "yr1": 6.34,
+   "asOfDate": "2026-10-30",
+   "mo3": 1.75,
+   "ytd": 5.19,
+   "yr1": 6.42,
    "yr3": null,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 7.13
+   "sinceInception": 7.05
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -310,7 +310,7 @@
   ],
   "pageSize": 250,
   "totalRows": 13,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -318,14 +318,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 592,
-  "asOfDate": "2026-10-30",
+  "totalRows": 597,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 13,
- "historyCount": 592,
+ "historyCount": 597,
  "distributionCount": 28,
- "netAssets": 50039262,
+ "netAssets": 48659894,
  "dividendYield": 6.69,
  "secYield": null
 }

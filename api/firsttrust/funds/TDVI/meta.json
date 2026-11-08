@@ -35,14 +35,14 @@
   "asOfDate": "2026-03-02"
  },
  "nav": {
-  "display": "$30.85",
-  "value": 30.85,
-  "asOfDate": "Oct 30 2026"
+  "display": "$29.23",
+  "value": 29.23,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$30.88",
-  "value": 30.88,
-  "asOfDate": "Oct 30 2026"
+  "display": "$29.25",
+  "value": 29.25,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
   "display": "0.03%",
@@ -50,13 +50,13 @@
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$660.26M",
-  "value": 660258949,
-  "asOfDate": "Oct 30 2026",
+  "display": "$628.45M",
+  "value": 628449685,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 21400002
+  "outstanding": 21500002
  },
  "yields": {
   "dividendYield": 7.59,
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": -1.51,
-   "ytd": 17.36,
-   "yr1": 15.86,
-   "yr3": 26.94,
+   "asOfDate": "2026-10-30",
+   "mo3": 3.87,
+   "ytd": 18.92,
+   "yr1": 14.95,
+   "yr3": 28.32,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 24.57
+   "sinceInception": 24.36
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -380,7 +380,7 @@
   ],
   "pageSize": 250,
   "totalRows": 90,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -388,14 +388,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 810,
-  "asOfDate": "2026-10-30",
+  "totalRows": 815,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 90,
- "historyCount": 810,
+ "historyCount": 815,
  "distributionCount": 38,
- "netAssets": 660258949,
+ "netAssets": 628449685,
  "dividendYield": 7.59,
  "secYield": 1.72
 }

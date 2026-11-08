@@ -35,28 +35,28 @@
   "asOfDate": "2026-10-01"
  },
  "nav": {
-  "display": "$34.48",
-  "value": 34.48,
-  "asOfDate": "Oct 30 2026"
+  "display": "$34.28",
+  "value": 34.28,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$34.48",
-  "value": 34.48,
-  "asOfDate": "Oct 30 2026"
+  "display": "$34.29",
+  "value": 34.29,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.00%",
-  "value": 0,
+  "display": "0.03%",
+  "value": 0.03,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$37.07M",
-  "value": 37068557,
-  "asOfDate": "Oct 30 2026",
+  "display": "$35.99M",
+  "value": 35994191,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 1075002
+  "outstanding": 1050002
  },
  "yields": {
   "dividendYield": null,
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 1.59,
-   "ytd": 4.21,
-   "yr1": 6.01,
+   "asOfDate": "2026-10-30",
+   "mo3": 1.32,
+   "ytd": 4.45,
+   "yr1": 5.7,
    "yr3": null,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 6.17
+   "sinceInception": 6
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -113,7 +113,7 @@
   ],
   "pageSize": 250,
   "totalRows": 5,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -121,14 +121,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 448,
-  "asOfDate": "2026-10-30",
+  "totalRows": 453,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 5,
- "historyCount": 448,
+ "historyCount": 453,
  "distributionCount": 0,
- "netAssets": 37068557,
+ "netAssets": 35994191,
  "dividendYield": null,
  "secYield": null
 }

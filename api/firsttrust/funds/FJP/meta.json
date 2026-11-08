@@ -35,24 +35,24 @@
   "asOfDate": "2026-05-01"
  },
  "nav": {
-  "display": "$73.08",
-  "value": 73.08,
-  "asOfDate": "Oct 30 2026"
+  "display": "$67.43",
+  "value": 67.43,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$72.75",
-  "value": 72.75,
-  "asOfDate": "Oct 30 2026"
+  "display": "$68.53",
+  "value": 68.53,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "—",
-  "value": null,
+  "display": "1.68%",
+  "value": 1.68,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$263.08M",
-  "value": 263076050,
-  "asOfDate": "Oct 30 2026",
+  "display": "$242.76M",
+  "value": 242761051,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 2.92,
-   "ytd": 17.6,
-   "yr1": 22.34,
-   "yr3": 19.46,
-   "yr5": 11.1,
-   "yr10": 7.06,
-   "sinceInception": 6.33
+   "asOfDate": "2026-10-30",
+   "mo3": -2.38,
+   "ytd": 10.21,
+   "yr1": 12.75,
+   "yr3": 18.91,
+   "yr5": 10.36,
+   "yr10": 6.23,
+   "sinceInception": 5.85
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -366,7 +366,7 @@
   ],
   "pageSize": 250,
   "totalRows": 102,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -377,14 +377,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3907,
-  "asOfDate": "2026-10-30",
+  "totalRows": 3912,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 102,
- "historyCount": 3907,
+ "historyCount": 3912,
  "distributionCount": 36,
- "netAssets": 263076050,
+ "netAssets": 242761051,
  "dividendYield": 2.65,
  "secYield": 1.76
 }

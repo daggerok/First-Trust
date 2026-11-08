@@ -35,24 +35,24 @@
   "asOfDate": "2026-09-21"
  },
  "nav": {
-  "display": "$28.17",
-  "value": 28.17,
-  "asOfDate": "Oct 30 2026"
+  "display": "$27.93",
+  "value": 27.93,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$28.24",
-  "value": 28.24,
-  "asOfDate": "Oct 30 2026"
+  "display": "$28.00",
+  "value": 28,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.32%",
-  "value": 0.32,
+  "display": "0.47%",
+  "value": 0.47,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$135.23M",
-  "value": 135232024,
-  "asOfDate": "Oct 30 2026",
+  "display": "$134.07M",
+  "value": 134071549,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 2.14,
-   "ytd": 8.11,
-   "yr1": 10.61,
-   "yr3": 13.75,
-   "yr5": 7.38,
+   "asOfDate": "2026-10-30",
+   "mo3": 0.86,
+   "ytd": 8.22,
+   "yr1": 10.86,
+   "yr3": 14.82,
+   "yr5": 6.95,
    "yr10": null,
-   "sinceInception": 7.06
+   "sinceInception": 6.96
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -113,7 +113,7 @@
   ],
   "pageSize": 250,
   "totalRows": 5,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -122,14 +122,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1285,
-  "asOfDate": "2026-10-30",
+  "totalRows": 1290,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 5,
- "historyCount": 1285,
+ "historyCount": 1290,
  "distributionCount": 0,
- "netAssets": 135232024,
+ "netAssets": 134071549,
  "dividendYield": null,
  "secYield": null
 }

@@ -35,24 +35,24 @@
   "asOfDate": "2026-02-02"
  },
  "nav": {
-  "display": "$51.09",
-  "value": 51.09,
-  "asOfDate": "Oct 30 2026"
+  "display": "$47.51",
+  "value": 47.51,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$51.16",
-  "value": 51.16,
-  "asOfDate": "Oct 30 2026"
+  "display": "$47.65",
+  "value": 47.65,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.25%",
-  "value": 0.25,
+  "display": "0.15%",
+  "value": 0.15,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$247.78M",
-  "value": 247784419,
-  "asOfDate": "Oct 30 2026",
+  "display": "$230.40M",
+  "value": 230401219,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 4.74,
-   "ytd": 37.7,
-   "yr1": 43.61,
+   "asOfDate": "2026-10-30",
+   "mo3": 0.89,
+   "ytd": 24.28,
+   "yr1": 17.94,
    "yr3": null,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 41.12
+   "sinceInception": 31.87
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -120,8 +120,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 53,
-  "asOfDate": "2026-10-30",
+  "totalRows": 52,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -129,14 +129,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 486,
-  "asOfDate": "2026-10-30",
+  "totalRows": 491,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 53,
- "historyCount": 486,
+ "holdingsCount": 52,
+ "historyCount": 491,
  "distributionCount": 1,
- "netAssets": 247784419,
+ "netAssets": 230401219,
  "dividendYield": null,
  "secYield": null
 }

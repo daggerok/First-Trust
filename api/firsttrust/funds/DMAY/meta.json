@@ -35,24 +35,24 @@
   "asOfDate": "2026-05-18"
  },
  "nav": {
-  "display": "$47.79",
-  "value": 47.79,
-  "asOfDate": "Oct 30 2026"
+  "display": "$47.03",
+  "value": 47.03,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$47.76",
-  "value": 47.76,
-  "asOfDate": "Oct 30 2026"
+  "display": "$47.04",
+  "value": 47.04,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "—",
-  "value": null,
+  "display": "0.02%",
+  "value": 0.02,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$390.71M",
-  "value": 390706307,
-  "asOfDate": "Oct 30 2026",
+  "display": "$384.44M",
+  "value": 384438643,
+  "asOfDate": "Nov 06 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
@@ -73,14 +73,14 @@
  "returns": {
   "derivedFrom": "First Trust published NAV performance (month-end and quarter-end; average annualized for periods of one year or more)",
   "monthEnd": {
-   "asOfDate": "2026-09-30",
-   "mo3": 1.74,
-   "ytd": 6,
-   "yr1": 8,
-   "yr3": 12.17,
-   "yr5": 7.25,
+   "asOfDate": "2026-10-30",
+   "mo3": 1.19,
+   "ytd": 5.73,
+   "yr1": 7.13,
+   "yr3": 12.61,
+   "yr5": 6.73,
    "yr10": null,
-   "sinceInception": 7.42
+   "sinceInception": 7.28
   },
   "quarterEnd": {
    "asOfDate": "2026-09-30",
@@ -113,7 +113,7 @@
   ],
   "pageSize": 250,
   "totalRows": 5,
-  "asOfDate": "2026-10-30",
+  "asOfDate": "2026-11-06",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -122,14 +122,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1623,
-  "asOfDate": "2026-10-30",
+  "totalRows": 1628,
+  "asOfDate": "2026-11-06",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 5,
- "historyCount": 1623,
+ "historyCount": 1628,
  "distributionCount": 0,
- "netAssets": 390706307,
+ "netAssets": 384438643,
  "dividendYield": null,
  "secYield": null
 }
