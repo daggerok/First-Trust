@@ -65,6 +65,13 @@ The updater uses issuer-published NAV performance values for month-end and quart
 - `metrics.returnsBasis` is always a non-empty label of how returns are computed: official First Trust NAV total returns from the month-end performance table, with cumulative 3-, 5- and 10-year values derived from the published annualized ones
 - `metrics.performanceAsOf` is the ISO date (`YYYY-MM-DD`) of that performance table, not the NAV date; it is `null` only for funds without a published performance table yet (for example newly launched funds)
 - `metrics.dividendYieldBasis` is a short code for the definition behind `dividendYield`, `null` exactly when `dividendYield` is `null` (the free text stays in `meta.json` as `yields.dividendYieldKind`); the code is kept together with the yield it describes when a previous value is retained
+- Swing metrics (shared `swing` block, the formulas of the Stocks feed) from the Yahoo Finance daily closes since listing (chart API, split-adjusted, not dividend-adjusted; the published NAV and market price history is not split-adjusted), with the last close as the price. Read for every fund the run updates (none after the 25-minute soft deadline); a failed chart, or one that starts more than 31 days after the published history, keeps the published values; `null` (never `0`) when the history is too short:
+  - `pctFrom52wHigh` - last close against the highest close of the last 52 weeks, in percent
+  - `athPrice`, `athDate`, `athBasis` - highest close of the whole history, its date and the history it covers (`daily closes since <first date>`)
+  - `pctFromAth` - last close against `athPrice`, in percent
+  - `volatility1y` - annualized volatility of the last 252 daily log returns, in percent (needs 253 closes)
+  - `sigmaFromMean60d` - distance of the last close from the mean of the last 60 closes, in sample standard deviations
+  - `high60d`, `low60d` - highest and lowest of the last 60 closes
 
 | `dividendYieldBasis` | When First Trust data uses it |
 | --- | --- |
