@@ -611,6 +611,10 @@ function chartJson(close: number): string {
     indicators: { quote: [{ close: [close - 2, close - 1, close], volume: [10, 20, 30] }], adjclose: [{ adjclose: [close - 2, close - 1, close] }] } }] } });
 }
 
+// the swing block's daily chart (period1=0): 300 closes rising 0.1 a day from 2025-01-02
+const SWING_CHART_URL = /query1\.finance\.yahoo\.com\/v8\/finance\/chart\/[^?]+\?period1=0&period2=\d+&interval=1d&includePrePost=false/;
+const swingChart = () => ({ chart: { result: [{ meta: { dataGranularity: '1d' }, timestamp: Array.from({ length: 300 }, (_, i) => Date.UTC(2025, 0, 2) / 1000 + i * 86_400), indicators: { quote: [{ close: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }] } }] } });
+
 function installMockNetwork(options: MockOptions = {}): { stats: { peak: number; calls: number; summaries: string[]; urls: string[] }; restore: () => void } {
   const original = globalThis.fetch;
   const stats = { peak: 0, calls: 0, summaries: [] as string[], urls: [] as string[] };
@@ -632,6 +636,7 @@ function installMockNetwork(options: MockOptions = {}): { stats: { peak: number;
       if (official && init?.method === 'POST') return new Response(new Uint8Array(priceXlsxOf(official)), { headers: { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' } });
       if (official) return new Response('<input type="hidden" name="__VIEWSTATE" value="v" /><input type="hidden" name="ctl00$ContentPlaceHolder1$PriceHistory$txtMinDate" value="1/6/2014" /><input type="hidden" name="ctl00$ContentPlaceHolder1$PriceHistory$txtMaxDate" value="9/25/2026" />');
       if (url.includes('EtfPriceHistory')) return new Response('no export', { status: 404 });
+      if (SWING_CHART_URL.test(url)) return new Response(JSON.stringify(swingChart()));
       if (url.includes('finance.yahoo.com')) return options.failFor?.history?.includes(ticker) ? new Response('x', { status: 404 }) : new Response(chartJson(ticker === 'FDN' ? 291.5 : 23.7));
       return new Response('unexpected', { status: 404 });
     } finally {
@@ -707,6 +712,12 @@ describe('pipeline', () => {
         // the 52-week keys are in every row, computed from its history pages (range-52w block)
         const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
         for (const fund of index.funds) expect(Object.keys(fund.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
+        // the swing keys from the Yahoo daily closes (period1=0) of the fund the run updated (swing block); FDN keeps its published ones
+        const SWING_KEYS = ['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d'];
+        for (const fund of index.funds) expect(Object.keys(fund.metrics).slice(-11, -2)).toEqual(SWING_KEYS);
+        expect(net.stats.urls.filter((url) => SWING_CHART_URL.test(url)).map((url) => /chart\/([^?]+)/.exec(url)?.[1])).toEqual(['FTHI']);
+        const swing = (ticker: string) => { const m = index.funds.find((fund: any) => fund.ticker === ticker).metrics; return [m.athBasis, m.athPrice, m.high60d, m.volatility1y]; };
+        expect([swing('FTHI'), swing('FDN'), swing('NEWT')]).toEqual([['daily closes since 2025-01-02', 69.9, 69.9, expect.any(Number)], ['daily closes since 2025-01-02', 69.9, 69.9, expect.any(Number)], [null, null, null, null]]);
         expect(existsSync(`${root}/funds/NEWT`)).toBe(false);
         const after = snapshotTree(root);
         for (const path of Object.keys(before).filter((name) => name.startsWith('funds/FDN/'))) expect(after[path]).toBe(before[path]);
