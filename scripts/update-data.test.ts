@@ -613,7 +613,7 @@ function chartJson(close: number): string {
 
 // the swing block's daily chart (period1=0): 300 closes rising 0.1 a day from 2025-01-02
 const SWING_CHART_URL = /query1\.finance\.yahoo\.com\/v8\/finance\/chart\/[^?]+\?period1=0&period2=\d+&interval=1d&includePrePost=false/;
-const swingChart = () => ({ chart: { result: [{ meta: { dataGranularity: '1d', firstTradeDate: Date.UTC(2025, 0, 2) / 1000 }, events: { dividends: { [String(Date.parse('2026-09-21T00:00:00Z') / 1000)]: { amount: 0.25, date: Date.parse('2026-09-21T00:00:00Z') / 1000 } } }, timestamp: Array.from({ length: 300 }, (_, i) => Date.UTC(2025, 0, 2) / 1000 + i * 86_400), indicators: { quote: [{ close: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }] } }] } });
+const swingChart = () => ({ chart: { result: [{ meta: { dataGranularity: '1d', firstTradeDate: Date.UTC(2025, 0, 2) / 1000 }, events: { dividends: { [String(Date.parse('2026-09-21T00:00:00Z') / 1000)]: { amount: 0.25, date: Date.parse('2026-09-21T00:00:00Z') / 1000 } } }, timestamp: Array.from({ length: 300 }, (_, i) => Date.UTC(2025, 0, 2) / 1000 + i * 86_400), indicators: { quote: [{ close: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }], adjclose: [{ adjclose: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }] } }] } });
 
 function installMockNetwork(options: MockOptions = {}): { stats: { peak: number; calls: number; summaries: string[]; urls: string[] }; restore: () => void } {
   const original = globalThis.fetch;
@@ -714,14 +714,23 @@ describe('pipeline', () => {
         for (const fund of index.funds) expect(Object.keys(fund.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
         // the swing keys from the Yahoo daily closes (period1=0) of the fund the run updated (swing block); FDN keeps its published ones
         const SWING_KEYS = ['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d'];
-        for (const fund of index.funds) expect(Object.keys(fund.metrics).slice(-17, -8)).toEqual(SWING_KEYS);
+        for (const fund of index.funds) expect(Object.keys(fund.metrics).slice(-51, -42)).toEqual(SWING_KEYS);
         // the dividend keys from the Yahoo dividend events of the same chart (dividends block, tap mode: no extra request): one payment in the last 12 months,
-        // no complete year after the listing year, so growth, streak and cut are null (never 0)
-        const DIVIDEND_KEYS = ['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y'];
-        for (const fund of index.funds) expect(Object.keys(fund.metrics).slice(-8, -2)).toEqual(DIVIDEND_KEYS);
-        expect(DIVIDEND_KEYS.map((key) => index.funds.find((fund: any) => fund.ticker === 'FTHI').metrics[key])).toEqual([0.25, null, null, null, null, null]);
+        // no complete year after the listing year, so growth, streak and cut are null (never 0); payFrequency is null under a year of history
+        const DIVIDEND_KEYS = ['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y', 'paymentsPerYear', 'payFrequency'];
+        for (const fund of index.funds) expect(Object.keys(fund.metrics).slice(-42, -34)).toEqual(DIVIDEND_KEYS);
+        expect(DIVIDEND_KEYS.map((key) => index.funds.find((fund: any) => fund.ticker === 'FTHI').metrics[key])).toEqual([0.25, null, null, null, null, null, 1, null]);
+        // the benchmark keys against SPY and QQQ from the same chart (benchmark block, tap mode); the mock gives every ticker the same
+        // 300 bars, so the fund equals the benchmarks: under a year of calendar history (horizons null), beta and correlation 1
+        const BENCHMARK_KEYS = ['perf1y', 'perf3y', 'perf5y', 'perf10y', 'perfSi', 'maxDrawdown1y', 'maxDrawdown3y', 'maxDrawdown5y', 'maxDrawdown10y',
+          'vsSpy1y', 'vsSpy3y', 'vsSpy5y', 'vsSpy10y', 'beta1ySpy', 'corr1ySpy', 'upCapture3ySpy', 'downCapture3ySpy', 'relStrength3mSpy', 'stressReturnSpy', 'stressBasisSpy',
+          'vsQqq1y', 'vsQqq3y', 'vsQqq5y', 'vsQqq10y', 'beta1yQqq', 'corr1yQqq', 'upCapture3yQqq', 'downCapture3yQqq', 'relStrength3mQqq', 'stressReturnQqq', 'stressBasisQqq', 'benchmarkAsOf'];
+        for (const fund of index.funds) expect(Object.keys(fund.metrics).slice(-34, -2)).toEqual(BENCHMARK_KEYS);
+        const fthi = index.funds.find((fund: any) => fund.ticker === 'FTHI').metrics;
+        expect([fthi.perf1y, fthi.vsSpy1y, fthi.beta1ySpy, fthi.corr1ySpy, fthi.relStrength3mQqq, fthi.stressReturnSpy, fthi.benchmarkAsOf]).toEqual([null, null, 1, 1, 0, null, '2025-10-28']);
+        // one request per updated fund feeds swing, dividends and benchmark; SPY and QQQ are read once as the benchmarks
         expect(net.stats.urls.filter((url) => /chart\/FTHI\?period1=0&.*includePrePost=false/.test(url))).toHaveLength(1);
-        expect(net.stats.urls.filter((url) => SWING_CHART_URL.test(url)).map((url) => /chart\/([^?]+)/.exec(url)?.[1])).toEqual(['FTHI']);
+        expect(net.stats.urls.filter((url) => SWING_CHART_URL.test(url)).map((url) => /chart\/([^?]+)/.exec(url)?.[1]).sort()).toEqual(['FTHI', 'QQQ', 'SPY']);
         const swing = (ticker: string) => { const m = index.funds.find((fund: any) => fund.ticker === ticker).metrics; return [m.athBasis, m.athPrice, m.high60d, m.volatility1y]; };
         expect([swing('FTHI'), swing('FDN'), swing('NEWT')]).toEqual([['daily closes since 2025-01-02', 69.9, 69.9, expect.any(Number)], ['daily closes since 2025-01-02', 69.9, 69.9, expect.any(Number)], [null, null, null, null]]);
         expect(existsSync(`${root}/funds/NEWT`)).toBe(false);
