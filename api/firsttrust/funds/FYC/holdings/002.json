@@ -10,40 +10,31 @@
  ],
  "rows": [
   {
-   "Name": "ProPetro Holding Corp.",
-   "Ticker": "PUMP",
-   "Identifier": "74347M108",
-   "Weight": "0.1",
-   "Market Value": "1387548.8",
-   "Shares Held": "197095",
-   "Asset Category": "Energy"
-  },
-  {
    "Name": "Upstart Holdings, Inc.",
    "Ticker": "UPST",
    "Identifier": "91680M107",
    "Weight": "0.1",
-   "Market Value": "1374000.18",
+   "Market Value": "1288362",
    "Shares Held": "75786",
    "Asset Category": "Financials"
+  },
+  {
+   "Name": "Intuitive Machines, Inc. (Class A)",
+   "Ticker": "LUNR",
+   "Identifier": "46125A100",
+   "Weight": "0.09",
+   "Market Value": "1196651.46",
+   "Shares Held": "122357",
+   "Asset Category": "Industrials"
   },
   {
    "Name": "Lucid Group, Inc. (Class A)",
    "Ticker": "LCID",
    "Identifier": "549498202",
    "Weight": "0.09",
-   "Market Value": "1245744.81",
+   "Market Value": "1194373.89",
    "Shares Held": "428091",
    "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Navitas Semiconductor Corp. (Class A)",
-   "Ticker": "NVTS",
-   "Identifier": "63942X106",
-   "Weight": "0.09",
-   "Market Value": "1140562.4",
-   "Shares Held": "150074",
-   "Asset Category": "Information Technology"
   },
   {
    "Name": "Recursion Pharmaceuticals, Inc. (Class A)",
@@ -55,76 +46,85 @@
    "Asset Category": "Health Care"
   },
   {
-   "Name": "Redwire Corporation",
-   "Ticker": "RDW",
-   "Identifier": "75776W103",
-   "Weight": "0.09",
-   "Market Value": "1131520.98",
-   "Shares Held": "166891",
-   "Asset Category": "Industrials"
-  },
-  {
    "Name": "Arcus Biosciences, Inc.",
    "Ticker": "RCUS",
    "Identifier": "03969F109",
    "Weight": "0.08",
-   "Market Value": "1105620.23",
+   "Market Value": "1064471.46",
    "Shares Held": "67457",
    "Asset Category": "Health Care"
+  },
+  {
+   "Name": "Navitas Semiconductor Corp. (Class A)",
+   "Ticker": "NVTS",
+   "Identifier": "63942X106",
+   "Weight": "0.08",
+   "Market Value": "1076030.58",
+   "Shares Held": "150074",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Redwire Corporation",
+   "Ticker": "RDW",
+   "Identifier": "75776W103",
+   "Weight": "0.08",
+   "Market Value": "1086460.41",
+   "Shares Held": "166891",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Rush Street Interactive, Inc.",
+   "Ticker": "RSI",
+   "Identifier": "782011100",
+   "Weight": "0.08",
+   "Market Value": "983024.88",
+   "Shares Held": "85704",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "0.08",
+   "Market Value": "1018032.67",
+   "Shares Held": "1018033",
+   "Asset Category": "Other"
   },
   {
    "Name": "Keel Infrastructure Corp.",
    "Ticker": "KEEL",
    "Identifier": "486917107",
    "Weight": "0.07",
-   "Market Value": "863758",
+   "Market Value": "844014.96",
    "Shares Held": "493576",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Rush Street Interactive, Inc.",
-   "Ticker": "RSI",
-   "Identifier": "782011100",
-   "Weight": "0.07",
-   "Market Value": "991595.28",
-   "Shares Held": "85704",
-   "Asset Category": "Consumer Discretionary"
+   "Name": "Atlas Energy Solutions Inc.",
+   "Ticker": "AESI",
+   "Identifier": "642045108",
+   "Weight": "0.06",
+   "Market Value": "815310.26",
+   "Shares Held": "145073",
+   "Asset Category": "Energy"
   },
   {
    "Name": "SoundHound AI, Inc. (Class A)",
    "Ticker": "SOUN",
    "Identifier": "836100107",
-   "Weight": "0.07",
-   "Market Value": "885631.32",
+   "Weight": "0.06",
+   "Market Value": "842218.02",
    "Shares Held": "289422",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "US Dollar",
-   "Ticker": "-",
-   "Identifier": "$USD",
-   "Weight": "0.07",
-   "Market Value": "988679.36",
-   "Shares Held": "988679",
-   "Asset Category": "Other"
   },
   {
    "Name": "Trump Media & Technology Group Corp.",
    "Ticker": "DJT",
    "Identifier": "25400Q105",
    "Weight": "0.06",
-   "Market Value": "779808.93",
+   "Market Value": "786539.72",
    "Shares Held": "192308",
    "Asset Category": "Communication Services"
-  },
-  {
-   "Name": "Atlas Energy Solutions Inc.",
-   "Ticker": "AESI",
-   "Identifier": "642045108",
-   "Weight": "0.05",
-   "Market Value": "710857.7",
-   "Shares Held": "145073",
-   "Asset Category": "Energy"
   },
   {
    "Name": "OmniAb Inc. 12.50 Earnout",
@@ -145,5 +145,5 @@
    "Asset Category": "Health Care"
   }
  ],
- "asOfDate": "2026-11-17"
+ "asOfDate": "2026-11-19"
 }

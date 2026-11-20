@@ -35,14 +35,14 @@
   "asOfDate": "2026-01-02"
  },
  "nav": {
-  "display": "$41.77",
-  "value": 41.77,
-  "asOfDate": "Nov 18 2026"
+  "display": "$41.79",
+  "value": 41.79,
+  "asOfDate": "Nov 19 2026"
  },
  "marketPrice": {
-  "display": "$41.70",
-  "value": 41.7,
-  "asOfDate": "Nov 18 2026"
+  "display": "$41.66",
+  "value": 41.66,
+  "asOfDate": "Nov 19 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -51,12 +51,12 @@
  },
  "aum": {
   "display": "$2.74B",
-  "value": 2739964558,
-  "asOfDate": "Nov 18 2026",
+  "value": 2737507069,
+  "asOfDate": "Nov 19 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 65600002
+  "outstanding": 65500002
  },
  "yields": {
   "dividendYield": 4.83,
@@ -95,8 +95,8 @@
  },
  "distributions": {
   "frequency": "Monthly",
-  "latestAmount": 0.165,
-  "latestExDate": "2026-10-21",
+  "latestAmount": 0.167,
+  "latestExDate": "2026-11-20",
   "headers": [
    "Ex-Date",
    "Record Date",
@@ -105,6 +105,13 @@
    "Distribution Type"
   ],
   "rows": [
+   [
+    "2026-11-20",
+    "2026-11-20",
+    "2026-11-30",
+    "0.167000",
+    "Ordinary Distributions"
+   ],
    [
     "2026-10-21",
     "2026-10-21",
@@ -954,8 +961,8 @@
    "holdings/002.json"
   ],
   "pageSize": 250,
-  "totalRows": 416,
-  "asOfDate": "2026-11-17",
+  "totalRows": 415,
+  "asOfDate": "2026-11-19",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -965,14 +972,14 @@
    "history/003.json"
   ],
   "pageSize": 1000,
-  "totalRows": 2454,
-  "asOfDate": "2026-11-18",
+  "totalRows": 2455,
+  "asOfDate": "2026-11-19",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 416,
- "historyCount": 2454,
- "distributionCount": 120,
- "netAssets": 2739964558,
+ "holdingsCount": 415,
+ "historyCount": 2455,
+ "distributionCount": 121,
+ "netAssets": 2737507069,
  "dividendYield": 4.83,
  "secYield": 5.03
 }

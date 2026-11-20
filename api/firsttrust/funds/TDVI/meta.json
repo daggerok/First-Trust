@@ -35,14 +35,14 @@
   "asOfDate": "2026-03-02"
  },
  "nav": {
-  "display": "$29.38",
-  "value": 29.38,
-  "asOfDate": "Nov 18 2026"
+  "display": "$28.94",
+  "value": 28.94,
+  "asOfDate": "Nov 19 2026"
  },
  "marketPrice": {
-  "display": "$29.48",
-  "value": 29.48,
-  "asOfDate": "Nov 18 2026"
+  "display": "$28.96",
+  "value": 28.96,
+  "asOfDate": "Nov 19 2026"
  },
  "premiumDiscount": {
   "display": "0.03%",
@@ -50,13 +50,13 @@
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$639.10M",
-  "value": 639099430,
-  "asOfDate": "Nov 18 2026",
+  "display": "$651.11M",
+  "value": 651111560,
+  "asOfDate": "Nov 19 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 21750002
+  "outstanding": 22500002
  },
  "yields": {
   "dividendYield": 7.59,
@@ -95,8 +95,8 @@
  },
  "distributions": {
   "frequency": "Monthly",
-  "latestAmount": 0.1989,
-  "latestExDate": "2026-10-21",
+  "latestAmount": 0.1962,
+  "latestExDate": "2026-11-20",
   "headers": [
    "Ex-Date",
    "Record Date",
@@ -105,6 +105,13 @@
    "Distribution Type"
   ],
   "rows": [
+   [
+    "2026-11-20",
+    "2026-11-20",
+    "2026-11-30",
+    "0.196200",
+    "Ordinary Distributions"
+   ],
    [
     "2026-10-21",
     "2026-10-21",
@@ -380,7 +387,7 @@
   ],
   "pageSize": 250,
   "totalRows": 90,
-  "asOfDate": "2026-11-17",
+  "asOfDate": "2026-11-19",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -388,14 +395,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 823,
-  "asOfDate": "2026-11-18",
+  "totalRows": 824,
+  "asOfDate": "2026-11-19",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 90,
- "historyCount": 823,
- "distributionCount": 38,
- "netAssets": 639099430,
+ "historyCount": 824,
+ "distributionCount": 39,
+ "netAssets": 651111560,
  "dividendYield": 7.59,
  "secYield": 1.72
 }

@@ -35,28 +35,28 @@
   "asOfDate": "2026-08-19"
  },
  "nav": {
-  "display": "$20.29",
-  "value": 20.29,
-  "asOfDate": "Nov 18 2026"
+  "display": "$19.62",
+  "value": 19.62,
+  "asOfDate": "Nov 19 2026"
  },
  "marketPrice": {
-  "display": "$20.27",
-  "value": 20.27,
-  "asOfDate": "Nov 18 2026"
+  "display": "$19.65",
+  "value": 19.65,
+  "asOfDate": "Nov 19 2026"
  },
  "premiumDiscount": {
-  "display": "0.10%",
-  "value": 0.1,
+  "display": "0.15%",
+  "value": 0.15,
   "basis": "First Trust published bid/ask premium"
  },
  "aum": {
-  "display": "$7.61M",
-  "value": 7607291,
-  "asOfDate": "Nov 18 2026",
+  "display": "$8.34M",
+  "value": 8340405,
+  "asOfDate": "Nov 19 2026",
   "source": "First Trust fund summary (Total Net Assets)"
  },
  "shares": {
-  "outstanding": 375002
+  "outstanding": 425002
  },
  "yields": {
   "dividendYield": 1.59,
@@ -95,8 +95,8 @@
  },
  "distributions": {
   "frequency": "Monthly",
-  "latestAmount": 0.3683,
-  "latestExDate": "2026-10-21",
+  "latestAmount": 0.2677,
+  "latestExDate": "2026-11-20",
   "headers": [
    "Ex-Date",
    "Record Date",
@@ -105,6 +105,13 @@
    "Distribution Type"
   ],
   "rows": [
+   [
+    "2026-11-20",
+    "2026-11-20",
+    "2026-11-30",
+    "0.267700",
+    "Ordinary Distributions"
+   ],
    [
     "2026-10-21",
     "2026-10-21",
@@ -128,7 +135,7 @@
   ],
   "pageSize": 250,
   "totalRows": 9,
-  "asOfDate": "2026-11-17",
+  "asOfDate": "2026-11-19",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -136,14 +143,14 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 65,
-  "asOfDate": "2026-11-18",
+  "totalRows": 66,
+  "asOfDate": "2026-11-19",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
  "holdingsCount": 9,
- "historyCount": 65,
- "distributionCount": 2,
- "netAssets": 7607291,
+ "historyCount": 66,
+ "distributionCount": 3,
+ "netAssets": 8340405,
  "dividendYield": 1.59,
  "secYield": -0.48
 }
