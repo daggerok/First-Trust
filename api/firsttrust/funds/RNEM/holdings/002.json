@@ -10,29 +10,11 @@
  ],
  "rows": [
   {
-   "Name": "Pepkor Holdings Limited",
-   "Ticker": "PPH.SJ",
-   "Identifier": "S60064102",
-   "Weight": "0.04",
-   "Market Value": "6530.85",
-   "Shares Held": "6698",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "PT ANTAM Persero Tbk",
-   "Ticker": "ANTM.IJ",
-   "Identifier": "Y7116R158",
-   "Weight": "0.04",
-   "Market Value": "6329.3",
-   "Shares Held": "45186",
-   "Asset Category": "Basic Materials"
-  },
-  {
    "Name": "PT United Tractors Tbk",
    "Ticker": "UNTR.IJ",
    "Identifier": "Y7146Y140",
    "Weight": "0.04",
-   "Market Value": "6978.65",
+   "Market Value": "6781.85",
    "Shares Held": "5341",
    "Asset Category": "Basic Materials"
   },
@@ -41,7 +23,7 @@
    "Ticker": "TOASO.TI",
    "Identifier": "M87892101",
    "Weight": "0.04",
-   "Market Value": "6312.55",
+   "Market Value": "6348.09",
    "Shares Held": "1281",
    "Asset Category": "Consumer Discretionary"
   },
@@ -50,25 +32,43 @@
    "Ticker": "ISCTR.TI",
    "Identifier": "M8933F115",
    "Weight": "0.04",
-   "Market Value": "7301.05",
+   "Market Value": "7190.54",
    "Shares Held": "29106",
    "Asset Category": "Financials"
+  },
+  {
+   "Name": "Vitrox Corporation Bhd",
+   "Ticker": "VITRO.MK",
+   "Identifier": "Y937A3108",
+   "Weight": "0.04",
+   "Market Value": "7305.75",
+   "Shares Held": "3400",
+   "Asset Category": "Technology"
   },
   {
    "Name": "Woolworths Holdings Limited",
    "Ticker": "WHL.SJ",
    "Identifier": "S98758121",
    "Weight": "0.04",
-   "Market Value": "6504.17",
+   "Market Value": "6694.49",
    "Shares Held": "3211",
    "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Brazilian Real",
+   "Ticker": "-",
+   "Identifier": "$BRL",
+   "Weight": "0.03",
+   "Market Value": "4366.37",
+   "Shares Held": "25897",
+   "Asset Category": "Other"
   },
   {
    "Name": "Katilimevim Tasarruf Finansman AS",
    "Ticker": "KTLEV.TI",
    "Identifier": "M6250U103",
    "Weight": "0.03",
-   "Market Value": "5747.18",
+   "Market Value": "4871.73",
    "Shares Held": "36950",
    "Asset Category": "Financials"
   },
@@ -77,7 +77,7 @@
    "Ticker": "MULT3.BZ",
    "Identifier": "P69913187",
    "Weight": "0.03",
-   "Market Value": "5501.9",
+   "Market Value": "5447.9",
    "Shares Held": "1238",
    "Asset Category": "Real Estate"
   },
@@ -86,7 +86,7 @@
    "Ticker": "AADI.IJ",
    "Identifier": "Y0044R101",
    "Weight": "0.03",
-   "Market Value": "4900.16",
+   "Market Value": "5008.76",
    "Shares Held": "9235",
    "Asset Category": "Energy"
   },
@@ -95,16 +95,34 @@
    "Ticker": "ADRO.IJ",
    "Identifier": "Y7087B109",
    "Weight": "0.03",
-   "Market Value": "5254.83",
+   "Market Value": "5349.41",
    "Shares Held": "41616",
    "Asset Category": "Energy"
+  },
+  {
+   "Name": "PT Barito Pacific Tbk",
+   "Ticker": "BRPT.IJ",
+   "Identifier": "Y71198124",
+   "Weight": "0.03",
+   "Market Value": "4217.69",
+   "Shares Held": "102915",
+   "Asset Category": "Basic Materials"
+  },
+  {
+   "Name": "PT Bumi Resources Minerals Tbk",
+   "Ticker": "BRMS.IJ",
+   "Identifier": "Y711AT100",
+   "Weight": "0.03",
+   "Market Value": "4188.14",
+   "Shares Held": "245077",
+   "Asset Category": "Basic Materials"
   },
   {
    "Name": "PT Merdeka Copper Gold Tbk",
    "Ticker": "MDKA.IJ",
    "Identifier": "Y60132100",
    "Weight": "0.03",
-   "Market Value": "4833.78",
+   "Market Value": "5160.98",
    "Shares Held": "50207",
    "Asset Category": "Basic Materials"
   },
@@ -113,7 +131,7 @@
    "Ticker": "EMAS.IJ",
    "Identifier": "Y5928C104",
    "Weight": "0.03",
-   "Market Value": "4589.72",
+   "Market Value": "4976.57",
    "Shares Held": "18718",
    "Asset Category": "Basic Materials"
   },
@@ -122,7 +140,7 @@
    "Ticker": "EREGL.TI",
    "Identifier": "M40710101",
    "Weight": "0.02",
-   "Market Value": "3999.68",
+   "Market Value": "3876.07",
    "Shares Held": "6501",
    "Asset Category": "Basic Materials"
   },
@@ -131,26 +149,8 @@
    "Ticker": "GUBRF.TI",
    "Identifier": "M5246E108",
    "Weight": "0.02",
-   "Market Value": "3032.78",
+   "Market Value": "3089.46",
    "Shares Held": "568",
-   "Asset Category": "Basic Materials"
-  },
-  {
-   "Name": "PT Barito Pacific Tbk",
-   "Ticker": "BRPT.IJ",
-   "Identifier": "Y71198124",
-   "Weight": "0.02",
-   "Market Value": "3607.91",
-   "Shares Held": "102915",
-   "Asset Category": "Basic Materials"
-  },
-  {
-   "Name": "PT Bumi Resources Minerals Tbk",
-   "Ticker": "BRMS.IJ",
-   "Identifier": "Y711AT100",
-   "Weight": "0.02",
-   "Market Value": "3746.27",
-   "Shares Held": "245077",
    "Asset Category": "Basic Materials"
   },
   {
@@ -158,8 +158,17 @@
    "Ticker": "BUMI.IJ",
    "Identifier": "Y7122M110",
    "Weight": "0.02",
-   "Market Value": "3784.35",
+   "Market Value": "4113.45",
    "Shares Held": "577863",
+   "Asset Category": "Energy"
+  },
+  {
+   "Name": "PT Petrindo Jaya Kreasi Tbk",
+   "Ticker": "CUAN.IJ",
+   "Identifier": "Y6862Q109",
+   "Weight": "0.02",
+   "Market Value": "2703.33",
+   "Shares Held": "119676",
    "Asset Category": "Energy"
   },
   {
@@ -167,7 +176,7 @@
    "Ticker": "PTRO.IJ",
    "Identifier": "Y6826Q104",
    "Weight": "0.02",
-   "Market Value": "3369.99",
+   "Market Value": "3900.98",
    "Shares Held": "28214",
    "Asset Category": "Basic Materials"
   },
@@ -176,7 +185,7 @@
    "Ticker": "TRALT.TI",
    "Identifier": "M6372R103",
    "Weight": "0.02",
-   "Market Value": "3626.06",
+   "Market Value": "3685.9",
    "Shares Held": "5227",
    "Asset Category": "Basic Materials"
   },
@@ -185,7 +194,7 @@
    "Ticker": "TCELL.TI",
    "Identifier": "M8903B102",
    "Weight": "0.02",
-   "Market Value": "4159.26",
+   "Market Value": "4083.24",
    "Shares Held": "2274",
    "Asset Category": "Telecommunications"
   },
@@ -194,7 +203,7 @@
    "Ticker": "DSTKF.TI",
    "Identifier": "M2784A101",
    "Weight": "0.01",
-   "Market Value": "1006.82",
+   "Market Value": "989.77",
    "Shares Held": "417",
    "Asset Category": "Financials"
   },
@@ -203,25 +212,16 @@
    "Ticker": "ODINE.TI",
    "Identifier": "M7517T111",
    "Weight": "0.01",
-   "Market Value": "1768.72",
+   "Market Value": "1558.47",
    "Shares Held": "1095",
    "Asset Category": "Telecommunications"
-  },
-  {
-   "Name": "PT Petrindo Jaya Kreasi Tbk",
-   "Ticker": "CUAN.IJ",
-   "Identifier": "Y6862Q109",
-   "Weight": "0.01",
-   "Market Value": "2195.68",
-   "Shares Held": "119676",
-   "Asset Category": "Energy"
   },
   {
    "Name": "YTL Power International Bhd (Warrants)",
    "Ticker": "2543628D.MK",
    "Identifier": "-",
    "Weight": "0.01",
-   "Market Value": "1175.93",
+   "Market Value": "1104.83",
    "Shares Held": "3120",
    "Asset Category": "Other"
   },
@@ -248,7 +248,7 @@
    "Ticker": "-",
    "Identifier": "$EGP",
    "Weight": "0",
-   "Market Value": "50.06",
+   "Market Value": "49.56",
    "Shares Held": "2694",
    "Asset Category": "Other"
   },
@@ -277,15 +277,6 @@
    "Weight": "0",
    "Market Value": "0",
    "Shares Held": "15021",
-   "Asset Category": "Other"
-  },
-  {
-   "Name": "Mexican Peso",
-   "Ticker": "-",
-   "Identifier": "$MXN",
-   "Weight": "0",
-   "Market Value": "0",
-   "Shares Held": "0",
    "Asset Category": "Other"
   },
   {
@@ -374,7 +365,7 @@
    "Ticker": "-",
    "Identifier": "$THB",
    "Weight": "0",
-   "Market Value": "334.83",
+   "Market Value": "334.74",
    "Shares Held": "11376",
    "Asset Category": "Other"
   },
@@ -392,10 +383,19 @@
    "Ticker": "2543633D.MK",
    "Identifier": "-",
    "Weight": "0",
-   "Market Value": "265.53",
+   "Market Value": "138.73",
    "Shares Held": "5200",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "Hong Kong Dollar",
+   "Ticker": "-",
+   "Identifier": "$HKD",
+   "Weight": "-0.02",
+   "Market Value": "-2801.92",
+   "Shares Held": "-21974",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-11-19"
+ "asOfDate": "2026-11-23"
 }
