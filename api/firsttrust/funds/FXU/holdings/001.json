@@ -10,20 +10,11 @@
  ],
  "rows": [
   {
-   "Name": "Edison International",
-   "Ticker": "EIX",
-   "Identifier": "281020107",
-   "Weight": "4.41",
-   "Market Value": "33645878.08",
-   "Shares Held": "539024",
-   "Asset Category": "Electricity"
-  },
-  {
    "Name": "Consolidated Edison, Inc.",
    "Ticker": "ED",
    "Identifier": "209115104",
-   "Weight": "4.4",
-   "Market Value": "33571900.4",
+   "Weight": "4.42",
+   "Market Value": "33875090.25",
    "Shares Held": "283355",
    "Asset Category": "Electricity"
   },
@@ -31,62 +22,71 @@
    "Name": "PG&E Corporation",
    "Ticker": "PCG",
    "Identifier": "69331C108",
-   "Weight": "4.36",
-   "Market Value": "33288245.76",
+   "Weight": "4.38",
+   "Market Value": "33619236.84",
    "Shares Held": "2364222",
    "Asset Category": "Electricity"
   },
   {
-   "Name": "Exelon Corporation",
-   "Ticker": "EXC",
-   "Identifier": "30161N101",
-   "Weight": "4.32",
-   "Market Value": "33012093.75",
-   "Shares Held": "716875",
+   "Name": "Edison International",
+   "Ticker": "EIX",
+   "Identifier": "281020107",
+   "Weight": "4.37",
+   "Market Value": "33538073.28",
+   "Shares Held": "539024",
    "Asset Category": "Electricity"
   },
   {
    "Name": "Duke Energy Corporation",
    "Ticker": "DUK",
    "Identifier": "26441C204",
-   "Weight": "4.31",
-   "Market Value": "32889005.16",
+   "Weight": "4.34",
+   "Market Value": "33267506.88",
    "Shares Held": "254028",
    "Asset Category": "Gas, Water and Multi-utilities"
+  },
+  {
+   "Name": "Exelon Corporation",
+   "Ticker": "EXC",
+   "Identifier": "30161N101",
+   "Weight": "4.32",
+   "Market Value": "33141131.25",
+   "Shares Held": "716875",
+   "Asset Category": "Electricity"
   },
   {
    "Name": "Eversource Energy",
    "Ticker": "ES",
    "Identifier": "30040W108",
-   "Weight": "4.23",
-   "Market Value": "32252387.1",
+   "Weight": "4.28",
+   "Market Value": "32798578.68",
    "Shares Held": "451398",
    "Asset Category": "Electricity"
-  },
-  {
-   "Name": "UGI Corporation",
-   "Ticker": "UGI",
-   "Identifier": "902681105",
-   "Weight": "3.69",
-   "Market Value": "28141667.1",
-   "Shares Held": "811935",
-   "Asset Category": "Gas, Water and Multi-utilities"
   },
   {
    "Name": "National Fuel Gas Company",
    "Ticker": "NFG",
    "Identifier": "636180101",
-   "Weight": "3.64",
-   "Market Value": "27812600.15",
+   "Weight": "3.67",
+   "Market Value": "28182925.78",
    "Shares Held": "381779",
+   "Asset Category": "Gas, Water and Multi-utilities"
+  },
+  {
+   "Name": "UGI Corporation",
+   "Ticker": "UGI",
+   "Identifier": "902681105",
+   "Weight": "3.67",
+   "Market Value": "28133547.75",
+   "Shares Held": "811935",
    "Asset Category": "Gas, Water and Multi-utilities"
   },
   {
    "Name": "Xcel Energy Inc.",
    "Ticker": "XEL",
    "Identifier": "98389B100",
-   "Weight": "3.47",
-   "Market Value": "26466615.87",
+   "Weight": "3.46",
+   "Market Value": "26566880.8",
    "Shares Held": "328737",
    "Asset Category": "Electricity"
   },
@@ -95,7 +95,7 @@
    "Ticker": "AEE",
    "Identifier": "023608102",
    "Weight": "3.45",
-   "Market Value": "26300523.4",
+   "Market Value": "26433413.2",
    "Shares Held": "233140",
    "Asset Category": "Gas, Water and Multi-utilities"
   },
@@ -103,8 +103,8 @@
    "Name": "OGE Energy Corp.",
    "Ticker": "OGE",
    "Identifier": "670837103",
-   "Weight": "3.44",
-   "Market Value": "26224960.74",
+   "Weight": "3.4",
+   "Market Value": "26087229.96",
    "Shares Held": "510114",
    "Asset Category": "Electricity"
   },
@@ -112,35 +112,35 @@
    "Name": "Evergy, Inc.",
    "Ticker": "EVRG",
    "Identifier": "30034W106",
-   "Weight": "3.37",
-   "Market Value": "25697799",
+   "Weight": "3.36",
+   "Market Value": "25759828.17",
    "Shares Held": "295377",
-   "Asset Category": "Electricity"
-  },
-  {
-   "Name": "Pinnacle West Capital Corporation",
-   "Ticker": "PNW",
-   "Identifier": "723484101",
-   "Weight": "3.33",
-   "Market Value": "25398161.74",
-   "Shares Held": "249026",
    "Asset Category": "Electricity"
   },
   {
    "Name": "Atmos Energy Corporation",
    "Ticker": "ATO",
    "Identifier": "049560105",
-   "Weight": "3.28",
-   "Market Value": "25071045.12",
+   "Weight": "3.32",
+   "Market Value": "25433899.92",
    "Shares Held": "148104",
    "Asset Category": "Gas, Water and Multi-utilities"
+  },
+  {
+   "Name": "Pinnacle West Capital Corporation",
+   "Ticker": "PNW",
+   "Identifier": "723484101",
+   "Weight": "3.32",
+   "Market Value": "25438005.9",
+   "Shares Held": "249026",
+   "Asset Category": "Electricity"
   },
   {
    "Name": "PPL Corporation",
    "Ticker": "PPL",
    "Identifier": "69351T106",
-   "Weight": "3.25",
-   "Market Value": "24796675.2",
+   "Weight": "3.23",
+   "Market Value": "24768497.16",
    "Shares Held": "704451",
    "Asset Category": "Electricity"
   },
@@ -149,7 +149,7 @@
    "Ticker": "MDU",
    "Identifier": "552690109",
    "Weight": "3.1",
-   "Market Value": "23656764.21",
+   "Market Value": "23744243",
    "Shares Held": "1249697",
    "Asset Category": "Gas, Water and Multi-utilities"
   },
@@ -157,8 +157,8 @@
    "Name": "NiSource Inc.",
    "Ticker": "NI",
    "Identifier": "65473P105",
-   "Weight": "2.63",
-   "Market Value": "20045969.35",
+   "Weight": "2.62",
+   "Market Value": "20108348.45",
    "Shares Held": "445565",
    "Asset Category": "Gas, Water and Multi-utilities"
   },
@@ -166,8 +166,8 @@
    "Name": "Alliant Energy Corporation",
    "Ticker": "LNT",
    "Identifier": "018802108",
-   "Weight": "2.61",
-   "Market Value": "19899882.31",
+   "Weight": "2.6",
+   "Market Value": "19924589.02",
    "Shares Held": "274519",
    "Asset Category": "Electricity"
   },
@@ -176,7 +176,7 @@
    "Ticker": "DTE",
    "Identifier": "233331107",
    "Weight": "2.56",
-   "Market Value": "19565626.66",
+   "Market Value": "19645521.3",
    "Shares Held": "142669",
    "Asset Category": "Electricity"
   },
@@ -184,8 +184,8 @@
    "Name": "CMS Energy Corporation",
    "Ticker": "CMS",
    "Identifier": "125896100",
-   "Weight": "2.54",
-   "Market Value": "19388000.88",
+   "Weight": "2.55",
+   "Market Value": "19561550.76",
    "Shares Held": "275476",
    "Asset Category": "Electricity"
   },
@@ -194,7 +194,7 @@
    "Ticker": "PEG",
    "Identifier": "744573106",
    "Weight": "2.52",
-   "Market Value": "19227230.99",
+   "Market Value": "19335611.57",
    "Shares Held": "258049",
    "Asset Category": "Electricity"
   },
@@ -202,8 +202,8 @@
    "Name": "American Electric Power Company, Inc.",
    "Ticker": "AEP",
    "Identifier": "025537101",
-   "Weight": "2.44",
-   "Market Value": "18629392.11",
+   "Weight": "2.43",
+   "Market Value": "18645503.7",
    "Shares Held": "146469",
    "Asset Category": "Electricity"
   },
@@ -211,8 +211,8 @@
    "Name": "Clearway Energy, Inc. (Class C)",
    "Ticker": "CWEN",
    "Identifier": "18539C204",
-   "Weight": "2.21",
-   "Market Value": "16866477.21",
+   "Weight": "2.27",
+   "Market Value": "17424537.35",
    "Shares Held": "593681",
    "Asset Category": "Electricity"
   },
@@ -221,7 +221,7 @@
    "Ticker": "CLH",
    "Identifier": "184496107",
    "Weight": "2.14",
-   "Market Value": "16356356.13",
+   "Market Value": "16383242.37",
    "Shares Held": "56013",
    "Asset Category": "Waste and Disposal Services"
   },
@@ -230,7 +230,7 @@
    "Ticker": "WEC",
    "Identifier": "92939U106",
    "Weight": "1.77",
-   "Market Value": "13481336",
+   "Market Value": "13577894",
    "Shares Held": "114950",
    "Asset Category": "Gas, Water and Multi-utilities"
   },
@@ -238,8 +238,8 @@
    "Name": "The Southern Company",
    "Ticker": "SO",
    "Identifier": "842587107",
-   "Weight": "1.7",
-   "Market Value": "13013053.6",
+   "Weight": "1.71",
+   "Market Value": "13152813.6",
    "Shares Held": "139760",
    "Asset Category": "Electricity"
   },
@@ -247,8 +247,8 @@
    "Name": "NextEra Energy, Inc.",
    "Ticker": "NEE",
    "Identifier": "65339F101",
-   "Weight": "1.68",
-   "Market Value": "12843043.56",
+   "Weight": "1.69",
+   "Market Value": "12936341.84",
    "Shares Held": "152948",
    "Asset Category": "Electricity"
   },
@@ -256,17 +256,26 @@
    "Name": "Dominion Energy, Inc.",
    "Ticker": "D",
    "Identifier": "25746U109",
-   "Weight": "1.67",
-   "Market Value": "12784875.01",
+   "Weight": "1.68",
+   "Market Value": "12880584.51",
    "Shares Held": "191419",
    "Asset Category": "Electricity"
+  },
+  {
+   "Name": "CenterPoint Energy, Inc.",
+   "Ticker": "CNP",
+   "Identifier": "15189T107",
+   "Weight": "1.65",
+   "Market Value": "12673888.26",
+   "Shares Held": "314801",
+   "Asset Category": "Gas, Water and Multi-utilities"
   },
   {
    "Name": "FirstEnergy Corp.",
    "Ticker": "FE",
    "Identifier": "337932107",
-   "Weight": "1.67",
-   "Market Value": "12710294.4",
+   "Weight": "1.65",
+   "Market Value": "12662169.6",
    "Shares Held": "267360",
    "Asset Category": "Electricity"
   },
@@ -275,25 +284,16 @@
    "Ticker": "IDA",
    "Identifier": "451107106",
    "Weight": "1.65",
-   "Market Value": "12605483.75",
+   "Market Value": "12635612.85",
    "Shares Held": "88615",
    "Asset Category": "Electricity"
-  },
-  {
-   "Name": "CenterPoint Energy, Inc.",
-   "Ticker": "CNP",
-   "Identifier": "15189T107",
-   "Weight": "1.64",
-   "Market Value": "12510191.74",
-   "Shares Held": "314801",
-   "Asset Category": "Gas, Water and Multi-utilities"
   },
   {
    "Name": "Sempra",
    "Ticker": "SRE",
    "Identifier": "816851109",
-   "Weight": "1.51",
-   "Market Value": "11549036.56",
+   "Weight": "1.53",
+   "Market Value": "11703578.48",
    "Shares Held": "148598",
    "Asset Category": "Gas, Water and Multi-utilities"
   },
@@ -301,8 +301,8 @@
    "Name": "Republic Services, Inc.",
    "Ticker": "RSG",
    "Identifier": "760759100",
-   "Weight": "0.9",
-   "Market Value": "6836244",
+   "Weight": "0.91",
+   "Market Value": "6959340",
    "Shares Held": "27600",
    "Asset Category": "Waste and Disposal Services"
   },
@@ -310,45 +310,36 @@
    "Name": "Waste Management, Inc.",
    "Ticker": "WM",
    "Identifier": "94106L109",
-   "Weight": "0.9",
-   "Market Value": "6833958.95",
+   "Weight": "0.91",
+   "Market Value": "6950987.55",
    "Shares Held": "28405",
    "Asset Category": "Waste and Disposal Services"
-  },
-  {
-   "Name": "Talen Energy Corporation",
-   "Ticker": "TLN",
-   "Identifier": "87422Q109",
-   "Weight": "0.89",
-   "Market Value": "6758475.75",
-   "Shares Held": "18525",
-   "Asset Category": "Electricity"
   },
   {
    "Name": "American Water Works Company, Inc.",
    "Ticker": "AWK",
    "Identifier": "030420103",
-   "Weight": "0.86",
-   "Market Value": "6588265.14",
+   "Weight": "0.88",
+   "Market Value": "6728745.6",
    "Shares Held": "44739",
    "Asset Category": "Gas, Water and Multi-utilities"
+  },
+  {
+   "Name": "Talen Energy Corporation",
+   "Ticker": "TLN",
+   "Identifier": "87422Q109",
+   "Weight": "0.84",
+   "Market Value": "6440772",
+   "Shares Held": "18525",
+   "Asset Category": "Electricity"
   },
   {
    "Name": "Entergy Corporation",
    "Ticker": "ETR",
    "Identifier": "29364G103",
-   "Weight": "0.82",
-   "Market Value": "6260324.4",
+   "Weight": "0.81",
+   "Market Value": "6182712.25",
    "Shares Held": "58355",
-   "Asset Category": "Electricity"
-  },
-  {
-   "Name": "NRG Energy, Inc.",
-   "Ticker": "NRG",
-   "Identifier": "629377508",
-   "Weight": "0.78",
-   "Market Value": "5917727.76",
-   "Shares Held": "60558",
    "Asset Category": "Electricity"
   },
   {
@@ -356,7 +347,7 @@
    "Ticker": "GFL",
    "Identifier": "36168Q104",
    "Weight": "0.77",
-   "Market Value": "5846330.06",
+   "Market Value": "5894795.61",
    "Shares Held": "138473",
    "Asset Category": "Waste and Disposal Services"
   },
@@ -364,9 +355,18 @@
    "Name": "Constellation Energy Corporation",
    "Ticker": "CEG",
    "Identifier": "21037T109",
-   "Weight": "0.75",
-   "Market Value": "5739971.16",
+   "Weight": "0.73",
+   "Market Value": "5583086.52",
    "Shares Held": "22803",
+   "Asset Category": "Electricity"
+  },
+  {
+   "Name": "NRG Energy, Inc.",
+   "Ticker": "NRG",
+   "Identifier": "629377508",
+   "Weight": "0.72",
+   "Market Value": "5504722.2",
+   "Shares Held": "60558",
    "Asset Category": "Electricity"
   },
   {
@@ -374,10 +374,10 @@
    "Ticker": "-",
    "Identifier": "$USD",
    "Weight": "0.37",
-   "Market Value": "2838429.51",
+   "Market Value": "2838429.5",
    "Shares Held": "2838430",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-11-23"
+ "asOfDate": "2026-11-24"
 }

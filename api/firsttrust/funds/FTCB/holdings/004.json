@@ -10,66 +10,21 @@
  ],
  "rows": [
   {
-   "Name": "US LONG BOND(CBT) Mar27",
-   "Ticker": "USH7",
-   "Identifier": "-",
-   "Weight": "0",
-   "Market Value": "",
-   "Shares Held": "-878",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "US ULTRA BOND CBT Dec26",
-   "Ticker": "WNZ6",
-   "Identifier": "-",
-   "Weight": "0",
-   "Market Value": "",
-   "Shares Held": "456",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "US ULTRA BOND CBT Mar27",
-   "Ticker": "WNH7",
-   "Identifier": "-",
-   "Weight": "0",
-   "Market Value": "",
-   "Shares Held": "383",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Wells Fargo Commercial Mortgage Trust Series 2017-C41, Class XA, Variable rate, due 11/15/2050",
-   "Ticker": "-",
-   "Identifier": "95001ABE5",
-   "Weight": "0",
-   "Market Value": "",
-   "Shares Held": "12231491",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Wells Fargo Mortgage Backed Securities Trust Series 2019-1, Class A1, Variable rate, due 11/25/2048",
-   "Ticker": "-",
-   "Identifier": "95001TAA3",
-   "Weight": "0",
-   "Market Value": "",
-   "Shares Held": "111153",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "2027-02-19 US 2YR NOTE (CBT) Mar27 C 102.50",
-   "Ticker": "-",
-   "Identifier": "TUH7C 102.5",
-   "Weight": "-0.01",
-   "Market Value": "",
-   "Shares Held": "-383",
-   "Asset Category": "-"
-  },
-  {
    "Name": "2027-02-19 US 2YR NOTE (CBT) Mar27 C 102.75",
    "Ticker": "-",
    "Identifier": "TUH7C 102.75",
    "Weight": "-0.01",
    "Market Value": "",
    "Shares Held": "-468",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "2027-02-19 US 5YR NOTE (CBT) Mar27 P 105",
+   "Ticker": "-",
+   "Identifier": "FVH7P 105",
+   "Weight": "-0.01",
+   "Market Value": "",
+   "Shares Held": "-418",
    "Asset Category": "-"
   },
   {
@@ -88,6 +43,15 @@
    "Weight": "-0.01",
    "Market Value": "",
    "Shares Held": "-524",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "2027-02-19 US LONG BOND(CBT) Mar27 P 102",
+   "Ticker": "-",
+   "Identifier": "USH7P 102",
+   "Weight": "-0.01",
+   "Market Value": "",
+   "Shares Held": "-760",
    "Asset Category": "-"
   },
   {
@@ -127,30 +91,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "2027-02-19 US 5YR NOTE (CBT) Mar27 P 105",
-   "Ticker": "-",
-   "Identifier": "FVH7P 105",
-   "Weight": "-0.02",
-   "Market Value": "",
-   "Shares Held": "-418",
-   "Asset Category": "-"
-  },
-  {
    "Name": "2027-02-19 US LONG BOND(CBT) Mar27 C 112",
    "Ticker": "-",
    "Identifier": "USH7C 112",
    "Weight": "-0.02",
    "Market Value": "",
    "Shares Held": "-545",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "2027-02-19 US LONG BOND(CBT) Mar27 P 102",
-   "Ticker": "-",
-   "Identifier": "USH7P 102",
-   "Weight": "-0.02",
-   "Market Value": "",
-   "Shares Held": "-760",
    "Asset Category": "-"
   },
   {
@@ -184,7 +130,7 @@
    "Name": "2027-02-19 US LONG BOND(CBT) Mar27 C 108",
    "Ticker": "-",
    "Identifier": "USH7C 108",
-   "Weight": "-0.03",
+   "Weight": "-0.04",
    "Market Value": "",
    "Shares Held": "-486",
    "Asset Category": "-"
@@ -217,15 +163,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Fannie Mae or Freddie Mac TBA, 5%, due 03/01/2056",
-   "Ticker": "-",
-   "Identifier": "01F050619",
-   "Weight": "-0.44",
-   "Market Value": "",
-   "Shares Held": "-12700000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Fannie Mae or Freddie Mac TBA, 4%, due 07/01/2056",
    "Ticker": "-",
    "Identifier": "01F040628",
@@ -235,14 +172,23 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Fannie Mae or Freddie Mac TBA, 5%, due 03/01/2056",
+   "Ticker": "-",
+   "Identifier": "01F050619",
+   "Weight": "-0.63",
+   "Market Value": "",
+   "Shares Held": "-18046000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "-6.52",
+   "Weight": "-5.75",
    "Market Value": "",
-   "Shares Held": "-178303953",
+   "Shares Held": "-157105727",
    "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-11-23"
+ "asOfDate": "2026-11-24"
 }

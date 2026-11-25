@@ -91,15 +91,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "U.S. Treasury Bill, 0%, due 11/24/2026",
-   "Ticker": "-",
-   "Identifier": "912797VY0",
-   "Weight": "0.73",
-   "Market Value": "",
-   "Shares Held": "20000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "U.S. Treasury Bond, 5.125%, due 08/15/2056",
    "Ticker": "-",
    "Identifier": "912810UW6",
@@ -445,9 +436,9 @@
    "Name": "GNMA Series 2026-111, Class AS, Variable rate, due 06/20/2056",
    "Ticker": "-",
    "Identifier": "38385SZ55",
-   "Weight": "0.4",
+   "Weight": "0.39",
    "Market Value": "",
-   "Shares Held": "12962098",
+   "Shares Held": "12905269",
    "Asset Category": "-"
   },
   {
@@ -457,6 +448,15 @@
    "Weight": "0.39",
    "Market Value": "",
    "Shares Held": "11053000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2025-49, Class FA, Variable rate, due 06/25/2055",
+   "Ticker": "-",
+   "Identifier": "3136BWAF3",
+   "Weight": "0.38",
+   "Market Value": "",
+   "Shares Held": "10541114",
    "Asset Category": "-"
   },
   {
@@ -474,7 +474,7 @@
    "Identifier": "38381UKH4",
    "Weight": "0.38",
    "Market Value": "",
-   "Shares Held": "13541635",
+   "Shares Held": "13379713",
    "Asset Category": "-"
   },
   {
@@ -487,18 +487,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Fannie Mae Series 2025-49, Class FA, Variable rate, due 06/25/2055",
+   "Name": "U.S. Treasury Bill, 0%, due 12/17/2026",
    "Ticker": "-",
-   "Identifier": "3136BWAF3",
-   "Weight": "0.37",
-   "Market Value": "",
-   "Shares Held": "10541114",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "SYSCO HOLD/SYSC CORP 5.95%, due 06/06/2036",
-   "Ticker": "-",
-   "Identifier": "87183XAD5",
+   "Identifier": "912797VH7",
    "Weight": "0.37",
    "Market Value": "",
    "Shares Held": "10000000",
@@ -559,9 +550,9 @@
    "Asset Category": "-"
   },
   {
-   "Name": "U.S. Treasury Bill, 0%, due 12/17/2026",
+   "Name": "SYSCO HOLD/SYSC CORP 5.95%, due 06/06/2036",
    "Ticker": "-",
-   "Identifier": "912797VH7",
+   "Identifier": "87183XAD5",
    "Weight": "0.36",
    "Market Value": "",
    "Shares Held": "10000000",
@@ -973,30 +964,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "JP Morgan Mortgage Trust Series 2026-LTV1, Class A1, Variable rate, due 09/25/2056",
-   "Ticker": "-",
-   "Identifier": "46660YAC3",
-   "Weight": "0.26",
-   "Market Value": "",
-   "Shares Held": "7188902",
-   "Asset Category": "-"
-  },
-  {
    "Name": "SUNBELT RENTALS HOLDINGS 5.65%, due 08/12/2036",
    "Ticker": "-",
    "Identifier": "866966AA2",
    "Weight": "0.26",
    "Market Value": "",
    "Shares Held": "7500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "SYSCO HOLD/SYSC CORP 6.40%, due 10/06/2046",
-   "Ticker": "-",
-   "Identifier": "87183XAE3",
-   "Weight": "0.26",
-   "Market Value": "",
-   "Shares Held": "7000000",
    "Asset Category": "-"
   },
   {
@@ -1036,18 +1009,36 @@
    "Asset Category": "-"
   },
   {
-   "Name": "GNMA Series BMOC-5259, Class SA, Variable rate, due 05/01/2056",
+   "Name": "Fannie Mae or Freddie Mac TBA, 6%, due 12/01/2037",
    "Ticker": "-",
-   "Identifier": "BCCJGWMW7",
+   "Identifier": "01F060410",
+   "Weight": "0.25",
+   "Market Value": "",
+   "Shares Held": "6673000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2022-69, Class FA, Variable rate, due 10/25/2052",
+   "Ticker": "-",
+   "Identifier": "3136BPEZ0",
+   "Weight": "0.25",
+   "Market Value": "",
+   "Shares Held": "6890039",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "GNMA Series 2026-197, Class SK, Variable rate, due 11/20/2056",
+   "Ticker": "-",
+   "Identifier": "38386BTK5",
    "Weight": "0.25",
    "Market Value": "",
    "Shares Held": "8000000",
    "Asset Category": "-"
   },
   {
-   "Name": "GNMA Series BMOC-5370, Class SA, Variable rate, due 06/01/2056",
+   "Name": "GNMA Series 2026-197, Class SQ, Variable rate, due 11/20/2056",
    "Ticker": "-",
-   "Identifier": "BCCJNVHS6",
+   "Identifier": "38386BTM1",
    "Weight": "0.25",
    "Market Value": "",
    "Shares Held": "8125000",
@@ -1081,6 +1072,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "JP Morgan Mortgage Trust Series 2026-LTV1, Class A1, Variable rate, due 09/25/2056",
+   "Ticker": "-",
+   "Identifier": "46660YAC3",
+   "Weight": "0.25",
+   "Market Value": "",
+   "Shares Held": "7042648",
+   "Asset Category": "-"
+  },
+  {
    "Name": "NEW HOPE CULTURAL EDU FACS FIN CORP TX 5.50%, due 08/15/2049",
    "Ticker": "-",
    "Identifier": "645424BP6",
@@ -1093,6 +1093,15 @@
    "Name": "STERIS IRI FINCO UNL 5.875%, due 12/15/2036",
    "Ticker": "-",
    "Identifier": "85917PAD9",
+   "Weight": "0.25",
+   "Market Value": "",
+   "Shares Held": "7000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "SYSCO HOLD/SYSC CORP 6.40%, due 10/06/2046",
+   "Ticker": "-",
+   "Identifier": "87183XAE3",
    "Weight": "0.25",
    "Market Value": "",
    "Shares Held": "7000000",
@@ -1114,15 +1123,6 @@
    "Weight": "0.24",
    "Market Value": "",
    "Shares Held": "7115000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Fannie Mae Series 2022-69, Class FA, Variable rate, due 10/25/2052",
-   "Ticker": "-",
-   "Identifier": "3136BPEZ0",
-   "Weight": "0.24",
-   "Market Value": "",
-   "Shares Held": "6890039",
    "Asset Category": "-"
   },
   {
@@ -1230,7 +1230,7 @@
    "Identifier": "38385TD57",
    "Weight": "0.23",
    "Market Value": "",
-   "Shares Held": "7287777",
+   "Shares Held": "7267102",
    "Asset Category": "-"
   },
   {
@@ -1369,15 +1369,6 @@
    "Asset Category": "-"
   },
   {
-   "Name": "QTS FAYETTEV I DC1-2/TRS 5.70%, due 04/15/2036",
-   "Ticker": "-",
-   "Identifier": "74751AAA1",
-   "Weight": "0.22",
-   "Market Value": "",
-   "Shares Held": "6667000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "TEVA PHARMACEUTICALS NE 5.75%, due 01/16/2037",
    "Ticker": "-",
    "Identifier": "88167AAV3",
@@ -1468,12 +1459,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "BEACON POINT DC LLC 6.129%, due 11/30/2042",
+   "Name": "QTS FAYETTEV I DC1-2/TRS 5.70%, due 04/15/2036",
    "Ticker": "-",
-   "Identifier": "07367AAA7",
-   "Weight": "0.2",
+   "Identifier": "74751AAA1",
+   "Weight": "0.21",
    "Market Value": "",
-   "Shares Held": "6000000",
+   "Shares Held": "6667000",
    "Asset Category": "-"
   },
   {
@@ -1483,6 +1474,15 @@
    "Weight": "0.2",
    "Market Value": "",
    "Shares Held": "6000000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "MFRA Trust Series 2026-NQM1, Class A1, Variable rate, due 02/25/2071",
+   "Ticker": "-",
+   "Identifier": "55287YAF0",
+   "Weight": "0.2",
+   "Market Value": "",
+   "Shares Held": "5475741",
    "Asset Category": "-"
   },
   {
@@ -1522,6 +1522,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "BEACON POINT DC LLC 6.129%, due 11/30/2042",
+   "Ticker": "-",
+   "Identifier": "07367AAA7",
+   "Weight": "0.19",
+   "Market Value": "",
+   "Shares Held": "6000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "Fannie Mae FN MA4320, 2.50%, due 04/01/2051",
    "Ticker": "-",
    "Identifier": "31418DYS5",
@@ -1546,24 +1555,6 @@
    "Weight": "0.19",
    "Market Value": "",
    "Shares Held": "5300000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "MFRA Trust Series 2026-NQM1, Class A1, Variable rate, due 02/25/2071",
-   "Ticker": "-",
-   "Identifier": "55287YAF0",
-   "Weight": "0.19",
-   "Market Value": "",
-   "Shares Held": "5475741",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "New Residential Mortgage Loan Trust Series 2018-3A, Class A1, Variable rate, due 05/25/2058",
-   "Ticker": "-",
-   "Identifier": "64830KAA5",
-   "Weight": "0.19",
-   "Market Value": "",
-   "Shares Held": "5394397",
    "Asset Category": "-"
   },
   {
@@ -1630,30 +1621,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "CVS HEALTH CORP 6.20%, due 09/15/2055",
-   "Ticker": "-",
-   "Identifier": "126650EL0",
-   "Weight": "0.18",
-   "Market Value": "",
-   "Shares Held": "5000000",
-   "Asset Category": "-"
-  },
-  {
    "Name": "Fannie Mae FN FS0704, 4%, due 03/01/2047",
    "Ticker": "-",
    "Identifier": "3140XFYA3",
    "Weight": "0.18",
    "Market Value": "",
    "Shares Held": "5223279",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Fannie Mae Series 2025-101, Class CZ, 3%, due 07/25/2051",
-   "Ticker": "-",
-   "Identifier": "3136BYBN1",
-   "Weight": "0.18",
-   "Market Value": "",
-   "Shares Held": "8139019",
    "Asset Category": "-"
   },
   {
@@ -1702,21 +1675,21 @@
    "Asset Category": "-"
   },
   {
+   "Name": "New Residential Mortgage Loan Trust Series 2018-3A, Class A1, Variable rate, due 05/25/2058",
+   "Ticker": "-",
+   "Identifier": "64830KAA5",
+   "Weight": "0.18",
+   "Market Value": "",
+   "Shares Held": "5225106",
+   "Asset Category": "-"
+  },
+  {
    "Name": "ROCKETMTGE CO-ISSUER INC 4%, due 10/15/2033",
    "Ticker": "-",
    "Identifier": "77313LAB9",
    "Weight": "0.18",
    "Market Value": "",
    "Shares Held": "5586000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "RYAN SPECIALTY GROUP 4.375%, due 02/01/2030",
-   "Ticker": "-",
-   "Identifier": "78351MAA0",
-   "Weight": "0.18",
-   "Market Value": "",
-   "Shares Held": "5000000",
    "Asset Category": "-"
   },
   {
@@ -1774,6 +1747,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "CVS HEALTH CORP 6.20%, due 09/15/2055",
+   "Ticker": "-",
+   "Identifier": "126650EL0",
+   "Weight": "0.17",
+   "Market Value": "",
+   "Shares Held": "5000000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "ELEVANCE HEALTH INC 5.70%, due 02/15/2055",
    "Ticker": "-",
    "Identifier": "036752BE2",
@@ -1798,6 +1780,15 @@
    "Weight": "0.17",
    "Market Value": "",
    "Shares Held": "6349496",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2025-101, Class CZ, 3%, due 07/25/2051",
+   "Ticker": "-",
+   "Identifier": "3136BYBN1",
+   "Weight": "0.17",
+   "Market Value": "",
+   "Shares Held": "8139019",
    "Asset Category": "-"
   },
   {
@@ -1851,7 +1842,7 @@
    "Identifier": "46593VAC1",
    "Weight": "0.17",
    "Market Value": "",
-   "Shares Held": "4801162",
+   "Shares Held": "4754950",
    "Asset Category": "-"
   },
   {
@@ -1897,6 +1888,15 @@
    "Weight": "0.17",
    "Market Value": "",
    "Shares Held": "4746091",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "RYAN SPECIALTY GROUP 4.375%, due 02/01/2030",
+   "Ticker": "-",
+   "Identifier": "78351MAA0",
+   "Weight": "0.17",
+   "Market Value": "",
+   "Shares Held": "5000000",
    "Asset Category": "-"
   },
   {
@@ -2260,5 +2260,5 @@
    "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-11-23"
+ "asOfDate": "2026-11-24"
 }
