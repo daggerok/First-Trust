@@ -10,6 +10,15 @@
  ],
  "rows": [
   {
+   "Name": "New Residential Mortgage Loan Trust Series 2019-NQM4, Class B2, Variable rate, due 09/25/2059",
+   "Ticker": "-",
+   "Identifier": "64828EAF2",
+   "Weight": "0.16",
+   "Market Value": "",
+   "Shares Held": "1080000",
+   "Asset Category": "-"
+  },
+  {
    "Name": "Preston Ridge Partners Mortgage Trust Series 2026-RCF1, Class M2, Variable rate, due 01/25/2056",
    "Ticker": "-",
    "Identifier": "69383VAD5",
@@ -70,15 +79,6 @@
    "Weight": "0.15",
    "Market Value": "",
    "Shares Held": "872000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Fannie Mae Series 2025-49, Class FA, Variable rate, due 06/25/2055",
-   "Ticker": "-",
-   "Identifier": "3136BWAF3",
-   "Weight": "0.15",
-   "Market Value": "",
-   "Shares Held": "859593",
    "Asset Category": "-"
   },
   {
@@ -271,6 +271,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "GNMA Series 2025-100, Class JS, Variable rate, due 06/20/2055",
+   "Ticker": "-",
+   "Identifier": "38385G2J7",
+   "Weight": "0.11",
+   "Market Value": "",
+   "Shares Held": "684394",
+   "Asset Category": "-"
+  },
+  {
    "Name": "GNMA Series 2025-4, Class FY, Variable rate, due 01/20/2055",
    "Ticker": "-",
    "Identifier": "38385CCE6",
@@ -304,15 +313,6 @@
    "Weight": "0.11",
    "Market Value": "",
    "Shares Held": "715305",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "GNMA Series 2025-100, Class JS, Variable rate, due 06/20/2055",
-   "Ticker": "-",
-   "Identifier": "38385G2J7",
-   "Weight": "0.1",
-   "Market Value": "",
-   "Shares Held": "684394",
    "Asset Category": "-"
   },
   {
@@ -367,15 +367,6 @@
    "Weight": "0.09",
    "Market Value": "",
    "Shares Held": "500000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Fannie Mae Series 2023-51, Class PO, 0%, due 11/25/2053",
-   "Ticker": "-",
-   "Identifier": "3136BQPQ6",
-   "Weight": "0.09",
-   "Market Value": "",
-   "Shares Held": "639780",
    "Asset Category": "-"
   },
   {
@@ -520,6 +511,15 @@
    "Weight": "0.08",
    "Market Value": "",
    "Shares Held": "445000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2023-51, Class PO, 0%, due 11/25/2053",
+   "Ticker": "-",
+   "Identifier": "3136BQPQ6",
+   "Weight": "0.08",
+   "Market Value": "",
+   "Shares Held": "639780",
    "Asset Category": "-"
   },
   {
@@ -1338,7 +1338,7 @@
    "Identifier": "FVH7P 103.75",
    "Weight": "0",
    "Market Value": "",
-   "Shares Held": "-28",
+   "Shares Held": "-41",
    "Asset Category": "-"
   },
   {
@@ -1357,15 +1357,6 @@
    "Weight": "0",
    "Market Value": "",
    "Shares Held": "-38",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "2027-02-19 US LONG BOND(CBT) Mar27 C 110",
-   "Ticker": "-",
-   "Identifier": "USH7C 110",
-   "Weight": "0",
-   "Market Value": "",
-   "Shares Held": "-21",
    "Asset Category": "-"
   },
   {
@@ -1392,7 +1383,7 @@
    "Identifier": "USH7C 113",
    "Weight": "0",
    "Market Value": "",
-   "Shares Held": "-9",
+   "Shares Held": "-19",
    "Asset Category": "-"
   },
   {
@@ -1428,7 +1419,7 @@
    "Identifier": "USH7P 104",
    "Weight": "0",
    "Market Value": "",
-   "Shares Held": "-5",
+   "Shares Held": "-15",
    "Asset Category": "-"
   },
   {
@@ -1483,6 +1474,15 @@
    "Weight": "0",
    "Market Value": "",
    "Shares Held": "5903391",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "Fannie Mae Series 2025-49, Class FA, Variable rate, due 06/25/2055",
+   "Ticker": "-",
+   "Identifier": "3136BWAF3",
+   "Weight": "0",
+   "Market Value": "",
+   "Shares Held": "0",
    "Asset Category": "-"
   },
   {
@@ -1545,7 +1545,7 @@
    "Identifier": "-",
    "Weight": "0",
    "Market Value": "",
-   "Shares Held": "345",
+   "Shares Held": "350",
    "Asset Category": "-"
   },
   {
@@ -1576,12 +1576,21 @@
    "Asset Category": "-"
   },
   {
-   "Name": "2027-02-19 US LONG BOND(CBT) Mar27 C 109",
+   "Name": "2027-02-19 US 10YR NOTE (CBT)Mar27 P 107",
    "Ticker": "-",
-   "Identifier": "USH7C 109",
+   "Identifier": "TYH7P 107",
    "Weight": "-0.01",
    "Market Value": "",
-   "Shares Held": "-54",
+   "Shares Held": "-66",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "2027-02-19 US LONG BOND(CBT) Mar27 C 110",
+   "Ticker": "-",
+   "Identifier": "USH7C 110",
+   "Weight": "-0.01",
+   "Market Value": "",
+   "Shares Held": "-21",
    "Asset Category": "-"
   },
   {
@@ -1630,21 +1639,12 @@
    "Asset Category": "-"
   },
   {
-   "Name": "2027-02-19 US 10YR NOTE (CBT)Mar27 P 107",
+   "Name": "2027-02-19 US LONG BOND(CBT) Mar27 C 109",
    "Ticker": "-",
-   "Identifier": "TYH7P 107",
+   "Identifier": "USH7C 109",
    "Weight": "-0.02",
    "Market Value": "",
-   "Shares Held": "-66",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "2027-02-19 US 5YR NOTE (CBT) Mar27 C 104.50",
-   "Ticker": "-",
-   "Identifier": "FVH7C 104.5",
-   "Weight": "-0.03",
-   "Market Value": "",
-   "Shares Held": "-180",
+   "Shares Held": "-54",
    "Asset Category": "-"
   },
   {
@@ -1657,10 +1657,19 @@
    "Asset Category": "-"
   },
   {
+   "Name": "2027-02-19 US 5YR NOTE (CBT) Mar27 C 104.50",
+   "Ticker": "-",
+   "Identifier": "FVH7C 104.5",
+   "Weight": "-0.04",
+   "Market Value": "",
+   "Shares Held": "-180",
+   "Asset Category": "-"
+  },
+  {
    "Name": "2027-02-19 US LONG BOND(CBT) Mar27 C 108",
    "Ticker": "-",
    "Identifier": "USH7C 108",
-   "Weight": "-0.04",
+   "Weight": "-0.05",
    "Market Value": "",
    "Shares Held": "-120",
    "Asset Category": "-"
@@ -1705,11 +1714,11 @@
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "-3.52",
+   "Weight": "-3.41",
    "Market Value": "",
-   "Shares Held": "-20285141",
+   "Shares Held": "-19745774",
    "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-11-24"
+ "asOfDate": "2026-11-25"
 }

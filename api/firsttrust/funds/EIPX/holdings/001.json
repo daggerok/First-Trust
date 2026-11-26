@@ -10,20 +10,11 @@
  ],
  "rows": [
   {
-   "Name": "US Dollar",
-   "Ticker": "-",
-   "Identifier": "$USD",
-   "Weight": "8.65",
-   "Market Value": "48462743.07",
-   "Shares Held": "48462743",
-   "Asset Category": "Other"
-  },
-  {
    "Name": "Enterprise Products Partners L.P.",
    "Ticker": "EPD",
    "Identifier": "293792107",
-   "Weight": "7.63",
-   "Market Value": "42764328",
+   "Weight": "7.58",
+   "Market Value": "42835601.88",
    "Shares Held": "1187898",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -31,35 +22,35 @@
    "Name": "Energy Transfer LP",
    "Ticker": "ET",
    "Identifier": "29273V100",
-   "Weight": "7.26",
-   "Market Value": "40642636.4",
+   "Weight": "7.24",
+   "Market Value": "40925481.3",
    "Shares Held": "2175730",
    "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "6.38",
+   "Market Value": "36074670.95",
+   "Shares Held": "36074671",
+   "Asset Category": "Other"
   },
   {
    "Name": "MPLX LP",
    "Ticker": "MPLX",
    "Identifier": "55336V100",
-   "Weight": "4.52",
-   "Market Value": "25305066",
-   "Shares Held": "452280",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "Plains GP Holdings, L.P. (Class A)",
-   "Ticker": "PAGP",
-   "Identifier": "72651A207",
-   "Weight": "2.72",
-   "Market Value": "15254508",
-   "Shares Held": "598216",
+   "Weight": "4.6",
+   "Market Value": "26008282.44",
+   "Shares Held": "462123",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "National Fuel Gas Company",
    "Ticker": "NFG",
    "Identifier": "636180101",
-   "Weight": "2.69",
-   "Market Value": "15089841.48",
+   "Weight": "2.73",
+   "Market Value": "15437345.28",
    "Shares Held": "204414",
    "Asset Category": "Gas Utilities"
   },
@@ -67,53 +58,62 @@
    "Name": "ExxonMobil Holdings Corp.",
    "Ticker": "XOM",
    "Identifier": "30233Q108",
-   "Weight": "2.56",
-   "Market Value": "14330891.1",
-   "Shares Held": "90570",
+   "Weight": "2.7",
+   "Market Value": "15265785.6",
+   "Shares Held": "96570",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Plains GP Holdings, L.P. (Class A)",
+   "Ticker": "PAGP",
+   "Identifier": "72651A207",
+   "Weight": "2.7",
+   "Market Value": "15242543.68",
+   "Shares Held": "598216",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "Kinder Morgan, Inc.",
    "Ticker": "KMI",
    "Identifier": "49456B101",
-   "Weight": "2.47",
-   "Market Value": "13863606.96",
-   "Shares Held": "446062",
+   "Weight": "2.62",
+   "Market Value": "14832884.78",
+   "Shares Held": "468062",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "ONEOK, Inc.",
    "Ticker": "OKE",
    "Identifier": "30609A109",
-   "Weight": "2.47",
-   "Market Value": "13853329.36",
-   "Shares Held": "163384",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "Shell plc (ADR)",
-   "Ticker": "SHEL",
-   "Identifier": "780259305",
-   "Weight": "1.86",
-   "Market Value": "10440432.36",
-   "Shares Held": "111758",
+   "Weight": "2.61",
+   "Market Value": "14743961.05",
+   "Shares Held": "170549",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "Halliburton Company",
    "Ticker": "HAL",
    "Identifier": "406216101",
-   "Weight": "1.8",
-   "Market Value": "10077571.5",
-   "Shares Held": "326135",
+   "Weight": "2.02",
+   "Market Value": "11415477.35",
+   "Shares Held": "361135",
    "Asset Category": "Energy Equipment & Services"
+  },
+  {
+   "Name": "Shell plc (ADR)",
+   "Ticker": "SHEL",
+   "Identifier": "780259305",
+   "Weight": "1.98",
+   "Market Value": "11178690.54",
+   "Shares Held": "118758",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "Sempra",
    "Ticker": "SRE",
    "Identifier": "816851109",
-   "Weight": "1.77",
-   "Market Value": "9919349.44",
+   "Weight": "1.76",
+   "Market Value": "9960910.96",
    "Shares Held": "125944",
    "Asset Category": "Multi-Utilities"
   },
@@ -122,7 +122,7 @@
    "Ticker": "BKR",
    "Identifier": "05722G100",
    "Weight": "1.63",
-   "Market Value": "9123574.46",
+   "Market Value": "9217017.04",
    "Shares Held": "198814",
    "Asset Category": "Energy Equipment & Services"
   },
@@ -130,8 +130,8 @@
    "Name": "Alliance Resource Partners, L.P.",
    "Ticker": "ARLP",
    "Identifier": "01877R108",
-   "Weight": "1.57",
-   "Market Value": "8810336.4",
+   "Weight": "1.56",
+   "Market Value": "8841061.2",
    "Shares Held": "384060",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -140,34 +140,70 @@
    "Ticker": "DUK",
    "Identifier": "26441C204",
    "Weight": "1.56",
-   "Market Value": "8730317.44",
+   "Market Value": "8792981.6",
    "Shares Held": "66664",
    "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "TechnipFMC Plc",
+   "Ticker": "FTI",
+   "Identifier": "G87110105",
+   "Weight": "1.53",
+   "Market Value": "8661135.24",
+   "Shares Held": "146007",
+   "Asset Category": "Energy Equipment & Services"
   },
   {
    "Name": "The Southern Company",
    "Ticker": "SO",
    "Identifier": "842587107",
    "Weight": "1.52",
-   "Market Value": "8533236.03",
+   "Market Value": "8613935",
    "Shares Held": "90673",
    "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "EOG Resources, Inc.",
+   "Ticker": "EOG",
+   "Identifier": "26875P101",
+   "Weight": "1.34",
+   "Market Value": "7551203.65",
+   "Shares Held": "50915",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "FirstEnergy Corp.",
    "Ticker": "FE",
    "Identifier": "337932107",
    "Weight": "1.31",
-   "Market Value": "7358181.12",
+   "Market Value": "7398576.54",
    "Shares Held": "155367",
    "Asset Category": "Electric Utilities"
+  },
+  {
+   "Name": "Cactus, Inc. (Class A)",
+   "Ticker": "WHD",
+   "Identifier": "127203107",
+   "Weight": "1.3",
+   "Market Value": "7334619.14",
+   "Shares Held": "119398",
+   "Asset Category": "Energy Equipment & Services"
+  },
+  {
+   "Name": "SLB Ltd.",
+   "Ticker": "SLB",
+   "Identifier": "806857108",
+   "Weight": "1.3",
+   "Market Value": "7348159.92",
+   "Shares Held": "151446",
+   "Asset Category": "Energy Equipment & Services"
   },
   {
    "Name": "OGE Energy Corp.",
    "Ticker": "OGE",
    "Identifier": "670837103",
-   "Weight": "1.29",
-   "Market Value": "7223167.02",
+   "Weight": "1.28",
+   "Market Value": "7258477.77",
    "Shares Held": "141243",
    "Asset Category": "Electric Utilities"
   },
@@ -176,106 +212,70 @@
    "Ticker": "EVRG",
    "Identifier": "30034W106",
    "Weight": "1.27",
-   "Market Value": "7109271.99",
+   "Market Value": "7154922.63",
    "Shares Held": "81519",
    "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "TechnipFMC Plc",
-   "Ticker": "FTI",
-   "Identifier": "G87110105",
-   "Weight": "1.27",
-   "Market Value": "7087379.99",
-   "Shares Held": "121007",
-   "Asset Category": "Energy Equipment & Services"
   },
   {
    "Name": "American Electric Power Company, Inc.",
    "Ticker": "AEP",
    "Identifier": "025537101",
-   "Weight": "1.26",
-   "Market Value": "7033325",
+   "Weight": "1.25",
+   "Market Value": "7049347.5",
    "Shares Held": "55250",
    "Asset Category": "Electric Utilities"
-  },
-  {
-   "Name": "Cactus, Inc. (Class A)",
-   "Ticker": "WHD",
-   "Identifier": "127203107",
-   "Weight": "1.26",
-   "Market Value": "7045675.98",
-   "Shares Held": "119398",
-   "Asset Category": "Energy Equipment & Services"
-  },
-  {
-   "Name": "Public Service Enterprise Group Incorporated",
-   "Ticker": "PEG",
-   "Identifier": "744573106",
-   "Weight": "1.25",
-   "Market Value": "7000335.25",
-   "Shares Held": "93425",
-   "Asset Category": "Multi-Utilities"
   },
   {
    "Name": "Cheniere Energy, Inc.",
    "Ticker": "LNG",
    "Identifier": "16411R208",
-   "Weight": "1.23",
-   "Market Value": "6915385.62",
+   "Weight": "1.25",
+   "Market Value": "7055090.38",
    "Shares Held": "23362",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
-   "Name": "SLB Ltd.",
-   "Ticker": "SLB",
-   "Identifier": "806857108",
-   "Weight": "1.23",
-   "Market Value": "6881497.54",
-   "Shares Held": "146446",
-   "Asset Category": "Energy Equipment & Services"
+   "Name": "Public Service Enterprise Group Incorporated",
+   "Ticker": "PEG",
+   "Identifier": "744573106",
+   "Weight": "1.24",
+   "Market Value": "7024625.75",
+   "Shares Held": "93425",
+   "Asset Category": "Multi-Utilities"
   },
   {
-   "Name": "TXO Partners, L.P.",
-   "Ticker": "TXO",
-   "Identifier": "87313P103",
-   "Weight": "1.23",
-   "Market Value": "6875314.32",
-   "Shares Held": "552678",
+   "Name": "Sunoco LP",
+   "Ticker": "SUN",
+   "Identifier": "86765K109",
+   "Weight": "1.22",
+   "Market Value": "6887875",
+   "Shares Held": "110206",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "PPL Corporation",
    "Ticker": "PPL",
    "Identifier": "69351T106",
-   "Weight": "1.22",
-   "Market Value": "6822692.52",
+   "Weight": "1.21",
+   "Market Value": "6865382.86",
    "Shares Held": "194047",
    "Asset Category": "Electric Utilities"
   },
   {
-   "Name": "Sunoco LP",
-   "Ticker": "SUN",
-   "Identifier": "86765K109",
+   "Name": "TXO Partners, L.P.",
+   "Ticker": "TXO",
+   "Identifier": "87313P103",
    "Weight": "1.21",
-   "Market Value": "6794994.96",
-   "Shares Held": "107109",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "EOG Resources, Inc.",
-   "Ticker": "EOG",
-   "Identifier": "26875P101",
-   "Weight": "1.2",
-   "Market Value": "6730679.85",
-   "Shares Held": "45915",
+   "Market Value": "6825573.3",
+   "Shares Held": "552678",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "New Jersey Resources Corporation",
    "Ticker": "NJR",
    "Identifier": "646025106",
-   "Weight": "1.12",
-   "Market Value": "6291009.98",
+   "Weight": "1.11",
+   "Market Value": "6277740.14",
    "Shares Held": "110582",
    "Asset Category": "Gas Utilities"
   },
@@ -284,7 +284,7 @@
    "Ticker": "CMS",
    "Identifier": "125896100",
    "Weight": "1.07",
-   "Market Value": "6012771.75",
+   "Market Value": "6062730",
    "Shares Held": "84675",
    "Asset Category": "Multi-Utilities"
   },
@@ -293,7 +293,7 @@
    "Ticker": "ETR",
    "Identifier": "29364G103",
    "Weight": "1.05",
-   "Market Value": "5884463",
+   "Market Value": "5960552.8",
    "Shares Held": "55540",
    "Asset Category": "Electric Utilities"
   },
@@ -301,26 +301,17 @@
    "Name": "Atmos Energy Corporation",
    "Ticker": "ATO",
    "Identifier": "049560105",
-   "Weight": "1.01",
-   "Market Value": "5685121.65",
+   "Weight": "1.02",
+   "Market Value": "5735772.3",
    "Shares Held": "33105",
    "Asset Category": "Gas Utilities"
-  },
-  {
-   "Name": "Targa Resources Corp.",
-   "Ticker": "TRGP",
-   "Identifier": "87612G101",
-   "Weight": "1",
-   "Market Value": "5596288.71",
-   "Shares Held": "19763",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "Technip Energies N.V. (ADR)",
    "Ticker": "THNPY",
    "Identifier": "87854Y109",
-   "Weight": "1",
-   "Market Value": "5574689.31",
+   "Weight": "1.02",
+   "Market Value": "5753657.76",
    "Shares Held": "159779",
    "Asset Category": "Energy Equipment & Services"
   },
@@ -328,17 +319,26 @@
    "Name": "Core Natural Resources, Inc.",
    "Ticker": "CNR",
    "Identifier": "218937100",
-   "Weight": "0.99",
-   "Market Value": "5535905.55",
+   "Weight": "1",
+   "Market Value": "5653269.75",
    "Shares Held": "68235",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Targa Resources Corp.",
+   "Ticker": "TRGP",
+   "Identifier": "87612G101",
+   "Weight": "1",
+   "Market Value": "5642929.39",
+   "Shares Held": "19763",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "Archrock, Inc.",
    "Ticker": "AROC",
    "Identifier": "03957W106",
-   "Weight": "0.93",
-   "Market Value": "5215751.68",
+   "Weight": "0.96",
+   "Market Value": "5417287.68",
    "Shares Held": "201536",
    "Asset Category": "Energy Equipment & Services"
   },
@@ -347,7 +347,7 @@
    "Ticker": "CQP",
    "Identifier": "16411Q101",
    "Weight": "0.91",
-   "Market Value": "5072150.88",
+   "Market Value": "5166965.72",
    "Shares Held": "88612",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -355,9 +355,9 @@
    "Name": "Clearway Energy, Inc. (Class C)",
    "Ticker": "CWEN",
    "Identifier": "18539C204",
-   "Weight": "0.86",
-   "Market Value": "4835764.7",
-   "Shares Held": "164762",
+   "Weight": "0.91",
+   "Market Value": "5124153.84",
+   "Shares Held": "169899",
    "Asset Category": "Independent Power and Renewable Electricity Producers"
   },
   {
@@ -365,16 +365,25 @@
    "Ticker": "OGS",
    "Identifier": "68235P108",
    "Weight": "0.86",
-   "Market Value": "4817976.05",
+   "Market Value": "4862172.33",
    "Shares Held": "58153",
    "Asset Category": "Gas Utilities"
+  },
+  {
+   "Name": "Generac Holdings Inc.",
+   "Ticker": "GNRC",
+   "Identifier": "368736104",
+   "Weight": "0.81",
+   "Market Value": "4594058.79",
+   "Shares Held": "22521",
+   "Asset Category": "Electrical Equipment"
   },
   {
    "Name": "CenterPoint Energy, Inc.",
    "Ticker": "CNP",
    "Identifier": "15189T107",
    "Weight": "0.78",
-   "Market Value": "4378033.44",
+   "Market Value": "4392170.16",
    "Shares Held": "108744",
    "Asset Category": "Multi-Utilities"
   },
@@ -383,7 +392,7 @@
    "Ticker": "AEE",
    "Identifier": "023608102",
    "Weight": "0.77",
-   "Market Value": "4294380.88",
+   "Market Value": "4351194.88",
    "Shares Held": "37876",
    "Asset Category": "Multi-Utilities"
   },
@@ -392,7 +401,7 @@
    "Ticker": "XEL",
    "Identifier": "98389B100",
    "Weight": "0.77",
-   "Market Value": "4319885.05",
+   "Market Value": "4335653.94",
    "Shares Held": "53454",
    "Asset Category": "Electric Utilities"
   },
@@ -400,8 +409,8 @@
    "Name": "Helmerich & Payne, Inc.",
    "Ticker": "HP",
    "Identifier": "423452101",
-   "Weight": "0.74",
-   "Market Value": "4122700.4",
+   "Weight": "0.75",
+   "Market Value": "4239978.96",
    "Shares Held": "119672",
    "Asset Category": "Energy Equipment & Services"
   },
@@ -410,43 +419,34 @@
    "Ticker": "NEE",
    "Identifier": "65339F101",
    "Weight": "0.74",
-   "Market Value": "4123359.58",
+   "Market Value": "4163822.91",
    "Shares Held": "48751",
    "Asset Category": "Electric Utilities"
   },
   {
-   "Name": "Generac Holdings Inc.",
-   "Ticker": "GNRC",
-   "Identifier": "368736104",
-   "Weight": "0.73",
-   "Market Value": "4070545.56",
-   "Shares Held": "20521",
-   "Asset Category": "Electrical Equipment"
+   "Name": "Tetra Tech, Inc.",
+   "Ticker": "TTEK",
+   "Identifier": "88162G103",
+   "Weight": "0.72",
+   "Market Value": "4041324.98",
+   "Shares Held": "106183",
+   "Asset Category": "Commercial Services & Supplies"
   },
   {
    "Name": "TotalEnergies SE",
    "Ticker": "TTE",
    "Identifier": "F92124100",
    "Weight": "0.72",
-   "Market Value": "4043080.8",
+   "Market Value": "4061587.86",
    "Shares Held": "47454",
    "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "Tetra Tech, Inc.",
-   "Ticker": "TTEK",
-   "Identifier": "88162G103",
-   "Weight": "0.7",
-   "Market Value": "3942574.79",
-   "Shares Held": "106183",
-   "Asset Category": "Commercial Services & Supplies"
   },
   {
    "Name": "WEC Energy Group, Inc.",
    "Ticker": "WEC",
    "Identifier": "92939U106",
    "Weight": "0.63",
-   "Market Value": "3511825.72",
+   "Market Value": "3540664.79",
    "Shares Held": "29731",
    "Asset Category": "Multi-Utilities"
   },
@@ -455,7 +455,7 @@
    "Ticker": "PCG",
    "Identifier": "69331C108",
    "Weight": "0.57",
-   "Market Value": "3185123.58",
+   "Market Value": "3194083.14",
    "Shares Held": "223989",
    "Asset Category": "Electric Utilities"
   },
@@ -464,7 +464,7 @@
    "Ticker": "LNT",
    "Identifier": "018802108",
    "Weight": "0.54",
-   "Market Value": "3029706.94",
+   "Market Value": "3053083.02",
    "Shares Held": "41743",
    "Asset Category": "Electric Utilities"
   },
@@ -473,44 +473,89 @@
    "Ticker": "IDA",
    "Identifier": "451107106",
    "Weight": "0.53",
-   "Market Value": "2952896.31",
+   "Market Value": "2977332.93",
    "Shares Held": "20709",
    "Asset Category": "Electric Utilities"
   },
   {
-   "Name": "Jacobs Solutions Inc.",
-   "Ticker": "J",
-   "Identifier": "46982L108",
+   "Name": "MasTec, Inc.",
+   "Ticker": "MTZ",
+   "Identifier": "576323109",
    "Weight": "0.53",
-   "Market Value": "2979263.94",
-   "Shares Held": "19603",
-   "Asset Category": "Professional Services"
+   "Market Value": "2975789.34",
+   "Shares Held": "19302",
+   "Asset Category": "Construction & Engineering"
   },
   {
    "Name": "DTE Energy Company",
    "Ticker": "DTE",
    "Identifier": "233331107",
    "Weight": "0.52",
-   "Market Value": "2919377.7",
+   "Market Value": "2920649.76",
    "Shares Held": "21201",
    "Asset Category": "Multi-Utilities"
+  },
+  {
+   "Name": "EnerSys",
+   "Ticker": "ENS",
+   "Identifier": "29275Y102",
+   "Weight": "0.52",
+   "Market Value": "2938965.54",
+   "Shares Held": "23002",
+   "Asset Category": "Electrical Equipment"
+  },
+  {
+   "Name": "Tenaris S.A. (ADR)",
+   "Ticker": "TS",
+   "Identifier": "88031M109",
+   "Weight": "0.52",
+   "Market Value": "2960357.13",
+   "Shares Held": "53523",
+   "Asset Category": "Energy Equipment & Services"
+  },
+  {
+   "Name": "Cummins Inc.",
+   "Ticker": "CMI",
+   "Identifier": "231021106",
+   "Weight": "0.51",
+   "Market Value": "2899181.52",
+   "Shares Held": "6891",
+   "Asset Category": "Machinery"
   },
   {
    "Name": "EQT Corporation",
    "Ticker": "EQT",
    "Identifier": "26884L109",
-   "Weight": "0.5",
-   "Market Value": "2785800.99",
+   "Weight": "0.51",
+   "Market Value": "2907683.31",
    "Shares Held": "56427",
    "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Jacobs Solutions Inc.",
+   "Ticker": "J",
+   "Identifier": "46982L108",
+   "Weight": "0.5",
+   "Market Value": "2852040.47",
+   "Shares Held": "19603",
+   "Asset Category": "Professional Services"
   },
   {
    "Name": "Hess Midstream LP (Class A)",
    "Ticker": "HESM",
    "Identifier": "428103105",
    "Weight": "0.49",
-   "Market Value": "2722907.6",
+   "Market Value": "2759151.08",
    "Shares Held": "92932",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Imperial Oil Ltd.",
+   "Ticker": "IMO.CN",
+   "Identifier": "453038408",
+   "Weight": "0.49",
+   "Market Value": "2789206.54",
+   "Shares Held": "23857",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
@@ -518,79 +563,43 @@
    "Ticker": "SU.CN",
    "Identifier": "867224107",
    "Weight": "0.49",
-   "Market Value": "2740763.29",
+   "Market Value": "2770593.01",
    "Shares Held": "42982",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
-   "Name": "Tenaris S.A. (ADR)",
-   "Ticker": "TS",
-   "Identifier": "88031M109",
-   "Weight": "0.47",
-   "Market Value": "2625579.53",
-   "Shares Held": "48523",
-   "Asset Category": "Energy Equipment & Services"
+   "Name": "Canadian Natural Resources Ltd.",
+   "Ticker": "CNQ.CN",
+   "Identifier": "136385101",
+   "Weight": "0.48",
+   "Market Value": "2733790.66",
+   "Shares Held": "60007",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "Diamondback Energy, Inc.",
    "Ticker": "FANG",
    "Identifier": "25278X109",
-   "Weight": "0.46",
-   "Market Value": "2573701.5",
+   "Weight": "0.47",
+   "Market Value": "2632892.25",
    "Shares Held": "14615",
    "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "MasTec, Inc.",
-   "Ticker": "MTZ",
-   "Identifier": "576323109",
-   "Weight": "0.46",
-   "Market Value": "2561296.88",
-   "Shares Held": "16802",
-   "Asset Category": "Construction & Engineering"
   },
   {
    "Name": "The Williams Companies, Inc.",
    "Ticker": "WMB",
    "Identifier": "969457100",
    "Weight": "0.46",
-   "Market Value": "2599476",
+   "Market Value": "2617199.7",
    "Shares Held": "39386",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "EnerSys",
-   "Ticker": "ENS",
-   "Identifier": "29275Y102",
-   "Weight": "0.44",
-   "Market Value": "2481239.46",
-   "Shares Held": "19502",
-   "Asset Category": "Electrical Equipment"
-  },
-  {
-   "Name": "Quanta Services, Inc.",
-   "Ticker": "PWR",
-   "Identifier": "74762E102",
-   "Weight": "0.43",
-   "Market Value": "2429906.44",
-   "Shares Held": "4121",
-   "Asset Category": "Construction & Engineering"
-  },
-  {
-   "Name": "Canadian Natural Resources Ltd.",
-   "Ticker": "CNQ.CN",
-   "Identifier": "136385101",
-   "Weight": "0.42",
-   "Market Value": "2370725.5",
-   "Shares Held": "53007",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "DT Midstream, Inc.",
    "Ticker": "DTM",
    "Identifier": "23345M107",
-   "Weight": "0.42",
-   "Market Value": "2371414.8",
+   "Weight": "0.43",
+   "Market Value": "2401932",
    "Shares Held": "20760",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -598,35 +607,35 @@
    "Name": "Keyera Corp.",
    "Ticker": "KEY.CN",
    "Identifier": "493271100",
-   "Weight": "0.42",
-   "Market Value": "2349334.59",
+   "Weight": "0.43",
+   "Market Value": "2423847.98",
    "Shares Held": "65733",
    "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Quanta Services, Inc.",
+   "Ticker": "PWR",
+   "Identifier": "74762E102",
+   "Weight": "0.41",
+   "Market Value": "2330301.87",
+   "Shares Held": "4121",
+   "Asset Category": "Construction & Engineering"
   },
   {
    "Name": "ATCO Ltd.",
    "Ticker": "ACO/X.CN",
    "Identifier": "046789400",
-   "Weight": "0.37",
-   "Market Value": "2091440.37",
+   "Weight": "0.38",
+   "Market Value": "2119715.33",
    "Shares Held": "33952",
    "Asset Category": "Multi-Utilities"
-  },
-  {
-   "Name": "Cummins Inc.",
-   "Ticker": "CMI",
-   "Identifier": "231021106",
-   "Weight": "0.36",
-   "Market Value": "2028933.53",
-   "Shares Held": "4891",
-   "Asset Category": "Machinery"
   },
   {
    "Name": "Flowco Holdings Inc. (Class A)",
    "Ticker": "FLOC",
    "Identifier": "342909108",
-   "Weight": "0.35",
-   "Market Value": "1958049.28",
+   "Weight": "0.36",
+   "Market Value": "2029107.52",
    "Shares Held": "98692",
    "Asset Category": "Energy Equipment & Services"
   },
@@ -634,8 +643,8 @@
    "Name": "Gulfport Energy Corporation",
    "Ticker": "GPOR",
    "Identifier": "402635502",
-   "Weight": "0.33",
-   "Market Value": "1866495.54",
+   "Weight": "0.34",
+   "Market Value": "1935766.02",
    "Shares Held": "12282",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -644,43 +653,88 @@
    "Ticker": "FLS",
    "Identifier": "34354P105",
    "Weight": "0.31",
-   "Market Value": "1733804.86",
+   "Market Value": "1731495.08",
    "Shares Held": "20998",
    "Asset Category": "Machinery"
+  },
+  {
+   "Name": "First Solar, Inc.",
+   "Ticker": "FSLR",
+   "Identifier": "336433107",
+   "Weight": "0.28",
+   "Market Value": "1584534.2",
+   "Shares Held": "10715",
+   "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
   {
    "Name": "Southwest Gas Holdings, Inc.",
    "Ticker": "SWX",
    "Identifier": "844895102",
    "Weight": "0.27",
-   "Market Value": "1525552",
+   "Market Value": "1528435.2",
    "Shares Held": "16960",
    "Asset Category": "Gas Utilities"
   },
   {
-   "Name": "CES Energy Solutions Corp.",
-   "Ticker": "CEU.CN",
-   "Identifier": "15713J104",
+   "Name": "Caterpillar Inc.",
+   "Ticker": "CAT",
+   "Identifier": "149123101",
    "Weight": "0.26",
-   "Market Value": "1435258.98",
-   "Shares Held": "104974",
-   "Asset Category": "Energy Equipment & Services"
+   "Market Value": "1467963",
+   "Shares Held": "2700",
+   "Asset Category": "Machinery"
   },
   {
    "Name": "DHT Holdings, Inc.",
    "Ticker": "DHT",
    "Identifier": "Y2065G121",
    "Weight": "0.26",
-   "Market Value": "1435965.96",
+   "Market Value": "1461560.1",
    "Shares Held": "67353",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "Enerflex Ltd.",
+   "Ticker": "EFX.CT",
+   "Identifier": "29269R105",
+   "Weight": "0.26",
+   "Market Value": "1448914.18",
+   "Shares Held": "79283",
+   "Asset Category": "Energy Equipment & Services"
+  },
+  {
+   "Name": "Okeanis Eco Tankers Corp.",
+   "Ticker": "ECO",
+   "Identifier": "Y64177101",
+   "Weight": "0.26",
+   "Market Value": "1488609.55",
+   "Shares Held": "18245",
+   "Asset Category": "Oil, Gas & Consumable Fuels"
+  },
+  {
+   "Name": "CES Energy Solutions Corp.",
+   "Ticker": "CEU.CN",
+   "Identifier": "15713J104",
+   "Weight": "0.25",
+   "Market Value": "1438263.13",
+   "Shares Held": "104974",
+   "Asset Category": "Energy Equipment & Services"
+  },
+  {
+   "Name": "International Seaways, Inc.",
+   "Ticker": "INSW",
+   "Identifier": "Y41053102",
+   "Weight": "0.25",
+   "Market Value": "1387589.28",
+   "Shares Held": "13552",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "NiSource Inc.",
    "Ticker": "NI",
    "Identifier": "65473P105",
-   "Weight": "0.26",
-   "Market Value": "1430621",
+   "Weight": "0.25",
+   "Market Value": "1429987",
    "Shares Held": "31700",
    "Asset Category": "Multi-Utilities"
   },
@@ -688,71 +742,44 @@
    "Name": "SunocoCorp LLC",
    "Ticker": "SUNC",
    "Identifier": "86765Q106",
-   "Weight": "0.26",
-   "Market Value": "1429327.04",
+   "Weight": "0.25",
+   "Market Value": "1408850.22",
    "Shares Held": "22502",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "Imperial Oil Ltd.",
-   "Ticker": "IMO.CN",
-   "Identifier": "453038408",
-   "Weight": "0.25",
-   "Market Value": "1375111.18",
-   "Shares Held": "11857",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "International Seaways, Inc.",
-   "Ticker": "INSW",
-   "Identifier": "Y41053102",
-   "Weight": "0.25",
-   "Market Value": "1373359.68",
-   "Shares Held": "13552",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
   {
    "Name": "AltaGas Ltd.",
    "Ticker": "ALA.CN",
    "Identifier": "021361100",
-   "Weight": "0.23",
-   "Market Value": "1314794.74",
+   "Weight": "0.24",
+   "Market Value": "1336392.45",
    "Shares Held": "34230",
    "Asset Category": "Gas Utilities"
-  },
-  {
-   "Name": "Constellation Energy Corporation",
-   "Ticker": "CEG",
-   "Identifier": "21037T109",
-   "Weight": "0.23",
-   "Market Value": "1272678.32",
-   "Shares Held": "5198",
-   "Asset Category": "Electric Utilities"
   },
   {
    "Name": "Dominion Energy, Inc.",
    "Ticker": "D",
    "Identifier": "25746U109",
    "Weight": "0.23",
-   "Market Value": "1267474.44",
+   "Market Value": "1280659.64",
    "Shares Held": "18836",
    "Asset Category": "Multi-Utilities"
   },
   {
-   "Name": "Enerflex Ltd.",
-   "Ticker": "EFX.CT",
-   "Identifier": "29269R105",
+   "Name": "Constellation Energy Corporation",
+   "Ticker": "CEG",
+   "Identifier": "21037T109",
    "Weight": "0.22",
-   "Market Value": "1207081.47",
-   "Shares Held": "67283",
-   "Asset Category": "Energy Equipment & Services"
+   "Market Value": "1222985.44",
+   "Shares Held": "5198",
+   "Asset Category": "Electric Utilities"
   },
   {
    "Name": "UGI Corporation",
    "Ticker": "UGI",
    "Identifier": "902681105",
    "Weight": "0.22",
-   "Market Value": "1242133.2",
+   "Market Value": "1228510.96",
    "Shares Held": "35848",
    "Asset Category": "Gas Utilities"
   },
@@ -761,34 +788,16 @@
    "Ticker": "VST",
    "Identifier": "92840M102",
    "Weight": "0.2",
-   "Market Value": "1115573.52",
+   "Market Value": "1121118.12",
    "Shares Held": "9241",
    "Asset Category": "Independent Power and Renewable Electricity Producers"
-  },
-  {
-   "Name": "Okeanis Eco Tankers Corp.",
-   "Ticker": "ECO",
-   "Identifier": "Y64177101",
-   "Weight": "0.19",
-   "Market Value": "1062381.45",
-   "Shares Held": "13245",
-   "Asset Category": "Oil, Gas & Consumable Fuels"
-  },
-  {
-   "Name": "First Solar, Inc.",
-   "Ticker": "FSLR",
-   "Identifier": "336433107",
-   "Weight": "0.15",
-   "Market Value": "845820",
-   "Shares Held": "5715",
-   "Asset Category": "Semiconductors & Semiconductor Equipment"
   },
   {
    "Name": "Phillips 66",
    "Ticker": "PSX",
    "Identifier": "718546104",
    "Weight": "0.14",
-   "Market Value": "795204.2",
+   "Market Value": "792284.48",
    "Shares Held": "3356",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -797,7 +806,7 @@
    "Ticker": "FRO",
    "Identifier": "M46528101",
    "Weight": "0.09",
-   "Market Value": "493456.46",
+   "Market Value": "494702.3",
    "Shares Held": "10382",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -806,7 +815,7 @@
    "Ticker": "IBDRY",
    "Identifier": "450737101",
    "Weight": "0.06",
-   "Market Value": "338517.12",
+   "Market Value": "337978.08",
    "Shares Held": "3369",
    "Asset Category": "Electric Utilities"
   },
@@ -815,7 +824,7 @@
    "Ticker": "VLO",
    "Identifier": "91913Y100",
    "Weight": "0.04",
-   "Market Value": "250320.57",
+   "Market Value": "249033",
    "Shares Held": "771",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -824,7 +833,7 @@
    "Ticker": "MPC",
    "Identifier": "56585A102",
    "Weight": "0.03",
-   "Market Value": "171542.28",
+   "Market Value": "167248.41",
    "Shares Held": "483",
    "Asset Category": "Oil, Gas & Consumable Fuels"
   },
@@ -832,11 +841,11 @@
    "Name": "Canadian Dollar",
    "Ticker": "-",
    "Identifier": "$CAD",
-   "Weight": "0",
-   "Market Value": "842.07",
-   "Shares Held": "1202",
+   "Weight": "-0.34",
+   "Market Value": "-1936891.14",
+   "Shares Held": "-2753097",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-11-24"
+ "asOfDate": "2026-11-25"
 }

@@ -10,29 +10,29 @@
  ],
  "rows": [
   {
-   "Name": "US Dollar",
-   "Ticker": "-",
-   "Identifier": "$USD",
-   "Weight": "9.56",
-   "Market Value": "393450587.95",
-   "Shares Held": "393450588",
-   "Asset Category": "Other"
-  },
-  {
    "Name": "Enterprise Products Partners L.P.",
    "Ticker": "EPD",
    "Identifier": "293792107",
-   "Weight": "8.77",
-   "Market Value": "360951804",
-   "Shares Held": "10026439",
+   "Weight": "8.79",
+   "Market Value": "364257890.34",
+   "Shares Held": "10101439",
    "Asset Category": "Petroleum Product Transmission"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "8.78",
+   "Market Value": "363675727.66",
+   "Shares Held": "363675728",
+   "Asset Category": "Other"
   },
   {
    "Name": "Energy Transfer LP",
    "Ticker": "ET",
    "Identifier": "29273V100",
    "Weight": "7.84",
-   "Market Value": "322811938.04",
+   "Market Value": "325058487.93",
    "Shares Held": "17281153",
    "Asset Category": "Petroleum Product Transmission"
   },
@@ -40,26 +40,26 @@
    "Name": "MPLX LP",
    "Ticker": "MPLX",
    "Identifier": "55336V100",
-   "Weight": "4.91",
-   "Market Value": "202105891.05",
-   "Shares Held": "3612259",
+   "Weight": "4.94",
+   "Market Value": "204516623.64",
+   "Shares Held": "3633913",
    "Asset Category": "Petroleum Product Transmission"
   },
   {
    "Name": "Kinder Morgan, Inc.",
    "Ticker": "KMI",
    "Identifier": "49456B101",
-   "Weight": "3.65",
-   "Market Value": "150425708.16",
-   "Shares Held": "4839952",
+   "Weight": "3.76",
+   "Market Value": "155913278.88",
+   "Shares Held": "4919952",
    "Asset Category": "Natural Gas Transmission"
   },
   {
    "Name": "Plains GP Holdings, L.P. (Class A)",
    "Ticker": "PAGP",
    "Identifier": "72651A207",
-   "Weight": "3.5",
-   "Market Value": "144054778.5",
+   "Weight": "3.47",
+   "Market Value": "143941794.36",
    "Shares Held": "5649207",
    "Asset Category": "Crude Oil Transmission"
   },
@@ -67,8 +67,8 @@
    "Name": "National Fuel Gas Company",
    "Ticker": "NFG",
    "Identifier": "636180101",
-   "Weight": "3.18",
-   "Market Value": "130680962.3",
+   "Weight": "3.23",
+   "Market Value": "133690412.8",
    "Shares Held": "1770265",
    "Asset Category": "Natural Gas Transmission"
   },
@@ -77,7 +77,7 @@
    "Ticker": "PPL",
    "Identifier": "69351T106",
    "Weight": "2.75",
-   "Market Value": "113252926.68",
+   "Market Value": "113961562.74",
    "Shares Held": "3221073",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -85,36 +85,27 @@
    "Name": "Entergy Corporation",
    "Ticker": "ETR",
    "Identifier": "29364G103",
-   "Weight": "2.35",
-   "Market Value": "96693996.1",
+   "Weight": "2.36",
+   "Market Value": "97944310.16",
    "Shares Held": "912638",
-   "Asset Category": "Electric Power & Transmission"
-  },
-  {
-   "Name": "Duke Energy Corporation",
-   "Ticker": "DUK",
-   "Identifier": "26441C204",
-   "Weight": "2.24",
-   "Market Value": "92130490.96",
-   "Shares Held": "703501",
    "Asset Category": "Electric Power & Transmission"
   },
   {
    "Name": "ONEOK, Inc.",
    "Ticker": "OKE",
    "Identifier": "30609A109",
-   "Weight": "2.14",
-   "Market Value": "88158452.33",
-   "Shares Held": "1039727",
+   "Weight": "2.31",
+   "Market Value": "95562867.4",
+   "Shares Held": "1105412",
    "Asset Category": "Petroleum Product Transmission"
   },
   {
-   "Name": "American Electric Power Company, Inc.",
-   "Ticker": "AEP",
-   "Identifier": "025537101",
-   "Weight": "2.02",
-   "Market Value": "82949061.9",
-   "Shares Held": "651603",
+   "Name": "Duke Energy Corporation",
+   "Ticker": "DUK",
+   "Identifier": "26441C204",
+   "Weight": "2.24",
+   "Market Value": "92791781.9",
+   "Shares Held": "703501",
    "Asset Category": "Electric Power & Transmission"
   },
   {
@@ -122,8 +113,17 @@
    "Ticker": "CMS",
    "Identifier": "125896100",
    "Weight": "2.02",
-   "Market Value": "83183102.28",
+   "Market Value": "83874244.8",
    "Shares Held": "1171428",
+   "Asset Category": "Electric Power & Transmission"
+  },
+  {
+   "Name": "American Electric Power Company, Inc.",
+   "Ticker": "AEP",
+   "Identifier": "025537101",
+   "Weight": "2.01",
+   "Market Value": "83138026.77",
+   "Shares Held": "651603",
    "Asset Category": "Electric Power & Transmission"
   },
   {
@@ -131,7 +131,7 @@
    "Ticker": "SRE",
    "Identifier": "816851109",
    "Weight": "1.93",
-   "Market Value": "79631006.84",
+   "Market Value": "79964656.31",
    "Shares Held": "1011059",
    "Asset Category": "Natural Gas Transmission"
   },
@@ -140,7 +140,7 @@
    "Ticker": "PEG",
    "Identifier": "744573106",
    "Weight": "1.88",
-   "Market Value": "77530370.72",
+   "Market Value": "77799393.76",
    "Shares Held": "1034704",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -148,8 +148,8 @@
    "Name": "ONE Gas, Inc.",
    "Ticker": "OGS",
    "Identifier": "68235P108",
-   "Weight": "1.79",
-   "Market Value": "73784801.55",
+   "Weight": "1.8",
+   "Market Value": "74461644.63",
    "Shares Held": "890583",
    "Asset Category": "Natural Gas Transmission"
   },
@@ -157,8 +157,8 @@
    "Name": "The Southern Company",
    "Ticker": "SO",
    "Identifier": "842587107",
-   "Weight": "1.76",
-   "Market Value": "72541211.43",
+   "Weight": "1.77",
+   "Market Value": "73227235",
    "Shares Held": "770813",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -166,8 +166,8 @@
    "Name": "Cheniere Energy, Inc.",
    "Ticker": "LNG",
    "Identifier": "16411R208",
-   "Weight": "1.73",
-   "Market Value": "71312953.14",
+   "Weight": "1.76",
+   "Market Value": "72753618.86",
    "Shares Held": "240914",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -175,18 +175,9 @@
    "Name": "DTE Energy Company",
    "Ticker": "DTE",
    "Identifier": "233331107",
-   "Weight": "1.63",
-   "Market Value": "67151057.4",
+   "Weight": "1.62",
+   "Market Value": "67180317.12",
    "Shares Held": "487662",
-   "Asset Category": "Electric Power & Transmission"
-  },
-  {
-   "Name": "OGE Energy Corp.",
-   "Ticker": "OGE",
-   "Identifier": "670837103",
-   "Weight": "1.6",
-   "Market Value": "65745635.14",
-   "Shares Held": "1285601",
    "Asset Category": "Electric Power & Transmission"
   },
   {
@@ -194,8 +185,17 @@
    "Ticker": "FE",
    "Identifier": "337932107",
    "Weight": "1.59",
-   "Market Value": "65335582.72",
+   "Market Value": "65694266.24",
    "Shares Held": "1379552",
+   "Asset Category": "Electric Power & Transmission"
+  },
+  {
+   "Name": "OGE Energy Corp.",
+   "Ticker": "OGE",
+   "Identifier": "670837103",
+   "Weight": "1.59",
+   "Market Value": "66067035.39",
+   "Shares Held": "1285601",
    "Asset Category": "Electric Power & Transmission"
   },
   {
@@ -203,7 +203,7 @@
    "Ticker": "WEC",
    "Identifier": "92939U106",
    "Weight": "1.58",
-   "Market Value": "65041124.32",
+   "Market Value": "65575241.24",
    "Shares Held": "550636",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -212,7 +212,7 @@
    "Ticker": "CNP",
    "Identifier": "15189T107",
    "Weight": "1.56",
-   "Market Value": "64410967.5",
+   "Market Value": "64618951.25",
    "Shares Held": "1599875",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -221,7 +221,7 @@
    "Ticker": "XEL",
    "Identifier": "98389B100",
    "Weight": "1.51",
-   "Market Value": "62194496.7",
+   "Market Value": "62421526.01",
    "Shares Held": "769591",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -229,8 +229,8 @@
    "Name": "Dominion Energy, Inc.",
    "Ticker": "D",
    "Identifier": "25746U109",
-   "Weight": "1.46",
-   "Market Value": "60192587.25",
+   "Weight": "1.47",
+   "Market Value": "60818754.75",
    "Shares Held": "894525",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -239,71 +239,71 @@
    "Ticker": "NEE",
    "Identifier": "65339F101",
    "Weight": "1.38",
-   "Market Value": "56797161.6",
+   "Market Value": "57354523.2",
    "Shares Held": "671520",
    "Asset Category": "Electric Power & Transmission"
-  },
-  {
-   "Name": "New Jersey Resources Corporation",
-   "Ticker": "NJR",
-   "Identifier": "646025106",
-   "Weight": "1.37",
-   "Market Value": "56228824.42",
-   "Shares Held": "988378",
-   "Asset Category": "Natural Gas Transmission"
   },
   {
    "Name": "Evergy, Inc.",
    "Ticker": "EVRG",
    "Identifier": "30034W106",
    "Weight": "1.36",
-   "Market Value": "56181990.15",
+   "Market Value": "56542750.55",
    "Shares Held": "644215",
    "Asset Category": "Electric Power & Transmission"
   },
   {
-   "Name": "Targa Resources Corp.",
-   "Ticker": "TRGP",
-   "Identifier": "87612G101",
-   "Weight": "1.27",
-   "Market Value": "52205504.37",
-   "Shares Held": "184361",
+   "Name": "New Jersey Resources Corporation",
+   "Ticker": "NJR",
+   "Identifier": "646025106",
+   "Weight": "1.35",
+   "Market Value": "56110219.06",
+   "Shares Held": "988378",
    "Asset Category": "Natural Gas Transmission"
   },
   {
    "Name": "Cheniere Energy Partners, L.P.",
    "Ticker": "CQP",
    "Identifier": "16411Q101",
-   "Weight": "1.25",
-   "Market Value": "51393563.64",
-   "Shares Held": "897861",
+   "Weight": "1.27",
+   "Market Value": "52597252.68",
+   "Shares Held": "902028",
+   "Asset Category": "Natural Gas Transmission"
+  },
+  {
+   "Name": "Targa Resources Corp.",
+   "Ticker": "TRGP",
+   "Identifier": "87612G101",
+   "Weight": "1.27",
+   "Market Value": "52640596.33",
+   "Shares Held": "184361",
    "Asset Category": "Natural Gas Transmission"
   },
   {
    "Name": "Atmos Energy Corporation",
    "Ticker": "ATO",
    "Identifier": "049560105",
-   "Weight": "1.22",
-   "Market Value": "50388673.14",
+   "Weight": "1.23",
+   "Market Value": "50837602.68",
    "Shares Held": "293418",
    "Asset Category": "Natural Gas Transmission"
+  },
+  {
+   "Name": "Ameren Corporation",
+   "Ticker": "AEE",
+   "Identifier": "023608102",
+   "Weight": "1.12",
+   "Market Value": "46327772.48",
+   "Shares Held": "403271",
+   "Asset Category": "Electric Power & Transmission"
   },
   {
    "Name": "Alliant Energy Corporation",
    "Ticker": "LNT",
    "Identifier": "018802108",
    "Weight": "1.11",
-   "Market Value": "45706819.52",
+   "Market Value": "46059476.16",
    "Shares Held": "629744",
-   "Asset Category": "Electric Power & Transmission"
-  },
-  {
-   "Name": "Ameren Corporation",
-   "Ticker": "AEE",
-   "Identifier": "023608102",
-   "Weight": "1.11",
-   "Market Value": "45722865.98",
-   "Shares Held": "403271",
    "Asset Category": "Electric Power & Transmission"
   },
   {
@@ -311,43 +311,61 @@
    "Ticker": "IDA",
    "Identifier": "451107106",
    "Weight": "1.09",
-   "Market Value": "44949358.65",
+   "Market Value": "45321335.95",
    "Shares Held": "315235",
+   "Asset Category": "Electric Power & Transmission"
+  },
+  {
+   "Name": "Tetra Tech, Inc.",
+   "Ticker": "TTEK",
+   "Identifier": "88162G103",
+   "Weight": "1.02",
+   "Market Value": "42108936.98",
+   "Shares Held": "1106383",
    "Asset Category": "Electric Power & Transmission"
   },
   {
    "Name": "Jacobs Solutions Inc.",
    "Ticker": "J",
    "Identifier": "46982L108",
-   "Weight": "1.04",
-   "Market Value": "42606529.14",
+   "Weight": "0.98",
+   "Market Value": "40787103.07",
    "Shares Held": "280343",
    "Asset Category": "Petroleum Product Transmission"
   },
   {
-   "Name": "Tetra Tech, Inc.",
-   "Ticker": "TTEK",
-   "Identifier": "88162G103",
-   "Weight": "1",
-   "Market Value": "41080000.79",
-   "Shares Held": "1106383",
+   "Name": "Clearway Energy, Inc. (Class C)",
+   "Ticker": "CWEN",
+   "Identifier": "18539C204",
+   "Weight": "0.89",
+   "Market Value": "37072913.28",
+   "Shares Held": "1229208",
    "Asset Category": "Electric Power & Transmission"
   },
   {
    "Name": "AltaGas Ltd.",
    "Ticker": "ALA.CN",
    "Identifier": "021361100",
-   "Weight": "0.87",
-   "Market Value": "35807087.37",
+   "Weight": "0.88",
+   "Market Value": "36395278.3",
    "Shares Held": "932219",
    "Asset Category": "Natural Gas Transmission"
+  },
+  {
+   "Name": "Generac Holdings Inc.",
+   "Ticker": "GNRC",
+   "Identifier": "368736104",
+   "Weight": "0.85",
+   "Market Value": "35368194.18",
+   "Shares Held": "173382",
+   "Asset Category": "Electric Power & Transmission"
   },
   {
    "Name": "Sunoco LP",
    "Ticker": "SUN",
    "Identifier": "86765K109",
-   "Weight": "0.87",
-   "Market Value": "35850578.4",
+   "Weight": "0.85",
+   "Market Value": "35319375",
    "Shares Held": "565110",
    "Asset Category": "Petroleum Product Transmission"
   },
@@ -355,35 +373,17 @@
    "Name": "SunocoCorp LLC",
    "Ticker": "SUNC",
    "Identifier": "86765Q106",
-   "Weight": "0.87",
-   "Market Value": "35667369.28",
-   "Shares Held": "561514",
-   "Asset Category": "Petroleum Product Transmission"
-  },
-  {
-   "Name": "Clearway Energy, Inc. (Class C)",
-   "Ticker": "CWEN",
-   "Identifier": "18539C204",
    "Weight": "0.85",
-   "Market Value": "34871087.2",
-   "Shares Held": "1188112",
-   "Asset Category": "Electric Power & Transmission"
-  },
-  {
-   "Name": "Generac Holdings Inc.",
-   "Ticker": "GNRC",
-   "Identifier": "368736104",
-   "Weight": "0.84",
-   "Market Value": "34392053.52",
-   "Shares Held": "173382",
-   "Asset Category": "Electric Power & Transmission"
+   "Market Value": "35382538.86",
+   "Shares Held": "565126",
+   "Asset Category": "Petroleum Product Transmission"
   },
   {
    "Name": "DT Midstream, Inc.",
    "Ticker": "DTM",
    "Identifier": "23345M107",
    "Weight": "0.79",
-   "Market Value": "32391972.64",
+   "Market Value": "32808817.6",
    "Shares Held": "283568",
    "Asset Category": "Nat. Gas Gathering & Processing"
   },
@@ -391,8 +391,8 @@
    "Name": "Keyera Corp.",
    "Ticker": "KEY.CN",
    "Identifier": "493271100",
-   "Weight": "0.66",
-   "Market Value": "27132343.11",
+   "Weight": "0.68",
+   "Market Value": "27992894.63",
    "Shares Held": "759147",
    "Asset Category": "Natural Gas Transmission"
   },
@@ -401,7 +401,7 @@
    "Ticker": "ACO/X.CN",
    "Identifier": "046789400",
    "Weight": "0.65",
-   "Market Value": "26719764.28",
+   "Market Value": "27080998.75",
    "Shares Held": "433763",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -410,7 +410,7 @@
    "Ticker": "CPK",
    "Identifier": "165303108",
    "Weight": "0.58",
-   "Market Value": "23935816.4",
+   "Market Value": "23904909.32",
    "Shares Held": "171706",
    "Asset Category": "Natural Gas Transmission"
   },
@@ -419,7 +419,7 @@
    "Ticker": "PCG",
    "Identifier": "69331C108",
    "Weight": "0.53",
-   "Market Value": "21861074.34",
+   "Market Value": "21922568.22",
    "Shares Held": "1537347",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -428,8 +428,17 @@
    "Ticker": "WLKP",
    "Identifier": "960417103",
    "Weight": "0.53",
-   "Market Value": "21828061.88",
+   "Market Value": "21933308.08",
    "Shares Held": "1052462",
+   "Asset Category": "Petroleum Product Transmission"
+  },
+  {
+   "Name": "Cummins Inc.",
+   "Ticker": "CMI",
+   "Identifier": "231021106",
+   "Weight": "0.52",
+   "Market Value": "21446202",
+   "Shares Held": "50975",
    "Asset Category": "Petroleum Product Transmission"
   },
   {
@@ -437,7 +446,7 @@
    "Ticker": "MTZ",
    "Identifier": "576323109",
    "Weight": "0.52",
-   "Market Value": "21334282.88",
+   "Market Value": "21576399.84",
    "Shares Held": "139952",
    "Asset Category": "Natural Gas Transmission"
   },
@@ -445,80 +454,80 @@
    "Name": "NiSource Inc.",
    "Ticker": "NI",
    "Identifier": "65473P105",
-   "Weight": "0.48",
-   "Market Value": "19619635.68",
+   "Weight": "0.47",
+   "Market Value": "19610940.96",
    "Shares Held": "434736",
    "Asset Category": "Electric Power & Transmission"
-  },
-  {
-   "Name": "UGI Corporation",
-   "Ticker": "UGI",
-   "Identifier": "902681105",
-   "Weight": "0.46",
-   "Market Value": "18816024.15",
-   "Shares Held": "543031",
-   "Asset Category": "Propane"
   },
   {
    "Name": "The Williams Companies, Inc.",
    "Ticker": "WMB",
    "Identifier": "969457100",
    "Weight": "0.45",
-   "Market Value": "18347604",
+   "Market Value": "18472701.3",
    "Shares Held": "277994",
    "Asset Category": "Natural Gas Transmission"
+  },
+  {
+   "Name": "UGI Corporation",
+   "Ticker": "UGI",
+   "Identifier": "902681105",
+   "Weight": "0.45",
+   "Market Value": "18609672.37",
+   "Shares Held": "543031",
+   "Asset Category": "Propane"
   },
   {
    "Name": "Archrock, Inc.",
    "Ticker": "AROC",
    "Identifier": "03957W106",
-   "Weight": "0.42",
-   "Market Value": "17471199.8",
+   "Weight": "0.44",
+   "Market Value": "18146284.8",
    "Shares Held": "675085",
    "Asset Category": "Nat. Gas Gathering & Processing"
-  },
-  {
-   "Name": "Cummins Inc.",
-   "Ticker": "CMI",
-   "Identifier": "231021106",
-   "Weight": "0.39",
-   "Market Value": "16167999.25",
-   "Shares Held": "38975",
-   "Asset Category": "Petroleum Product Transmission"
   },
   {
    "Name": "Exelon Corporation",
    "Ticker": "EXC",
    "Identifier": "30161N101",
    "Weight": "0.27",
-   "Market Value": "11160153.15",
+   "Market Value": "11227746.55",
    "Shares Held": "241405",
    "Asset Category": "Electric Power & Transmission"
   },
   {
-   "Name": "Constellation Energy Corporation",
-   "Ticker": "CEG",
-   "Identifier": "21037T109",
-   "Weight": "0.23",
-   "Market Value": "9472125.07",
-   "Shares Held": "38687",
-   "Asset Category": "Electric Power & Transmission"
+   "Name": "Caterpillar Inc.",
+   "Ticker": "CAT",
+   "Identifier": "149123101",
+   "Weight": "0.26",
+   "Market Value": "10873800",
+   "Shares Held": "20000",
+   "Asset Category": "Petroleum Product Transmission"
   },
   {
    "Name": "Hess Midstream LP (Class A)",
    "Ticker": "HESM",
    "Identifier": "428103105",
-   "Weight": "0.23",
-   "Market Value": "9654057",
+   "Weight": "0.24",
+   "Market Value": "9782558.1",
    "Shares Held": "329490",
    "Asset Category": "Natural Gas Transmission"
+  },
+  {
+   "Name": "Constellation Energy Corporation",
+   "Ticker": "CEG",
+   "Identifier": "21037T109",
+   "Weight": "0.22",
+   "Market Value": "9102277.36",
+   "Shares Held": "38687",
+   "Asset Category": "Electric Power & Transmission"
   },
   {
    "Name": "Vistra Corp.",
    "Ticker": "VST",
    "Identifier": "92840M102",
    "Weight": "0.2",
-   "Market Value": "8102002.08",
+   "Market Value": "8142270.48",
    "Shares Held": "67114",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -527,7 +536,7 @@
    "Ticker": "PWR",
    "Identifier": "74762E102",
    "Weight": "0.09",
-   "Market Value": "3792564.48",
+   "Market Value": "3637103.04",
    "Shares Held": "6432",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -536,7 +545,7 @@
    "Ticker": "IBDRY",
    "Identifier": "450737101",
    "Weight": "0.06",
-   "Market Value": "2524961.92",
+   "Market Value": "2520941.28",
    "Shares Held": "25129",
    "Asset Category": "Electric Power & Transmission"
   },
@@ -545,10 +554,10 @@
    "Ticker": "-",
    "Identifier": "$CAD",
    "Weight": "0",
-   "Market Value": "2581.42",
+   "Market Value": "2591.59",
    "Shares Held": "3684",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-11-24"
+ "asOfDate": "2026-11-25"
 }
