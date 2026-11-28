@@ -95,8 +95,8 @@
  },
  "distributions": {
   "frequency": "Annually",
-  "latestAmount": 7.5834,
-  "latestExDate": "2025-12-29",
+  "latestAmount": 0.2959,
+  "latestExDate": "2026-11-30",
   "headers": [
    "Ex-Date",
    "Record Date",
@@ -105,6 +105,13 @@
    "Distribution Type"
   ],
   "rows": [
+   [
+    "2026-11-30",
+    "2026-11-30",
+    "2026-12-02",
+    "0.295900",
+    "Ordinary Distributions"
+   ],
    [
     "2025-12-29",
     "2025-12-29",
@@ -141,8 +148,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 5,
-  "asOfDate": "2026-11-25",
+  "totalRows": 4,
+  "asOfDate": "2026-11-27",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -155,9 +162,9 @@
   "asOfDate": "2026-11-27",
   "source": "First Trust official daily NAV / market price history (ftportfolios.com EtfPriceHistory.aspx Excel export)"
  },
- "holdingsCount": 5,
+ "holdingsCount": 4,
  "historyCount": 1471,
- "distributionCount": 4,
+ "distributionCount": 5,
  "netAssets": 54601276,
  "dividendYield": 47.65,
  "secYield": 2.96

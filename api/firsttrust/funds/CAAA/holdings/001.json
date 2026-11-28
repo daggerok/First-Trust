@@ -10,19 +10,10 @@
  ],
  "rows": [
   {
-   "Name": "US Dollar",
-   "Ticker": "-",
-   "Identifier": "$USD",
-   "Weight": "3.17",
-   "Market Value": "",
-   "Shares Held": "1100696",
-   "Asset Category": "-"
-  },
-  {
    "Name": "U.S. Treasury Bill, 0%, due 12/08/2026",
    "Ticker": "-",
    "Identifier": "912797WE3",
-   "Weight": "2.01",
+   "Weight": "2.02",
    "Market Value": "",
    "Shares Held": "700000",
    "Asset Category": "-"
@@ -40,9 +31,18 @@
    "Name": "BX Trust Series 2025-DELC, Class A, Variable rate, due 12/15/2030",
    "Ticker": "-",
    "Identifier": "05594MAA0",
-   "Weight": "1.73",
+   "Weight": "1.74",
    "Market Value": "",
    "Shares Held": "600000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "US Dollar",
+   "Ticker": "-",
+   "Identifier": "$USD",
+   "Weight": "1.64",
+   "Market Value": "",
+   "Shares Held": "569410",
    "Asset Category": "-"
   },
   {
@@ -121,6 +121,15 @@
    "Name": "NY Commercial Mortgage Trust Series 2025-299P, Class A, Variable rate, due 02/10/2035",
    "Ticker": "-",
    "Identifier": "62957FAA7",
+   "Weight": "1.44",
+   "Market Value": "",
+   "Shares Held": "500000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "U.S. Treasury Bill, 0%, due 12/17/2026",
+   "Ticker": "-",
+   "Identifier": "912797VH7",
    "Weight": "1.44",
    "Market Value": "",
    "Shares Held": "500000",
@@ -226,21 +235,21 @@
    "Asset Category": "-"
   },
   {
+   "Name": "SKY1 2025-LINE A Series 2025-LINE, Class A, Variable rate, due 04/15/2030",
+   "Ticker": "-",
+   "Identifier": "830941AA8",
+   "Weight": "1.28",
+   "Market Value": "",
+   "Shares Held": "442379",
+   "Asset Category": "-"
+  },
+  {
    "Name": "BENCHMARK Mortgage Trust Series 2023-B40, Class ASB, 6.2533%, due 12/15/2056",
    "Ticker": "-",
    "Identifier": "08163WAD7",
    "Weight": "1.27",
    "Market Value": "",
    "Shares Held": "425000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "SKY1 2025-LINE A Series 2025-LINE, Class A, Variable rate, due 04/15/2030",
-   "Ticker": "-",
-   "Identifier": "830941AA8",
-   "Weight": "1.27",
-   "Market Value": "",
-   "Shares Held": "442379",
    "Asset Category": "-"
   },
   {
@@ -265,18 +274,9 @@
    "Name": "FS Trust Series 2026-ORL, Class A, Variable rate, due 02/15/2041",
    "Ticker": "-",
    "Identifier": "30343YAA6",
-   "Weight": "1.15",
+   "Weight": "1.16",
    "Market Value": "",
    "Shares Held": "400000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "BX Trust Series 2026-VLT10, Class A, Variable rate, due 06/13/2058",
-   "Ticker": "-",
-   "Identifier": "05620TAA3",
-   "Weight": "1.08",
-   "Market Value": "",
-   "Shares Held": "405000",
    "Asset Category": "-"
   },
   {
@@ -286,6 +286,15 @@
    "Weight": "1.08",
    "Market Value": "",
    "Shares Held": "375000",
+   "Asset Category": "-"
+  },
+  {
+   "Name": "BX Trust Series 2026-VLT10, Class A, Variable rate, due 06/13/2058",
+   "Ticker": "-",
+   "Identifier": "05620TAA3",
+   "Weight": "1.07",
+   "Market Value": "",
+   "Shares Held": "405000",
    "Asset Category": "-"
   },
   {
@@ -388,21 +397,21 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Barclays Commercial Mortgage Securities LLC Series 2017-C1, Class A4, 3.674%, due 02/15/2050",
+   "Ticker": "-",
+   "Identifier": "07332VBD6",
+   "Weight": "0.91",
+   "Market Value": "",
+   "Shares Held": "316880",
+   "Asset Category": "-"
+  },
+  {
    "Name": "ILPT Commercial Mortgage Trust Series 2019-SURF, Class A, 4.145%, due 02/11/2041",
    "Ticker": "-",
    "Identifier": "44965LAA2",
    "Weight": "0.91",
    "Market Value": "",
    "Shares Held": "325000",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Barclays Commercial Mortgage Securities LLC Series 2017-C1, Class A4, 3.674%, due 02/15/2050",
-   "Ticker": "-",
-   "Identifier": "07332VBD6",
-   "Weight": "0.9",
-   "Market Value": "",
-   "Shares Held": "316880",
    "Asset Category": "-"
   },
   {
@@ -451,18 +460,18 @@
    "Asset Category": "-"
   },
   {
-   "Name": "Fannie Mae FN BZ0874, 4.76%, due 06/01/2029",
+   "Name": "KRE Commercial Mortgage Trust Series 2026-ICNA, Class A, Variable rate, due 05/15/2043",
    "Ticker": "-",
-   "Identifier": "3140NU6L8",
-   "Weight": "0.86",
+   "Identifier": "48275LAA8",
+   "Weight": "0.87",
    "Market Value": "",
    "Shares Held": "300000",
    "Asset Category": "-"
   },
   {
-   "Name": "KRE Commercial Mortgage Trust Series 2026-ICNA, Class A, Variable rate, due 05/15/2043",
+   "Name": "Fannie Mae FN BZ0874, 4.76%, due 06/01/2029",
    "Ticker": "-",
-   "Identifier": "48275LAA8",
+   "Identifier": "3140NU6L8",
    "Weight": "0.86",
    "Market Value": "",
    "Shares Held": "300000",
@@ -541,6 +550,15 @@
    "Asset Category": "-"
   },
   {
+   "Name": "Citigroup Commercial Mortgage Trust Series 2019-GC43, Class AAB, 2.959%, due 11/10/2052",
+   "Ticker": "-",
+   "Identifier": "17328HBE0",
+   "Weight": "0.82",
+   "Market Value": "",
+   "Shares Held": "292461",
+   "Asset Category": "-"
+  },
+  {
    "Name": "SLG Office Trust Series 2021-OVA, Class A, 2.5854%, due 07/15/2041",
    "Ticker": "-",
    "Identifier": "78449RAA3",
@@ -556,15 +574,6 @@
    "Weight": "0.81",
    "Market Value": "",
    "Shares Held": "318750",
-   "Asset Category": "-"
-  },
-  {
-   "Name": "Citigroup Commercial Mortgage Trust Series 2019-GC43, Class AAB, 2.959%, due 11/10/2052",
-   "Ticker": "-",
-   "Identifier": "17328HBE0",
-   "Weight": "0.81",
-   "Market Value": "",
-   "Shares Held": "292461",
    "Asset Category": "-"
   },
   {
@@ -1014,7 +1023,7 @@
    "Identifier": "-",
    "Weight": "0",
    "Market Value": "",
-   "Shares Held": "17",
+   "Shares Held": "18",
    "Asset Category": "-"
   },
   {
@@ -1023,7 +1032,7 @@
    "Identifier": "-",
    "Weight": "0",
    "Market Value": "",
-   "Shares Held": "12",
+   "Shares Held": "13",
    "Asset Category": "-"
   },
   {
@@ -1054,5 +1063,5 @@
    "Asset Category": "-"
   }
  ],
- "asOfDate": "2026-11-25"
+ "asOfDate": "2026-11-27"
 }

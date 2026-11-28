@@ -10,29 +10,29 @@
  ],
  "rows": [
   {
-   "Name": "Apple Inc.",
-   "Ticker": "AAPL",
-   "Identifier": "037833100",
-   "Weight": "6.06",
-   "Market Value": "2266466.92",
-   "Shares Held": "6374",
-   "Asset Category": "Information Technology"
-  },
-  {
    "Name": "Tesla, Inc.",
    "Ticker": "TSLA",
    "Identifier": "88160R101",
-   "Weight": "5.88",
-   "Market Value": "2199490.04",
+   "Weight": "5.96",
+   "Market Value": "2314400",
    "Shares Held": "5786",
    "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Apple Inc.",
+   "Ticker": "AAPL",
+   "Identifier": "037833100",
+   "Weight": "5.89",
+   "Market Value": "2285333.96",
+   "Shares Held": "6374",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "Microsoft Corporation",
    "Ticker": "MSFT",
    "Identifier": "594918104",
-   "Weight": "5.44",
-   "Market Value": "2034189.36",
+   "Weight": "5.27",
+   "Market Value": "2046313.2",
    "Shares Held": "4152",
    "Asset Category": "Information Technology"
   },
@@ -40,8 +40,8 @@
    "Name": "Alphabet Inc. (Class A)",
    "Ticker": "GOOGL",
    "Identifier": "02079K305",
-   "Weight": "4.55",
-   "Market Value": "1701413",
+   "Weight": "4.41",
+   "Market Value": "1713000.8",
    "Shares Held": "6230",
    "Asset Category": "Communication Services"
   },
@@ -49,8 +49,8 @@
    "Name": "Taiwan Semiconductor Manufacturing Company Limited (ADR)",
    "Ticker": "TSM",
    "Identifier": "874039100",
-   "Weight": "4.34",
-   "Market Value": "1622006.92",
+   "Weight": "4.31",
+   "Market Value": "1674124.92",
    "Shares Held": "4738",
    "Asset Category": "Information Technology"
   },
@@ -58,8 +58,8 @@
    "Name": "Advanced Micro Devices, Inc.",
    "Ticker": "AMD",
    "Identifier": "007903107",
-   "Weight": "3.8",
-   "Market Value": "1419480.88",
+   "Weight": "3.82",
+   "Market Value": "1484191.84",
    "Shares Held": "3496",
    "Asset Category": "Information Technology"
   },
@@ -67,8 +67,8 @@
    "Name": "Samsung Electronics Co., Ltd.",
    "Ticker": "005930.KS",
    "Identifier": "Y74718100",
-   "Weight": "3.77",
-   "Market Value": "1408456.09",
+   "Weight": "3.82",
+   "Market Value": "1483231.48",
    "Shares Held": "11082",
    "Asset Category": "Information Technology"
   },
@@ -76,8 +76,8 @@
    "Name": "NVIDIA Corporation",
    "Ticker": "NVDA",
    "Identifier": "67066G104",
-   "Weight": "3.76",
-   "Market Value": "1405510.2",
+   "Weight": "3.65",
+   "Market Value": "1416712.86",
    "Shares Held": "9414",
    "Asset Category": "Information Technology"
   },
@@ -85,8 +85,8 @@
    "Name": "Micron Technology, Inc.",
    "Ticker": "MU",
    "Identifier": "595112103",
-   "Weight": "3.37",
-   "Market Value": "1259618.75",
+   "Weight": "3.49",
+   "Market Value": "1355360.25",
    "Shares Held": "2095",
    "Asset Category": "Information Technology"
   },
@@ -94,8 +94,8 @@
    "Name": "Texas Instruments Incorporated",
    "Ticker": "TXN",
    "Identifier": "882508104",
-   "Weight": "3.11",
-   "Market Value": "1161817",
+   "Weight": "3.12",
+   "Market Value": "1211955",
    "Shares Held": "4300",
    "Asset Category": "Information Technology"
   },
@@ -103,35 +103,35 @@
    "Name": "Intel Corporation",
    "Ticker": "INTC",
    "Identifier": "458140100",
-   "Weight": "2.95",
-   "Market Value": "1103780.08",
+   "Weight": "3",
+   "Market Value": "1163153.6",
    "Shares Held": "20264",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "QUALCOMM Incorporated",
+   "Ticker": "QCOM",
+   "Identifier": "747525103",
+   "Weight": "2.31",
+   "Market Value": "897604.89",
+   "Shares Held": "5007",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Toyota Motor Corporation",
    "Ticker": "7203.JP",
    "Identifier": "J92676113",
-   "Weight": "2.39",
-   "Market Value": "895431.99",
+   "Weight": "2.29",
+   "Market Value": "888030.85",
    "Shares Held": "41860",
    "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "QUALCOMM Incorporated",
-   "Ticker": "QCOM",
-   "Identifier": "747525103",
-   "Weight": "2.26",
-   "Market Value": "844480.62",
-   "Shares Held": "5007",
-   "Asset Category": "Information Technology"
   },
   {
    "Name": "Analog Devices, Inc.",
    "Ticker": "ADI",
    "Identifier": "032654105",
-   "Weight": "2.03",
-   "Market Value": "760478.77",
+   "Weight": "2.04",
+   "Market Value": "789918",
    "Shares Held": "2283",
    "Asset Category": "Information Technology"
   },
@@ -139,8 +139,8 @@
    "Name": "Schneider Electric SE",
    "Ticker": "SU.FP",
    "Identifier": "F86921107",
-   "Weight": "1.7",
-   "Market Value": "635862.78",
+   "Weight": "1.66",
+   "Market Value": "643984.98",
    "Shares Held": "2674",
    "Asset Category": "Industrials"
   },
@@ -148,8 +148,8 @@
    "Name": "Marvell Technology, Inc.",
    "Ticker": "MRVL",
    "Identifier": "573874104",
-   "Weight": "1.44",
-   "Market Value": "539562.53",
+   "Weight": "1.49",
+   "Market Value": "579165.34",
    "Shares Held": "4121",
    "Asset Category": "Information Technology"
   },
@@ -157,8 +157,8 @@
    "Name": "General Motors Company",
    "Ticker": "GM",
    "Identifier": "37045V100",
-   "Weight": "0.93",
-   "Market Value": "347550.62",
+   "Weight": "0.91",
+   "Market Value": "352557.6",
    "Shares Held": "4138",
    "Asset Category": "Consumer Discretionary"
   },
@@ -166,8 +166,8 @@
    "Name": "NXP Semiconductors N.V.",
    "Ticker": "NXPI",
    "Identifier": "N6596X109",
-   "Weight": "0.77",
-   "Market Value": "289122.4",
+   "Weight": "0.78",
+   "Market Value": "301296.1",
    "Shares Held": "1190",
    "Asset Category": "Information Technology"
   },
@@ -176,7 +176,7 @@
    "Ticker": "TEL",
    "Identifier": "G87052109",
    "Weight": "0.77",
-   "Market Value": "288881.68",
+   "Market Value": "297542.12",
    "Shares Held": "1366",
    "Asset Category": "Information Technology"
   },
@@ -184,8 +184,8 @@
    "Name": "Infineon Technologies AG",
    "Ticker": "IFX.GY",
    "Identifier": "D35415104",
-   "Weight": "0.74",
-   "Market Value": "275511.95",
+   "Weight": "0.75",
+   "Market Value": "291953.24",
    "Shares Held": "6138",
    "Asset Category": "Information Technology"
   },
@@ -193,44 +193,35 @@
    "Name": "Cummins Inc.",
    "Ticker": "CMI",
    "Identifier": "231021106",
-   "Weight": "0.73",
-   "Market Value": "272626.56",
+   "Weight": "0.72",
+   "Market Value": "279391.68",
    "Shares Held": "648",
    "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Li Auto Inc. (Class A)",
+   "Ticker": "2015.HK",
+   "Identifier": "G5479M105",
+   "Weight": "0.7",
+   "Market Value": "271575.03",
+   "Shares Held": "43965",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "PACCAR Inc",
    "Ticker": "PCAR",
    "Identifier": "693718108",
-   "Weight": "0.7",
-   "Market Value": "263398",
+   "Weight": "0.69",
+   "Market Value": "268326.8",
    "Shares Held": "2440",
    "Asset Category": "Industrials"
-  },
-  {
-   "Name": "DENSO Corporation",
-   "Ticker": "6902.JP",
-   "Identifier": "J12075107",
-   "Weight": "0.69",
-   "Market Value": "256221.07",
-   "Shares Held": "20900",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Ferrari N.V.",
-   "Ticker": "RACE",
-   "Identifier": "N3167Y103",
-   "Weight": "0.68",
-   "Market Value": "254355.39",
-   "Shares Held": "621",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Volvo AB (Class B)",
    "Ticker": "VOLVB.SS",
    "Identifier": "928856301",
-   "Weight": "0.68",
-   "Market Value": "254395.97",
+   "Weight": "0.69",
+   "Market Value": "267670.84",
    "Shares Held": "8248",
    "Asset Category": "Industrials"
   },
@@ -238,8 +229,8 @@
    "Name": "Bayerische Motoren Werke (BMW) AG",
    "Ticker": "BMW.GY",
    "Identifier": "D12096109",
-   "Weight": "0.67",
-   "Market Value": "249922.29",
+   "Weight": "0.68",
+   "Market Value": "264452.15",
    "Shares Held": "4122",
    "Asset Category": "Consumer Discretionary"
   },
@@ -248,70 +239,70 @@
    "Ticker": "CRUS",
    "Identifier": "172755100",
    "Weight": "0.67",
-   "Market Value": "250977.9",
+   "Market Value": "258528.78",
    "Shares Held": "2130",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Honda Motor Co., Ltd.",
-   "Ticker": "7267.JP",
-   "Identifier": "J22302111",
-   "Weight": "0.66",
-   "Market Value": "246895.53",
-   "Shares Held": "22292",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Skyworks Solutions, Inc.",
    "Ticker": "SWKS",
    "Identifier": "83088M102",
-   "Weight": "0.65",
-   "Market Value": "244881.86",
+   "Weight": "0.67",
+   "Market Value": "258766.76",
    "Shares Held": "2986",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Versigent Plc",
-   "Ticker": "VGNT",
-   "Identifier": "G9600F104",
+   "Name": "Ferrari N.V.",
+   "Ticker": "RACE",
+   "Identifier": "N3167Y103",
+   "Weight": "0.66",
+   "Market Value": "257162.31",
+   "Shares Held": "621",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "DENSO Corporation",
+   "Ticker": "6902.JP",
+   "Identifier": "J12075107",
    "Weight": "0.65",
-   "Market Value": "241768.8",
-   "Shares Held": "5460",
+   "Market Value": "253724.41",
+   "Shares Held": "20900",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Honda Motor Co., Ltd.",
+   "Ticker": "7267.JP",
+   "Identifier": "J22302111",
+   "Weight": "0.64",
+   "Market Value": "248193.53",
+   "Shares Held": "22292",
    "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Ford Motor Company",
    "Ticker": "F",
    "Identifier": "345370860",
-   "Weight": "0.64",
-   "Market Value": "239517.77",
+   "Weight": "0.63",
+   "Market Value": "242666.73",
    "Shares Held": "19681",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Li Auto Inc. (Class A)",
-   "Ticker": "2015.HK",
-   "Identifier": "G5479M105",
-   "Weight": "0.64",
-   "Market Value": "237794.17",
-   "Shares Held": "43965",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Magna International Inc.",
-   "Ticker": "MGA",
-   "Identifier": "559222401",
-   "Weight": "0.64",
-   "Market Value": "238542.92",
-   "Shares Held": "3778",
+   "Name": "Versigent Plc",
+   "Ticker": "VGNT",
+   "Identifier": "G9600F104",
+   "Weight": "0.63",
+   "Market Value": "243024.6",
+   "Shares Held": "5460",
    "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Silicon Laboratories Inc.",
    "Ticker": "SLAB",
    "Identifier": "826919102",
-   "Weight": "0.64",
-   "Market Value": "240324.83",
+   "Weight": "0.62",
+   "Market Value": "240596.58",
    "Shares Held": "1087",
    "Asset Category": "Information Technology"
   },
@@ -319,54 +310,63 @@
    "Name": "Yadea Group Holdings Ltd.",
    "Ticker": "1585.HK",
    "Identifier": "G9830F106",
-   "Weight": "0.64",
-   "Market Value": "238300.31",
+   "Weight": "0.62",
+   "Market Value": "239320.31",
    "Shares Held": "221731",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Hyundai Mobis Co., Ltd.",
-   "Ticker": "012330.KS",
-   "Identifier": "Y3849A109",
-   "Weight": "0.63",
-   "Market Value": "233936.79",
-   "Shares Held": "899",
+   "Name": "Magna International Inc.",
+   "Ticker": "MGA",
+   "Identifier": "559222401",
+   "Weight": "0.61",
+   "Market Value": "236842.82",
+   "Shares Held": "3778",
    "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Synaptics Incorporated",
-   "Ticker": "SYNA",
-   "Identifier": "87157D109",
-   "Weight": "0.63",
-   "Market Value": "236175.75",
-   "Shares Held": "2025",
-   "Asset Category": "Information Technology"
   },
   {
    "Name": "Mercedes-Benz Group AG",
    "Ticker": "MBG.GY",
    "Identifier": "D1668R123",
    "Weight": "0.61",
-   "Market Value": "227115.5",
+   "Market Value": "234808.43",
    "Shares Held": "5512",
    "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Synaptics Incorporated",
+   "Ticker": "SYNA",
+   "Identifier": "87157D109",
+   "Weight": "0.61",
+   "Market Value": "237471.75",
+   "Shares Held": "2025",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "XPeng Inc. (Class A)",
    "Ticker": "9868.HK",
    "Identifier": "G982AW100",
-   "Weight": "0.59",
-   "Market Value": "220711.1",
+   "Weight": "0.61",
+   "Market Value": "236223.67",
    "Shares Held": "50502",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Kia Corporation",
-   "Ticker": "000270.KS",
-   "Identifier": "Y47601102",
-   "Weight": "0.58",
-   "Market Value": "215930.32",
-   "Shares Held": "3021",
+   "Name": "Hyundai Mobis Co., Ltd.",
+   "Ticker": "012330.KS",
+   "Identifier": "Y3849A109",
+   "Weight": "0.59",
+   "Market Value": "227748.01",
+   "Shares Held": "899",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Geely Automobile Holdings Limited",
+   "Ticker": "175.HK",
+   "Identifier": "G3777B103",
+   "Weight": "0.57",
+   "Market Value": "220212.46",
+   "Shares Held": "129141",
    "Asset Category": "Consumer Discretionary"
   },
   {
@@ -374,71 +374,62 @@
    "Ticker": "2245.HK",
    "Identifier": "Y534DF103",
    "Weight": "0.57",
-   "Market Value": "213771.81",
+   "Market Value": "220560.87",
    "Shares Held": "98000",
    "Asset Category": "Materials"
-  },
-  {
-   "Name": "Geely Automobile Holdings Limited",
-   "Ticker": "175.HK",
-   "Identifier": "G3777B103",
-   "Weight": "0.56",
-   "Market Value": "210699.24",
-   "Shares Held": "129141",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "RoboSense Technology Co., Ltd.",
-   "Ticker": "2498.HK",
-   "Identifier": "G7611S107",
-   "Weight": "0.55",
-   "Market Value": "204768.03",
-   "Shares Held": "122911",
-   "Asset Category": "Information Technology"
   },
   {
    "Name": "POSCO Future M Co., Ltd.",
    "Ticker": "003670.KS",
    "Identifier": "Y70754109",
-   "Weight": "0.54",
-   "Market Value": "203665.17",
+   "Weight": "0.56",
+   "Market Value": "218779.06",
    "Shares Held": "1671",
    "Asset Category": "Industrials"
   },
   {
-   "Name": "Wacker Chemie AG",
-   "Ticker": "WCH.GY",
-   "Identifier": "D9540Z106",
-   "Weight": "0.54",
-   "Market Value": "200660.53",
-   "Shares Held": "2449",
-   "Asset Category": "Materials"
+   "Name": "RoboSense Technology Co., Ltd.",
+   "Ticker": "2498.HK",
+   "Identifier": "G7611S107",
+   "Weight": "0.56",
+   "Market Value": "215868.84",
+   "Shares Held": "122911",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Kia Corporation",
+   "Ticker": "000270.KS",
+   "Identifier": "Y47601102",
+   "Weight": "0.55",
+   "Market Value": "213794.19",
+   "Shares Held": "3021",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "AUMOVIO SE",
    "Ticker": "AMV0.GY",
    "Identifier": "D0R9B8108",
-   "Weight": "0.53",
-   "Market Value": "197858.16",
+   "Weight": "0.54",
+   "Market Value": "209863.58",
    "Shares Held": "6281",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "BorgWarner Inc.",
-   "Ticker": "BWA",
-   "Identifier": "099724106",
-   "Weight": "0.53",
-   "Market Value": "196823.34",
-   "Shares Held": "3906",
+   "Name": "Stellantis N.V.",
+   "Ticker": "STLAM.IM",
+   "Identifier": "N82405106",
+   "Weight": "0.54",
+   "Market Value": "210246.88",
+   "Shares Held": "53757",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Hyundai Motor Company",
-   "Ticker": "005380.KS",
-   "Identifier": "Y38472109",
+   "Name": "Hesai Group (ADR)",
+   "Ticker": "HSAI",
+   "Identifier": "428050108",
    "Weight": "0.53",
-   "Market Value": "199451.27",
-   "Shares Held": "994",
+   "Market Value": "203719.55",
+   "Shares Held": "15445",
    "Asset Category": "Consumer Discretionary"
   },
   {
@@ -446,43 +437,25 @@
    "Ticker": "RIVN",
    "Identifier": "76954A103",
    "Weight": "0.53",
-   "Market Value": "197009.04",
+   "Market Value": "204916.32",
    "Shares Held": "16824",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Albemarle Corporation",
-   "Ticker": "ALB",
-   "Identifier": "012653101",
-   "Weight": "0.51",
-   "Market Value": "192421.5",
-   "Shares Held": "2361",
+   "Name": "Wacker Chemie AG",
+   "Ticker": "WCH.GY",
+   "Identifier": "D9540Z106",
+   "Weight": "0.53",
+   "Market Value": "204500.72",
+   "Shares Held": "2449",
    "Asset Category": "Materials"
-  },
-  {
-   "Name": "BYD Company Limited (Class H)",
-   "Ticker": "1211.HK",
-   "Identifier": "Y1023R104",
-   "Weight": "0.51",
-   "Market Value": "191550.2",
-   "Shares Held": "25912",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Hesai Group (ADR)",
-   "Ticker": "HSAI",
-   "Identifier": "428050108",
-   "Weight": "0.51",
-   "Market Value": "191209.1",
-   "Shares Held": "15445",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Lattice Semiconductor Corporation",
    "Ticker": "LSCC",
    "Identifier": "518415104",
-   "Weight": "0.51",
-   "Market Value": "189485.67",
+   "Weight": "0.52",
+   "Market Value": "199882.98",
    "Shares Held": "1929",
    "Asset Category": "Information Technology"
   },
@@ -490,8 +463,8 @@
    "Name": "NIO Inc. (Class A) (ADR)",
    "Ticker": "NIO",
    "Identifier": "62914V106",
-   "Weight": "0.51",
-   "Market Value": "190188.38",
+   "Weight": "0.52",
+   "Market Value": "201500.7",
    "Shares Held": "70702",
    "Asset Category": "Consumer Discretionary"
   },
@@ -499,18 +472,27 @@
    "Name": "ON Semiconductor Corporation",
    "Ticker": "ON",
    "Identifier": "682189105",
-   "Weight": "0.51",
-   "Market Value": "189689.28",
+   "Weight": "0.52",
+   "Market Value": "201104.64",
    "Shares Held": "3036",
    "Asset Category": "Information Technology"
   },
   {
-   "Name": "Stellantis N.V.",
-   "Ticker": "STLAM.IM",
-   "Identifier": "N82405106",
+   "Name": "BorgWarner Inc.",
+   "Ticker": "BWA",
+   "Identifier": "099724106",
    "Weight": "0.51",
-   "Market Value": "190994.58",
-   "Shares Held": "53757",
+   "Market Value": "196979.58",
+   "Shares Held": "3906",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Hyundai Motor Company",
+   "Ticker": "005380.KS",
+   "Identifier": "Y38472109",
+   "Weight": "0.51",
+   "Market Value": "199817.66",
+   "Shares Held": "994",
    "Asset Category": "Consumer Discretionary"
   },
   {
@@ -518,106 +500,88 @@
    "Ticker": "9863.HK",
    "Identifier": "Y989TP100",
    "Weight": "0.51",
-   "Market Value": "189731.36",
+   "Market Value": "199080.58",
    "Shares Held": "55664",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Baidu, Inc. (ADR)",
-   "Ticker": "BIDU",
-   "Identifier": "056752108",
-   "Weight": "0.49",
-   "Market Value": "182406.77",
-   "Shares Held": "2873",
-   "Asset Category": "Communication Services"
+   "Name": "Albemarle Corporation",
+   "Ticker": "ALB",
+   "Identifier": "012653101",
+   "Weight": "0.5",
+   "Market Value": "195797.73",
+   "Shares Held": "2361",
+   "Asset Category": "Materials"
   },
   {
-   "Name": "LG Energy Solution",
-   "Ticker": "373220.KS",
-   "Identifier": "Y5S5CG102",
-   "Weight": "0.49",
-   "Market Value": "184902.47",
-   "Shares Held": "805",
-   "Asset Category": "Industrials"
+   "Name": "BYD Company Limited (Class H)",
+   "Ticker": "1211.HK",
+   "Identifier": "Y1023R104",
+   "Weight": "0.5",
+   "Market Value": "195276.27",
+   "Shares Held": "25912",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Microchip Technology Incorporated",
    "Ticker": "MCHP",
    "Identifier": "595017104",
-   "Weight": "0.49",
-   "Market Value": "184034.79",
+   "Weight": "0.5",
+   "Market Value": "192701.04",
    "Shares Held": "3192",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "STMicroelectronics N.V.",
-   "Ticker": "STM",
-   "Identifier": "861012102",
-   "Weight": "0.49",
-   "Market Value": "181725.02",
-   "Shares Held": "4574",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Allegro Microsystems, Inc.",
    "Ticker": "ALGM",
    "Identifier": "01749D105",
-   "Weight": "0.48",
-   "Market Value": "180333.11",
+   "Weight": "0.49",
+   "Market Value": "189107.15",
    "Shares Held": "6647",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Panasonic Holdings Corporation",
-   "Ticker": "6752.JP",
-   "Identifier": "J6354Y104",
-   "Weight": "0.48",
-   "Market Value": "177954.46",
-   "Shares Held": "10400",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Sociedad Quimica y Minera de Chile S.A. (ADR)",
-   "Ticker": "SQM",
-   "Identifier": "833635105",
-   "Weight": "0.48",
-   "Market Value": "178778.08",
-   "Shares Held": "3737",
-   "Asset Category": "Materials"
-  },
-  {
-   "Name": "NIDEC CORP.",
-   "Ticker": "6594.JP",
-   "Identifier": "J52968104",
-   "Weight": "0.47",
-   "Market Value": "177413.09",
-   "Shares Held": "17800",
-   "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Samsung SDI Co., Ltd.",
-   "Ticker": "006400.KS",
-   "Identifier": "Y74866107",
-   "Weight": "0.47",
-   "Market Value": "176461.92",
-   "Shares Held": "567",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Horizon Robotics, Inc.",
    "Ticker": "9660.HK",
    "Identifier": "G4602S105",
-   "Weight": "0.46",
-   "Market Value": "173781.19",
+   "Weight": "0.49",
+   "Market Value": "191440.16",
    "Shares Held": "478842",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "LG Energy Solution",
+   "Ticker": "373220.KS",
+   "Identifier": "Y5S5CG102",
+   "Weight": "0.49",
+   "Market Value": "190399.06",
+   "Shares Held": "805",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Panasonic Holdings Corporation",
+   "Ticker": "6752.JP",
+   "Identifier": "J6354Y104",
+   "Weight": "0.49",
+   "Market Value": "188779.74",
+   "Shares Held": "10400",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "Samsung SDI Co., Ltd.",
+   "Ticker": "006400.KS",
+   "Identifier": "Y74866107",
+   "Weight": "0.49",
+   "Market Value": "191732.99",
+   "Shares Held": "567",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "LG Chem Ltd.",
    "Ticker": "051910.KS",
    "Identifier": "Y52758102",
-   "Weight": "0.46",
-   "Market Value": "173540.32",
+   "Weight": "0.48",
+   "Market Value": "185541.98",
    "Shares Held": "1126",
    "Asset Category": "Materials"
   },
@@ -625,53 +589,80 @@
    "Name": "Seres Group Co., Ltd. (Class H)",
    "Ticker": "9927.HK",
    "Identifier": "Y7T8FY109",
-   "Weight": "0.46",
-   "Market Value": "171662.92",
+   "Weight": "0.48",
+   "Market Value": "184355.48",
    "Shares Held": "54837",
    "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "STMicroelectronics N.V.",
+   "Ticker": "STM",
+   "Identifier": "861012102",
+   "Weight": "0.48",
+   "Market Value": "187579.74",
+   "Shares Held": "4574",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Baidu, Inc. (ADR)",
+   "Ticker": "BIDU",
+   "Identifier": "056752108",
+   "Weight": "0.47",
+   "Market Value": "182406.77",
+   "Shares Held": "2873",
+   "Asset Category": "Communication Services"
+  },
+  {
+   "Name": "Sociedad Quimica y Minera de Chile S.A. (ADR)",
+   "Ticker": "SQM",
+   "Identifier": "833635105",
+   "Weight": "0.47",
+   "Market Value": "181991.9",
+   "Shares Held": "3737",
+   "Asset Category": "Materials"
   },
   {
    "Name": "Tianqi Lithium Corporation (Class H)",
    "Ticker": "9696.HK",
    "Identifier": "Y8817Q101",
-   "Weight": "0.46",
-   "Market Value": "170726.58",
+   "Weight": "0.47",
+   "Market Value": "184072.82",
    "Shares Held": "69417",
    "Asset Category": "Materials"
+  },
+  {
+   "Name": "IGO Limited",
+   "Ticker": "IGO.AU",
+   "Identifier": "Q4875H108",
+   "Weight": "0.46",
+   "Market Value": "177069.18",
+   "Shares Held": "55851",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "NIDEC CORP.",
+   "Ticker": "6594.JP",
+   "Identifier": "J52968104",
+   "Weight": "0.46",
+   "Market Value": "178094.85",
+   "Shares Held": "17800",
+   "Asset Category": "Industrials"
   },
   {
    "Name": "CALB Group Co., Ltd. (Class H)",
    "Ticker": "3931.HK",
    "Identifier": "G2168A104",
    "Weight": "0.45",
-   "Market Value": "167513.14",
+   "Market Value": "175814.1",
    "Shares Held": "119379",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "IGO Limited",
-   "Ticker": "IGO.AU",
-   "Identifier": "Q4875H108",
-   "Weight": "0.45",
-   "Market Value": "166963.7",
-   "Shares Held": "55851",
-   "Asset Category": "Materials"
-  },
-  {
-   "Name": "Lucid Group, Inc. (Class A)",
-   "Ticker": "LCID",
-   "Identifier": "549498202",
-   "Weight": "0.43",
-   "Market Value": "161569.27",
-   "Shares Held": "63113",
    "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Aurora Innovation, Inc.",
    "Ticker": "AUR",
    "Identifier": "051774107",
-   "Weight": "0.42",
-   "Market Value": "157364.24",
+   "Weight": "0.44",
+   "Market Value": "169145.52",
    "Shares Held": "42076",
    "Asset Category": "Information Technology"
   },
@@ -679,116 +670,134 @@
    "Name": "Ecopro BM Co., Ltd.",
    "Ticker": "247540.KS",
    "Identifier": "Y2243T102",
-   "Weight": "0.42",
-   "Market Value": "157226.94",
+   "Weight": "0.44",
+   "Market Value": "172222.84",
    "Shares Held": "2505",
    "Asset Category": "Industrials"
+  },
+  {
+   "Name": "WeRide Inc. (Class A) (ADR)",
+   "Ticker": "WRD",
+   "Identifier": "950915108",
+   "Weight": "0.44",
+   "Market Value": "168924.12",
+   "Shares Held": "53457",
+   "Asset Category": "Consumer Discretionary"
+  },
+  {
+   "Name": "ams-OSRAM AG",
+   "Ticker": "AMS.SW",
+   "Identifier": "A0400Q156",
+   "Weight": "0.43",
+   "Market Value": "166162.14",
+   "Shares Held": "8885",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "Ganfeng Lithium Co., Ltd. (Class H)",
    "Ticker": "1772.HK",
    "Identifier": "Y2690M105",
-   "Weight": "0.42",
-   "Market Value": "155252.88",
+   "Weight": "0.43",
+   "Market Value": "167731.15",
    "Shares Held": "64497",
    "Asset Category": "Materials"
+  },
+  {
+   "Name": "Liontown Ltd.",
+   "Ticker": "LTR.AU",
+   "Identifier": "Q5569M105",
+   "Weight": "0.43",
+   "Market Value": "165421.11",
+   "Shares Held": "432842",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Renesas Electronics Corporation",
+   "Ticker": "6723.JP",
+   "Identifier": "J4881V107",
+   "Weight": "0.43",
+   "Market Value": "166285.93",
+   "Shares Held": "10200",
+   "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Lucid Group, Inc. (Class A)",
+   "Ticker": "LCID",
+   "Identifier": "549498202",
+   "Weight": "0.42",
+   "Market Value": "164093.8",
+   "Shares Held": "63113",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "PLS Group Ltd.",
    "Ticker": "PLS.AU",
    "Identifier": "Q7539C100",
    "Weight": "0.42",
-   "Market Value": "158807.16",
+   "Market Value": "164215.1",
    "Shares Held": "93587",
    "Asset Category": "Materials"
-  },
-  {
-   "Name": "WeRide Inc. (Class A) (ADR)",
-   "Ticker": "WRD",
-   "Identifier": "950915108",
-   "Weight": "0.42",
-   "Market Value": "157430.86",
-   "Shares Held": "53457",
-   "Asset Category": "Consumer Discretionary"
-  },
-  {
-   "Name": "Liontown Ltd.",
-   "Ticker": "LTR.AU",
-   "Identifier": "Q5569M105",
-   "Weight": "0.41",
-   "Market Value": "152061.71",
-   "Shares Held": "432842",
-   "Asset Category": "Materials"
-  },
-  {
-   "Name": "Lithium Argentina AG",
-   "Ticker": "LAR",
-   "Identifier": "H5012F103",
-   "Weight": "0.41",
-   "Market Value": "152630.55",
-   "Shares Held": "45835",
-   "Asset Category": "Materials"
-  },
-  {
-   "Name": "Mobileye Global Inc. (Class A)",
-   "Ticker": "MBLY",
-   "Identifier": "60741F104",
-   "Weight": "0.41",
-   "Market Value": "153329.01",
-   "Shares Held": "34149",
-   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "Rambus Inc.",
    "Ticker": "RMBS",
    "Identifier": "750917106",
-   "Weight": "0.41",
-   "Market Value": "153075.78",
+   "Weight": "0.42",
+   "Market Value": "163190.43",
    "Shares Held": "2223",
-   "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Renesas Electronics Corporation",
-   "Ticker": "6723.JP",
-   "Identifier": "J4881V107",
-   "Weight": "0.41",
-   "Market Value": "152335.37",
-   "Shares Held": "10200",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "Aeva Technologies, Inc.",
    "Ticker": "AEVA",
    "Identifier": "00835Q202",
-   "Weight": "0.4",
-   "Market Value": "147932.4",
+   "Weight": "0.41",
+   "Market Value": "158146.78",
    "Shares Held": "17611",
    "Asset Category": "Information Technology"
-  },
-  {
-   "Name": "Contemporary Amperex Technology Co., Ltd. (Class H)",
-   "Ticker": "3750.HK",
-   "Identifier": "Y1R48E113",
-   "Weight": "0.4",
-   "Market Value": "149511.94",
-   "Shares Held": "3965",
-   "Asset Category": "Industrials"
   },
   {
    "Name": "Amprius Technologies, Inc.",
    "Ticker": "AMPX",
    "Identifier": "03214Q108",
-   "Weight": "0.39",
-   "Market Value": "146090.75",
+   "Weight": "0.41",
+   "Market Value": "158158",
    "Shares Held": "25675",
    "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Contemporary Amperex Technology Co., Ltd. (Class H)",
+   "Ticker": "3750.HK",
+   "Identifier": "Y1R48E113",
+   "Weight": "0.41",
+   "Market Value": "159127.74",
+   "Shares Held": "3965",
+   "Asset Category": "Industrials"
+  },
+  {
+   "Name": "Lithium Argentina AG",
+   "Ticker": "LAR",
+   "Identifier": "H5012F103",
+   "Weight": "0.41",
+   "Market Value": "159505.8",
+   "Shares Held": "45835",
+   "Asset Category": "Materials"
+  },
+  {
+   "Name": "Black Sesame International Holding Limited",
+   "Ticker": "2533.HK",
+   "Identifier": "G12930106",
+   "Weight": "0.4",
+   "Market Value": "157129.36",
+   "Shares Held": "226340",
+   "Asset Category": "Information Technology"
   },
   {
    "Name": "Indie Semiconductor, Inc.",
    "Ticker": "INDI",
    "Identifier": "45569U101",
-   "Weight": "0.39",
-   "Market Value": "144378",
+   "Weight": "0.4",
+   "Market Value": "153633",
    "Shares Held": "92550",
    "Asset Category": "Information Technology"
   },
@@ -796,8 +805,8 @@
    "Name": "Sitime Corporation",
    "Ticker": "SITM",
    "Identifier": "82982T106",
-   "Weight": "0.39",
-   "Market Value": "144412.62",
+   "Weight": "0.4",
+   "Market Value": "154577.94",
    "Shares Held": "374",
    "Asset Category": "Information Technology"
   },
@@ -805,44 +814,53 @@
    "Name": "Adeia Inc.",
    "Ticker": "ADEA",
    "Identifier": "00676P107",
-   "Weight": "0.38",
-   "Market Value": "140371.92",
+   "Weight": "0.39",
+   "Market Value": "149870.02",
    "Shares Held": "9998",
    "Asset Category": "Information Technology"
+  },
+  {
+   "Name": "Mobileye Global Inc. (Class A)",
+   "Ticker": "MBLY",
+   "Identifier": "60741F104",
+   "Weight": "0.39",
+   "Market Value": "152987.52",
+   "Shares Held": "34149",
+   "Asset Category": "Consumer Discretionary"
   },
   {
    "Name": "PT Merdeka Copper Gold Tbk",
    "Ticker": "MDKA.IJ",
    "Identifier": "Y60132100",
-   "Weight": "0.38",
-   "Market Value": "142642.64",
+   "Weight": "0.39",
+   "Market Value": "151815.97",
    "Shares Held": "1492857",
    "Asset Category": "Materials"
   },
   {
-   "Name": "Ambarella, Inc.",
-   "Ticker": "AMBA",
-   "Identifier": "G037AX101",
-   "Weight": "0.37",
-   "Market Value": "136797.12",
-   "Shares Held": "3834",
-   "Asset Category": "Information Technology"
+   "Name": "SK IE Technology Co., Ltd.",
+   "Ticker": "361610.KS",
+   "Identifier": "Y8085G108",
+   "Weight": "0.38",
+   "Market Value": "146210.51",
+   "Shares Held": "17345",
+   "Asset Category": "Industrials"
   },
   {
-   "Name": "ams-OSRAM AG",
-   "Ticker": "AMS.SW",
-   "Identifier": "A0400Q156",
+   "Name": "Jiangsu Lopal Tech. Group Co., Ltd. (Class H)",
+   "Ticker": "2465.HK",
+   "Identifier": "Y444TJ118",
    "Weight": "0.37",
-   "Market Value": "138041.23",
-   "Shares Held": "8885",
-   "Asset Category": "Information Technology"
+   "Market Value": "144953.03",
+   "Shares Held": "200500",
+   "Asset Category": "Materials"
   },
   {
    "Name": "Pony AI Inc. (Class A) (ADR)",
    "Ticker": "PONY",
    "Identifier": "732908108",
    "Weight": "0.37",
-   "Market Value": "136869.12",
+   "Market Value": "144821.76",
    "Shares Held": "41856",
    "Asset Category": "Information Technology"
   },
@@ -851,43 +869,25 @@
    "Ticker": "SLDP",
    "Identifier": "83422N105",
    "Weight": "0.37",
-   "Market Value": "139475",
+   "Market Value": "142463.75",
    "Shares Held": "99625",
    "Asset Category": "Consumer Discretionary"
   },
   {
-   "Name": "Jiangsu Lopal Tech. Group Co., Ltd. (Class H)",
-   "Ticker": "2465.HK",
-   "Identifier": "Y444TJ118",
-   "Weight": "0.36",
-   "Market Value": "134404.98",
-   "Shares Held": "200500",
-   "Asset Category": "Materials"
-  },
-  {
-   "Name": "SK IE Technology Co., Ltd.",
-   "Ticker": "361610.KS",
-   "Identifier": "Y8085G108",
-   "Weight": "0.36",
-   "Market Value": "134436.34",
-   "Shares Held": "17345",
-   "Asset Category": "Industrials"
-  },
-  {
-   "Name": "Black Sesame International Holding Limited",
-   "Ticker": "2533.HK",
-   "Identifier": "G12930106",
+   "Name": "Ambarella, Inc.",
+   "Ticker": "AMBA",
+   "Identifier": "G037AX101",
    "Weight": "0.35",
-   "Market Value": "131515.8",
-   "Shares Held": "226340",
+   "Market Value": "135110.16",
+   "Shares Held": "3834",
    "Asset Category": "Information Technology"
   },
   {
    "Name": "MaxLinear, Inc.",
    "Ticker": "MXL",
    "Identifier": "57776J100",
-   "Weight": "0.29",
-   "Market Value": "108194.65",
+   "Weight": "0.3",
+   "Market Value": "115347.59",
    "Shares Held": "2573",
    "Asset Category": "Information Technology"
   },
@@ -896,7 +896,7 @@
    "Ticker": "SGML",
    "Identifier": "826599102",
    "Weight": "0.27",
-   "Market Value": "100371.62",
+   "Market Value": "106171.99",
    "Shares Held": "25219",
    "Asset Category": "Materials"
   },
@@ -904,8 +904,8 @@
    "Name": "Furukawa Electric Co., Ltd.",
    "Ticker": "5801.JP",
    "Identifier": "J16464117",
-   "Weight": "0.24",
-   "Market Value": "88374.95",
+   "Weight": "0.26",
+   "Market Value": "102799.11",
    "Shares Held": "9000",
    "Asset Category": "Industrials"
   },
@@ -913,27 +913,18 @@
    "Name": "US Dollar",
    "Ticker": "-",
    "Identifier": "$USD",
-   "Weight": "0.1",
-   "Market Value": "37845.7",
-   "Shares Held": "37846",
-   "Asset Category": "Other"
-  },
-  {
-   "Name": "South Korean Won",
-   "Ticker": "-",
-   "Identifier": "$KRW",
-   "Weight": "0.09",
-   "Market Value": "34236.01",
-   "Shares Held": "46059760",
+   "Weight": "0.21",
+   "Market Value": "82724.9",
+   "Shares Held": "82725",
    "Asset Category": "Other"
   },
   {
    "Name": "Japanese Yen",
    "Ticker": "-",
    "Identifier": "$JPY",
-   "Weight": "0.05",
-   "Market Value": "18737.41",
-   "Shares Held": "2982808",
+   "Weight": "0.02",
+   "Market Value": "7692.81",
+   "Shares Held": "1227618",
    "Asset Category": "Other"
   },
   {
@@ -950,8 +941,17 @@
    "Ticker": "-",
    "Identifier": "$EUR",
    "Weight": "0",
-   "Market Value": "25.04",
+   "Market Value": "24.95",
    "Shares Held": "23",
+   "Asset Category": "Other"
+  },
+  {
+   "Name": "South Korean Won",
+   "Ticker": "-",
+   "Identifier": "$KRW",
+   "Weight": "0",
+   "Market Value": "1554.27",
+   "Shares Held": "2074975",
    "Asset Category": "Other"
   },
   {
@@ -959,10 +959,10 @@
    "Ticker": "-",
    "Identifier": "$CNY",
    "Weight": "0",
-   "Market Value": "1073.89",
+   "Market Value": "1076.25",
    "Shares Held": "7163",
    "Asset Category": "Other"
   }
  ],
- "asOfDate": "2026-11-25"
+ "asOfDate": "2026-11-27"
 }

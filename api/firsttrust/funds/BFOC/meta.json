@@ -59,10 +59,10 @@
   "outstanding": 100002
  },
  "yields": {
-  "dividendYield": null,
-  "dividendYieldText": null,
-  "dividendYieldBasis": null,
-  "dividendYieldKind": null,
+  "dividendYield": 18.29,
+  "dividendYieldText": "18.29%",
+  "dividendYieldBasis": "indicated",
+  "dividendYieldKind": "Indicated from the latest ordinary distribution per share x inferred payments per year / market price",
   "distributionRate": null,
   "distributionPerShare": null,
   "secYield": null,
@@ -94,9 +94,9 @@
   }
  },
  "distributions": {
-  "frequency": null,
-  "latestAmount": null,
-  "latestExDate": null,
+  "frequency": "Annually",
+  "latestAmount": 2.7743,
+  "latestExDate": "2026-11-30",
   "headers": [
    "Ex-Date",
    "Record Date",
@@ -104,7 +104,15 @@
    "Distribution Amount",
    "Distribution Type"
   ],
-  "rows": [],
+  "rows": [
+   [
+    "2026-11-30",
+    "2026-11-30",
+    "2026-12-02",
+    "2.774300",
+    "Ordinary Distributions"
+   ]
+  ],
   "source": "First Trust official distribution history (ftportfolios.com EtfDividHistory.aspx, all listed years)"
  },
  "holdings": {
@@ -113,7 +121,7 @@
   ],
   "pageSize": 250,
   "totalRows": 9,
-  "asOfDate": "2026-11-25",
+  "asOfDate": "2026-11-27",
   "source": "First Trust official holdings page (ftportfolios.com EtfHoldings.aspx)"
  },
  "history": {
@@ -127,8 +135,8 @@
  },
  "holdingsCount": 9,
  "historyCount": 292,
- "distributionCount": 0,
+ "distributionCount": 1,
  "netAssets": 1519096,
- "dividendYield": null,
+ "dividendYield": 18.29,
  "secYield": null
 }
